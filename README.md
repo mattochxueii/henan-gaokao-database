@@ -64,6 +64,7 @@ PDF 提取命令使用可选的 Poppler `pdftotext`。结果按页保存并标�
 - [数学版本冲突报告](reports/math-version-conflicts.md)
 - [数学资料补充清单](reports/math-intake-checklist.md)
 - [数学实际查询输出](reports/math-retrieval.json)
+- [数学本地候选卷采集与查询](reports/math-local-reference.md)
 - [登记与题目数据字典](metadata/data-dictionary.md)
 - [下一阶段接入建议](reports/next-stage.md)
 

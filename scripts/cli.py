@@ -9,6 +9,7 @@ from gaokao import (
     ROOT, SUBJECTS, atomic_write, digest, dumps, import_file, load, load_solutions,
     register, relative_path, require,
 )
+from reference import reference_rows
 
 
 def select(papers, options):
@@ -23,8 +24,9 @@ def select(papers, options):
     }
 
 
-def summaries(papers, files, entries, solutions=None):
+def summaries(papers, files, entries, solutions=None, references=None):
     solutions = solutions or {}
+    references = references or {}
     result = []
     for key, paper in papers.items():
         local = [record for record in files if record["paper_id"] == key]
@@ -39,6 +41,7 @@ def summaries(papers, files, entries, solutions=None):
             "indexed_questions": len(rows), "transcribed_questions": transcribed,
             "complete_question_texts": sum(row.get("content_complete") is True for row in rows),
             "independent_solutions": sum(row["id"] in solutions for row in rows),
+            "local_reference_questions": sum(row["id"] in references for row in rows),
             "human_reviewed_questions": sum(row["review_status"] == "已人工核验" for row in rows),
             "files": local,
             "missing_local_materials": {role: entry for role, entry in paper["materials"].items() if role not in roles},
@@ -47,6 +50,31 @@ def summaries(papers, files, entries, solutions=None):
             ),
             "issues": paper.get("issues", []),
         })
+    return result
+
+
+def question_result(row, paper, sources, solution, reference):
+    result = {
+        **row, "year": paper["year"], "subject": paper["subject"],
+        "content_complete": row.get("content_complete", False),
+        "independent_solution": solution,
+        "sources": [sources[key]["url"] for key in row["source_ids"]],
+    }
+    if reference and row["record_type"] == "index_only":
+        result.update(
+            stem=reference["stem"], options=reference["options"], formulas=reference["formulas"],
+            subquestions=reference.get("subquestions", []), tables=reference.get("tables", []),
+            asset_refs=reference["assets"], record_type="candidate_transcription",
+            review_status=reference["review_status"], candidate_content_complete=True,
+            source_locator={"source_id": reference["source_id"], "original_number": row["original_number"],
+                            "candidate_page": reference["page"], "candidate_end_page": reference["end_page"],
+                            "locator_type": reference["version"]},
+            local_reference={field: reference[field] for field in
+                             ("version", "scope", "source_url", "source_files", "page_images", "rendering")},
+            version_note=reference.get("version_note"), answer_note=reference.get("answer_note"),
+        )
+        if reference["source_url"] not in result["sources"]:
+            result["sources"].insert(0, reference["source_url"])
     return result
 
 
@@ -78,6 +106,7 @@ def extract(root, records, identifier):
 def parser():
     command = argparse.ArgumentParser(description="高考真题目录与授权资料管理")
     command.add_argument("--root", type=Path, default=ROOT, help=argparse.SUPPRESS)
+    command.add_argument("--reference-dir", type=Path, help="加载只在本机保存的候选卷面目录")
     actions = command.add_subparsers(dest="action", required=True)
     actions.add_parser("validate", help="校验目录、文件哈希、题号顺序与分值")
     registration = actions.add_parser("register", help="登记经交叉核实的主考卷")
@@ -114,6 +143,8 @@ def main():
         else:
             sources, papers, records, entries = load(root, check_hash=action == "validate")
             solutions = load_solutions(root, entries, sources)
+            references = reference_rows(options.reference_dir, sources, papers, entries,
+                                        check_hash=action == "validate")
             if action == "validate":
                 result = {
                     "status": "通过", "papers": len(papers), "sources": len(sources),
@@ -122,24 +153,22 @@ def main():
                     "transcribed_questions": sum(item["record_type"] == "transcribed" for item in entries),
                     "complete_question_texts": sum(item.get("content_complete") is True for item in entries),
                     "independent_solutions": len(solutions),
+                    "local_reference_questions": len(references),
                 }
             elif action == "extract-pdf":
                 result = extract(root, records, options.file_id)
             else:
                 selected = select(papers, options)
                 if action == "report":
-                    result = summaries(selected, records, entries, solutions)
+                    result = summaries(selected, records, entries, solutions, references)
                     if options.output:
                         atomic_write(options.output, dumps(result) + "\n")
                 elif options.number is None and options.kind is None and not options.complete_only:
                     result = list(selected.values())
                 else:
                     result = [
-                        {**row, "year": selected[row["paper_id"]]["year"],
-                         "subject": selected[row["paper_id"]]["subject"],
-                         "content_complete": row.get("content_complete", False),
-                         "independent_solution": solutions.get(row["id"]),
-                         "sources": [sources[key]["url"] for key in row["source_ids"]]}
+                        question_result(row, selected[row["paper_id"]], sources,
+                                        solutions.get(row["id"]), references.get(row["id"]))
                         for row in entries if row["paper_id"] in selected
                         and (options.number is None or row["original_number"] == options.number)
                         and (options.kind is None or row["kind"] == options.kind)

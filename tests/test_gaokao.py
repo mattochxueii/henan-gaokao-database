@@ -10,14 +10,46 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from cli import extract, summaries
+from cli import extract, question_result, summaries
 from gaokao import digest, import_file, load, load_solutions, read_json, register, write_json
+from reference import reference_rows
 
 MATH = "2025-cn-math-national-1"
 OTHER_MATH = "2026-cn-math-national-1"
 
 
 class CatalogTests(unittest.TestCase):
+    def test_local_candidate_is_queryable_without_promoting_it_to_official(self):
+        sources, papers, _, entries = load(ROOT)
+        with tempfile.TemporaryDirectory(dir=ROOT / "tests") as directory:
+            local = Path(directory)
+            source_file = local / "scan.jpg"
+            source_file.write_bytes(b"synthetic test fixture")
+            write_json(local / "manifest.json", {
+                "schema_version": 1, "scope": "local_reference",
+                "papers": {MATH: {"source_id": "math-2025-21", "version": "test_candidate",
+                                  "pages": [{"page": 1, "image": "scan.jpg", "width": 10, "height": 10}],
+                                  "source_files": [{"path": "scan.jpg", "sha256": digest(source_file)}]}},
+            })
+            question_path = local / "questions" / "2025" / "math" / f"{MATH}.jsonl"
+            question_path.parent.mkdir(parents=True)
+            candidate = {"original_number": "1", "stem": "Synthetic question", "page": 1,
+                         "end_page": 1, "review_status": "candidate_pages_checked",
+                         "rendering": "normalized_from_candidate", "formulas": ["x^2"],
+                         "options": dict(zip("ABCD", "1234")), "assets": []}
+            question_path.write_text(json.dumps(candidate) + "\n", encoding="utf-8")
+            row = next(row for row in entries if row["id"] == f"{MATH}:q001")
+            refs = reference_rows(local, sources, papers, entries, check_hash=True)
+            result = question_result(row, papers[MATH], sources, None, refs[row["id"]])
+            self.assertEqual(result["stem"], candidate["stem"])
+            self.assertEqual(result["source_locator"]["source_id"], "math-2025-21")
+            self.assertTrue(result["candidate_content_complete"])
+            self.assertFalse(result["content_complete"])
+            candidate["options"].pop("D")
+            question_path.write_text(json.dumps(candidate) + "\n", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "选项不完整"):
+                reference_rows(local, sources, papers, entries)
+
     def test_math_solutions_are_distinct_from_complete_questions(self):
         sources, _, _, rows = load(ROOT)
         solutions = load_solutions(ROOT, rows, sources)
