@@ -44,7 +44,9 @@
       "source_ids": [
         "jin-2025-math-paper",
         "math-2025-21",
-        "math-github"
+        "math-github",
+        "math-2025-pobing",
+        "math-2025-eol-paper"
       ],
       "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
     },
@@ -73,5 +75,27 @@
       "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
     }
   },
-  "issues": []
+  "issues": [
+    {
+      "id": "math25-q4-q9-q11",
+      "type": "candidate_version_conflict",
+      "source_ids": [
+        "jin-2025-math-paper",
+        "math-2025-pobing",
+        "math-2025-21"
+      ],
+      "detail": "第4、9、11题的候选选项字母、顺序或文本提取不同。",
+      "disposition": "保留数学结论，冲突时按来源列选项或省略字母。"
+    },
+    {
+      "id": "math25-q6",
+      "type": "candidate_version_conflict",
+      "source_ids": [
+        "math-2025-21",
+        "math-2025-pobing"
+      ],
+      "detail": "两处文字对第6题视风箭头的指向相反。",
+      "disposition": "两种结果分别登记，待原页图像裁决。"
+    }
+  ]
 }

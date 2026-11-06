@@ -11,13 +11,31 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from cli import extract, summaries
-from gaokao import digest, import_file, load, read_json, register, write_json
+from gaokao import digest, import_file, load, load_solutions, read_json, register, write_json
 
 MATH = "2025-cn-math-national-1"
 OTHER_MATH = "2026-cn-math-national-1"
 
 
 class CatalogTests(unittest.TestCase):
+    def test_math_solutions_are_distinct_from_complete_questions(self):
+        sources, _, _, rows = load(ROOT)
+        solutions = load_solutions(ROOT, rows, sources)
+        cohort = [row for row in rows if row["paper_id"] in {MATH, OTHER_MATH}]
+        self.assertEqual(len(cohort), 38)
+        self.assertTrue(all(row["id"] in solutions for row in cohort))
+        self.assertEqual(solutions[f"{MATH}:q001"]["result"], {"option": "C", "value_latex": "1"})
+        self.assertEqual(solutions[f"{OTHER_MATH}:q018"]["status"], "conditional_on_candidate")
+
+    def test_kind_filter_respects_complete_only(self):
+        command = [sys.executable, str(ROOT / "scripts" / "cli.py"), "query",
+                   "--year", "2025", "--subject", "math", "--kind", "fill_in"]
+        result = subprocess.run(command, capture_output=True, check=True, encoding="utf-8")
+        self.assertEqual([row["original_number"] for row in json.loads(result.stdout)], ["12", "13", "14"])
+        complete = subprocess.run(command + ["--complete-only"], capture_output=True, check=True, encoding="utf-8")
+        expected = [row for row in json.loads(result.stdout) if row["content_complete"]]
+        self.assertEqual(json.loads(complete.stdout), expected)
+
     def test_collection_and_structure(self):
         sources, papers, records, rows = load(ROOT, check_hash=True)
         self.assertGreaterEqual(len(sources), 12)

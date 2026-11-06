@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from gaokao import (
-    ROOT, ROLES, SUBJECTS, atomic_write, digest, dumps, import_file, load,
+    ROOT, SUBJECTS, atomic_write, digest, dumps, import_file, load, load_solutions,
     register, relative_path, require,
 )
 
@@ -23,7 +23,8 @@ def select(papers, options):
     }
 
 
-def summaries(papers, files, entries):
+def summaries(papers, files, entries, solutions=None):
+    solutions = solutions or {}
     result = []
     for key, paper in papers.items():
         local = [record for record in files if record["paper_id"] == key]
@@ -36,6 +37,8 @@ def summaries(papers, files, entries):
             "identity_status": paper["identity_status"], "content_status": status,
             "expected_questions": paper.get("expected_questions"),
             "indexed_questions": len(rows), "transcribed_questions": transcribed,
+            "complete_question_texts": sum(row.get("content_complete") is True for row in rows),
+            "independent_solutions": sum(row["id"] in solutions for row in rows),
             "human_reviewed_questions": sum(row["review_status"] == "已人工核验" for row in rows),
             "files": local,
             "missing_local_materials": {role: entry for role, entry in paper["materials"].items() if role not in roles},
@@ -92,6 +95,8 @@ def parser():
         action.add_argument("--region", help="地区代码，例如 cn-ha")
         if name == "query":
             action.add_argument("--number", help="原始题号，例如 6")
+            action.add_argument("--kind", help="题型代码，例如 fill_in")
+            action.add_argument("--complete-only", action="store_true", help="仅返回标记完整且已人工核验的题面")
         else:
             action.add_argument("--output", type=Path, help="另存 JSON 报告")
     return command
@@ -108,27 +113,37 @@ def main():
             result = import_file(root, options.paper_id, options.file, options.receipt)
         else:
             sources, papers, records, entries = load(root, check_hash=action == "validate")
+            solutions = load_solutions(root, entries, sources)
             if action == "validate":
                 result = {
                     "status": "通过", "papers": len(papers), "sources": len(sources),
                     "file_records": len(records), "unique_files": len({item["sha256"] for item in records}),
                     "question_records": len(entries),
                     "transcribed_questions": sum(item["record_type"] == "transcribed" for item in entries),
+                    "complete_question_texts": sum(item.get("content_complete") is True for item in entries),
+                    "independent_solutions": len(solutions),
                 }
             elif action == "extract-pdf":
                 result = extract(root, records, options.file_id)
             else:
                 selected = select(papers, options)
                 if action == "report":
-                    result = summaries(selected, records, entries)
+                    result = summaries(selected, records, entries, solutions)
                     if options.output:
                         atomic_write(options.output, dumps(result) + "\n")
-                elif options.number is None:
+                elif options.number is None and options.kind is None and not options.complete_only:
                     result = list(selected.values())
                 else:
                     result = [
-                        {**row, "sources": [sources[key]["url"] for key in row["source_ids"]]}
-                        for row in entries if row["paper_id"] in selected and row["original_number"] == options.number
+                        {**row, "year": selected[row["paper_id"]]["year"],
+                         "subject": selected[row["paper_id"]]["subject"],
+                         "content_complete": row.get("content_complete", False),
+                         "independent_solution": solutions.get(row["id"]),
+                         "sources": [sources[key]["url"] for key in row["source_ids"]]}
+                        for row in entries if row["paper_id"] in selected
+                        and (options.number is None or row["original_number"] == options.number)
+                        and (options.kind is None or row["kind"] == options.kind)
+                        and (not options.complete_only or row.get("content_complete") is True)
                     ]
         print(dumps(result))
     except (OSError, KeyError, TypeError, ValueError, subprocess.CalledProcessError) as error:

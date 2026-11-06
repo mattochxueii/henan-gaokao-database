@@ -1,6 +1,6 @@
 # 河南新高考真题数据库 · 第一阶段
 
-本地仓库，调查截至 2026-11-06。目录覆盖 2025、2026 年河南普通高考六科的 12 份正式主考卷。数学两卷各登记 19 个题号、题型和分值。完整原卷、答案、解析、图片和听力文件目前均未入库。候选来源的文件级保存许可尚未核实，仓库内可查询来源链接与版本问题。
+本地仓库，调查截至 2026-11-06。目录覆盖 2025、2026 年河南普通高考六科的 12 份正式主考卷。数学两卷各登记 19 个题号、题型、分值和候选页码，另有逐题独立推导。文件级保存许可尚未核实，完整数学卷面、正式参考答案和题图尚无本地登记。
 
 ## 快速开始
 
@@ -9,12 +9,14 @@
 ```powershell
 python scripts/cli.py query --year 2025 --subject 数学 --region cn-ha
 python scripts/cli.py query --year 2026 --subject math --region cn-ha --number 17
+python scripts/cli.py query --subject math --kind fill_in
+python scripts/cli.py query --subject math --kind fill_in --complete-only
 python scripts/cli.py report --region cn-ha --output reports/completeness.json
 python scripts/cli.py validate
 python -m unittest discover -s tests -v
 ```
 
-第二条命令返回 `2026-cn-math-national-1:q017`、题型、15 分和来源链接，可信度字段提示有来源把该题记为 13 分。当前记录的 `stem` 为 `null`。可用中文科目名或英文代码。题号查询使用原始题号字符串。新增学科可直接使用其英文代码。
+第二条命令返回第 17 题的索引、候选页码和独立解答。索引的 `stem` 为 `null`。`--kind` 查询该题型的已登记条目，`--complete-only` 仅查询对照原卷人工核验并明确标为完整的题面。可用中文科目名或英文代码，题号查询使用原始题号字符串。
 
 ## 文件位置
 
@@ -58,6 +60,10 @@ PDF 提取命令使用可选的 Poppler `pdftotext`。结果按页保存并标�
 
 - [逐卷完整性与核验报告](reports/completeness.md)
 - [机器可读完整性报告](reports/completeness.json)
+- [数学逐题核验报告](reports/math-completeness.md)
+- [数学版本冲突报告](reports/math-version-conflicts.md)
+- [数学资料补充清单](reports/math-intake-checklist.md)
+- [数学实际查询输出](reports/math-retrieval.json)
 - [登记与题目数据字典](metadata/data-dictionary.md)
 - [下一阶段接入建议](reports/next-stage.md)
 

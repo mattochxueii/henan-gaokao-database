@@ -44,7 +44,9 @@
         "jin-2026-math-paper",
         "math-2026-21",
         "math-github",
-        "math-2026-partial"
+        "math-2026-partial",
+        "math-2026-5ol",
+        "math-2026-village-scan"
       ],
       "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
     },
@@ -90,12 +92,12 @@
       "id": "math26-q13",
       "type": "item_mismatch",
       "source_ids": [
+        "math-2026-5ol",
         "jin-2026-math-answer",
-        "math-2026-personal",
-        "math-2026-partial"
+        "math-2026-personal"
       ],
-      "detail": "锦宏解析和考试卷网第13题第一空要求确定相位参数 θ；个人解析却把第一空作频率参数 a。",
-      "disposition": "记录为题面与候选答案不一致。第14题两处答案为等价根式，未记为答案冲突。"
+      "detail": "五网和锦宏解析的第一空是相位参数，个人解析第一空答频率参数。递增条件不能唯一确定频率。",
+      "disposition": "保存按相位题面推导的条件解，待考场原页核定。"
     },
     {
       "id": "math26-q17",
@@ -103,21 +105,48 @@
       "source_ids": [
         "jin-2026-math-paper",
         "math-2026-tc",
-        "math-2026-sj"
+        "math-2026-sj",
+        "math-2026-5ol",
+        "jin-2026-math-answer"
       ],
       "detail": "锦宏排版与天材教育均记第17题15分；四季读书网汇总记13分。",
-      "disposition": "题号索引暂按一致的两处来源记15分，保留差异，待原卷裁决。"
+      "disposition": "题面排版、公开预览、解析和分区合计支持15分。保留13分汇总误差，待考场原页确认。"
     },
     {
       "id": "math26-q18",
       "type": "statement_conflict",
       "source_ids": [
         "jin-2026-math-paper",
+        "jin-2026-math-answer",
+        "math-2026-5ol",
+        "math-2026-partial",
         "math-2026-personal",
-        "math-2026-partial"
+        "math-2026-q18-cnblogs"
       ],
-      "detail": "第18题第（2）问第（i）小问中，锦宏排版用△PFO作比较；个人解析声称另一底稿用△PFQ，并自行改成△PFR。考试卷网页面还把在第三象限的点写作Q，锦宏排版写作P。",
-      "disposition": "保留不同版本差异，暂不采纳个人改写或对应解析。"
+      "detail": "多个预览与锦宏解析用Q在第三象限及PFO，锦宏卷面文本用P。个人解析另称PFQ并自行改为PFR。",
+      "disposition": "P与PFO条件联立无解。保留Q与PFO版本的条件解，尚无考场原页确认原文。"
+    },
+    {
+      "id": "math26-q3",
+      "type": "candidate_version_conflict",
+      "source_ids": [
+        "math-2026-5ol",
+        "jin-2026-math-answer",
+        "math-2026-21"
+      ],
+      "detail": "第3题可读候选把正确集合列为C，二一教育答案表写B。",
+      "disposition": "保留集合结果，选项字母待核。"
+    },
+    {
+      "id": "math26-q9-q10-q12",
+      "type": "candidate_version_conflict",
+      "source_ids": [
+        "math-2026-5ol",
+        "jin-2026-math-answer",
+        "math-2026-personal"
+      ],
+      "detail": "个人解析所据第9题分母、第10题下界、第12题系数与其他可读候选有差异。",
+      "disposition": "以条件解保留交叉支持的数学推导，等待视觉原页校对。"
     }
   ]
 }

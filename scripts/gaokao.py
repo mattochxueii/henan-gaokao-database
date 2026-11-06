@@ -272,6 +272,13 @@ def questions(root, papers, sources, records):
                     require(entry.get("reviewer") and entry.get("reviewed_on") and entry.get("review_note"),
                             f"{entry['id']} 人工核验缺少审核记录")
                     date_value(entry["reviewed_on"])
+            if entry.get("content_complete", False):
+                require(entry["content_complete"] is True and entry["record_type"] == "transcribed"
+                        and entry["review_status"] == "已人工核验",
+                        f"{entry['id']} 标为完整题面前须完成原卷人工核验")
+                if entry["kind"] in {"single_choice", "multiple_choice"}:
+                    require(isinstance(entry["options"], (dict, list)) and len(entry["options"]) >= 2,
+                            f"{entry['id']} 完整选择题须有选项")
         expected = paper.get("expected_questions")
         if expected is not None:
             require(len(entries) <= expected, f"{key} 超出已知题数")
@@ -279,6 +286,23 @@ def questions(root, papers, sources, records):
             require(abs(points - paper["max_points"]) < 0.0001, f"{key} 整卷分值不符")
         result.extend(entries)
     return result
+
+
+def load_solutions(root, entries, sources):
+    path = root / "metadata" / "independent-solutions.jsonl"
+    if not path.exists():
+        return {}
+    known = {entry["id"] for entry in entries}
+    solutions = {}
+    for row in read_lines(path):
+        key = row["question_id"]
+        require(key in known and key not in solutions, f"独立解答题号无效或重复 {key}")
+        require(row["status"] in {"independently_derived", "conditional_on_candidate"}
+                and row["result"] and row["steps"] and row["scope"], f"{key} 独立解答缺少结果、推导或条件")
+        require(row["evidence"] and all(locator["source_id"] in sources and locator["location"]
+                                       for locator in row["evidence"]), f"{key} 独立解答缺少题面定位")
+        solutions[key] = row
+    return solutions
 
 
 def load(root, check_hash=False):

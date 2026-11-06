@@ -31,4 +31,9 @@
 - `source_ids`、`source_locator` 记录来源和定位。转写必须指向已登记且可派生的 `source_locator.file_id` 和正整数 `source_locator.page`。如跨页可加 `end_page`。审核时可补原图的区域坐标。
 - `record_type` 为 `index_only` 或 `transcribed`。题号索引允许记录题型、分值和来源，内容及分析字段留空。后续补全文时复用题号 ID。
 - `confidence` 记录置信依据。`review_status` 见 README。人工核验必须填写 `reviewer`、`reviewed_on` 和 `review_note`。
+- `content_complete` 在审阅全部题干、选项、公式、子问和所需图表后可置为 `true`。校验程序要求该记录已转写且状态为已人工核验。候选页码记录为 `candidate_page`、`candidate_end_page`，正式原页另由授权文件的页码定位。
 - `knowledge_points`、`difficulty` 和 `intent` 为分析预留。第一阶段留空。
+
+## 独立解答
+
+`metadata/independent-solutions.jsonl` 以 `question_id` 关联题号，记录结果、推导、证据定位和适用范围。`independently_derived` 表示已按可比较的数学条件推导，`conditional_on_candidate` 表示题面或选项分歧使结果只能按候选解释。CLI 返回 `independent_solution` 并单独计数。正式答案、题面完整性和人工核验分别登记。

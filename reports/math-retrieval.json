@@ -1,0 +1,752 @@
+{
+  "2025_q1": {
+    "command": "python scripts/cli.py query --year 2025 --subject math --region cn-ha --number 1",
+    "result": [
+      {
+        "id": "2025-cn-math-national-1:q001",
+        "paper_id": "2025-cn-math-national-1",
+        "original_number": "1",
+        "order": 1,
+        "kind": "single_choice",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2025-math-paper",
+          "math-2025-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2025-math-paper",
+          "original_number": "1",
+          "candidate_page": 1,
+          "candidate_end_page": 1,
+          "locator_type": "online_recall_retypeset"
+        },
+        "year": 2025,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2025-cn-math-national-1:q001",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "option": "C",
+            "value_latex": "1"
+          },
+          "steps": [
+            "展开 \\((1+5i)i\\)，代入 \\(i^2=-1\\) 得 \\(-5+i\\)。",
+            "复数的虚部取 \\(i\\) 的实系数，因此为 \\(1\\)。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2025-math-paper",
+              "location": "PDF 第 1 页第 1 题"
+            },
+            {
+              "source_id": "math-2025-pobing",
+              "location": "第 1 题在线预览"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "https://zy.21cnjy.com/24899530"
+        ]
+      }
+    ]
+  },
+  "2025_q1_complete_only": {
+    "command": "python scripts/cli.py query --year 2025 --subject math --region cn-ha --number 1 --complete-only",
+    "result": []
+  },
+  "2026_q17": {
+    "command": "python scripts/cli.py query --year 2026 --subject math --region cn-ha --number 17",
+    "result": [
+      {
+        "id": "2026-cn-math-national-1:q017",
+        "paper_id": "2026-cn-math-national-1",
+        "original_number": "17",
+        "order": 17,
+        "kind": "constructed_response",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 15,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_with_disagreement",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2026-math-paper",
+          "math-2026-21",
+          "math-2026-tc"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2026-math-paper",
+          "original_number": "17",
+          "candidate_page": 4,
+          "candidate_end_page": 4,
+          "locator_type": "online_retypeset"
+        },
+        "year": 2026,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2026-cn-math-national-1:q017",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "1": {
+              "X": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "P": [
+                "\\frac13",
+                "\\frac29",
+                "\\frac4{27}",
+                "\\frac8{27}"
+              ]
+            },
+            "2(i)": "P(X>k)=(1-p)^k",
+            "2(ii)": "P(X>k+m\\mid X>k)=P(X>m)"
+          },
+          "steps": [
+            "设 \\(q=1-p\\)。到第 \\(j<N\\) 次才停需要先有 \\(j-1\\) 次失手，再命中一次，概率为 \\(q^{j-1}p\\)。到上限才停只需要前 \\(N-1\\) 次都失手，概率为 \\(q^{N-1}\\)。",
+            "当 \\(k<N\\) 时，超过 \\(k\\) 次等价于前 \\(k\\) 次全部失手，故尾概率为 \\(q^k\\)。在题设范围内两个尾事件嵌套，条件概率等于 \\(q^{k+m}/q^k=q^m\\)。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2026-math-paper",
+              "location": "排版 PDF 第 4 页第 17 题"
+            },
+            {
+              "source_id": "math-2026-5ol",
+              "location": "第 17 题在线预览"
+            },
+            {
+              "source_id": "jin-2026-math-answer",
+              "location": "第 17 题讲评"
+            },
+            {
+              "source_id": "math-2026-tc",
+              "location": "第 17 题分值及讲评"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20260608/1780886746084032608.pdf",
+          "https://zy.21cnjy.com/25912080",
+          "https://www.jiaoyubao.cn/news/n360037.html"
+        ]
+      }
+    ]
+  },
+  "2026_q17_complete_only": {
+    "command": "python scripts/cli.py query --year 2026 --subject math --region cn-ha --number 17 --complete-only",
+    "result": []
+  },
+  "fill_in": {
+    "command": "python scripts/cli.py query --subject math --region cn-ha --kind fill_in",
+    "result": [
+      {
+        "id": "2025-cn-math-national-1:q012",
+        "paper_id": "2025-cn-math-national-1",
+        "original_number": "12",
+        "order": 12,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2025-math-paper",
+          "math-2025-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2025-math-paper",
+          "original_number": "12",
+          "candidate_page": 2,
+          "candidate_end_page": 2,
+          "locator_type": "online_recall_retypeset"
+        },
+        "year": 2025,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2025-cn-math-national-1:q012",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "value_latex": "4"
+          },
+          "steps": [
+            "切线斜率为 \\(2\\)，由导数 \\(e^x+1=2\\) 得切点横坐标为零。纵坐标为 \\(5\\)，故 \\(1+a=5\\)。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2025-math-paper",
+              "location": "PDF 第 2 页第 12 题"
+            },
+            {
+              "source_id": "math-2025-pobing",
+              "location": "第 12 题在线预览"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "https://zy.21cnjy.com/24899530"
+        ]
+      },
+      {
+        "id": "2025-cn-math-national-1:q013",
+        "paper_id": "2025-cn-math-national-1",
+        "original_number": "13",
+        "order": 13,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2025-math-paper",
+          "math-2025-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2025-math-paper",
+          "original_number": "13",
+          "candidate_page": 2,
+          "candidate_end_page": 2,
+          "locator_type": "online_recall_retypeset"
+        },
+        "year": 2025,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2025-cn-math-national-1:q013",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "value_latex": "2"
+          },
+          "steps": [
+            "第 5 至 8 项之和等于首四项和乘以 \\(q^4\\)。故 \\(q^4=(68-4)/4=16\\)，正项条件保留正根。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2025-math-paper",
+              "location": "PDF 第 2 页第 13 题"
+            },
+            {
+              "source_id": "math-2025-pobing",
+              "location": "第 13 题在线预览"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "https://zy.21cnjy.com/24899530"
+        ]
+      },
+      {
+        "id": "2025-cn-math-national-1:q014",
+        "paper_id": "2025-cn-math-national-1",
+        "original_number": "14",
+        "order": 14,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2025-math-paper",
+          "math-2025-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2025-math-paper",
+          "original_number": "14",
+          "candidate_page": 2,
+          "candidate_end_page": 2,
+          "locator_type": "online_recall_retypeset"
+        },
+        "year": 2025,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2025-cn-math-national-1:q014",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "value_latex": "\\frac{61}{25}"
+          },
+          "steps": [
+            "给每个球定义至少出现一次的指示变量。单个指示变量的期望为 \\(1-(4/5)^3\\)，五个相加得到 \\(61/25\\)。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2025-math-paper",
+              "location": "PDF 第 2 页第 14 题"
+            },
+            {
+              "source_id": "math-2025-pobing",
+              "location": "第 14 题在线预览"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "https://zy.21cnjy.com/24899530"
+        ]
+      },
+      {
+        "id": "2026-cn-math-national-1:q012",
+        "paper_id": "2026-cn-math-national-1",
+        "original_number": "12",
+        "order": 12,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2026-math-paper",
+          "math-2026-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2026-math-paper",
+          "original_number": "12",
+          "candidate_page": 3,
+          "candidate_end_page": 3,
+          "locator_type": "online_retypeset"
+        },
+        "year": 2026,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2026-cn-math-national-1:q012",
+          "status": "conditional_on_candidate",
+          "scope": "五网与锦宏解析的系数一致，锦宏卷面文字层的第一个系数存在识别差异。",
+          "result": {
+            "value_latex": "\\sqrt{\\frac{11}{6}}"
+          },
+          "steps": [
+            "按保留系数 \\(5,6\\) 的题面，标准式的 \\(a^2=1/5,b^2=1/6\\)。故 \\(e^2=1+b^2/a^2=11/6\\)。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2026-math-paper",
+              "location": "排版 PDF 第 3 页第 12 题"
+            },
+            {
+              "source_id": "math-2026-5ol",
+              "location": "第 12 题在线预览"
+            },
+            {
+              "source_id": "jin-2026-math-answer",
+              "location": "第 12 题讲评"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20260608/1780886746084032608.pdf",
+          "https://zy.21cnjy.com/25912080"
+        ]
+      },
+      {
+        "id": "2026-cn-math-national-1:q013",
+        "paper_id": "2026-cn-math-national-1",
+        "original_number": "13",
+        "order": 13,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2026-math-paper",
+          "math-2026-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2026-math-paper",
+          "original_number": "13",
+          "candidate_page": 3,
+          "candidate_end_page": 3,
+          "locator_type": "online_retypeset"
+        },
+        "year": 2026,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2026-cn-math-national-1:q013",
+          "status": "conditional_on_candidate",
+          "scope": "按多份候选一致的第一空为相位 θ 的题面推导。",
+          "result": {
+            "1": "\\theta=\\frac{3\\pi}{2}",
+            "2": "f\\!\\left(\\frac{2\\pi}{3}\\right)=1"
+          },
+          "steps": [
+            "严格递增排除 \\(a=0\\)。把正弦和角展开，偶性要求奇项系数 \\(\\cos\\theta=0\\)。",
+            "\\(\\theta=\\pi/2\\) 时在原点右侧函数下降，故只能取 \\(3\\pi/2\\)。此时 \\(f(x)=-2\\cos(ax)\\)，递增区间长度约束给出 \\(|a|\\in\\{1,2\\}\\)。",
+            "把两种 \\(|a|\\) 代入目标值，余弦均为 \\(-1/2\\)，所以函数值唯一。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2026-math-paper",
+              "location": "排版 PDF 第 3 页第 13 题"
+            },
+            {
+              "source_id": "math-2026-5ol",
+              "location": "第 13 题在线预览"
+            },
+            {
+              "source_id": "jin-2026-math-answer",
+              "location": "第 13 题讲评"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20260608/1780886746084032608.pdf",
+          "https://zy.21cnjy.com/25912080"
+        ]
+      },
+      {
+        "id": "2026-cn-math-national-1:q014",
+        "paper_id": "2026-cn-math-national-1",
+        "original_number": "14",
+        "order": 14,
+        "kind": "fill_in",
+        "stem": null,
+        "options": null,
+        "formulas": null,
+        "asset_refs": [],
+        "points": 5,
+        "reference_answer": null,
+        "explanation": null,
+        "knowledge_points": null,
+        "difficulty": null,
+        "intent": null,
+        "confidence": "cross_checked_structure",
+        "review_status": "已发现来源",
+        "source_ids": [
+          "jin-2026-math-paper",
+          "math-2026-21"
+        ],
+        "record_type": "index_only",
+        "source_locator": {
+          "source_id": "jin-2026-math-paper",
+          "original_number": "14",
+          "candidate_page": 3,
+          "candidate_end_page": 3,
+          "locator_type": "online_retypeset"
+        },
+        "year": 2026,
+        "subject": "math",
+        "content_complete": false,
+        "independent_solution": {
+          "question_id": "2026-cn-math-national-1:q014",
+          "status": "independently_derived",
+          "scope": "依据公开候选的可核对数学条件独立推导，待考场原卷逐字核验。",
+          "result": {
+            "value_latex": "\\sqrt[3]{\\frac32}"
+          },
+          "steps": [
+            "用相邻的部分和作差，得到第 \\(j\\) 个连续三项块的和为 \\(2j\\)。九项窗口若与三项块对齐，就包含三个完整块，等比条件与三个连续正整数的相邻比不等矛盾。",
+            "错位时恰有两个完整块，块号 \\(j,j+1\\) 且 \\(j\\ge2\\)，故 \\(q^3=(j+1)/j\\le3/2\\)。从第 2 项开始放置九项并选首项使第 2 块和为 4，再以窗口外项补足边缘块，可达上界。"
+          ],
+          "evidence": [
+            {
+              "source_id": "jin-2026-math-paper",
+              "location": "排版 PDF 第 3 页第 14 题"
+            },
+            {
+              "source_id": "math-2026-5ol",
+              "location": "第 14 题在线预览"
+            },
+            {
+              "source_id": "jin-2026-math-answer",
+              "location": "第 14 题讲评"
+            }
+          ]
+        },
+        "sources": [
+          "https://www.jhgk.cn/upload/file/20260608/1780886746084032608.pdf",
+          "https://zy.21cnjy.com/25912080"
+        ]
+      }
+    ]
+  },
+  "fill_in_complete_only": {
+    "command": "python scripts/cli.py query --subject math --region cn-ha --kind fill_in --complete-only",
+    "result": []
+  },
+  "math_coverage": {
+    "command": "python scripts/cli.py report --subject math --region cn-ha",
+    "result": [
+      {
+        "paper_id": "2025-cn-math-national-1",
+        "title": "2025年普通高等学校招生全国统一考试 数学",
+        "edition": "全国一卷（全国Ⅰ卷）",
+        "identity_status": "verified_for_listed_regions",
+        "content_status": "已发现来源",
+        "expected_questions": 19,
+        "indexed_questions": 19,
+        "transcribed_questions": 0,
+        "complete_question_texts": 0,
+        "independent_solutions": 19,
+        "human_reviewed_questions": 0,
+        "files": [],
+        "missing_local_materials": {
+          "paper": {
+            "state": "linked",
+            "source_ids": [
+              "jin-2025-math-paper",
+              "math-2025-21",
+              "math-github",
+              "math-2025-pobing",
+              "math-2025-eol-paper"
+            ],
+            "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+          },
+          "answer": {
+            "state": "linked",
+            "source_ids": [
+              "jin-2025-math-answer",
+              "math-2025-21"
+            ],
+            "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+          },
+          "explanation": {
+            "state": "linked",
+            "source_ids": [
+              "math-2025-21",
+              "neea-2025-math"
+            ],
+            "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+          },
+          "image": {
+            "state": "partial",
+            "source_ids": [
+              "jin-2025-math-paper",
+              "math-2025-21"
+            ],
+            "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
+          }
+        },
+        "local_roles_without_complete_version": [],
+        "issues": [
+          {
+            "id": "math25-q4-q9-q11",
+            "type": "candidate_version_conflict",
+            "source_ids": [
+              "jin-2025-math-paper",
+              "math-2025-pobing",
+              "math-2025-21"
+            ],
+            "detail": "第4、9、11题的候选选项字母、顺序或文本提取不同。",
+            "disposition": "保留数学结论，冲突时按来源列选项或省略字母。"
+          },
+          {
+            "id": "math25-q6",
+            "type": "candidate_version_conflict",
+            "source_ids": [
+              "math-2025-21",
+              "math-2025-pobing"
+            ],
+            "detail": "两处文字对第6题视风箭头的指向相反。",
+            "disposition": "两种结果分别登记，待原页图像裁决。"
+          }
+        ]
+      },
+      {
+        "paper_id": "2026-cn-math-national-1",
+        "title": "2026年普通高等学校招生全国统一考试 数学",
+        "edition": "全国一卷（全国Ⅰ卷）",
+        "identity_status": "verified_for_listed_regions",
+        "content_status": "已发现来源",
+        "expected_questions": 19,
+        "indexed_questions": 19,
+        "transcribed_questions": 0,
+        "complete_question_texts": 0,
+        "independent_solutions": 19,
+        "human_reviewed_questions": 0,
+        "files": [],
+        "missing_local_materials": {
+          "paper": {
+            "state": "linked",
+            "source_ids": [
+              "jin-2026-math-paper",
+              "math-2026-21",
+              "math-github",
+              "math-2026-partial",
+              "math-2026-5ol",
+              "math-2026-village-scan"
+            ],
+            "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+          },
+          "answer": {
+            "state": "linked",
+            "source_ids": [
+              "jin-2026-math-answer",
+              "math-2026-21"
+            ],
+            "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+          },
+          "explanation": {
+            "state": "linked",
+            "source_ids": [
+              "math-2026-21",
+              "math-2026-tc",
+              "math-2026-personal",
+              "moe-2026-review"
+            ],
+            "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+          },
+          "image": {
+            "state": "partial",
+            "source_ids": [
+              "jin-2026-math-paper",
+              "math-2026-21"
+            ],
+            "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
+          }
+        },
+        "local_roles_without_complete_version": [],
+        "issues": [
+          {
+            "id": "math26-partial",
+            "type": "candidate_completeness",
+            "source_ids": [
+              "math-2026-partial",
+              "jin-2026-math-paper"
+            ],
+            "detail": "考试卷网将该版本标为残缺且未记录公开上游。其在线预览仍列出第1–19题，但第17题题干显示有截断。锦宏排版PDF可定位四页和第1–19题。",
+            "disposition": "区分网页显示、附件和排版候选，未把站方的残缺标签解释为整道解答题缺失。"
+          },
+          {
+            "id": "math26-q13",
+            "type": "item_mismatch",
+            "source_ids": [
+              "math-2026-5ol",
+              "jin-2026-math-answer",
+              "math-2026-personal"
+            ],
+            "detail": "五网和锦宏解析的第一空是相位参数，个人解析第一空答频率参数。递增条件不能唯一确定频率。",
+            "disposition": "保存按相位题面推导的条件解，待考场原页核定。"
+          },
+          {
+            "id": "math26-q17",
+            "type": "score_conflict",
+            "source_ids": [
+              "jin-2026-math-paper",
+              "math-2026-tc",
+              "math-2026-sj",
+              "math-2026-5ol",
+              "jin-2026-math-answer"
+            ],
+            "detail": "锦宏排版与天材教育均记第17题15分；四季读书网汇总记13分。",
+            "disposition": "题面排版、公开预览、解析和分区合计支持15分。保留13分汇总误差，待考场原页确认。"
+          },
+          {
+            "id": "math26-q18",
+            "type": "statement_conflict",
+            "source_ids": [
+              "jin-2026-math-paper",
+              "jin-2026-math-answer",
+              "math-2026-5ol",
+              "math-2026-partial",
+              "math-2026-personal",
+              "math-2026-q18-cnblogs"
+            ],
+            "detail": "多个预览与锦宏解析用Q在第三象限及PFO，锦宏卷面文本用P。个人解析另称PFQ并自行改为PFR。",
+            "disposition": "P与PFO条件联立无解。保留Q与PFO版本的条件解，尚无考场原页确认原文。"
+          },
+          {
+            "id": "math26-q3",
+            "type": "candidate_version_conflict",
+            "source_ids": [
+              "math-2026-5ol",
+              "jin-2026-math-answer",
+              "math-2026-21"
+            ],
+            "detail": "第3题可读候选把正确集合列为C，二一教育答案表写B。",
+            "disposition": "保留集合结果，选项字母待核。"
+          },
+          {
+            "id": "math26-q9-q10-q12",
+            "type": "candidate_version_conflict",
+            "source_ids": [
+              "math-2026-5ol",
+              "jin-2026-math-answer",
+              "math-2026-personal"
+            ],
+            "detail": "个人解析所据第9题分母、第10题下界、第12题系数与其他可读候选有差异。",
+            "disposition": "以条件解保留交叉支持的数学推导，等待视觉原页校对。"
+          }
+        ]
+      }
+    ]
+  }
+}
