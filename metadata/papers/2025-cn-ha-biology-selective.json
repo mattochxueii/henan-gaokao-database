@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "2025-cn-ha-biology-selective",
+  "year": 2025,
+  "subject": "biology",
+  "subject_label": "生物学",
+  "scope": "cn-ha",
+  "edition": "selective",
+  "formal_title": "2025年普通高中学业水平选择性考试（河南卷）生物学",
+  "title_basis": "按当年正式考试名称和候选卷首记录。",
+  "edition_label": "河南卷",
+  "aliases": [
+    "河南选择性考试"
+  ],
+  "regions": [
+    "cn-ha"
+  ],
+  "region_names": [
+    "河南省"
+  ],
+  "region_coverage": "河南省选择性考试。",
+  "authoring_body": "河南省（省级自主命题）",
+  "regime": "3+1+2",
+  "exam_kind": "provincial_selective",
+  "session": "main",
+  "identity_status": "verified_for_listed_regions",
+  "attribution_sources": [
+    "henan-2025-rules",
+    "henan-reform",
+    "kaosj-2025",
+    "ha-2025-science"
+  ],
+  "identity_note": "河南改革文件和年度规定确认正式选择性考试，河南考后材料与候选卷入口印证该学科的河南卷身份。",
+  "researched_on": "2026-11-06",
+  "max_points": 100,
+  "expected_questions": null,
+  "materials": {
+    "paper": {
+      "state": "linked",
+      "source_ids": [
+        "bio-2025-kaosj",
+        "bio-2025-scan"
+      ],
+      "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+    },
+    "answer": {
+      "state": "linked",
+      "source_ids": [
+        "bio-2025-answers",
+        "bio-2025-wrong-label"
+      ],
+      "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+    },
+    "explanation": {
+      "state": "linked",
+      "source_ids": [
+        "bio-2025-kaosj",
+        "bio-2025-answers"
+      ],
+      "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+    },
+    "image": {
+      "state": "partial",
+      "source_ids": [
+        "bio-2025-kaosj",
+        "bio-2025-scan"
+      ],
+      "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
+    }
+  },
+  "issues": [
+    {
+      "id": "bio25-label",
+      "type": "misleading_title",
+      "source_ids": [
+        "henan-reform",
+        "bio-2025-scan",
+        "bio-2025-wrong-label"
+      ],
+      "detail": "第三方页面标题将河南生物学称为新高考Ⅰ卷，考制及卷面候选显示河南选择性考试。",
+      "disposition": "归类为河南卷，保留链接仅供答案版本追溯。"
+    }
+  ]
+}

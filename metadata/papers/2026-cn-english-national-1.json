@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "2026-cn-english-national-1",
+  "year": 2026,
+  "subject": "english",
+  "subject_label": "英语",
+  "scope": "cn",
+  "edition": "national-1",
+  "formal_title": "2026年普通高等学校招生全国统一考试 英语",
+  "title_basis": "按正式考试名称与科目规范化。卷型单列，原卷卷首待逐字核对。",
+  "edition_label": "全国一卷（全国Ⅰ卷）",
+  "aliases": [
+    "新高考Ⅰ卷",
+    "新课标Ⅰ卷"
+  ],
+  "regions": [
+    "cn-ha"
+  ],
+  "region_names": [
+    "河南省"
+  ],
+  "region_coverage": "仅登记本项目已核的适用省份，其他同卷省份未作本卷用途审核。",
+  "authoring_body": "教育部教育考试院",
+  "regime": "3+1+2",
+  "exam_kind": "national_unified",
+  "session": "main",
+  "identity_status": "verified_for_listed_regions",
+  "attribution_sources": [
+    "henan-2026-rules",
+    "henan-reform",
+    "kaosj-2026",
+    "jin-2026",
+    "ha-2026-english",
+    "moe-2026-review"
+  ],
+  "identity_note": "年度政策确认全国统考，省内考后资料与试卷汇总相互印证河南实际选用全国一卷。",
+  "researched_on": "2026-11-06",
+  "max_points": 150,
+  "expected_questions": null,
+  "materials": {
+    "paper": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026",
+        "kaosj-2026"
+      ],
+      "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+    },
+    "answer": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026",
+        "kaosj-2026"
+      ],
+      "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+    },
+    "explanation": {
+      "state": "linked",
+      "source_ids": [
+        "ha-2026-english",
+        "kaosj-2026"
+      ],
+      "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+    },
+    "image": {
+      "state": "not_found",
+      "source_ids": [],
+      "note": "未核到具备许可的考场原图或可核的单独图像来源。"
+    },
+    "listening_questions": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026",
+        "kaosj-2026"
+      ],
+      "note": "存在听力题候选，按全国一卷登记，需对照正式原卷。"
+    },
+    "listening_transcript": {
+      "state": "linked",
+      "source_ids": [
+        "eng-2026-audio"
+      ],
+      "note": "维词相关页面称含录音原文，转写方式及与正式录音的一致性待核。"
+    },
+    "listening_audio": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026",
+        "eng-2026-audio"
+      ],
+      "note": "锦宏列出全国一卷MP3，录音来源、完整性、版本一致性和使用许可待核。"
+    }
+  },
+  "issues": [],
+  "henan_scoring": {
+    "listening_held": true,
+    "listening_paper_points": 30,
+    "listening_counts_toward_total": false,
+    "written_paper_points": 120,
+    "written_multiplier": 1.25,
+    "rounding": "四舍五入",
+    "evidence": "henan-2026-rules"
+  }
+}

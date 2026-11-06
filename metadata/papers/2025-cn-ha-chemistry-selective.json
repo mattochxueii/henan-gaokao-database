@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "2025-cn-ha-chemistry-selective",
+  "year": 2025,
+  "subject": "chemistry",
+  "subject_label": "化学",
+  "scope": "cn-ha",
+  "edition": "selective",
+  "formal_title": "2025年普通高中学业水平选择性考试（河南卷）化学",
+  "title_basis": "按正式考试名称与科目规范化。原卷卷首待逐字核对。",
+  "edition_label": "河南卷",
+  "aliases": [
+    "河南选择性考试"
+  ],
+  "regions": [
+    "cn-ha"
+  ],
+  "region_names": [
+    "河南省"
+  ],
+  "region_coverage": "河南省选择性考试。",
+  "authoring_body": "河南省（省级自主命题）",
+  "regime": "3+1+2",
+  "exam_kind": "provincial_selective",
+  "session": "main",
+  "identity_status": "verified_for_listed_regions",
+  "attribution_sources": [
+    "henan-2025-rules",
+    "henan-reform",
+    "kaosj-2025",
+    "ha-2025-science"
+  ],
+  "identity_note": "河南改革文件和年度规定确认正式选择性考试，河南考后材料与候选卷入口印证该学科的河南卷身份。",
+  "researched_on": "2026-11-06",
+  "max_points": 100,
+  "expected_questions": null,
+  "materials": {
+    "paper": {
+      "state": "linked",
+      "source_ids": [
+        "chem-2025-kaosj",
+        "chem-2025-21"
+      ],
+      "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+    },
+    "answer": {
+      "state": "linked",
+      "source_ids": [
+        "chem-2025-kaosj",
+        "chem-2025-21"
+      ],
+      "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+    },
+    "explanation": {
+      "state": "linked",
+      "source_ids": [
+        "chem-2025-kaosj",
+        "chem-2025-21"
+      ],
+      "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+    },
+    "image": {
+      "state": "partial",
+      "source_ids": [
+        "chem-2025-kaosj",
+        "chem-2025-scan"
+      ],
+      "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
+    }
+  },
+  "issues": [
+    {
+      "id": "chem25-recall",
+      "type": "recall_version",
+      "source_ids": [
+        "chem-2025-recall",
+        "chem-2025-scan",
+        "chem-2025-21"
+      ],
+      "detail": "同时存在回忆版、扫描候选和网络参考版，版本权威性不同。",
+      "disposition": "回忆版仅登记排除记录。"
+    }
+  ]
+}

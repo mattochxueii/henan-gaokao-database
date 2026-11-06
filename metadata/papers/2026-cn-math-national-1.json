@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "2026-cn-math-national-1",
+  "year": 2026,
+  "subject": "math",
+  "subject_label": "数学",
+  "scope": "cn",
+  "edition": "national-1",
+  "formal_title": "2026年普通高等学校招生全国统一考试 数学",
+  "title_basis": "全国统考正式名称及候选排版卷首。卷型单列。",
+  "edition_label": "全国一卷（全国Ⅰ卷）",
+  "aliases": [
+    "新高考Ⅰ卷",
+    "新课标Ⅰ卷"
+  ],
+  "regions": [
+    "cn-ha"
+  ],
+  "region_names": [
+    "河南省"
+  ],
+  "region_coverage": "仅登记本项目已核的适用省份，其他同卷省份未作本卷用途审核。",
+  "authoring_body": "教育部教育考试院",
+  "regime": "3+1+2",
+  "exam_kind": "national_unified",
+  "session": "main",
+  "identity_status": "verified_for_listed_regions",
+  "attribution_sources": [
+    "henan-2026-rules",
+    "henan-reform",
+    "kaosj-2026",
+    "jin-2026",
+    "ha-2026-math",
+    "moe-2026-review"
+  ],
+  "identity_note": "年度政策确认全国统考，省内考后资料与试卷汇总相互印证河南实际选用全国一卷。",
+  "researched_on": "2026-11-06",
+  "max_points": 150,
+  "expected_questions": 19,
+  "materials": {
+    "paper": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026-math-paper",
+        "math-2026-21",
+        "math-github",
+        "math-2026-partial"
+      ],
+      "note": "候选可在线查阅或由平台列出；待取得对应版本权利依据及原卷比对。"
+    },
+    "answer": {
+      "state": "linked",
+      "source_ids": [
+        "jin-2026-math-answer",
+        "math-2026-21"
+      ],
+      "note": "候选为第三方参考答案或平台标注答案；未核到权利人许可或权威原始发布。"
+    },
+    "explanation": {
+      "state": "linked",
+      "source_ids": [
+        "math-2026-21",
+        "math-2026-tc",
+        "math-2026-personal",
+        "moe-2026-review"
+      ],
+      "note": "已定位讲评或第三方解析；逐题完整性及许可待核。"
+    },
+    "image": {
+      "state": "partial",
+      "source_ids": [
+        "jin-2026-math-paper",
+        "math-2026-21"
+      ],
+      "note": "候选扫描或嵌图；是否为考场原始图像、逐图完整性及权利待核。"
+    }
+  },
+  "issues": [
+    {
+      "id": "math26-partial",
+      "type": "candidate_completeness",
+      "source_ids": [
+        "math-2026-partial",
+        "jin-2026-math-paper"
+      ],
+      "detail": "考试卷网将该版本标为残缺且未记录公开上游。其在线预览仍列出第1–19题，但第17题题干显示有截断。锦宏排版PDF可定位四页和第1–19题。",
+      "disposition": "区分网页显示、附件和排版候选，未把站方的残缺标签解释为整道解答题缺失。"
+    },
+    {
+      "id": "math26-q13",
+      "type": "item_mismatch",
+      "source_ids": [
+        "jin-2026-math-answer",
+        "math-2026-personal",
+        "math-2026-partial"
+      ],
+      "detail": "锦宏解析和考试卷网第13题第一空要求确定相位参数 θ；个人解析却把第一空作频率参数 a。",
+      "disposition": "记录为题面与候选答案不一致。第14题两处答案为等价根式，未记为答案冲突。"
+    },
+    {
+      "id": "math26-q17",
+      "type": "score_conflict",
+      "source_ids": [
+        "jin-2026-math-paper",
+        "math-2026-tc",
+        "math-2026-sj"
+      ],
+      "detail": "锦宏排版与天材教育均记第17题15分；四季读书网汇总记13分。",
+      "disposition": "题号索引暂按一致的两处来源记15分，保留差异，待原卷裁决。"
+    },
+    {
+      "id": "math26-q18",
+      "type": "statement_conflict",
+      "source_ids": [
+        "jin-2026-math-paper",
+        "math-2026-personal",
+        "math-2026-partial"
+      ],
+      "detail": "第18题第（2）问第（i）小问中，锦宏排版用△PFO作比较；个人解析声称另一底稿用△PFQ，并自行改成△PFR。考试卷网页面还把在第三象限的点写作Q，锦宏排版写作P。",
+      "disposition": "保留不同版本差异，暂不采纳个人改写或对应解析。"
+    }
+  ]
+}
