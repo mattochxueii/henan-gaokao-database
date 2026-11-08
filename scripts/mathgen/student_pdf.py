@@ -273,7 +273,8 @@ def render(paper, path, solutions=False):
             if q["kind"] == "fill_in" and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
         if solutions:
-            story.extend(block)
+            # Keep each solution together when it fits a page; long solutions may split.
+            story.append(KeepTogether(block))
             story.append(Spacer(1, 12))
         else:
             story.append(KeepTogether(block))
