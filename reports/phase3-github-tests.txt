@@ -1,0 +1,47 @@
+2026-11-08T08:07:14.0037114Z ##[group]Run python -m unittest discover -s tests -p test_public.py -v
+2026-11-08T08:07:14.0037567Z [36;1mpython -m unittest discover -s tests -p test_public.py -v[0m
+2026-11-08T08:07:15.2378255Z test_150_structure_failure_is_detected (test_public.DefectRegressionTests.test_150_structure_failure_is_detected) ... ok
+2026-11-08T08:07:15.8307660Z test_ai_does_not_call_template_generator (test_public.DefectRegressionTests.test_ai_does_not_call_template_generator) ... ok
+2026-11-08T08:07:15.8312526Z test_api_malformed_response_is_rejected (test_public.DefectRegressionTests.test_api_malformed_response_is_rejected) ... ok
+2026-11-08T08:07:16.2149722Z test_api_revises_a_math_failure_within_shared_budget (test_public.DefectRegressionTests.test_api_revises_a_math_failure_within_shared_budget) ... ok
+2026-11-08T08:07:16.2154844Z test_api_timeout_has_bounded_retry_and_no_secret_in_error (test_public.DefectRegressionTests.test_api_timeout_has_bounded_retry_and_no_secret_in_error) ... ok
+2026-11-08T08:07:16.2165099Z test_api_total_budget_cannot_reset_between_proposals (test_public.DefectRegressionTests.test_api_total_budget_cannot_reset_between_proposals) ... ok
+2026-11-08T08:07:16.2231736Z test_bad_probability_option_is_rejected (test_public.DefectRegressionTests.test_bad_probability_option_is_rejected) ... ok
+2026-11-08T08:07:16.2240426Z test_cancellation_cannot_hide_domain_hole (test_public.DefectRegressionTests.test_cancellation_cannot_hide_domain_hole) ... ok
+2026-11-08T08:07:16.2248102Z test_comparison_command_does_not_swallow_variable (test_public.DefectRegressionTests.test_comparison_command_does_not_swallow_variable) ... ok
+2026-11-08T08:07:16.2397471Z test_conditional_probability_golden_result (test_public.DefectRegressionTests.test_conditional_probability_golden_result) ... ok
+2026-11-08T08:07:16.2481624Z test_cross_validation_is_not_formal_proof (test_public.DefectRegressionTests.test_cross_validation_is_not_formal_proof) ... ok
+2026-11-08T08:07:16.2483661Z test_duplicate_instructions_are_rejected (test_public.DefectRegressionTests.test_duplicate_instructions_are_rejected) ... ok
+2026-11-08T08:07:16.2586346Z test_encrypted_fixture_restores_with_separate_key (test_public.DefectRegressionTests.test_encrypted_fixture_restores_with_separate_key) ... ok
+2026-11-08T08:07:16.2647531Z test_equivalent_correct_options_are_rejected (test_public.DefectRegressionTests.test_equivalent_correct_options_are_rejected) ... ok
+2026-11-08T08:07:16.2657761Z test_fallback_is_explicit (test_public.DefectRegressionTests.test_fallback_is_explicit) ... ok
+2026-11-08T08:07:16.2659038Z test_host_bad_json_is_rejected (test_public.DefectRegressionTests.test_host_bad_json_is_rejected) ... ok
+2026-11-08T08:07:16.2667376Z test_key_leak_in_regular_data_or_log_is_detected (test_public.DefectRegressionTests.test_key_leak_in_regular_data_or_log_is_detected) ... ok
+2026-11-08T08:07:16.2668725Z test_key_path_and_private_key_payload_are_detected (test_public.DefectRegressionTests.test_key_path_and_private_key_payload_are_detected) ... ok
+2026-11-08T08:07:16.2711086Z test_missing_figure_is_rejected (test_public.DefectRegressionTests.test_missing_figure_is_rejected) ... ok
+2026-11-08T08:07:16.2712215Z test_missing_formula_is_rejected (test_public.DefectRegressionTests.test_missing_formula_is_rejected) ... ok
+2026-11-08T08:07:16.2752338Z test_modified_body_invalidates_cached_verification (test_public.DefectRegressionTests.test_modified_body_invalidates_cached_verification) ... ok
+2026-11-08T08:07:16.2754203Z test_new_model_changes_structure (test_public.DefectRegressionTests.test_new_model_changes_structure) ... ok
+2026-11-08T08:07:16.2760998Z test_number_only_changes_keep_same_structure (test_public.DefectRegressionTests.test_number_only_changes_keep_same_structure) ... ok
+2026-11-08T08:07:16.2766554Z test_optimum_explicitly_names_maximum (test_public.DefectRegressionTests.test_optimum_explicitly_names_maximum) ... ok
+2026-11-08T08:07:16.3609820Z test_parameter_boundary_included (test_public.DefectRegressionTests.test_parameter_boundary_included) ... ok
+2026-11-08T08:07:19.2031530Z test_pdf_handles_logic_symbols_and_inline_image_wrap (test_public.DefectRegressionTests.test_pdf_handles_logic_symbols_and_inline_image_wrap) ... ok
+2026-11-08T08:07:19.2041079Z test_probability_claim_explains_probability_separately_from_truth (test_public.DefectRegressionTests.test_probability_claim_explains_probability_separately_from_truth) ... ok
+2026-11-08T08:07:19.2152846Z test_probability_options_are_legal_for_many_seeds (test_public.DefectRegressionTests.test_probability_options_are_legal_for_many_seeds) ... ok
+2026-11-08T08:07:19.2222315Z test_rendering_keeps_question_not_its_answer (test_public.DefectRegressionTests.test_rendering_keeps_question_not_its_answer) ... ok
+2026-11-08T08:07:19.2555172Z test_reordered_multiple_choice_solutions_name_current_letters (test_public.DefectRegressionTests.test_reordered_multiple_choice_solutions_name_current_letters) ... ok
+2026-11-08T08:07:19.2636801Z test_review_cannot_attest_another_candidate_version (test_public.DefectRegressionTests.test_review_cannot_attest_another_candidate_version) ... ok
+2026-11-08T08:07:19.2653503Z test_secret_paths_are_excluded (test_public.DefectRegressionTests.test_secret_paths_are_excluded) ... ok
+2026-11-08T08:07:19.2657293Z test_simple_arithmetic_is_not_overstated_as_dual_proof (test_public.DefectRegressionTests.test_simple_arithmetic_is_not_overstated_as_dual_proof) ... ok
+2026-11-08T08:07:19.2734144Z test_single_choice_proof_demand_is_rejected (test_public.DefectRegressionTests.test_single_choice_proof_demand_is_rejected) ... ok
+2026-11-08T08:07:19.2767192Z test_solver_timeout_is_blocked (test_public.DefectRegressionTests.test_solver_timeout_is_blocked) ... ok
+2026-11-08T08:07:19.3207448Z test_stationary_point_without_extremum_is_handled (test_public.DefectRegressionTests.test_stationary_point_without_extremum_is_handled) ... ok
+2026-11-08T08:07:19.3209322Z test_template_disguised_as_ai_is_rejected (test_public.DefectRegressionTests.test_template_disguised_as_ai_is_rejected) ... ok
+2026-11-08T08:07:19.3383289Z test_trigonometric_options_are_legal (test_public.DefectRegressionTests.test_trigonometric_options_are_legal) ... ok
+2026-11-08T08:07:19.3897595Z test_two_full_ai_papers_have_distinct_structures (test_public.DefectRegressionTests.test_two_full_ai_papers_have_distinct_structures) ... ok
+2026-11-08T08:07:19.3899020Z test_unsupported_proof_is_not_silently_accepted (test_public.DefectRegressionTests.test_unsupported_proof_is_not_silently_accepted) ... ok
+2026-11-08T08:07:19.3927627Z test_wrong_derivative_shared_with_generator_is_caught (test_public.DefectRegressionTests.test_wrong_derivative_shared_with_generator_is_caught) ... ok
+2026-11-08T08:07:19.3996906Z test_wrong_proposed_answer_is_not_read_by_solver (test_public.DefectRegressionTests.test_wrong_proposed_answer_is_not_read_by_solver) ... ok
+2026-11-08T08:07:19.4051296Z test_wrong_syllabus_is_rejected (test_public.DefectRegressionTests.test_wrong_syllabus_is_rejected) ... ok
+2026-11-08T08:07:19.4053098Z Ran 43 tests in 4.169s
+2026-11-08T08:07:19.4053663Z OK
