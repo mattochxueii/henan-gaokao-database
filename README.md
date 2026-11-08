@@ -1,6 +1,6 @@
 # 河南新高考真题数据库与数学命题原型
 
-截至2026-11-08，沿用第一阶段的12卷归属登记、71条来源、38条数学索引和独立推导。2025、2026数学各19道完整候选题面现有仓库内私有工作目录及可迁移的加密备份。另有38条版本绑定分析、命题规则、可安装Skill、四组真实运行实验。
+截至2026-11-08，沿用第一阶段的12卷归属登记、71条来源、38条数学索引和独立推导。2025、2026数学各19道完整候选题面现有仓库内私有工作目录及可迁移的加密备份。另有38条版本绑定分析、命题规则及可安装Skill。第三阶段新增70道宿主AI动态设计题、六组真实运行实验及独立审题；26族模板作为备用模式保留。
 
 当前可检索题面来自2025锦宏回忆重排版与2026第三方扫描候选。命题机构确认的完整原卷仍为0，人工逐题审核仍为0。候选原文保存在受控解密目录。
 
@@ -38,28 +38,50 @@ python scripts/math_skill.py rules
 ## 安装和使用Skill
 
 ```powershell
-python scripts/install_math_skill.py
+python scripts/install_math_skill.py --destination .agents/skills/henan-math-phase3
+python .agents/skills/henan-math-phase3/scripts/run.py research --topic 数列
+python scripts/math_skill.py research --topic 导数
+python scripts/math_skill.py rules
+python scripts/math_skill.py plan --mode full --profile geometry --output <蓝图.json>
 ```
 
-默认安装到本项目的.agents/skills/henan-math，配置为指向仓库的相对链接。打开项目后由支持SKILL.md的宿主加载。独立安装包可以解压后使用--database指定仓库根目录，或设置HENAN_MATH_DB。仓库与项目内安装一起移动仍可定位。外部安装后单独移动仓库需要重新安装相对配置。
+支持--database、HENAN_MATH_DB及安装相对链接，详见skills/henan-math/SKILL.md。已有旧安装不覆盖，请选择新目录。
+
+原创请求必须显式使用ai。宿主AI实际阅读研究结果后，自主设计蓝图和新数学结构，按references/ai-protocol.md写出结构化候选；本地程序独立求解并审题。读取已有实验JSON只是重放，不是再次创作。
 
 ```powershell
-python .agents/skills/henan-math/scripts/run.py research --topic 数列
-python .agents/skills/henan-math/scripts/run.py generate --mode sequence --seed 20261107 --output <新的输出目录>
-python .agents/skills/henan-math/scripts/run.py verify <输出目录>/run.json
-python scripts/math_skill.py generate --topic 等比数列 --count 1 --kind constructed_response --difficulty 4 --output <新的输出目录>
-python scripts/math_skill.py generate --mode derivative --output <新的输出目录>
-python scripts/math_skill.py generate --mode mixed --output <新的输出目录>
-python scripts/math_skill.py generate --mode full --output <新的输出目录>
+python scripts/math_skill.py generate --engine ai --candidates <宿主新候选.json> --output <新目录> --no-export
+python scripts/math_skill.py verify <新目录>/run.json
+python scripts/math_skill.py review <新目录>/run.json --report <独立审题.json>
 ```
 
-支持知识模块、题型、题量和设计难度筛选。26个受支持题目族在执行时按种子采样，题目结构由本轮AI研究设计。宿主AI使用Skill编排研究、设计和推理复核，本地求解器重新计算数学结果。本轮未调用外部模型API，远程调用与费用预算均为0。自由自然语言题面的任意语义验证尚未实现，增加题目族需要同步扩展独立求解器与测试。
+review须由独立推理者提供与candidate_sha256匹配的通过记录，之后导出研究审阅版PDF与解析。程序、符号数值交叉、独立AI审题和教师待审分开保存，不代表形式化证明或高质量评级。修改题目后校验值失效，重新求解及审题。
 
-每题最多3次重试，每次重做验证并保存attempts.json。新输出目录保护历史记录。题面校验值变化会使旧验证失效。数值替换形式的同卷重复会被相似度门槛拦截。文本检测范围为当前38候选及同卷生成题，全球原创性与真实难度仍需要外部评审。
+默认不需要API。用户已自行配置OPENAI_API_KEY时可使用--engine ai --model <显式模型>，提供者采用OpenAI Responses，格式失败、超时与数学反馈共用调用总预算（默认2、最高3），限制输入与输出长度，不记录密钥。本轮API仅做模拟传输测试，实际动态创作使用宿主AI，精确模型版本未暴露。
 
-150分模拟采用历史候选的19题结构。2027的细节仍属模拟设定，正式考试通知优先。多选题部分得分在模拟卷头明确约定。
+AI不可用时明确失败；只有显式--allow-template-fallback才回退。稳定备用命令：
 
-## 已运行成果
+```powershell
+python scripts/math_skill.py generate --engine template --mode full --output <新目录>
+```
+
+26族模式沿用数学结构并调整参数，不代表AI自主原创。固定布局仅保留在template中；ai蓝图依据分析、覆盖和宿主设计组合模块。本轮两套150分卷采用历史候选19题结构，2027仍为模拟设定。任意自然语言证明、实测难度和高考风格尚不能自动认证。
+
+## 第三阶段交付
+
+- experiments/phase3/deliveries/sequence10：10道数列，100分。
+- experiments/phase3/deliveries/derivative10：10道导数，100分。
+- experiments/phase3/deliveries/mixed50：7题50分。
+- experiments/phase3/deliveries/fullA、fullB：不同蓝图的两套19题150分卷。
+- experiments/phase3/deliveries/acceptance5：3数列、2导数，5种结构的50分验收卷。
+- 每组含原始候选、独立求解、独立审题、质量报告、paper/solutions.pdf及Markdown。
+- proposals-initial、proposals、revisions、attempt1/attempt2保留失败与修订。过程快照保存在本地工作区，交付以deliveries为准。
+- reports/phase3-ai-vs-template.md解释两种模式；reports/phase3-delivery.md记录验收与真实限制。
+- GitHub Actions仅运行不解密的公开合成/原创回归测试；完整私有题库与加密恢复测试在本地安全环境运行。
+
+两套150分卷目前偏基础至中档，压轴强度与分值需要教师审核，未评定为高质量高考模拟卷。创新度限于当前样本与结构比较，不能证明全网首次。
+
+## 保留并修复的模板实验
 
 - experiments/sequence 含5道递进数列题，共50分。
 - experiments/derivative 含5道导数综合题，共50分。
@@ -104,7 +126,7 @@ evaluate运行全部测试并保存结果。专项复算覆盖10道重点题，3
 
 候选的新版本另存私有目录及清单，保留既有版本，生成新的分析校验值。先恢复旧密文到新空目录，再导入新版本。为新一代备份配置新的encrypted_backup、backup_parts_manifest和backup_inventory相对路径，再选新密钥备份。当前backup拒绝覆盖已有密文、密钥、分片或库存。
 
-新题目族须增加规范题面、独立求解、选项判定、相似度与失败测试。新增命题规则须给证据和分类。样本量为两套，观察频率不能直接升级为固定命题比例。
+新AI数学操作须增加独立求解、语义排版、反例及超时测试；模板新增题目族同样须补齐规范与验证。新增命题规则须给证据和分类。样本量为两套，观察频率不能直接升级为固定命题比例。
 
 ## 报告
 

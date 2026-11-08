@@ -1,0 +1,381 @@
+{
+  "report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+  "questions": [
+    {
+      "id": "orig:ai:phase3:sequence10:q001:v1",
+      "candidate_sha256": "7f98201528921a0967e27bfc97601f7f332fd3f6bd479f846315b2c2a45bd446",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q001:v1",
+        "candidate_sha256": "7f98201528921a0967e27bfc97601f7f332fd3f6bd479f846315b2c2a45bd446",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "S=3/4−1/[2(n+1)]−1/[2(n+2)]。将每项拆成(1/k−1/(k+2))/2，错开两项消去。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "分式拆项与两端残项",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q002:v1",
+      "candidate_sha256": "3ecedc675e8d1a3688b212f484f2ad4bbd503ab250a99ab713e1477394af6d70",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q002:v1",
+        "candidate_sha256": "3ecedc675e8d1a3688b212f484f2ad4bbd503ab250a99ab713e1477394af6d70",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "S=2+(n−1)2^(n+1)。作2S−S或对有限等比和求导；n=1给2，并可用相邻差校验。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 3,
+          "difficulty_basis": "权重等比和需一次消项",
+          "calculation_complexity": "中等",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q003:v1",
+      "candidate_sha256": "0afef290191ef18297422657c217740d092777f6f0097aff92582f495a127c24",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q003:v1",
+        "candidate_sha256": "0afef290191ef18297422657c217740d092777f6f0097aff92582f495a127c24",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "u_n=(3n+1)/2。令v_n=u_n/(n+1)，则v_(n+1)−v_n=1/[(n+1)(n+2)]，v_1=1。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 3,
+          "difficulty_basis": "递推权重变换后再裂项",
+          "calculation_complexity": "中等",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q004:v1",
+      "candidate_sha256": "eef3a530283e1ec5e6c056392f991ac7c26fec377c5604d9e33a830aa8998715",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q004:v1",
+        "candidate_sha256": "eef3a530283e1ec5e6c056392f991ac7c26fec377c5604d9e33a830aa8998715",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "u_n=(−1)^(n−1)n。首项正确，相邻差为(2n+1)(−1)^n，或按奇偶累加。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "奇偶规律与代回验证",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q005:v1",
+      "candidate_sha256": "b0e56fb454cb3e61a9b051ee500ae397f639c6522569a0189445b69527f35792",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q005:v1",
+        "candidate_sha256": "b0e56fb454cb3e61a9b051ee500ae397f639c6522569a0189445b69527f35792",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "积为4(n+1)/(n+4)。把每因子分成(k+1)/k与(k+3)/(k+4)，分别约消。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "两个相邻乘积串约分",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q006:v1",
+      "candidate_sha256": "c189a6e12b75c6805bf1eba066d2d080ad2d0604b3a8f5a2f41a66fcd4957cb8",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q006:v1",
+        "candidate_sha256": "c189a6e12b75c6805bf1eba066d2d080ad2d0604b3a8f5a2f41a66fcd4957cb8",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "和为√(n+1)−1。分母有理化后每项为√(k+1)−√k。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "一次有理化与裂项",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q007:v1",
+      "candidate_sha256": "65dd4719dcdec8c26296fde4de63c06445dd4b1a7be8b5c596d01f8e17293c7f",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q007:v1",
+        "candidate_sha256": "65dd4719dcdec8c26296fde4de63c06445dd4b1a7be8b5c596d01f8e17293c7f",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "x³系数−8。原式=(1−x²)^4(1+x)^2，仅2x乘−4x²贡献三次项。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "二项式和奇偶幂识别；数列属性弱于多项式属性",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q008:v1",
+      "candidate_sha256": "609bf81e589d8ed04eb64704e374f365f96a046052993593eb4beb4e266b983c",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q008:v1",
+        "candidate_sha256": "609bf81e589d8ed04eb64704e374f365f96a046052993593eb4beb4e266b983c",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "x=4，y=√3。由3x=12，48+2y²=54，递增条件y>0排除负根。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 2,
+          "difficulty_basis": "两式代入及正负根筛选",
+          "calculation_complexity": "较低",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q009:v2",
+      "candidate_sha256": "6e041f883c6a099a9351c09e28da3f5faa9e1a1e8f8c72992ca80fc8bade2e61",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q009:v2",
+        "candidate_sha256": "6e041f883c6a099a9351c09e28da3f5faa9e1a1e8f8c72992ca80fc8bade2e61",
+        "supersedes_reviewed_sha256": "e23c07f46c246358cebee9ac94b26ae7a9f1071a66de1e00a113ea69dc02f203",
+        "source_file": "experiments/phase3/proposals/sequence10.json",
+        "status": "pass",
+        "independent_solution": "Σ_(k=2)^n C(k,2)=C(n+1,3)。可按三元组最大元素分类，也可将k(k−1)/2求和。",
+        "revision_assessment": "明确已有k个编号、再引入第k+1个，第k项为C(k,2)，k=1项为0，任务从k=2累加与前n项和一致。",
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false,
+        "remaining_uncertainty": [
+          "教师盲审与实测尚未进行"
+        ]
+      }
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q010:v1",
+      "candidate_sha256": "2450383b3a7f6b2262de53b71de2fff5a2f3e51decbfe25872a22d3b5eca82c0",
+      "review_report_sha256": "f8dca5827d29e79f8b7fb39058e1a4e0a0ed7645e6387442191adae319d518dc",
+      "reviewer": "独立子代理",
+      "model_version": "not_exposed_by_host",
+      "formal_proof": false,
+      "human_review": "尚需人工核验",
+      "review": {
+        "question_id": "orig:ai:phase3:sequence10:q010:v1",
+        "candidate_sha256": "2450383b3a7f6b2262de53b71de2fff5a2f3e51decbfe25872a22d3b5eca82c0",
+        "source_file": "experiments/phase3/proposals-initial/sequence10.json",
+        "status": "pass",
+        "mathematical_review": {
+          "status": "pass",
+          "independent_solution": "奇数平方和n(4n²−1)/3；减n³得n(n−1)(n+1)/3≥0，n≥1时等号仅n=1。",
+          "method": "独立代数、符号展开、直接计数或导数符号推理；未读取生成器参考解答"
+        },
+        "semantic_review": {
+          "issues": [],
+          "context_task_consistency": "已逐项对照context与task，数学对象和约束一致"
+        },
+        "highschool_review": {
+          "feasible": true,
+          "basis": "可由高中代数、数列、三角、导数、概率计数或空间向量完成",
+          "difficulty_design_1_to_5": 3,
+          "difficulty_basis": "标准平方和代入与因式分解",
+          "calculation_complexity": "中等",
+          "empirical_difficulty": null
+        },
+        "remaining_uncertainty": [
+          "未开展教师盲审与考生实测，分值和难度判断为AI设计审查",
+          "独立AI推理及CAS算式核对未构成形式化证明"
+        ],
+        "reviewer": "独立子代理",
+        "model_version": "not_exposed_by_host",
+        "formal_proof": false
+      }
+    }
+  ],
+  "blind_report_sha256": null
+}

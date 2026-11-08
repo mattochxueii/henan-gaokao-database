@@ -1,0 +1,122 @@
+[
+  {
+    "id": "orig:ai:phase3:acceptance5:q001:v1",
+    "candidate_sha256": "c432c90c95622cf16b7285f883793d22821df118a35b39c366943a9fc4f648e3",
+    "rendered_stem": "排列规模的增长参与递推，试用阶乘权重化简。\n（1）求数列通项。\\(\\left(\\left(u\\left(\\left(n+1\\right)\\right)-\\left(\\left(n+1\\right)\\cdot u\\left(n\\right)\\right)\\right)-\\left(\\left(n+1\\right)\\right)!\\right)\\)=0，初值u(1)=1，n为正整数。",
+    "problem": {
+      "context": "排列规模的增长参与递推，试用阶乘权重化简。",
+      "tasks": [
+        {
+          "op": "recurrence",
+          "relation": "u(n+1)-(n+1)*u(n)-factorial(n+1)",
+          "initial": {
+            "1": "1"
+          }
+        }
+      ]
+    },
+    "kind": "constructed_response"
+  },
+  {
+    "id": "orig:ai:phase3:acceptance5:q002:v1",
+    "candidate_sha256": "e69290bef4bb394f8196a878ad283bcbb99dc4ef17f3a0b194775555b669b2cd",
+    "rendered_stem": "三个正数按顺序构成递增等比数列，总和14，末项比首项多6。\n（1）解方程组。\\(\\left(\\left(y\\cdot y\\right)-\\left(x\\cdot t\\right)\\right)\\)=0，\\(\\left(\\left(\\left(x+y\\right)+t\\right)-14\\right)\\)=0，\\(\\left(\\left(t-x\\right)-6\\right)\\)=0, 未知量x,y,t为实数。附加限制\\(x>0\\),\\(y>0\\),\\(t>x\\)。",
+    "problem": {
+      "context": "三个正数按顺序构成递增等比数列，总和14，末项比首项多6。",
+      "tasks": [
+        {
+          "op": "system",
+          "variables": [
+            "x",
+            "y",
+            "t"
+          ],
+          "expressions": [
+            "y*y-x*t",
+            "x+y+t-14",
+            "t-x-6"
+          ],
+          "conditions": [
+            "x>0",
+            "y>0",
+            "t>x"
+          ],
+          "unique": true
+        }
+      ]
+    },
+    "kind": "constructed_response"
+  },
+  {
+    "id": "orig:ai:phase3:acceptance5:q003:v1",
+    "candidate_sha256": "c966ae0c6f1414f340be6f4c00ea437d04ab6bd08dc2bc707f4d485c0b8bfb6d",
+    "rendered_stem": "四次式可以在全体实数上具有唯一取等点。\n（1）证明下式非负并讨论取等。\\(\\left(\\left(\\left(x\\right)^{4}-\\left(4\\cdot x\\right)\\right)+3\\right)\\)。",
+    "problem": {
+      "context": "四次式可以在全体实数上具有唯一取等点。",
+      "tasks": [
+        {
+          "op": "nonnegative",
+          "expression": "x**4-4*x+3"
+        }
+      ]
+    },
+    "kind": "constructed_response"
+  },
+  {
+    "id": "orig:ai:phase3:acceptance5:q004:v1",
+    "candidate_sha256": "13a22e0188f8bcc98fda79f9ab39479f379456f6753201eac0afe4d47b0a6f28",
+    "rendered_stem": "参数乘在对数项前，导数中的参数系数随位置变化。\n（1）求使函数在定义域内单调不减的参数范围。\\(\\left(\\left(a\\cdot \\ln\\left(x\\right)\\right)-x\\right)\\)，x∈\\(\\left[1, 3\\right]\\)，参数a为实数。",
+    "problem": {
+      "context": "参数乘在对数项前，导数中的参数系数随位置变化。",
+      "tasks": [
+        {
+          "op": "parameter_monotone",
+          "expression": "a*log(x)-x",
+          "domain": [
+            "1",
+            "3"
+          ],
+          "open": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    "kind": "constructed_response"
+  },
+  {
+    "id": "orig:ai:phase3:acceptance5:q005:v1",
+    "candidate_sha256": "3607f378b4da5a1c4b79a92aa77bf1da13359ccc3b5ad649c953415a2fde9a58",
+    "rendered_stem": "记长度n的0-1串中不含相邻两个1的个数为aₙ，本题求a₄。\n（1）求满足条件的有序结果数。各变量独立等可能取值，x∈\\(\\left\\{0, 1\\right\\}\\)，y∈\\(\\left\\{0, 1\\right\\}\\)，t∈\\(\\left\\{0, 1\\right\\}\\)，c∈\\(\\left\\{0, 1\\right\\}\\)。已知\\(\\left(x\\cdot y\\right)=0\\land \\left(y\\cdot t\\right)=0\\land \\left(t\\cdot c\\right)=0\\)。目标事件为\\(1=1\\)。",
+    "problem": {
+      "context": "记长度n的0-1串中不含相邻两个1的个数为aₙ，本题求a₄。",
+      "tasks": [
+        {
+          "op": "count",
+          "sample_space": {
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ],
+            "t": [
+              0,
+              1
+            ],
+            "c": [
+              0,
+              1
+            ]
+          },
+          "condition": "x*y==0 and y*t==0 and t*c==0",
+          "event": "1==1"
+        }
+      ]
+    },
+    "kind": "constructed_response"
+  }
+]

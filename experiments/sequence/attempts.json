@@ -4,7 +4,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "b297d7fd424c7506206351ec215a1c8b448bcb61e5308a7e2c86cd4097582488",
+      "question_sha256": "469afaec12138c74e0b43c48a0c32413b41dd759cad2071c3974071f6099ade0",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -36,17 +36,23 @@
       "duplicate": {
         "closest": {
           "id": "2025-cn-math-national-1:q016",
-          "score": 0.3571
+          "score": 0.2553
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "数列",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -55,7 +61,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "72c38bcb1d4803cf3a5226839406f868ec068aef7dd7dcdf94401d00e6e00a27",
+      "question_sha256": "4f48903ff0e94a87642c0b53aa8d6ccb8e2c44a7e719aed477a42aa9266b3d44",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -91,18 +97,24 @@
     "quality": {
       "duplicate": {
         "closest": {
-          "id": "orig:henan-math:sequence:20261107:q001:v1",
-          "score": 0.3889
+          "id": "2026-cn-math-national-1:q014",
+          "score": 0.3905
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "数列",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -111,7 +123,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "d4a83b501382fc76f899d0cffbded79ebf0101aa7178c0a8152eaa0e7d67f30c",
+      "question_sha256": "7dc4dbda8c61659b07fd1a32253a5da2495b5af6a41364c9444832d3c7e0d1e1",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -151,17 +163,23 @@
       "duplicate": {
         "closest": {
           "id": "orig:henan-math:sequence:20261107:q002:v1",
-          "score": 0.5
+          "score": 0.4962
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "数列",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -170,7 +188,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "9eef457b3574eda57302ebb1786fd6447b88a7c82a4aed63a46060238c420672",
+      "question_sha256": "8d48c6f988499feeb0e1afe53f52391ffefcfd2b98ae6f3f0208b8a67b089d04",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -207,17 +225,23 @@
       "duplicate": {
         "closest": {
           "id": "orig:henan-math:sequence:20261107:q001:v1",
-          "score": 0.5854
+          "score": 0.6269
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "数列",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -226,7 +250,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "1b09daaeb5f25e412deb976293645fbb597e8a994086af097e2c03f784e79bf8",
+      "question_sha256": "b8342e3dbe428a1a1c0f951a4870ff8430f0c7ba15d388daafa7c2ddfc99e05d",
       "passed": true,
       "status": "symbolic_checks_and_reasoning_review",
       "canonical_text_matches_spec": true,
@@ -264,17 +288,23 @@
       "duplicate": {
         "closest": {
           "id": "orig:henan-math:sequence:20261107:q003:v1",
-          "score": 0.28
+          "score": 0.45
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "数列",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   }

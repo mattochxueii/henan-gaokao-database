@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "author": "当前Codex宿主AI",
+    "authored_at": "2026-11-08",
+    "task": "phase3-dynamic-math",
+    "method": "本轮直接设计不同数学关系并写出结构化候选，未调用FamilyProvider、draft或26族模板",
+    "api_calls": 0,
+    "template_calls": 0
+  },
+  "blueprint": {
+    "mode": "derivative",
+    "profile": "derivative-diversity",
+    "seed": 0,
+    "title": "derivative10数学动态命题实验",
+    "slots": [
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "函数与导数"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "研究导数的最小约束如何决定整段单调。",
+        "tasks": [
+          {
+            "op": "parameter_monotone",
+            "expression": "x**3/3-a*x",
+            "domain": [
+              "1",
+              "2"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          {
+            "op": "monotonicity",
+            "expression": "x**3/3-x",
+            "domain": [
+              "1",
+              "2"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "参数单调与边界驻点",
+        "reasoning_path": "把导数非负化成参数上界，验证边界时并非整段常数",
+        "knowledge_combination": [
+          "函数与导数",
+          "参数单调与边界驻点"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q001:v1",
+      "slot": 1,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "寻找能够对全部正数成立的统一下界。",
+        "tasks": [
+          {
+            "op": "parameter_bound",
+            "expression": "x-log(x)-a",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          },
+          {
+            "op": "nonnegative",
+            "expression": "x-1-log(x)",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "对数全域界与取等",
+        "reasoning_path": "求差函数唯一极小点，同时检查两端极限",
+        "knowledge_combination": [
+          "函数与导数",
+          "对数全域界与取等"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q002:v1",
+      "slot": 2,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "同一个函数在有界区间上既有驻点又有端点竞争。",
+        "tasks": [
+          {
+            "op": "extrema",
+            "expression": "(x+1)*exp(-x)",
+            "domain": [
+              "-1",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "指数乘积与闭区间最值",
+        "reasoning_path": "先判断导数符号，再比较端点与内部点",
+        "knowledge_combination": [
+          "函数与导数",
+          "指数乘积与闭区间最值"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q003:v1",
+      "slot": 3,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "对数曲线的切线界应在整个正半轴检查。",
+        "tasks": [
+          {
+            "op": "equation",
+            "expression": "1/x-1/2",
+            "domain": [
+              "0",
+              "oo"
+            ],
+            "unique": true
+          },
+          {
+            "op": "nonnegative",
+            "expression": "x/2-1-log(x/2)",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "切线接触点与平移缩放不等式",
+        "reasoning_path": "定位导数相等点，再对差函数证明全域非负",
+        "knowledge_combination": [
+          "函数与导数",
+          "切线接触点与平移缩放不等式"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q004:v1",
+      "slot": 4,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "先由水平切线条件恢复系数，再检查恢复后的曲线。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "expressions": [
+              "3+2*a+b",
+              "1+a+b-2"
+            ],
+            "unique": true
+          },
+          {
+            "op": "extrema",
+            "expression": "x**3-4*x*x+5*x",
+            "domain": [
+              "0",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ],
+        "given_text": "原函数为\\(f(x)=x^3+ax^2+bx\\)，在点\\((1,2)\\)的切线水平。"
+      },
+      "design": {
+        "structure": "反向切线加端点比较",
+        "reasoning_path": "联立函数值与导数值，分区讨论三个候选点",
+        "knowledge_combination": [
+          "函数与导数",
+          "反向切线加端点比较"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q005:v2",
+      "slot": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "导数在一点为零，并不保证该点是极值点。",
+        "tasks": [
+          {
+            "op": "monotonicity",
+            "expression": "x**3-3*x*x+3*x"
+          },
+          {
+            "op": "derivative",
+            "expression": "x**3-3*x*x+3*x",
+            "at": "1"
+          }
+        ]
+      },
+      "design": {
+        "structure": "偶重导数零点与严格单调",
+        "reasoning_path": "导数不变号，合并两侧单调区间，说明零导数点的作用",
+        "knowledge_combination": [
+          "函数与导数",
+          "偶重导数零点与严格单调"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q006:v1",
+      "slot": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "开放无穷区间的参数界可能由极限决定。",
+        "tasks": [
+          {
+            "op": "parameter_monotone",
+            "expression": "log(x)+a*x",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "导数含参数与无穷远约束",
+        "reasoning_path": "参数系数固定符号，必要条件来自远端，边界仍成立",
+        "knowledge_combination": [
+          "函数与导数",
+          "导数含参数与无穷远约束"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q007:v1",
+      "slot": 7,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "证明指数曲线高于其在原点的切线，并找出全部取等点。",
+        "tasks": [
+          {
+            "op": "nonnegative",
+            "expression": "exp(x)-1-x"
+          }
+        ]
+      },
+      "design": {
+        "structure": "全域切线支撑与唯一取等",
+        "reasoning_path": "导数在原点前后变号，检查两侧极限",
+        "knowledge_combination": [
+          "函数与导数",
+          "全域切线支撑与唯一取等"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q008:v1",
+      "slot": 8,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "函数的零点和导数零点是两类不同对象。",
+        "tasks": [
+          {
+            "op": "equation",
+            "expression": "x**4-5*x*x+4",
+            "domain": [
+              "-3",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          {
+            "op": "monotonicity",
+            "expression": "x**4-5*x*x+4",
+            "domain": [
+              "-3",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "双二次零点与三驻点排序",
+        "reasoning_path": "令平方为新变量求零点，再独立求导分区",
+        "knowledge_combination": [
+          "函数与导数",
+          "双二次零点与三驻点排序"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q009:v1",
+      "slot": 9,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "单位成本由正比例项和反比例项组成。求统一扣减常数的可行范围。",
+        "tasks": [
+          {
+            "op": "parameter_bound",
+            "expression": "x+4/x-a",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          },
+          {
+            "op": "extrema",
+            "expression": "x+4/x",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "反比例成本最优界",
+        "reasoning_path": "参数界与极小值相互验证，注意两端都无界",
+        "knowledge_combination": [
+          "函数与导数",
+          "反比例成本最优界"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q010:v1",
+      "slot": 10,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  ]
+}

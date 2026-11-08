@@ -1,0 +1,104 @@
+{
+  "dynamic_questions": 70,
+  "ai_provider": "host_ai",
+  "api_calls": 0,
+  "template_calls_in_ai": 0,
+  "model_version": "not_exposed_by_host",
+  "experiments": {
+    "sequence10": {
+      "questions": 10,
+      "points": 100,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "4342a6690ac8c24f8421cc96eebf1a12a14b7472ce1353dec5e886f29ef9586d"
+    },
+    "derivative10": {
+      "questions": 10,
+      "points": 100,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "9b211bcbfbd5455de97551cdfed74e9682a0483ff4f481811d164366d9fee6c5"
+    },
+    "mixed50": {
+      "questions": 7,
+      "points": 50,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "8aa3e2724c5a1e1d998e6cc100585499b00697c6467d02b2d285fb9f41f10c67"
+    },
+    "fullA": {
+      "questions": 19,
+      "points": 150,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "24e1b2f857215e1c3c2b5e57bad92595960ea547f97dd79d933dc61161ebc1d0"
+    },
+    "fullB": {
+      "questions": 19,
+      "points": 150,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "580c57611e8461458d619c66f4f711e9d90f3ed8cacb799f86450074bf75a06f"
+    },
+    "acceptance5": {
+      "questions": 5,
+      "points": 50,
+      "status": "研究审阅版：程序验证及独立AI审查完成，尚需教师核验",
+      "sha256": "3f6e3da961712ea11b03125b94cbb91e3f5c80b4f8b68d44900a6ff6463afb03"
+    }
+  },
+  "template_rechecks": {
+    "sequence": {
+      "mode": "template",
+      "questions": 5,
+      "all_item_audits_pass": true
+    },
+    "derivative": {
+      "mode": "template",
+      "questions": 5,
+      "all_item_audits_pass": true
+    },
+    "mixed": {
+      "mode": "template",
+      "questions": 7,
+      "all_item_audits_pass": true
+    },
+    "full": {
+      "mode": "template",
+      "questions": 19,
+      "all_item_audits_pass": true
+    }
+  },
+  "full_paper_difference": {
+    "passed": true,
+    "same_slot_same_structure": 0,
+    "module_position_changes": 15,
+    "structure_set_overlap": 0.0,
+    "claim": "比较数学图和知识搭配，不能以随机种子变化作为差异证据"
+  },
+  "choice_key_counts": {
+    "sequence10": {},
+    "derivative10": {},
+    "mixed50": {
+      "C": 1,
+      "A": 1,
+      "D": 1,
+      "B": 1
+    },
+    "fullA": {
+      "C": 2,
+      "B": 2,
+      "A": 2,
+      "D": 2
+    },
+    "fullB": {
+      "C": 2,
+      "A": 2,
+      "D": 2,
+      "B": 2
+    },
+    "acceptance5": {}
+  },
+  "limitations": [
+    "仅为研究审阅版，整卷偏基础至中档，压轴强度和分值待教师审核",
+    "难度及时间未实测",
+    "独立AI审题不是人类盲审或形式化证明",
+    "不支持任意自然语言证明",
+    "API仅模拟传输测试，未付费实调"
+  ]
+}

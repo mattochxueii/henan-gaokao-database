@@ -11,6 +11,7 @@ test_refuse_missing_permission_before_copy (test_gaokao.IntakeTests.test_refuse_
 test_register_is_idempotent_and_rejects_mock_paper (test_gaokao.IntakeTests.test_register_is_idempotent_and_rejects_mock_paper) ... ok
 test_repeat_and_cross_paper_deduplication (test_gaokao.IntakeTests.test_repeat_and_cross_paper_deduplication) ... ok
 test_validate_rejects_modified_blob (test_gaokao.IntakeTests.test_validate_rejects_modified_blob) ... ok
+test_actual_recovery_key_absent_from_tracked_data_and_logs (test_phase2.DatabaseResearchTests.test_actual_recovery_key_absent_from_tracked_data_and_logs) ... ok
 test_all_38_have_content_and_bound_analysis (test_phase2.DatabaseResearchTests.test_all_38_have_content_and_bound_analysis) ... ok
 test_every_comparison_is_version_bound (test_phase2.DatabaseResearchTests.test_every_comparison_is_version_bound) ... ok
 test_priority_symbolic_audit_bound_to_candidates (test_phase2.DatabaseResearchTests.test_priority_symbolic_audit_bound_to_candidates) ... ok
@@ -36,8 +37,51 @@ test_concurrent_backups_do_not_replace_the_winner (test_phase2.PrivateStorageTes
 test_fresh_directory_clean_interpreter_restore_and_skill (test_phase2.PrivateStorageTests.test_fresh_directory_clean_interpreter_restore_and_skill) ... ok
 test_inventory_mismatch_rejected (test_phase2.PrivateStorageTests.test_inventory_mismatch_rejected) ... ok
 test_restore_rejects_escape_and_preserves_existing (test_phase2.PrivateStorageTests.test_restore_rejects_escape_and_preserves_existing) ... ok
+test_150_structure_failure_is_detected (test_public.DefectRegressionTests.test_150_structure_failure_is_detected) ... ok
+test_ai_does_not_call_template_generator (test_public.DefectRegressionTests.test_ai_does_not_call_template_generator) ... ok
+test_api_malformed_response_is_rejected (test_public.DefectRegressionTests.test_api_malformed_response_is_rejected) ... ok
+test_api_revises_a_math_failure_within_shared_budget (test_public.DefectRegressionTests.test_api_revises_a_math_failure_within_shared_budget) ... ok
+test_api_timeout_has_bounded_retry_and_no_secret_in_error (test_public.DefectRegressionTests.test_api_timeout_has_bounded_retry_and_no_secret_in_error) ... ok
+test_api_total_budget_cannot_reset_between_proposals (test_public.DefectRegressionTests.test_api_total_budget_cannot_reset_between_proposals) ... ok
+test_bad_probability_option_is_rejected (test_public.DefectRegressionTests.test_bad_probability_option_is_rejected) ... ok
+test_cancellation_cannot_hide_domain_hole (test_public.DefectRegressionTests.test_cancellation_cannot_hide_domain_hole) ... ok
+test_comparison_command_does_not_swallow_variable (test_public.DefectRegressionTests.test_comparison_command_does_not_swallow_variable) ... ok
+test_conditional_probability_golden_result (test_public.DefectRegressionTests.test_conditional_probability_golden_result) ... ok
+test_cross_validation_is_not_formal_proof (test_public.DefectRegressionTests.test_cross_validation_is_not_formal_proof) ... ok
+test_duplicate_instructions_are_rejected (test_public.DefectRegressionTests.test_duplicate_instructions_are_rejected) ... ok
+test_encrypted_fixture_restores_with_separate_key (test_public.DefectRegressionTests.test_encrypted_fixture_restores_with_separate_key) ... ok
+test_equivalent_correct_options_are_rejected (test_public.DefectRegressionTests.test_equivalent_correct_options_are_rejected) ... ok
+test_fallback_is_explicit (test_public.DefectRegressionTests.test_fallback_is_explicit) ... ok
+test_host_bad_json_is_rejected (test_public.DefectRegressionTests.test_host_bad_json_is_rejected) ... ok
+test_key_leak_in_regular_data_or_log_is_detected (test_public.DefectRegressionTests.test_key_leak_in_regular_data_or_log_is_detected) ... ok
+test_key_path_and_private_key_payload_are_detected (test_public.DefectRegressionTests.test_key_path_and_private_key_payload_are_detected) ... ok
+test_missing_figure_is_rejected (test_public.DefectRegressionTests.test_missing_figure_is_rejected) ... ok
+test_missing_formula_is_rejected (test_public.DefectRegressionTests.test_missing_formula_is_rejected) ... ok
+test_modified_body_invalidates_cached_verification (test_public.DefectRegressionTests.test_modified_body_invalidates_cached_verification) ... ok
+test_new_model_changes_structure (test_public.DefectRegressionTests.test_new_model_changes_structure) ... ok
+test_number_only_changes_keep_same_structure (test_public.DefectRegressionTests.test_number_only_changes_keep_same_structure) ... ok
+test_optimum_explicitly_names_maximum (test_public.DefectRegressionTests.test_optimum_explicitly_names_maximum) ... ok
+test_parameter_boundary_included (test_public.DefectRegressionTests.test_parameter_boundary_included) ... ok
+test_pdf_handles_logic_symbols_and_inline_image_wrap (test_public.DefectRegressionTests.test_pdf_handles_logic_symbols_and_inline_image_wrap) ... ok
+test_probability_claim_explains_probability_separately_from_truth (test_public.DefectRegressionTests.test_probability_claim_explains_probability_separately_from_truth) ... ok
+test_probability_options_are_legal_for_many_seeds (test_public.DefectRegressionTests.test_probability_options_are_legal_for_many_seeds) ... ok
+test_rendering_keeps_question_not_its_answer (test_public.DefectRegressionTests.test_rendering_keeps_question_not_its_answer) ... ok
+test_reordered_multiple_choice_solutions_name_current_letters (test_public.DefectRegressionTests.test_reordered_multiple_choice_solutions_name_current_letters) ... ok
+test_review_cannot_attest_another_candidate_version (test_public.DefectRegressionTests.test_review_cannot_attest_another_candidate_version) ... ok
+test_secret_paths_are_excluded (test_public.DefectRegressionTests.test_secret_paths_are_excluded) ... ok
+test_simple_arithmetic_is_not_overstated_as_dual_proof (test_public.DefectRegressionTests.test_simple_arithmetic_is_not_overstated_as_dual_proof) ... ok
+test_single_choice_proof_demand_is_rejected (test_public.DefectRegressionTests.test_single_choice_proof_demand_is_rejected) ... ok
+test_solver_timeout_is_blocked (test_public.DefectRegressionTests.test_solver_timeout_is_blocked) ... ok
+test_stationary_point_without_extremum_is_handled (test_public.DefectRegressionTests.test_stationary_point_without_extremum_is_handled) ... ok
+test_template_disguised_as_ai_is_rejected (test_public.DefectRegressionTests.test_template_disguised_as_ai_is_rejected) ... ok
+test_trigonometric_options_are_legal (test_public.DefectRegressionTests.test_trigonometric_options_are_legal) ... ok
+test_two_full_ai_papers_have_distinct_structures (test_public.DefectRegressionTests.test_two_full_ai_papers_have_distinct_structures) ... ok
+test_unsupported_proof_is_not_silently_accepted (test_public.DefectRegressionTests.test_unsupported_proof_is_not_silently_accepted) ... ok
+test_wrong_derivative_shared_with_generator_is_caught (test_public.DefectRegressionTests.test_wrong_derivative_shared_with_generator_is_caught) ... ok
+test_wrong_proposed_answer_is_not_read_by_solver (test_public.DefectRegressionTests.test_wrong_proposed_answer_is_not_read_by_solver) ... ok
+test_wrong_syllabus_is_rejected (test_public.DefectRegressionTests.test_wrong_syllabus_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 38 tests in 12.378s
+Ran 82 tests in 34.335s
 
 OK

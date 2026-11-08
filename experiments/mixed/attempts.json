@@ -4,7 +4,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "2f7f0f116a49aa76ab7573895cff3ef431bdcdb091f314355851b1bc0fcf2a16",
+      "question_sha256": "e3fa052c7872b2a61ce4ffdbea6dc5bc48b89533bfb239b2b35e9ad8ec9bcff4",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -34,18 +34,24 @@
     "quality": {
       "duplicate": {
         "closest": {
-          "id": "2025-cn-math-national-1:q016",
-          "score": 0.3529
+          "id": "2025-cn-math-national-1:q001",
+          "score": 0.3077
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "集合与复数",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -54,7 +60,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "08aef27fa0beed0af25b76b306303d3bc8b9d9fbfe8fa1f6c6c30cebd081f4fa",
+      "question_sha256": "af7988bec3763e76990012fd2d3c0b3357c8eec453e21c3f838a36d5bb01fb0d",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -85,17 +91,23 @@
       "duplicate": {
         "closest": {
           "id": "2025-cn-math-national-1:q002",
-          "score": 0.3721
+          "score": 0.2469
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "集合与复数",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -104,7 +116,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "77047546b8389af915bef0664871208e5fe758881830e7a46e62116d0df26c7e",
+      "question_sha256": "a102ac0af824c6e6b3f5a733c016977c5f84f95c3b642bf949627ca20969359d",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -135,17 +147,23 @@
       "duplicate": {
         "closest": {
           "id": "orig:henan-math:mixed:20261109:q001:v1",
-          "score": 0.4
+          "score": 0.2979
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "三角与向量",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -154,7 +172,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "0df221e18403b85a542048b796a9f40f03b974db404c8ff58049a0800efac41e",
+      "question_sha256": "000e88fc08c60703cf68c3919e9edfd7e036fb1a13fc9b328819541f66476ee1",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -185,17 +203,23 @@
       "duplicate": {
         "closest": {
           "id": "2025-cn-math-national-1:q014",
-          "score": 0.2105
+          "score": 0.1818
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "概率统计",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -204,7 +228,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "80503cb3918141ec9ab0f240ef03d7b3aa854010993ba38e3df92e8a9559781a",
+      "question_sha256": "d6e9cf6ee0211d0c3b5f5b69ecd8c76d334c9caa7d3d86b1bd2f87d113dde652",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -234,18 +258,24 @@
     "quality": {
       "duplicate": {
         "closest": {
-          "id": "2026-cn-math-national-1:q001",
-          "score": 0.3529
+          "id": "2026-cn-math-national-1:q006",
+          "score": 0.4384
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "排列组合",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -254,7 +284,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "0a97001e008ecc5925b774261253776b9eb0e34d48d1dee831878a094aaf5da4",
+      "question_sha256": "f3df2c99b032f68c9e340df28ae95915ef4c7b2c55529625559a19d8d0adaf5c",
       "passed": true,
       "status": "programmatically_verified",
       "canonical_text_matches_spec": true,
@@ -293,18 +323,24 @@
     "quality": {
       "duplicate": {
         "closest": {
-          "id": "2026-cn-math-national-1:q010",
-          "score": 0.1935
+          "id": "orig:henan-math:mixed:20261109:q003:v1",
+          "score": 0.1887
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "立体几何",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   },
@@ -313,7 +349,7 @@
     "attempt": 1,
     "passed": true,
     "verification": {
-      "question_sha256": "cca6542a958bc8ef44968dd4fbfd467580959c69360df51f2c80c9378354e123",
+      "question_sha256": "6a97052d7bb56e3237d87c061a2e70229e2a4d4e318072cc21e6da3f914083d0",
       "passed": true,
       "status": "symbolic_checks_and_reasoning_review",
       "canonical_text_matches_spec": true,
@@ -362,18 +398,24 @@
     "quality": {
       "duplicate": {
         "closest": {
-          "id": "2025-cn-math-national-1:q007",
-          "score": 0.1935
+          "id": "2025-cn-math-national-1:q012",
+          "score": 0.2178
         },
         "threshold": 0.78,
         "passed": true,
-        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
         "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
       },
       "syllabus_module": "函数与导数",
       "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
       "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
       "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "item_audit": {
+        "passed": true,
+        "errors": [],
+        "reviewer": "deterministic-quality-v2",
+        "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+      },
       "passed": true
     }
   }

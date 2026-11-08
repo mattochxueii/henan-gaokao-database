@@ -17,7 +17,7 @@ SEQUENCES = [
     "seq_optimize",
 ]
 DERIVATIVES = list(FAMILIES)[5:10]
-FULL_FAMILIES = [
+TEMPLATE_LAYOUT_V1 = [
     "complex_norm",
     "integer_set",
     "trig_square",
@@ -53,8 +53,10 @@ def blueprint(root, mode):
         for group in regulations["blueprint"]["sections"]:
             points = group.get("points", [group.get("points_each")] * group["count"])
             slots.extend([{"kind": group["kind"], "points": p} for p in points])
-        require(len(slots) == len(FULL_FAMILIES), "历史蓝图变化，需要更新题目族安排")
-        for slot, family in zip(slots, FULL_FAMILIES):
+        require(
+            len(slots) == len(TEMPLATE_LAYOUT_V1), "历史模板蓝图变化，需要更新备用布局"
+        )
+        for slot, family in zip(slots, TEMPLATE_LAYOUT_V1):
             slot["family"] = family
     elif mode == "mixed":
         slots = [
@@ -229,9 +231,20 @@ def run(root, mode, seed, output, export=True, plan=None):
                 id=f"orig:henan-math:{mode}:{seed}:q{number:03d}:v{attempt + 1}",
                 order=number,
                 revision=attempt + 1,
-                novelty_basis="与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。",
+                novelty_basis="模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
             )
             verification = verify(question)
+            question["difficulty_review"] = {
+                "estimate": 3
+                if question["family"] == "seq_alternating"
+                else question["difficulty"],
+                "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+                "empirical": False,
+            }
+            verification["question_sha256"] = fingerprint(question)
+            from .review import audit_item
+
+            item_audit = audit_item(question)
             duplication = duplicate_check(question, originals, questions)
             review = {
                 "duplicate": duplication,
@@ -239,7 +252,10 @@ def run(root, mode, seed, output, export=True, plan=None):
                 "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
                 "difficulty_basis": question["difficulty_basis"],
                 "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
-                "passed": verification["passed"] and duplication["passed"],
+                "item_audit": item_audit,
+                "passed": verification["passed"]
+                and duplication["passed"]
+                and item_audit["passed"],
             }
             events.append(
                 {
@@ -264,6 +280,7 @@ def run(root, mode, seed, output, export=True, plan=None):
         "blueprint": plan,
         "seed": seed,
         "provider": provider.name,
+        "generation_mode": "template",
         "rules_snapshot": rules(root),
         "limits": vars(limits),
         "remote_model_calls": 0,

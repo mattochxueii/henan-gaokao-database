@@ -1,0 +1,192 @@
+[
+  {
+    "id": "orig:ai:phase3:sequence10:q001:v1",
+    "mode": "ai",
+    "candidate_sha256": "7f98201528921a0967e27bfc97601f7f332fd3f6bd479f846315b2c2a45bd446",
+    "question_sha256": "32c6f6216654e2cb046757d2a43c7a2d19cfaf14ee64ba4830b865c81d9042f7",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "隔位裂项"
+    ],
+    "purpose": "隔位裂项",
+    "reasoning": "拆成相隔两项的倒数，分别检查首尾两项",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q002:v1",
+    "mode": "ai",
+    "candidate_sha256": "3ecedc675e8d1a3688b212f484f2ad4bbd503ab250a99ab713e1477394af6d70",
+    "question_sha256": "0b54cde08f57d28e746a7cefa8872da75dc6c8ea6c50d330dd27024183095704",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "线性权重与等比底数"
+    ],
+    "purpose": "线性权重与等比底数",
+    "reasoning": "错位相减或有限和求导，检查末项",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q003:v1",
+    "mode": "ai",
+    "candidate_sha256": "0afef290191ef18297422657c217740d092777f6f0097aff92582f495a127c24",
+    "question_sha256": "6fe3919f5624ceb9035931e3598fdb1afbb31fd6ed9efacbda27fbaa3639a89a",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "变系数非齐次递推"
+    ],
+    "purpose": "变系数非齐次递推",
+    "reasoning": "除以相邻乘积后累加，再恢复通项",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q004:v1",
+    "mode": "ai",
+    "candidate_sha256": "eef3a530283e1ec5e6c056392f991ac7c26fec377c5604d9e33a830aa8998715",
+    "question_sha256": "79d2f8f8e4d33287c5bc1ff43c29b5e9eecbbfd167499ac3c469065379a4fc4f",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "线性增量的交替驱动"
+    ],
+    "purpose": "线性增量的交替驱动",
+    "reasoning": "将奇数和偶数项配对，验证通项与首项",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q005:v1",
+    "mode": "ai",
+    "candidate_sha256": "b0e56fb454cb3e61a9b051ee500ae397f639c6522569a0189445b69527f35792",
+    "question_sha256": "96c403c87929c2c79bc3abc81fc40bf13cdc5a152ed428679e0815042b0206d1",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "交叉约分有限积"
+    ],
+    "purpose": "交叉约分有限积",
+    "reasoning": "分开两组相邻比，核对边界因子",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q006:v1",
+    "mode": "ai",
+    "candidate_sha256": "c189a6e12b75c6805bf1eba066d2d080ad2d0604b3a8f5a2f41a66fcd4957cb8",
+    "question_sha256": "ec2420ae39aada75ae5b38da32a24e2082cd34cc491cc76989124f19124e3098",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "根式有理化后相消"
+    ],
+    "purpose": "根式有理化后相消",
+    "reasoning": "乘共轭转成相邻根式差，再作有限和",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q007:v1",
+    "mode": "ai",
+    "candidate_sha256": "65dd4719dcdec8c26296fde4de63c06445dd4b1a7be8b5c596d01f8e17293c7f",
+    "question_sha256": "587f1867553ab0c15c0c37eef1c6913afb473340278939082ab05f019be181fa",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "两类二项式系数卷积"
+    ],
+    "purpose": "两类二项式系数卷积",
+    "reasoning": "先合并相反因子再提取三次项",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q008:v1",
+    "mode": "ai",
+    "candidate_sha256": "609bf81e589d8ed04eb64704e374f365f96a046052993593eb4beb4e266b983c",
+    "question_sha256": "6728863a8548bf78ca68df1feb2e69dfa2fc4983f4f9e689e8132149b451b004",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "对称变量恢复等差三元组"
+    ],
+    "purpose": "对称变量恢复等差三元组",
+    "reasoning": "以中项与公差建模，附加递增条件排除负公差",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q009:v2",
+    "mode": "ai",
+    "candidate_sha256": "6e041f883c6a099a9351c09e28da3f5faa9e1a1e8f8c72992ca80fc8bade2e61",
+    "question_sha256": "0e0eb799ec0779c757ee299d816aa70d4eb9ca213163a3a6d380ee22c4489d77",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "组合计数与部分和"
+    ],
+    "purpose": "组合计数与部分和",
+    "reasoning": "按三个编号中的最大者分类，也可代数求和",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:sequence10:q010:v1",
+    "mode": "ai",
+    "candidate_sha256": "2450383b3a7f6b2262de53b71de2fff5a2f3e51decbfe25872a22d3b5eca82c0",
+    "question_sha256": "a5c2050be44fd462faac06bdbf748895fb6ee2aeefdb87b5a1ad789a983bed0e",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "奇数平方和与多项式界"
+    ],
+    "purpose": "奇数平方和与多项式界",
+    "reasoning": "先求和，再因式分解比较，区分实数充分条件与正整数结论",
+    "designed_difficulty": 4,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  }
+]

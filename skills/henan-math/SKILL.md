@@ -1,78 +1,54 @@
 ---
 name: henan-math
-description: 检索河南2025—2026数学候选真题、研究知识点和命题特点、生成原创专项或河南高考风格模拟卷，并独立求解、校验和导出PDF。用于数列、导数及高中数学命题请求，需要已恢复的henan-gaokao-database。
+description: 检索河南数学候选真题并研究命题特点，通过宿主AI或已配置API动态设计原创数列、导数、专项及高考风格模拟卷，独立求解、审题并输出PDF；保留明确标记的template备用模式。
 ---
 
-# 河南数学真题研究与命题
+# 河南数学研究与动态AI命题
 
-使用本技能时，先告知正在使用 henan-math。默认用中文执行，直接完成可运行的研究、命题、求解和交付流程。
+使用时告知正在应用henan-math。先实际研究题库，再动态创作、独立求解、审题与交付。不得把运行模板或重放旧JSON说成一次新的AI创作。
 
-## 数据定位
+## 定位与恢复
 
-运行本技能目录中的 scripts/run.py。它依次读取显式 --database、环境变量 HENAN_MATH_DB、安装时的相对配置、当前目录的父目录和技能位置的父目录。定位失败时报告真实路径问题。
+运行技能scripts/run.py。支持--database <仓库>、HENAN_MATH_DB及安装相对配置。私有原文需单独密钥恢复，见references/storage.md。未恢复时可以读取分析与规则、验证新原创题，不能声称已阅读完整原题。候选尚未获命题机构逐题确认。
 
-数据库必须含 database.json、analysis/rules.json 和已恢复的私有题面。恢复命令见 references/storage.md。遇到私有数据缺失时可继续检查安装与规则，但完整题面研究依赖用户持有的恢复密钥。
+## 研究与规划
 
-## 真题研究
+先执行research --topic 数列及research --topic 导数，并读取rules。必要时按年份和题型检索。分析须关联原题ID、版本哈希、页码与证据。命题规则区分官方要求、候选事实、有限样本观察和模拟设定。2027详细结构未确认。
 
-先运行 research。按知识点、年份或题型过滤，读取返回的实际 candidate、curation、analysis 和 original_independent_solution。
+执行plan --mode full --profile balanced --output <蓝图.json>，根据研究证据与覆盖目标制定槽位。AI可以改变知识搭配、条件与解法，不得复制固定族布局。150分历史结构为8单选、3多选、3填空、5解答；2027沿用只是模拟假设。
 
-```powershell
-python <技能目录>/scripts/run.py research --topic 数列
-python <技能目录>/scripts/run.py research --year 2026 --kind constructed_response
-```
+## 动态命题（原创请求必须显式ai）
 
-解释时附题目ID、候选版本、页码、分析依据。遇到版本冲突逐版解释，使用 curation.answer_for_current_candidate，原始解答作为历史记录保留。所有候选均未获命题机构逐题确认，AI视觉审阅也须单列。
+当前宿主AI阅读研究结果，依据蓝图自主设计不同数学结构，输出references/ai-protocol.md协议JSON。保留原始候选、模型标识（未知则not_exposed_by_host）、设计路径、干扰项误解路径。不能只替换原题数字。
 
-## 原创专项
+python <技能目录>/scripts/run.py generate --engine ai --candidates <宿主新候选.json> --output <新目录> --no-export
 
-支持的知识模块、题目族及验证覆盖见 references/coverage.md。先研究相关候选，再选择不同的条件结构与推理任务。原创性检查覆盖当前38题及同卷题目，外部重复仍需教师审查。
+可选API：用户已有环境密钥时，--engine ai --model <显式模型>启用Responses。无需为默认宿主流程购买API。请求、失败修订共享有界调用预算，密钥仅环境读取。无AI时明确报告；仅允许显式--allow-template-fallback回退。
 
-```powershell
-python <技能目录>/scripts/run.py generate --topic 数列 --count 2 --kind constructed_response --output <新输出目录>
-python <技能目录>/scripts/run.py generate --topic 导数 --count 1 --difficulty 4 --output <新输出目录>
-```
+## 独立验证与修订
 
-当前执行引擎使用运行时参数化的受支持题目族。宿主AI负责研究、设计与推理复核。远程模型调用预算为0，新增自由题面需要先扩展规范、独立求解器和测试。超出覆盖时如实报告，避免将未验证题面放入已通过试卷。
+求解进程只读取problem.tasks，绝不以命题者标准答案、设计解法或选项解释为求解依据。检查定义域、边界、根集、参数、唯一性、选项范围与题意。失败保留rejected/events；宿主根据反馈修订，记录旧哈希及理由，换新目录重新运行。API按剩余预算自动修订。
 
-## 完整模拟
+验证失败或未知不得进入通过卷。状态区分程序、符号数值交叉、独立AI推理、人工待审与失败。全部验证均不等于任意自然语言的形式化证明。
 
-遇到“生成一套河南2027年高考风格数学模拟卷”，先运行 rules，检查目标年份和规则类别，再运行 full。若官方结构更新，先更新有证据的规则再出卷。
+python <技能目录>/scripts/run.py verify <目录>/run.json
 
-```powershell
-python <技能目录>/scripts/run.py rules
-python <技能目录>/scripts/run.py generate --mode full --seed 20261110 --output <新输出目录>
-```
+## 独立审题与导出
 
-150分结构采用历史两套候选的8单选、3多选、3填空和5解答。2027详细结构仍为模拟设定。多选部分得分按卷头约定。知识点分布和难度按本次蓝图设计，两套样本的观察须标样本量。
+另起不读标准答案的独立推理流程审查原始题意、课程范围、条件、解法和干扰项。复杂风险任务由独立审题者复核。可用新上下文独立AI，但不得称为人类盲审。保存candidate_sha256及高中解法。修改题目后重新求解、审题，不能复用旧哈希。
 
-## 独立验证和修订
+python <技能目录>/scripts/run.py review <目录>/run.json --report <独立审题.json>
 
-生成入口自动调用独立求解模块。求解模块只接收题目族与数学参数，重新求值并记录步骤，接着检查答案、选项个数、可解性、规范题面、重复度、题量和分值。
+review仅对匹配版本且程序通过的题导出研究审阅版paper.pdf、solutions.pdf及可编辑Markdown。未审题的generate默认只保存候选草稿，交付前必须review。PDF逐页渲染检查公式、图、页边界、答题空间。高质量评级还需教师审核和作答实测。
 
-若门槛失败，自动换新草稿，最多3次。每次均保存新ID、题面校验值和求解记录。修改题面或参数后必须重新验证，旧验证会因校验值不匹配失效。
+## 模板备用模式
 
-```powershell
-python <技能目录>/scripts/run.py verify <输出目录>/run.json
-```
+python <技能目录>/scripts/run.py generate --engine template --mode full --output <新目录>
 
-程序验证与文字证明分开报告。逐步检查全域、边界、取等条件、唯一性及量词。含不等式、全域分类、存在性等证明的题目保留 reasoning_review 状态，明确剩余不确定性。教师盲审与实测难度仍是独立环节。
+26族参数化模式只称template备用练习。它的可靠性不能作为AI自由命题已验证的证据。覆盖详见references/coverage.md。
 
-## 输出和交付
+## 验收与边界
 
-默认生成 paper.pdf、solutions.pdf、可编辑Markdown、图像及run.json。答案册包含结果、完整步骤、知识模块、设计难度、程序验证状态与质量边界。PDF输出后须渲染逐页检查公式、图像和分页，再交付。
+用户要求研究数列与导数、生成5道不同结构时：研究二者→读取规则→动态规划5槽→宿主逐题创作新JSON→generate ai→独立AI推理与程序比对→review→verify→逐页检查PDF。保存原始候选和修改；报告真实失败及不确定性。本轮可重放的验收证据位于experiments/phase3/release/acceptance5，但重放不算新的生成。
 
-本环境Word渲染工具未就绪。可编辑源为Markdown和结构化JSON。安装说明包含配置字体的办法。
-
-## 验收流程
-
-当用户说“检索河南2025—2026年高考数学真题，分析数列命题特点，然后生成5道原创数列题，独立验证答案并输出完整解析”，依次执行研究、读取规则、sequence生成、verify和PDF页面检查。总结S4/S8块和、递推-导数综合、局部九项等比存在性的异同，并注明来源版本。
-
-```powershell
-python <技能目录>/scripts/run.py research --topic 数列
-python <技能目录>/scripts/run.py rules
-python <技能目录>/scripts/run.py generate --mode sequence --seed 20261107 --output <新输出目录>
-python <技能目录>/scripts/run.py verify <新输出目录>/run.json
-```
-
-报告实际题量、状态、文件路径、失败及修复记录。关于许可与备份、机制与覆盖、命令故障分别查阅references中的文件。
+使用原创性报告比较条件结构、数学模型、解法、知识组合与情境。允许经典方法，不声称全网首次。任意证明、课程标准语义、实测难度均有未解决边界。若数学质量不足，即使测试通过，也只能交付带限制的研究版。

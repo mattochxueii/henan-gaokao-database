@@ -1,0 +1,1199 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "author": "当前Codex宿主AI",
+    "authored_at": "2026-11-08",
+    "task": "phase3-dynamic-math",
+    "method": "本轮直接设计不同数学关系并写出结构化候选，未调用FamilyProvider、draft或26族模板",
+    "api_calls": 0,
+    "template_calls": 0
+  },
+  "blueprint": {
+    "mode": "full",
+    "profile": "geometry-and-conditioning",
+    "seed": 0,
+    "title": "fullB数学动态命题实验",
+    "slots": [
+      {
+        "module": "集合与复数"
+      },
+      {
+        "module": "集合与复数"
+      },
+      {
+        "module": "概率统计"
+      },
+      {
+        "module": "三角与向量"
+      },
+      {
+        "module": "解析几何"
+      },
+      {
+        "module": "概率统计"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "三角与向量"
+      },
+      {
+        "module": "解析几何"
+      },
+      {
+        "module": "概率统计"
+      },
+      {
+        "module": "排列组合"
+      },
+      {
+        "module": "函数与导数"
+      },
+      {
+        "module": "三角与向量"
+      },
+      {
+        "module": "三角与向量"
+      },
+      {
+        "module": "概率统计"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "立体几何"
+      },
+      {
+        "module": "函数与导数"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "module": "集合与复数",
+      "problem": {
+        "context": "集合由实方程的解组成，选出其中落在(0,1)内的唯一元素。",
+        "tasks": [
+          {
+            "op": "equation",
+            "expression": "x*x+2*x-2",
+            "domain": [
+              "0",
+              "1"
+            ],
+            "unique": true
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(-1 + \\sqrt{3}\\)",
+            "semantic_value": "sqrt(3)-1",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(-1 + \\sqrt{2}\\)",
+            "semantic_value": "sqrt(2)-1",
+            "error_path": "判别式常数漏项"
+          },
+          "C": {
+            "text": "\\(2 - \\sqrt{3}\\)",
+            "semantic_value": "2-sqrt(3)",
+            "error_path": "移项后常数与根式混置"
+          },
+          "D": {
+            "text": "\\(\\frac{1}{2}\\)",
+            "semantic_value": "1/2",
+            "error_path": "误用根的平均"
+          }
+        }
+      },
+      "design": {
+        "structure": "方程解集与开区间筛选",
+        "reasoning_path": "二次方程两根中只保留所给区间内的一根",
+        "knowledge_combination": [
+          "集合与复数",
+          "方程解集与开区间筛选"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q001:v1",
+      "slot": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "集合与复数",
+      "problem": {
+        "context": "求使一个复数乘积成为实数的实参数。",
+        "tasks": [
+          {
+            "op": "equation",
+            "expression": "im((x+I)*(2-I))",
+            "unique": true
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(-2\\)",
+            "semantic_value": "-2",
+            "error_path": "展开虚部符号错误"
+          },
+          "C": {
+            "text": "\\(\\frac{1}{2}\\)",
+            "semantic_value": "1/2",
+            "error_path": "把系数关系倒置"
+          },
+          "D": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "漏掉一个虚部贡献"
+          }
+        }
+      },
+      "design": {
+        "structure": "虚部消去反求实参数",
+        "reasoning_path": "展开后虚部系数必须为0",
+        "knowledge_combination": [
+          "集合与复数",
+          "虚部消去反求实参数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q002:v1",
+      "slot": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "概率统计",
+      "problem": {
+        "context": "样本有偶数个观测，注意中间两个数。",
+        "tasks": [
+          {
+            "op": "statistics",
+            "data": [
+              2,
+              5,
+              5,
+              8,
+              11,
+              12
+            ],
+            "statistic": "median"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{13}{2}\\)",
+            "semantic_value": "13/2",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(5\\)",
+            "semantic_value": "5",
+            "error_path": "只取左中项"
+          },
+          "C": {
+            "text": "\\(8\\)",
+            "semantic_value": "8",
+            "error_path": "只取右中项"
+          },
+          "D": {
+            "text": "\\(9\\)",
+            "semantic_value": "9",
+            "error_path": "把极差当中位数"
+          }
+        }
+      },
+      "design": {
+        "structure": "偶数样本的排序中位数",
+        "reasoning_path": "取第三第四项平均",
+        "knowledge_combination": [
+          "概率统计",
+          "偶数样本的排序中位数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q003:v1",
+      "slot": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "三角与向量",
+      "problem": {
+        "context": "把两个特殊角函数的乘积转化为二倍角。",
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "sin(pi/12)*cos(pi/12)"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{1}{4}\\)",
+            "semantic_value": "1/4",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{2}\\)",
+            "semantic_value": "1/2",
+            "error_path": "漏除二倍角系数"
+          },
+          "C": {
+            "text": "\\(\\frac{\\sqrt{3}}{4}\\)",
+            "semantic_value": "sqrt(3)/4",
+            "error_path": "把30度误作60度"
+          },
+          "D": {
+            "text": "\\(- \\frac{1}{4} + \\frac{\\sqrt{3}}{4}\\)",
+            "semantic_value": "(sqrt(3)-1)/4",
+            "error_path": "只取一个特殊角因子"
+          }
+        }
+      },
+      "design": {
+        "structure": "半角乘积与二倍角系数",
+        "reasoning_path": "sin2x还需除以2",
+        "knowledge_combination": [
+          "三角与向量",
+          "半角乘积与二倍角系数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q004:v1",
+      "slot": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "解析几何",
+      "problem": {
+        "context": "水平直线与椭圆的交点个数需要按实际条件判定。",
+        "tasks": [
+          {
+            "op": "intersection",
+            "curves": [
+              "x*x/9+y*y/4-1",
+              "y-2"
+            ],
+            "ask": "count"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(0\\)",
+            "semantic_value": "0",
+            "error_path": "误判直线在椭圆外"
+          },
+          "C": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "将二重根算两个点"
+          },
+          "D": {
+            "text": "\\(4\\)",
+            "semantic_value": "4",
+            "error_path": "重复对称点"
+          }
+        }
+      },
+      "design": {
+        "structure": "椭圆顶点处的相切重解",
+        "reasoning_path": "代入后只有一个实点，重根只算一次",
+        "knowledge_combination": [
+          "解析几何",
+          "椭圆顶点处的相切重解"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q005:v1",
+      "slot": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "概率统计",
+      "problem": {
+        "context": "两次掷骰，已知至少一次为6，求两次点数均为偶数的概率。",
+        "tasks": [
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "x==6 or y==6",
+            "event": "x%2==0 and y%2==0"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{5}{11}\\)",
+            "semantic_value": "5/11",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{4}\\)",
+            "semantic_value": "1/4",
+            "error_path": "忽略已知条件"
+          },
+          "C": {
+            "text": "\\(\\frac{3}{11}\\)",
+            "semantic_value": "3/11",
+            "error_path": "只计固定一次为6"
+          },
+          "D": {
+            "text": "\\(\\frac{6}{11}\\)",
+            "semantic_value": "6/11",
+            "error_path": "重复计入两次均6"
+          }
+        }
+      },
+      "design": {
+        "structure": "条件并事件与交集重叠",
+        "reasoning_path": "样本去重，不能把(6,6)计两次",
+        "knowledge_combination": [
+          "概率统计",
+          "条件并事件与交集重叠"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q006:v1",
+      "slot": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "奇数相邻比的有限积会留下一个末端因子。",
+        "tasks": [
+          {
+            "op": "product",
+            "expression": "(2*k-1)/(2*k+1)",
+            "upper": "4"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{1}{9}\\)",
+            "semantic_value": "1/9",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{3}\\)",
+            "semantic_value": "1/3",
+            "error_path": "仅保留首个因子"
+          },
+          "C": {
+            "text": "\\(\\frac{1}{5}\\)",
+            "semantic_value": "1/5",
+            "error_path": "少乘两项"
+          },
+          "D": {
+            "text": "\\(\\frac{1}{7}\\)",
+            "semantic_value": "1/7",
+            "error_path": "遗漏最后一项"
+          }
+        }
+      },
+      "design": {
+        "structure": "奇数因子链的有限积",
+        "reasoning_path": "首尾相消而非把分母独立相乘",
+        "knowledge_combination": [
+          "数列",
+          "奇数因子链的有限积"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q007:v1",
+      "slot": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "商函数在原点的导数不能由分子或分母单独决定。",
+        "tasks": [
+          {
+            "op": "derivative",
+            "expression": "x/(1+x*x)",
+            "at": "0"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(0\\)",
+            "semantic_value": "0",
+            "error_path": "只看分母导数"
+          },
+          "C": {
+            "text": "\\(-1\\)",
+            "semantic_value": "-1",
+            "error_path": "商法则两项次序颠倒"
+          },
+          "D": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "误用乘积法则并重复分子"
+          }
+        }
+      },
+      "design": {
+        "structure": "商函数导数与对称点",
+        "reasoning_path": "完整使用商法则后代入",
+        "knowledge_combination": [
+          "函数与导数",
+          "商函数导数与对称点"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q008:v1",
+      "slot": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "三角与向量",
+      "problem": {
+        "context": "x、y是正交单位基下的两个实坐标，判断下列恒真命题。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "comparison",
+            "claim": "(x+y)**2+(x-y)**2==2*(x*x+y*y)",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "B": {
+            "op": "comparison",
+            "claim": "(x+y)**2==x*x+y*y",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "C": {
+            "op": "comparison",
+            "claim": "(x-y)**2>=0",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "D": {
+            "op": "comparison",
+            "claim": "x*y==y*y",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "design": {
+        "structure": "坐标恒等式与非负长度",
+        "reasoning_path": "区分全体坐标恒真和个别坐标相等",
+        "knowledge_combination": [
+          "三角与向量",
+          "坐标恒等式与非负长度"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q009:v1",
+      "slot": 9,
+      "kind": "multiple_choice",
+      "points": 6,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "解析几何",
+      "problem": {
+        "context": "逐个判断点是否位于同一椭圆上。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "point_on_curve",
+            "curve": "x*x/9+y*y/4-1",
+            "point": [
+              0,
+              2
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "B": {
+            "op": "point_on_curve",
+            "curve": "x*x/9+y*y/4-1",
+            "point": [
+              3,
+              2
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "C": {
+            "op": "point_on_curve",
+            "curve": "x*x/9+y*y/4-1",
+            "point": [
+              3,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "D": {
+            "op": "point_on_curve",
+            "curve": "x*x/9+y*y/4-1",
+            "point": [
+              1,
+              1
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "design": {
+        "structure": "曲线成员判定与必要等式",
+        "reasoning_path": "将每点代回同一方程，边界点只算本身",
+        "knowledge_combination": [
+          "解析几何",
+          "曲线成员判定与必要等式"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q010:v1",
+      "slot": 10,
+      "kind": "multiple_choice",
+      "points": 6,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "概率统计",
+      "problem": {
+        "context": "两个公平的0-1记录相互独立，判断条件改变后的概率命题。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                0,
+                1
+              ],
+              "y": [
+                0,
+                1
+              ]
+            },
+            "event": "x+y==1",
+            "claimed_probability": "1/2",
+            "error_path": "正确解"
+          },
+          "B": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                0,
+                1
+              ],
+              "y": [
+                0,
+                1
+              ]
+            },
+            "event": "x+y==2",
+            "claimed_probability": "1/2",
+            "error_path": "把一个结果当两个结果"
+          },
+          "C": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                0,
+                1
+              ],
+              "y": [
+                0,
+                1
+              ]
+            },
+            "condition": "x+y==1",
+            "event": "x==1",
+            "claimed_probability": "1/2",
+            "error_path": "正确解"
+          },
+          "D": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                0,
+                1
+              ],
+              "y": [
+                0,
+                1
+              ]
+            },
+            "condition": "y==1",
+            "event": "x==1",
+            "claimed_probability": "1",
+            "error_path": "误认为已知另一个记录会确定本记录"
+          }
+        }
+      },
+      "design": {
+        "structure": "二元独立记录的无条件与条件概率",
+        "reasoning_path": "分别检查联合样本与重新归一后的子样本",
+        "knowledge_combination": [
+          "概率统计",
+          "二元独立记录的无条件与条件概率"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q011:v1",
+      "slot": 11,
+      "kind": "multiple_choice",
+      "points": 6,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "排列组合",
+      "problem": {
+        "context": "三个0-1位置中恰好两个为1。",
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                0,
+                1
+              ],
+              "y": [
+                0,
+                1
+              ],
+              "t": [
+                0,
+                1
+              ]
+            },
+            "event": "x+y+t==2"
+          }
+        ]
+      },
+      "design": {
+        "structure": "固定成功位置的组合计数",
+        "reasoning_path": "每组位置只计一次",
+        "knowledge_combination": [
+          "排列组合",
+          "固定成功位置的组合计数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q012:v1",
+      "slot": 12,
+      "kind": "fill_in",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "两个变化因子的导数均可能产生贡献。",
+        "tasks": [
+          {
+            "op": "derivative",
+            "expression": "(x*x+1)*log(x)",
+            "at": "1",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "乘积求导与对数因子零点",
+        "reasoning_path": "即使ln1为0，也不能删除另一个乘积项",
+        "knowledge_combination": [
+          "函数与导数",
+          "乘积求导与对数因子零点"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q013:v1",
+      "slot": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "三角与向量",
+      "problem": {
+        "context": "三维向量张成一个三角形，面积与平行四边形面积不同。",
+        "tasks": [
+          {
+            "op": "vector",
+            "operation": "triangle_area_squared",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "叉积面积再取半的平方",
+        "reasoning_path": "面积先除2，平方后除4",
+        "knowledge_combination": [
+          "三角与向量",
+          "叉积面积再取半的平方"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q014:v1",
+      "slot": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "三角与向量",
+      "problem": {
+        "context": "同一组相位平移可产生不变量与变化的线性和。",
+        "tasks": [
+          {
+            "op": "identity",
+            "left": "sin(x+pi/4)**2+sin(x-pi/4)**2",
+            "right": "1"
+          },
+          {
+            "op": "extrema",
+            "expression": "sin(x+pi/4)+sin(x-pi/4)",
+            "domain": [
+              "0",
+              "pi"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "平方和不变与线性和极值",
+        "reasoning_path": "和角展开后先消去交叉项，再研究一次正弦",
+        "knowledge_combination": [
+          "三角与向量",
+          "平方和不变与线性和极值"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q015:v1",
+      "slot": 15,
+      "kind": "constructed_response",
+      "points": 13,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "概率统计",
+      "problem": {
+        "context": "从1至5中取三个互异编号，以递增顺序记为x、y、t。",
+        "tasks": [
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "condition": "x<y and y<t",
+            "event": "(x+y+t)%2==0"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "condition": "x<y and y<t and t==5",
+            "event": "(x+y+t)%2==0"
+          },
+          {
+            "op": "expectation",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "condition": "x<y and y<t",
+            "event": "1==1",
+            "value": "x*y"
+          }
+        ]
+      },
+      "design": {
+        "structure": "无放回组合的顺序化与最大值条件",
+        "reasoning_path": "递增约束消除重复，指定最大值后再条件化",
+        "knowledge_combination": [
+          "概率统计",
+          "无放回组合的顺序化与最大值条件"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q016:v1",
+      "slot": 16,
+      "kind": "constructed_response",
+      "points": 15,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "相邻两项之和是平方，奇偶部分会发生不同的抵消。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "u(n+1)+u(n)-n*n",
+            "initial": {
+              "1": "1"
+            }
+          },
+          {
+            "op": "recurrence_sum",
+            "relation": "u(n+1)+u(n)-n*n",
+            "initial": {
+              "1": "1"
+            },
+            "weight": "1",
+            "upper": "2*n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "负系数递推与偶数项前缀",
+        "reasoning_path": "求二次特解加交错齐次部分，偶数前缀中交错项消失",
+        "knowledge_combination": [
+          "数列",
+          "负系数递推与偶数项前缀"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q017:v1",
+      "slot": 17,
+      "kind": "constructed_response",
+      "points": 15,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "立体几何",
+      "problem": {
+        "context": "平面由三个轴截点确定，动点到平面的距离可转化为一元式。",
+        "tasks": [
+          {
+            "op": "geometry",
+            "operation": "plane_distance",
+            "plane_points": [
+              [
+                3,
+                0,
+                0
+              ],
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                3
+              ]
+            ],
+            "point": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "op": "extrema",
+            "expression": "(t*t-2)**2/3",
+            "variable": "t",
+            "domain": [
+              "-2",
+              "2"
+            ],
+            "open": [
+              false,
+              false
+            ],
+            "prompt": "动点P=(t,1-t,t²)到该平面距离的平方如下，求其最值及位置"
+          },
+          {
+            "op": "equation",
+            "expression": "t*t-2",
+            "variable": "t",
+            "domain": [
+              "-2",
+              "2"
+            ],
+            "open": [
+              false,
+              false
+            ],
+            "prompt": "求动点落入该平面的全部参数"
+          }
+        ]
+      },
+      "design": {
+        "structure": "平面投影与二次轨迹的极值",
+        "reasoning_path": "先确定法向量，再用距离平方避免绝对值分类，并求零距离点",
+        "knowledge_combination": [
+          "立体几何",
+          "平面投影与二次轨迹的极值"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q018:v1",
+      "slot": 18,
+      "kind": "constructed_response",
+      "points": 17,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "函数与导数",
+      "problem": {
+        "context": "对数参数函数的区间条件与全域切线界需分别讨论。",
+        "tasks": [
+          {
+            "op": "parameter_monotone",
+            "expression": "log(x)-a*x*x",
+            "domain": [
+              "1",
+              "2"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          {
+            "op": "nonnegative",
+            "expression": "log(x)-1+1/x",
+            "domain": [
+              "0",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "有限区间参数界与倒数修正的对数不等式",
+        "reasoning_path": "参数界由右端点控制，全域差函数在内部取等",
+        "knowledge_combination": [
+          "函数与导数",
+          "有限区间参数界与倒数修正的对数不等式"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullB:q019:v1",
+      "slot": 19,
+      "kind": "constructed_response",
+      "points": 17,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  ]
+}

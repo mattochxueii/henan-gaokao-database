@@ -1,0 +1,377 @@
+[
+  {
+    "question_id": "orig:ai:phase3:derivative10:q005:v2",
+    "previous_sha256": "e60824dc3c002cd5f5281a08ad99aba7365284d7f4550174b1e47878f121e8e1",
+    "new_sha256": "668c4627ab47349bf0a48efda5ce9bd8ade6fb3889308ec5a6cae2614ebc1756",
+    "reason": "独立AI审题发现背景与数学规格关系未充分写入题面；补全条件并用恒等变换得到可独立验证的一元优化",
+    "previous_candidate": {
+      "module": "函数与导数",
+      "problem": {
+        "context": "先由水平切线条件恢复系数，再检查恢复后的曲线。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "expressions": [
+              "3+2*a+b",
+              "1+a+b-2"
+            ],
+            "unique": true
+          },
+          {
+            "op": "extrema",
+            "expression": "x**3-4*x*x+5*x",
+            "domain": [
+              "0",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "反向切线加端点比较",
+        "reasoning_path": "联立函数值与导数值，分区讨论三个候选点",
+        "knowledge_combination": [
+          "函数与导数",
+          "反向切线加端点比较"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:derivative10:q005:v1",
+      "slot": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q018:v2",
+    "previous_sha256": "60ffd3342ed47eed78eb342ca88cbce9ac38a0274f7ca803b0e8f34acf449858",
+    "new_sha256": "06a5c191916d29c0ad3348ccf0c3c347c1a2d94267775a2dfef3d915f8894b1a",
+    "reason": "独立AI审题发现背景与数学规格关系未充分写入题面；补全条件并用恒等变换得到可独立验证的一元优化",
+    "previous_candidate": {
+      "module": "解析几何",
+      "problem": {
+        "context": "先确定椭圆半轴，再研究椭圆点到固定点的距离平方。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "expressions": [
+              "a*a-b*b-3",
+              "a+b-3"
+            ],
+            "conditions": [
+              "a>b",
+              "b>0"
+            ],
+            "unique": true
+          },
+          {
+            "op": "extrema",
+            "expression": "4*cos(t)**2+(sin(t)-2)**2",
+            "variable": "t",
+            "domain": [
+              "0",
+              "2*pi"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "参数恢复与非中心点的椭圆距离",
+        "reasoning_path": "用正半轴筛解，参数化后比较内部驻点与端点",
+        "knowledge_combination": [
+          "解析几何",
+          "参数恢复与非中心点的椭圆距离"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:fullA:q018:v1",
+      "slot": 18,
+      "kind": "constructed_response",
+      "points": 17,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q009:v2",
+    "previous_sha256": "e23c07f46c246358cebee9ac94b26ae7a9f1071a66de1e00a113ea69dc02f203",
+    "new_sha256": "6e041f883c6a099a9351c09e28da3f5faa9e1a1e8f8c72992ca80fc8bade2e61",
+    "reason": "独立审题发现新增编号的项号边界欠明确，明确已有k个与新增第k+1个",
+    "previous_candidate": {
+      "module": "数列",
+      "problem": {
+        "context": "每新增一个编号，将此前两编号的配对数记作一项。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "binomial(k,2)",
+            "lower": 2,
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "组合计数与部分和",
+        "reasoning_path": "按三个编号中的最大者分类，也可代数求和",
+        "knowledge_combination": [
+          "数列",
+          "组合计数与部分和"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q009:v1",
+      "slot": 9,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q001:v2",
+    "previous_sha256": "167d59296b703e968be902dfc89b62c83590025f93b7bc73c7f500a14de59e74",
+    "new_sha256": "53098a52d7609ccb55d926add15b6d5762866e1f678e511ab648e451789456a0",
+    "reason": "独立审题发现干扰项错因无法推出该数值，修订错误计算路径说明",
+    "previous_candidate": {
+      "module": "集合与复数",
+      "problem": {
+        "context": "单位虚数的幂运算需要处理周期与系数。",
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "(1+I)**4"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(-4\\)",
+            "semantic_value": "-4",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(4\\)",
+            "semantic_value": "4",
+            "error_path": "漏掉虚数平方的负号"
+          },
+          "C": {
+            "text": "\\(-2\\)",
+            "semantic_value": "-2",
+            "error_path": "只求到二次幂"
+          },
+          "D": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "漏乘系数"
+          }
+        }
+      },
+      "design": {
+        "structure": "复数极坐标幂与实数结果",
+        "reasoning_path": "先平方再平方",
+        "knowledge_combination": [
+          "集合与复数",
+          "复数极坐标幂与实数结果"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:mixed50:q001:v1",
+      "slot": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q006:v2",
+    "previous_sha256": "0ccce998c55c65a3b782e17f6c31d2dedd75e22ee3500339d239cef2eeaf2ec8",
+    "new_sha256": "73391f4392592a38da1b3789a2c52dbfe90312f50bc39845da391f3b9f1ed553",
+    "reason": "跨实验结构审查发现与fullA空间题仅坐标有异，改为面积与过原点方向约束的组合",
+    "previous_candidate": {
+      "module": "立体几何",
+      "problem": {
+        "context": "不同轴截距导致平面法向量的分量不相同。",
+        "tasks": [
+          {
+            "op": "geometry",
+            "operation": "plane_distance",
+            "plane_points": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            "point": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "op": "geometry",
+            "operation": "line_plane_sine",
+            "plane_points": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            "direction": [
+              0,
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "非对称截距平面的距离与角",
+        "reasoning_path": "按三点重建法向量，不能误用等截距图形",
+        "knowledge_combination": [
+          "立体几何",
+          "非对称截距平面的距离与角"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:mixed50:q006:v1",
+      "slot": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q006:v3",
+    "previous_sha256": "73391f4392592a38da1b3789a2c52dbfe90312f50bc39845da391f3b9f1ed553",
+    "new_sha256": "fa13bd3ace52b155ff183ab976600474d46262151bbf86c4892a0d70c67a042e",
+    "reason": "独立审题发现数学结构已变但知识标签沿用旧版，修订知识点组合",
+    "previous_candidate": {
+      "module": "立体几何",
+      "problem": {
+        "context": "用两个非共线向量确定过原点的平面，联系面积与线面角。",
+        "tasks": [
+          {
+            "op": "vector",
+            "operation": "cross_norm_squared",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "op": "geometry",
+            "operation": "line_plane_sine",
+            "plane_points": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ],
+            "direction": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "向量张成面积与过原点平面的方向约束",
+        "reasoning_path": "叉积同时给出面积与法向量，第二问与第一问结果共用构造",
+        "knowledge_combination": [
+          "立体几何",
+          "非对称截距平面的距离与角"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:mixed50:q006:v2",
+      "slot": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  }
+]

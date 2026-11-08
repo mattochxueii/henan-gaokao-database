@@ -1,0 +1,135 @@
+[
+  {
+    "id": "orig:ai:phase3:mixed50:q001:v2",
+    "mode": "ai",
+    "candidate_sha256": "53098a52d7609ccb55d926add15b6d5762866e1f678e511ab648e451789456a0",
+    "question_sha256": "019fa09e9a6813c7adf4dd033698f06b75e563fc0f46ad0a3bee00bbd2d3781a",
+    "module": "集合与复数",
+    "knowledge": [
+      "集合与复数",
+      "复数极坐标幂与实数结果"
+    ],
+    "purpose": "复数极坐标幂与实数结果",
+    "reasoning": "先平方再平方",
+    "designed_difficulty": 1,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q002:v1",
+    "mode": "ai",
+    "candidate_sha256": "95d11e0de659d4884e71ed025a71d21938f0c1d753ce847d1fe009d69bb8ff37",
+    "question_sha256": "a385139f8cb84020c3eac46ba6d2b20d27b9390d59b9414cc80a0091831e8c5e",
+    "module": "概率统计",
+    "knowledge": [
+      "概率统计",
+      "限制样本后的二事件并"
+    ],
+    "purpose": "限制样本后的二事件并",
+    "reasoning": "分母为四个可能值",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q003:v1",
+    "mode": "ai",
+    "candidate_sha256": "900d75afa62cc2795bf14463261e982b196d3fc0fae78531059883b31e254771",
+    "question_sha256": "492ca79e0f032b81676e18e5797b5b80e1467b1ce4755d45c9f39f00d2138898",
+    "module": "三角与向量",
+    "knowledge": [
+      "三角与向量",
+      "互余值相同的函数和"
+    ],
+    "purpose": "互余值相同的函数和",
+    "reasoning": "分别取值后相加",
+    "designed_difficulty": 1,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q004:v1",
+    "mode": "ai",
+    "candidate_sha256": "2aed5d6435a939167ffdddaaf6fd8263e3334a953743e81c1d07797b6d6588a7",
+    "question_sha256": "de4d5ffa60d1f731b18ea4e6906b5f16a44e1bf134fe8a6d86c1d70e1652b924",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "幂差的首尾相消"
+    ],
+    "purpose": "幂差的首尾相消",
+    "reasoning": "应保留低端的2零次幂",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q005:v1",
+    "mode": "ai",
+    "candidate_sha256": "55954c831b9781c960c567c940b8df60c059a873dbd05462ce6060793d55307e",
+    "question_sha256": "651af9f7141fe35536b0e57c477294a6ef2832c3313c47394f5235ff36725bdb",
+    "module": "函数与导数",
+    "knowledge": [
+      "函数与导数",
+      "商函数单调及线性导数参数"
+    ],
+    "purpose": "商函数单调及线性导数参数",
+    "reasoning": "两个区间要求分别从导数正负出发",
+    "designed_difficulty": 4,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q006:v3",
+    "mode": "ai",
+    "candidate_sha256": "fa13bd3ace52b155ff183ab976600474d46262151bbf86c4892a0d70c67a042e",
+    "question_sha256": "f827e23ea405767a017f0f1f835a2c56e7f3d2710ebfe60abc63b34091d4d9e6",
+    "module": "立体几何",
+    "knowledge": [
+      "立体几何",
+      "向量面积、法向量与线面角"
+    ],
+    "purpose": "向量张成面积与过原点平面的方向约束",
+    "reasoning": "叉积同时给出面积与法向量，第二问与第一问结果共用构造",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:mixed50:q007:v1",
+    "mode": "ai",
+    "candidate_sha256": "955c567c4875ea362af4fbab4c180aaf9dc0549a7b46919b0c475fe43d628038",
+    "question_sha256": "09ba18c9917cb5e6d56d7641f9802dfc040dea7dbde9da3f6f61272934a4b7eb",
+    "module": "解析几何",
+    "knowledge": [
+      "解析几何",
+      "中心弦的交点与两点距离"
+    ],
+    "purpose": "中心弦的交点与两点距离",
+    "reasoning": "联立消元，两点中心对称后计算弦长平方",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  }
+]

@@ -1,0 +1,216 @@
+{
+  "actual_private_candidates_read": true,
+  "topics": {
+    "数列": [
+      {
+        "id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "等比数列求和"
+          ],
+          "secondary": [
+            "分组与正项条件"
+          ],
+          "module": "数列"
+        },
+        "key_idea": "后四项和是前四项和的q四次倍",
+        "condition_design": "给S4和S8避开首项",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "递推数列变换"
+          ],
+          "secondary": [
+            "有限和与导数"
+          ],
+          "module": "数列"
+        },
+        "key_idea": "令b_n=na_n消去分母再对有限和求导",
+        "condition_design": "递推第一问为第二问铺路",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "等差数列与配对"
+          ],
+          "secondary": [
+            "奇偶性及构造"
+          ],
+          "module": "数列"
+        },
+        "key_idea": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "condition_design": "108塔的层数配对给出真实组合限制",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "数列分块和与局部等比"
+          ],
+          "secondary": [
+            "存在性与极值"
+          ],
+          "module": "数列"
+        },
+        "key_idea": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "condition_design": "全局块和约束中嵌入局部几何段",
+        "official_body_confirmed": false
+      }
+    ],
+    "导数": [
+      {
+        "id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "函数周期性与偶性"
+          ],
+          "secondary": [
+            "分段信息复原"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "用偶性和周期将-3/4搬到[2,3]",
+        "condition_design": "仅给一个区间表达式",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "对数函数比较"
+          ],
+          "secondary": [
+            "直线交点与指数"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "condition_design": "公共参数隐藏三变量关联",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "导数与切线"
+          ],
+          "secondary": [
+            "指数函数"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "导数相等得切点x=0再代入纵坐标",
+        "condition_design": "切线反求常数",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "递推数列变换"
+          ],
+          "secondary": [
+            "有限和与导数"
+          ],
+          "module": "数列"
+        },
+        "key_idea": "令b_n=na_n消去分母再对有限和求导",
+        "condition_design": "递推第一问为第二问铺路",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "三角函数全局极值"
+          ],
+          "secondary": [
+            "导数与区间覆盖"
+          ],
+          "module": "三角与向量"
+        },
+        "key_idea": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "condition_design": "逐步引理支撑极小极大结论",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "对数函数导数"
+          ],
+          "secondary": [
+            "切线方程"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "求f'(1)并用点斜式",
+        "condition_design": "已知曲线上具体点",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "指数不等式与最值"
+          ],
+          "secondary": [
+            "参数分类"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "由e^x≥x+1建立上界并检查等号",
+        "condition_design": "候选a均正为分类提供边界",
+        "official_body_confirmed": false
+      },
+      {
+        "id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "source_pages": null,
+        "knowledge": {
+          "primary": [
+            "新定义集合与函数序"
+          ],
+          "secondary": [
+            "分段函数",
+            "反证",
+            "平移"
+          ],
+          "module": "函数与导数"
+        },
+        "key_idea": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "condition_design": "新定义通过三个递进任务逐步暴露结构",
+        "official_body_confirmed": false
+      }
+    ]
+  },
+  "scope": "真实读取当前私有候选与38条分析；这里只保存分析摘要及哈希，避免再分发完整题面"
+}

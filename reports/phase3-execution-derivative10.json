@@ -1,0 +1,37 @@
+[
+  {
+    "command": [
+      "generate",
+      "--engine",
+      "ai",
+      "--candidates",
+      "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\outputs\\henan-gaokao-database\\experiments\\phase3\\proposals\\derivative10.json",
+      "--output",
+      "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\outputs\\henan-gaokao-database\\experiments\\phase3\\deliveries\\derivative10",
+      "--no-export"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"output\": \"D:\\\\chatgptfile\\\\2026-11-06\\\\ai-ai-1-2-ai-3\\\\outputs\\\\henan-gaokao-database\\\\experiments\\\\phase3\\\\deliveries\\\\derivative10\",\n  \"mode\": \"ai\",\n  \"provider\": \"host_ai\",\n  \"structure\": {\n    \"passed\": true,\n    \"errors\": [],\n    \"questions\": 10,\n    \"points\": 100,\n    \"kind_counts\": {\n      \"constructed_response\": 10\n    },\n    \"module_counts\": {\n      \"函数与导数\": 10\n    },\n    \"estimated_minutes\": 116.1,\n    \"estimated_minutes_range\": [\n      81,\n      163\n    ],\n    \"time_basis\": \"按题型基础时间、任务关联及设计复杂度估计。单选与解答题使用不同尺度，未经考生作答校准\",\n    \"quality_rating\": \"研究审阅版，尚未认定为高质量高考模拟卷\"\n  },\n  \"status\": \"研究审阅版，程序通过，独立AI审题待完成\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review",
+      "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\outputs\\henan-gaokao-database\\experiments\\phase3\\deliveries\\derivative10\\run.json",
+      "--report",
+      "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\outputs\\henan-gaokao-database\\reports\\phase3-independent-ai-review.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"questions_reviewed\": 10,\n  \"status\": \"研究审阅版：程序验证及独立AI审查完成，尚需教师核验\",\n  \"files\": {\n    \"paper_pdf\": \"paper.pdf\",\n    \"solutions_pdf\": \"solutions.pdf\",\n    \"paper_editable\": \"paper.md\",\n    \"solutions_editable\": \"solutions.md\",\n    \"word_status\": \"未生成DOCX。本环境未找到LibreOffice，无法完成文档技能要求的渲染核验。\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "verify",
+      "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\outputs\\henan-gaokao-database\\experiments\\phase3\\deliveries\\derivative10\\run.json"
+    ],
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q001:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q002:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q003:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q004:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q005:v2\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q006:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q007:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q008:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q009:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  },\n  {\n    \"id\": \"orig:ai:phase3:derivative10:q010:v1\",\n    \"passed\": true,\n    \"status\": \"重新独立求解完成\"\n  }\n]\n",
+    "stderr": ""
+  }
+]

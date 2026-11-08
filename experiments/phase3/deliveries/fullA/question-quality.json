@@ -1,0 +1,363 @@
+[
+  {
+    "id": "orig:ai:phase3:fullA:q001:v1",
+    "mode": "ai",
+    "candidate_sha256": "3fdae8c2ee0bc8cec6c5b14df5721741ac38245325d1f5a3f09d14a7abda1fea",
+    "question_sha256": "442f3f1c2f46430d76a5095ebedfc26ed72c80df732fd3353a382011e16bd89b",
+    "module": "集合与复数",
+    "knowledge": [
+      "集合与复数",
+      "复数商的模平方"
+    ],
+    "purpose": "复数商的模平方",
+    "reasoning": "分别取模或化简分式",
+    "designed_difficulty": 1,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q002:v1",
+    "mode": "ai",
+    "candidate_sha256": "d17b5821396b345f3d555d75e22b05091082017fb354bf4d893fd95f75d90aab",
+    "question_sha256": "45c8b51374b093cb73572ffe9662ddba76dee3c9e6cfb83fe31965f7aa1805e2",
+    "module": "集合与复数",
+    "knowledge": [
+      "集合与复数",
+      "有限集合有序化后补集计数"
+    ],
+    "purpose": "有限集合有序化后补集计数",
+    "reasoning": "先用x<y消去排列重复，再数目标",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q003:v1",
+    "mode": "ai",
+    "candidate_sha256": "e92de132770339923746a9de180dd62c700fceecc8b9aa0f6b0708cb797192d5",
+    "question_sha256": "7bdadb52c13d38d4db76b286a28ac7f37c2848a0a8a296070c2887853034430e",
+    "module": "三角与向量",
+    "knowledge": [
+      "三角与向量",
+      "内积与角度平方"
+    ],
+    "purpose": "内积与角度平方",
+    "reasoning": "负内积平方后为正，模长必须各平方",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q004:v1",
+    "mode": "ai",
+    "candidate_sha256": "bea0181ff24808443d870a613bb93cc47d4375f1bae20a45a1ae1e4e3880f5dd",
+    "question_sha256": "30fba3777eb1f9f4d8991123948c56ace4ada9b2ca6a55df02d23badcff37962",
+    "module": "概率统计",
+    "knowledge": [
+      "概率统计",
+      "删去对角样本后的条件概率"
+    ],
+    "purpose": "删去对角样本后的条件概率",
+    "reasoning": "目标不在对角线上但分母改变",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q005:v1",
+    "mode": "ai",
+    "candidate_sha256": "9da40deaec69dc55f5fead8741952518a3a5a4c14d04c0846c77145bd22920a7",
+    "question_sha256": "8baa515a971690cd393cc3f522a893aa0177722fa3460409f786e905c02f58b3",
+    "module": "三角与向量",
+    "knowledge": [
+      "三角与向量",
+      "和角转化与内部最值"
+    ],
+    "purpose": "和角转化与内部最值",
+    "reasoning": "内部对称点胜过两个端点",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q006:v1",
+    "mode": "ai",
+    "candidate_sha256": "8554be1c4948e0b43aaf509d09de0a257dd923d556fdb441db4eabdbc864f11b",
+    "question_sha256": "8cd0b35e6acdb4f3c90634650a433bb0e729902e6c7f55ec63c242e7d65021a0",
+    "module": "解析几何",
+    "knowledge": [
+      "解析几何",
+      "交点消元与弦长平方"
+    ],
+    "purpose": "交点消元与弦长平方",
+    "reasoning": "求两坐标解，区别距离与距离平方",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q007:v1",
+    "mode": "ai",
+    "candidate_sha256": "42ea256d6e2d7c53c3992cad656e0b8d794e3b971fea96296f374a093c791fe5",
+    "question_sha256": "c14d61ba74e5c27f98ce76a1560b15d5a72898c0a4671bcde50d1673bd798568",
+    "module": "函数与导数",
+    "knowledge": [
+      "函数与导数",
+      "链式求导与定点切线斜率"
+    ],
+    "purpose": "链式求导与定点切线斜率",
+    "reasoning": "外层分母与内层导数同时代入",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q008:v1",
+    "mode": "ai",
+    "candidate_sha256": "92cce7f728b57c51178d0646a36db6e1a121686720fa1a1ca75ad2b101d42fcf",
+    "question_sha256": "4e6b754ef86b12c1b3f64d0045be74163b73bc4ba9a102718e9b1d80ef1515c7",
+    "module": "排列组合",
+    "knowledge": [
+      "排列组合",
+      "多项式系数的两种分拆"
+    ],
+    "purpose": "多项式系数的两种分拆",
+    "reasoning": "区分2+1与1+1+1两条路径",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q009:v1",
+    "mode": "ai",
+    "candidate_sha256": "932c4e6f11474d6bf0ea696e95e343b00f00b613c12c5feb0f4fea8076ba72fa",
+    "question_sha256": "37b57e35522ab5365e2916324974d6a98e61b61a78fdd82706065ce7c5198ecf",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "二次通项的差与比"
+    ],
+    "purpose": "二次通项的差与比",
+    "reasoning": "逐项检验恒真而非个别样例",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q010:v1",
+    "mode": "ai",
+    "candidate_sha256": "3289d79bb6ee72cd9323d7652d8e68326db03f3a83343c82f9b69d9b12de1e93",
+    "question_sha256": "086de8b5e2f75d58635e889493a7da1c805025df130c38d75695374e6854a0f1",
+    "module": "函数与导数",
+    "knowledge": [
+      "函数与导数",
+      "导数公式与点值的分离"
+    ],
+    "purpose": "导数公式与点值的分离",
+    "reasoning": "先独立求导再核对代入值",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q011:v1",
+    "mode": "ai",
+    "candidate_sha256": "d211977612f5d1e52c2ab0d2ed5b5dfcb3b2fdc8f5d0dd66a8f7551e0b90fb4c",
+    "question_sha256": "5eb7abb4163ee17443fa5729403d77cf45ef6cd515ad04172b79bcd0f362536e",
+    "module": "立体几何",
+    "knowledge": [
+      "立体几何",
+      "旋转坐标下的正交和平行"
+    ],
+    "purpose": "旋转坐标下的正交和平行",
+    "reasoning": "用内积与叉积区分两个方向关系",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q012:v1",
+    "mode": "ai",
+    "candidate_sha256": "efc939d5afbbf5a32c80806a099ee28b16519bc58c2e2eb0abf3c9477d8f0030",
+    "question_sha256": "e9efc4994853a827490a3f823a3db4673f7e546e4b3d031ec5866d6d3928fe02",
+    "module": "概率统计",
+    "knowledge": [
+      "概率统计",
+      "对称样本方差"
+    ],
+    "purpose": "对称样本方差",
+    "reasoning": "先定位均值，再取平方差平均",
+    "designed_difficulty": 1,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q013:v1",
+    "mode": "ai",
+    "candidate_sha256": "d486d17b04321c72d3f32b73e4be2d61cea602d8aadc63bae47bc348ec789798",
+    "question_sha256": "67da6482790fe2ca3d07cfba9ae11e86fe6e2ebcd938367a7e2a4a5b2216263e",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "比值化简与有限几何修正"
+    ],
+    "purpose": "比值化简与有限几何修正",
+    "reasoning": "先除幂，再拆为常数和与有限等比和",
+    "designed_difficulty": 2,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q014:v1",
+    "mode": "ai",
+    "candidate_sha256": "7fa82b8f6ccc135393f0b7828f26d2cc66425c08af0effcfe26e1620ca51f08f",
+    "question_sha256": "c8318c9002442b887f6735725481d6750a172a588563f287bf0d63a3a0de3268",
+    "module": "解析几何",
+    "knowledge": [
+      "解析几何",
+      "斜线点距"
+    ],
+    "purpose": "斜线点距",
+    "reasoning": "代入直线方程后取绝对值，并除法向量模",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q015:v1",
+    "mode": "ai",
+    "candidate_sha256": "20dbbf2d0441eb9d8d284442a90d8a7a76a8d7f45dd14124348230c183cf7ef7",
+    "question_sha256": "7597ac71a765625b07423ee2a89b226a3584760c66bbeec3c48ca9f3b0a39a64",
+    "module": "概率统计",
+    "knowledge": [
+      "概率统计",
+      "逐层缩小样本空间及条件期望"
+    ],
+    "purpose": "逐层缩小样本空间及条件期望",
+    "reasoning": "每次条件改变都重新归一，最后按随机变量值累加",
+    "designed_difficulty": 4,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q016:v1",
+    "mode": "ai",
+    "candidate_sha256": "1639a83cd77836cefba97fd99bddbb8709e24876d26e968ce6819aed3f0559e2",
+    "question_sha256": "7dc1c955ee4bc1426dbcf9381aa1fa48552055634c548efdf26d479f4c771f26",
+    "module": "立体几何",
+    "knowledge": [
+      "立体几何",
+      "平面法向量串联距离和线面角"
+    ],
+    "purpose": "平面法向量串联距离和线面角",
+    "reasoning": "叉积确定同一法向量，随后两种投影分别计算",
+    "designed_difficulty": 3,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q017:v1",
+    "mode": "ai",
+    "candidate_sha256": "0f7bea83fc13935833e707b181ed0e17c1035c28718efb9124322ee98a79154b",
+    "question_sha256": "46de8ff1b9339a13b3ea023d0ff79b1174ae1503112c01ed9ae7d3bf762b7a4a",
+    "module": "数列",
+    "knowledge": [
+      "数列",
+      "线性驱动递推与几何加权和"
+    ],
+    "purpose": "线性驱动递推与几何加权和",
+    "reasoning": "增加n+1使其成为等比数列，再拆加权部分和",
+    "designed_difficulty": 4,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q018:v2",
+    "mode": "ai",
+    "candidate_sha256": "06a5c191916d29c0ad3348ccf0c3c347c1a2d94267775a2dfef3d915f8894b1a",
+    "question_sha256": "02274ce484591704cebcff10b88ed31e7e6fb1721ee149cba9f8055c01af1870",
+    "module": "解析几何",
+    "knowledge": [
+      "解析几何",
+      "参数恢复与非中心点的椭圆距离"
+    ],
+    "purpose": "参数恢复与非中心点的椭圆距离",
+    "reasoning": "用正半轴筛解，参数化后比较内部驻点与端点",
+    "designed_difficulty": 4,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成程序验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  },
+  {
+    "id": "orig:ai:phase3:fullA:q019:v1",
+    "mode": "ai",
+    "candidate_sha256": "2dc9a73e755868919d5d37807ff3acf6f56ab02c8d5de70687e6e25b49ec973c",
+    "question_sha256": "4e86ae49797e79b81c77e591373990f6ba330d749c0e7ee314bf03e10009488c",
+    "module": "函数与导数",
+    "knowledge": [
+      "函数与导数",
+      "参数导数二次式与临界零点"
+    ],
+    "purpose": "参数导数二次式与临界零点",
+    "reasoning": "最大约束在内部达到，随后区分变号驻点和不变号驻点",
+    "designed_difficulty": 5,
+    "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+    "program_verification": "已完成符号与数值交叉验证",
+    "independent_ai_review": "已完成独立AI推理审查",
+    "formal_proof": false,
+    "teacher_review": "尚需人工核验"
+  }
+]

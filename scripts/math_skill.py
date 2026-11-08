@@ -22,6 +22,15 @@ def main(argv=None):
     action.add_argument("--kind")
     action.add_argument("--output", type=Path)
     actions.add_parser("rules")
+    planning = actions.add_parser("plan")
+    planning.add_argument(
+        "--mode",
+        choices=("sequence", "derivative", "mixed", "full", "acceptance"),
+        required=True,
+    )
+    planning.add_argument("--profile", default="balanced")
+    planning.add_argument("--seed", type=int, default=0)
+    planning.add_argument("--output", type=Path)
     action = actions.add_parser("generate")
     action.add_argument("--mode", choices=("sequence", "derivative", "mixed", "full"))
     action.add_argument("--topic")
@@ -35,8 +44,17 @@ def main(argv=None):
     action.add_argument("--seed", type=int, default=20261107)
     action.add_argument("--output", type=Path, required=True)
     action.add_argument("--no-export", action="store_true")
+    action.add_argument("--engine", choices=("template", "ai"), default="template")
+    action.add_argument("--candidates", type=Path)
+    action.add_argument("--model")
+    action.add_argument("--allow-template-fallback", action="store_true")
     action = actions.add_parser("verify")
     action.add_argument("run", type=Path)
+    action = actions.add_parser("review")
+    action.add_argument("run", type=Path)
+    action.add_argument("--report", type=Path, required=True)
+    action.add_argument("--blind-report", type=Path)
+    action.add_argument("--no-export", action="store_true")
     args = parser.parse_args(argv)
     root = args.root.resolve()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -47,9 +65,37 @@ def main(argv=None):
                 from storage import atomic_json
 
                 atomic_json(args.output, result)
+        elif args.action == "plan":
+            from mathgen.planner import plan
+
+            result = plan(root, args.mode, args.profile, args.seed)
+            if args.output:
+                from storage import atomic_json
+
+                atomic_json(args.output, result)
         elif args.action == "rules":
             result = rules(root)
         elif args.action == "generate":
+            from mathgen.ai_provider import select_provider
+
+            provider = select_provider(
+                args.engine, args.candidates, args.model, args.allow_template_fallback
+            )
+            if provider.name != "template":
+                from mathgen.dynamic import run_ai
+
+                record = run_ai(
+                    root, provider, args.output.resolve(), not args.no_export
+                )
+                result = {
+                    "output": str(args.output.resolve()),
+                    "mode": "ai",
+                    "provider": provider.name,
+                    "structure": record["structure"],
+                    "status": record["overall_status"],
+                }
+                print(dumps(result))
+                return 0
             require(bool(args.mode) != bool(args.topic), "请选择--mode或--topic之一")
             plan = (
                 custom_blueprint(
@@ -67,12 +113,20 @@ def main(argv=None):
                 plan,
             )
             result = {
+                "generation_mode": "template",
+                "fallback_from_ai": args.engine == "ai",
                 "output": str(args.output.resolve()),
                 "status": record["overall_status"],
                 "structure": record["structure"],
                 "files": record.get("files", {}),
                 "attempts": len(record["events"]),
             }
+        elif args.action == "review":
+            from mathgen.attestation import attest
+
+            result = attest(
+                args.run, args.report, args.blind_report, not args.no_export
+            )
         else:
             record = read_json(args.run)
             require(
@@ -82,7 +136,26 @@ def main(argv=None):
             result = []
             for q, v in zip(record["questions"], record["verifications"]):
                 assert_fresh(q, v)
-                fresh = verify(q)
+                if record.get("generation_mode") == "ai":
+                    from mathgen.dynamic import (
+                        independent_solve,
+                        review,
+                        rendered_question,
+                    )
+
+                    canonical = rendered_question(q, q["order"])
+                    require(
+                        q["stem"] == canonical["stem"]
+                        and q["options"] == canonical["options"],
+                        "题面与数学规格不符",
+                    )
+                    solved = independent_solve(q["problem"])
+                    fresh = {
+                        "passed": review(q, solved)["passed"],
+                        "status": "重新独立求解完成",
+                    }
+                else:
+                    fresh = verify(q)
                 require(fresh["passed"], "重新验证失败 " + q["id"])
                 result.append(
                     {"id": q["id"], "passed": True, "status": fresh["status"]}

@@ -18,7 +18,11 @@ class Limits:
 class FamilyProvider:
     """Executable baseline. The host AI authors and reviews the family designs."""
 
-    name = "local_verified_families"
+    name = "template"
 
     def propose(self, family, seed, kind, points):
-        return add_options(draft(family, seed, kind, points), seed + 1)
+        question = add_options(draft(family, seed, kind, points), seed + 1)
+        question["generation"].update(
+            mode="template", model_version=None, ai_dynamically_authored=False
+        )
+        return question

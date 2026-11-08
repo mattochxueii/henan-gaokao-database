@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "author": "当前Codex宿主AI",
+    "authored_at": "2026-11-08",
+    "task": "phase3-dynamic-math",
+    "method": "本轮直接设计不同数学关系并写出结构化候选，未调用FamilyProvider、draft或26族模板",
+    "api_calls": 0,
+    "template_calls": 0
+  },
+  "blueprint": {
+    "mode": "sequence",
+    "profile": "sequence-diversity",
+    "seed": 0,
+    "title": "sequence10数学动态命题实验",
+    "slots": [
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      },
+      {
+        "module": "数列"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "module": "数列",
+      "problem": {
+        "context": "有一类间隔两位的分式项，研究其边界如何留下残项。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "1/(k*(k+2))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "隔位裂项",
+        "reasoning_path": "拆成相隔两项的倒数，分别检查首尾两项",
+        "knowledge_combination": [
+          "数列",
+          "隔位裂项"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q001:v1",
+      "slot": 1,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "求权重随项号增长的等比和。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "k*2**k",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "线性权重与等比底数",
+        "reasoning_path": "错位相减或有限和求导，检查末项",
+        "knowledge_combination": [
+          "数列",
+          "线性权重与等比底数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q002:v1",
+      "slot": 2,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "相邻项受到随项号变化的线性约束。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "(n+1)*u(n+1)-(n+2)*u(n)-1",
+            "initial": {
+              "1": "2"
+            }
+          }
+        ]
+      },
+      "design": {
+        "structure": "变系数非齐次递推",
+        "reasoning_path": "除以相邻乘积后累加，再恢复通项",
+        "knowledge_combination": [
+          "数列",
+          "变系数非齐次递推"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q003:v1",
+      "slot": 3,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "奇偶方向交替的增量随项号增加。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "u(n+1)-u(n)-(2*n+1)*(-1)**n",
+            "initial": {
+              "1": "1"
+            }
+          }
+        ]
+      },
+      "design": {
+        "structure": "线性增量的交替驱动",
+        "reasoning_path": "将奇数和偶数项配对，验证通项与首项",
+        "knowledge_combination": [
+          "数列",
+          "线性增量的交替驱动"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q004:v1",
+      "slot": 4,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "多个相邻因子共同约消，保留首尾的乘积。",
+        "tasks": [
+          {
+            "op": "product",
+            "expression": "(k+1)*(k+3)/(k*(k+4))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "交叉约分有限积",
+        "reasoning_path": "分开两组相邻比，核对边界因子",
+        "knowledge_combination": [
+          "数列",
+          "交叉约分有限积"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q005:v1",
+      "slot": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "相邻根式分母不宜直接数值近似。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "1/(sqrt(k)+sqrt(k+1))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "根式有理化后相消",
+        "reasoning_path": "乘共轭转成相邻根式差，再作有限和",
+        "knowledge_combination": [
+          "数列",
+          "根式有理化后相消"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q006:v1",
+      "slot": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "把多项式按升幂展开的系数依次看成一个有限数列。",
+        "tasks": [
+          {
+            "op": "coefficient",
+            "expression": "(1+x)**6*(1-x)**4",
+            "power": 3
+          }
+        ]
+      },
+      "design": {
+        "structure": "两类二项式系数卷积",
+        "reasoning_path": "先合并相反因子再提取三次项",
+        "knowledge_combination": [
+          "数列",
+          "两类二项式系数卷积"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q007:v1",
+      "slot": 7,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "三个数x-y、x、x+y构成递增等差数列，其和为12、平方和为54。求x、y。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "expressions": [
+              "3*x-12",
+              "3*x*x+2*y*y-54"
+            ],
+            "conditions": [
+              "y>0"
+            ],
+            "unique": true
+          }
+        ]
+      },
+      "design": {
+        "structure": "对称变量恢复等差三元组",
+        "reasoning_path": "以中项与公差建模，附加递增条件排除负公差",
+        "knowledge_combination": [
+          "数列",
+          "对称变量恢复等差三元组"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q008:v1",
+      "slot": 8,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "每新增一个编号，将此前两编号的配对数记作一项。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "binomial(k,2)",
+            "lower": 2,
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "组合计数与部分和",
+        "reasoning_path": "按三个编号中的最大者分类，也可代数求和",
+        "knowledge_combination": [
+          "数列",
+          "组合计数与部分和"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q009:v1",
+      "slot": 9,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    },
+    {
+      "module": "数列",
+      "problem": {
+        "context": "比较前n个正奇数平方和与n的立方。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "(2*k-1)**2",
+            "upper": "n"
+          },
+          {
+            "op": "nonnegative",
+            "expression": "n*(4*n*n-1)/3-n**3",
+            "variable": "n",
+            "domain": [
+              "1",
+              "oo"
+            ],
+            "open": [
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "奇数平方和与多项式界",
+        "reasoning_path": "先求和，再因式分解比较，区分实数充分条件与正整数结论",
+        "knowledge_combination": [
+          "数列",
+          "奇数平方和与多项式界"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "id": "orig:ai:phase3:sequence10:q010:v1",
+      "slot": 10,
+      "kind": "constructed_response",
+      "points": 10,
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host"
+      }
+    }
+  ]
+}

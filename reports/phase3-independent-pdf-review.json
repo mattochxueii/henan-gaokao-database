@@ -1,0 +1,2693 @@
+{
+  "schema_version": 1,
+  "reviewer": "独立子代理AI",
+  "model_version": "not_exposed_by_host",
+  "human_review": false,
+  "skill": "pdf",
+  "status": "AI_visual_review_passed",
+  "history": [
+    {
+      "attempt": "initial-render",
+      "rendered_files": [
+        {
+          "file": "experiments/sequence/paper.pdf",
+          "sha256": "7a74aabcfaaf5bf6316594b862b0574f9115ce95dc9da90e0f968a61f612b908",
+          "pages": 2
+        },
+        {
+          "file": "experiments/sequence/solutions.pdf",
+          "sha256": "788ab5fd128124012ddaf05e848d1ee5c95c9922a50828bf4057496bec5d6f98",
+          "pages": 3
+        },
+        {
+          "file": "experiments/derivative/paper.pdf",
+          "sha256": "78c137011734be2b3d2f1d7789e78e7ef4b37840c7122decf2e34ebdc4418d9f",
+          "pages": 2
+        },
+        {
+          "file": "experiments/derivative/solutions.pdf",
+          "sha256": "98b24c5c61f53588ca3de02a5c179d9be6ca562daae855fad5356829d2c88a74",
+          "pages": 3
+        },
+        {
+          "file": "experiments/mixed/paper.pdf",
+          "sha256": "ec2434282a6652c2a7ec550b59acc68e9b619abc7e4a68024d74860b8be1f76f",
+          "pages": 3
+        },
+        {
+          "file": "experiments/mixed/solutions.pdf",
+          "sha256": "4b577f1662427107802eb6ddf321936810c5106f520cdd6014c21384c0444d17",
+          "pages": 4
+        },
+        {
+          "file": "experiments/full/paper.pdf",
+          "sha256": "0db9b2066c3847174a12f4ae8690f93d725587f856d475dcdacfc25ec826d446",
+          "pages": 7
+        },
+        {
+          "file": "experiments/full/solutions.pdf",
+          "sha256": "0d4a346c5aef97eff999009363f23b73c2751a4328763ba3ee3265d2357dd419",
+          "pages": 8
+        },
+        {
+          "file": "experiments/phase3/deliveries/sequence10/paper.pdf",
+          "sha256": "d317f6d739f6375b07d87bff73439e8b31c1e14e53be0e42c6b9fddebcbf20d3",
+          "pages": 4
+        },
+        {
+          "file": "experiments/phase3/deliveries/sequence10/solutions.pdf",
+          "sha256": "9d539c753fde5875768696493d57f275234b3332253da82ce1ff903edcffe194",
+          "pages": 5
+        },
+        {
+          "file": "experiments/phase3/deliveries/derivative10/paper.pdf",
+          "sha256": "91e67a723085b48b97506c9bfd115501dec5744e7442e2c8e0ab271f34d042c2",
+          "pages": 5
+        },
+        {
+          "file": "experiments/phase3/deliveries/derivative10/solutions.pdf",
+          "sha256": "c6a3501812c329d3976ef5e27c762b375e539915c3d82dc6d1ccf623e4cdf864",
+          "pages": 7
+        },
+        {
+          "file": "experiments/phase3/deliveries/mixed50/paper.pdf",
+          "sha256": "f8c51e449263240a1bbcc48ecbf4eb9eeb6cd147ecf4d9e3ae0524e2cb65b443",
+          "pages": 3
+        },
+        {
+          "file": "experiments/phase3/deliveries/mixed50/solutions.pdf",
+          "sha256": "dff9e2dbe77e8073f87cdc9c73a7180de1f53a3a4c014aa2a00bb250e2ae4b74",
+          "pages": 5
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullA/paper.pdf",
+          "sha256": "7d9fa0e8c8dc2de0ba1704f70139a9dfc9758c55c9508847090db2dbb61b6cb7",
+          "pages": 8
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullA/solutions.pdf",
+          "sha256": "7e0257f150f98e7b54b4ffe29d11baf6fe0a752a369e49ec3d81a36c6fa1b635",
+          "pages": 13
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullB/paper.pdf",
+          "sha256": "a4cd8dd5b55290385770ce5db6e6ea510520356c202ce281ff5ac94d45ab28c8",
+          "pages": 8
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullB/solutions.pdf",
+          "sha256": "2b13038afa0339aee2da699d6ad4eb71e7c595ad06688f7ceabe04684864a1dc",
+          "pages": 12
+        },
+        {
+          "file": "experiments/phase3/deliveries/acceptance5/paper.pdf",
+          "sha256": "2f110f3f31983fdd980b108309230e654ee0bb01ef2257526f7dbbbf109c2e4e",
+          "pages": 2
+        },
+        {
+          "file": "experiments/phase3/deliveries/acceptance5/solutions.pdf",
+          "sha256": "d8215bafeec49841ef098c51c13147324462e89dbc148cb11c02696453c4822a",
+          "pages": 4
+        }
+      ],
+      "viewed_contact_sheets": [
+        "sequence-paper-sheet-1.png",
+        "sequence-solutions-sheet-1.png",
+        "sequence-solutions-sheet-2.png",
+        "derivative-paper-sheet-1.png",
+        "derivative-solutions-sheet-1.png",
+        "derivative-solutions-sheet-2.png",
+        "mixed-paper-sheet-1.png",
+        "mixed-paper-sheet-2.png",
+        "mixed-solutions-sheet-1.png",
+        "mixed-solutions-sheet-2.png",
+        "full-paper-sheet-1.png",
+        "full-paper-sheet-2.png",
+        "full-paper-sheet-3.png",
+        "full-paper-sheet-4.png",
+        "full-solutions-sheet-1.png",
+        "full-solutions-sheet-2.png",
+        "full-solutions-sheet-3.png",
+        "full-solutions-sheet-4.png",
+        "sequence10-paper-sheet-1.png",
+        "sequence10-paper-sheet-2.png",
+        "sequence10-solutions-sheet-1.png",
+        "sequence10-solutions-sheet-2.png",
+        "sequence10-solutions-sheet-3.png",
+        "derivative10-paper-sheet-1.png",
+        "derivative10-paper-sheet-2.png",
+        "derivative10-paper-sheet-3.png",
+        "derivative10-solutions-sheet-1.png",
+        "derivative10-solutions-sheet-2.png",
+        "derivative10-solutions-sheet-3.png",
+        "derivative10-solutions-sheet-4.png",
+        "fullA-paper-sheet-1.png",
+        "fullA-paper-sheet-2.png",
+        "fullA-paper-sheet-3.png",
+        "fullA-paper-sheet-4.png",
+        "fullA-solutions-sheet-1.png",
+        "fullA-solutions-sheet-2.png"
+      ],
+      "viewed_actual_pages": 65,
+      "enlarged_original_pages": [
+        "full-paper/page-1",
+        "sequence10-solutions/page-1",
+        "fullA-paper/page-7"
+      ],
+      "observations": [
+        "已看页面未见边缘裁切、题号丢失或内容覆盖页脚。解答题预留答题区域，答案质量说明独立成页。",
+        "奇数页联系页的空白右半是拼图空槽，未计为PDF空白页。"
+      ],
+      "issues": [
+        {
+          "severity": "blocking",
+          "finding": "Unicode减号U+2212在独立AI解法普通文本段落显示为空白，导致算式缺减号。",
+          "example_pdf": "experiments/phase3/deliveries/sequence10/solutions.pdf",
+          "page": 1,
+          "confirmed_at_original_resolution": true,
+          "resolution": "主代理已确认，等待统一文本规范化后重导出与复核。"
+        },
+        {
+          "severity": "minor",
+          "finding": "fullA答案册首页长标题末字“告”独占第二行。",
+          "example_pdf": "experiments/phase3/deliveries/fullA/solutions.pdf",
+          "page": 1,
+          "resolution": "建议在答案与质量报告之前显式换行。"
+        }
+      ]
+    },
+    {
+      "attempt": "minus-and-title-corrected-render",
+      "files": [
+        {
+          "file": "experiments/sequence/paper.pdf",
+          "sha256": "b18675038954b602e9c91fb97a60ad5b2c4c6f2ca05cbfed830514a7c4577e11",
+          "pages": 2,
+          "contact_sheets": [
+            "sequence-paper-sheet-1.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "82039afd6961e26a083dad2529c7f2cb1f57a17207d049a6c71f74da33de8534"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "ee567ac6f98b7fe720a6cca896d36dc9a220a12a45b8b9877fa13acbb27b1011"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/sequence/solutions.pdf",
+          "sha256": "d9402643bd05e40493099a2fe17b4459b154b3f23de4557a9633fdb28e50d420",
+          "pages": 3,
+          "contact_sheets": [
+            "sequence-solutions-sheet-1.png",
+            "sequence-solutions-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "58094e997372f6282a3a3efb9c3222ba4e2d7089f0177e94cd7284ce1030a7ac"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "9fc779e6f06bada2e31b61f3c05a1ce23596c43c5b95b1d21eaf868fc70139a6"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "3b9c247757037d5d63c874babae602470cc7c88d452967dfb6024b562673cd52"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/derivative/paper.pdf",
+          "sha256": "8da4f79af841b1f68018ae8007eff29c5f8d7271d7917b8f4f5acd4574e03919",
+          "pages": 2,
+          "contact_sheets": [
+            "derivative-paper-sheet-1.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "f26a589366a61742e6ce9bbef708e995f34dd46e72ae06d88d499d02e5e1fa0d"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "c72247fbe129ec401c57e155a53c56db4fdbd65d0314e39d4d96c68b1db0be4a"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/derivative/solutions.pdf",
+          "sha256": "5e3a973da070d8e5539bc6f54e420248ada887dfa69734dab452a3745024efd3",
+          "pages": 3,
+          "contact_sheets": [
+            "derivative-solutions-sheet-1.png",
+            "derivative-solutions-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "2d1e6b33eb54c3da1889944a6bcb57d49a57c51bd265e83ac95517c1187a752e"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "d10e536720e990723b90a2acb2ddb4fe820723b3f00f0cd0791955911f0abd76"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "3b9c247757037d5d63c874babae602470cc7c88d452967dfb6024b562673cd52"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/mixed/paper.pdf",
+          "sha256": "823db60ce6339f61ecc1feba26c74ac9e685c611c76efa06013281e37a552d2b",
+          "pages": 3,
+          "contact_sheets": [
+            "mixed-paper-sheet-1.png",
+            "mixed-paper-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "cd38461af19c6fd4abfb0444ae5211eea8cc3295b286b1aba5518a11baec868e"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "654cefd304d5307969b1ab48cd3e20a1c39ac7844dfaf01e7fb6b3d80db9f6b1"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "83726da3c11badcc49e5cc9010858e7d170af343d1149c4073ceb57c222e46cc"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/mixed/solutions.pdf",
+          "sha256": "f21b764cdd60b079ff8cb8dacd418cb85359bfd36253a7a974f6b36086f02243",
+          "pages": 4,
+          "contact_sheets": [
+            "mixed-solutions-sheet-1.png",
+            "mixed-solutions-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "695b889eebc62ab3e3ef35d386f55dd2478c7fa6de6bd35a693ca1c727e23942"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "1ba89237e233ab35e72bb77fdd92997bd38fb74a9ca4d36acc8a20132ae6b763"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "c9d54ec7a91b1eac267d4439519aefecde0a69c33ff14cbb709482ec5371d8c6"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "d1ef0363ee39175c105b57630bb79dbbfbd0a55008aba6d935301a0ff42747ad"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/full/paper.pdf",
+          "sha256": "d4fa8627ad053cc0d64e4c83ef4d165b8d82ca20b76f2ed82cecfbb2221357bf",
+          "pages": 7,
+          "contact_sheets": [
+            "full-paper-sheet-1.png",
+            "full-paper-sheet-2.png",
+            "full-paper-sheet-3.png",
+            "full-paper-sheet-4.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "ea16c79edfb1b44fe249ad880bad9eabd129b3faf0c3ef373d7bd3ba73dec242"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "d551546ee9a8c252b7eb55f4cd92b925b5490901e3c9c9d50bd3264c1be0f8f6"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "da0c2f2bea6306bb199312a932459a0d0692e956543614995d32e6a3318cc15a"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "888fe6af46daa638a2b214a43acdc0d0db8a23c4155ca2ca012ed13027d049ed"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "64eb9391b8170655a91979764be59abba6d8b185a062b33b12f0273e34c6a9d0"
+            },
+            {
+              "page": 6,
+              "image": "page-6.png",
+              "image_sha256": "067107659a21dc983687bcb952067bb4710076c61d9f2f517e3431c93288086d"
+            },
+            {
+              "page": 7,
+              "image": "page-7.png",
+              "image_sha256": "b67e1e03745b75fdf66d73cd9d43b53716432f553bb5d81d513cbc6aee06d673"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/full/solutions.pdf",
+          "sha256": "3263494352c36f01f3687b1f1b0fac295dba5f5bacb1151e0439c6a19303b6d1",
+          "pages": 8,
+          "contact_sheets": [
+            "full-solutions-sheet-1.png",
+            "full-solutions-sheet-2.png",
+            "full-solutions-sheet-3.png",
+            "full-solutions-sheet-4.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "cac433ed3dfebdec883865866100301b81d42e50485cbaf0f42a67a0e73354e3"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "bd8757276dae86e65fb63b83c6ac829748fa879b6966dfc025d2cb62d81a9ac6"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "82d44bb88802eaf4981437d61a0139bb80795708cd8e8f934166fac1cec2e4ec"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "468bb1e572eb899c5d6d39e356079d0580877560e2cdadec5d76c206a404281b"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "466313650fcaf48d54b30290996692de7895f680ae2cd5e6e5333664a61bc0d4"
+            },
+            {
+              "page": 6,
+              "image": "page-6.png",
+              "image_sha256": "511420336eeadd24bf64ee41db2d691f828355d360d84df194f0712fcefac8b4"
+            },
+            {
+              "page": 7,
+              "image": "page-7.png",
+              "image_sha256": "6a6a183823eb42329d6ee312214bfd5d4954a9fbe67f7eae6448c69e4b228e20"
+            },
+            {
+              "page": 8,
+              "image": "page-8.png",
+              "image_sha256": "20456cb64beffab8d91d2764f2f8a562a88801dffd4169a25226d79356f0b663"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/sequence10/paper.pdf",
+          "sha256": "d099f8ad8996399e2b0e46df1cdb86689e8854b8cc5b893947d3bcc936af3805",
+          "pages": 4,
+          "contact_sheets": [
+            "sequence10-paper-sheet-1.png",
+            "sequence10-paper-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "4075e4a49c4e5f84f1879a8aa3ac7c8aaa8c385abea8b473f48f8bfd917cdb93"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "ad3085a4dcbb3b20e8a9aff496500abdeaa2d2787324dd27c7e6d1f0547e3d68"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "36c96c634357c5035f2c838c65887b35b2454180729e9ddda48b4cf24420ed61"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "c38325b1a14b00d2455a75420f4f6d18f794309326a1aca4a32bd031bb23d84c"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/sequence10/solutions.pdf",
+          "sha256": "5da6b3cc76bfc5ec4d753dd9c1c81d39e0675c2094e58c29b958a9f187f3e719",
+          "pages": 5,
+          "contact_sheets": [
+            "sequence10-solutions-sheet-1.png",
+            "sequence10-solutions-sheet-2.png",
+            "sequence10-solutions-sheet-3.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "80ffdc6f23220b0b658b8555117a67ae7951d231d889a395022f51e240d15a2c"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "f9459d9c437d0d979fd309d64a20110366c0b752b4867fb90e2208e1ce626ad6"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "fe4e4b4de8b6a7988cbf82297e90305faf0d5819f8a0d86ef418907d589644db"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "5941eb0ff0be4df12d0a55d5042749b5d51612939234cddeba5662b4cc4cd036"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "041b6265808a81a8be07cb2c3220b6a703879d5d0389d20be14c41e41e7e79b9"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/derivative10/paper.pdf",
+          "sha256": "a1a8e60d40a8b89b1612fe1cfc0e2e6c9feaec2714995bb8ff936a35fd8d7638",
+          "pages": 5,
+          "contact_sheets": [
+            "derivative10-paper-sheet-1.png",
+            "derivative10-paper-sheet-2.png",
+            "derivative10-paper-sheet-3.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "b940feeae5879fb51d3e2696e2939fa78901f5d6d9cd6c39a36be22df5f47c3f"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "364ae0c2c5015e363ec2e40304230f03a431b39bcfb83d456666b1aade9d1e40"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "15b1d5bd56ec49cd4a30b86a2590bb2f829a3438a8ea4f0acebee2d3edaf2306"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "c798d799aaad5d2fc76da3237255c5ac510c80c527d68d0f2f828d0447600794"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "ab8b7b37027cfd85dba41d7360cb25a592633c01c48bdb24615b0b7a78d42e96"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/derivative10/solutions.pdf",
+          "sha256": "dda1061025b1e7a6b1b1c39c5c4d2358de388b98d4bd3300fdb43cbbbf1198a1",
+          "pages": 7,
+          "contact_sheets": [
+            "derivative10-solutions-sheet-1.png",
+            "derivative10-solutions-sheet-2.png",
+            "derivative10-solutions-sheet-3.png",
+            "derivative10-solutions-sheet-4.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "f83e34cb07f4e366d7da80236bdf321c4123fd7535ce2e1b770135527e1abfa8"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "ff037ab6f994e645837e4d7cab24a97cbc7e87ceb0aeb97370edbddbb5019050"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "96dd8ac5b59533513e0b0b6e3a924e0b32972d2240d43fe26596c0c72259d7e2"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "bbfa3b11adece2adce3edf17a30835a01d5cd1f48c11dbe4e7a41a167e6ee275"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "65a8b2dd84db403d54b5a75cc79727707a34428666718d618c9735d5a20a5c86"
+            },
+            {
+              "page": 6,
+              "image": "page-6.png",
+              "image_sha256": "c2f53c689e881314ed889bcd0bf14760d5630ff8de28da6e8954db922802a65f"
+            },
+            {
+              "page": 7,
+              "image": "page-7.png",
+              "image_sha256": "5bed4aa32f168304b6c7257866bb1351cc8f043a8d3147f25816625497140343"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/mixed50/paper.pdf",
+          "sha256": "0b42fda850c92cb88641f32fe061c1746603bec56034fc7c2d743589d4487712",
+          "pages": 3,
+          "contact_sheets": [
+            "mixed50-paper-sheet-1.png",
+            "mixed50-paper-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "3d6b098f7165da475ec9b380ab11f7a9c58755eb5bc9e63365a354a6cbaae67a"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "a5418ee0c9f90dd07ed8e90a0bf6dcedd0a192a2153a9493333eae052fb7d598"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "67263878e54c18b96df66c987d4b4568357d24a3b344d0625ed0f10de021e5da"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/mixed50/solutions.pdf",
+          "sha256": "04c737472abb97c69bb10f2f54e23d2ff83bb2246ebe18392292f603c0990342",
+          "pages": 5,
+          "contact_sheets": [
+            "mixed50-solutions-sheet-1.png",
+            "mixed50-solutions-sheet-2.png",
+            "mixed50-solutions-sheet-3.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "1af7d6c56e9c63c7ab4c611ab12ee531f24568c307ba45c05ef55844e3387119"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "fbfe074836cdedb68f55085524c4358c5410609cfd87c452a1229328ff742583"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "bb69bc9fdf2a00a0c3ff219da5d2f51e30a8e585749a8a895260e07eeb1b2382"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "595f9fb6a412bd19d5c6bf44a0004d3ca823452b947ffc74fe78baa73e9ea7cf"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "041b6265808a81a8be07cb2c3220b6a703879d5d0389d20be14c41e41e7e79b9"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullA/paper.pdf",
+          "sha256": "2f08ea6d6c1273d9ccc2bd8a4cc3cef0c1e09c53faa5738faabb49eb40caa2e8",
+          "pages": 8,
+          "contact_sheets": [
+            "fullA-paper-sheet-1.png",
+            "fullA-paper-sheet-2.png",
+            "fullA-paper-sheet-3.png",
+            "fullA-paper-sheet-4.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "addef868ce74cea4497463a7307f5eea06eaf448940082013c1daa8d86c10b86"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "b9455dcb917f11c1f1906cfd87abe073120eeee9f1dee03a34c1cefcc8bd5068"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "63de8aee11f628ad3e380f8594b66642a449fbd31b81111105488b62188b6842"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "b183952345b1ab59aad2407bcca04c36944113e30cd4265bfe2de071a57e5c67"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "6582922b265c8e05697bebb7b1f8b86219253128bd88df008b3f720bc75b44a7"
+            },
+            {
+              "page": 6,
+              "image": "page-6.png",
+              "image_sha256": "4e2dccead0ab12d5a44e86cbef1003a650a8b9c3025304fdc25933eda26e6172"
+            },
+            {
+              "page": 7,
+              "image": "page-7.png",
+              "image_sha256": "48568cfae7772be3186afd50c4afab3f052ede19fa9476a1486bb420074bf631"
+            },
+            {
+              "page": 8,
+              "image": "page-8.png",
+              "image_sha256": "c1762e37833a4bf14a86d4cbfcb3b97b7be67ce8a216208ac2b38f4fd570a3f9"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullA/solutions.pdf",
+          "sha256": "7bb51c9a29d391cd16da3f7269c97e0fc52d7e8f5ed12bdff71223ec89f53008",
+          "pages": 13,
+          "contact_sheets": [
+            "fullA-solutions-sheet-1.png",
+            "fullA-solutions-sheet-2.png",
+            "fullA-solutions-sheet-3.png",
+            "fullA-solutions-sheet-4.png",
+            "fullA-solutions-sheet-5.png",
+            "fullA-solutions-sheet-6.png",
+            "fullA-solutions-sheet-7.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-01.png",
+              "image_sha256": "a4ed87c71c5b5311e7de4c6786fc5841161aa10e54e409c55fa80f1691da50db"
+            },
+            {
+              "page": 2,
+              "image": "page-02.png",
+              "image_sha256": "69dd7844e0a91df40eeca08c043fb7c5e282cb7778160b3b82e8fd470af44a1d"
+            },
+            {
+              "page": 3,
+              "image": "page-03.png",
+              "image_sha256": "c8d405bd60ce30e98c70d77bd7380a9eebe688eb29e7712d031d8396fd19b9c6"
+            },
+            {
+              "page": 4,
+              "image": "page-04.png",
+              "image_sha256": "5a6501dbe7f59868b022053559ca34ef4894cbd7118715508a72df1f16c49898"
+            },
+            {
+              "page": 5,
+              "image": "page-05.png",
+              "image_sha256": "fce9f78b5105a792e98cabeb66da00f7936cb75c298f967036fb635a96d1198a"
+            },
+            {
+              "page": 6,
+              "image": "page-06.png",
+              "image_sha256": "5c959c6301e9f824bfe6e99d897b040f687f8572e045f4e85a0cee069e0924db"
+            },
+            {
+              "page": 7,
+              "image": "page-07.png",
+              "image_sha256": "93bfd48c470938c6fcc5a488d773751c707bb27de5a7b9c9cf7460f98dd02a9d"
+            },
+            {
+              "page": 8,
+              "image": "page-08.png",
+              "image_sha256": "87931f440ff5ec9f064002655e40e622ff299a963c0eddf6923d5eaa1f01c0f0"
+            },
+            {
+              "page": 9,
+              "image": "page-09.png",
+              "image_sha256": "0e31e21553a0f3144b8fdb54af48c35851c9e76705e2a23842c1681fc5de60a2"
+            },
+            {
+              "page": 10,
+              "image": "page-10.png",
+              "image_sha256": "89660bae888a176011d214948d3496649fbe7b3b0896f8c00471bbd0112a8576"
+            },
+            {
+              "page": 11,
+              "image": "page-11.png",
+              "image_sha256": "8290433e5ec79a63aa0bb9feba29e51806271504ff1bfb36377bcc67c0ab67fe"
+            },
+            {
+              "page": 12,
+              "image": "page-12.png",
+              "image_sha256": "4c754339f6c05e8ce00bb6a98939fb1dd906eafeef41fa21e6a85b5030bce91d"
+            },
+            {
+              "page": 13,
+              "image": "page-13.png",
+              "image_sha256": "68ed38c3cbeb5df98cf159ccdd86b724f726acdfc333d08b3735b32f71019fca"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "explanation_label_revision_pending",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [
+            "多选结果行仍以原始任务顺序编号，需标明当前显示选项与原始命题映射。"
+          ],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullB/paper.pdf",
+          "sha256": "057e0015f7749129c4324b716c7260ad10e960a31260a8a8bc1ad11ea39d9fe0",
+          "pages": 8,
+          "contact_sheets": [
+            "fullB-paper-sheet-1.png",
+            "fullB-paper-sheet-2.png",
+            "fullB-paper-sheet-3.png",
+            "fullB-paper-sheet-4.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "d5247776b5bf1a738830e453798d112c8f52b5f05de11920568546a7e662a109"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "5c0ed14170a419cce4ca22bb8ed6e7b49a32dbefba531ddb86c760facc3f0a86"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "85599c604b9c9d83b586113f8f1497c95c8a37137640114840f0bc7d3476d3bd"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "8c08c1b1b4014b24ad9aa3313b2544a5c9f42bee57cf843c45259acbc43792dc"
+            },
+            {
+              "page": 5,
+              "image": "page-5.png",
+              "image_sha256": "b8d115422bf6173acf622eeffbde2bb27538bb2f86d6b4035e1095a51a4051df"
+            },
+            {
+              "page": 6,
+              "image": "page-6.png",
+              "image_sha256": "72aaff78c70758bfcd5be22ee24f8fdd8a1fc87b7115dd1795cc625af99e134e"
+            },
+            {
+              "page": 7,
+              "image": "page-7.png",
+              "image_sha256": "6e569c59c43626c5cde39c1070222b3e60f9803cb9a1d169dfe110743b5e7afa"
+            },
+            {
+              "page": 8,
+              "image": "page-8.png",
+              "image_sha256": "ff934c5aef7a51c5a5bd63680aba53783e54e6c6bcb9fb273c0dc7427938df18"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/fullB/solutions.pdf",
+          "sha256": "a21f4112d8c0921d62528a43da7015e6669ce2fb6e34033349a465af062122b3",
+          "pages": 12,
+          "contact_sheets": [
+            "fullB-solutions-sheet-1.png",
+            "fullB-solutions-sheet-2.png",
+            "fullB-solutions-sheet-3.png",
+            "fullB-solutions-sheet-4.png",
+            "fullB-solutions-sheet-5.png",
+            "fullB-solutions-sheet-6.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-01.png",
+              "image_sha256": "db4c1677514d4ef95defc356e4831f077dfcbe91f77dd678b475b233bb434b87"
+            },
+            {
+              "page": 2,
+              "image": "page-02.png",
+              "image_sha256": "4a9b3a1bf5f909be10ce2890988c5f282886cf5acd86ea206e72aef80b8425c4"
+            },
+            {
+              "page": 3,
+              "image": "page-03.png",
+              "image_sha256": "51784b7b176b0ce45d931d40e747d07f1b08e1170697a9fb6bad022f11f26192"
+            },
+            {
+              "page": 4,
+              "image": "page-04.png",
+              "image_sha256": "1e8fbed349c7de5db57499059daf8929554a16082c0c514a64a7d22a9cd50182"
+            },
+            {
+              "page": 5,
+              "image": "page-05.png",
+              "image_sha256": "f93f20a77aeffdab883a97128814acb7d74450f07ca86a655ce52754e377f361"
+            },
+            {
+              "page": 6,
+              "image": "page-06.png",
+              "image_sha256": "fbdf4208413bb5a2a8c647d730e7874a3c9848c9d3853ae7535624afe0fb3709"
+            },
+            {
+              "page": 7,
+              "image": "page-07.png",
+              "image_sha256": "f6ac5a91cd218285908ca0bfb65b2116387013b6af470b482089502a354ed065"
+            },
+            {
+              "page": 8,
+              "image": "page-08.png",
+              "image_sha256": "451bdb04858a3e9f979dcf5c680b1a137268e91570e7d269468e265388e09044"
+            },
+            {
+              "page": 9,
+              "image": "page-09.png",
+              "image_sha256": "1eeaf50e93481b11d77036f0952df5e384f95ee61ba25974bdf1bd71198eb386"
+            },
+            {
+              "page": 10,
+              "image": "page-10.png",
+              "image_sha256": "b998a03a02aa61b215e1b0db99f77458495c60202deed93defba4bba93381b44"
+            },
+            {
+              "page": 11,
+              "image": "page-11.png",
+              "image_sha256": "960688962716bb25de63c99be2c948c470af69c7f4c9a93d34cb26246ae9a027"
+            },
+            {
+              "page": 12,
+              "image": "page-12.png",
+              "image_sha256": "eaefd7e25646bdaced3047e53c8b64767c0eee56d79cf157dd7e83cbbbbc8a04"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "explanation_label_revision_pending",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [
+            "多选结果行需对应当前选项。",
+            "概率命题的布尔真值不应写成概率本身。"
+          ],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/acceptance5/paper.pdf",
+          "sha256": "e1e1188fbba2d12e9a7bf557d682084fba39e99243502d83aaa849cfbc25d793",
+          "pages": 2,
+          "contact_sheets": [
+            "acceptance5-paper-sheet-1.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "8c4771ec9167c178c77c47e197790c6571cfd0b1e464a27144cb667b14736a51"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "6fc9a59b01ad9183d40af4f93fa16488d47f896e2f4c74e0f3e17cfd09bbd6a7"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        },
+        {
+          "file": "experiments/phase3/deliveries/acceptance5/solutions.pdf",
+          "sha256": "1d7d42663a03ffc81e24b7a4f914bc7f38382f71616ea01c8afc4b3820736fc1",
+          "pages": 4,
+          "contact_sheets": [
+            "acceptance5-solutions-sheet-1.png",
+            "acceptance5-solutions-sheet-2.png"
+          ],
+          "page_images": [
+            {
+              "page": 1,
+              "image": "page-1.png",
+              "image_sha256": "3a066bca987cdc70e7e8e1ac6bc6efde13e28a8850da99aaa4be0e90bb57eb37"
+            },
+            {
+              "page": 2,
+              "image": "page-2.png",
+              "image_sha256": "75a9fdd79945ce6776b6a691f38065a89501d1cf8032921217e4e1c2523495f5"
+            },
+            {
+              "page": 3,
+              "image": "page-3.png",
+              "image_sha256": "f30e21d06ff50a1d0562a5139e16d6b60070126a7387a4b00cf036cad22f81e5"
+            },
+            {
+              "page": 4,
+              "image": "page-4.png",
+              "image_sha256": "9a574b8c95a12c746d38c24eb14263510de1ba3163016e61809a9a06fc72e3d6"
+            }
+          ],
+          "all_pages_visually_reviewed": true,
+          "visual_status": "pass",
+          "observations": [
+            "题号、正文、公式、页脚均处于纸面内，未发现裁切与覆盖。",
+            "试题中的大块空白是答题区域；答案末页的质量说明页有实际内容。",
+            "普通文本减号现可见，答案标题已按完整副标题换行。"
+          ],
+          "issues": [],
+          "human_review": false
+        }
+      ],
+      "viewed_contact_sheets": [
+        "sequence-paper-sheet-1.png",
+        "sequence-solutions-sheet-1.png",
+        "sequence-solutions-sheet-2.png",
+        "derivative-paper-sheet-1.png",
+        "derivative-solutions-sheet-1.png",
+        "derivative-solutions-sheet-2.png",
+        "mixed-paper-sheet-1.png",
+        "mixed-paper-sheet-2.png",
+        "mixed-solutions-sheet-1.png",
+        "mixed-solutions-sheet-2.png",
+        "full-paper-sheet-1.png",
+        "full-paper-sheet-2.png",
+        "full-paper-sheet-3.png",
+        "full-paper-sheet-4.png",
+        "full-solutions-sheet-1.png",
+        "full-solutions-sheet-2.png",
+        "full-solutions-sheet-3.png",
+        "full-solutions-sheet-4.png",
+        "sequence10-paper-sheet-1.png",
+        "sequence10-paper-sheet-2.png",
+        "sequence10-solutions-sheet-1.png",
+        "sequence10-solutions-sheet-2.png",
+        "sequence10-solutions-sheet-3.png",
+        "derivative10-paper-sheet-1.png",
+        "derivative10-paper-sheet-2.png",
+        "derivative10-paper-sheet-3.png",
+        "derivative10-solutions-sheet-1.png",
+        "derivative10-solutions-sheet-2.png",
+        "derivative10-solutions-sheet-3.png",
+        "derivative10-solutions-sheet-4.png",
+        "mixed50-paper-sheet-1.png",
+        "mixed50-paper-sheet-2.png",
+        "mixed50-solutions-sheet-1.png",
+        "mixed50-solutions-sheet-2.png",
+        "mixed50-solutions-sheet-3.png",
+        "fullA-paper-sheet-1.png",
+        "fullA-paper-sheet-2.png",
+        "fullA-paper-sheet-3.png",
+        "fullA-paper-sheet-4.png",
+        "fullA-solutions-sheet-1.png",
+        "fullA-solutions-sheet-2.png",
+        "fullA-solutions-sheet-3.png",
+        "fullA-solutions-sheet-4.png",
+        "fullA-solutions-sheet-5.png",
+        "fullA-solutions-sheet-6.png",
+        "fullA-solutions-sheet-7.png",
+        "fullB-paper-sheet-1.png",
+        "fullB-paper-sheet-2.png",
+        "fullB-paper-sheet-3.png",
+        "fullB-paper-sheet-4.png",
+        "fullB-solutions-sheet-1.png",
+        "fullB-solutions-sheet-2.png",
+        "fullB-solutions-sheet-3.png",
+        "fullB-solutions-sheet-4.png",
+        "fullB-solutions-sheet-5.png",
+        "fullB-solutions-sheet-6.png",
+        "acceptance5-paper-sheet-1.png",
+        "acceptance5-solutions-sheet-1.png",
+        "acceptance5-solutions-sheet-2.png"
+      ],
+      "viewed_actual_pages": 108,
+      "enlarged_original_pages": [
+        "sequence10-solutions/page-1",
+        "fullA-solutions/page-1",
+        "fullA-paper/page-7",
+        "fullB-solutions/page-10"
+      ],
+      "resolved_initial_issues": [
+        "普通文本Unicode减号缺字",
+        "答案标题单字成行"
+      ],
+      "new_issues": [
+        "多选解释与当前选项顺序映射",
+        "概率命题真值被误称为概率"
+      ],
+      "resolution": "主代理已确认，重算及新版PDF正在生成。"
+    },
+    {
+      "attempt": "final-labels-and-verification-level-render",
+      "reinspected_changed_pages": 21,
+      "raster_identical_pages_reused": 87,
+      "reinspected_contact_sheets": [
+        "sequence10-solutions-sheet-2.png",
+        "derivative10-solutions-sheet-1.png",
+        "derivative10-solutions-sheet-2.png",
+        "derivative10-solutions-sheet-3.png",
+        "mixed50-solutions-sheet-1.png",
+        "fullA-solutions-sheet-1.png",
+        "fullA-solutions-sheet-3.png",
+        "fullA-solutions-sheet-4.png",
+        "fullA-solutions-sheet-5.png",
+        "fullA-solutions-sheet-6.png",
+        "fullB-solutions-sheet-2.png",
+        "fullB-solutions-sheet-3.png",
+        "fullB-solutions-sheet-4.png",
+        "fullB-solutions-sheet-6.png",
+        "acceptance5-solutions-sheet-1.png",
+        "acceptance5-solutions-sheet-2.png"
+      ],
+      "enlarged_original_pages": [
+        "fullA-solutions/page-05",
+        "fullB-solutions/page-06"
+      ],
+      "resolved_issues": [
+        "多选解释按当前选项排序并显式给出原始命题映射",
+        "条件概率实际值与命题真假分开描述",
+        "验证等级按实际计算证据显示"
+      ],
+      "new_observed_blocking_issues": []
+    }
+  ],
+  "limitations": [
+    "本报告是独立子代理AI视觉审阅，不是人类审核，也不代替教师数学审稿。",
+    "已逐张看过完整59张联系页覆盖108页，再对最终21个变化页重新视觉检查；其余87页以PNG字节一致性复用实际看过的结论。",
+    "图片为910×1287像素的真实PDF页面渲染，复杂页查看原始渲染，未在本机进行实体打印。",
+    "尚有研究报告风格的程序对象名、原始命题映射和追踪信息，正式教学出版仍需编辑。"
+  ],
+  "latest_full_visual_pass": {
+    "pdf_count": 20,
+    "page_count": 108,
+    "contact_sheets": 59,
+    "prior_all_pages_visually_seen": 108,
+    "final_changed_pages_reinspected": 21,
+    "final_raster_identical_pages_reused": 87,
+    "all_final_pdf_hashes_match": true,
+    "all_final_pages_covered": true,
+    "observed_blocking_issues": 0,
+    "human_review": false
+  },
+  "reviewed_at": "2026-11-08",
+  "final_files": [
+    {
+      "file": "experiments/sequence/paper.pdf",
+      "sha256": "b18675038954b602e9c91fb97a60ad5b2c4c6f2ca05cbfed830514a7c4577e11",
+      "pages": 2,
+      "contact_sheets": [
+        "sequence-paper-sheet-1.png"
+      ],
+      "contact_sheet_sha256": {
+        "sequence-paper-sheet-1.png": "a07c9f010335df6ddcc4cc7b38a8b3c4b8c126cf89a55dee36816b34fb9c31e0"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "82039afd6961e26a083dad2529c7f2cb1f57a17207d049a6c71f74da33de8534",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "ee567ac6f98b7fe720a6cca896d36dc9a220a12a45b8b9877fa13acbb27b1011",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "数列下标、递推上标及有限和上下限可辨，纸面预留连续答题区域。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/sequence/solutions.pdf",
+      "sha256": "d9402643bd05e40493099a2fe17b4459b154b3f23de4557a9633fdb28e50d420",
+      "pages": 3,
+      "contact_sheets": [
+        "sequence-solutions-sheet-1.png",
+        "sequence-solutions-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "sequence-solutions-sheet-1.png": "a760b09554872076719c990ddff98db9f2c88578757b83127cc1d23806253d3d",
+        "sequence-solutions-sheet-2.png": "7a3829aae4ff4c0aeb7bb7aa5620555dac36afb1e2e75bf2d4f5ddc62965e0ca"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "58094e997372f6282a3a3efb9c3222ba4e2d7089f0177e94cd7284ce1030a7ac",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "9fc779e6f06bada2e31b61f3c05a1ce23596c43c5b95b1d21eaf868fc70139a6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "3b9c247757037d5d63c874babae602470cc7c88d452967dfb6024b562673cd52",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "数列下标、递推上标及有限和上下限可辨，纸面预留连续答题区域。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/derivative/paper.pdf",
+      "sha256": "8da4f79af841b1f68018ae8007eff29c5f8d7271d7917b8f4f5acd4574e03919",
+      "pages": 2,
+      "contact_sheets": [
+        "derivative-paper-sheet-1.png"
+      ],
+      "contact_sheet_sha256": {
+        "derivative-paper-sheet-1.png": "dd3c1a9a00f67214ceb2227f4453658b3dde87ed689723a7a456c10f38b0c712"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "f26a589366a61742e6ce9bbef708e995f34dd46e72ae06d88d499d02e5e1fa0d",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "c72247fbe129ec401c57e155a53c56db4fdbd65d0314e39d4d96c68b1db0be4a",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "分段参数条件、指数根式和开闭区间可辨，五题题号和分值完整。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/derivative/solutions.pdf",
+      "sha256": "5e3a973da070d8e5539bc6f54e420248ada887dfa69734dab452a3745024efd3",
+      "pages": 3,
+      "contact_sheets": [
+        "derivative-solutions-sheet-1.png",
+        "derivative-solutions-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "derivative-solutions-sheet-1.png": "72dcf07bef75e2bfbb66ed6009fd36dfbebbb7a8e1d3ebc929fb93249160fe53",
+        "derivative-solutions-sheet-2.png": "3910a68d7bdb2566ba1cac0f60dca0205f6a2ecb67349825bc80a7a3dabe9424"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "2d1e6b33eb54c3da1889944a6bcb57d49a57c51bd265e83ac95517c1187a752e",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "d10e536720e990723b90a2acb2ddb4fe820723b3f00f0cd0791955911f0abd76",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "3b9c247757037d5d63c874babae602470cc7c88d452967dfb6024b562673cd52",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "分段参数条件、指数根式和开闭区间可辨，五题题号和分值完整。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/mixed/paper.pdf",
+      "sha256": "823db60ce6339f61ecc1feba26c74ac9e685c611c76efa06013281e37a552d2b",
+      "pages": 3,
+      "contact_sheets": [
+        "mixed-paper-sheet-1.png",
+        "mixed-paper-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "mixed-paper-sheet-1.png": "5d8745a506af3c47942ac72bef3c2e09073ab881b404adcd711b22c9d8b8c211",
+        "mixed-paper-sheet-2.png": "e075fb6dcaead244e449ee0b7b599baa818a58005c7876bd859c2e0b40305152"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "cd38461af19c6fd4abfb0444ae5211eea8cc3295b286b1aba5518a11baec868e",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "654cefd304d5307969b1ab48cd3e20a1c39ac7844dfaf01e7fb6b3d80db9f6b1",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "83726da3c11badcc49e5cc9010858e7d170af343d1149c4073ceb57c222e46cc",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "坐标几何示意图及点标号与题干对应，图形、说明和答题区域保持在页内。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/mixed/solutions.pdf",
+      "sha256": "f21b764cdd60b079ff8cb8dacd418cb85359bfd36253a7a974f6b36086f02243",
+      "pages": 4,
+      "contact_sheets": [
+        "mixed-solutions-sheet-1.png",
+        "mixed-solutions-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "mixed-solutions-sheet-1.png": "e3823efe987b8befd2e84f5f5680e7ef8eeb1c23d0bff6f1396ba991618eadbb",
+        "mixed-solutions-sheet-2.png": "09fd2b843e4b019b2f04fa199b6435a0e7eefd42b914b593bb11a704894435c4"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "695b889eebc62ab3e3ef35d386f55dd2478c7fa6de6bd35a693ca1c727e23942",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "1ba89237e233ab35e72bb77fdd92997bd38fb74a9ca4d36acc8a20132ae6b763",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "c9d54ec7a91b1eac267d4439519aefecde0a69c33ff14cbb709482ec5371d8c6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "d1ef0363ee39175c105b57630bb79dbbfbd0a55008aba6d935301a0ff42747ad",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "坐标几何示意图及点标号与题干对应，图形、说明和答题区域保持在页内。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/full/paper.pdf",
+      "sha256": "d4fa8627ad053cc0d64e4c83ef4d165b8d82ca20b76f2ed82cecfbb2221357bf",
+      "pages": 7,
+      "contact_sheets": [
+        "full-paper-sheet-1.png",
+        "full-paper-sheet-2.png",
+        "full-paper-sheet-3.png",
+        "full-paper-sheet-4.png"
+      ],
+      "contact_sheet_sha256": {
+        "full-paper-sheet-1.png": "5019770d0cc39f5ef9270ca182443ec8b4f6e6aaecf622d42c6a03413ac142db",
+        "full-paper-sheet-2.png": "40651fb43cff8b1451f838c1c50a9be81d488ced616ff768061d4c195123ca80",
+        "full-paper-sheet-3.png": "7e7db14cff7c40fcf62bb7b4507455fc66cccae2d4894fcc89b21b5419d28e18",
+        "full-paper-sheet-4.png": "ddf02759719938d832f36a842f04a63d447995d84c53fc29dc4b6b647113f85b"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "ea16c79edfb1b44fe249ad880bad9eabd129b3faf0c3ef373d7bd3ba73dec242",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "d551546ee9a8c252b7eb55f4cd92b925b5490901e3c9c9d50bd3264c1be0f8f6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "da0c2f2bea6306bb199312a932459a0d0692e956543614995d32e6a3318cc15a",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "888fe6af46daa638a2b214a43acdc0d0db8a23c4155ca2ca012ed13027d049ed",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "64eb9391b8170655a91979764be59abba6d8b185a062b33b12f0273e34c6a9d0",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 6,
+          "image": "page-6.png",
+          "image_sha256": "067107659a21dc983687bcb952067bb4710076c61d9f2f517e3431c93288086d",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 7,
+          "image": "page-7.png",
+          "image_sha256": "b67e1e03745b75fdf66d73cd9d43b53716432f553bb5d81d513cbc6aee06d673",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "19题的选择、填空与解答排布可读，空间构型和椭圆示意完整，长标题已合理换行。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/full/solutions.pdf",
+      "sha256": "3263494352c36f01f3687b1f1b0fac295dba5f5bacb1151e0439c6a19303b6d1",
+      "pages": 8,
+      "contact_sheets": [
+        "full-solutions-sheet-1.png",
+        "full-solutions-sheet-2.png",
+        "full-solutions-sheet-3.png",
+        "full-solutions-sheet-4.png"
+      ],
+      "contact_sheet_sha256": {
+        "full-solutions-sheet-1.png": "a3b840243df30f994887b8f2e2388b834e45a63e128fa3f73b753587627de506",
+        "full-solutions-sheet-2.png": "e33c779945bd2e60d7c8fe5dc42317b90bff71afcfdeddc7f101731ad3ed61f5",
+        "full-solutions-sheet-3.png": "6ca668f888f780b9d32ddb907e39441f0f6190165e59ab04aad8ba2f2079a5ec",
+        "full-solutions-sheet-4.png": "820f4fc383cb7adebb93ff2b0df3cbd5a988c2ff7ddb496da442a75713108d01"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "cac433ed3dfebdec883865866100301b81d42e50485cbaf0f42a67a0e73354e3",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "bd8757276dae86e65fb63b83c6ac829748fa879b6966dfc025d2cb62d81a9ac6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "82d44bb88802eaf4981437d61a0139bb80795708cd8e8f934166fac1cec2e4ec",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "468bb1e572eb899c5d6d39e356079d0580877560e2cdadec5d76c206a404281b",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "466313650fcaf48d54b30290996692de7895f680ae2cd5e6e5333664a61bc0d4",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 6,
+          "image": "page-6.png",
+          "image_sha256": "511420336eeadd24bf64ee41db2d691f828355d360d84df194f0712fcefac8b4",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 7,
+          "image": "page-7.png",
+          "image_sha256": "6a6a183823eb42329d6ee312214bfd5d4954a9fbe67f7eae6448c69e4b228e20",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 8,
+          "image": "page-8.png",
+          "image_sha256": "20456cb64beffab8d91d2764f2f8a562a88801dffd4169a25226d79356f0b663",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "19题的选择、填空与解答排布可读，空间构型和椭圆示意完整，长标题已合理换行。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/sequence10/paper.pdf",
+      "sha256": "3fca4bf5e2d676f1acf8eebc451583414713e6b017e21100edbf3ad3d8b0a495",
+      "pages": 4,
+      "contact_sheets": [
+        "sequence10-paper-sheet-1.png",
+        "sequence10-paper-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "sequence10-paper-sheet-1.png": "79e5f7ee65a4f0db3a860cf403c28b4ff138feb9141dd3f2ad23801219ab6881",
+        "sequence10-paper-sheet-2.png": "e32ef39f347ec284a68cb89eb33646f133bd85f0245629a10a0b23cdb1b5eed7"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "4075e4a49c4e5f84f1879a8aa3ac7c8aaa8c385abea8b473f48f8bfd917cdb93",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "ad3085a4dcbb3b20e8a9aff496500abdeaa2d2787324dd27c7e6d1f0547e3d68",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "36c96c634357c5035f2c838c65887b35b2454180729e9ddda48b4cf24420ed61",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "c38325b1a14b00d2455a75420f4f6d18f794309326a1aca4a32bd031bb23d84c",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "有限求和与乘积的上下限、组合符号、通项上标均可辨，独立AI复核段落的减号现可见。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/sequence10/solutions.pdf",
+      "sha256": "982814de07624e911658c8675864dccc18dbbe2efb3db11868181f2175d723c5",
+      "pages": 5,
+      "contact_sheets": [
+        "sequence10-solutions-sheet-1.png",
+        "sequence10-solutions-sheet-2.png",
+        "sequence10-solutions-sheet-3.png"
+      ],
+      "contact_sheet_sha256": {
+        "sequence10-solutions-sheet-1.png": "21500a4fc2995f6930ac26c45c2fb0368bfaa000721ac713cbae8175761b2592",
+        "sequence10-solutions-sheet-2.png": "2de912fa6e0bc089598d0237573487a0cab10a8bd70f155e62d6054812b09d4e",
+        "sequence10-solutions-sheet-3.png": "6d88465dccaee6c975f6c0e3172757d44ef3f7ba75387d94d0278d156359b35e"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        4
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "80ffdc6f23220b0b658b8555117a67ae7951d231d889a395022f51e240d15a2c",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "f9459d9c437d0d979fd309d64a20110366c0b752b4867fb90e2208e1ce626ad6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "fe4e4b4de8b6a7988cbf82297e90305faf0d5819f8a0d86ef418907d589644db",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "f01403a2c9c884cd002dd990c3583cb60853082c7aa9179eee494f9fe7529cd5",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "041b6265808a81a8be07cb2c3220b6a703879d5d0389d20be14c41e41e7e79b9",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "有限求和与乘积的上下限、组合符号、通项上标均可辨，独立AI复核段落的减号现可见。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/derivative10/paper.pdf",
+      "sha256": "e0b124ab493111c62ba60c1f49c6e060c00e53d0985108431cb27fc26c0e0d15",
+      "pages": 5,
+      "contact_sheets": [
+        "derivative10-paper-sheet-1.png",
+        "derivative10-paper-sheet-2.png",
+        "derivative10-paper-sheet-3.png"
+      ],
+      "contact_sheet_sha256": {
+        "derivative10-paper-sheet-1.png": "864d56c14be982252ea0359433faf12e1d4eb7c328e00e740ac19efa40b41a72",
+        "derivative10-paper-sheet-2.png": "92b78654111ed2f2b18cf54716c342d06b5456fca74c760de29bf858f777b2b0",
+        "derivative10-paper-sheet-3.png": "f5076dc5f6fabcd766d336e9c545047e6a1662058b85ea330cb615628eb7d3f5"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "b940feeae5879fb51d3e2696e2939fa78901f5d6d9cd6c39a36be22df5f47c3f",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "364ae0c2c5015e363ec2e40304230f03a431b39bcfb83d456666b1aade9d1e40",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "15b1d5bd56ec49cd4a30b86a2590bb2f829a3438a8ea4f0acebee2d3edaf2306",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "c798d799aaad5d2fc76da3237255c5ac510c80c527d68d0f2f828d0447600794",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "ab8b7b37027cfd85dba41d7360cb25a592633c01c48bdb24615b0b7a78d42e96",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "正域、开闭区间、参数范围、驻点及高阶幂可辨；Interval/Union等程序对象名作为研究追踪仍有保留。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/derivative10/solutions.pdf",
+      "sha256": "6c8bb1993c947b3729e9d9e2e8e243509acba0e1a50676771c366845d668771a",
+      "pages": 7,
+      "contact_sheets": [
+        "derivative10-solutions-sheet-1.png",
+        "derivative10-solutions-sheet-2.png",
+        "derivative10-solutions-sheet-3.png",
+        "derivative10-solutions-sheet-4.png"
+      ],
+      "contact_sheet_sha256": {
+        "derivative10-solutions-sheet-1.png": "ea5886a70a5da4ed3a514ef939d24a43b724c15050353ce18c783dee27dbe76e",
+        "derivative10-solutions-sheet-2.png": "3a641c880331a1e6c190eddd889472305f10ac8f51f8fb9c735eb883a93dd3ef",
+        "derivative10-solutions-sheet-3.png": "149f9b44fd9908d4d4d7a6921bb81c98b25e07245fdb8aeec0cb76dda260d29e",
+        "derivative10-solutions-sheet-4.png": "d26c74b8acdf41638b5850ffed5bba32a30b7ec5eab2817501f438958699f98e"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        2,
+        3,
+        5
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "f83e34cb07f4e366d7da80236bdf321c4123fd7535ce2e1b770135527e1abfa8",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "57fe57ad1a244fc4cc46020aa4462136281734b6d85ee1f7056e5050a9eb6a23",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "6e9b5cdc10f533683ee6d2b8f8f4935f816d5d69fe6c1ffcc6396a874502e68f",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "bbfa3b11adece2adce3edf17a30835a01d5cd1f48c11dbe4e7a41a167e6ee275",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "3d3c20177cda69b93d412a5b15e20be37f824523ad0b6f84965b3b905874e9d7",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 6,
+          "image": "page-6.png",
+          "image_sha256": "c2f53c689e881314ed889bcd0bf14760d5630ff8de28da6e8954db922802a65f",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 7,
+          "image": "page-7.png",
+          "image_sha256": "5bed4aa32f168304b6c7257866bb1351cc8f043a8d3147f25816625497140343",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "正域、开闭区间、参数范围、驻点及高阶幂可辨；Interval/Union等程序对象名作为研究追踪仍有保留。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/mixed50/paper.pdf",
+      "sha256": "f7da393e6f3191ba975fe9f8f1e24d7d98774e7012f525a652228c237b7d78cd",
+      "pages": 3,
+      "contact_sheets": [
+        "mixed50-paper-sheet-1.png",
+        "mixed50-paper-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "mixed50-paper-sheet-1.png": "83c089cec060b5b8076e055c840513c1e7f1c1640b9eca54c1d475a7be0603a6",
+        "mixed50-paper-sheet-2.png": "8fcd207e6e833e8f06894bedbe82f463d47a874b56a9ae54b260b73313cc525d"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "3d6b098f7165da475ec9b380ab11f7a9c58755eb5bc9e63365a354a6cbaae67a",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "a5418ee0c9f90dd07ed8e90a0bf6dcedd0a192a2153a9493333eae052fb7d598",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "67263878e54c18b96df66c987d4b4568357d24a3b344d0625ed0f10de021e5da",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "两向量张成平面示意及坐标条件对应，面积平方与线面角答案显示清楚。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/mixed50/solutions.pdf",
+      "sha256": "9efed984e2c28ce7db9ef6e6d9ff9c25fb6d468ea0be01d70ceb8d6c7c53fd20",
+      "pages": 5,
+      "contact_sheets": [
+        "mixed50-solutions-sheet-1.png",
+        "mixed50-solutions-sheet-2.png",
+        "mixed50-solutions-sheet-3.png"
+      ],
+      "contact_sheet_sha256": {
+        "mixed50-solutions-sheet-1.png": "d0b73849cff635a8920fd5035fcb9f95300a64a069e5c8814b541fc82b511f08",
+        "mixed50-solutions-sheet-2.png": "e1b2fe4182fad76a413d0c5297c2e8aa160cae89b20cbd7c9acadd5a93068cd6",
+        "mixed50-solutions-sheet-3.png": "d5b68d41335d66168faa600fc3d5ff81f67ce0e138cd7c89fffaf5b7413e7939"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        1
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "e9bda8291ec12851d86b2d1cbbb077cf23b2af0a6b53d600e9b9fbb6fb9aa55c",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "fbfe074836cdedb68f55085524c4358c5410609cfd87c452a1229328ff742583",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "bb69bc9fdf2a00a0c3ff219da5d2f51e30a8e585749a8a895260e07eeb1b2382",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "595f9fb6a412bd19d5c6bf44a0004d3ca823452b947ffc74fe78baa73e9ea7cf",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "041b6265808a81a8be07cb2c3220b6a703879d5d0389d20be14c41e41e7e79b9",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "两向量张成平面示意及坐标条件对应，面积平方与线面角答案显示清楚。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/fullA/paper.pdf",
+      "sha256": "e6dac2df9aec7a0304e155a531c7308c25b485d330b3bf16b2757db77ae10ba6",
+      "pages": 8,
+      "contact_sheets": [
+        "fullA-paper-sheet-1.png",
+        "fullA-paper-sheet-2.png",
+        "fullA-paper-sheet-3.png",
+        "fullA-paper-sheet-4.png"
+      ],
+      "contact_sheet_sha256": {
+        "fullA-paper-sheet-1.png": "23b225a883544a019aa9fad0316193b50f970a79416b567e2a92979c2e7e7598",
+        "fullA-paper-sheet-2.png": "8cb7703f752a9d931832453783c9e119d3037a189e65061a0226ae13723e1e16",
+        "fullA-paper-sheet-3.png": "60c33b6f5427d497b82daee790eb01d2fcb982b8ed7addb7e522b02887f483f5",
+        "fullA-paper-sheet-4.png": "2e9f972c113a018f27153603e768824681d36ab85db5a6b34c40f0d33bb4b5de"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "addef868ce74cea4497463a7307f5eea06eaf448940082013c1daa8d86c10b86",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "b9455dcb917f11c1f1906cfd87abe073120eeee9f1dee03a34c1cefcc8bd5068",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "63de8aee11f628ad3e380f8594b66642a449fbd31b81111105488b62188b6842",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "b183952345b1ab59aad2407bcca04c36944113e30cd4265bfe2de071a57e5c67",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "6582922b265c8e05697bebb7b1f8b86219253128bd88df008b3f720bc75b44a7",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 6,
+          "image": "page-6.png",
+          "image_sha256": "4e2dccead0ab12d5a44e86cbef1003a650a8b9c3025304fdc25933eda26e6172",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 7,
+          "image": "page-7.png",
+          "image_sha256": "48568cfae7772be3186afd50c4afab3f052ede19fa9476a1486bb420074bf631",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 8,
+          "image": "page-8.png",
+          "image_sha256": "c1762e37833a4bf14a86d4cbfcb3b97b7be67ce8a216208ac2b38f4fd570a3f9",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "试题选项与答案字母清楚，多选说明已标“现选项X（原始命题Y）”，已对照AD等正确组合。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/fullA/solutions.pdf",
+      "sha256": "cce3d2b43832b64b243a67b0a8febc2ed496eaccdca47f9d1aa7bdfefaf273e2",
+      "pages": 13,
+      "contact_sheets": [
+        "fullA-solutions-sheet-1.png",
+        "fullA-solutions-sheet-2.png",
+        "fullA-solutions-sheet-3.png",
+        "fullA-solutions-sheet-4.png",
+        "fullA-solutions-sheet-5.png",
+        "fullA-solutions-sheet-6.png",
+        "fullA-solutions-sheet-7.png"
+      ],
+      "contact_sheet_sha256": {
+        "fullA-solutions-sheet-1.png": "c09044a75fe9a1dbdd6654500997108f34383b67d3cd47a6dba6ce39cc853335",
+        "fullA-solutions-sheet-2.png": "1a30967d517765fc5a783f90a6ec498d7f55a8040b4321772175f27721c9c494",
+        "fullA-solutions-sheet-3.png": "03e79bc4960c66a69d39ff5cfd3b34e72091cf031a87ec1b7aa5b4116c41ee74",
+        "fullA-solutions-sheet-4.png": "b65fbb17022d340e8b38a28cdcd27d3065d385dd703384ccbf88a98297acc011",
+        "fullA-solutions-sheet-5.png": "cc7a12276a5efa57184e97ae13bcfd577ad54777a280f82ec7c96ce0b8fd7923",
+        "fullA-solutions-sheet-6.png": "8e3a8b46d8810c0a46d9a2474809f631ff3547d189f2c7d15838bf71dd734144",
+        "fullA-solutions-sheet-7.png": "07e8c48d8146bedeb09f30861dd60aaacf926f6203b9159b9adea15d2cb1f7b5"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-01.png",
+          "image_sha256": "bfa182ada1f415a3c2095e9d014c329cd33829230b9b8d296fea53c3ee0adad1",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 2,
+          "image": "page-02.png",
+          "image_sha256": "6f0b70e2ecb8b22e115d70f58be0c3b9c596782dd2eb910985064a8fafb8b0ed",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 3,
+          "image": "page-03.png",
+          "image_sha256": "c8d405bd60ce30e98c70d77bd7380a9eebe688eb29e7712d031d8396fd19b9c6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-04.png",
+          "image_sha256": "5a6501dbe7f59868b022053559ca34ef4894cbd7118715508a72df1f16c49898",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-05.png",
+          "image_sha256": "b7d076d76d965d275a5047117a6cb8415674eaf881a1017edc0fcec7a1deadbe",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 6,
+          "image": "page-06.png",
+          "image_sha256": "87ff9c2eecf271f38814bca74ac2966aa1553056dd49a1dd5204e2d2523674bb",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 7,
+          "image": "page-07.png",
+          "image_sha256": "56f22859fd738d8274a6972f50c34b9f455fe4b420724d821e66dd98943a65bc",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 8,
+          "image": "page-08.png",
+          "image_sha256": "87931f440ff5ec9f064002655e40e622ff299a963c0eddf6923d5eaa1f01c0f0",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 9,
+          "image": "page-09.png",
+          "image_sha256": "1db5b3f262a92aeed28718f4c4cd9e18d6d70d273664a90fa40968dd0d43727c",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 10,
+          "image": "page-10.png",
+          "image_sha256": "89660bae888a176011d214948d3496649fbe7b3b0896f8c00471bbd0112a8576",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 11,
+          "image": "page-11.png",
+          "image_sha256": "192f5f5b9b5a6df8b811145c4af86fc8a3ae509a769cc1c5296dd4d3261e5495",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 12,
+          "image": "page-12.png",
+          "image_sha256": "5d494d303ef0f7160010bbf4aba9176361f3876907b1723508a2e6a36c10f6b0",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 13,
+          "image": "page-13.png",
+          "image_sha256": "68ed38c3cbeb5df98cf159ccdd86b724f726acdfc333d08b3735b32f71019fca",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "试题选项与答案字母清楚，多选说明已标“现选项X（原始命题Y）”，已对照AD等正确组合。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/fullB/paper.pdf",
+      "sha256": "d13332153882ba476f3c9ad920ac8bd1ce09d74bcc3f00ff4f088b7dcb8801c1",
+      "pages": 8,
+      "contact_sheets": [
+        "fullB-paper-sheet-1.png",
+        "fullB-paper-sheet-2.png",
+        "fullB-paper-sheet-3.png",
+        "fullB-paper-sheet-4.png"
+      ],
+      "contact_sheet_sha256": {
+        "fullB-paper-sheet-1.png": "2b81ab29b5ad318ad88c2395d345c350c6159a22f7179f8bdb12be02cf3f2dcb",
+        "fullB-paper-sheet-2.png": "c1352871af1d37ba73c373cda19683f034b3c1c3895b427068453f5924ce4dc7",
+        "fullB-paper-sheet-3.png": "04997ae2d61b74c655eaa1d64fc0d6e0485d719bf5bbc3e4ec48656ae598b5c1",
+        "fullB-paper-sheet-4.png": "a0ed3aeacc77eac8bdb43f2114602794e4e06b499efe8a47f2145425934d515e"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "d5247776b5bf1a738830e453798d112c8f52b5f05de11920568546a7e662a109",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "5c0ed14170a419cce4ca22bb8ed6e7b49a32dbefba531ddb86c760facc3f0a86",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "85599c604b9c9d83b586113f8f1497c95c8a37137640114840f0bc7d3476d3bd",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "8c08c1b1b4014b24ad9aa3313b2544a5c9f42bee57cf843c45259acbc43792dc",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 5,
+          "image": "page-5.png",
+          "image_sha256": "b8d115422bf6173acf622eeffbde2bb27538bb2f86d6b4035e1095a51a4051df",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 6,
+          "image": "page-6.png",
+          "image_sha256": "72aaff78c70758bfcd5be22ee24f8fdd8a1fc87b7115dd1795cc625af99e134e",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 7,
+          "image": "page-7.png",
+          "image_sha256": "6e569c59c43626c5cde39c1070222b3e60f9803cb9a1d169dfe110743b5e7afa",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 8,
+          "image": "page-8.png",
+          "image_sha256": "ff934c5aef7a51c5a5bd63680aba53783e54e6c6bcb9fb273c0dc7427938df18",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "条件概率分数、椭圆式和空间坐标可读，多选现字母映射明确，概率1/2、1/4与命题成立/不成立已分开表达。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/fullB/solutions.pdf",
+      "sha256": "7f220ce4a4dedbf51a23c54c3384649542ab039464787e6c4699f4f364e2196d",
+      "pages": 12,
+      "contact_sheets": [
+        "fullB-solutions-sheet-1.png",
+        "fullB-solutions-sheet-2.png",
+        "fullB-solutions-sheet-3.png",
+        "fullB-solutions-sheet-4.png",
+        "fullB-solutions-sheet-5.png",
+        "fullB-solutions-sheet-6.png"
+      ],
+      "contact_sheet_sha256": {
+        "fullB-solutions-sheet-1.png": "88644ba0787abb0ed977d6927b153074aaba5a2dc68f86056e37561fb5b10575",
+        "fullB-solutions-sheet-2.png": "b60914efcbb6063a185eb5c4f6dcf8b322900f3782ebe245a7133e77bc9fea8e",
+        "fullB-solutions-sheet-3.png": "02dc9a63c2f058fbff6b1d8aff9c06556d767eb092456f1f5c25047d0e4a5b6e",
+        "fullB-solutions-sheet-4.png": "03a870e25ce227ff007d82365b74e86b204bb7a156fe134348e1c9dff1891a2c",
+        "fullB-solutions-sheet-5.png": "f12a233ae462d952536d561ed9a7ef36e8b0577a53a6b558f77cd2330d3df620",
+        "fullB-solutions-sheet-6.png": "aa7ec81ccb6a7d2b6ac3c3e45697b057b88a7644a46bdeffd470e1adf0abcb72"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        11
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-01.png",
+          "image_sha256": "db4c1677514d4ef95defc356e4831f077dfcbe91f77dd678b475b233bb434b87",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-02.png",
+          "image_sha256": "4a9b3a1bf5f909be10ce2890988c5f282886cf5acd86ea206e72aef80b8425c4",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 3,
+          "image": "page-03.png",
+          "image_sha256": "fed0a4dbcecab943da78d36390863bab0906ad11db360fc054a1b854b7b1a45d",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 4,
+          "image": "page-04.png",
+          "image_sha256": "c2422ab4f54bfe4573544b61af3145d1bc36075cf4719331c4389b31c7d395f4",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 5,
+          "image": "page-05.png",
+          "image_sha256": "c019b1b63c4a5f561031d5a9deff3125dfc40e8a6e51c95a4f03ba7c3204b53d",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 6,
+          "image": "page-06.png",
+          "image_sha256": "3cfc33d57cc77c531d632bb8596d2d4400cab94289e88164bbe0502dbd79246b",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 7,
+          "image": "page-07.png",
+          "image_sha256": "f6ac5a91cd218285908ca0bfb65b2116387013b6af470b482089502a354ed065",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 8,
+          "image": "page-08.png",
+          "image_sha256": "7e7cdc32cda4154b8443c25ec7aa4573868fbdba5bf2090db6b09d91b81f7fe4",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 9,
+          "image": "page-09.png",
+          "image_sha256": "1eeaf50e93481b11d77036f0952df5e384f95ee61ba25974bdf1bd71198eb386",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 10,
+          "image": "page-10.png",
+          "image_sha256": "b998a03a02aa61b215e1b0db99f77458495c60202deed93defba4bba93381b44",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 11,
+          "image": "page-11.png",
+          "image_sha256": "bd73b63833459895c758e409ccddc14f16cd46085f5a11fd5fe575dd45ab3bd0",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 12,
+          "image": "page-12.png",
+          "image_sha256": "eaefd7e25646bdaced3047e53c8b64767c0eee56d79cf157dd7e83cbbbbc8a04",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "条件概率分数、椭圆式和空间坐标可读，多选现字母映射明确，概率1/2、1/4与命题成立/不成立已分开表达。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/acceptance5/paper.pdf",
+      "sha256": "b034028b52164a76d452f96988b9d54105e0837e8e8f28f2bbe9101236feaf61",
+      "pages": 2,
+      "contact_sheets": [
+        "acceptance5-paper-sheet-1.png"
+      ],
+      "contact_sheet_sha256": {
+        "acceptance5-paper-sheet-1.png": "ff0a6bb26093ea3d07f6c69da4cfbb8569b05785755d1783a87e6034edba535d"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "8c4771ec9167c178c77c47e197790c6571cfd0b1e464a27144cb667b14736a51",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "6fc9a59b01ad9183d40af4f93fa16488d47f896e2f4c74e0f3e17cfd09bbd6a7",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "阶乘、四次幂、等比三元组条件及二元串样本显示完整；多行必要充分性推理未越过页脚。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    },
+    {
+      "file": "experiments/phase3/deliveries/acceptance5/solutions.pdf",
+      "sha256": "57f415b8cceb5b16b283585268082bd73b3cbc0d11ba221344dc4f282cf915ea",
+      "pages": 4,
+      "contact_sheets": [
+        "acceptance5-solutions-sheet-1.png",
+        "acceptance5-solutions-sheet-2.png"
+      ],
+      "contact_sheet_sha256": {
+        "acceptance5-solutions-sheet-1.png": "e75c8ae63a97cc3f8ee514b5389b9b7b7ec3558674f6645dd7f2acfc66d2ddd4",
+        "acceptance5-solutions-sheet-2.png": "9aa365833878d131d90ef7321ed4bf81e6f317484cf2b6ed854c5a279e82bda4"
+      },
+      "all_final_pages_covered": true,
+      "changed_pages_reinspected": [
+        2,
+        3
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "image": "page-1.png",
+          "image_sha256": "3a066bca987cdc70e7e8e1ac6bc6efde13e28a8850da99aaa4be0e90bb57eb37",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        },
+        {
+          "page": 2,
+          "image": "page-2.png",
+          "image_sha256": "75f73d37658d6b406a9a23ccbc21ec65f6971386af0f1279d913f4b03441589f",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 3,
+          "image": "page-3.png",
+          "image_sha256": "62e8fd6fb5c20579f8a9869cb6af7ae25354fe92da86ed8d0b7878b79d8ec69c",
+          "visual_review": "pass",
+          "method": "最终新版变化页面已重新查看联系页，重点页另看原始分辨率"
+        },
+        {
+          "page": 4,
+          "image": "page-4.png",
+          "image_sha256": "9a574b8c95a12c746d38c24eb14263510de1ba3163016e61809a9a06fc72e3d6",
+          "visual_review": "pass",
+          "method": "与已逐页看过的上一轮PNG字节相同，继承该页视觉结论"
+        }
+      ],
+      "visual_status": "pass",
+      "observations": [
+        "阶乘、四次幂、等比三元组条件及二元串样本显示完整；多行必要充分性推理未越过页脚。",
+        "未观察到裁切、正文覆盖页脚、不可辨黑方块或题目标题独自遗留空页。",
+        "试题留白用于作答，答案册末尾的质量说明页有实际说明内容。"
+      ],
+      "remaining_limitations": [
+        "研究审阅版仍保留部分程序追踪名称与较多括号，尚未进行出版社级排版编辑。",
+        "未进行实体打印、教师审稿或视障可访问性检查。"
+      ],
+      "reviewer": "独立子代理AI",
+      "human_review": false
+    }
+  ],
+  "final_coverage": {
+    "pdf_count": 20,
+    "page_count": 108,
+    "contact_sheets": 59,
+    "prior_all_pages_visually_seen": 108,
+    "final_changed_pages_reinspected": 21,
+    "final_raster_identical_pages_reused": 87,
+    "all_final_pdf_hashes_match": true,
+    "all_final_pages_covered": true,
+    "observed_blocking_issues": 0,
+    "human_review": false
+  }
+}

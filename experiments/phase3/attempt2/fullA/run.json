@@ -1,0 +1,4107 @@
+{
+  "schema_version": 2,
+  "generation_mode": "ai",
+  "provider": "host_ai",
+  "blueprint": {
+    "version": "dynamic-planner-v1",
+    "mode": "full",
+    "profile": "algebra-and-conditions",
+    "seed": 0,
+    "title": "fullA数学动态命题实验 · 研究审阅版",
+    "slots": [
+      {
+        "order": 1,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "集合与复数",
+        "research_ids": [
+          "2025-cn-math-national-1:q001",
+          "2025-cn-math-national-1:q002",
+          "2025-cn-math-national-1:q015",
+          "2026-cn-math-national-1:q009"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 2,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "集合与复数",
+        "research_ids": [
+          "2025-cn-math-national-1:q001",
+          "2025-cn-math-national-1:q002",
+          "2025-cn-math-national-1:q015",
+          "2026-cn-math-national-1:q009"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 3,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "三角与向量",
+        "research_ids": [
+          "2025-cn-math-national-1:q004",
+          "2025-cn-math-national-1:q006",
+          "2025-cn-math-national-1:q011",
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q002",
+          "2026-cn-math-national-1:q003",
+          "2026-cn-math-national-1:q013",
+          "2026-cn-math-national-1:q016"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 4,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "概率统计",
+        "research_ids": [
+          "2025-cn-math-national-1:q014",
+          "2026-cn-math-national-1:q001",
+          "2026-cn-math-national-1:q008",
+          "2026-cn-math-national-1:q017"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 5,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "三角与向量",
+        "research_ids": [
+          "2025-cn-math-national-1:q004",
+          "2025-cn-math-national-1:q006",
+          "2025-cn-math-national-1:q011",
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q002",
+          "2026-cn-math-national-1:q003",
+          "2026-cn-math-national-1:q013",
+          "2026-cn-math-national-1:q016"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 6,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "解析几何",
+        "research_ids": [
+          "2025-cn-math-national-1:q003",
+          "2025-cn-math-national-1:q007",
+          "2025-cn-math-national-1:q010",
+          "2025-cn-math-national-1:q018",
+          "2026-cn-math-national-1:q005",
+          "2026-cn-math-national-1:q011",
+          "2026-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q018"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 7,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "函数与导数",
+        "research_ids": [
+          "2025-cn-math-national-1:q005",
+          "2025-cn-math-national-1:q008",
+          "2025-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q004",
+          "2026-cn-math-national-1:q006",
+          "2026-cn-math-national-1:q019"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 8,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "排列组合",
+        "research_ids": [],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 9,
+        "kind": "multiple_choice",
+        "points": 6,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 10,
+        "kind": "multiple_choice",
+        "points": 6,
+        "module": "函数与导数",
+        "research_ids": [
+          "2025-cn-math-national-1:q005",
+          "2025-cn-math-national-1:q008",
+          "2025-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q004",
+          "2026-cn-math-national-1:q006",
+          "2026-cn-math-national-1:q019"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 11,
+        "kind": "multiple_choice",
+        "points": 6,
+        "module": "立体几何",
+        "research_ids": [
+          "2025-cn-math-national-1:q009",
+          "2025-cn-math-national-1:q017",
+          "2026-cn-math-national-1:q010",
+          "2026-cn-math-national-1:q015"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 12,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "概率统计",
+        "research_ids": [
+          "2025-cn-math-national-1:q014",
+          "2026-cn-math-national-1:q001",
+          "2026-cn-math-national-1:q008",
+          "2026-cn-math-national-1:q017"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 13,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 14,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "解析几何",
+        "research_ids": [
+          "2025-cn-math-national-1:q003",
+          "2025-cn-math-national-1:q007",
+          "2025-cn-math-national-1:q010",
+          "2025-cn-math-national-1:q018",
+          "2026-cn-math-national-1:q005",
+          "2026-cn-math-national-1:q011",
+          "2026-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q018"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 15,
+        "kind": "constructed_response",
+        "points": 13,
+        "module": "概率统计",
+        "research_ids": [
+          "2025-cn-math-national-1:q014",
+          "2026-cn-math-national-1:q001",
+          "2026-cn-math-national-1:q008",
+          "2026-cn-math-national-1:q017"
+        ],
+        "reasoning_target": "分层综合与论证"
+      },
+      {
+        "order": 16,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "立体几何",
+        "research_ids": [
+          "2025-cn-math-national-1:q009",
+          "2025-cn-math-national-1:q017",
+          "2026-cn-math-national-1:q010",
+          "2026-cn-math-national-1:q015"
+        ],
+        "reasoning_target": "分层综合与论证"
+      },
+      {
+        "order": 17,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "分层综合与论证"
+      },
+      {
+        "order": 18,
+        "kind": "constructed_response",
+        "points": 17,
+        "module": "解析几何",
+        "research_ids": [
+          "2025-cn-math-national-1:q003",
+          "2025-cn-math-national-1:q007",
+          "2025-cn-math-national-1:q010",
+          "2025-cn-math-national-1:q018",
+          "2026-cn-math-national-1:q005",
+          "2026-cn-math-national-1:q011",
+          "2026-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q018"
+        ],
+        "reasoning_target": "分层综合与论证"
+      },
+      {
+        "order": 19,
+        "kind": "constructed_response",
+        "points": 17,
+        "module": "函数与导数",
+        "research_ids": [
+          "2025-cn-math-national-1:q005",
+          "2025-cn-math-national-1:q008",
+          "2025-cn-math-national-1:q012",
+          "2026-cn-math-national-1:q004",
+          "2026-cn-math-national-1:q006",
+          "2026-cn-math-national-1:q019"
+        ],
+        "reasoning_target": "分层综合与论证"
+      }
+    ],
+    "total_points": 150,
+    "research_context_sha256": "19e42b58fdd90195e7bf459f55bca1c23806c3ea175522930b192651cc1592ba",
+    "rules_sha256": "536a72ff8349e505dc2f8621f61143b4fb70dd1ca4680d05d4d96b99a43d071d",
+    "sample_size": 2,
+    "official_2027_structure_verified": false,
+    "planning_basis": "读取逐题知识与条件设计分析，结合AI本轮提出的模块搭配；计分结构由历史候选规则约束",
+    "simulation_settings": [
+      "2027详细结构尚为模拟设定",
+      "难度和用时为设计估计，需教师与考生验证"
+    ]
+  },
+  "research_context_sha256": "19e42b58fdd90195e7bf459f55bca1c23806c3ea175522930b192651cc1592ba",
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "author": "当前Codex宿主AI",
+    "authored_at": "2026-11-08",
+    "task": "phase3-dynamic-math",
+    "method": "本轮直接设计不同数学关系并写出结构化候选，未调用FamilyProvider、draft或26族模板",
+    "api_calls": 0,
+    "template_calls": 0
+  },
+  "questions": [
+    {
+      "id": "orig:ai:phase3:fullA:q001:v1",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "stem": "复数分式运算中须同时注意分子与分母的模。\n（1）计算下式的值。\\(\\left(\\left|\\frac{\\left(1+i\\right)}{\\left(1-i\\right)}\\right|\\right)^{2}\\)。",
+      "options": {
+        "A": {
+          "text": "\\(1\\)",
+          "semantic_value": "1",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(2\\)",
+          "semantic_value": "2",
+          "error_path": "只求分子模平方"
+        },
+        "C": {
+          "text": "\\(\\frac{1}{2}\\)",
+          "semantic_value": "1/2",
+          "error_path": "漏掉分子的模平方"
+        },
+        "D": {
+          "text": "\\(0\\)",
+          "semantic_value": "0",
+          "error_path": "错用两模之差"
+        }
+      },
+      "problem": {
+        "context": "复数分式运算中须同时注意分子与分母的模。",
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "abs((1+I)/(1-I))**2"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "只求分子模平方"
+          },
+          "C": {
+            "text": "\\(\\frac{1}{2}\\)",
+            "semantic_value": "1/2",
+            "error_path": "漏掉分子的模平方"
+          },
+          "D": {
+            "text": "\\(0\\)",
+            "semantic_value": "0",
+            "error_path": "错用两模之差"
+          }
+        }
+      },
+      "design": {
+        "structure": "复数商的模平方",
+        "reasoning_path": "分别取模或化简分式",
+        "knowledge_combination": [
+          "集合与复数",
+          "复数商的模平方"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 1,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "3fdae8c2ee0bc8cec6c5b14df5721741ac38245325d1f5a3f09d14a7abda1fea"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q002:v1",
+      "order": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "stem": "从编号1至6中选两个不同编号，至少一个不超过2。每组只计一次。\n（1）求满足条件的有序结果数。各变量独立等可能取值，x∈\\(\\left\\{1, 2, 3, 4, 5, 6\\right\\}\\)，y∈\\(\\left\\{1, 2, 3, 4, 5, 6\\right\\}\\)。已知\\(x<y\\)。目标事件为\\(x\\leq2\\lor y\\leq2\\)。",
+      "options": {
+        "A": {
+          "text": "\\(9\\)",
+          "semantic_value": "9",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(15\\)",
+          "semantic_value": "15",
+          "error_path": "忘掉至少一个的限制"
+        },
+        "C": {
+          "text": "\\(6\\)",
+          "semantic_value": "6",
+          "error_path": "只数都大于2"
+        },
+        "D": {
+          "text": "\\(18\\)",
+          "semantic_value": "18",
+          "error_path": "把两种顺序重复计入"
+        }
+      },
+      "problem": {
+        "context": "从编号1至6中选两个不同编号，至少一个不超过2。每组只计一次。",
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "x<y",
+            "event": "x<=2 or y<=2"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(9\\)",
+            "semantic_value": "9",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(15\\)",
+            "semantic_value": "15",
+            "error_path": "忘掉至少一个的限制"
+          },
+          "C": {
+            "text": "\\(6\\)",
+            "semantic_value": "6",
+            "error_path": "只数都大于2"
+          },
+          "D": {
+            "text": "\\(18\\)",
+            "semantic_value": "18",
+            "error_path": "把两种顺序重复计入"
+          }
+        }
+      },
+      "design": {
+        "structure": "有限集合有序化后补集计数",
+        "reasoning_path": "先用x<y消去排列重复，再数目标",
+        "knowledge_combination": [
+          "集合与复数",
+          "有限集合有序化后补集计数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "d17b5821396b345f3d555d75e22b05091082017fb354bf4d893fd95f75d90aab"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q003:v1",
+      "order": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "stem": "两向量方向近乎垂直，求角度时须区别余弦与其平方。\n（1）计算或判断向量性质。向量u=\\(\\left( 2, \\  -1\\right)\\)，v=\\(\\left( 1, \\  3\\right)\\)。求夹角余弦的平方。",
+      "options": {
+        "A": {
+          "text": "\\(\\frac{1}{50}\\)",
+          "semantic_value": "1/50",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(\\frac{1}{5}\\)",
+          "semantic_value": "1/5",
+          "error_path": "遗漏一个模长因子"
+        },
+        "C": {
+          "text": "\\(\\frac{1}{10}\\)",
+          "semantic_value": "1/10",
+          "error_path": "模平方混用"
+        },
+        "D": {
+          "text": "\\(0\\)",
+          "semantic_value": "0",
+          "error_path": "误判垂直"
+        }
+      },
+      "problem": {
+        "context": "两向量方向近乎垂直，求角度时须区别余弦与其平方。",
+        "tasks": [
+          {
+            "op": "vector",
+            "operation": "cosine_squared",
+            "u": [
+              2,
+              -1
+            ],
+            "v": [
+              1,
+              3
+            ]
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{1}{50}\\)",
+            "semantic_value": "1/50",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{5}\\)",
+            "semantic_value": "1/5",
+            "error_path": "遗漏一个模长因子"
+          },
+          "C": {
+            "text": "\\(\\frac{1}{10}\\)",
+            "semantic_value": "1/10",
+            "error_path": "模平方混用"
+          },
+          "D": {
+            "text": "\\(0\\)",
+            "semantic_value": "0",
+            "error_path": "误判垂直"
+          }
+        }
+      },
+      "design": {
+        "structure": "内积与角度平方",
+        "reasoning_path": "负内积平方后为正，模长必须各平方",
+        "knowledge_combination": [
+          "三角与向量",
+          "内积与角度平方"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "e92de132770339923746a9de180dd62c700fceecc8b9aa0f6b0708cb797192d5"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q004:v1",
+      "order": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "概率统计",
+      "stem": "两次掷骰后得知点数不同，重新计算和为7的概率。\n（1）在等可能样本中求条件概率。各变量独立等可能取值，x∈\\(\\left\\{1, 2, 3, 4, 5, 6\\right\\}\\)，y∈\\(\\left\\{1, 2, 3, 4, 5, 6\\right\\}\\)。已知\\(x\\ney\\)。目标事件为\\(\\left(x+y\\right)=7\\)。",
+      "options": {
+        "A": {
+          "text": "\\(\\frac{1}{5}\\)",
+          "semantic_value": "1/5",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(\\frac{1}{6}\\)",
+          "semantic_value": "1/6",
+          "error_path": "沿用未附条件的样本空间"
+        },
+        "C": {
+          "text": "\\(\\frac{2}{5}\\)",
+          "semantic_value": "2/5",
+          "error_path": "把无序分母与有序分子混用"
+        },
+        "D": {
+          "text": "\\(\\frac{1}{3}\\)",
+          "semantic_value": "1/3",
+          "error_path": "漏数部分条件结果"
+        }
+      },
+      "problem": {
+        "context": "两次掷骰后得知点数不同，重新计算和为7的概率。",
+        "tasks": [
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "x!=y",
+            "event": "x+y==7"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\frac{1}{5}\\)",
+            "semantic_value": "1/5",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{6}\\)",
+            "semantic_value": "1/6",
+            "error_path": "沿用未附条件的样本空间"
+          },
+          "C": {
+            "text": "\\(\\frac{2}{5}\\)",
+            "semantic_value": "2/5",
+            "error_path": "把无序分母与有序分子混用"
+          },
+          "D": {
+            "text": "\\(\\frac{1}{3}\\)",
+            "semantic_value": "1/3",
+            "error_path": "漏数部分条件结果"
+          }
+        }
+      },
+      "design": {
+        "structure": "删去对角样本后的条件概率",
+        "reasoning_path": "目标不在对角线上但分母改变",
+        "knowledge_combination": [
+          "概率统计",
+          "删去对角样本后的条件概率"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "bea0181ff24808443d870a613bb93cc47d4375f1bae20a45a1ae1e4e3880f5dd"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q005:v1",
+      "order": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "stem": "利用区间位置限制三角函数和的可达范围。\n（1）求最大值。\\(\\left(\\sin\\left(x\\right)+\\cos\\left(x\\right)\\right)\\)，x∈\\(\\left[\\frac{\\pi}{6}, \\frac{\\pi}{3}\\right]\\)。",
+      "options": {
+        "A": {
+          "text": "\\(\\sqrt{2}\\)",
+          "semantic_value": "sqrt(2)",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(\\frac{1}{2} + \\frac{\\sqrt{3}}{2}\\)",
+          "semantic_value": "(sqrt(3)+1)/2",
+          "error_path": "只比较端点"
+        },
+        "C": {
+          "text": "\\(1\\)",
+          "semantic_value": "1",
+          "error_path": "只用单个三角函数范围"
+        },
+        "D": {
+          "text": "\\(\\sqrt{3}\\)",
+          "semantic_value": "sqrt(3)",
+          "error_path": "错误叠加振幅"
+        }
+      },
+      "problem": {
+        "context": "利用区间位置限制三角函数和的可达范围。",
+        "tasks": [
+          {
+            "op": "optimum",
+            "expression": "sin(x)+cos(x)",
+            "domain": [
+              "pi/6",
+              "pi/3"
+            ],
+            "open": [
+              false,
+              false
+            ],
+            "which": "maximum"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(\\sqrt{2}\\)",
+            "semantic_value": "sqrt(2)",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{2} + \\frac{\\sqrt{3}}{2}\\)",
+            "semantic_value": "(sqrt(3)+1)/2",
+            "error_path": "只比较端点"
+          },
+          "C": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "只用单个三角函数范围"
+          },
+          "D": {
+            "text": "\\(\\sqrt{3}\\)",
+            "semantic_value": "sqrt(3)",
+            "error_path": "错误叠加振幅"
+          }
+        }
+      },
+      "design": {
+        "structure": "和角转化与内部最值",
+        "reasoning_path": "内部对称点胜过两个端点",
+        "knowledge_combination": [
+          "三角与向量",
+          "和角转化与内部最值"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "9da40deaec69dc55f5fead8741952518a3a5a4c14d04c0846c77145bd22920a7"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q006:v1",
+      "order": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "解析几何",
+      "stem": "圆与一条非过圆心直线相交。求两交点距离的平方。\n（1）联立两曲线求指定交点量。两条曲线\\(\\left(\\left(\\left(x\\cdot x\\right)+\\left(y\\cdot y\\right)\\right)-5\\right)\\)=0，\\(\\left(\\left(x+y\\right)-1\\right)\\)=0。求两交点间距离的平方。",
+      "options": {
+        "A": {
+          "text": "\\(18\\)",
+          "semantic_value": "18",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(9\\)",
+          "semantic_value": "9",
+          "error_path": "少计一个坐标差平方"
+        },
+        "C": {
+          "text": "\\(6\\)",
+          "semantic_value": "6",
+          "error_path": "未平方坐标差"
+        },
+        "D": {
+          "text": "\\(3 \\sqrt{2}\\)",
+          "semantic_value": "3*sqrt(2)",
+          "error_path": "只求距离"
+        }
+      },
+      "problem": {
+        "context": "圆与一条非过圆心直线相交。求两交点距离的平方。",
+        "tasks": [
+          {
+            "op": "intersection",
+            "curves": [
+              "x*x+y*y-5",
+              "x+y-1"
+            ],
+            "ask": "distance_squared"
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(18\\)",
+            "semantic_value": "18",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(9\\)",
+            "semantic_value": "9",
+            "error_path": "少计一个坐标差平方"
+          },
+          "C": {
+            "text": "\\(6\\)",
+            "semantic_value": "6",
+            "error_path": "未平方坐标差"
+          },
+          "D": {
+            "text": "\\(3 \\sqrt{2}\\)",
+            "semantic_value": "3*sqrt(2)",
+            "error_path": "只求距离"
+          }
+        }
+      },
+      "design": {
+        "structure": "交点消元与弦长平方",
+        "reasoning_path": "求两坐标解，区别距离与距离平方",
+        "knowledge_combination": [
+          "解析几何",
+          "交点消元与弦长平方"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "8554be1c4948e0b43aaf509d09de0a257dd923d556fdb441db4eabdbc864f11b"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q007:v1",
+      "order": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "函数与导数",
+      "stem": "复合对数函数求导时，需要保留内层的变化率。\n（1）求导数。\\(\\ln\\left(\\left(1+\\left(x\\cdot x\\right)\\right)\\right)\\)，指定值1，x∈\\(\\left(-\\infty, \\infty\\right)\\)。",
+      "options": {
+        "A": {
+          "text": "\\(1\\)",
+          "semantic_value": "1",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(\\frac{1}{2}\\)",
+          "semantic_value": "1/2",
+          "error_path": "漏乘内层导数"
+        },
+        "C": {
+          "text": "\\(2\\)",
+          "semantic_value": "2",
+          "error_path": "漏除外层分母"
+        },
+        "D": {
+          "text": "\\(0\\)",
+          "semantic_value": "0",
+          "error_path": "误认为偶函数任意点导数为0"
+        }
+      },
+      "problem": {
+        "context": "复合对数函数求导时，需要保留内层的变化率。",
+        "tasks": [
+          {
+            "op": "derivative",
+            "expression": "log(1+x*x)",
+            "at": "1",
+            "domain": [
+              "-oo",
+              "oo"
+            ]
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(1\\)",
+            "semantic_value": "1",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(\\frac{1}{2}\\)",
+            "semantic_value": "1/2",
+            "error_path": "漏乘内层导数"
+          },
+          "C": {
+            "text": "\\(2\\)",
+            "semantic_value": "2",
+            "error_path": "漏除外层分母"
+          },
+          "D": {
+            "text": "\\(0\\)",
+            "semantic_value": "0",
+            "error_path": "误认为偶函数任意点导数为0"
+          }
+        }
+      },
+      "design": {
+        "structure": "链式求导与定点切线斜率",
+        "reasoning_path": "外层分母与内层导数同时代入",
+        "knowledge_combination": [
+          "函数与导数",
+          "链式求导与定点切线斜率"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "42ea256d6e2d7c53c3992cad656e0b8d794e3b971fea96296f374a093c791fe5"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q008:v1",
+      "order": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "排列组合",
+      "stem": "每个因子都可贡献0、1或2次幂，三次项有多条形成路径。\n（1）求展开式指定幂的系数。\\(\\left(\\left(\\left(1+x\\right)+\\left(x\\cdot x\\right)\\right)\\right)^{4}\\)，所求幂次3。",
+      "options": {
+        "A": {
+          "text": "\\(16\\)",
+          "semantic_value": "16",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(12\\)",
+          "semantic_value": "12",
+          "error_path": "只计2+1"
+        },
+        "C": {
+          "text": "\\(4\\)",
+          "semantic_value": "4",
+          "error_path": "只计1+1+1"
+        },
+        "D": {
+          "text": "\\(24\\)",
+          "semantic_value": "24",
+          "error_path": "把三个一次项按顺序重复计数"
+        }
+      },
+      "problem": {
+        "context": "每个因子都可贡献0、1或2次幂，三次项有多条形成路径。",
+        "tasks": [
+          {
+            "op": "coefficient",
+            "expression": "(1+x+x*x)**4",
+            "power": 3
+          }
+        ],
+        "options": {
+          "A": {
+            "text": "\\(16\\)",
+            "semantic_value": "16",
+            "error_path": "正确解"
+          },
+          "B": {
+            "text": "\\(12\\)",
+            "semantic_value": "12",
+            "error_path": "只计2+1"
+          },
+          "C": {
+            "text": "\\(4\\)",
+            "semantic_value": "4",
+            "error_path": "只计1+1+1"
+          },
+          "D": {
+            "text": "\\(24\\)",
+            "semantic_value": "24",
+            "error_path": "把三个一次项按顺序重复计数"
+          }
+        }
+      },
+      "design": {
+        "structure": "多项式系数的两种分拆",
+        "reasoning_path": "区分2+1与1+1+1两条路径",
+        "knowledge_combination": [
+          "排列组合",
+          "多项式系数的两种分拆"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "92cce7f728b57c51178d0646a36db6e1a121686720fa1a1ca75ad2b101d42fcf"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q009:v1",
+      "order": 9,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "数列",
+      "stem": "已知数列aₙ=n(n+1)，判断下列关于正整数n的恒等命题。 选择所有正确命题。",
+      "options": {
+        "A": {
+          "text": "判断命题是否恒成立。\\(\\left(\\left(\\left(n+1\\right)\\cdot \\left(n+2\\right)\\right)-\\left(n\\cdot \\left(n+1\\right)\\right)\\right)=\\left(\\left(2\\cdot n\\right)+2\\right)\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "(n+1)*(n+2)-n*(n+1)==2*n+2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "B": {
+          "text": "判断命题是否恒成立。\\(\\left(n\\cdot \\left(n+1\\right)\\right)=\\left(n\\cdot n\\right)\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "n*(n+1)==n*n",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "C": {
+          "text": "判断命题是否恒成立。\\(\\frac{\\left(n\\cdot \\left(n+1\\right)\\right)}{n}=\\left(n+1\\right)\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "n*(n+1)/n==n+1",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "D": {
+          "text": "判断命题是否恒成立。\\(\\frac{\\left(n+2\\right)}{n}=2\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "(n+2)/n==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "problem": {
+        "context": "已知数列aₙ=n(n+1)，判断下列关于正整数n的恒等命题。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "comparison",
+            "claim": "(n+1)*(n+2)-n*(n+1)==2*n+2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "B": {
+            "op": "comparison",
+            "claim": "n*(n+1)==n*n",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "C": {
+            "op": "comparison",
+            "claim": "n*(n+1)/n==n+1",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "D": {
+            "op": "comparison",
+            "claim": "(n+2)/n==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "design": {
+        "structure": "二次通项的差与比",
+        "reasoning_path": "逐项检验恒真而非个别样例",
+        "knowledge_combination": [
+          "数列",
+          "二次通项的差与比"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "932c4e6f11474d6bf0ea696e95e343b00f00b613c12c5feb0f4fea8076ba72fa"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q010:v1",
+      "order": 10,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "函数与导数",
+      "stem": "判断关于函数及导数的四个命题。 选择所有正确命题。",
+      "options": {
+        "A": {
+          "text": "判断导数公式是否正确。函数\\(\\left(\\left(x\\right)^{3}-\\left(3\\cdot x\\right)\\right)\\)，导数是否恒等于\\(\\left(\\left(\\left(3\\cdot x\\right)\\cdot x\\right)-3\\right)\\)？",
+          "assertion": {
+            "op": "derivative_claim",
+            "expression": "x**3-3*x",
+            "claim_expression": "3*x*x-3",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "B": {
+          "text": "判断导数公式是否正确。函数\\(\\left(\\left(x\\right)^{3}-\\left(3\\cdot x\\right)\\right)\\)，导数是否恒等于\\(\\left(\\left(3\\cdot x\\right)\\cdot x\\right)\\)？",
+          "assertion": {
+            "op": "derivative_claim",
+            "expression": "x**3-3*x",
+            "claim_expression": "3*x*x",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "C": {
+          "text": "判断命题是否恒成立。\\(\\left(\\left(-1\\right)^{3}-\\left(3\\cdot -1\\right)\\right)=2\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "(-1)**3-3*(-1)==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "D": {
+          "text": "判断命题是否恒成立。\\(\\left(\\left(1\\right)^{3}-\\left(3\\cdot 1\\right)\\right)=2\\)。",
+          "assertion": {
+            "op": "comparison",
+            "claim": "1**3-3*1==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "problem": {
+        "context": "判断关于函数及导数的四个命题。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "derivative_claim",
+            "expression": "x**3-3*x",
+            "claim_expression": "3*x*x-3",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "B": {
+            "op": "derivative_claim",
+            "expression": "x**3-3*x",
+            "claim_expression": "3*x*x",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "C": {
+            "op": "comparison",
+            "claim": "(-1)**3-3*(-1)==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "D": {
+            "op": "comparison",
+            "claim": "1**3-3*1==2",
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "design": {
+        "structure": "导数公式与点值的分离",
+        "reasoning_path": "先独立求导再核对代入值",
+        "knowledge_combination": [
+          "函数与导数",
+          "导数公式与点值的分离"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "3289d79bb6ee72cd9323d7652d8e68326db03f3a83343c82f9b69d9b12de1e93"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q011:v1",
+      "order": 11,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "立体几何",
+      "stem": "判断空间向量关系。 选择所有正确命题。",
+      "options": {
+        "A": {
+          "text": "计算或判断向量性质。向量u=\\(\\left( 1, \\  1, \\  0\\right)\\)，v=\\(\\left( 1, \\  -1, \\  0\\right)\\)。是否互相垂直。",
+          "assertion": {
+            "op": "vector",
+            "operation": "orthogonal",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "B": {
+          "text": "计算或判断向量性质。向量u=\\(\\left( 1, \\  1, \\  0\\right)\\)，v=\\(\\left( 1, \\  -1, \\  0\\right)\\)。是否互相平行。",
+          "assertion": {
+            "op": "vector",
+            "operation": "parallel",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "C": {
+          "text": "计算或判断向量性质。向量u=\\(\\left( 0, \\  0, \\  1\\right)\\)，v=\\(\\left( 1, \\  1, \\  0\\right)\\)。是否互相垂直。",
+          "assertion": {
+            "op": "vector",
+            "operation": "orthogonal",
+            "u": [
+              0,
+              0,
+              1
+            ],
+            "v": [
+              1,
+              1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        },
+        "D": {
+          "text": "计算或判断向量性质。向量u=\\(\\left( 0, \\  0, \\  1\\right)\\)，v=\\(\\left( 1, \\  -1, \\  0\\right)\\)。是否互相平行。",
+          "assertion": {
+            "op": "vector",
+            "operation": "parallel",
+            "u": [
+              0,
+              0,
+              1
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "problem": {
+        "context": "判断空间向量关系。",
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "vector",
+            "operation": "orthogonal",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "B": {
+            "op": "vector",
+            "operation": "parallel",
+            "u": [
+              1,
+              1,
+              0
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "C": {
+            "op": "vector",
+            "operation": "orthogonal",
+            "u": [
+              0,
+              0,
+              1
+            ],
+            "v": [
+              1,
+              1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          },
+          "D": {
+            "op": "vector",
+            "operation": "parallel",
+            "u": [
+              0,
+              0,
+              1
+            ],
+            "v": [
+              1,
+              -1,
+              0
+            ],
+            "error_path": "恒等关系与个别样本成立相混淆；具体真值由独立求解确定"
+          }
+        }
+      },
+      "design": {
+        "structure": "旋转坐标下的正交和平行",
+        "reasoning_path": "用内积与叉积区分两个方向关系",
+        "knowledge_combination": [
+          "立体几何",
+          "旋转坐标下的正交和平行"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "d211977612f5d1e52c2ab0d2ed5b5dfcb3b2fdc8f5d0dd66a8f7551e0b90fb4c"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q012:v1",
+      "order": 12,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "概率统计",
+      "stem": "这组数据关于均值成对分布，注意方差的分母。\n（1）求样本统计量。样本数据[1, 2, 4, 5]，求方差。",
+      "options": null,
+      "problem": {
+        "context": "这组数据关于均值成对分布，注意方差的分母。",
+        "tasks": [
+          {
+            "op": "statistics",
+            "data": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "statistic": "variance"
+          }
+        ]
+      },
+      "design": {
+        "structure": "对称样本方差",
+        "reasoning_path": "先定位均值，再取平方差平均",
+        "knowledge_combination": [
+          "概率统计",
+          "对称样本方差"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 1,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "efc939d5afbbf5a32c80806a099ee28b16519bc58c2e2eb0abf3c9477d8f0030"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q013:v1",
+      "order": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "数列",
+      "stem": "通项包含常数部分与衰减部分，求前五项和。\n（1）求有限和。\\(\\sum_{k=1}^{5}\\frac{\\left(\\left(3\\right)^{k}-1\\right)}{\\left(3\\right)^{\\left(k-1\\right)}}\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "通项包含常数部分与衰减部分，求前五项和。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "(3**k-1)/3**(k-1)",
+            "upper": "5"
+          }
+        ]
+      },
+      "design": {
+        "structure": "比值化简与有限几何修正",
+        "reasoning_path": "先除幂，再拆为常数和与有限等比和",
+        "knowledge_combination": [
+          "数列",
+          "比值化简与有限几何修正"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "d486d17b04321c72d3f32b73e4be2d61cea602d8aadc63bae47bc348ec789798"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q014:v1",
+      "order": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "解析几何",
+      "stem": "将点与直线的相对位置化为距离。\n（1）求几何量。求点\\(\\left( 2, \\  3\\right)\\)到直线\\(3 x - 4 y + 5\\)=0的距离。",
+      "options": null,
+      "problem": {
+        "context": "将点与直线的相对位置化为距离。",
+        "tasks": [
+          {
+            "op": "geometry",
+            "operation": "point_line_distance",
+            "point": [
+              2,
+              3
+            ],
+            "line": [
+              3,
+              -4,
+              5
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "斜线点距",
+        "reasoning_path": "代入直线方程后取绝对值，并除法向量模",
+        "knowledge_combination": [
+          "解析几何",
+          "斜线点距"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "7fa82b8f6ccc135393f0b7828f26d2cc66425c08af0effcfe26e1620ca51f08f"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q015:v1",
+      "order": 15,
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "概率统计",
+      "stem": "两次独立从1至4等可能取整数，后续均使用同一组有序结果。\n（1）在等可能样本中求条件概率。各变量独立等可能取值，x∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)，y∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)。已知\\(x\\ney\\)。目标事件为\\(\\left(x+y\\right)\\geq6\\)。\n（2）在等可能样本中求条件概率。各变量独立等可能取值，x∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)，y∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)。已知\\(x\\ney\\land \\left(x+y\\right)\\geq6\\)。目标事件为\\(x=4\\)。\n（3）求条件期望。各变量独立等可能取值，x∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)，y∈\\(\\left\\{1, 2, 3, 4\\right\\}\\)。已知\\(x\\ney\\)。随机变量为\\(x + y\\)。",
+      "options": null,
+      "problem": {
+        "context": "两次独立从1至4等可能取整数，后续均使用同一组有序结果。",
+        "tasks": [
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "condition": "x!=y",
+            "event": "x+y>=6"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "condition": "x!=y and x+y>=6",
+            "event": "x==4"
+          },
+          {
+            "op": "expectation",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "condition": "x!=y",
+            "event": "1==1",
+            "value": "x+y"
+          }
+        ]
+      },
+      "design": {
+        "structure": "逐层缩小样本空间及条件期望",
+        "reasoning_path": "每次条件改变都重新归一，最后按随机变量值累加",
+        "knowledge_combination": [
+          "概率统计",
+          "逐层缩小样本空间及条件期望"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 4,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "20dbbf2d0441eb9d8d284442a90d8a7a76a8d7f45dd14124348230c183cf7ef7"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q016:v1",
+      "order": 16,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "立体几何",
+      "stem": "三点确定斜置平面，再研究原点与一条指定方向直线。\n（1）求几何量。平面由三点A=\\(\\left( 2, \\  0, \\  1\\right)\\)，B=\\(\\left( 0, \\  2, \\  1\\right)\\)，C=\\(\\left( 0, \\  0, \\  2\\right)\\)确定。求点D=\\(\\left( 0, \\  0, \\  0\\right)\\)到该平面的距离。\n（2）求几何量。平面由三点A=\\(\\left( 2, \\  0, \\  1\\right)\\)，B=\\(\\left( 0, \\  2, \\  1\\right)\\)，C=\\(\\left( 0, \\  0, \\  2\\right)\\)确定。求方向向量为\\(\\left( 1, \\  0, \\  1\\right)\\)的直线与该平面夹角的正弦。",
+      "options": null,
+      "problem": {
+        "context": "三点确定斜置平面，再研究原点与一条指定方向直线。",
+        "tasks": [
+          {
+            "op": "geometry",
+            "operation": "plane_distance",
+            "plane_points": [
+              [
+                2,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            "point": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "op": "geometry",
+            "operation": "line_plane_sine",
+            "plane_points": [
+              [
+                2,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            "direction": [
+              1,
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "平面法向量串联距离和线面角",
+        "reasoning_path": "叉积确定同一法向量，随后两种投影分别计算",
+        "knowledge_combination": [
+          "立体几何",
+          "平面法向量串联距离和线面角"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "1639a83cd77836cefba97fd99bddbb8709e24876d26e968ce6819aed3f0559e2"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q017:v1",
+      "order": 17,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "数列",
+      "stem": "一次驱动项带项号的递推，可用变换消去非齐次部分。\n（1）求数列通项。\\(\\left(\\left(u\\left(\\left(n+1\\right)\\right)-\\left(2\\cdot u\\left(n\\right)\\right)\\right)-n\\right)\\)=0，初值u(1)=1，n为正整数。\n（2）求递推数列的加权和。\\(\\left(\\left(u\\left(\\left(n+1\\right)\\right)-\\left(2\\cdot u\\left(n\\right)\\right)\\right)-n\\right)\\)=0，初值u(1)=1，n为正整数。求\\(\\sum_{k=1}^{n} 2^{- k} u{\\left(k \\right)}\\)。",
+      "options": null,
+      "problem": {
+        "context": "一次驱动项带项号的递推，可用变换消去非齐次部分。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "u(n+1)-2*u(n)-n",
+            "initial": {
+              "1": "1"
+            }
+          },
+          {
+            "op": "recurrence_sum",
+            "relation": "u(n+1)-2*u(n)-n",
+            "initial": {
+              "1": "1"
+            },
+            "weight": "1/2**k",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "线性驱动递推与几何加权和",
+        "reasoning_path": "增加n+1使其成为等比数列，再拆加权部分和",
+        "knowledge_combination": [
+          "数列",
+          "线性驱动递推与几何加权和"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 4,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "0f7bea83fc13935833e707b181ed0e17c1035c28718efb9124322ee98a79154b"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q018:v2",
+      "order": 18,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "解析几何",
+      "stem": "先确定椭圆半轴，再研究椭圆点到固定点的距离平方。\n椭圆\\(x^2/4+y^2=1\\)，点\\(P=(2\\cos t,\\sin t)\\)，固定点\\(D=(0,2)\\)。点P遍历整条椭圆，令\\(u=\\sin t\\)，故\\(u\\in[-1,1]\\)且取遍。\n（1）解方程组。\\(\\left(\\left(\\left(a\\cdot a\\right)-\\left(b\\cdot b\\right)\\right)-3\\right)\\)=0，\\(\\left(\\left(a+b\\right)-3\\right)\\)=0, 未知量a,b为实数。附加限制\\(a>b\\),\\(b>0\\)。\n（2）判断并证明恒等式。\\(\\left(\\sin{\\left(t \\right)} - 2\\right)^{2} + 4 \\cos^{2}{\\left(t \\right)}\\)=\\(- 3 \\sin^{2}{\\left(t \\right)} - 4 \\sin{\\left(t \\right)} + 8\\)。\n（3）x表示u，求距离平方的最值及取到的位置。\\(\\left(\\left(8-\\left(\\left(3\\cdot x\\right)\\cdot x\\right)\\right)-\\left(4\\cdot x\\right)\\right)\\)，x∈\\(\\left[-1, 1\\right]\\)。",
+      "options": null,
+      "problem": {
+        "context": "先确定椭圆半轴，再研究椭圆点到固定点的距离平方。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "expressions": [
+              "a*a-b*b-3",
+              "a+b-3"
+            ],
+            "conditions": [
+              "a>b",
+              "b>0"
+            ],
+            "unique": true
+          },
+          {
+            "op": "identity",
+            "left": "4*cos(t)**2+(sin(t)-2)**2",
+            "right": "8-3*sin(t)**2-4*sin(t)"
+          },
+          {
+            "op": "extrema",
+            "expression": "8-3*x*x-4*x",
+            "domain": [
+              "-1",
+              "1"
+            ],
+            "open": [
+              false,
+              false
+            ],
+            "prompt": "x表示u，求距离平方的最值及取到的位置"
+          }
+        ],
+        "given_text": "椭圆\\(x^2/4+y^2=1\\)，点\\(P=(2\\cos t,\\sin t)\\)，固定点\\(D=(0,2)\\)。点P遍历整条椭圆，令\\(u=\\sin t\\)，故\\(u\\in[-1,1]\\)且取遍。"
+      },
+      "design": {
+        "structure": "参数恢复与非中心点的椭圆距离",
+        "reasoning_path": "用正半轴筛解，参数化后比较内部驻点与端点",
+        "knowledge_combination": [
+          "解析几何",
+          "参数恢复与非中心点的椭圆距离"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 4,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "06a5c191916d29c0ad3348ccf0c3c347c1a2d94267775a2dfef3d915f8894b1a"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:fullA:q019:v1",
+      "order": 19,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "函数与导数",
+      "stem": "参数的临界值与导数的零点重数共同影响单调性。\n（1）求使函数在定义域内单调不减的参数范围。\\(\\left(\\left(\\frac{\\left(x\\right)^{3}}{3}-\\left(\\left(2\\cdot x\\right)\\cdot x\\right)\\right)+\\left(a\\cdot x\\right)\\right)\\)，x∈\\(\\left[0, 3\\right]\\)，参数a为实数。\n（2）求单调增减区间与驻点。\\(\\left(\\left(\\frac{\\left(x\\right)^{3}}{3}-\\left(\\left(2\\cdot x\\right)\\cdot x\\right)\\right)+\\left(3\\cdot x\\right)\\right)\\)，x∈\\(\\left[0, 3\\right]\\)。\n（3）证明下式非负并讨论取等。\\(\\left(\\left(\\frac{\\left(x\\right)^{3}}{3}-\\left(\\left(2\\cdot x\\right)\\cdot x\\right)\\right)+\\left(4\\cdot x\\right)\\right)\\)，x∈\\(\\left[0, \\infty\\right)\\)。",
+      "options": null,
+      "problem": {
+        "context": "参数的临界值与导数的零点重数共同影响单调性。",
+        "tasks": [
+          {
+            "op": "parameter_monotone",
+            "expression": "x**3/3-2*x*x+a*x",
+            "domain": [
+              "0",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          {
+            "op": "monotonicity",
+            "expression": "x**3/3-2*x*x+3*x",
+            "domain": [
+              "0",
+              "3"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          {
+            "op": "nonnegative",
+            "expression": "x**3/3-2*x*x+4*x",
+            "domain": [
+              "0",
+              "oo"
+            ],
+            "open": [
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "参数导数二次式与临界零点",
+        "reasoning_path": "最大约束在内部达到，随后区分变号驻点和不变号驻点",
+        "knowledge_combination": [
+          "函数与导数",
+          "参数导数二次式与临界零点"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 5,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "2dc9a73e755868919d5d37807ff3acf6f56ab02c8d5de70687e6e25b49ec973c"
+      },
+      "answer_domain": null
+    }
+  ],
+  "verifications": [
+    {
+      "question_sha256": "094cf86fc37d536aa6b989d1ca94247b2366afb4a4432ae93d1023dbfc64b9b3",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(1\\)",
+        "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1",
+            "steps": [
+              "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "8bb1b0e85a3616370a5028c779b42acb33211eb314431631d12cf0364e28ebbf",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(9\\)",
+        "逐个计入满足条件的有序结果，计算数量，得到\\(9\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "9",
+            "steps": [
+              "逐个计入满足条件的有序结果，计算数量，得到\\(9\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "ab740630951077439181ccb79c9972564fb88c6298d997bb35b96866f7e147ca",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{1}{50}\\)",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/50。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1/50",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/50。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "1ccb1663a6dd34454f476a29b47732cd23d1b5cd4411b17edc3068fd53afdf8b",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{1}{5}\\)",
+        "按题设等可能样本逐项枚举。条件下共30个有序结果，其中6个满足目标事件，故概率为\\(\\frac{1}{5}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1/5",
+            "steps": [
+              "按题设等可能样本逐项枚举。条件下共30个有序结果，其中6个满足目标事件，故概率为\\(\\frac{1}{5}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "9f624ba90d8152619e5ea4b747cc684ceca6ca731a9c820d03949a5da293a9ab",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\sqrt{2}\\)",
+        "定义域内连续，导数为\\(- \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\)，驻点为\\(\\left\\{\\frac{\\pi}{4}\\right\\}\\)。",
+        "导数为正的区间为\\(\\left[\\frac{\\pi}{6}, \\frac{\\pi}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{\\pi}{4}, \\frac{\\pi}{3}\\right]\\)。",
+        "逐一比较驻点值、端点值与开端点极限。sqrt(2)"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "sqrt(2)",
+            "steps": [
+              "定义域内连续，导数为\\(- \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\)，驻点为\\(\\left\\{\\frac{\\pi}{4}\\right\\}\\)。",
+              "导数为正的区间为\\(\\left[\\frac{\\pi}{6}, \\frac{\\pi}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{\\pi}{4}, \\frac{\\pi}{3}\\right]\\)。",
+              "逐一比较驻点值、端点值与开端点极限。sqrt(2)"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "48617364025e4f49a1501a764b267533d4aea96f80957ac7e3f49753486550c6",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(18\\)",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为18。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "18",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为18。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "ed3cb1d2c6ebcc4c7a62267db8e64f1548cfc3895966a27bbc90d630810f7628",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(1\\)",
+        "在题设定义域内求导并因式分解，得到 \\(\\frac{2 x}{x^{2} + 1}\\)。",
+        "代入指定横坐标，得到\\(1\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1",
+            "steps": [
+              "在题设定义域内求导并因式分解，得到 \\(\\frac{2 x}{x^{2} + 1}\\)。",
+              "代入指定横坐标，得到\\(1\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "8b170a42ae3760060b233081d107f431361d556e69e3cb82a347e595edbde035",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "A",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(16\\)",
+        "展开式中指数等于3的项才有贡献，提取系数得到\\(16\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "16",
+            "steps": [
+              "展开式中指数等于3的项才有贡献，提取系数得到\\(16\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "f755d7e4c6eceed1aca2e824151e5ebbb3d1bf63a5983086671adf8afd65c5b0",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "AC",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。True",
+        "逐项代入条件计算命题真值。True",
+        "独立求解第2项。False",
+        "逐项代入条件计算命题真值。False",
+        "独立求解第3项。True",
+        "逐项代入条件计算命题真值。True",
+        "独立求解第4项。False",
+        "逐项代入条件计算命题真值。False"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": true,
+            "steps": [
+              "逐项代入条件计算命题真值。True"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "逐项代入条件计算命题真值。False"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": true,
+            "steps": [
+              "逐项代入条件计算命题真值。True"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "逐项代入条件计算命题真值。False"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "376f3d2864692794a2ecd8d0ed3efc6c79f575828b94df6eaad79a2f07b1e995",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "AC",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。True",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+        "独立求解第2项。False",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。",
+        "独立求解第3项。True",
+        "逐项代入条件计算命题真值。True",
+        "独立求解第4项。False",
+        "逐项代入条件计算命题真值。False"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": true,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": true,
+            "steps": [
+              "逐项代入条件计算命题真值。True"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "逐项代入条件计算命题真值。False"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "e12bc7228a0b61ab03a91d0a4d83805f1364ffa4669bca3bb55c27b0cdd9af75",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": "AC",
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。True",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+        "独立求解第2项。False",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。",
+        "独立求解第3项。True",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+        "独立求解第4项。False",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": true,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": true,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": false,
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "72f65b190dfd4c753f58917787034ad6d5ecddcff6c9fcfff73b541b0ccd33d2",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{5}{2}\\)",
+        "样本量为4，先排序或求均值\\(3\\)，依照统计量定义得到\\(\\frac{5}{2}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "5/2",
+            "steps": [
+              "样本量为4，先排序或求均值\\(3\\)，依照统计量定义得到\\(\\frac{5}{2}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "ddc6934a3b5a2adea7aa373b988f74ff93cd0c3391d7c3cb165fd0c008186df6",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{1094}{81}\\)",
+        "先分解通项 \\(3 \\cdot 3^{- k} \\left(3^{k} - 1\\right)\\)，按有限和边界计算，保留末项，得到 \\(\\frac{1094}{81}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1094/81",
+            "steps": [
+              "先分解通项 \\(3 \\cdot 3^{- k} \\left(3^{k} - 1\\right)\\)，按有限和边界计算，保留末项，得到 \\(\\frac{1094}{81}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "629cc9880fa45c8f9976229712e9ebfa6a4448fb38f045b89d5567a2428bb659",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{1}{5}\\)",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/5。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1/5",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/5。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "a86d6ae83d9879a4e9f4ff404db54e2aedab9b3c00a8994966e694b7807d659b",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{1}{3}\\)",
+        "按题设等可能样本逐项枚举。条件下共12个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{3}\\)。",
+        "独立求解第2项。\\(\\frac{1}{2}\\)",
+        "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。",
+        "独立求解第3项。\\(5\\)",
+        "逐个计入满足条件的有序结果，计算随机变量数值的算术平均，得到\\(5\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "1/3",
+            "steps": [
+              "按题设等可能样本逐项枚举。条件下共12个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{3}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": "1/2",
+            "steps": [
+              "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": "5",
+            "steps": [
+              "逐个计入满足条件的有序结果，计算随机变量数值的算术平均，得到\\(5\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "5beaef9d50ada1055be9bff36187d8a06c1571945354d3a30d7368e257746878",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{2 \\sqrt{6}}{3}\\)",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为2*sqrt(6)/3。",
+        "独立求解第2项。\\(\\frac{\\sqrt{3}}{2}\\)",
+        "按坐标、内积、平面法向量或联立消元定义独立计算。结果为sqrt(3)/2。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "2*sqrt(6)/3",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为2*sqrt(6)/3。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": "sqrt(3)/2",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为sqrt(3)/2。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "3a295d5f4274af5229dbe178b869f704f2e5d3c63009156f3818cbf6993d4b0d",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(3 \\cdot 2^{n - 1} - n - 1\\)",
+        "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+        "独立求解第2项。\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)",
+        "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+        "将独立求出的通项代入加权和，拆项求和并保留有限边界，得到\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "3*2**(n - 1) - n - 1",
+            "steps": [
+              "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": "3*n/2 - 3 + n/2**n + 3/2**n",
+            "steps": [
+              "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+              "将独立求出的通项代入加权和，拆项求和并保留有限边界，得到\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "337a74fe18c91940404c53592600f8eafb459adc307467bc1ff88111048f8311",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。a \\(2\\)；b \\(1\\)",
+        "联立全部条件消元，逐个解回代原方程组。",
+        "[{'a': '2', 'b': '1'}]",
+        "独立求解第2项。True",
+        "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。",
+        "独立求解第3项。minimum \\(1\\)；maximum \\(\\frac{28}{3}\\)；minimum_at \\(1\\)；maximum_at \\(- \\frac{2}{3}\\)",
+        "定义域内连续，导数为\\(- 2 \\left(3 x + 2\\right)\\)，驻点为\\(\\left\\{- \\frac{2}{3}\\right\\}\\)。",
+        "导数为正的区间为\\(\\left[-1, - \\frac{2}{3}\\right]\\)，为负的区间为\\(\\left[- \\frac{2}{3}, 1\\right]\\)。",
+        "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': '28/3', 'minimum_at': ['1'], 'maximum_at': ['-2/3']}"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": [
+              {
+                "a": "2",
+                "b": "1"
+              }
+            ],
+            "steps": [
+              "联立全部条件消元，逐个解回代原方程组。",
+              "[{'a': '2', 'b': '1'}]"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": true,
+            "steps": [
+              "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": {
+              "minimum": "1",
+              "maximum": "28/3",
+              "minimum_at": [
+                "1"
+              ],
+              "maximum_at": [
+                "-2/3"
+              ]
+            },
+            "steps": [
+              "定义域内连续，导数为\\(- 2 \\left(3 x + 2\\right)\\)，驻点为\\(\\left\\{- \\frac{2}{3}\\right\\}\\)。",
+              "导数为正的区间为\\(\\left[-1, - \\frac{2}{3}\\right]\\)，为负的区间为\\(\\left[- \\frac{2}{3}, 1\\right]\\)。",
+              "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': '28/3', 'minimum_at': ['1'], 'maximum_at': ['-2/3']}"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "a68b3d435115fea56fdf8f83303501ebf5de4380ed26393cb020ddfa00181dc4",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。Interval(4, oo)",
+        "将要求化为\\(1\\)a+(\\(x \\left(x - 4\\right)\\))≥0，对题设区间内每个x成立。",
+        "利用系数的固定符号，等价于a相对于\\(- x^{2} + 4 x\\)的全域界。",
+        "求该比值的驻点和边界极限，得到参数范围\\(\\left[4, \\infty\\right)\\)。边界处仍满足弱不等式。",
+        "独立求解第2项。increasing Interval(0, 1)；decreasing Interval(1, 3)；critical \\(1\\)；critical \\(3\\)",
+        "定义域内连续，导数为\\(\\left(x - 3\\right) \\left(x - 1\\right)\\)，驻点为\\(\\left\\{1, 3\\right\\}\\)。",
+        "导数为正的区间为\\(\\left[0, 1\\right]\\)，为负的区间为\\(\\left[1, 3\\right]\\)。",
+        "独立求解第3项。proved True；infimum \\(0\\)；equality \\(0\\)",
+        "令两边之差为g(x)=\\(\\frac{x^{3}}{3} - 2 x^{2} + 4 x\\)。导数为\\(\\left(x - 2\\right)^{2}\\)。",
+        "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "Interval(4, oo)",
+            "steps": [
+              "将要求化为\\(1\\)a+(\\(x \\left(x - 4\\right)\\))≥0，对题设区间内每个x成立。",
+              "利用系数的固定符号，等价于a相对于\\(- x^{2} + 4 x\\)的全域界。",
+              "求该比值的驻点和边界极限，得到参数范围\\(\\left[4, \\infty\\right)\\)。边界处仍满足弱不等式。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": {
+              "increasing": "Interval(0, 1)",
+              "decreasing": "Interval(1, 3)",
+              "critical": [
+                "1",
+                "3"
+              ]
+            },
+            "steps": [
+              "定义域内连续，导数为\\(\\left(x - 3\\right) \\left(x - 1\\right)\\)，驻点为\\(\\left\\{1, 3\\right\\}\\)。",
+              "导数为正的区间为\\(\\left[0, 1\\right]\\)，为负的区间为\\(\\left[1, 3\\right]\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": {
+              "proved": true,
+              "infimum": "0",
+              "equality": [
+                "0"
+              ]
+            },
+            "steps": [
+              "令两边之差为g(x)=\\(\\frac{x^{3}}{3} - 2 x^{2} + 4 x\\)。导数为\\(\\left(x - 2\\right)^{2}\\)。",
+              "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    }
+  ],
+  "events": [
+    {
+      "slot": 1,
+      "candidate_id": "orig:ai:phase3:fullA:q001:v1",
+      "candidate_sha256": "3fdae8c2ee0bc8cec6c5b14df5721741ac38245325d1f5a3f09d14a7abda1fea",
+      "input_sha256": "b21a2d9ec5e299d0a968dae47a7445ac0aadb6873d28449e5506982a7251f75d",
+      "output_sha256": "6d8c23913d1d5d252ce5632a3f42f56ccfafb9d28b4b170916e8e78a782447f8",
+      "elapsed_seconds": 1.124,
+      "result": {
+        "question_sha256": "094cf86fc37d536aa6b989d1ca94247b2366afb4a4432ae93d1023dbfc64b9b3",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(1\\)",
+          "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1",
+              "steps": [
+                "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 2,
+      "candidate_id": "orig:ai:phase3:fullA:q002:v1",
+      "candidate_sha256": "d17b5821396b345f3d555d75e22b05091082017fb354bf4d893fd95f75d90aab",
+      "input_sha256": "b515c7708c2bcb6987c2f330bcb83bb90ce334b4e55df85f19058a91fb4956a7",
+      "output_sha256": "61d01a1948eed2704b8595f8ed38de283aaa8df13276074e58cd84c213c56d28",
+      "elapsed_seconds": 1.077,
+      "result": {
+        "question_sha256": "8bb1b0e85a3616370a5028c779b42acb33211eb314431631d12cf0364e28ebbf",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(9\\)",
+          "逐个计入满足条件的有序结果，计算数量，得到\\(9\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "9",
+              "steps": [
+                "逐个计入满足条件的有序结果，计算数量，得到\\(9\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 3,
+      "candidate_id": "orig:ai:phase3:fullA:q003:v1",
+      "candidate_sha256": "e92de132770339923746a9de180dd62c700fceecc8b9aa0f6b0708cb797192d5",
+      "input_sha256": "15010b92ccc0311536ee5977fb39b50b530ed0593f251eed59d8ad80c99ecda3",
+      "output_sha256": "3094ef4069ad76f02b92ff9038d3b70a3b90368747d11c4a903749eecb850106",
+      "elapsed_seconds": 0.999,
+      "result": {
+        "question_sha256": "ab740630951077439181ccb79c9972564fb88c6298d997bb35b96866f7e147ca",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{1}{50}\\)",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/50。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1/50",
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/50。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 4,
+      "candidate_id": "orig:ai:phase3:fullA:q004:v1",
+      "candidate_sha256": "bea0181ff24808443d870a613bb93cc47d4375f1bae20a45a1ae1e4e3880f5dd",
+      "input_sha256": "3286e5a05aa1c265efcf9725fbcd80358bdf8fe286860db3ec0edc154a1cf5ff",
+      "output_sha256": "8484b0d867b6a84ac73d349f6ddd54678cfc611380e0baf23d2285f620150beb",
+      "elapsed_seconds": 1.129,
+      "result": {
+        "question_sha256": "1ccb1663a6dd34454f476a29b47732cd23d1b5cd4411b17edc3068fd53afdf8b",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{1}{5}\\)",
+          "按题设等可能样本逐项枚举。条件下共30个有序结果，其中6个满足目标事件，故概率为\\(\\frac{1}{5}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1/5",
+              "steps": [
+                "按题设等可能样本逐项枚举。条件下共30个有序结果，其中6个满足目标事件，故概率为\\(\\frac{1}{5}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 5,
+      "candidate_id": "orig:ai:phase3:fullA:q005:v1",
+      "candidate_sha256": "9da40deaec69dc55f5fead8741952518a3a5a4c14d04c0846c77145bd22920a7",
+      "input_sha256": "bd9eef12f8b9ef8351da9dac39b89d5b2f322ba993f8dfbccdaaddcbf1a9445a",
+      "output_sha256": "7a9feb24c94fb07005b6b985c6a64e760670590a8cc9cf03e3c106ba8a224505",
+      "elapsed_seconds": 1.864,
+      "result": {
+        "question_sha256": "9f624ba90d8152619e5ea4b747cc684ceca6ca731a9c820d03949a5da293a9ab",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\sqrt{2}\\)",
+          "定义域内连续，导数为\\(- \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\)，驻点为\\(\\left\\{\\frac{\\pi}{4}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[\\frac{\\pi}{6}, \\frac{\\pi}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{\\pi}{4}, \\frac{\\pi}{3}\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。sqrt(2)"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "sqrt(2)",
+              "steps": [
+                "定义域内连续，导数为\\(- \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\)，驻点为\\(\\left\\{\\frac{\\pi}{4}\\right\\}\\)。",
+                "导数为正的区间为\\(\\left[\\frac{\\pi}{6}, \\frac{\\pi}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{\\pi}{4}, \\frac{\\pi}{3}\\right]\\)。",
+                "逐一比较驻点值、端点值与开端点极限。sqrt(2)"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 6,
+      "candidate_id": "orig:ai:phase3:fullA:q006:v1",
+      "candidate_sha256": "8554be1c4948e0b43aaf509d09de0a257dd923d556fdb441db4eabdbc864f11b",
+      "input_sha256": "59140f07d78cbbd1b5bdf6509222047f00ecfa787a26c488660fe1ce2fcc7744",
+      "output_sha256": "396f454b7616f20dda2fb7f993a9d8354189b5832f1b8efd3975668eec8fbe81",
+      "elapsed_seconds": 1.364,
+      "result": {
+        "question_sha256": "48617364025e4f49a1501a764b267533d4aea96f80957ac7e3f49753486550c6",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(18\\)",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为18。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "18",
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为18。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 7,
+      "candidate_id": "orig:ai:phase3:fullA:q007:v1",
+      "candidate_sha256": "42ea256d6e2d7c53c3992cad656e0b8d794e3b971fea96296f374a093c791fe5",
+      "input_sha256": "e77c7f6ed4fef94706c4f2d6c67cbc97a1401ec6df385de7abf83f36c8e1db10",
+      "output_sha256": "20c260b6e5e6af44caaa228a0f8f0a506859789fe7736adc7cb1bd7cb9d65518",
+      "elapsed_seconds": 1.176,
+      "result": {
+        "question_sha256": "ed3cb1d2c6ebcc4c7a62267db8e64f1548cfc3895966a27bbc90d630810f7628",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(1\\)",
+          "在题设定义域内求导并因式分解，得到 \\(\\frac{2 x}{x^{2} + 1}\\)。",
+          "代入指定横坐标，得到\\(1\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1",
+              "steps": [
+                "在题设定义域内求导并因式分解，得到 \\(\\frac{2 x}{x^{2} + 1}\\)。",
+                "代入指定横坐标，得到\\(1\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 8,
+      "candidate_id": "orig:ai:phase3:fullA:q008:v1",
+      "candidate_sha256": "92cce7f728b57c51178d0646a36db6e1a121686720fa1a1ca75ad2b101d42fcf",
+      "input_sha256": "f1f6ecd43942a7058efd26c7b802907d5191dbd1dfb9ad0b0b3900ca4ffef378",
+      "output_sha256": "2d5bd05a80c1011fb9388c1f38beab2498fb3d001b122f6c17ef6c8bad1aa4cd",
+      "elapsed_seconds": 1.057,
+      "result": {
+        "question_sha256": "8b170a42ae3760060b233081d107f431361d556e69e3cb82a347e595edbde035",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "A",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(16\\)",
+          "展开式中指数等于3的项才有贡献，提取系数得到\\(16\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "16",
+              "steps": [
+                "展开式中指数等于3的项才有贡献，提取系数得到\\(16\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 9,
+      "candidate_id": "orig:ai:phase3:fullA:q009:v1",
+      "candidate_sha256": "932c4e6f11474d6bf0ea696e95e343b00f00b613c12c5feb0f4fea8076ba72fa",
+      "input_sha256": "635ae869e4b08fb448d0f7f898c490686895eaf02243d40afe6054818b02dcca",
+      "output_sha256": "f46817a0faa45890272c4c2245ed122a878bc80c437cb544d6072ce2ac6b9900",
+      "elapsed_seconds": 1.314,
+      "result": {
+        "question_sha256": "f755d7e4c6eceed1aca2e824151e5ebbb3d1bf63a5983086671adf8afd65c5b0",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "AC",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。True",
+          "逐项代入条件计算命题真值。True",
+          "独立求解第2项。False",
+          "逐项代入条件计算命题真值。False",
+          "独立求解第3项。True",
+          "逐项代入条件计算命题真值。True",
+          "独立求解第4项。False",
+          "逐项代入条件计算命题真值。False"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": true,
+              "steps": [
+                "逐项代入条件计算命题真值。True"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "逐项代入条件计算命题真值。False"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": true,
+              "steps": [
+                "逐项代入条件计算命题真值。True"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "逐项代入条件计算命题真值。False"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 10,
+      "candidate_id": "orig:ai:phase3:fullA:q010:v1",
+      "candidate_sha256": "3289d79bb6ee72cd9323d7652d8e68326db03f3a83343c82f9b69d9b12de1e93",
+      "input_sha256": "a9ebefa146bdf26be456ade7c50c4e5248189399cc713fc48ddb9a6dc2be20ba",
+      "output_sha256": "287f68c62f51456cf2b2147d910bba80b811340a21ad680c0522afa03aee33ea",
+      "elapsed_seconds": 1.061,
+      "result": {
+        "question_sha256": "376f3d2864692794a2ecd8d0ed3efc6c79f575828b94df6eaad79a2f07b1e995",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "AC",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。True",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+          "独立求解第2项。False",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。",
+          "独立求解第3项。True",
+          "逐项代入条件计算命题真值。True",
+          "独立求解第4项。False",
+          "逐项代入条件计算命题真值。False"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": true,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": true,
+              "steps": [
+                "逐项代入条件计算命题真值。True"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "逐项代入条件计算命题真值。False"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 11,
+      "candidate_id": "orig:ai:phase3:fullA:q011:v1",
+      "candidate_sha256": "d211977612f5d1e52c2ab0d2ed5b5dfcb3b2fdc8f5d0dd66a8f7551e0b90fb4c",
+      "input_sha256": "8a117c5e60a8c0aad356b095e53e648136a9e803509f430bc3de4319703b4d03",
+      "output_sha256": "25a3c911dba09c5bfe7336f9ac1befba3cd1f113d9dbea3b28ae72daa2e79ea6",
+      "elapsed_seconds": 1.019,
+      "result": {
+        "question_sha256": "e12bc7228a0b61ab03a91d0a4d83805f1364ffa4669bca3bb55c27b0cdd9af75",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": "AC",
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。True",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+          "独立求解第2项。False",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。",
+          "独立求解第3项。True",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。",
+          "独立求解第4项。False",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": true,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": true,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为True。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": false,
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为False。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 12,
+      "candidate_id": "orig:ai:phase3:fullA:q012:v1",
+      "candidate_sha256": "efc939d5afbbf5a32c80806a099ee28b16519bc58c2e2eb0abf3c9477d8f0030",
+      "input_sha256": "6f8958a047073d7e0e27a40e742cac828540f131e8809c7627db75d183f6a55c",
+      "output_sha256": "ae39e733f5b5c8476780fdb86054b6b64190fedebfe0757a53577ae955623fb9",
+      "elapsed_seconds": 1.028,
+      "result": {
+        "question_sha256": "72f65b190dfd4c753f58917787034ad6d5ecddcff6c9fcfff73b541b0ccd33d2",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{5}{2}\\)",
+          "样本量为4，先排序或求均值\\(3\\)，依照统计量定义得到\\(\\frac{5}{2}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "5/2",
+              "steps": [
+                "样本量为4，先排序或求均值\\(3\\)，依照统计量定义得到\\(\\frac{5}{2}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 13,
+      "candidate_id": "orig:ai:phase3:fullA:q013:v1",
+      "candidate_sha256": "d486d17b04321c72d3f32b73e4be2d61cea602d8aadc63bae47bc348ec789798",
+      "input_sha256": "c3f36a2961578d131a9407a929808f5e252964ca64c361070540d0bee6f597af",
+      "output_sha256": "9a2523eab5e787ff0ee0ee1dc3800405da1d04db5ed73cc2a36063f58513a642",
+      "elapsed_seconds": 1.187,
+      "result": {
+        "question_sha256": "ddc6934a3b5a2adea7aa373b988f74ff93cd0c3391d7c3cb165fd0c008186df6",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{1094}{81}\\)",
+          "先分解通项 \\(3 \\cdot 3^{- k} \\left(3^{k} - 1\\right)\\)，按有限和边界计算，保留末项，得到 \\(\\frac{1094}{81}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1094/81",
+              "steps": [
+                "先分解通项 \\(3 \\cdot 3^{- k} \\left(3^{k} - 1\\right)\\)，按有限和边界计算，保留末项，得到 \\(\\frac{1094}{81}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 14,
+      "candidate_id": "orig:ai:phase3:fullA:q014:v1",
+      "candidate_sha256": "7fa82b8f6ccc135393f0b7828f26d2cc66425c08af0effcfe26e1620ca51f08f",
+      "input_sha256": "44b5833bb1456cc6ea636d06cf121e3fdd18fd485a89bfdd5b3aba81208d9187",
+      "output_sha256": "82422ed8b250d292089d8b23d1089b02cba060bb29b2db42ecf245f3cb920cd3",
+      "elapsed_seconds": 1.02,
+      "result": {
+        "question_sha256": "629cc9880fa45c8f9976229712e9ebfa6a4448fb38f045b89d5567a2428bb659",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{1}{5}\\)",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/5。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1/5",
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为1/5。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 15,
+      "candidate_id": "orig:ai:phase3:fullA:q015:v1",
+      "candidate_sha256": "20dbbf2d0441eb9d8d284442a90d8a7a76a8d7f45dd14124348230c183cf7ef7",
+      "input_sha256": "c80da0284d096e6e960021eb9f169ae36dc90c5e48e9e98f2d641ee795deb039",
+      "output_sha256": "354a4b992ae2708e3e747d541a994d14e412f869330307e08e849f03fa11b5e2",
+      "elapsed_seconds": 1.085,
+      "result": {
+        "question_sha256": "a86d6ae83d9879a4e9f4ff404db54e2aedab9b3c00a8994966e694b7807d659b",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{1}{3}\\)",
+          "按题设等可能样本逐项枚举。条件下共12个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{3}\\)。",
+          "独立求解第2项。\\(\\frac{1}{2}\\)",
+          "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。",
+          "独立求解第3项。\\(5\\)",
+          "逐个计入满足条件的有序结果，计算随机变量数值的算术平均，得到\\(5\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "1/3",
+              "steps": [
+                "按题设等可能样本逐项枚举。条件下共12个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{3}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": "1/2",
+              "steps": [
+                "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": "5",
+              "steps": [
+                "逐个计入满足条件的有序结果，计算随机变量数值的算术平均，得到\\(5\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 16,
+      "candidate_id": "orig:ai:phase3:fullA:q016:v1",
+      "candidate_sha256": "1639a83cd77836cefba97fd99bddbb8709e24876d26e968ce6819aed3f0559e2",
+      "input_sha256": "c1c170875492b9a488f0cd4c4d054372dba49705384d8c280a2f4931517de408",
+      "output_sha256": "fcf3d9864e94fe5a8f0ba78137f40f48a3826e98dc7553efa238069d509e213b",
+      "elapsed_seconds": 1.177,
+      "result": {
+        "question_sha256": "5beaef9d50ada1055be9bff36187d8a06c1571945354d3a30d7368e257746878",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{2 \\sqrt{6}}{3}\\)",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为2*sqrt(6)/3。",
+          "独立求解第2项。\\(\\frac{\\sqrt{3}}{2}\\)",
+          "按坐标、内积、平面法向量或联立消元定义独立计算。结果为sqrt(3)/2。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "2*sqrt(6)/3",
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为2*sqrt(6)/3。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": "sqrt(3)/2",
+              "steps": [
+                "按坐标、内积、平面法向量或联立消元定义独立计算。结果为sqrt(3)/2。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 17,
+      "candidate_id": "orig:ai:phase3:fullA:q017:v1",
+      "candidate_sha256": "0f7bea83fc13935833e707b181ed0e17c1035c28718efb9124322ee98a79154b",
+      "input_sha256": "5456ce07de7b6d30044410eb5d216c16ce0f42552a2c2853582475bd0240bd27",
+      "output_sha256": "591747eb0d8e131cf54a26e144c9cb64818836b4224ae0e336bc7fb63c7d4de4",
+      "elapsed_seconds": 1.5,
+      "result": {
+        "question_sha256": "3a295d5f4274af5229dbe178b869f704f2e5d3c63009156f3818cbf6993d4b0d",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(3 \\cdot 2^{n - 1} - n - 1\\)",
+          "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+          "独立求解第2项。\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)",
+          "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+          "将独立求出的通项代入加权和，拆项求和并保留有限边界，得到\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "3*2**(n - 1) - n - 1",
+              "steps": [
+                "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": "3*n/2 - 3 + n/2**n + 3/2**n",
+              "steps": [
+                "独立求解递推后，通项为 \\(3 \\cdot 2^{n - 1} - n - 1\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+                "将独立求出的通项代入加权和，拆项求和并保留有限边界，得到\\(\\frac{3 n}{2} - 3 + 2^{- n} n + 3 \\cdot 2^{- n}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 18,
+      "candidate_id": "orig:ai:phase3:fullA:q018:v2",
+      "candidate_sha256": "06a5c191916d29c0ad3348ccf0c3c347c1a2d94267775a2dfef3d915f8894b1a",
+      "input_sha256": "03cf3ca4c8e894cfa31e8db6c753737622c6aa8a7db76a61270d45b34c79ff3a",
+      "output_sha256": "0ca19c77edcbada74409b0b5de0b2e6e66d2cbeba001f3331f803f0f2dfc7a4b",
+      "elapsed_seconds": 1.242,
+      "result": {
+        "question_sha256": "337a74fe18c91940404c53592600f8eafb459adc307467bc1ff88111048f8311",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。a \\(2\\)；b \\(1\\)",
+          "联立全部条件消元，逐个解回代原方程组。",
+          "[{'a': '2', 'b': '1'}]",
+          "独立求解第2项。True",
+          "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。",
+          "独立求解第3项。minimum \\(1\\)；maximum \\(\\frac{28}{3}\\)；minimum_at \\(1\\)；maximum_at \\(- \\frac{2}{3}\\)",
+          "定义域内连续，导数为\\(- 2 \\left(3 x + 2\\right)\\)，驻点为\\(\\left\\{- \\frac{2}{3}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[-1, - \\frac{2}{3}\\right]\\)，为负的区间为\\(\\left[- \\frac{2}{3}, 1\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': '28/3', 'minimum_at': ['1'], 'maximum_at': ['-2/3']}"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": [
+                {
+                  "a": "2",
+                  "b": "1"
+                }
+              ],
+              "steps": [
+                "联立全部条件消元，逐个解回代原方程组。",
+                "[{'a': '2', 'b': '1'}]"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": true,
+              "steps": [
+                "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": {
+                "minimum": "1",
+                "maximum": "28/3",
+                "minimum_at": [
+                  "1"
+                ],
+                "maximum_at": [
+                  "-2/3"
+                ]
+              },
+              "steps": [
+                "定义域内连续，导数为\\(- 2 \\left(3 x + 2\\right)\\)，驻点为\\(\\left\\{- \\frac{2}{3}\\right\\}\\)。",
+                "导数为正的区间为\\(\\left[-1, - \\frac{2}{3}\\right]\\)，为负的区间为\\(\\left[- \\frac{2}{3}, 1\\right]\\)。",
+                "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': '28/3', 'minimum_at': ['1'], 'maximum_at': ['-2/3']}"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 19,
+      "candidate_id": "orig:ai:phase3:fullA:q019:v1",
+      "candidate_sha256": "2dc9a73e755868919d5d37807ff3acf6f56ab02c8d5de70687e6e25b49ec973c",
+      "input_sha256": "7b11cb1380d5e41778cd47af4ba7b08f80e32effaee7beeb8b0b53de57717be0",
+      "output_sha256": "8c9fcd266208750ee9d46701327118ed7a60ae3a06f328404098b4bda9a0984b",
+      "elapsed_seconds": 1.258,
+      "result": {
+        "question_sha256": "a68b3d435115fea56fdf8f83303501ebf5de4380ed26393cb020ddfa00181dc4",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。Interval(4, oo)",
+          "将要求化为\\(1\\)a+(\\(x \\left(x - 4\\right)\\))≥0，对题设区间内每个x成立。",
+          "利用系数的固定符号，等价于a相对于\\(- x^{2} + 4 x\\)的全域界。",
+          "求该比值的驻点和边界极限，得到参数范围\\(\\left[4, \\infty\\right)\\)。边界处仍满足弱不等式。",
+          "独立求解第2项。increasing Interval(0, 1)；decreasing Interval(1, 3)；critical \\(1\\)；critical \\(3\\)",
+          "定义域内连续，导数为\\(\\left(x - 3\\right) \\left(x - 1\\right)\\)，驻点为\\(\\left\\{1, 3\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[0, 1\\right]\\)，为负的区间为\\(\\left[1, 3\\right]\\)。",
+          "独立求解第3项。proved True；infimum \\(0\\)；equality \\(0\\)",
+          "令两边之差为g(x)=\\(\\frac{x^{3}}{3} - 2 x^{2} + 4 x\\)。导数为\\(\\left(x - 2\\right)^{2}\\)。",
+          "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "Interval(4, oo)",
+              "steps": [
+                "将要求化为\\(1\\)a+(\\(x \\left(x - 4\\right)\\))≥0，对题设区间内每个x成立。",
+                "利用系数的固定符号，等价于a相对于\\(- x^{2} + 4 x\\)的全域界。",
+                "求该比值的驻点和边界极限，得到参数范围\\(\\left[4, \\infty\\right)\\)。边界处仍满足弱不等式。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": {
+                "increasing": "Interval(0, 1)",
+                "decreasing": "Interval(1, 3)",
+                "critical": [
+                  "1",
+                  "3"
+                ]
+              },
+              "steps": [
+                "定义域内连续，导数为\\(\\left(x - 3\\right) \\left(x - 1\\right)\\)，驻点为\\(\\left\\{1, 3\\right\\}\\)。",
+                "导数为正的区间为\\(\\left[0, 1\\right]\\)，为负的区间为\\(\\left[1, 3\\right]\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": {
+                "proved": true,
+                "infimum": "0",
+                "equality": [
+                  "0"
+                ]
+              },
+              "steps": [
+                "令两边之差为g(x)=\\(\\frac{x^{3}}{3} - 2 x^{2} + 4 x\\)。导数为\\(\\left(x - 2\\right)^{2}\\)。",
+                "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    }
+  ],
+  "structure": {
+    "passed": true,
+    "errors": [],
+    "questions": 19,
+    "points": 150,
+    "kind_counts": {
+      "single_choice": 8,
+      "multiple_choice": 3,
+      "fill_in": 3,
+      "constructed_response": 5
+    },
+    "module_counts": {
+      "集合与复数": 2,
+      "三角与向量": 2,
+      "概率统计": 3,
+      "解析几何": 3,
+      "函数与导数": 3,
+      "排列组合": 1,
+      "数列": 3,
+      "立体几何": 2
+    },
+    "estimated_minutes": 166,
+    "time_basis": "按任务操作与推理层数估计，未经考生作答校准",
+    "quality_rating": "研究审阅版，尚未认定为高质量高考模拟卷"
+  },
+  "overall_status": "研究审阅版，程序通过，独立AI审题待完成",
+  "limitations": [
+    "程序验证范围为显式数学规格，未完成任意语义形式化证明",
+    "创新程度与难度为设计判断，尚需教师审核与考生实测"
+  ],
+  "remote_model_calls": 0
+}

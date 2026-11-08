@@ -1,0 +1,810 @@
+[
+  {
+    "question_id": "orig:ai:phase3:derivative10:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:",
+        "monotonicity:"
+      ],
+      "reasoning_path": "把导数非负化成参数上界，验证边界时并非整段常数",
+      "knowledge_combination": [
+        "函数与导数",
+        "参数单调与边界驻点"
+      ],
+      "setting_and_ask": "研究导数的最小约束如何决定整段单调。",
+      "structure_sha256": "33ad963af722d95ee4ee8074bc1ac5f4d89d28501b39063858c3eb1ef166fc5f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.263,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q001:v1",
+      "right": "orig:ai:phase3:fullA:q019:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_bound:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "求差函数唯一极小点，同时检查两端极限",
+      "knowledge_combination": [
+        "函数与导数",
+        "对数全域界与取等"
+      ],
+      "setting_and_ask": "寻找能够对全部正数成立的统一下界。",
+      "structure_sha256": "f972411d58dbd3405cf952365b5a12afe99a3bda2b0dbc049cc65b8f37ad56f3"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.154,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q002:v1",
+      "right": "orig:ai:phase3:derivative10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "extrema:"
+      ],
+      "reasoning_path": "先判断导数符号，再比较端点与内部点",
+      "knowledge_combination": [
+        "函数与导数",
+        "指数乘积与闭区间最值"
+      ],
+      "setting_and_ask": "同一个函数在有界区间上既有驻点又有端点竞争。",
+      "structure_sha256": "c98a7d2f5b24e4bd1e00822a644315b727adef76774d654d8d20af6617e61103"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.048,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q003:v1",
+      "right": "orig:ai:phase3:derivative10:q005:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "unique"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "定位导数相等点，再对差函数证明全域非负",
+      "knowledge_combination": [
+        "函数与导数",
+        "切线接触点与平移缩放不等式"
+      ],
+      "setting_and_ask": "对数曲线的切线界应在整个正半轴检查。",
+      "structure_sha256": "e64d71bf3b36aa7bb4f407393a1719dedad061c1024dabde7c8bc90f52c1e2e1"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.3,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q004:v1",
+      "right": "orig:ai:phase3:derivative10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q005:v2",
+    "features": {
+      "condition_structure": [
+        [
+          "expressions",
+          "op",
+          "unique",
+          "variables"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "system:",
+        "extrema:"
+      ],
+      "reasoning_path": "联立函数值与导数值，分区讨论三个候选点",
+      "knowledge_combination": [
+        "函数与导数",
+        "反向切线加端点比较"
+      ],
+      "setting_and_ask": "先由水平切线条件恢复系数，再检查恢复后的曲线。",
+      "structure_sha256": "4a4e206faf8f69c70f331f5e614bbfa957a9c36f71668447021de70335392682"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.093,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q005:v2",
+      "right": "orig:ai:phase3:fullA:q018:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q006:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ],
+        [
+          "at",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "monotonicity:",
+        "derivative:"
+      ],
+      "reasoning_path": "导数不变号，合并两侧单调区间，说明零导数点的作用",
+      "knowledge_combination": [
+        "函数与导数",
+        "偶重导数零点与严格单调"
+      ],
+      "setting_and_ask": "导数在一点为零，并不保证该点是极值点。",
+      "structure_sha256": "284fd7a23f6d7cc59b49d15714921c55339569fc91123cd96d263902208f1525"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.111,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q006:v1",
+      "right": "orig:ai:phase3:fullA:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:"
+      ],
+      "reasoning_path": "参数系数固定符号，必要条件来自远端，边界仍成立",
+      "knowledge_combination": [
+        "函数与导数",
+        "导数含参数与无穷远约束"
+      ],
+      "setting_and_ask": "开放无穷区间的参数界可能由极限决定。",
+      "structure_sha256": "4b68ca21e02e35d6b266027e32e99e9f8f618e0e139daaddf930d4da3b7f96ef"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.158,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q007:v1",
+      "right": "orig:ai:phase3:acceptance5:q004:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q008:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "nonnegative:"
+      ],
+      "reasoning_path": "导数在原点前后变号，检查两侧极限",
+      "knowledge_combination": [
+        "函数与导数",
+        "全域切线支撑与唯一取等"
+      ],
+      "setting_and_ask": "证明指数曲线高于其在原点的切线，并找出全部取等点。",
+      "structure_sha256": "2b683c2377002a2868a8bfd5a861cba03bce564ac7d673d40b3a4fad713f9502"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.195,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q008:v1",
+      "right": "orig:ai:phase3:acceptance5:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q009:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:",
+        "monotonicity:"
+      ],
+      "reasoning_path": "令平方为新变量求零点，再独立求导分区",
+      "knowledge_combination": [
+        "函数与导数",
+        "双二次零点与三驻点排序"
+      ],
+      "setting_and_ask": "函数的零点和导数零点是两类不同对象。",
+      "structure_sha256": "39dcb13fafc8f135371ed541d35749e01bcbaa3f2e7a574d0990ee720ca5868f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.049,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q009:v1",
+      "right": "orig:ai:phase3:fullB:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q010:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_bound:",
+        "extrema:"
+      ],
+      "reasoning_path": "参数界与极小值相互验证，注意两端都无界",
+      "knowledge_combination": [
+        "函数与导数",
+        "反比例成本最优界"
+      ],
+      "setting_and_ask": "单位成本由正比例项和反比例项组成。求统一扣减常数的可行范围。",
+      "structure_sha256": "7fee1d029ed0e69f21db8ef8bf39487beb419e15b3bda8dd10e38f440bbc395f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.082,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q010:v1",
+      "right": "orig:ai:phase3:derivative10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  }
+]

@@ -151,7 +151,7 @@ def draft(family, seed, kind="constructed_response", points=10):
         text = f"袋中有{a}个红球、{b}个蓝球，各球等可能取到。无放回连续取2球，求恰好一红一蓝的概率。"
         values = [sp.Rational(2 * a * b, (a + b) * (a + b - 1))]
     elif family == "positive_roots":
-        text = "关于x的方程x²-2tx+t=0有两个互异正实根。t的取值范围的有限端点是多少？另请写出完整范围。"
+        text = "关于x的方程x²-2tx+t=0有两个互异正实根。t的取值范围的有限端点是多少？"
         values = [1]
     elif family == "trig_count":
         text = r"方程\(\sin(2x)=1/2\)在\(0<x<2\pi\)内有多少个解？"
@@ -231,17 +231,20 @@ def draft(family, seed, kind="constructed_response", points=10):
 
 
 def add_options(question, seed):
+    from .review import misconception_options
+
     rng = random.Random(seed)
     values = [sp.sympify(x) for x in question["proposed_values"]]
     if question["kind"] == "single_choice":
         target = values[0]
-        options = [target, target + 1, target + 2, target - 1]
+        options = misconception_options(question, target)
         rng.shuffle(options)
         question["options"] = {
-            key: {"text": math(v), "semantic_value": str(v)}
-            for key, v in zip("ABCD", options)
+            key: {"text": math(v), "semantic_value": str(v), "error_path": reason}
+            for key, (v, reason) in zip("ABCD", options)
         }
     elif question["kind"] == "multiple_choice":
+        question["stem"] = question["stem"].replace("选择所有正确命题。", "")
         question["stem"] += " 判断下列命题，选择所有正确选项。"
         if question["family"] in ("geometry_assertions", "logquad_assertions"):
             claims = question["parameters"]["statements"]

@@ -32,6 +32,24 @@ WORK.mkdir(exist_ok=True)
 
 
 class DatabaseResearchTests(unittest.TestCase):
+    def test_actual_recovery_key_absent_from_tracked_data_and_logs(self):
+        from security_scan import scan_blob
+
+        token = (ROOT.parent / "henan-math-recovery.key").read_bytes().strip()
+        tracked = subprocess.check_output(
+            ["git", "ls-files", "-z"], cwd=ROOT, text=True
+        ).split("\0")
+        paths = {ROOT / p for p in tracked if p and (ROOT / p).is_file()}
+        paths.update((ROOT / "reports").rglob("*.json"))
+        paths.update((ROOT / "reports").rglob("*.txt"))
+        for path in paths:
+            report = scan_blob(
+                path.relative_to(ROOT).as_posix(), path.read_bytes(), (token,)
+            )
+            self.assertTrue(
+                report["passed"], report["path"] + ":" + ",".join(report["codes"])
+            )
+
     def test_all_38_have_content_and_bound_analysis(self):
         rows = research(ROOT)
         self.assertEqual(len(rows), 38)
@@ -441,3 +459,4 @@ class OutputTests(unittest.TestCase):
         self.assertEqual(
             formatted_plain("aₙ₊₁=x³"), "a<sub>n+1</sub>=x<super>3</super>"
         )
+        self.assertEqual(formatted_plain("S=3/4−1/n"), "S=3/4-1/n")

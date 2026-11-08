@@ -1,0 +1,1533 @@
+{
+  "schema_version": 2,
+  "generation_mode": "ai",
+  "provider": "host_ai",
+  "blueprint": {
+    "version": "dynamic-planner-v1",
+    "mode": "sequence",
+    "profile": "sequence-diversity",
+    "seed": 0,
+    "title": "sequence10数学动态命题实验 · 研究审阅版",
+    "slots": [
+      {
+        "order": 1,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 2,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 3,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 4,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 5,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "基本转化"
+      },
+      {
+        "order": 6,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 7,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 8,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 9,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      },
+      {
+        "order": 10,
+        "kind": "constructed_response",
+        "points": 10,
+        "module": "数列",
+        "research_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q007",
+          "2026-cn-math-national-1:q014"
+        ],
+        "reasoning_target": "条件关联"
+      }
+    ],
+    "total_points": 100,
+    "research_context_sha256": "19e42b58fdd90195e7bf459f55bca1c23806c3ea175522930b192651cc1592ba",
+    "rules_sha256": "536a72ff8349e505dc2f8621f61143b4fb70dd1ca4680d05d4d96b99a43d071d",
+    "sample_size": 2,
+    "official_2027_structure_verified": false,
+    "planning_basis": "读取逐题知识与条件设计分析，结合AI本轮提出的模块搭配；计分结构由历史候选规则约束",
+    "simulation_settings": [
+      "2027详细结构尚为模拟设定",
+      "难度和用时为设计估计，需教师与考生验证"
+    ]
+  },
+  "research_context_sha256": "19e42b58fdd90195e7bf459f55bca1c23806c3ea175522930b192651cc1592ba",
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "author": "当前Codex宿主AI",
+    "authored_at": "2026-11-08",
+    "task": "phase3-dynamic-math",
+    "method": "本轮直接设计不同数学关系并写出结构化候选，未调用FamilyProvider、draft或26族模板",
+    "api_calls": 0,
+    "template_calls": 0
+  },
+  "questions": [
+    {
+      "id": "orig:ai:phase3:sequence10:q001:v1",
+      "order": 1,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "有一类间隔两位的分式项，研究其边界如何留下残项。\n（1）求有限和。\\(\\sum_{k=1}^{n}\\frac{1}{\\left(k\\cdot \\left(k+2\\right)\\right)}\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "有一类间隔两位的分式项，研究其边界如何留下残项。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "1/(k*(k+2))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "隔位裂项",
+        "reasoning_path": "拆成相隔两项的倒数，分别检查首尾两项",
+        "knowledge_combination": [
+          "数列",
+          "隔位裂项"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "7f98201528921a0967e27bfc97601f7f332fd3f6bd479f846315b2c2a45bd446"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q002:v1",
+      "order": 2,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "求权重随项号增长的等比和。\n（1）求有限和。\\(\\sum_{k=1}^{n}\\left(k\\cdot \\left(2\\right)^{k}\\right)\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "求权重随项号增长的等比和。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "k*2**k",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "线性权重与等比底数",
+        "reasoning_path": "错位相减或有限和求导，检查末项",
+        "knowledge_combination": [
+          "数列",
+          "线性权重与等比底数"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "3ecedc675e8d1a3688b212f484f2ad4bbd503ab250a99ab713e1477394af6d70"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q003:v1",
+      "order": 3,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "相邻项受到随项号变化的线性约束。\n（1）求数列通项。\\(\\left(\\left(\\left(\\left(n+1\\right)\\cdot u\\left(\\left(n+1\\right)\\right)\\right)-\\left(\\left(n+2\\right)\\cdot u\\left(n\\right)\\right)\\right)-1\\right)\\)=0，初值u(1)=2，n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "相邻项受到随项号变化的线性约束。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "(n+1)*u(n+1)-(n+2)*u(n)-1",
+            "initial": {
+              "1": "2"
+            }
+          }
+        ]
+      },
+      "design": {
+        "structure": "变系数非齐次递推",
+        "reasoning_path": "除以相邻乘积后累加，再恢复通项",
+        "knowledge_combination": [
+          "数列",
+          "变系数非齐次递推"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "0afef290191ef18297422657c217740d092777f6f0097aff92582f495a127c24"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q004:v1",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "奇偶方向交替的增量随项号增加。\n（1）求数列通项。\\(\\left(\\left(u\\left(\\left(n+1\\right)\\right)-u\\left(n\\right)\\right)-\\left(\\left(\\left(2\\cdot n\\right)+1\\right)\\cdot \\left(-1\\right)^{n}\\right)\\right)\\)=0，初值u(1)=1，n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "奇偶方向交替的增量随项号增加。",
+        "tasks": [
+          {
+            "op": "recurrence",
+            "relation": "u(n+1)-u(n)-(2*n+1)*(-1)**n",
+            "initial": {
+              "1": "1"
+            }
+          }
+        ]
+      },
+      "design": {
+        "structure": "线性增量的交替驱动",
+        "reasoning_path": "将奇数和偶数项配对，验证通项与首项",
+        "knowledge_combination": [
+          "数列",
+          "线性增量的交替驱动"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "eef3a530283e1ec5e6c056392f991ac7c26fec377c5604d9e33a830aa8998715"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q005:v1",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "多个相邻因子共同约消，保留首尾的乘积。\n（1）求有限积。\\(\\prod_{k=1}^{n}\\frac{\\left(\\left(k+1\\right)\\cdot \\left(k+3\\right)\\right)}{\\left(k\\cdot \\left(k+4\\right)\\right)}\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "多个相邻因子共同约消，保留首尾的乘积。",
+        "tasks": [
+          {
+            "op": "product",
+            "expression": "(k+1)*(k+3)/(k*(k+4))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "交叉约分有限积",
+        "reasoning_path": "分开两组相邻比，核对边界因子",
+        "knowledge_combination": [
+          "数列",
+          "交叉约分有限积"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "b0e56fb454cb3e61a9b051ee500ae397f639c6522569a0189445b69527f35792"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q006:v1",
+      "order": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "相邻根式分母不宜直接数值近似。\n（1）求有限和。\\(\\sum_{k=1}^{n}\\frac{1}{\\left(\\sqrt{k}+\\sqrt{\\left(k+1\\right)}\\right)}\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "相邻根式分母不宜直接数值近似。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "1/(sqrt(k)+sqrt(k+1))",
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "根式有理化后相消",
+        "reasoning_path": "乘共轭转成相邻根式差，再作有限和",
+        "knowledge_combination": [
+          "数列",
+          "根式有理化后相消"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "c189a6e12b75c6805bf1eba066d2d080ad2d0604b3a8f5a2f41a66fcd4957cb8"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q007:v1",
+      "order": 7,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "把多项式按升幂展开的系数依次看成一个有限数列。\n（1）求展开式指定幂的系数。\\(\\left(\\left(\\left(1+x\\right)\\right)^{6}\\cdot \\left(\\left(1-x\\right)\\right)^{4}\\right)\\)，所求幂次3。",
+      "options": null,
+      "problem": {
+        "context": "把多项式按升幂展开的系数依次看成一个有限数列。",
+        "tasks": [
+          {
+            "op": "coefficient",
+            "expression": "(1+x)**6*(1-x)**4",
+            "power": 3
+          }
+        ]
+      },
+      "design": {
+        "structure": "两类二项式系数卷积",
+        "reasoning_path": "先合并相反因子再提取三次项",
+        "knowledge_combination": [
+          "数列",
+          "两类二项式系数卷积"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "65dd4719dcdec8c26296fde4de63c06445dd4b1a7be8b5c596d01f8e17293c7f"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q008:v1",
+      "order": 8,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "三个数x-y、x、x+y构成递增等差数列，其和为12、平方和为54。求x、y。\n（1）解方程组。\\(\\left(\\left(3\\cdot x\\right)-12\\right)\\)=0，\\(\\left(\\left(\\left(\\left(3\\cdot x\\right)\\cdot x\\right)+\\left(\\left(2\\cdot y\\right)\\cdot y\\right)\\right)-54\\right)\\)=0, 未知量x,y为实数。附加限制\\(y>0\\)。",
+      "options": null,
+      "problem": {
+        "context": "三个数x-y、x、x+y构成递增等差数列，其和为12、平方和为54。求x、y。",
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "expressions": [
+              "3*x-12",
+              "3*x*x+2*y*y-54"
+            ],
+            "conditions": [
+              "y>0"
+            ],
+            "unique": true
+          }
+        ]
+      },
+      "design": {
+        "structure": "对称变量恢复等差三元组",
+        "reasoning_path": "以中项与公差建模，附加递增条件排除负公差",
+        "knowledge_combination": [
+          "数列",
+          "对称变量恢复等差三元组"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 3,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "609bf81e589d8ed04eb64704e374f365f96a046052993593eb4beb4e266b983c"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q009:v1",
+      "order": 9,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "每新增一个编号，将此前两编号的配对数记作一项。\n（1）求有限和。\\(\\sum_{k=2}^{n}\\binom{k}{2}\\)；n为正整数。",
+      "options": null,
+      "problem": {
+        "context": "每新增一个编号，将此前两编号的配对数记作一项。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "binomial(k,2)",
+            "lower": 2,
+            "upper": "n"
+          }
+        ]
+      },
+      "design": {
+        "structure": "组合计数与部分和",
+        "reasoning_path": "按三个编号中的最大者分类，也可代数求和",
+        "knowledge_combination": [
+          "数列",
+          "组合计数与部分和"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 2,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "e23c07f46c246358cebee9ac94b26ae7a9f1071a66de1e00a113ea69dc02f203"
+      },
+      "answer_domain": null
+    },
+    {
+      "id": "orig:ai:phase3:sequence10:q010:v1",
+      "order": 10,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "stem": "比较前n个正奇数平方和与n的立方。\n（1）求有限和。\\(\\sum_{k=1}^{n}\\left(\\left(\\left(2\\cdot k\\right)-1\\right)\\right)^{2}\\)；n为正整数。\n（2）证明下式非负并讨论取等。\\(\\left(\\frac{\\left(n\\cdot \\left(\\left(\\left(4\\cdot n\\right)\\cdot n\\right)-1\\right)\\right)}{3}-\\left(n\\right)^{3}\\right)\\)，n∈\\(\\left[1, \\infty\\right)\\)。",
+      "options": null,
+      "problem": {
+        "context": "比较前n个正奇数平方和与n的立方。",
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "(2*k-1)**2",
+            "upper": "n"
+          },
+          {
+            "op": "nonnegative",
+            "expression": "n*(4*n*n-1)/3-n**3",
+            "variable": "n",
+            "domain": [
+              "1",
+              "oo"
+            ],
+            "open": [
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      "design": {
+        "structure": "奇数平方和与多项式界",
+        "reasoning_path": "先求和，再因式分解比较，区分实数充分条件与正整数结论",
+        "knowledge_combination": [
+          "数列",
+          "奇数平方和与多项式界"
+        ],
+        "condition_design": "本轮宿主AI显式构造数学关系",
+        "originality_scope": "比较当前候选及本轮结构，不声称全网首次",
+        "difficulty_uncertainty": "尚无考生实测"
+      },
+      "difficulty": 4,
+      "difficulty_basis": "操作、量词和关联层数的设计判断，尚无考生得分率",
+      "generation": {
+        "mode": "ai",
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "raw_candidate_sha256": "2450383b3a7f6b2262de53b71de2fff5a2f3e51decbfe25872a22d3b5eca82c0"
+      },
+      "answer_domain": null
+    }
+  ],
+  "verifications": [
+    {
+      "question_sha256": "82794e61acba7e951a6c5be574e0fa384340bd73e059478914b0f095ce728a6f",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{n \\left(3 n + 5\\right)}{4 n^{2} + 12 n + 8}\\)",
+        "先分解通项 \\(\\frac{1}{k \\left(k + 2\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(3 n + 5\\right)}{4 \\left(n^{2} + 3 n + 2\\right)}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "n*(3*n + 5)/(4*(n**2 + 3*n + 2))",
+            "steps": [
+              "先分解通项 \\(\\frac{1}{k \\left(k + 2\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(3 n + 5\\right)}{4 \\left(n^{2} + 3 n + 2\\right)}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "28c866585631bd7d791b36406ef2d1bfba6a8759a071e5ae757198004448bce1",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)",
+        "先分解通项 \\(2^{k} k\\)，按有限和边界计算，保留末项，得到 \\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "2*2**n*n - 2*2**n + 2",
+            "steps": [
+              "先分解通项 \\(2^{k} k\\)，按有限和边界计算，保留末项，得到 \\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "048f033147b66bb10fb3bf3c25b8aff13cc8cc2764bf1b41a61b2882840603c2",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{3 n}{2} + \\frac{1}{2}\\)",
+        "独立求解递推后，通项为 \\(\\frac{3 n}{2} + \\frac{1}{2}\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "3*n/2 + 1/2",
+            "steps": [
+              "独立求解递推后，通项为 \\(\\frac{3 n}{2} + \\frac{1}{2}\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "bee5beb267a6cff9f0687dacd6a51ae3cbb816b40e0250417196b650079d9c61",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\left(-1\\right)^{n + 1} n\\)",
+        "改写为下一项等于当前项的倍数加驱动项。令乘积权重Pₙ=\\(1\\)，两边除以Pₙ₊₁后相邻差为\\(\\left(-1\\right)^{j} \\left(2 j + 1\\right)\\)，累加恢复通项。",
+        "独立求解递推后，通项为 \\(\\left(-1\\right)^{n + 1} n\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "(-1)**(n + 1)*n",
+            "steps": [
+              "改写为下一项等于当前项的倍数加驱动项。令乘积权重Pₙ=\\(1\\)，两边除以Pₙ₊₁后相邻差为\\(\\left(-1\\right)^{j} \\left(2 j + 1\\right)\\)，累加恢复通项。",
+              "独立求解递推后，通项为 \\(\\left(-1\\right)^{n + 1} n\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "488cca20a8090e9bb1cd74d6921c202eb0f76ef6a950e5a78847eebb92cb1b17",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{4 n + 4}{n + 4}\\)",
+        "先分解通项 \\(\\frac{\\left(k + 1\\right) \\left(k + 3\\right)}{k \\left(k + 4\\right)}\\)，按有限积边界计算，保留末项，得到 \\(\\frac{4 \\left(n + 1\\right)}{n + 4}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "4*(n + 1)/(n + 4)",
+            "steps": [
+              "先分解通项 \\(\\frac{\\left(k + 1\\right) \\left(k + 3\\right)}{k \\left(k + 4\\right)}\\)，按有限积边界计算，保留末项，得到 \\(\\frac{4 \\left(n + 1\\right)}{n + 4}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "47a822954c3b4b6e6473ac3fd8bbfac4273e03a6f42756f6d6d0825e2563455a",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\sqrt{n + 1} - 1\\)",
+        "先分解通项 \\(- \\sqrt{k} + \\sqrt{k + 1}\\)，按有限和边界计算，保留末项，得到 \\(\\sqrt{n + 1} - 1\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "sqrt(n + 1) - 1",
+            "steps": [
+              "先分解通项 \\(- \\sqrt{k} + \\sqrt{k + 1}\\)，按有限和边界计算，保留末项，得到 \\(\\sqrt{n + 1} - 1\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "75a043ae1c8d1bfc297d3fe3cfb7341f8d91ec31875a13e6166508d2bc94c70d",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(-8\\)",
+        "展开式中指数等于3的项才有贡献，提取系数得到\\(-8\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "-8",
+            "steps": [
+              "展开式中指数等于3的项才有贡献，提取系数得到\\(-8\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "d4215c8f031fe7d5b5435bf4ec4120874a6071c36ef8e7e100c05f752a16a476",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。x \\(4\\)；y \\(\\sqrt{3}\\)",
+        "联立全部条件消元，逐个解回代原方程组。",
+        "[{'x': '4', 'y': 'sqrt(3)'}]"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": [
+              {
+                "x": "4",
+                "y": "sqrt(3)"
+              }
+            ],
+            "steps": [
+              "联立全部条件消元，逐个解回代原方程组。",
+              "[{'x': '4', 'y': 'sqrt(3)'}]"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "07014d60a1380321ef47c97ff021f99dcfbbcf1eb0c344eb14be323cd774a694",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)",
+        "先分解通项 \\({\\binom{k}{2}}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "n**3/6 - n/6",
+            "steps": [
+              "先分解通项 \\({\\binom{k}{2}}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    },
+    {
+      "question_sha256": "2ceeca8b09821f744ce13e45b197390baac6e168adbbf885771dd31284529fea",
+      "passed": true,
+      "status": "已完成符号与数值交叉验证",
+      "option_key": null,
+      "values_latex": [],
+      "steps": [
+        "独立求解第1项。\\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)",
+        "先分解通项 \\(\\left(2 k - 1\\right)^{2}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。",
+        "独立求解第2项。proved True；infimum \\(0\\)；equality \\(1\\)",
+        "令两边之差为g(x)=\\(- n^{3} + \\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。导数为\\(\\frac{3 n^{2} - 1}{3}\\)。",
+        "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+      ],
+      "solver_record": {
+        "ok": true,
+        "tasks": [
+          {
+            "result": "n*(4*n**2 - 1)/3",
+            "steps": [
+              "先分解通项 \\(\\left(2 k - 1\\right)^{2}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          },
+          {
+            "result": {
+              "proved": true,
+              "infimum": "0",
+              "equality": [
+                "1"
+              ]
+            },
+            "steps": [
+              "令两边之差为g(x)=\\(- n^{3} + \\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。导数为\\(\\frac{3 n^{2} - 1}{3}\\)。",
+              "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+          }
+        ]
+      },
+      "formal_proof_passed": false,
+      "independent_ai_review": "尚未完成",
+      "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+      "model_version": "not_exposed_by_host",
+      "version": "dynamic-pipeline-v1",
+      "quality": {
+        "passed": true,
+        "errors": [],
+        "version": "independent-review-v1",
+        "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+      }
+    }
+  ],
+  "events": [
+    {
+      "slot": 1,
+      "candidate_id": "orig:ai:phase3:sequence10:q001:v1",
+      "candidate_sha256": "7f98201528921a0967e27bfc97601f7f332fd3f6bd479f846315b2c2a45bd446",
+      "input_sha256": "2b5ee02ed735de1bcd86c6b6ace12fbf551fcf941d24f19e8c3c5a7a94018906",
+      "output_sha256": "2f0357cca1b197a6eff51ced360a111ad6b703f804728cfb97c609a6f0d99fee",
+      "elapsed_seconds": 1.233,
+      "result": {
+        "question_sha256": "82794e61acba7e951a6c5be574e0fa384340bd73e059478914b0f095ce728a6f",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{n \\left(3 n + 5\\right)}{4 n^{2} + 12 n + 8}\\)",
+          "先分解通项 \\(\\frac{1}{k \\left(k + 2\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(3 n + 5\\right)}{4 \\left(n^{2} + 3 n + 2\\right)}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "n*(3*n + 5)/(4*(n**2 + 3*n + 2))",
+              "steps": [
+                "先分解通项 \\(\\frac{1}{k \\left(k + 2\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(3 n + 5\\right)}{4 \\left(n^{2} + 3 n + 2\\right)}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 2,
+      "candidate_id": "orig:ai:phase3:sequence10:q002:v1",
+      "candidate_sha256": "3ecedc675e8d1a3688b212f484f2ad4bbd503ab250a99ab713e1477394af6d70",
+      "input_sha256": "bae5af268063ec5f4c37a2c5818cc86c26d16ce9c1b0ef96d0ba2951886e2d5f",
+      "output_sha256": "1106940e13e0c329dd37c652439f002dcb75516de2b35e88b3650676fa62116f",
+      "elapsed_seconds": 1.188,
+      "result": {
+        "question_sha256": "28c866585631bd7d791b36406ef2d1bfba6a8759a071e5ae757198004448bce1",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)",
+          "先分解通项 \\(2^{k} k\\)，按有限和边界计算，保留末项，得到 \\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "2*2**n*n - 2*2**n + 2",
+              "steps": [
+                "先分解通项 \\(2^{k} k\\)，按有限和边界计算，保留末项，得到 \\(2 \\cdot 2^{n} n - 2 \\cdot 2^{n} + 2\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 3,
+      "candidate_id": "orig:ai:phase3:sequence10:q003:v1",
+      "candidate_sha256": "0afef290191ef18297422657c217740d092777f6f0097aff92582f495a127c24",
+      "input_sha256": "d2a43c12760154128d0a46a5628a0832dc037baec14c8cf1039e86728b33ae27",
+      "output_sha256": "e318d3b007d84dd21d24e0832b9ea363fa0227946299898ecc43e571cf8b6d7e",
+      "elapsed_seconds": 1.239,
+      "result": {
+        "question_sha256": "048f033147b66bb10fb3bf3c25b8aff13cc8cc2764bf1b41a61b2882840603c2",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{3 n}{2} + \\frac{1}{2}\\)",
+          "独立求解递推后，通项为 \\(\\frac{3 n}{2} + \\frac{1}{2}\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "3*n/2 + 1/2",
+              "steps": [
+                "独立求解递推后，通项为 \\(\\frac{3 n}{2} + \\frac{1}{2}\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 4,
+      "candidate_id": "orig:ai:phase3:sequence10:q004:v1",
+      "candidate_sha256": "eef3a530283e1ec5e6c056392f991ac7c26fec377c5604d9e33a830aa8998715",
+      "input_sha256": "4c304cefa9c499fad704c998511726e224e638405ea1712f260f2f63f6ab53f8",
+      "output_sha256": "cbd06113bfb5b341f32e452a7266cacbb02061e2db5329ba81a8a30245f77f17",
+      "elapsed_seconds": 1.403,
+      "result": {
+        "question_sha256": "bee5beb267a6cff9f0687dacd6a51ae3cbb816b40e0250417196b650079d9c61",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\left(-1\\right)^{n + 1} n\\)",
+          "改写为下一项等于当前项的倍数加驱动项。令乘积权重Pₙ=\\(1\\)，两边除以Pₙ₊₁后相邻差为\\(\\left(-1\\right)^{j} \\left(2 j + 1\\right)\\)，累加恢复通项。",
+          "独立求解递推后，通项为 \\(\\left(-1\\right)^{n + 1} n\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "(-1)**(n + 1)*n",
+              "steps": [
+                "改写为下一项等于当前项的倍数加驱动项。令乘积权重Pₙ=\\(1\\)，两边除以Pₙ₊₁后相邻差为\\(\\left(-1\\right)^{j} \\left(2 j + 1\\right)\\)，累加恢复通项。",
+                "独立求解递推后，通项为 \\(\\left(-1\\right)^{n + 1} n\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 5,
+      "candidate_id": "orig:ai:phase3:sequence10:q005:v1",
+      "candidate_sha256": "b0e56fb454cb3e61a9b051ee500ae397f639c6522569a0189445b69527f35792",
+      "input_sha256": "91e8fb437308b9b9d8124568565a434dbb0efdb29c22aa149dee673869667345",
+      "output_sha256": "ed0f3a3eea2f4536bfe2f537e0c36805d1b252c5bffad21fcf9897c9db68d790",
+      "elapsed_seconds": 1.178,
+      "result": {
+        "question_sha256": "488cca20a8090e9bb1cd74d6921c202eb0f76ef6a950e5a78847eebb92cb1b17",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{4 n + 4}{n + 4}\\)",
+          "先分解通项 \\(\\frac{\\left(k + 1\\right) \\left(k + 3\\right)}{k \\left(k + 4\\right)}\\)，按有限积边界计算，保留末项，得到 \\(\\frac{4 \\left(n + 1\\right)}{n + 4}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "4*(n + 1)/(n + 4)",
+              "steps": [
+                "先分解通项 \\(\\frac{\\left(k + 1\\right) \\left(k + 3\\right)}{k \\left(k + 4\\right)}\\)，按有限积边界计算，保留末项，得到 \\(\\frac{4 \\left(n + 1\\right)}{n + 4}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 6,
+      "candidate_id": "orig:ai:phase3:sequence10:q006:v1",
+      "candidate_sha256": "c189a6e12b75c6805bf1eba066d2d080ad2d0604b3a8f5a2f41a66fcd4957cb8",
+      "input_sha256": "730097f60fbae8b1e76b2fb435983ef994c1e83c6745e890b4906a41f111c332",
+      "output_sha256": "91b23eaef7d2a3c3cdbd9778dd07f039f0722d8eb8a71b55911112a9928f69fb",
+      "elapsed_seconds": 1.141,
+      "result": {
+        "question_sha256": "47a822954c3b4b6e6473ac3fd8bbfac4273e03a6f42756f6d6d0825e2563455a",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\sqrt{n + 1} - 1\\)",
+          "先分解通项 \\(- \\sqrt{k} + \\sqrt{k + 1}\\)，按有限和边界计算，保留末项，得到 \\(\\sqrt{n + 1} - 1\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "sqrt(n + 1) - 1",
+              "steps": [
+                "先分解通项 \\(- \\sqrt{k} + \\sqrt{k + 1}\\)，按有限和边界计算，保留末项，得到 \\(\\sqrt{n + 1} - 1\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 7,
+      "candidate_id": "orig:ai:phase3:sequence10:q007:v1",
+      "candidate_sha256": "65dd4719dcdec8c26296fde4de63c06445dd4b1a7be8b5c596d01f8e17293c7f",
+      "input_sha256": "e957275da695dc2f84d9ec29cae6031198b280ef63e85e4109f4a76457dc1d2c",
+      "output_sha256": "ffa475523c4210e78cb5bc4c7adfd65f8fc3865a44c2f9338b486efd446d7f16",
+      "elapsed_seconds": 1.062,
+      "result": {
+        "question_sha256": "75a043ae1c8d1bfc297d3fe3cfb7341f8d91ec31875a13e6166508d2bc94c70d",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(-8\\)",
+          "展开式中指数等于3的项才有贡献，提取系数得到\\(-8\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "-8",
+              "steps": [
+                "展开式中指数等于3的项才有贡献，提取系数得到\\(-8\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 8,
+      "candidate_id": "orig:ai:phase3:sequence10:q008:v1",
+      "candidate_sha256": "609bf81e589d8ed04eb64704e374f365f96a046052993593eb4beb4e266b983c",
+      "input_sha256": "541f2adde4dbda0beb72f5127ec9fee114bd8266bf1a3d51c9c1eee1fc6b5be3",
+      "output_sha256": "def518dc3c3817d4cb2334db3a83cc332b4aa3d86680d773c6ac5425ef7a00dd",
+      "elapsed_seconds": 1.164,
+      "result": {
+        "question_sha256": "d4215c8f031fe7d5b5435bf4ec4120874a6071c36ef8e7e100c05f752a16a476",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。x \\(4\\)；y \\(\\sqrt{3}\\)",
+          "联立全部条件消元，逐个解回代原方程组。",
+          "[{'x': '4', 'y': 'sqrt(3)'}]"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": [
+                {
+                  "x": "4",
+                  "y": "sqrt(3)"
+                }
+              ],
+              "steps": [
+                "联立全部条件消元，逐个解回代原方程组。",
+                "[{'x': '4', 'y': 'sqrt(3)'}]"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 9,
+      "candidate_id": "orig:ai:phase3:sequence10:q009:v1",
+      "candidate_sha256": "e23c07f46c246358cebee9ac94b26ae7a9f1071a66de1e00a113ea69dc02f203",
+      "input_sha256": "3c2c1ccb1db7cd422504a46af3934a4bb085f573cb81c6f7586fb28cba067641",
+      "output_sha256": "1870401dd36740dc4100c6951e45154ef641b1e2e9db11f52814fac9df473b66",
+      "elapsed_seconds": 1.205,
+      "result": {
+        "question_sha256": "07014d60a1380321ef47c97ff021f99dcfbbcf1eb0c344eb14be323cd774a694",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)",
+          "先分解通项 \\({\\binom{k}{2}}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "n**3/6 - n/6",
+              "steps": [
+                "先分解通项 \\({\\binom{k}{2}}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n^{3}}{6} - \\frac{n}{6}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    },
+    {
+      "slot": 10,
+      "candidate_id": "orig:ai:phase3:sequence10:q010:v1",
+      "candidate_sha256": "2450383b3a7f6b2262de53b71de2fff5a2f3e51decbfe25872a22d3b5eca82c0",
+      "input_sha256": "958b2c89b803c51f259f338dc8d5a6dcfa2fc775cf48f8fa46da36359f5299b9",
+      "output_sha256": "31c2851c9a53e64a30e2a0d6403461ff199060b923bdd5f98ad02b949320e873",
+      "elapsed_seconds": 1.245,
+      "result": {
+        "question_sha256": "2ceeca8b09821f744ce13e45b197390baac6e168adbbf885771dd31284529fea",
+        "passed": true,
+        "status": "已完成符号与数值交叉验证",
+        "option_key": null,
+        "values_latex": [],
+        "steps": [
+          "独立求解第1项。\\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)",
+          "先分解通项 \\(\\left(2 k - 1\\right)^{2}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。",
+          "独立求解第2项。proved True；infimum \\(0\\)；equality \\(1\\)",
+          "令两边之差为g(x)=\\(- n^{3} + \\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。导数为\\(\\frac{3 n^{2} - 1}{3}\\)。",
+          "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+        ],
+        "solver_record": {
+          "ok": true,
+          "tasks": [
+            {
+              "result": "n*(4*n**2 - 1)/3",
+              "steps": [
+                "先分解通项 \\(\\left(2 k - 1\\right)^{2}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            },
+            {
+              "result": {
+                "proved": true,
+                "infimum": "0",
+                "equality": [
+                  "1"
+                ]
+              },
+              "steps": [
+                "令两边之差为g(x)=\\(- n^{3} + \\frac{n \\left(4 n^{2} - 1\\right)}{3}\\)。导数为\\(\\frac{3 n^{2} - 1}{3}\\)。",
+                "检查驻点与全部边界，最小下界为\\(0\\)，故差非负；取等点如上。"
+              ],
+              "status": "已完成符号与数值交叉验证",
+              "programmatically_verified": true,
+              "formal_proof": false,
+              "cross_checked": true,
+              "scope": "exact",
+              "engine": "SymPy 1.14.0 / independent finite difference or enumeration"
+            }
+          ]
+        },
+        "formal_proof_passed": false,
+        "independent_ai_review": "尚未完成",
+        "remaining_uncertainty": "数学规格已独立计算；题意对应与高中解法需要独立AI审题，正式使用尚需教师审核。",
+        "model_version": "not_exposed_by_host",
+        "version": "dynamic-pipeline-v1",
+        "quality": {
+          "passed": true,
+          "errors": [],
+          "version": "independent-review-v1",
+          "scope": "数学规格与可计算格式，教师语义与实测仍待补充"
+        }
+      }
+    }
+  ],
+  "structure": {
+    "passed": true,
+    "errors": [],
+    "questions": 10,
+    "points": 100,
+    "kind_counts": {
+      "constructed_response": 10
+    },
+    "module_counts": {
+      "数列": 10
+    },
+    "estimated_minutes": 81,
+    "time_basis": "按任务操作与推理层数估计，未经考生作答校准",
+    "quality_rating": "研究审阅版，尚未认定为高质量高考模拟卷"
+  },
+  "overall_status": "研究审阅版，程序通过，独立AI审题待完成",
+  "limitations": [
+    "程序验证范围为显式数学规格，未完成任意语义形式化证明",
+    "创新程度与难度为设计判断，尚需教师审核与考生实测"
+  ],
+  "remote_model_calls": 0
+}

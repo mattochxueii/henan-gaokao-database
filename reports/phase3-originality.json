@@ -1,0 +1,5316 @@
+[
+  {
+    "question_id": "orig:ai:phase3:sequence10:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "拆成相隔两项的倒数，分别检查首尾两项",
+      "knowledge_combination": [
+        "数列",
+        "隔位裂项"
+      ],
+      "setting_and_ask": "有一类间隔两位的分式项，研究其边界如何留下残项。",
+      "structure_sha256": "eb2ebbb5a376d2cead9308c95f081b4f106b6556947429b3144e897ee0ca4970"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.059,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q001:v1",
+      "right": "orig:ai:phase3:sequence10:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "错位相减或有限和求导，检查末项",
+      "knowledge_combination": [
+        "数列",
+        "线性权重与等比底数"
+      ],
+      "setting_and_ask": "求权重随项号增长的等比和。",
+      "structure_sha256": "8c424b0c63b8ca155301b03d524fd24b7069339b46452059e31c301de2cd968a"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.059,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q002:v1",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "initial",
+          "op",
+          "relation"
+        ]
+      ],
+      "mathematical_operations": [
+        "recurrence:"
+      ],
+      "reasoning_path": "除以相邻乘积后累加，再恢复通项",
+      "knowledge_combination": [
+        "数列",
+        "变系数非齐次递推"
+      ],
+      "setting_and_ask": "相邻项受到随项号变化的线性约束。",
+      "structure_sha256": "f30c6d8e9b6d40b9b6545a511518dfa9e76c914e953c113bbc939ac7f08bb58e"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.207,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q003:v1",
+      "right": "orig:ai:phase3:sequence10:q004:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "initial",
+          "op",
+          "relation"
+        ]
+      ],
+      "mathematical_operations": [
+        "recurrence:"
+      ],
+      "reasoning_path": "将奇数和偶数项配对，验证通项与首项",
+      "knowledge_combination": [
+        "数列",
+        "线性增量的交替驱动"
+      ],
+      "setting_and_ask": "奇偶方向交替的增量随项号增加。",
+      "structure_sha256": "7bbd266e48d7039dc9741757b37efc86a43cd8546433efb52857ebeba46dcd19"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.207,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q004:v1",
+      "right": "orig:ai:phase3:sequence10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q005:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "product:"
+      ],
+      "reasoning_path": "分开两组相邻比，核对边界因子",
+      "knowledge_combination": [
+        "数列",
+        "交叉约分有限积"
+      ],
+      "setting_and_ask": "多个相邻因子共同约消，保留首尾的乘积。",
+      "structure_sha256": "4be11c59a737afd80adae9e9dede894b289f367a5d05888ebfe48d6bf9fdd03f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.229,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q005:v1",
+      "right": "orig:ai:phase3:fullB:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q006:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "乘共轭转成相邻根式差，再作有限和",
+      "knowledge_combination": [
+        "数列",
+        "根式有理化后相消"
+      ],
+      "setting_and_ask": "相邻根式分母不宜直接数值近似。",
+      "structure_sha256": "4bfbab3801d54d57b5cc9bde4de38676a07e13cd6b59334022ef5bcb82a95a18"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.056,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q006:v1",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "power"
+        ]
+      ],
+      "mathematical_operations": [
+        "coefficient:"
+      ],
+      "reasoning_path": "先合并相反因子再提取三次项",
+      "knowledge_combination": [
+        "数列",
+        "两类二项式系数卷积"
+      ],
+      "setting_and_ask": "把多项式按升幂展开的系数依次看成一个有限数列。",
+      "structure_sha256": "b00d436fa515e61fe2c6439e66be047772bcd88b4d47bffe39a893f1bef2d6a6"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.085,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q007:v1",
+      "right": "orig:ai:phase3:fullA:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q008:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "conditions",
+          "expressions",
+          "op",
+          "unique",
+          "variables"
+        ]
+      ],
+      "mathematical_operations": [
+        "system:"
+      ],
+      "reasoning_path": "以中项与公差建模，附加递增条件排除负公差",
+      "knowledge_combination": [
+        "数列",
+        "对称变量恢复等差三元组"
+      ],
+      "setting_and_ask": "三个数x-y、x、x+y构成递增等差数列，其和为12、平方和为54。求x、y。",
+      "structure_sha256": "672885935ed0a6d3ee53bc31c3c8e0127ca3d1c625862f1fe402a0842dbbef04"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.441,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q008:v1",
+      "right": "orig:ai:phase3:acceptance5:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q009:v2",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "lower",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "按三个编号中的最大者分类，也可代数求和",
+      "knowledge_combination": [
+        "数列",
+        "组合计数与部分和"
+      ],
+      "setting_and_ask": "已有k个编号，再引入第k+1个编号时，把此前k个编号的两两配对数记为第k项。求前n项和。",
+      "structure_sha256": "70154aee108743f11a24fef32bfbf2fb6b34c566235f6b377959e9815211b877"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.129,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q009:v2",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:sequence10:q010:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open",
+          "variable"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "先求和，再因式分解比较，区分实数充分条件与正整数结论",
+      "knowledge_combination": [
+        "数列",
+        "奇数平方和与多项式界"
+      ],
+      "setting_and_ask": "比较前n个正奇数平方和与n的立方。",
+      "structure_sha256": "f27a98d79a1837d110cb5b68e914cee5dd956abd38282439da4b989a31fa16ab"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.053,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:sequence10:q010:v1",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:",
+        "monotonicity:"
+      ],
+      "reasoning_path": "把导数非负化成参数上界，验证边界时并非整段常数",
+      "knowledge_combination": [
+        "函数与导数",
+        "参数单调与边界驻点"
+      ],
+      "setting_and_ask": "研究导数的最小约束如何决定整段单调。",
+      "structure_sha256": "33ad963af722d95ee4ee8074bc1ac5f4d89d28501b39063858c3eb1ef166fc5f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.263,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q001:v1",
+      "right": "orig:ai:phase3:fullA:q019:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_bound:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "求差函数唯一极小点，同时检查两端极限",
+      "knowledge_combination": [
+        "函数与导数",
+        "对数全域界与取等"
+      ],
+      "setting_and_ask": "寻找能够对全部正数成立的统一下界。",
+      "structure_sha256": "f972411d58dbd3405cf952365b5a12afe99a3bda2b0dbc049cc65b8f37ad56f3"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.154,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q002:v1",
+      "right": "orig:ai:phase3:derivative10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "extrema:"
+      ],
+      "reasoning_path": "先判断导数符号，再比较端点与内部点",
+      "knowledge_combination": [
+        "函数与导数",
+        "指数乘积与闭区间最值"
+      ],
+      "setting_and_ask": "同一个函数在有界区间上既有驻点又有端点竞争。",
+      "structure_sha256": "c98a7d2f5b24e4bd1e00822a644315b727adef76774d654d8d20af6617e61103"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.048,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q003:v1",
+      "right": "orig:ai:phase3:derivative10:q005:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "unique"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "定位导数相等点，再对差函数证明全域非负",
+      "knowledge_combination": [
+        "函数与导数",
+        "切线接触点与平移缩放不等式"
+      ],
+      "setting_and_ask": "对数曲线的切线界应在整个正半轴检查。",
+      "structure_sha256": "e64d71bf3b36aa7bb4f407393a1719dedad061c1024dabde7c8bc90f52c1e2e1"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.3,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q004:v1",
+      "right": "orig:ai:phase3:derivative10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q005:v2",
+    "features": {
+      "condition_structure": [
+        [
+          "expressions",
+          "op",
+          "unique",
+          "variables"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "system:",
+        "extrema:"
+      ],
+      "reasoning_path": "联立函数值与导数值，分区讨论三个候选点",
+      "knowledge_combination": [
+        "函数与导数",
+        "反向切线加端点比较"
+      ],
+      "setting_and_ask": "先由水平切线条件恢复系数，再检查恢复后的曲线。",
+      "structure_sha256": "4a4e206faf8f69c70f331f5e614bbfa957a9c36f71668447021de70335392682"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.093,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q005:v2",
+      "right": "orig:ai:phase3:fullA:q018:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q006:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ],
+        [
+          "at",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "monotonicity:",
+        "derivative:"
+      ],
+      "reasoning_path": "导数不变号，合并两侧单调区间，说明零导数点的作用",
+      "knowledge_combination": [
+        "函数与导数",
+        "偶重导数零点与严格单调"
+      ],
+      "setting_and_ask": "导数在一点为零，并不保证该点是极值点。",
+      "structure_sha256": "284fd7a23f6d7cc59b49d15714921c55339569fc91123cd96d263902208f1525"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.111,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q006:v1",
+      "right": "orig:ai:phase3:fullA:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:"
+      ],
+      "reasoning_path": "参数系数固定符号，必要条件来自远端，边界仍成立",
+      "knowledge_combination": [
+        "函数与导数",
+        "导数含参数与无穷远约束"
+      ],
+      "setting_and_ask": "开放无穷区间的参数界可能由极限决定。",
+      "structure_sha256": "4b68ca21e02e35d6b266027e32e99e9f8f618e0e139daaddf930d4da3b7f96ef"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.158,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q007:v1",
+      "right": "orig:ai:phase3:acceptance5:q004:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q008:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "nonnegative:"
+      ],
+      "reasoning_path": "导数在原点前后变号，检查两侧极限",
+      "knowledge_combination": [
+        "函数与导数",
+        "全域切线支撑与唯一取等"
+      ],
+      "setting_and_ask": "证明指数曲线高于其在原点的切线，并找出全部取等点。",
+      "structure_sha256": "2b683c2377002a2868a8bfd5a861cba03bce564ac7d673d40b3a4fad713f9502"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.195,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q008:v1",
+      "right": "orig:ai:phase3:acceptance5:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q009:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:",
+        "monotonicity:"
+      ],
+      "reasoning_path": "令平方为新变量求零点，再独立求导分区",
+      "knowledge_combination": [
+        "函数与导数",
+        "双二次零点与三驻点排序"
+      ],
+      "setting_and_ask": "函数的零点和导数零点是两类不同对象。",
+      "structure_sha256": "39dcb13fafc8f135371ed541d35749e01bcbaa3f2e7a574d0990ee720ca5868f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.049,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q009:v1",
+      "right": "orig:ai:phase3:fullB:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:derivative10:q010:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_bound:",
+        "extrema:"
+      ],
+      "reasoning_path": "参数界与极小值相互验证，注意两端都无界",
+      "knowledge_combination": [
+        "函数与导数",
+        "反比例成本最优界"
+      ],
+      "setting_and_ask": "单位成本由正比例项和反比例项组成。求统一扣减常数的可行范围。",
+      "structure_sha256": "7fee1d029ed0e69f21db8ef8bf39487beb419e15b3bda8dd10e38f440bbc395f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.082,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:derivative10:q010:v1",
+      "right": "orig:ai:phase3:derivative10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q001:v2",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "evaluate:"
+      ],
+      "reasoning_path": "先平方再平方",
+      "knowledge_combination": [
+        "集合与复数",
+        "复数极坐标幂与实数结果"
+      ],
+      "setting_and_ask": "单位虚数的幂运算需要处理周期与系数。",
+      "structure_sha256": "0cb44307d0ad28ba6acd967a987d76fca5d2fab9e9665d5530a75cb29db78ffb"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.222,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q001:v2",
+      "right": "orig:ai:phase3:fullA:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q001",
+        "candidate_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+        "common_method": "先代入 i²=-1 再取虚部系数",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q002",
+        "candidate_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+        "common_method": "列出小于9的正整数后剔除三个元素",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q015",
+        "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "common_method": "先限制异常组再计算卡方统计量",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q009",
+        "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+        "common_method": "分别计算共轭、模、平方和D项分式",
+        "module": "集合与复数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability:"
+      ],
+      "reasoning_path": "分母为四个可能值",
+      "knowledge_combination": [
+        "概率统计",
+        "限制样本后的二事件并"
+      ],
+      "setting_and_ask": "从1至6中等可能取数，已知取数大于2，求其为3或5的概率。",
+      "structure_sha256": "7f5b96f305b3a4aa70de8cf638c7cb0c44f585283b03e12719cb35875b7f5e4c"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.255,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q002:v1",
+      "right": "orig:ai:phase3:fullA:q004:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "evaluate:"
+      ],
+      "reasoning_path": "分别取值后相加",
+      "knowledge_combination": [
+        "三角与向量",
+        "互余值相同的函数和"
+      ],
+      "setting_and_ask": "特殊角的函数值与互余关系共同简化。",
+      "structure_sha256": "05aa96ef36e323dcc9e0c2725d46ac24333eddfef80b290bcac9a1f4d70e86e6"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.364,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q003:v1",
+      "right": "orig:ai:phase3:fullB:q004:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "应保留低端的2零次幂",
+      "knowledge_combination": [
+        "数列",
+        "幂差的首尾相消"
+      ],
+      "setting_and_ask": "求相邻幂之差的有限和，尤其注意第一项。",
+      "structure_sha256": "e17b039d8eda563a8ba8bb9542ccf2c2fed3cc0b792315d267a56d9285665537"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.154,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q004:v1",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q005:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "extrema:",
+        "parameter_monotone:"
+      ],
+      "reasoning_path": "两个区间要求分别从导数正负出发",
+      "knowledge_combination": [
+        "函数与导数",
+        "商函数单调及线性导数参数"
+      ],
+      "setting_and_ask": "既检查给定函数的端点，也研究另一参数函数的单调范围。",
+      "structure_sha256": "bb723ce7960f9f87a46c7a876ddaf8e1e45cf9261429926f76e16d1adcc312a4"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.178,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q005:v1",
+      "right": "orig:ai:phase3:derivative10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q006:v3",
+    "features": {
+      "condition_structure": [
+        [
+          "op",
+          "operation",
+          "u",
+          "v"
+        ],
+        [
+          "direction",
+          "op",
+          "operation",
+          "plane_points"
+        ]
+      ],
+      "mathematical_operations": [
+        "vector:cross_norm_squared",
+        "geometry:line_plane_sine"
+      ],
+      "reasoning_path": "叉积同时给出面积与法向量，第二问与第一问结果共用构造",
+      "knowledge_combination": [
+        "立体几何",
+        "向量面积、法向量与线面角"
+      ],
+      "setting_and_ask": "用两个非共线向量确定过原点的平面，联系面积与线面角。",
+      "structure_sha256": "b7e4abb13a3742c41c26d436e6ebefc82a1aacde444faa2e2ffea93e9b78c499"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.333,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.261,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q006:v3",
+      "right": "orig:ai:phase3:fullA:q016:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q009",
+        "candidate_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+        "common_method": "底面中线与侧棱张成平面后逐项判定",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q017",
+        "candidate_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+        "common_method": "建系用等距线性方程求球心再点积",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q010",
+        "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+        "common_method": "以AB为轴在两半平面取坐标并用点积和最小距离",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q015",
+        "candidate_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+        "common_method": "将两中点坐标相减得方向，再由角求底边",
+        "module": "立体几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:mixed50:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "ask",
+          "curves",
+          "op"
+        ],
+        [
+          "ask",
+          "curves",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "intersection:count",
+        "intersection:distance_squared"
+      ],
+      "reasoning_path": "联立消元，两点中心对称后计算弦长平方",
+      "knowledge_combination": [
+        "解析几何",
+        "中心弦的交点与两点距离"
+      ],
+      "setting_and_ask": "过原点的斜线截椭圆所得弦也经过椭圆中心。",
+      "structure_sha256": "82e644c6e6a10c8dc26203c3b63afc11c56f9f13182de858a208ba590cfccb50"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.15,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:mixed50:q007:v1",
+      "right": "orig:ai:phase3:fullA:q006:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "evaluate:"
+      ],
+      "reasoning_path": "分别取模或化简分式",
+      "knowledge_combination": [
+        "集合与复数",
+        "复数商的模平方"
+      ],
+      "setting_and_ask": "复数分式运算中须同时注意分子与分母的模。",
+      "structure_sha256": "6397629a3c1e26b78f5b285120fcc982b7ffba8fb4e0b6eb8bbe3c7e427135cf"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.222,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q001:v1",
+      "right": "orig:ai:phase3:mixed50:q001:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q001",
+        "candidate_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+        "common_method": "先代入 i²=-1 再取虚部系数",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q002",
+        "candidate_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+        "common_method": "列出小于9的正整数后剔除三个元素",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q015",
+        "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "common_method": "先限制异常组再计算卡方统计量",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q009",
+        "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+        "common_method": "分别计算共轭、模、平方和D项分式",
+        "module": "集合与复数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "count:"
+      ],
+      "reasoning_path": "先用x<y消去排列重复，再数目标",
+      "knowledge_combination": [
+        "集合与复数",
+        "有限集合有序化后补集计数"
+      ],
+      "setting_and_ask": "从编号1至6中选两个不同编号，至少一个不超过2。每组只计一次。",
+      "structure_sha256": "8fe32cfeccfb0daa71d500e78d2556510a95d5f20ed6003e84c8caca13dd5cf7"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.286,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q002:v1",
+      "right": "orig:ai:phase3:fullB:q012:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q001",
+        "candidate_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+        "common_method": "先代入 i²=-1 再取虚部系数",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q002",
+        "candidate_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+        "common_method": "列出小于9的正整数后剔除三个元素",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q015",
+        "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "common_method": "先限制异常组再计算卡方统计量",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q009",
+        "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+        "common_method": "分别计算共轭、模、平方和D项分式",
+        "module": "集合与复数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "op",
+          "operation",
+          "u",
+          "v"
+        ]
+      ],
+      "mathematical_operations": [
+        "vector:cosine_squared"
+      ],
+      "reasoning_path": "负内积平方后为正，模长必须各平方",
+      "knowledge_combination": [
+        "三角与向量",
+        "内积与角度平方"
+      ],
+      "setting_and_ask": "两向量方向近乎垂直，求角度时须区别余弦与其平方。",
+      "structure_sha256": "5ec71963592963c164ce72a319d279e5de83a86ef2c6983438852278b44159ad"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.105,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q003:v1",
+      "right": "orig:ai:phase3:mixed50:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability:"
+      ],
+      "reasoning_path": "目标不在对角线上但分母改变",
+      "knowledge_combination": [
+        "概率统计",
+        "删去对角样本后的条件概率"
+      ],
+      "setting_and_ask": "两次掷骰后得知点数不同，重新计算和为7的概率。",
+      "structure_sha256": "b28c73f0a433ed0fd21a35771948ed42b9a27a352b184fdbfde7d269f3cd6acd"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.298,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q004:v1",
+      "right": "orig:ai:phase3:mixed50:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q005:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open",
+          "which"
+        ]
+      ],
+      "mathematical_operations": [
+        "optimum:"
+      ],
+      "reasoning_path": "内部对称点胜过两个端点",
+      "knowledge_combination": [
+        "三角与向量",
+        "和角转化与内部最值"
+      ],
+      "setting_and_ask": "利用区间位置限制三角函数和的可达范围。",
+      "structure_sha256": "326bf9977c77086c8ed0f6054a1a317f167328624512de69553673e60856afe4"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.176,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q005:v1",
+      "right": "orig:ai:phase3:mixed50:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q006:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "ask",
+          "curves",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "intersection:distance_squared"
+      ],
+      "reasoning_path": "求两坐标解，区别距离与距离平方",
+      "knowledge_combination": [
+        "解析几何",
+        "交点消元与弦长平方"
+      ],
+      "setting_and_ask": "圆与一条非过圆心直线相交。求两交点距离的平方。",
+      "structure_sha256": "d00b8308d39d4119e7cb20447f2bd411aeb5a592fff6d6744517541e2dc5d755"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.2,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q006:v1",
+      "right": "orig:ai:phase3:mixed50:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "at",
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "derivative:"
+      ],
+      "reasoning_path": "外层分母与内层导数同时代入",
+      "knowledge_combination": [
+        "函数与导数",
+        "链式求导与定点切线斜率"
+      ],
+      "setting_and_ask": "复合对数函数求导时，需要保留内层的变化率。",
+      "structure_sha256": "7e4e96ed6faeb8549ad4ebdcd9332af2902710abcc5cb5d966a3fed27c41c680"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.15,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q007:v1",
+      "right": "orig:ai:phase3:fullB:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q008:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "power"
+        ]
+      ],
+      "mathematical_operations": [
+        "coefficient:"
+      ],
+      "reasoning_path": "区分2+1与1+1+1两条路径",
+      "knowledge_combination": [
+        "排列组合",
+        "多项式系数的两种分拆"
+      ],
+      "setting_and_ask": "每个因子都可贡献0、1或2次幂，三次项有多条形成路径。",
+      "structure_sha256": "70682d186118a79b22cd328c2492e8fedfebb1f759fe3635012b9d8366b70110"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.085,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q008:v1",
+      "right": "orig:ai:phase3:sequence10:q007:v1"
+    },
+    "source_method_comparisons": [],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q009:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "comparison:",
+        "comparison:",
+        "comparison:",
+        "comparison:"
+      ],
+      "reasoning_path": "逐项检验恒真而非个别样例",
+      "knowledge_combination": [
+        "数列",
+        "二次通项的差与比"
+      ],
+      "setting_and_ask": "已知数列aₙ=n(n+1)，判断下列关于正整数n的恒等命题。",
+      "structure_sha256": "6b25ff0272cab2ab031e67873a5d94be31b5ccffb3049edb69290f9955e06217"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.32,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q009:v1",
+      "right": "orig:ai:phase3:fullB:q009:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q010:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "claim_expression",
+          "error_path",
+          "expression",
+          "op"
+        ],
+        [
+          "claim_expression",
+          "error_path",
+          "expression",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "derivative_claim:",
+        "derivative_claim:",
+        "comparison:",
+        "comparison:"
+      ],
+      "reasoning_path": "先独立求导再核对代入值",
+      "knowledge_combination": [
+        "函数与导数",
+        "导数公式与点值的分离"
+      ],
+      "setting_and_ask": "判断关于函数及导数的四个命题。",
+      "structure_sha256": "c2074d8c7b21c0950f5780dc12100795a9b602355e64df92ed92c0c54d0e6bcb"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.4,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q010:v1",
+      "right": "orig:ai:phase3:fullA:q009:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q011:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "error_path",
+          "op",
+          "operation",
+          "u",
+          "v"
+        ],
+        [
+          "error_path",
+          "op",
+          "operation",
+          "u",
+          "v"
+        ],
+        [
+          "error_path",
+          "op",
+          "operation",
+          "u",
+          "v"
+        ],
+        [
+          "error_path",
+          "op",
+          "operation",
+          "u",
+          "v"
+        ]
+      ],
+      "mathematical_operations": [
+        "vector:orthogonal",
+        "vector:parallel",
+        "vector:orthogonal",
+        "vector:parallel"
+      ],
+      "reasoning_path": "用内积与叉积区分两个方向关系",
+      "knowledge_combination": [
+        "立体几何",
+        "旋转坐标下的正交和平行"
+      ],
+      "setting_and_ask": "判断空间向量关系。",
+      "structure_sha256": "33710374ff4b770c40e1b09ac33dea03fa6ed9b4cebc11e34b0f1e3b1ed67eb1"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.188,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q011:v1",
+      "right": "orig:ai:phase3:mixed50:q006:v3"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q009",
+        "candidate_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+        "common_method": "底面中线与侧棱张成平面后逐项判定",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q017",
+        "candidate_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+        "common_method": "建系用等距线性方程求球心再点积",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q010",
+        "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+        "common_method": "以AB为轴在两半平面取坐标并用点积和最小距离",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q015",
+        "candidate_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+        "common_method": "将两中点坐标相减得方向，再由角求底边",
+        "module": "立体几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q012:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "data",
+          "op",
+          "statistic"
+        ]
+      ],
+      "mathematical_operations": [
+        "statistics:"
+      ],
+      "reasoning_path": "先定位均值，再取平方差平均",
+      "knowledge_combination": [
+        "概率统计",
+        "对称样本方差"
+      ],
+      "setting_and_ask": "这组数据关于均值成对分布，注意方差的分母。",
+      "structure_sha256": "b810efbc09186dfee8ea24f74dfcb43efd665888fb8170a43b5bb7ec9b91a15b"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.176,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q012:v1",
+      "right": "orig:ai:phase3:fullB:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q013:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "sum:"
+      ],
+      "reasoning_path": "先除幂，再拆为常数和与有限等比和",
+      "knowledge_combination": [
+        "数列",
+        "比值化简与有限几何修正"
+      ],
+      "setting_and_ask": "通项包含常数部分与衰减部分，求前五项和。",
+      "structure_sha256": "c1b0ffdfb58ca67779f0e2abce7bef692b8d5dbc9ae12bd8599c76767852e1f8"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.1,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q013:v1",
+      "right": "orig:ai:phase3:sequence10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q014:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "line",
+          "op",
+          "operation",
+          "point"
+        ]
+      ],
+      "mathematical_operations": [
+        "geometry:point_line_distance"
+      ],
+      "reasoning_path": "代入直线方程后取绝对值，并除法向量模",
+      "knowledge_combination": [
+        "解析几何",
+        "斜线点距"
+      ],
+      "setting_and_ask": "将点与直线的相对位置化为距离。",
+      "structure_sha256": "d0f22ff7403f6c29cca86378e8dec4cec56446b4d3707b974134d3df6723a0a5"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.121,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q014:v1",
+      "right": "orig:ai:phase3:mixed50:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q015:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space",
+          "value"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability:",
+        "probability:",
+        "expectation:"
+      ],
+      "reasoning_path": "每次条件改变都重新归一，最后按随机变量值累加",
+      "knowledge_combination": [
+        "概率统计",
+        "逐层缩小样本空间及条件期望"
+      ],
+      "setting_and_ask": "两次独立从1至4等可能取整数，后续均使用同一组有序结果。",
+      "structure_sha256": "7b7047e219fa298119d3d61c8add4ad122a29783ae627c73379de963d83119b5"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.24,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q015:v1",
+      "right": "orig:ai:phase3:fullB:q016:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q016:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "op",
+          "operation",
+          "plane_points",
+          "point"
+        ],
+        [
+          "direction",
+          "op",
+          "operation",
+          "plane_points"
+        ]
+      ],
+      "mathematical_operations": [
+        "geometry:plane_distance",
+        "geometry:line_plane_sine"
+      ],
+      "reasoning_path": "叉积确定同一法向量，随后两种投影分别计算",
+      "knowledge_combination": [
+        "立体几何",
+        "平面法向量串联距离和线面角"
+      ],
+      "setting_and_ask": "三点确定斜置平面，再研究原点与一条指定方向直线。",
+      "structure_sha256": "bbd6957672a2d26b920b72d74ce5cdacf12c5df392bfe17d28e6007b18ab4edf"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.333,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.261,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q016:v1",
+      "right": "orig:ai:phase3:mixed50:q006:v3"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q009",
+        "candidate_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+        "common_method": "底面中线与侧棱张成平面后逐项判定",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q017",
+        "candidate_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+        "common_method": "建系用等距线性方程求球心再点积",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q010",
+        "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+        "common_method": "以AB为轴在两半平面取坐标并用点积和最小距离",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q015",
+        "candidate_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+        "common_method": "将两中点坐标相减得方向，再由角求底边",
+        "module": "立体几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q017:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "initial",
+          "op",
+          "relation"
+        ],
+        [
+          "initial",
+          "op",
+          "relation",
+          "upper",
+          "weight"
+        ]
+      ],
+      "mathematical_operations": [
+        "recurrence:",
+        "recurrence_sum:"
+      ],
+      "reasoning_path": "增加n+1使其成为等比数列，再拆加权部分和",
+      "knowledge_combination": [
+        "数列",
+        "线性驱动递推与几何加权和"
+      ],
+      "setting_and_ask": "一次驱动项带项号的递推，可用变换消去非齐次部分。",
+      "structure_sha256": "1eb5aa5d5e52b3045fdb66fbce6b15a38635e013ace30fd79beed992f9bfa2eb"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.14,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q017:v1",
+      "right": "orig:ai:phase3:fullB:q017:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q018:v2",
+    "features": {
+      "condition_structure": [
+        [
+          "conditions",
+          "expressions",
+          "op",
+          "unique",
+          "variables"
+        ],
+        [
+          "left",
+          "op",
+          "right"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open",
+          "prompt"
+        ]
+      ],
+      "mathematical_operations": [
+        "system:",
+        "identity:",
+        "extrema:"
+      ],
+      "reasoning_path": "用正半轴筛解，参数化后比较内部驻点与端点",
+      "knowledge_combination": [
+        "解析几何",
+        "参数恢复与非中心点的椭圆距离"
+      ],
+      "setting_and_ask": "先确定椭圆半轴，再研究椭圆点到固定点的距离平方。",
+      "structure_sha256": "991190b6a9c493f57f6ab7c8be14754f44c7d51ee51213071304bafc436185e7"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.14,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q018:v2",
+      "right": "orig:ai:phase3:derivative10:q005:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullA:q019:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:",
+        "monotonicity:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "最大约束在内部达到，随后区分变号驻点和不变号驻点",
+      "knowledge_combination": [
+        "函数与导数",
+        "参数导数二次式与临界零点"
+      ],
+      "setting_and_ask": "参数的临界值与导数的零点重数共同影响单调性。",
+      "structure_sha256": "2870d2977472775027b1c1a2f0fac1ee28c3dabf53baaea3e6179c73324f60bd"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.263,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullA:q019:v1",
+      "right": "orig:ai:phase3:derivative10:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "unique"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:"
+      ],
+      "reasoning_path": "二次方程两根中只保留所给区间内的一根",
+      "knowledge_combination": [
+        "集合与复数",
+        "方程解集与开区间筛选"
+      ],
+      "setting_and_ask": "集合由实方程的解组成，选出其中落在(0,1)内的唯一元素。",
+      "structure_sha256": "eda922bd010de3f0b354fccb397f6462ee89c3ad7add9bcaabd908a55eaf5130"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.1,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q001:v1",
+      "right": "orig:ai:phase3:fullB:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q001",
+        "candidate_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+        "common_method": "先代入 i²=-1 再取虚部系数",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q002",
+        "candidate_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+        "common_method": "列出小于9的正整数后剔除三个元素",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q015",
+        "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "common_method": "先限制异常组再计算卡方统计量",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q009",
+        "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+        "common_method": "分别计算共轭、模、平方和D项分式",
+        "module": "集合与复数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "unique"
+        ]
+      ],
+      "mathematical_operations": [
+        "equation:"
+      ],
+      "reasoning_path": "展开后虚部系数必须为0",
+      "knowledge_combination": [
+        "集合与复数",
+        "虚部消去反求实参数"
+      ],
+      "setting_and_ask": "求使一个复数乘积成为实数的实参数。",
+      "structure_sha256": "5dcb30e4da357496355af4f8d3aff81861cec86adee0b3711367ebec9157d164"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.05,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q002:v1",
+      "right": "orig:ai:phase3:fullB:q001:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q001",
+        "candidate_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+        "common_method": "先代入 i²=-1 再取虚部系数",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q002",
+        "candidate_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+        "common_method": "列出小于9的正整数后剔除三个元素",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q015",
+        "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "common_method": "先限制异常组再计算卡方统计量",
+        "module": "集合与复数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q009",
+        "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+        "common_method": "分别计算共轭、模、平方和D项分式",
+        "module": "集合与复数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "data",
+          "op",
+          "statistic"
+        ]
+      ],
+      "mathematical_operations": [
+        "statistics:"
+      ],
+      "reasoning_path": "取第三第四项平均",
+      "knowledge_combination": [
+        "概率统计",
+        "偶数样本的排序中位数"
+      ],
+      "setting_and_ask": "样本有偶数个观测，注意中间两个数。",
+      "structure_sha256": "e88ebb0663a9bdc74fb384b6cc5666819a6167edb8d723c59e8976232f8a8ec8"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.176,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q003:v1",
+      "right": "orig:ai:phase3:fullA:q012:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "evaluate:"
+      ],
+      "reasoning_path": "sin2x还需除以2",
+      "knowledge_combination": [
+        "三角与向量",
+        "半角乘积与二倍角系数"
+      ],
+      "setting_and_ask": "把两个特殊角函数的乘积转化为二倍角。",
+      "structure_sha256": "fe6e839c8ef5d1ab3a5a2797d1763c6788cae9033c9ccdf89d34b9f06be16fef"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.364,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q004:v1",
+      "right": "orig:ai:phase3:mixed50:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q005:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "ask",
+          "curves",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "intersection:count"
+      ],
+      "reasoning_path": "代入后只有一个实点，重根只算一次",
+      "knowledge_combination": [
+        "解析几何",
+        "椭圆顶点处的相切重解"
+      ],
+      "setting_and_ask": "水平直线与椭圆的交点个数需要按实际条件判定。",
+      "structure_sha256": "604dc2da9d5394ebe28cf619f596d8d633d1ea2622c4869983a037f1a63cb3ae"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.5,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.15,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q005:v1",
+      "right": "orig:ai:phase3:mixed50:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q006:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability:"
+      ],
+      "reasoning_path": "样本去重，不能把(6,6)计两次",
+      "knowledge_combination": [
+        "概率统计",
+        "条件并事件与交集重叠"
+      ],
+      "setting_and_ask": "两次掷骰，已知至少一次为6，求两次点数均为偶数的概率。",
+      "structure_sha256": "c03f9db40ad5e8ea2c2d871dd0eaa3488af2f5c4f0f76b2be812d18646ab3d26"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.28,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q006:v1",
+      "right": "orig:ai:phase3:mixed50:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q007:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op",
+          "upper"
+        ]
+      ],
+      "mathematical_operations": [
+        "product:"
+      ],
+      "reasoning_path": "首尾相消而非把分母独立相乘",
+      "knowledge_combination": [
+        "数列",
+        "奇数因子链的有限积"
+      ],
+      "setting_and_ask": "奇数相邻比的有限积会留下一个末端因子。",
+      "structure_sha256": "d851bd707aa263f07a3616f8f1a1c69b1caa616cc0206c4f6093b2d44888f059"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.229,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q007:v1",
+      "right": "orig:ai:phase3:sequence10:q005:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q008:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "at",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "derivative:"
+      ],
+      "reasoning_path": "完整使用商法则后代入",
+      "knowledge_combination": [
+        "函数与导数",
+        "商函数导数与对称点"
+      ],
+      "setting_and_ask": "商函数在原点的导数不能由分子或分母单独决定。",
+      "structure_sha256": "1dfcd4263aed5949f8004a070736a47addc64082f11c29c4ba08c5669994d281"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.15,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q008:v1",
+      "right": "orig:ai:phase3:fullA:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q009:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ],
+        [
+          "claim",
+          "error_path",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "comparison:",
+        "comparison:",
+        "comparison:",
+        "comparison:"
+      ],
+      "reasoning_path": "区分全体坐标恒真和个别坐标相等",
+      "knowledge_combination": [
+        "三角与向量",
+        "坐标恒等式与非负长度"
+      ],
+      "setting_and_ask": "x、y是正交单位基下的两个实坐标，判断下列恒真命题。",
+      "structure_sha256": "a23392979c9e5069b02db8d2998cf6a5b00ef2481c57a85cae27d1a20b8bd32f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.32,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q009:v1",
+      "right": "orig:ai:phase3:fullA:q009:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q010:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "curve",
+          "error_path",
+          "op",
+          "point"
+        ],
+        [
+          "curve",
+          "error_path",
+          "op",
+          "point"
+        ],
+        [
+          "curve",
+          "error_path",
+          "op",
+          "point"
+        ],
+        [
+          "curve",
+          "error_path",
+          "op",
+          "point"
+        ]
+      ],
+      "mathematical_operations": [
+        "point_on_curve:",
+        "point_on_curve:",
+        "point_on_curve:",
+        "point_on_curve:"
+      ],
+      "reasoning_path": "将每点代回同一方程，边界点只算本身",
+      "knowledge_combination": [
+        "解析几何",
+        "曲线成员判定与必要等式"
+      ],
+      "setting_and_ask": "逐个判断点是否位于同一椭圆上。",
+      "structure_sha256": "bd7f6fcf43f0298bbd845d0352fcf4f3deb7e20c8a31923625f7c748cf71417b"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.182,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q010:v1",
+      "right": "orig:ai:phase3:mixed50:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q003",
+        "candidate_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+        "common_method": "由 b/a=√7 得 e²=1+b²/a²",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q007",
+        "candidate_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+        "common_method": "化为两条平行距离线并计交点",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q010",
+        "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+        "common_method": "用焦点弦参数和准线距离计算长度与乘积",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q018",
+        "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+        "common_method": "由长度积写R，再将斜率条件化成P的圆轨迹",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q005",
+        "candidate_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+        "common_method": "分别代点求p后写两焦点并算距离",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q011",
+        "candidate_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+        "common_method": "用圆心到直线距离写三弦长，再按法向投影分类",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q012",
+        "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+        "common_method": "由a²=1/5,b²=1/6求e",
+        "module": "解析几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q018",
+        "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+        "common_method": "设t=x+1得二次方程，面积转根比，再优化角正切",
+        "module": "解析几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q011:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "claimed_probability",
+          "error_path",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "claimed_probability",
+          "error_path",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "claimed_probability",
+          "condition",
+          "error_path",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "claimed_probability",
+          "condition",
+          "error_path",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability_claim:",
+        "probability_claim:",
+        "probability_claim:",
+        "probability_claim:"
+      ],
+      "reasoning_path": "分别检查联合样本与重新归一后的子样本",
+      "knowledge_combination": [
+        "概率统计",
+        "二元独立记录的无条件与条件概率"
+      ],
+      "setting_and_ask": "两个公平的0-1记录相互独立，判断条件改变后的概率命题。",
+      "structure_sha256": "8bebbbb62d58caeb8d730dc7fae693104039977e403afa0bab8f77e926b01ae9"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.192,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q011:v1",
+      "right": "orig:ai:phase3:mixed50:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q012:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "count:"
+      ],
+      "reasoning_path": "每组位置只计一次",
+      "knowledge_combination": [
+        "排列组合",
+        "固定成功位置的组合计数"
+      ],
+      "setting_and_ask": "三个0-1位置中恰好两个为1。",
+      "structure_sha256": "331441f50452a2a1795dc061937712ba0092de899d9b39671d6171029a209401"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.286,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q012:v1",
+      "right": "orig:ai:phase3:fullA:q002:v1"
+    },
+    "source_method_comparisons": [],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q013:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "at",
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "derivative:"
+      ],
+      "reasoning_path": "即使ln1为0，也不能删除另一个乘积项",
+      "knowledge_combination": [
+        "函数与导数",
+        "乘积求导与对数因子零点"
+      ],
+      "setting_and_ask": "两个变化因子的导数均可能产生贡献。",
+      "structure_sha256": "6e3de2daf210874cd759e5ae8c32054730c6c6eaadbf73a4124f2ec7de9bb9f3"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.114,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q013:v1",
+      "right": "orig:ai:phase3:fullA:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q014:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "op",
+          "operation",
+          "u",
+          "v"
+        ]
+      ],
+      "mathematical_operations": [
+        "vector:triangle_area_squared"
+      ],
+      "reasoning_path": "面积先除2，平方后除4",
+      "knowledge_combination": [
+        "三角与向量",
+        "叉积面积再取半的平方"
+      ],
+      "setting_and_ask": "三维向量张成一个三角形，面积与平行四边形面积不同。",
+      "structure_sha256": "36c628af128ae4331ffbce3e4c3a9065e1a25f51b75d3a85457c1794baf329c0"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.154,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q014:v1",
+      "right": "orig:ai:phase3:mixed50:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q015:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "left",
+          "op",
+          "right"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "identity:",
+        "extrema:"
+      ],
+      "reasoning_path": "和角展开后先消去交叉项，再研究一次正弦",
+      "knowledge_combination": [
+        "三角与向量",
+        "平方和不变与线性和极值"
+      ],
+      "setting_and_ask": "同一组相位平移可产生不变量与变化的线性和。",
+      "structure_sha256": "78dad0b0bda6afc1c967be8c9f0ab234a8e40883eb63c1327bdf6e729c23ce08"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.048,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q015:v1",
+      "right": "orig:ai:phase3:fullA:q018:v2"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q004",
+        "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+        "common_method": "列出中心横坐标 π/3+kπ/2 后筛最小正值",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q006",
+        "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+        "common_method": "按箭头取视风(-3,-1)与船速(1,3)求合向量",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q011",
+        "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+        "common_method": "由和角与二倍角推出C为直角再用面积求边",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q019",
+        "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+        "common_method": "第一问求导，第二问覆盖引理，第三问证明相位最优下界",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q002",
+        "candidate_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+        "common_method": "移项后逐个比较基向量系数",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q003",
+        "candidate_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+        "common_method": "先算三个特殊角三角值再取交集",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q013",
+        "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+        "common_method": "展开和角，由偶性定相位，再用区间约束",
+        "module": "三角与向量"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q016",
+        "candidate_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+        "common_method": "余弦定理求AC后求cosA，建系用平行与垂直求E",
+        "module": "三角与向量"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q016:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ],
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space",
+          "value"
+        ]
+      ],
+      "mathematical_operations": [
+        "probability:",
+        "probability:",
+        "expectation:"
+      ],
+      "reasoning_path": "递增约束消除重复，指定最大值后再条件化",
+      "knowledge_combination": [
+        "概率统计",
+        "无放回组合的顺序化与最大值条件"
+      ],
+      "setting_and_ask": "从1至5中取三个互异编号，以递增顺序记为x、y、t。",
+      "structure_sha256": "810dc28211352d5e6c2b4ebb15a5aafeed5080bbcfbbf93596bcd1f43a89d70f"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.24,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q016:v1",
+      "right": "orig:ai:phase3:fullA:q015:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q014",
+        "candidate_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+        "common_method": "对五个编号写至少出现一次的概率再求和",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q001",
+        "candidate_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+        "common_method": "先排序五个观测值取第三个",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q008",
+        "candidate_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+        "common_method": "完整64点坐标和为0，删点后重归一",
+        "module": "概率统计"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q017",
+        "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+        "common_method": "先分类末次包含成功与失败，再由全失败求尾概率",
+        "module": "概率统计"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q017:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "initial",
+          "op",
+          "relation"
+        ],
+        [
+          "initial",
+          "op",
+          "relation",
+          "upper",
+          "weight"
+        ]
+      ],
+      "mathematical_operations": [
+        "recurrence:",
+        "recurrence_sum:"
+      ],
+      "reasoning_path": "求二次特解加交错齐次部分，偶数前缀中交错项消失",
+      "knowledge_combination": [
+        "数列",
+        "负系数递推与偶数项前缀"
+      ],
+      "setting_and_ask": "相邻两项之和是平方，奇偶部分会发生不同的抵消。",
+      "structure_sha256": "d72d7cb8647010f63c9cd9ebedbf2f19c06e95a32e2ab9713f82204b3fb9acbb"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.14,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q017:v1",
+      "right": "orig:ai:phase3:fullA:q017:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q018:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "op",
+          "operation",
+          "plane_points",
+          "point"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open",
+          "prompt",
+          "variable"
+        ],
+        [
+          "domain",
+          "expression",
+          "op",
+          "open",
+          "prompt",
+          "variable"
+        ]
+      ],
+      "mathematical_operations": [
+        "geometry:plane_distance",
+        "extrema:",
+        "equation:"
+      ],
+      "reasoning_path": "先确定法向量，再用距离平方避免绝对值分类，并求零距离点",
+      "knowledge_combination": [
+        "立体几何",
+        "平面投影与二次轨迹的极值"
+      ],
+      "setting_and_ask": "平面由三个轴截点确定，动点到平面的距离可转化为一元式。",
+      "structure_sha256": "618d387947d402828e4763f5363cbb74576769f8a59a6546e6abff84267e349b"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.333,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.13,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q018:v1",
+      "right": "orig:ai:phase3:derivative10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q009",
+        "candidate_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+        "common_method": "底面中线与侧棱张成平面后逐项判定",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q017",
+        "candidate_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+        "common_method": "建系用等距线性方程求球心再点积",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q010",
+        "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+        "common_method": "以AB为轴在两半平面取坐标并用点积和最小距离",
+        "module": "立体几何"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q015",
+        "candidate_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+        "common_method": "将两中点坐标相减得方向，再由角求底边",
+        "module": "立体几何"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:fullB:q019:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ],
+        [
+          "domain",
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:",
+        "nonnegative:"
+      ],
+      "reasoning_path": "参数界由右端点控制，全域差函数在内部取等",
+      "knowledge_combination": [
+        "函数与导数",
+        "有限区间参数界与倒数修正的对数不等式"
+      ],
+      "setting_and_ask": "对数参数函数的区间条件与全域切线界需分别讨论。",
+      "structure_sha256": "94331b4427cb412d5083b2883d80b2bbc5413a19d189e3b967dd5fd39b8640d2"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 0.667,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.186,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:fullB:q019:v1",
+      "right": "orig:ai:phase3:fullA:q019:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:acceptance5:q001:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "initial",
+          "op",
+          "relation"
+        ]
+      ],
+      "mathematical_operations": [
+        "recurrence:"
+      ],
+      "reasoning_path": "除以(n+1)阶乘后相邻差变常数",
+      "knowledge_combination": [
+        "数列",
+        "阶乘增长驱动的递推"
+      ],
+      "setting_and_ask": "排列规模的增长参与递推，试用阶乘权重化简。",
+      "structure_sha256": "104e451d7f865b3f0d9ed77a5511e5937ac38d6ef23de65f4c22c73b15b3f1ba"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.059,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:acceptance5:q001:v1",
+      "right": "orig:ai:phase3:sequence10:q003:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:acceptance5:q002:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "conditions",
+          "expressions",
+          "op",
+          "unique",
+          "variables"
+        ]
+      ],
+      "mathematical_operations": [
+        "system:"
+      ],
+      "reasoning_path": "同时用乘积、总和、差，排除负中项分支",
+      "knowledge_combination": [
+        "数列",
+        "等比三元组的对称方程与根筛选"
+      ],
+      "setting_and_ask": "三个正数按顺序构成递增等比数列，总和14，末项比首项多6。",
+      "structure_sha256": "0ccb8b03655af9fb15a659182a8de0ee9951e5ab52d24358dac67c40c15af29a"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.441,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:acceptance5:q002:v1",
+      "right": "orig:ai:phase3:sequence10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:acceptance5:q003:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "expression",
+          "op"
+        ]
+      ],
+      "mathematical_operations": [
+        "nonnegative:"
+      ],
+      "reasoning_path": "独立求导定位最低点，也可平方因子分解",
+      "knowledge_combination": [
+        "函数与导数",
+        "四次全域不等式与唯一驻点"
+      ],
+      "setting_and_ask": "四次式可以在全体实数上具有唯一取等点。",
+      "structure_sha256": "aa7acc326a0256a863bc5dc881a3c26d4bd2f8010c165f20f395947e1d968b10"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.244,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:acceptance5:q003:v1",
+      "right": "orig:ai:phase3:derivative10:q008:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:acceptance5:q004:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "domain",
+          "expression",
+          "op",
+          "open"
+        ]
+      ],
+      "mathematical_operations": [
+        "parameter_monotone:"
+      ],
+      "reasoning_path": "乘正数x后，将全称条件转成参数相对区间上界",
+      "knowledge_combination": [
+        "函数与导数",
+        "对数系数参数与区间远端"
+      ],
+      "setting_and_ask": "参数乘在对数项前，导数中的参数系数随位置变化。",
+      "structure_sha256": "192d7a304e6b22837a71044dd138bf64fd42143223bf82505504fa9e151f0660"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.333,
+      "setting_similarity": 0.158,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:acceptance5:q004:v1",
+      "right": "orig:ai:phase3:derivative10:q007:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q005",
+        "candidate_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+        "common_method": "用偶性和周期将-3/4搬到[2,3]",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q008",
+        "candidate_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+        "common_method": "引入公共值 t 比较 (t-2)ln2 等三个仿射式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q012",
+        "candidate_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+        "common_method": "导数相等得切点x=0再代入纵坐标",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q004",
+        "candidate_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+        "common_method": "求f'(1)并用点斜式",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q006",
+        "candidate_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+        "common_method": "由e^x≥x+1建立上界并检查等号",
+        "module": "函数与导数"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q019",
+        "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+        "common_method": "显式计算D再把集合包含翻译为平移下的函数比较",
+        "module": "函数与导数"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  },
+  {
+    "question_id": "orig:ai:phase3:acceptance5:q005:v1",
+    "features": {
+      "condition_structure": [
+        [
+          "condition",
+          "event",
+          "op",
+          "sample_space"
+        ]
+      ],
+      "mathematical_operations": [
+        "count:"
+      ],
+      "reasoning_path": "按末位0或1分支可以建立不同长度之间的计数关系",
+      "knowledge_combination": [
+        "数列",
+        "局部相邻限制的有限计数"
+      ],
+      "setting_and_ask": "记长度n的0-1串中不含相邻两个1的个数为aₙ，本题求a₄。",
+      "structure_sha256": "f5cfb70d0bc3149d063c2d9475f8a26cf8f9a2f819e2342f06f0bf092239fbe5"
+    },
+    "closest_new_item": {
+      "same_structure_after_erasing_numbers": false,
+      "operation_overlap": 1.0,
+      "knowledge_overlap": 0.0,
+      "setting_similarity": 0.214,
+      "classification": "结构存在差异，仍需专家判断创新程度",
+      "left": "orig:ai:phase3:acceptance5:q005:v1",
+      "right": "orig:ai:phase3:fullA:q002:v1"
+    },
+    "source_method_comparisons": [
+      {
+        "question_id": "2025-cn-math-national-1:q013",
+        "candidate_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+        "common_method": "后四项和是前四项和的q四次倍",
+        "module": "数列"
+      },
+      {
+        "question_id": "2025-cn-math-national-1:q016",
+        "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+        "common_method": "令b_n=na_n消去分母再对有限和求导",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q007",
+        "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+        "common_method": "由总和求六个组和均值再以奇偶约束筛公差并构造配对",
+        "module": "数列"
+      },
+      {
+        "question_id": "2026-cn-math-national-1:q014",
+        "candidate_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+        "common_method": "由S3n差得每三项和2n，分析九项窗可覆盖的整块",
+        "module": "数列"
+      }
+    ],
+    "generation_mode": "ai",
+    "basis": "表达式AST消除数值、任务依赖、核心运算、知识组合、情境与问法联合检查",
+    "limitations": [
+      "原始真题尚无统一语义AST，跨真题比较依赖版本绑定的知识与方法分析",
+      "经典方法可以重用，结构不同不等于高创新",
+      "未检索全网，不能证明首次出现"
+    ]
+  }
+]
