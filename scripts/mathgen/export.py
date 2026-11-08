@@ -180,6 +180,12 @@ def figure_for(q, folder):
 
 
 def export_run(run, output):
+    from gaokao import require
+
+    require(
+        run.get("generation_mode") != "ai",
+        "AI试卷必须经独立中文写作和考生PDF审题，禁止从内部规格直接排版",
+    )
     font = chinese_font()
     assets = output / "assets"
     assets.mkdir(exist_ok=True)

@@ -1,0 +1,58 @@
+{
+  "scope": "实际失败与修订，不替代保留的原始拒绝JSON和PDF审题报告",
+  "failures": [
+    {
+      "stage": "pilot PDF",
+      "issue": "章节标题孤行；sqrt单参数缩写解析失败",
+      "fix": "章节随题；递归规范TeX单token参数；答案渲染成功后才写发布证书",
+      "evidence": "experiments/phase4/pilot-v1与pilot-v2/publication-attempt1.json"
+    },
+    {
+      "stage": "fullA math",
+      "issue": "交错求和SymPy异常、Laurent零点处理和符号字典序列化",
+      "fix": "成对求和、有限Laurent系数、明确不可支持操作及序列化",
+      "evidence": "experiments/phase4/fullA-v1至v3/rejected.json"
+    },
+    {
+      "stage": "fullA student",
+      "issue": "整卷重复与17题分值层次不足，overall_pass=false",
+      "fix": "实际重构考点组合和二阶递推，独立重新图审",
+      "evidence": "reports/phase4-A-student-review-v1.json"
+    },
+    {
+      "stage": "fullA binding",
+      "issue": "修改错因元数据后写作SHA过期",
+      "fix": "拒绝发布，重新绑定并全流程复核",
+      "evidence": "experiments/phase4/fullA-v6/rejected.json"
+    },
+    {
+      "stage": "fullB math",
+      "issue": "加权和未计入a_k+2的平移项",
+      "fix": "求和器先加入additive_shift；独立两项结果12回归",
+      "evidence": "experiments/phase4/proposals/fullB.json内修订记录及test_added_shift_in_weighted_sum_is_not_ignored"
+    },
+    {
+      "stage": "fullB student",
+      "issue": "审题者误报17题分值缺失",
+      "fix": "只看原页图重新核对并撤回，保留旧报告",
+      "evidence": "reports/phase4-B-student-review-v1.json与v2.json"
+    },
+    {
+      "stage": "Skill validation",
+      "issue": "系统验证脚本默认GBK无法读取中文UTF8",
+      "fix": "以python -X utf8实际验证，Skill is valid"
+    },
+    {
+      "stage": "relocation attempt1",
+      "issue": "孤立解释器未找到matplotlib，原环境从全局安装隐式导入",
+      "fix": "补齐离线测试依赖缓存；新电脑requirements安装包含matplotlib"
+    },
+    {
+      "stage": "relocation attempt2",
+      "issue": "核验脚本向read_json传str而非Path",
+      "fix": "显式Path，第三次全新目录恢复通过",
+      "evidence": "reports/phase4-fresh-environment.json"
+    }
+  ],
+  "not_all_failures_inherent_to_math": true
+}

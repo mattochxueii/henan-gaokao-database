@@ -48,6 +48,18 @@ def main(argv=None):
     action.add_argument("--candidates", type=Path)
     action.add_argument("--model")
     action.add_argument("--allow-template-fallback", action="store_true")
+    action.add_argument("--pilot-certificate", type=Path)
+    action = actions.add_parser("publish")
+    action.add_argument("output", type=Path)
+    action.add_argument("--student-review", type=Path, required=True)
+    action.add_argument("--math-comparison", type=Path, required=True)
+    action = actions.add_parser("writing-request")
+    action.add_argument("candidates", type=Path)
+    action.add_argument("--output", type=Path, required=True)
+    action = actions.add_parser("attach-writing")
+    action.add_argument("candidates", type=Path)
+    action.add_argument("writing", type=Path)
+    action.add_argument("--output", type=Path, required=True)
     action = actions.add_parser("verify")
     action.add_argument("run", type=Path)
     action = actions.add_parser("review")
@@ -85,7 +97,11 @@ def main(argv=None):
                 from mathgen.dynamic import run_ai
 
                 record = run_ai(
-                    root, provider, args.output.resolve(), not args.no_export
+                    root,
+                    provider,
+                    args.output.resolve(),
+                    not args.no_export,
+                    pilot_certificate=args.pilot_certificate,
                 )
                 result = {
                     "output": str(args.output.resolve()),
@@ -121,6 +137,29 @@ def main(argv=None):
                 "files": record.get("files", {}),
                 "attempts": len(record["events"]),
             }
+        elif args.action in ("writing-request", "attach-writing"):
+            from mathgen.writing_packet import request, attach
+            from storage import atomic_json
+
+            result = (
+                request(
+                    read_json(args.candidates),
+                    read_json(root / "analysis/language-rules.json"),
+                )
+                if args.action == "writing-request"
+                else attach(read_json(args.candidates), read_json(args.writing))
+            )
+            atomic_json(args.output, result)
+            result = {
+                "output": str(args.output),
+                "status": "写作层请求已输出"
+                if args.action == "writing-request"
+                else "写作层已核查绑定",
+            }
+        elif args.action == "publish":
+            from mathgen.exam_workflow import publish
+
+            result = publish(args.output, args.student_review, args.math_comparison)
         elif args.action == "review":
             from mathgen.attestation import attest
 
@@ -128,6 +167,22 @@ def main(argv=None):
                 args.run, args.report, args.blind_report, not args.no_export
             )
         else:
+            if args.run.is_dir():
+                from mathgen.exam_workflow import verify_certificate
+
+                certificate = read_json(args.run / "publication.json")
+                verify_certificate(args.run, certificate)
+                print(
+                    dumps(
+                        {
+                            "certificate_valid": True,
+                            "questions": certificate["question_count"],
+                            "status": certificate["status"],
+                            "formal_proof": False,
+                        }
+                    )
+                )
+                return 0
             record = read_json(args.run)
             require(
                 len(record["questions"]) == len(record["verifications"]),

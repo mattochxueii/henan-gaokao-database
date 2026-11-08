@@ -1,0 +1,1094 @@
+{
+  "report_type": "independent_reference_solution_review",
+  "created_at_utc": "2026-11-08T10:50:46.490313+00:00",
+  "input_scope": "paper_and_solutions_pdf",
+  "reference_answers_read": true,
+  "reviewer_role": "答案校审；合法阅读题目PDF与参考答案PDF，非考生盲审",
+  "model_version": "未暴露",
+  "formal_proof": false,
+  "human_reviewed": false,
+  "source_boundaries": {
+    "permitted_inputs": "仅指定的4份PDF及其页面渲染；独立数值/有理数计算",
+    "internal_json_read": false,
+    "project_source_read": false,
+    "author_reasoning_read": false,
+    "other_reports_read": false,
+    "project_solver_called": false,
+    "candidate_or_pdf_modified": false,
+    "detail_crops_created": "仅从已查看答案PNG制作3张局部放大图以核查字形；未修改原图。"
+  },
+  "pdf_fingerprints": [
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/paper.pdf",
+      "sha256": "fd8f22fbbc49cc8e0d9fccc51eb5bdbdc614321bc694d44e35e7b49a54bbe089",
+      "paper": "A",
+      "kind": "paper",
+      "pages": 8
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solutions-preview-fullA.pdf",
+      "sha256": "da08e0d7b70529e7153137359768940e026c200099aa6c954d304df4e664e8ed",
+      "paper": "A",
+      "kind": "solutions",
+      "pages": 5
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/paper.pdf",
+      "sha256": "6f5656116aab8cb0e774ff583cf23cfb8fe6d28418e5f915bf80f6774a6f0c4e",
+      "paper": "B",
+      "kind": "paper",
+      "pages": 8
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solutions-preview-fullB.pdf",
+      "sha256": "4e7b8fd3414c9520764f1d787678a43609e09fabea016989f91186d5e8403942",
+      "paper": "B",
+      "kind": "solutions",
+      "pages": 5
+    }
+  ],
+  "actually_viewed_png_fingerprints": [
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-1.png",
+      "sha256": "aece0e2f598a90d35536dc75e25a9641dc5529bd08b588dd20bc1279c61998ed",
+      "paper": "A",
+      "kind": "paper",
+      "page": 1,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-2.png",
+      "sha256": "d9cae909290b93c4c7b261a79898a181b7faeabc9a08ad3958be56c0f0f9c2c2",
+      "paper": "A",
+      "kind": "paper",
+      "page": 2,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-3.png",
+      "sha256": "e323ab969dd037e2593ad7a65da192c06be62fef84fef89ec056eccbbac54531",
+      "paper": "A",
+      "kind": "paper",
+      "page": 3,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-4.png",
+      "sha256": "604b5da01578f84b7a2362d43bceef368459ea34c90d5bd78406f8f73928addb",
+      "paper": "A",
+      "kind": "paper",
+      "page": 4,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-5.png",
+      "sha256": "a477b472f13401fa1da25469d5ca7a1a52b403c461b4fbdb82d54b626f87e5ce",
+      "paper": "A",
+      "kind": "paper",
+      "page": 5,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-6.png",
+      "sha256": "3c70afc0f227d14bc37675bd81bea143674a8100969b5db613f71d05cd3e5672",
+      "paper": "A",
+      "kind": "paper",
+      "page": 6,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-7.png",
+      "sha256": "1dcd2d19fb243473ac41bab00d6f5034a319d05287a73d0405472c7a370a6b07",
+      "paper": "A",
+      "kind": "paper",
+      "page": 7,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullA/review-only/pages/page-8.png",
+      "sha256": "90643112e8156d97898a7ab48a3e51d4261248803750cec33c47d778a52d6418",
+      "paper": "A",
+      "kind": "paper",
+      "page": 8,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/A/page-1.png",
+      "sha256": "ff698befdc8598f61b3ff8283cc8c72a1f4bc8c815e8d5458ad46e30f7b218ba",
+      "paper": "A",
+      "kind": "solutions",
+      "page": 1,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/A/page-2.png",
+      "sha256": "dfa5cf8f4cf15c3b1dee188755c0bac71141f388a66ac1b81e2af04f9d45b701",
+      "paper": "A",
+      "kind": "solutions",
+      "page": 2,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/A/page-3.png",
+      "sha256": "07d5b568be6bc0649342c694d7d8be5e447e02f8db714a836335c9e823053927",
+      "paper": "A",
+      "kind": "solutions",
+      "page": 3,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/A/page-4.png",
+      "sha256": "6398bafd83699e82012f54a5a6b6dd2c4da4b8d183a4fffbef92e92f78c96b65",
+      "paper": "A",
+      "kind": "solutions",
+      "page": 4,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/A/page-5.png",
+      "sha256": "c0229a738937cef87f86fec0dbc9b8a2d4437ca2f2300623dfa5a726369211be",
+      "paper": "A",
+      "kind": "solutions",
+      "page": 5,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-1.png",
+      "sha256": "5686e34ff6ba8e1a0fa3ae8775f78d727bbf62f21c5bca32d90afbceb7c288dd",
+      "paper": "B",
+      "kind": "paper",
+      "page": 1,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-2.png",
+      "sha256": "41162bcf3920126d91ee5d2456dd5f8e7c50b3ef9af5c129d2781a168cbf6551",
+      "paper": "B",
+      "kind": "paper",
+      "page": 2,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-3.png",
+      "sha256": "3a3057475468a33f8da2bfd6ee928492a0b27f9ea0dd9301d5c365435a2f1509",
+      "paper": "B",
+      "kind": "paper",
+      "page": 3,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-4.png",
+      "sha256": "85dbcceed6cba0bfbe2aaf81d0ab1cd9770fb80c056892faf456ae17d75e3ef2",
+      "paper": "B",
+      "kind": "paper",
+      "page": 4,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-5.png",
+      "sha256": "e5123f1baa40510185a935b6325c17791111a59a90c6316da20112ca40fbec2c",
+      "paper": "B",
+      "kind": "paper",
+      "page": 5,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-6.png",
+      "sha256": "5318136ca8be4a1b40d94919c3baa775854e499fcd01426c8e2847365ba838a9",
+      "paper": "B",
+      "kind": "paper",
+      "page": 6,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-7.png",
+      "sha256": "d6ae6815a39d7de511a00fe8adbac9ffb1ede41fc3dc9924f2f9f1d08c990f68",
+      "paper": "B",
+      "kind": "paper",
+      "page": 7,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/final/fullB/review-only/pages/page-8.png",
+      "sha256": "32dc74b171ed0b26eb9ed90fac3cf2b5e1a2515ceb07003ecad94c56662d4763",
+      "paper": "B",
+      "kind": "paper",
+      "page": 8,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/B/page-1.png",
+      "sha256": "d7695027338529c319a383a3276040637b1302ef5ccdf8e78da4143b07e74dd1",
+      "paper": "B",
+      "kind": "solutions",
+      "page": 1,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/B/page-2.png",
+      "sha256": "377c0e78dc8d927079f6bdb35576eb99f2d174f968772edd19bfa86678faa697",
+      "paper": "B",
+      "kind": "solutions",
+      "page": 2,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/B/page-3.png",
+      "sha256": "d9ead5cdf15f39dc05285fb89135541922a5bc11cfebee71f3c953d00b6d41c1",
+      "paper": "B",
+      "kind": "solutions",
+      "page": 3,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/B/page-4.png",
+      "sha256": "71e1e260c3eac4194dc556b92c87e6d99f2ad9c6dffbac6d7c4ce1ed7ffc0fb0",
+      "paper": "B",
+      "kind": "solutions",
+      "page": 4,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-pages/B/page-5.png",
+      "sha256": "6ce7805d1f59192b662fa7be3b59596f1d967ae2b04a4665a40ba8c9fad715a5",
+      "paper": "B",
+      "kind": "solutions",
+      "page": 5,
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-review-B19-crop.png",
+      "sha256": "ae0ac1babca965dce260ce56922127ff9f6a3cbb2842a8cf30ce3fe48635bbf5",
+      "paper": "B",
+      "kind": "solutions_detail_crop",
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-review-B15-crop.png",
+      "sha256": "823f0ab765a70571a00add3d71030729eaf1c69942ad5c890467b67672ddb233",
+      "paper": "B",
+      "kind": "solutions_detail_crop",
+      "actually_viewed": true
+    },
+    {
+      "path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/work/phase4/solution-review-B19-numerator-crop.png",
+      "sha256": "3b37f59d0b89a324aabbdd98eb11765776eb388c7c80e735e20dfd860467d4cf",
+      "paper": "B",
+      "kind": "solutions_detail_crop",
+      "actually_viewed": true
+    }
+  ],
+  "visual_coverage": {
+    "solution_pages_viewed": 10,
+    "paper_pages_viewed": 16,
+    "detail_crops_viewed": 3,
+    "all_required_solution_pages_actually_viewed": true
+  },
+  "method": [
+    "通过view_image实际查看全部10个答案页、16个题目页，并逐题将选项及所问对应到解析。",
+    "独立重推代数、概率、向量和解析几何关系，核查严格不等号、排除的几何情形、反向轨迹验证和存在性。",
+    "使用独立Python标准库计算，未读取或调用本项目求解器；枚举A8并以精确分数复算概率和数列。数值计算仅为旁证，解析完整性另外按推导核查。",
+    "所有SHA256均从本次实际输入文件计算；本报告是模型校审记录，不构成形式化证明或人工审校。"
+  ],
+  "independent_computation_evidence": {
+    "A8_exhaustive_three_digit_count": 30,
+    "A15_probabilities": [
+      "1/5",
+      "3/5",
+      "1/5"
+    ],
+    "A15_third_answer": "7/12",
+    "A16_normal_dot_PE_and_PF": [
+      0,
+      0
+    ],
+    "A16_midpoint_AQ_dot_normal": 0,
+    "A17_recurrence_and_formula_match_n_1_to_21": true,
+    "A17_indices_with_a_n_lt_n_squared_through_21": [
+      2,
+      3
+    ],
+    "B8_four_roots_approx": [
+      -1.3722813232690143,
+      0,
+      1,
+      4.372281323269014
+    ],
+    "B8_max_substitution_residual": 0.0,
+    "B15_probabilities": [
+      "64/125",
+      "48/125",
+      "12/125",
+      "1/125"
+    ],
+    "B15_conditional_answer": "1/13",
+    "B16_volume": "1/2",
+    "B17_exact_sum_formula_matches_n_1_to_12": true,
+    "B17_integral_indices_through_20": [
+      1,
+      2
+    ],
+    "B18_min_area_at_s_zero": 4
+  },
+  "question_checks": {
+    "fullA": [
+      {
+        "question": 1,
+        "reference_answer": "B；√2",
+        "result": "pass",
+        "mathematical_basis": "独立有理化得(1+2i)/(2-i)=i，|i-1|=√2；B选项匹配。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 2,
+        "reference_answer": "B；2",
+        "result": "pass",
+        "mathematical_basis": "整数条件x²≤10给出-3至3，与1<x≤5交集为{2,3}；B匹配。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 3,
+        "reference_answer": "A；-√2/10",
+        "result": "pass",
+        "mathematical_basis": "θ=α+π/4∈(π/2,π)，sinθ=3/5且cosθ=-4/5；cosα=(cosθ+sinθ)/√2=-√2/10。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 4,
+        "reference_answer": "C；7",
+        "result": "pass",
+        "mathematical_basis": "误录数据总和80、平方和700；纠正为总和90、平方和880，880/10-9²=7。使用总体方差分母10正确。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 5,
+        "reference_answer": "B；5/2",
+        "result": "pass",
+        "mathematical_basis": "夹角余弦2t/(t²+1)=4/5，等价2t²-5t+2=0；两正根1/2、2均合法，和5/2。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 6,
+        "reference_answer": "A；√15",
+        "result": "pass",
+        "mathematical_basis": "椭圆a=3、c=2；PF1+PF2=6且比2:1得4、2。三边4、2、4，海伦公式面积√(5·1·3·1)=√15。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 7,
+        "reference_answer": "C；1",
+        "result": "pass",
+        "mathematical_basis": "切线过原点等价f(t)=tf′(t)，化为(t-2)(2t²+t+2)=0；二次因子判别式负且恒正，唯一t=2，斜率1。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 8,
+        "reference_answer": "D；30",
+        "result": "pass",
+        "mathematical_basis": "偶数和的数字组成只能为两奇一偶或三偶；排列数54+6=60。交换百位个位无不动点，恰半数百位较大，得30。独立枚举也得30。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 9,
+        "reference_answer": "ABC",
+        "result": "pass",
+        "mathematical_basis": "a_(2n-1)=2n，a_(2n)=-(2n+1)，故奇偶子列公差2和-2。配对和-1给S_(2n)=-n，S_(2n-1)=n+1，D的n错误。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 10,
+        "reference_answer": "AC",
+        "result": "pass",
+        "mathematical_basis": "y=x²在(t,t²)切线y=2tx-t²；经过(0,-1)给t=±1，A成立，t=1给C。焦点(0,1/4)否定B；x+y=0的交点(0,0)、(-1,1)，弦长√2否定D。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 11,
+        "reference_answer": "ABD",
+        "result": "pass",
+        "mathematical_basis": "f′=(1-ln x)/x²，故增至e后减，最大1/e。负水平线-1仅与(0,1)增支交一次；有两个不同交点时必分处e两侧，极值水平仅一个交点。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 12,
+        "reference_answer": "15",
+        "result": "pass",
+        "mathematical_basis": "通项C(6,k)(-1)^k x^(6-2k)，x²要求k=2，系数15；正负号正确。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 13,
+        "reference_answer": "√3/2",
+        "result": "pass",
+        "mathematical_basis": "先左移π/12得sin(2x+π/3)，再横坐标缩半得sin(4x+π/3)，代π/12为sin(2π/3)。变换先后正确。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 14,
+        "reference_answer": "√6/6",
+        "result": "pass",
+        "mathematical_basis": "棱长2的正四面体V=2√2/3、S=4√3；V=rS/3得r=√6/6。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 15,
+        "reference_answer": "(1)概率1/5、3/5、1/5，E(X)=2；(2)1/4；(3)7/12",
+        "result": "pass",
+        "mathematical_basis": "X仅能1、2、3，组合数分别4、12、4，样本20。条件X≥2后权重3/4、1/4；剩余红球数2、1，故再次红球概率(3/4)(2/3)+(1/4)(1/3)=7/12；未误用放回抽样。",
+        "paper_pages": [
+          4
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 16,
+        "reference_answer": "(1)平行；(2)1/√21；(3)Q为PD中点",
+        "result": "pass",
+        "mathematical_basis": "G为PB中点时EG∥PA、FG∥AD，两平面平行推出EF∥平面PAD。坐标P(0,0,2)、E(0,-1,0)、F(1/2,1/2,1)满足侧棱√6，法向(4,-2,1)与PE、PF点积均0；锐二面角余弦1/√21。Q=P+t(D-P)，AQ=(1-t,1+t,2-2t)，点积为4-8t，唯一t=1/2∈[0,1]；A不在PEF，故是线面平行而非线在面内。",
+        "paper_pages": [
+          5
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 17,
+        "reference_answer": "(1)b_n=2^n-2；(2)a_n=(n-2)2^(n-1)+2；(3)n=2,3",
+        "result": "pass",
+        "mathematical_basis": "递推给b_(n+1)=b_n+2^n且b1=0；归一化累加的等比和给a_n。n=1,2,3逐项检验；n≥4时二项展开2^(n-1)>1+(n-1)+(n-1)(n-2)/2，故a_n>n²+n(n-1)(n-4)/2≥n²。严格号n=4也成立；独立递推n≤21与公式一致。",
+        "paper_pages": [
+          6
+        ],
+        "solution_pages": [
+          4
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 18,
+        "reference_answer": "(1)x²/4+y²/2=1；(2)X²/2+(Y-1)²=1，0<Y<1；(3)最大√2，y=±√(3/2)x+2",
+        "result": "pass",
+        "mathematical_basis": "e²=1/2及过(√2,1)给a²=4、b²=2。y=kx+2代入得(1+2k²)x²+8kx+4=0，Δ>0等价k²>1/2；中点X=-4k/(1+2k²)、Y=2/(1+2k²)。消参及反向k=-X/(2Y)完整，0<Y<1使k²>1/2且不含非法端点。竖直线x=0面积0单独处理；其余面积4√(2k²-1)/(1+2k²)=4t/(t²+2)≤√2，等号t=√2合法。",
+        "paper_pages": [
+          7
+        ],
+        "solution_pages": [
+          4
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 19,
+        "reference_answer": "(1)(0,1)递减、(1,+∞)递增，最小1；(2)a<1无根，a=1一根，a>1两根；(3)根和>2、根积<1",
+        "result": "pass",
+        "mathematical_basis": "f′=(x-1)/x及两端趋于+∞给根数。g(t)=f(2-t)-f(t)，g′=2(t-1)²/[t(2-t)]>0、g(1)=0，在0<t<1得g<0，从增支比较给x1+x2>2。h(t)=f(1/t)-f(t)=1/t-t+2ln t，h′=-(t-1)²/t²<0且h(1)=0，故h>0，增支比较得1/x1>x2。所有比较自变量域和严格性均合法。",
+        "paper_pages": [
+          8
+        ],
+        "solution_pages": [
+          4,
+          5
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      }
+    ],
+    "fullB": [
+      {
+        "question": 1,
+        "reference_answer": "A；-2",
+        "result": "pass",
+        "mathematical_basis": "写z=x+yi，由z+2共轭z=3+i得x=1、y=-1，z²=-2i，虚部为实数-2。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 2,
+        "reference_answer": "D；2",
+        "result": "pass",
+        "mathematical_basis": "二次不等式B=(-1,2)，与给定A交为{0,1}，2个元素，D匹配。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 3,
+        "reference_answer": "B；1/7",
+        "result": "pass",
+        "mathematical_basis": "tan2α=4/3，tan(2α-π/4)=(4/3-1)/(1+4/3)=1/7，分母非0。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 4,
+        "reference_answer": "C；3/5",
+        "result": "pass",
+        "mathematical_basis": "独立性给至少一中1-(1/3)(1/2)=5/6，恰一中(2/3)(1/2)+(1/3)(1/2)=1/2；条件概率3/5。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 5,
+        "reference_answer": "D；-4/3",
+        "result": "pass",
+        "mathematical_basis": "圆心(1,-2)，r=2、半弦√3给圆心到直线距离1。距离|k+3|/√(k²+1)=1，平方等价且两边非负，无增根；解k=-4/3。",
+        "paper_pages": [
+          1
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 6,
+        "reference_answer": "A；4√3/3",
+        "result": "pass",
+        "mathematical_basis": "实轴长2给a=1，渐近线bx-ay=0到圆心(2,0)距离2b/√(a²+b²)=1，b>0，b²=1/3，焦距2√(4/3)。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          1
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 7,
+        "reference_answer": "C；17",
+        "result": "pass",
+        "mathematical_basis": "a2a4=a3²=16；a1=a2²/a3、a5=a4²/a3；和[(a2+a4)²-2a2a4]/a3=(100-32)/4=17，不依赖任选公比。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 8,
+        "reference_answer": "B；4",
+        "result": "pass",
+        "mathematical_basis": "按x²-2x-3符号分区，外区根(3±√33)/2均在所需区且x+3≥0；内区根0、1均合法，边界-1、3均不满足。四根互异；独立代回残差0。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 9,
+        "reference_answer": "ABD",
+        "result": "pass",
+        "mathematical_basis": "平移与倍乘给均值0、方差12；加均值2的新数据不改变离差平方和15，但分母改为6，方差5/2，故C假。若五数都≤2且均值2则全为2，与方差3矛盾，故D真。",
+        "paper_pages": [
+          2
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 10,
+        "reference_answer": "ABD",
+        "result": "pass",
+        "mathematical_basis": "半径1、1且圆心距2外切；PO2≤PO1+O1O2=3在P=(-1,0)取等。P=(1,0)在第二圆上，仅一条切线，C假。过两圆心的直线截第二圆直径2，为所有弦上界且符合两不同交点条件。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          2
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 11,
+        "reference_answer": "ABC",
+        "result": "pass",
+        "mathematical_basis": "g′=3x(x-2)，增减区间与a无关；a=0有不同零点0、3。0<a<4时极大a>0、极小a-4<0及两端行为保证三根。a>4非负半轴最小a-4>0，唯一负根，D假。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          2,
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 12,
+        "reference_answer": "5/7",
+        "result": "pass",
+        "mathematical_basis": "f(1/2)=ln3、f(1/3)=ln2，所以ln[(1+t)/(1-t)]=ln6；-1<t<1保证真数正，解t=5/7合法。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 13,
+        "reference_answer": "√13或√37",
+        "result": "pass",
+        "mathematical_basis": "面积=(1/2)·3·4sinC=3√3，sinC=√3/2，C=π/3或2π/3均为三角形内角；余弦定理c²=13或37，两者均满足三角不等式。",
+        "paper_pages": [
+          3
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 14,
+        "reference_answer": "4√5/15",
+        "result": "pass",
+        "mathematical_basis": "设A原点、AB/AD/AA1为正交轴，AM=(2,0,1)，B1N=(-1,2,-2)；点积-4、模√5和3，异面直线锐角余弦取绝对值4/(3√5)。",
+        "paper_pages": [
+          4
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 15,
+        "reference_answer": "(1)p估计1/5，概率64/125、48/125、12/125、1/125；(2)1/13；(3)0<p≤1/2",
+        "result": "pass",
+        "mathematical_basis": "独立抽检给二项分布B(3,1/5)，四概率和1。未通过即X≥2，全部不合格条件概率(1/125)/(13/125)=1/13。E(Y)=P(X≤1)-P(X≥2)=1-6p²+4p³，导数12p(p-1)<0且在1/2为0，结合原域0<p<1给范围0<p≤1/2。",
+        "paper_pages": [
+          4
+        ],
+        "solution_pages": [
+          3
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 16,
+        "reference_answer": "(1)平行；(2)1/2；(3)√6/3，Q为BB1中点",
+        "result": "pass",
+        "mathematical_basis": "中位线MN∥BC、MP∥BA1支持面面平行。坐标M(1,0,0)、N(0,1,0)、P(0,0,1)，等边底面积√3/2、B1(2,0,2)到x+y+z=1距离√3，体积1/2。Q=(2,0,t)、t∈[0,2]，MQ=(1,0,t)，目标面法向(1,1,1)，夹角正弦(1+t)/√[3(1+t²)]≤√(2/3)，等号t=1在闭区间内，端点未遗漏。",
+        "paper_pages": [
+          5
+        ],
+        "solution_pages": [
+          4
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 17,
+        "reference_answer": "(1)a_n=3(3/2)^(n-1)-2；(2)T_n=12+6(n-2)(3/2)^n；(3)n=1,2",
+        "result": "pass",
+        "mathematical_basis": "S1=a1=3a1-2给a1=1；相邻关系相减给2a_(n+1)=3a_n+2。归一化得通项，错位相减或独立有理数求和均给T公式。T1=3、T2=12；n≥3分母为2^(n-1)，3^(n+1)为奇数，整性必需2^(n-1)|n-2，但0<n-2<2^(n-1)，故不可能。独立精确计算n≤20一致，解析并未仅依赖数值。",
+        "paper_pages": [
+          6
+        ],
+        "solution_pages": [
+          4
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 18,
+        "reference_answer": "(1)y²=4x；(2)整条直线x=-1；(3)最小4，在焦点弦x=1时取到",
+        "result": "pass",
+        "mathematical_basis": "焦点(1,0)、准线x=-1定抛物线。A(u²,2u)、B(v²,2v)，u≠v；焦点条件uv=-1自动保证u、v非0。两切线交点(uv,u+v)=(-1,s)；反向二次方程t²-st-1=0对任意实s有两不同实根，确保整条准线无缺点，并涵盖竖直弦s=0。|AB|=s²+4，T到弦距离√(s²+4)，面积(1/2)(s²+4)^(3/2)≥4；等号s=0，A/B=(1,±2)，T=(-1,0)。",
+        "paper_pages": [
+          7
+        ],
+        "solution_pages": [
+          4,
+          5
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      },
+      {
+        "question": 19,
+        "reference_answer": "(1)(0,+∞)严格递增，唯一零点1；(2)a>2；(3)x1x3=x2²=1",
+        "result": "pass",
+        "mathematical_basis": "f′=[(x+1)²-2ax]/[x(x+1)²]。a=2分子(x-1)²，虽在孤立点1导数0，函数仍严格递增。a≤2分子=(x-1)²+2(2-a)x≥0，唯一根1。a>2临界点r=a-1-√[a(a-2)]、R=a-1+√[a(a-2)]满足0<r<1<R、rR=1；f(1)=0且1在严格减区间给f(r)>0>f(R)，配合两端±∞，恰三根。f(1/x)=-f(x)使外两根互倒，且中根1，完整证明目标。放大核查了分子中的x，确实存在，无代数漏项。",
+        "paper_pages": [
+          8
+        ],
+        "solution_pages": [
+          5
+        ],
+        "missing_subquestions": false,
+        "high_school_method": true,
+        "blocking_findings": []
+      }
+    ]
+  },
+  "solution_page_checks": [
+    {
+      "paper": "A",
+      "page": 1,
+      "questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "result": "pass",
+      "notes": "分式、根号、集合、下标和二项式均可辨；无重叠、截断或缺字。"
+    },
+    {
+      "paper": "A",
+      "page": 2,
+      "questions": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "result": "pass",
+      "notes": "导数撇号、奇偶下标、组合数等清楚；正文与页码分离。"
+    },
+    {
+      "paper": "A",
+      "page": 3,
+      "questions": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "result": "pass",
+      "notes": "分布列以等式列举，概率均可辨；空间向量箭头、分数坐标和法向量完整。"
+    },
+    {
+      "paper": "A",
+      "page": 4,
+      "questions": [
+        17,
+        18,
+        19
+      ],
+      "result": "pass_with_minor_pagination_finding",
+      "notes": "长不等式与轨迹公式保持页内；第19题最后一句移至第5页，见N01。"
+    },
+    {
+      "paper": "A",
+      "page": 5,
+      "questions": [
+        19
+      ],
+      "result": "pass_with_minor_pagination_finding",
+      "notes": "仅有上一页推导最后一句，内容完整、页码正确；大面积空白，见N01。"
+    },
+    {
+      "paper": "B",
+      "page": 1,
+      "questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "result": "pass",
+      "notes": "共轭符号、复数虚部、条件概率、双曲线参数与根号清楚。"
+    },
+    {
+      "paper": "B",
+      "page": 2,
+      "questions": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "result": "pass_with_minor_pagination_finding",
+      "notes": "长分式、绝对值、均值方差上标和圆心下标正确；第11题续页见N02。"
+    },
+    {
+      "paper": "B",
+      "page": 3,
+      "questions": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "result": "pass_with_minor_pagination_finding",
+      "notes": "第11题续文缺题号提示；第15题分布第一行较长但放大检查仍完整处在图像页内，无裁切。"
+    },
+    {
+      "paper": "B",
+      "page": 4,
+      "questions": [
+        16,
+        17,
+        18
+      ],
+      "result": "pass_with_minor_pagination_finding",
+      "notes": "空间法向量、求和上下标、错位相减结果完整可读；第18(2)跨页见N03。"
+    },
+    {
+      "paper": "B",
+      "page": 5,
+      "questions": [
+        18,
+        19
+      ],
+      "result": "pass",
+      "notes": "焦点弦与切线推导完整；放大确认第19题分子为(x-1)²+2(2-a)x，有末尾x，未见漏项。"
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "N01",
+      "severity": "minor",
+      "blocking": false,
+      "paper": "A",
+      "solution_pages": [
+        4,
+        5
+      ],
+      "question": 19,
+      "category": "pagination",
+      "observation": "第19(3)最后一句单独跨至答案第5页；第5页除该句与页码外几乎全白，推导阅读连续性和纸面利用率较弱。",
+      "recommendation": "将该句与前文保留在同页，或将第19题整体移至下一页并重新平衡页面；无需改动数学内容。"
+    },
+    {
+      "id": "N02",
+      "severity": "minor",
+      "blocking": false,
+      "paper": "B",
+      "solution_pages": [
+        2,
+        3
+      ],
+      "question": 11,
+      "category": "pagination",
+      "observation": "第11题A、B项分析留在第2页，C、D项及最终选项ABC在第3页开头，页首没有题号或续题提示。",
+      "recommendation": "尽量整题同页，或增加第11题续的提示。"
+    },
+    {
+      "id": "N03",
+      "severity": "minor",
+      "blocking": false,
+      "paper": "B",
+      "solution_pages": [
+        4,
+        5
+      ],
+      "question": 18,
+      "category": "pagination",
+      "observation": "第18(2)的参数设定与uv=-1在第4页末，切线交点及反向验证在第5页；未发生公式截断或内容丢失，但同一推导被分页分开。",
+      "recommendation": "使第18题或至少第18(2)的连续推导同页。"
+    }
+  ],
+  "curriculum_assessment": {
+    "result": "高中方法可完成全部解析",
+    "basis": "使用复数、集合、三角公式、向量、组合概率、导数单调性、二项式、数列和圆锥曲线初等方法；未依赖高等数学定理。",
+    "notation_note": "B19使用lim记号表达对数函数两端行为；属于初等函数性质的简写，并未用洛必达或高阶理论。"
+  },
+  "overall_conclusion": {
+    "status": "pass_with_nonblocking_editorial_findings",
+    "mathematical_correctness": "38题全部核查通过；未发现参考答案、选项匹配或关键推导错误。",
+    "completeness": "解答题各小问均有对应结论和有效推导；重要边界、严格号、垂直情形及轨迹反向验证均已检查。",
+    "layout": "全部答案页可读，无公式裁切、重叠、缺字或页码错误；3处分段分页可改善。",
+    "blocking_count": 0,
+    "nonblocking_count": 3,
+    "release_recommendation": "数学内容可用；建议在正式交付前优化三处答案分页。"
+  }
+}

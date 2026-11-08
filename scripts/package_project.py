@@ -25,7 +25,7 @@ def package():
             and path.suffix not in (".key", ".env"),
             "暂存区包含私有目录或密钥",
         )
-    target = ROOT.parent / "henan-gaokao-database-phase3.zip"
+    target = ROOT.parent / "henan-gaokao-database-phase4.zip"
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
         for value in paths:
             archive.write(ROOT / value, "henan-gaokao-database/" + value)
@@ -36,7 +36,7 @@ def package():
             if relative not in staged:
                 archive.write(path, "henan-gaokao-database/" + relative)
     skill = ROOT / "skills/henan-math"
-    skill_target = ROOT.parent / "henan-math-skill-phase3.zip"
+    skill_target = ROOT.parent / "henan-math-skill-phase4.zip"
     with zipfile.ZipFile(skill_target, "w", zipfile.ZIP_DEFLATED) as archive:
         for path in skill.rglob("*"):
             if path.is_file() and "__pycache__" not in path.parts:

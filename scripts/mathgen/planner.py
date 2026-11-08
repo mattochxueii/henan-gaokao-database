@@ -8,6 +8,23 @@ from gaokao import read_json, read_lines, require
 
 def context(root):
     records = list(read_lines(root / "analysis/questions.jsonl"))
+    applied = []
+    override_path = root / "analysis/review-overrides.json"
+    if override_path.is_file():
+        for change in read_json(override_path).get("overrides", []):
+            for r in records:
+                if (
+                    r["question_id"] == change["question_id"]
+                    and r["candidate_sha256"] == change["candidate_sha256"]
+                    and fingerprint(r) == change["analysis_sha256"]
+                    and change["field"] == "knowledge.module"
+                    and r["knowledge"]["module"] == change["original_value"]
+                ):
+                    r["knowledge"] = {
+                        **r["knowledge"],
+                        "module": change["reviewed_value"],
+                    }
+                    applied.append(change)
     return {
         "rules": read_json(root / "analysis/rules.json"),
         "analyses": [
@@ -23,6 +40,7 @@ def context(root):
             for r in records
         ],
         "sample_papers": 2,
+        "applied_review_overrides": applied,
         "scope": "候选版本绑定的AI分析，尚无命题机构逐题认证",
     }
 

@@ -1,0 +1,766 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "sqrt(2)",
+        "steps": [
+          "代入题设条件，化简 \\(\\sqrt{2}\\)，得到 \\(\\sqrt{2}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:fullA:q001:v1",
+    "math_spec_sha256": "51e2c8196835ecda1ea4af4e32bb07b7bed8b66dacba0571c3a9834c27bdea35",
+    "writing_sha256": "23c78868911cb6b14cff040a6407113c24d8f8897dcbacde2bfa7140cb976ed0"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:fullA:q002:v1",
+    "math_spec_sha256": "85567715be37d7189ccdb97f72efa85e68e9d46fcec777c25e5846ee51adad53",
+    "writing_sha256": "94e9588a78cf641339d388f92e0529488a617f020b7df7bd9302b63728e75213"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-sqrt(2)/10",
+        "complete": true,
+        "facts": {
+          "sine": "3/5",
+          "cosine": "-4/5"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase4:fullA:q003:v1",
+    "math_spec_sha256": "8cde156c8ba02d2dc67016c4ed95631a9f0659e466896b5e0a8564782b213d04",
+    "writing_sha256": "85c311a1e8f37ad4f2b26e91fea61a691089a787618349e042374ab3fa94ca44"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "7",
+        "complete": true,
+        "facts": {
+          "corrected_mean": "9",
+          "corrected_second_moment": "88"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase4:fullA:q004:v2",
+    "math_spec_sha256": "921dd202ab6dfe2f7dc6ec869f830ea215150b1c4670b7ed2c1d08b42fcbb6b1",
+    "writing_sha256": "157f7de508f3e2f472c08b974bf80b8d5d5e6a4f4974add964e571875f5e2064"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "5/2",
+        "complete": true,
+        "facts": {
+          "roots": "{1/2, 2}"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:fullA:q005:v1",
+    "math_spec_sha256": "0f432fdca3751a241a984b76818d5947bb36a57c5f76d9fd0c6556d444edc6bb",
+    "writing_sha256": "a1572d72956cf1a4c5825857b548537ccc019566445854b85727a94e04b0860b"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "sqrt(15)",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "4",
+              "y": "2"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase4:fullA:q006:v2",
+    "math_spec_sha256": "5f4917c3a9a35dd0d41155cea30b6715fc5a02a4d50024535aba5959c6cc1be8",
+    "writing_sha256": "3c04a15cc7d6c3493fac2a60354d2c2b070d790b7749cf3fe28f0f8550aefd4d"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "1",
+        "complete": true,
+        "facts": {
+          "contact_points": [
+            "2"
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase4:fullA:q007:v1",
+    "math_spec_sha256": "08badb869629b281d3ce966943fb2e2f50be37ef9b32b69e94a127ffe1606df1",
+    "writing_sha256": "98892b7a439784af34c832d4d4f0e06ce4ad5f018bfa42527e5b4e089bdceea8"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "30",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(30\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase4:fullA:q008:v2",
+    "math_spec_sha256": "e02d18838f7f62c09b4b6d4522f372cc48c3cad3a5cd9248348e92f0ff34f2dd",
+    "writing_sha256": "ddc5c2d4337a48a620b00c56152e42f0af035c4050a4fefd57e685adfba72eb7"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "steps": [
+          "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "sum": "-n",
+          "residual": 0
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "sum": "n + 1",
+          "counterexample_n": 1
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "ABC",
+    "id": "orig:ai:phase4:fullA:q009:v1",
+    "math_spec_sha256": "01a99e4dc78d0bb76fa98c9b7ed08943dd59687807a2a8d09fc784233d6d645f",
+    "writing_sha256": "00045ce020de45b0567c4e8ef4e64a861a35a1a509bc1ef324f63fcbc67286f0"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "tangent_data": {
+            "result": [
+              "-2",
+              "2"
+            ],
+            "complete": true,
+            "facts": {
+              "contact_points": [
+                "-1",
+                "1"
+              ]
+            },
+            "formal_proof": false
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "focus": [
+            "0",
+            "1/4"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "discriminant": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "2",
+            "steps": [
+              "按坐标、内积、平面法向量或联立消元定义独立计算。结果为2。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "AC",
+    "id": "orig:ai:phase4:fullA:q010:v1",
+    "math_spec_sha256": "245bf37b2359840dfcfa327b81b3f527d2bae315975c46663bb0d7f892ee8b19",
+    "writing_sha256": "f5cc15a43113decf50a455468b80ed401e0e7f0acf9c196e2a2ae389e11ef897"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "exp(-1)",
+            "steps": [
+              "定义域内连续，导数为\\(- \\frac{\\log{\\left(x \\right)} - 1}{x^{2}}\\)，驻点为\\(\\left\\{e\\right\\}\\)。",
+              "导数为正的区间为\\(\\left(0, e\\right]\\)，为负的区间为\\(\\left[e, \\infty\\right)\\)。",
+              "逐一比较驻点值、端点值与开端点极限。exp(-1)"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "derivative": "-log(x)/x**2 + x**(-2)",
+          "violating_set": "EmptySet"
+        }
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "critical_points": [
+            "0",
+            "E",
+            "oo"
+          ],
+          "branch_limits": [
+            "-oo",
+            "exp(-1)",
+            "0"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "log(x)/x",
+          "derivative": "-(log(x) - 1)/x**2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase4:fullA:q011:v1",
+    "math_spec_sha256": "df64f6a545af3a6f4e9e1ca55a41d39142e0f1db2dfa6db5c8afc2c543e2ef3c",
+    "writing_sha256": "8b352a336e6f07b17650445648555b974b67b484247fd70af67a7d0a935f7e52"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "15",
+        "complete": true,
+        "facts": {
+          "scope": "有限展开式含正负整数幂的系数核查，不在x=0求值"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q012:v1",
+    "math_spec_sha256": "7c3d42839e038aca9b696422ad3293fa0da4d0d8ae61522e9274a99547c9ade5",
+    "writing_sha256": "d981ea63227e74f5803f75738f020d0e2510efb84c0943c9ff8912efe5b451a9"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "sqrt(3)/2",
+        "complete": true,
+        "facts": {
+          "transformed_expression": "sin(4*x + pi/3)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q013:v2",
+    "math_spec_sha256": "b866b51aa490a8073d5636cc72480254f6667acf9f7eee1a095d525f7645e4c4",
+    "writing_sha256": "75693a42842211cfdc2439d70fbf806c459cef1bcccc1b8c18e07272b6eda60a"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "sqrt(6)/6",
+        "complete": true,
+        "facts": {
+          "volume": "2*sqrt(2)/3",
+          "surface_area": "4*sqrt(3)",
+          "edge_squares": [
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q014:v1",
+    "math_spec_sha256": "f700658427ed1c215b0aaecb21c5c657cb1cc54d2f1ac165d08bf87e492553cf",
+    "writing_sha256": "9c2c09127e9e09bf4a905db371de97a2af6dba645b8a441ac75edfc8565397d2"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "distribution": {
+            "1": "1/5",
+            "2": "3/5",
+            "3": "1/5"
+          },
+          "expectation": "2",
+          "variance": "2/5"
+        },
+        "complete": true,
+        "facts": {
+          "normalisation": "1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "1/4",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共96个有序结果，其中24个满足目标事件，故概率为\\(\\frac{1}{4}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "7/12",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共288个有序结果，其中168个满足目标事件，故概率为\\(\\frac{7}{12}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q015:v1",
+    "math_spec_sha256": "2efd8d9d67275315bd786dbbbe4b26aca76fdde1c2797edd0575be05e3f5658a",
+    "writing_sha256": "73b24957f06b6f588f7d28da49b5a283c3c1cbed4d80ae3dbc34f587f99ccd70"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "normal": [
+            "4",
+            "0",
+            "-2"
+          ],
+          "dot": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "sqrt(21)/21",
+        "complete": true,
+        "facts": {
+          "normal_one": [
+            "2",
+            "-1",
+            "1/2"
+          ],
+          "normal_two": [
+            "0",
+            "0",
+            "4"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": [
+          "1/2"
+        ],
+        "complete": true,
+        "facts": {
+          "orthogonality_equation": "2 - 4*t",
+          "normal": [
+            "2",
+            "-1",
+            "1/2"
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q016:v1",
+    "math_spec_sha256": "fc6ae3981aa486550031f76bde28c0b957a5d3606da43dd37f208eeac602094e",
+    "writing_sha256": "82643ff568f1e849c971d1af9423bc323a92248002343d409cd24a5d91a67d75"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2**n - 2",
+        "complete": true,
+        "facts": {
+          "recurrence_solution": "-2**n + 2**(n - 1)*n + 2",
+          "residual": 0
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "-2**n + 2**(n - 1)*n + 2",
+        "complete": true,
+        "facts": {
+          "residual": 0,
+          "forward_terms": [
+            "1",
+            "2",
+            "6",
+            "18",
+            "50",
+            "130",
+            "322",
+            "770",
+            "1794",
+            "4098"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "lower_bound_excess": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q017:v2",
+    "math_spec_sha256": "e17e4c9079929dac72f5155fed25a101ebcc6f8f7fafd59a9f08f7a3f58db588",
+    "writing_sha256": "1b535d2a131440eb06c0daaecfbc4a9d4465bdb8916cc9656814ed425fac336f"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": [
+          {
+            "a": "2",
+            "b": "sqrt(2)"
+          }
+        ],
+        "steps": [
+          "联立全部条件消元，逐个解回代原方程组。",
+          "[{'a': '2', 'b': 'sqrt(2)'}]"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": {
+          "section_polynomial": "8*k*x + x**2*(2*k**2 + 1) + 4",
+          "discriminant": "16*(2*k**2 - 1)",
+          "midpoint": [
+            "-8*k/(4*k**2 + 2)",
+            "2/(2*k**2 + 1)"
+          ],
+          "midpoint_locus": "16*(X**2 + 2*Y**2 - 4*Y)",
+          "area_squared": "16*(2*k**2 - 1)/(2*k**2 + 1)**2",
+          "area_maximum": "sqrt(2)",
+          "optimal_parameter_squares": [
+            "3/2"
+          ],
+          "admissible_squared_parameter": "Interval.open(1/2, oo)"
+        },
+        "complete": false,
+        "facts": {
+          "scope": "消元和最值支持完成；轨迹范围、垂直弦等边界需独立PDF证明复核"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q018:v1",
+    "math_spec_sha256": "b1a487c19cebb28a9999277d9db2be43e29ef4c82baa7981d03bede7602e1940",
+    "writing_sha256": "3bc3a595584ac10b552ecc3c2d979b8962c4ec9b2509744197f8e3a946669e3f"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "increasing": "Interval(1, oo)",
+          "decreasing": "Interval.Lopen(0, 1)",
+          "critical": [
+            "1"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{x - 1}{x}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[1, \\infty\\right)\\)，为负的区间为\\(\\left(0, 1\\right]\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": {
+          "minimum": "1",
+          "maximum": "oo",
+          "minimum_at": [
+            "1"
+          ],
+          "maximum_at": []
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{x - 1}{x}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[1, \\infty\\right)\\)，为负的区间为\\(\\left(0, 1\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': 'oo', 'minimum_at': ['1'], 'maximum_at': []}"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": [
+          {
+            "level_interval": "Interval.open(-oo, 1)",
+            "roots": 0
+          },
+          {
+            "level_interval": "Interval.open(1, oo)",
+            "roots": 2
+          },
+          {
+            "level": "1",
+            "roots": 1
+          }
+        ],
+        "complete": true,
+        "facts": {
+          "critical_points": [
+            "0",
+            "1",
+            "oo"
+          ],
+          "branch_limits": [
+            "oo",
+            "1",
+            "oo"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "requires_independent_reasoning": true,
+        "facts": {
+          "derivative": "1 - 1/x",
+          "comparison": "-2*x + log(x) - log(2 - x) + 2",
+          "comparison_derivative": "-2*(x - 1)**2/(x*(x - 2))",
+          "at_pivot": "0"
+        },
+        "scope": "只核查比较函数代数及导数，零点位置推理必须由独立PDF审题者完成"
+      },
+      {
+        "result": null,
+        "complete": false,
+        "requires_independent_reasoning": true,
+        "facts": {
+          "derivative": "1 - 1/x",
+          "comparison": "-x + 2*log(x) + 1/x",
+          "comparison_derivative": "-(x - 1)**2/x**2",
+          "at_pivot": "0"
+        },
+        "scope": "只核查比较函数代数及导数，零点位置推理必须由独立PDF审题者完成"
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullA:q019:v1",
+    "math_spec_sha256": "7a8d110bd1a1cef25b56d3e84d8376ae02fc27f98b8e8baf84a52054de8dca05",
+    "writing_sha256": "68dc8f859771628045f120eb782f400664b29796f767f18d49c4784572498319"
+  }
+]

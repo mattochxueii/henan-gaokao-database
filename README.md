@@ -1,3 +1,36 @@
+# 第四阶段：规范中文题面与独立PDF考生审题
+
+当前推荐 `experiments/phase4/final/fullA/` 与 `final/fullB/`：各19题150分、8页题目及5页答案。先完成5题样卷，再创建整卷；A初稿被独立审题拒收后，实际替换统计、计数、图像题并重设计数列解答题。旧70题保留作审计证据，不再推荐作合格高考模拟卷。
+
+本轮交付见 `reports/phase4-delivery.md`；旧70题逐题审查见 `phase4-legacy-audit.json`，新38题与真实候选风格比较见 `phase4-new-style-comparison.md`。样本仍是第三方2025/2026候选，2027沿用卷型为模拟设定。
+
+本轮结论为“独立AI可读性、数学与风格审阅通过的模拟研究版”。125项程序测试通过不能替代质量判断。独立考生审题只读PDF及实际页图；答案另行校审。尚未教师审核、考生实测或形式化证明。答案校审保留3处非阻断分页建议，无缺失或重叠文字。
+
+## 当前v2命题与发布
+
+内部 `math_spec`、AI中文 `writing`、排版 `student-text` 分开；求解器只读数学规格，考生审题者只读PDF。无法转换的AST不得回退为题面。所有公式与条件绑定，先5题样卷，再整卷；最终须逐题数学对照和PDF-only审查，发布复制同一PDF字节。修题必须重新核验。
+
+```powershell
+python scripts/math_skill.py research --topic 数列
+python scripts/math_skill.py research --topic 导数
+python scripts/math_skill.py writing-request <候选.json> --output <无答案写作请求.json>
+python scripts/math_skill.py attach-writing <候选.json> <AI写作结果.json> --output <v2候选.json>
+python scripts/math_skill.py generate --engine ai --candidates <5题v2候选.json> --output <新样卷目录>
+python scripts/math_skill.py publish <新样卷目录> --student-review <PDF考生审题.json> --math-comparison <数学对照.json>
+python scripts/math_skill.py generate --engine ai --candidates <整卷v2候选.json> --output <新整卷目录> --pilot-certificate <新样卷目录>/publication.json
+python scripts/math_skill.py publish <新整卷目录> --student-review <PDF考生审题.json> --math-comparison <数学对照.json>
+python scripts/math_skill.py verify experiments/phase4/final/fullA
+python scripts/evaluate.py
+python scripts/audit_phase4_delivery.py
+python scripts/compare_phase4_style.py
+```
+
+generate只产出待审稿，不能自行填写“通过”替代独立实际审阅。协议和真实创作记录见 `skills/henan-math/references/writing-protocol.md` 及 `experiments/phase4/proposals/`；重放不算新创作。v1只供历史数学回放，禁止直接导出AI学生卷。
+
+安装：`python scripts/install_math_skill.py --destination .agents/skills/henan-math-phase4`，之后运行该目录的 `scripts/run.py`。PDF需Poppler（pdftoppm）及中文字体，Python依赖见requirements.txt。宿主AI流程无需新增API额度。模板备用模式仍显式使用 `--engine template`。
+
+新电脑恢复及验证：`python scripts/check_phase4_restore.py --archive <项目ZIP> --key <单独密钥> --output <全新目录> --report <结果.json>`。检查完整题查询、已安装Skill的v2回放及冻结发布证书；新渲染稿不能冒用旧PDF审核。以下历史说明保留，当前出卷以上方v2流程为准。
+
 # 河南新高考真题数据库与数学命题原型
 
 截至2026-11-08，沿用第一阶段的12卷归属登记、71条来源、38条数学索引和独立推导。2025、2026数学各19道完整候选题面现有仓库内私有工作目录及可迁移的加密备份。另有38条版本绑定分析、命题规则及可安装Skill。第三阶段新增70道宿主AI动态设计题、六组真实运行实验及独立审题；26族模板作为备用模式保留。
@@ -52,10 +85,10 @@ python scripts/math_skill.py plan --mode full --profile geometry --output <蓝�
 ```powershell
 python scripts/math_skill.py generate --engine ai --candidates <宿主新候选.json> --output <新目录> --no-export
 python scripts/math_skill.py verify <新目录>/run.json
-python scripts/math_skill.py review <新目录>/run.json --report <独立审题.json>
+python scripts/math_skill.py review <新目录>/run.json --report <独立审题.json> --no-export
 ```
 
-review须由独立推理者提供与candidate_sha256匹配的通过记录，之后导出研究审阅版PDF与解析。程序、符号数值交叉、独立AI审题和教师待审分开保存，不代表形式化证明或高质量评级。修改题目后校验值失效，重新求解及审题。
+上述v1命令仅供历史数学回放；review不再允许导出AI学生PDF。当前发布使用上方v2三层流程。程序、符号数值交叉、独立AI审题和教师待审分开保存，不代表形式化证明或高质量评级。
 
 默认不需要API。用户已自行配置OPENAI_API_KEY时可使用--engine ai --model <显式模型>，提供者采用OpenAI Responses，格式失败、超时与数学反馈共用调用总预算（默认2、最高3），限制输入与输出长度，不记录密钥。本轮API仅做模拟传输测试，实际动态创作使用宿主AI，精确模型版本未暴露。
 

@@ -491,6 +491,10 @@ class DefectRegressionTests(unittest.TestCase):
             "limitations": [],
         }
         with tempfile.TemporaryDirectory(dir=SCRATCH) as folder:
+            with self.assertRaises(ValueError):
+                export_run(record, Path(folder))
+            # The legacy renderer remains available for template-only regression fixtures.
+            record["generation_mode"] = "template"
             export_run(record, Path(folder))
             self.assertGreater(len(PdfReader(Path(folder) / "paper.pdf").pages), 0)
 

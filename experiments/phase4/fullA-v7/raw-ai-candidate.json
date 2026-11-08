@@ -1,0 +1,3099 @@
+{
+  "schema_version": 2,
+  "paper": {
+    "mode": "full",
+    "title": "河南省新高考数学模拟试卷（一）",
+    "total_points": 150,
+    "minutes": 120,
+    "blueprint_basis": "2025—2026候选卷型；2027为模拟假设",
+    "profile": "统计修正、奇偶计数、图像变换、二阶递推与弦优化"
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "api_calls": 0,
+    "template_calls": 0,
+    "authored_after_pilot_pass": true,
+    "pilot_certificate_sha256": "93f876a5301a3f1770044fd440f62ccc4aa839be2669b8869be0cb75d1e06010",
+    "authorship": "当前宿主AI在小样通过后设计19个新题，助手只序列化，不按题目族生成",
+    "revision_basis": "PDF-only独立考生审查整体不通过；替换重复题材并深化分值不匹配的数列题。",
+    "revision_of_sha256": "caa1aa4a07bfa8805409cd18ba0dda4a916c2d42db825e6e17baae245b7184f9",
+    "final_editorial_revision": "三层流程的规范图形、常用下标和选项布局；卷A干扰项错因明确可计算，不当作已实测学生错误。"
+  },
+  "questions": [
+    {
+      "id": "orig:ai:phase4:fullA:q001:v1",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "math_spec": {
+        "givens": {
+          "oA": "1",
+          "oB": "sqrt(2)",
+          "oC": "2",
+          "oD": "sqrt(5)"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "abs((1+2*I)/(2-I)-1)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1",
+            "error_calculation": "1",
+            "error_path": "忽略减1，直接使用复数的模",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "sqrt(2)",
+            "error_calculation": "sqrt(2)",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "2",
+            "error_calculation": "2",
+            "error_path": "错误把模的三角不等式当等式",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "sqrt(5)",
+            "error_calculation": "sqrt(5)",
+            "error_path": "忽略分母并把目标误当分子模：复合错误设计",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "8ffc51b1f4a00fce9d0c4e37fc6a8f282fdb0c975f5d39ecd71d0a752cb45b0b",
+        "stem": "已知复数{{z}}，则{{target}}等于",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "z": {
+            "kind": "notation",
+            "latex": "z=\\frac{1+2i}{2-i}"
+          },
+          "target": {
+            "kind": "notation",
+            "latex": "|z-1|"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "1"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "sqrt(2)"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "2"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "sqrt(5)"
+          }
+        },
+        "condition_anchors": [
+          "已知复数"
+        ],
+        "request_anchors": [
+          "等于"
+        ],
+        "definitions": [
+          {
+            "symbol": "z",
+            "anchor": "复数"
+          }
+        ],
+        "used_symbols": [
+          "z"
+        ]
+      },
+      "assessment": {
+        "level": 1,
+        "estimated_minutes": 2,
+        "dimensions": {
+          "knowledge": 1,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 1,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 1
+        },
+        "points_justification": "起始5分复数题，分母实数化后求模，不抬高为综合解答。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(z=\\frac{(1+2i)(2+i)}5=i\\)，所以\\(|z-1|=\\sqrt2\\)，选B。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q002:v1",
+      "order": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "math_spec": {
+        "givens": {
+          "oA": "1",
+          "oB": "2",
+          "oC": "3",
+          "oD": "4"
+        },
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                -3,
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "event": "(x>1) and (x<=5) and (x*x<=10)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1",
+            "error_calculation": "1",
+            "error_path": "把1<x误读成2<x，只余3",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "2",
+            "error_calculation": "2",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "3",
+            "error_calculation": "3",
+            "error_path": "误把sqrt(10)上取整为4",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "4",
+            "error_calculation": "4",
+            "error_path": "忽略集合B，只计A中的整数",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "c5392ea1be9de450f5569f00b93f75cd366f29818f710d1970620171ae4f88b4",
+        "stem": "设集合{{aa}}，{{bb}}，则{{inter}}中元素的个数为",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "aa": {
+            "kind": "notation",
+            "latex": "A=\\{x\\mid 1<x\\leq5\\}"
+          },
+          "bb": {
+            "kind": "notation",
+            "latex": "B=\\{x\\in\\mathbb Z\\mid x^2\\leq10\\}"
+          },
+          "inter": {
+            "kind": "notation",
+            "latex": "A\\cap B"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "1"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "2"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "3"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "4"
+          }
+        },
+        "condition_anchors": [
+          "集合"
+        ],
+        "request_anchors": [
+          "元素的个数"
+        ],
+        "definitions": [
+          {
+            "symbol": "x",
+            "anchor": "集合"
+          },
+          {
+            "symbol": "A",
+            "anchor": "集合"
+          },
+          {
+            "symbol": "B",
+            "anchor": "集合"
+          }
+        ],
+        "used_symbols": [
+          "x",
+          "A",
+          "B"
+        ]
+      },
+      "assessment": {
+        "level": 1,
+        "estimated_minutes": 2,
+        "dimensions": {
+          "knowledge": 1,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 1,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 1
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计2分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(B=\\{-3,-2,-1,0,1,2,3\\}\\)，而\\(A\\cap B=\\{2,3\\}\\)，故选B。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q003:v1",
+      "order": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "math_spec": {
+        "givens": {
+          "oA": "-sqrt(2)/10",
+          "oB": "sqrt(2)/10",
+          "oC": "7*sqrt(2)/10",
+          "oD": "-7*sqrt(2)/10"
+        },
+        "tasks": [
+          {
+            "op": "trig_reconstruct",
+            "sin": "3/5",
+            "quadrant": 2,
+            "shift": "pi/4",
+            "target": "cos(t)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "-sqrt(2)/10",
+            "error_calculation": "-sqrt(2)/10",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "sqrt(2)/10",
+            "error_calculation": "sqrt(2)/10",
+            "error_path": "计算后误去负号",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "7*sqrt(2)/10",
+            "error_calculation": "7*sqrt(2)/10",
+            "error_path": "忽略已知角在第二象限，余弦误取正根",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "-7*sqrt(2)/10",
+            "error_calculation": "-7*sqrt(2)/10",
+            "error_path": "把余弦差角公式中加号错用减号",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "56ef4646fa295b8134c42778de05675b4313bb60d99b4920025b8fcd716053db",
+        "stem": "已知{{range}}，且{{given}}，则{{target}}等于",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "range": {
+            "kind": "notation",
+            "latex": "\\frac{\\pi}{4}<\\alpha<\\frac{3\\pi}4"
+          },
+          "given": {
+            "kind": "notation",
+            "latex": "\\sin\\left(\\alpha+\\frac{\\pi}{4}\\right)=\\frac{3}{5}"
+          },
+          "target": {
+            "kind": "notation",
+            "latex": "\\cos\\alpha"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "-sqrt(2)/10"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "sqrt(2)/10"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "7*sqrt(2)/10"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "-7*sqrt(2)/10"
+          }
+        },
+        "condition_anchors": [
+          "已知",
+          "且"
+        ],
+        "request_anchors": [
+          "等于"
+        ],
+        "definitions": [
+          {
+            "symbol": "alpha",
+            "anchor": "已知"
+          }
+        ],
+        "used_symbols": [
+          "alpha"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 2,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 2
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计3分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "令\\(\\theta=\\alpha+\\frac\\pi4\\)，则\\(\\frac\\pi2<\\theta<\\pi\\)，所以\\(\\cos\\theta=-\\frac45\\)。",
+          "\\(\\cos\\alpha=\\cos(\\theta-\\frac\\pi4)=\\frac{\\cos\\theta+\\sin\\theta}{\\sqrt2}=-\\frac{\\sqrt2}{10}\\)，选A。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q004:v2",
+      "order": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "概率统计",
+      "math_spec": {
+        "givens": {
+          "oA": "6",
+          "oB": "24",
+          "oC": "7",
+          "oD": "70/9"
+        },
+        "tasks": [
+          {
+            "op": "data_correction_variance",
+            "n": 10,
+            "recorded_mean": "8",
+            "recorded_variance": "6",
+            "recorded": "4",
+            "correct": "14"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "6",
+            "error_calculation": "6",
+            "error_path": "误把单个记录纠正当作全体数据平移",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "24",
+            "error_calculation": "6+(14**2-4**2)/10",
+            "error_path": "只更新二阶矩却未更新均值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "7",
+            "error_calculation": "7",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "70/9",
+            "error_calculation": "7*10/9",
+            "error_path": "把总体方差的分母误换成n-1",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "1698e0d8b4f2c8f87af350972a28566628a2a47428077004a1b2db4f2ace0afd",
+        "stem": "一组数据共有10个数，其中一个14被误录为4。依据误录后的数据计算，平均数为8，方差为6。纠正后，这组数据的方差为",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "oA": {
+            "given": "oA",
+            "source": "6"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "24"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "7"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "70/9"
+          }
+        },
+        "condition_anchors": [
+          "10个数",
+          "14被误录为4",
+          "平均数为8",
+          "方差为6"
+        ],
+        "request_anchors": [
+          "纠正后",
+          "方差为"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 2,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 2
+        },
+        "points_justification": "5分统计修正题，需要同步更新均值与二阶矩；替换与解答题重复的摸球模型。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "误录数据的和为80，平方和为\\(10(6+8^2)=700\\)。纠正后，和为90，平均数为9；平方和为\\(700-4^2+14^2=880\\)。",
+          "故方差为\\(\\frac{880}{10}-9^2=7\\)，选C。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q005:v1",
+      "order": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "math_spec": {
+        "givens": {
+          "tv": "t",
+          "oA": "2",
+          "oB": "5/2",
+          "oC": "1",
+          "oD": "5"
+        },
+        "tasks": [
+          {
+            "op": "root_statistic",
+            "expression": "2*x/(x*x+1)-4/5",
+            "domain": [
+              0,
+              "oo"
+            ],
+            "statistic": "sum"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "2",
+            "error_calculation": "2",
+            "error_path": "遗漏较小正根，只保留2",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "5/2",
+            "error_calculation": "5/2",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "1",
+            "error_calculation": "1",
+            "error_path": "把两根的积误作和",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "5",
+            "error_calculation": "2*(1/2+2)",
+            "error_path": "把交换两个向量所得的同一组参数解重复计算",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "55c6198ae6870066bcc5cf811c7a0c8b81c75b1ee5d5990df1b139e0aee10307",
+        "stem": "已知{{tpos}}，向量{{va}}与{{vb}}的夹角为{{theta}}，且{{cos}}。所有满足条件的{{tv}}值之和为",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "tpos": {
+            "kind": "notation",
+            "latex": "t>0"
+          },
+          "va": {
+            "kind": "notation",
+            "latex": "\\boldsymbol a=(t,1)"
+          },
+          "vb": {
+            "kind": "notation",
+            "latex": "\\boldsymbol b=(1,t)"
+          },
+          "theta": {
+            "kind": "notation",
+            "latex": "\\theta"
+          },
+          "cos": {
+            "kind": "notation",
+            "latex": "\\cos\\theta=\\frac{4}{5}"
+          },
+          "tv": {
+            "given": "tv",
+            "source": "t"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "2"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "5/2"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "1"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "5"
+          }
+        },
+        "condition_anchors": [
+          "向量",
+          "{{tpos}}",
+          "{{cos}}"
+        ],
+        "request_anchors": [
+          "值之和"
+        ],
+        "definitions": [
+          {
+            "symbol": "t",
+            "anchor": "已知"
+          },
+          {
+            "symbol": "a",
+            "anchor": "向量"
+          },
+          {
+            "symbol": "b",
+            "anchor": "向量"
+          },
+          {
+            "symbol": "theta",
+            "anchor": "夹角"
+          }
+        ],
+        "used_symbols": [
+          "t",
+          "a",
+          "b",
+          "theta"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计4分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(\\cos\\theta=\\frac{2t}{t^2+1}=\\frac45\\)，整理得\\(2t^2-5t+2=0\\)，其正根为\\(\\frac12,2\\)，所求和为\\(\\frac52\\)，选B。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q006:v2",
+      "order": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "解析几何",
+      "math_spec": {
+        "givens": {
+          "oA": "sqrt(15)",
+          "oB": "2*sqrt(5)",
+          "oC": "4",
+          "oD": "sqrt(15)/2"
+        },
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "equations": [
+              "x+y-6",
+              "x-2*y"
+            ],
+            "conditions": [
+              "x>0",
+              "y>0"
+            ],
+            "value": "sqrt((x+y+4)*(-x+y+4)*(x-y+4)*(x+y-4))/4"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "sqrt(15)",
+            "error_calculation": "sqrt(15)",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "2*sqrt(5)",
+            "error_calculation": "2*sqrt(5)",
+            "error_path": "误当PF1=PF2=3，取短轴端点对应面积",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "4",
+            "error_calculation": "4",
+            "error_path": "错误将边长4与2所夹角当直角",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "sqrt(15)/2",
+            "error_calculation": "sqrt(15)/2",
+            "error_path": "底边误用半焦距2，而高仍按题设求得",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "5ee3aecf0bc3f230b011e12fdba64803b70cc85374498995da91d6e07267f1a7",
+        "stem": "已知椭圆{{ellipse}}的两个焦点为{{foci}}，点{{point}}在椭圆上，且{{condition}}，则三角形{{triangle}}的面积为",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "ellipse": {
+            "kind": "notation",
+            "latex": "\\frac{x^2}{9}+\\frac{y^2}{5}=1"
+          },
+          "foci": {
+            "kind": "notation",
+            "latex": "F_1,F_2"
+          },
+          "point": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "condition": {
+            "kind": "notation",
+            "latex": "|PF_1|=2|PF_2|"
+          },
+          "triangle": {
+            "kind": "notation",
+            "latex": "PF_1F_2"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "sqrt(15)"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "2*sqrt(5)"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "4"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "sqrt(15)/2"
+          }
+        },
+        "condition_anchors": [
+          "两个焦点",
+          "在椭圆上",
+          "{{condition}}"
+        ],
+        "request_anchors": [
+          "面积为"
+        ],
+        "definitions": [
+          {
+            "symbol": "x",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "y",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "F_1",
+            "anchor": "焦点"
+          },
+          {
+            "symbol": "F_2",
+            "anchor": "焦点"
+          },
+          {
+            "symbol": "P",
+            "anchor": "点"
+          }
+        ],
+        "used_symbols": [
+          "x",
+          "y",
+          "F_1",
+          "F_2",
+          "P"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "5分椭圆焦点三角形，使用焦点定义、边比与面积；不重复多选题的抛物线切线技术。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "椭圆长轴长为6，焦距为4。由定义及条件，\\(|PF_1|+|PF_2|=6\\)，\\(|PF_1|=2|PF_2|\\)，得两距离为4、2。",
+          "三角形的三边为4、2、4，由余弦定理可得夹角余弦\\(\\frac14\\)，相应高为\\(\\frac{\\sqrt{15}}2\\)，面积为\\(\\sqrt{15}\\)。或用海伦公式\\(\\sqrt{5(5-4)(5-2)(5-4)}=\\sqrt{15}\\)。选A。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q007:v1",
+      "order": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {
+          "oA": "-1",
+          "oB": "0",
+          "oC": "1",
+          "oD": "13"
+        },
+        "tasks": [
+          {
+            "op": "tangent_through",
+            "expression": "x**3-3*x*x+x+4",
+            "point": [
+              "0",
+              "0"
+            ],
+            "ask": "unique_slope"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "-1",
+            "error_calculation": "-1",
+            "error_path": "把法线斜率-1/k当切线斜率",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "0",
+            "error_calculation": "0",
+            "error_path": "求导时漏掉一次项x的导数",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "1",
+            "error_calculation": "1",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "13",
+            "error_calculation": "3*2**2+1",
+            "error_path": "漏掉-3x²的导数项",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "77e951082d483baf22b2c7d334c0707207f28d2fbedc426c0ac051115052fc5f",
+        "stem": "过坐标原点作曲线{{curve}}的切线，则该切线的斜率为",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "curve": {
+            "kind": "notation",
+            "latex": "y=x^3-3x^2+x+4"
+          },
+          "oA": {
+            "given": "oA",
+            "source": "-1"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "0"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "1"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "13"
+          }
+        },
+        "condition_anchors": [
+          "过坐标原点",
+          "切线"
+        ],
+        "request_anchors": [
+          "斜率为"
+        ],
+        "definitions": [
+          {
+            "symbol": "x",
+            "anchor": "曲线"
+          },
+          {
+            "symbol": "y",
+            "anchor": "曲线"
+          }
+        ],
+        "used_symbols": [
+          "x",
+          "y"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计4分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "设切点横坐标为\\(t\\)。切线经过原点给出\\(t^3-3t^2+t+4=t(3t^2-6t+1)\\)，即\\((t-2)(2t^2+t+2)=0\\)。",
+          "因为\\(2t^2+t+2>0\\)，所以\\(t=2\\)，斜率为\\(3t^2-6t+1=1\\)，选C。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q008:v2",
+      "order": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "排列组合",
+      "math_spec": {
+        "givens": {
+          "oA": "10",
+          "oB": "27",
+          "oC": "60",
+          "oD": "30"
+        },
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "(x!=y) and (x!=t) and (y!=t)",
+            "event": "(x>t) and ((x+y+t)%2==0)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "10",
+            "error_calculation": "60/6",
+            "error_path": "忽略位置，把所有偶和排列再除以3!",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "B": {
+            "semantic_value": "27",
+            "error_calculation": "54/2",
+            "error_path": "遗漏三个数均为偶数的情况",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "C": {
+            "semantic_value": "60",
+            "error_calculation": "60",
+            "error_path": "忽略百位大于个位的限制",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          },
+          "D": {
+            "semantic_value": "30",
+            "error_calculation": "30",
+            "error_path": "正确值",
+            "student_error_design_hypothesis": true,
+            "empirically_validated": false
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "336b74d9cdbefae765c92fdfd050f133f8740e139a19b1647ad07cb0f6cd2c96",
+        "stem": "用1，2，3，4，5，6中的三个不同数字组成三位数，要求百位数字大于个位数字，且三位数字之和为偶数。这样的三位数共有",
+        "parts": [],
+        "options": {
+          "A": "{{oA}}",
+          "B": "{{oB}}",
+          "C": "{{oC}}",
+          "D": "{{oD}}"
+        },
+        "formulae": {
+          "oA": {
+            "given": "oA",
+            "source": "10"
+          },
+          "oB": {
+            "given": "oB",
+            "source": "27"
+          },
+          "oC": {
+            "given": "oC",
+            "source": "60"
+          },
+          "oD": {
+            "given": "oD",
+            "source": "30"
+          }
+        },
+        "condition_anchors": [
+          "三个不同数字",
+          "百位数字大于个位数字",
+          "之和为偶数"
+        ],
+        "request_anchors": [
+          "共有"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 5,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "5分组合计数题，需要奇偶分类、位置排列和对称对应，替换过多的对数导数小题。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "数字和为偶数时，或有两个奇数、一个偶数，共\\(\\binom32\\binom31\\cdot3!=54\\)个；或三个数都是偶数，共\\(3!=6\\)个。",
+          "交换百位与个位使大小关系一一对应，且二者不相等，所以符合要求的共有\\(\\frac{54+6}2=30\\)个，选D。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q009:v1",
+      "order": 9,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "数列",
+      "math_spec": {
+        "givens": {
+          "nn": "n"
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "identity",
+            "left": "(-1)**(2*n)*(2*n+2)-(-1)**(2*n-2)*(2*n)",
+            "right": "2"
+          },
+          "B": {
+            "op": "identity",
+            "left": "(-1)**(2*n+1)*(2*n+3)-(-1)**(2*n-1)*(2*n+1)",
+            "right": "-2"
+          },
+          "C": {
+            "op": "series_claim",
+            "expression": "(-1)**(k-1)*(k+1)",
+            "upper": "2*n",
+            "claim": "-n"
+          },
+          "D": {
+            "op": "series_claim",
+            "expression": "(-1)**(k-1)*(k+1)",
+            "upper": "2*n-1",
+            "claim": "n"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "01a99e4dc78d0bb76fa98c9b7ed08943dd59687807a2a8d09fc784233d6d645f",
+        "stem": "已知数列{{seq}}，记其前{{nn}}项和为{{sn}}，下列结论正确的是",
+        "parts": [],
+        "options": {
+          "A": "奇数项组成的子列是公差为2的等差数列",
+          "B": "偶数项组成的子列是公差为-2的等差数列",
+          "C": "{{optC}}",
+          "D": "{{optD}}"
+        },
+        "formulae": {
+          "seq": {
+            "kind": "notation",
+            "latex": "a_n=(-1)^{n-1}(n+1)\\ (n\\in\\mathbb N^*)"
+          },
+          "nn": {
+            "given": "nn",
+            "source": "n"
+          },
+          "sn": {
+            "kind": "notation",
+            "latex": "S_n"
+          },
+          "optC": {
+            "kind": "notation",
+            "latex": "S_{2n}=-n"
+          },
+          "optD": {
+            "kind": "notation",
+            "latex": "S_{2n-1}=n"
+          }
+        },
+        "condition_anchors": [
+          "已知数列",
+          "前"
+        ],
+        "request_anchors": [
+          "结论正确"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "数列"
+          },
+          {
+            "symbol": "n",
+            "anchor": "数列"
+          },
+          {
+            "symbol": "S",
+            "anchor": "记其"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "n",
+          "S"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 4,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 2,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 2
+        },
+        "points_justification": "6分题，按条件理解、推理与运算综合估计4分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(a_{2n-1}=2n,\\ a_{2n}=-(2n+1)\\)。奇数项子列公差2，偶数项子列公差\\(-2\\)，A、B正确。",
+          "\\(a_{2k-1}+a_{2k}=-1\\)，故\\(S_{2n}=-n\\)，C正确；\\(S_{2n-1}=S_{2n}-a_{2n}=n+1\\)，D错误。选ABC。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q010:v1",
+      "order": 10,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "解析几何",
+      "math_spec": {
+        "givens": {},
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "tangent_count_claim",
+            "expression": "x*x",
+            "point": [
+              "0",
+              "-1"
+            ],
+            "claimed_count": 2
+          },
+          "B": {
+            "op": "quadratic_focus_claim",
+            "expression": "x*x",
+            "focus": [
+              "0",
+              "1/2"
+            ]
+          },
+          "C": {
+            "op": "tangent_line_claim",
+            "expression": "x*x",
+            "line_expression": "2*x-1"
+          },
+          "D": {
+            "op": "claim",
+            "calculation": {
+              "op": "intersection",
+              "curves": [
+                "x*x-y",
+                "x+y"
+              ],
+              "ask": "distance_squared"
+            },
+            "expected": "4"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "245bf37b2359840dfcfa327b81b3f527d2bae315975c46663bb0d7f892ee8b19",
+        "stem": "已知抛物线{{curve}}，下列结论正确的是",
+        "parts": [],
+        "options": {
+          "A": "过点{{point}}可作两条不同的切线",
+          "B": "焦点坐标为{{focus}}",
+          "C": "直线{{tangent}}与它相切",
+          "D": "直线{{chord}}被它截得的弦长为2"
+        },
+        "formulae": {
+          "curve": {
+            "kind": "notation",
+            "latex": "C:y=x^2"
+          },
+          "point": {
+            "kind": "notation",
+            "latex": "(0,-1)"
+          },
+          "focus": {
+            "kind": "notation",
+            "latex": "(0,\\frac{1}{2})"
+          },
+          "tangent": {
+            "kind": "notation",
+            "latex": "y=2x-1"
+          },
+          "chord": {
+            "kind": "notation",
+            "latex": "x+y=0"
+          }
+        },
+        "condition_anchors": [
+          "抛物线"
+        ],
+        "request_anchors": [
+          "结论正确"
+        ],
+        "definitions": [
+          {
+            "symbol": "x",
+            "anchor": "抛物线"
+          },
+          {
+            "symbol": "y",
+            "anchor": "抛物线"
+          },
+          {
+            "symbol": "C",
+            "anchor": "抛物线"
+          }
+        ],
+        "used_symbols": [
+          "x",
+          "y",
+          "C"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "6分题，按条件理解、推理与运算综合估计6分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "设切点为\\((t,t^2)\\)，切线为\\(y=2tx-t^2\\)。过\\((0,-1)\\)时\\(t=\\pm1\\)，故A正确；取\\(t=1\\)得C正确。",
+          "抛物线焦点为\\((0,\\frac14)\\)，B错误。直线\\(x+y=0\\)与抛物线交于\\((0,0),(-1,1)\\)，弦长为\\(\\sqrt2\\)，D错误。选AC。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q011:v1",
+      "order": 11,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {},
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "claim",
+            "calculation": {
+              "op": "optimum",
+              "expression": "log(x)/x",
+              "domain": [
+                0,
+                "oo"
+              ],
+              "open": [
+                true,
+                true
+              ],
+              "which": "maximum"
+            },
+            "expected": "1/E"
+          },
+          "B": {
+            "op": "monotonicity_boolean",
+            "expression": "log(x)/x",
+            "domain": [
+              "E",
+              "oo"
+            ],
+            "direction": "decreasing"
+          },
+          "C": {
+            "op": "level_count_claim",
+            "expression": "log(x)/x",
+            "domain": [
+              0,
+              "oo"
+            ],
+            "level": "-1",
+            "claimed_count": 2
+          },
+          "D": {
+            "op": "reasoning",
+            "expression": "log(x)/x",
+            "positive_x": true,
+            "ask": "两个不同实根是否必位于e两侧"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "df64f6a545af3a6f4e9e1ca55a41d39142e0f1db2dfa6db5c8afc2c543e2ef3c",
+        "stem": "已知函数{{f}}，下列结论正确的是",
+        "parts": [],
+        "options": {
+          "A": "最大值为{{max}}",
+          "B": "在{{interval}}上单调递减",
+          "C": "方程{{eq}}有两个不同的实根",
+          "D": "若方程{{level}}有两个不同的实根{{roots}}，则{{location}}"
+        },
+        "formulae": {
+          "f": {
+            "kind": "notation",
+            "latex": "f(x)=\\frac{\\ln x}{x}\\ (x>0)"
+          },
+          "max": {
+            "kind": "notation",
+            "latex": "\\frac{1}{e}"
+          },
+          "interval": {
+            "kind": "notation",
+            "latex": "(e,+\\infty)"
+          },
+          "eq": {
+            "kind": "notation",
+            "latex": "f(x)=-1"
+          },
+          "level": {
+            "kind": "notation",
+            "latex": "f(x)=a"
+          },
+          "roots": {
+            "kind": "notation",
+            "latex": "x_1<x_2"
+          },
+          "location": {
+            "kind": "notation",
+            "latex": "x_1<e<x_2"
+          }
+        },
+        "condition_anchors": [
+          "函数",
+          "{{f}}"
+        ],
+        "request_anchors": [
+          "结论正确"
+        ],
+        "definitions": [
+          {
+            "symbol": "f",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "x",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "a",
+            "anchor": "{{level}}"
+          },
+          {
+            "symbol": "x_1",
+            "anchor": "{{roots}}"
+          },
+          {
+            "symbol": "x_2",
+            "anchor": "{{roots}}"
+          }
+        ],
+        "used_symbols": [
+          "f",
+          "x",
+          "a",
+          "x_1",
+          "x_2"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "6分题，按条件理解、推理与运算综合估计6分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(f'(x)=\\frac{1-\\ln x}{x^2}\\)，故函数在\\((0,e)\\)递增、在\\((e,+\\infty)\\)递减，最大值为\\(\\frac1e\\)，A、B正确。",
+          "在\\((0,1)\\)上\\(f\\)从负无穷严格递增到0，因此\\(f(x)=-1\\)只有一个正根，C错误。",
+          "若同一水平线与图像有两个不同交点，两个横坐标不可能同处一个严格单调区间，且均不等于极大值点e，故必有\\(x_1<e<x_2\\)，D正确。选ABD。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q012:v1",
+      "order": 12,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "排列组合",
+      "math_spec": {
+        "givens": {},
+        "tasks": [
+          {
+            "op": "coefficient",
+            "expression": "(x-1/x)**6",
+            "power": 2
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "7c3d42839e038aca9b696422ad3293fa0da4d0d8ae61522e9274a99547c9ade5",
+        "stem": "{{expr}}的展开式中，{{xx}}的系数为________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "expr": {
+            "kind": "notation",
+            "latex": "\\left(x-\\frac{1}{x}\\right)^6"
+          },
+          "xx": {
+            "kind": "notation",
+            "latex": "x^2"
+          }
+        },
+        "condition_anchors": [
+          "展开式"
+        ],
+        "request_anchors": [
+          "系数"
+        ],
+        "definitions": [
+          {
+            "symbol": "x",
+            "anchor": "{{expr}}"
+          }
+        ],
+        "used_symbols": [
+          "x"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 2,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 2
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计3分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "通项为\\(\\binom6k(-1)^k x^{6-2k}\\)。令\\(6-2k=2\\)，得\\(k=2\\)，所求系数为\\(\\binom62=15\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q013:v2",
+      "order": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "三角与向量",
+      "math_spec": {
+        "givens": {
+          "shift": "pi/12"
+        },
+        "tasks": [
+          {
+            "op": "graph_transform_value",
+            "expression": "sin(2*x+pi/6)",
+            "left_shift": "pi/12",
+            "horizontal_scale": "1/2",
+            "at": "pi/12"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "b866b51aa490a8073d5636cc72480254f6667acf9f7eee1a095d525f7645e4c4",
+        "stem": "将函数{{fn}}的图像先向左平移{{shift}}个单位，再把所得图像上各点的横坐标缩短为原来的一半，纵坐标不变，得到函数{{g}}的图像，则{{ask}}为________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "fn": {
+            "kind": "notation",
+            "latex": "f(x)=\\sin(2x+\\frac{\\pi}6)"
+          },
+          "shift": {
+            "given": "shift",
+            "source": "pi/12"
+          },
+          "g": {
+            "kind": "notation",
+            "latex": "g(x)"
+          },
+          "ask": {
+            "kind": "notation",
+            "latex": "g(\\frac{\\pi}{12})"
+          }
+        },
+        "condition_anchors": [
+          "先向左平移",
+          "横坐标缩短为原来的一半",
+          "纵坐标不变"
+        ],
+        "request_anchors": [
+          "为________"
+        ],
+        "definitions": [
+          {
+            "symbol": "f",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "x",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "g",
+            "anchor": "函数"
+          }
+        ],
+        "used_symbols": [
+          "f",
+          "x",
+          "g"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 1,
+          "modelling": 1,
+          "logical_depth": 2,
+          "calculation": 1,
+          "integration": 2,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 2
+        },
+        "points_justification": "5分图像变换题，两步变换次序影响结果，替换与数列解答题重复的一阶递推。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "先平移后得到\\(\\sin(2x+\\frac\\pi3)\\)，横坐标再缩短为原来的一半，得\\(g(x)=\\sin(4x+\\frac\\pi3)\\)。",
+          "所以\\(g(\\frac{\\pi}{12})=\\sin\\frac{2\\pi}3=\\frac{\\sqrt3}2\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q014:v1",
+      "order": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "立体几何",
+      "math_spec": {
+        "givens": {},
+        "tasks": [
+          {
+            "op": "simplex_inradius",
+            "vertices": [
+              [
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "2",
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "sqrt(3)",
+                "0"
+              ],
+              [
+                "1",
+                "sqrt(3)/3",
+                "2*sqrt(6)/3"
+              ]
+            ],
+            "regular_edge_squared": "4"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "f700658427ed1c215b0aaecb21c5c657cb1cc54d2f1ac165d08bf87e492553cf",
+        "stem": "棱长为2的正四面体的内切球半径为________。",
+        "parts": [],
+        "options": {},
+        "formulae": {},
+        "condition_anchors": [
+          "棱长为2",
+          "正四面体"
+        ],
+        "request_anchors": [
+          "半径"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "5分题，按条件理解、推理与运算综合估计4分钟；无实测得分率。",
+        "linked_progression": "",
+        "part_points": [],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "正四面体每个面的面积为\\(\\sqrt3\\)，高为\\(\\frac{2\\sqrt6}3\\)，所以体积为\\(V=\\frac{2\\sqrt2}3\\)，总表面积为\\(S=4\\sqrt3\\)。",
+          "设内切球半径为r，连接球心与各顶点，将四面体分成四个小三棱锥，可得\\(V=\\frac{rS}3\\)，故\\(r=\\frac{3V}S=\\frac{\\sqrt6}6\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q015:v1",
+      "order": 15,
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "概率统计",
+      "math_spec": {
+        "givens": {
+          "rv": "X"
+        },
+        "tasks": [
+          {
+            "op": "distribution",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "(x!=y) and (x!=t) and (y!=t)",
+            "value": "indicator(x<=4)+indicator(y<=4)+indicator(t<=4)"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "(x!=y) and (x!=t) and (y!=t) and (indicator(x<=4)+indicator(y<=4)+indicator(t<=4)>=2)",
+            "event": "indicator(x<=4)+indicator(y<=4)+indicator(t<=4)==3"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "c": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "(x!=y) and (x!=t) and (y!=t) and (c!=x) and (c!=y) and (c!=t) and (indicator(x<=4)+indicator(y<=4)+indicator(t<=4)>=2)",
+            "event": "c<=4"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "2efd8d9d67275315bd786dbbbe4b26aca76fdde1c2797edd0575be05e3f5658a",
+        "stem": "袋中有4个红球和2个白球，这些球除颜色外完全相同。先随机不放回地取出3个球，记其中红球个数为{{rv}}。",
+        "parts": [
+          {
+            "text": "求{{rv}}的分布列及数学期望。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "已知第一次取出的3个球中至少有2个红球，求这3个球全是红球的概率。",
+            "task_refs": [
+              1
+            ]
+          },
+          {
+            "text": "在第（2）问的已知条件下，再从袋中剩余的3个球中随机取出1个球，求该球为红球的概率。",
+            "task_refs": [
+              2
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "rv": {
+            "given": "rv",
+            "source": "X"
+          }
+        },
+        "condition_anchors": [
+          "4个红球",
+          "2个白球",
+          "不放回",
+          "记其中红球个数"
+        ],
+        "request_anchors": [
+          "分布列",
+          "全是红球",
+          "剩余的3个球"
+        ],
+        "definitions": [
+          {
+            "symbol": "X",
+            "anchor": "记其中"
+          }
+        ],
+        "used_symbols": [
+          "X"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 10,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "13分三阶段概率建模：分布列、条件重权与依赖两阶段抽样；不能把第三问按原比例4/6计算。",
+        "linked_progression": "第二问利用第一问分布；第三问须更新剩余组成并按条件概率加权。",
+        "part_points": [
+          4,
+          4,
+          5
+        ],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）X可能取1、2、3。由等可能抽样，\\(P(X=1)=\\frac{\\binom41\\binom22}{\\binom63}=\\frac15\\)，\\(P(X=2)=\\frac{\\binom42\\binom21}{\\binom63}=\\frac35\\)，\\(P(X=3)=\\frac{\\binom43}{\\binom63}=\\frac15\\)。故\\(E(X)=2\\)。",
+          "（2）\\(P(X=3\\mid X\\ge2)=\\frac{1/5}{3/5+1/5}=\\frac14\\)。",
+          "（3）在\\(X\\ge2\\)条件下，\\(X=2,3\\)的条件概率分别为\\(\\frac34,\\frac14\\)。剩余袋中红球个数分别为2、1，故再取到红球的概率为\\(\\frac34\\cdot\\frac23+\\frac14\\cdot\\frac13=\\frac7{12}\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q016:v1",
+      "order": 16,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "立体几何",
+      "math_spec": {
+        "givens": {
+          "edge": "sqrt(6)"
+        },
+        "tasks": [
+          {
+            "op": "plane_parallel",
+            "line": [
+              [
+                "0",
+                "-1",
+                "0"
+              ],
+              [
+                "1/2",
+                "1/2",
+                "1"
+              ]
+            ],
+            "plane": [
+              [
+                "0",
+                "0",
+                "2"
+              ],
+              [
+                "-1",
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "1",
+                "0"
+              ]
+            ]
+          },
+          {
+            "op": "plane_angle",
+            "plane": [
+              [
+                "0",
+                "0",
+                "2"
+              ],
+              [
+                "0",
+                "-1",
+                "0"
+              ],
+              [
+                "1/2",
+                "1/2",
+                "1"
+              ]
+            ],
+            "other_plane": [
+              [
+                "-1",
+                "-1",
+                "0"
+              ],
+              [
+                "1",
+                "-1",
+                "0"
+              ],
+              [
+                "1",
+                "1",
+                "0"
+              ]
+            ]
+          },
+          {
+            "op": "parameter_plane_parallel",
+            "plane": [
+              [
+                "0",
+                "0",
+                "2"
+              ],
+              [
+                "0",
+                "-1",
+                "0"
+              ],
+              [
+                "1/2",
+                "1/2",
+                "1"
+              ]
+            ],
+            "anchor": [
+              "-1",
+              "-1",
+              "0"
+            ],
+            "moving_point": [
+              "-t",
+              "t",
+              "2-2*t"
+            ],
+            "parameter_domain": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "fc6ae3981aa486550031f76bde28c0b957a5d3606da43dd37f208eeac602094e",
+        "stem": "在正四棱锥{{pyramid}}中，底面边长为2，侧棱长为{{edge}}。点{{ee}}、{{ff}}分别为棱{{ab}}、{{pc}}的中点。",
+        "parts": [
+          {
+            "text": "证明：{{parallel}}平行于平面{{pad}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求平面{{planes}}与底面所成锐二面角的余弦值。",
+            "task_refs": [
+              1
+            ]
+          },
+          {
+            "text": "棱{{pd}}上是否存在点{{qq}}，使{{aq}}平行于平面{{planes}}？若存在，确定其位置；若不存在，说明理由。",
+            "task_refs": [
+              2
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "pyramid": {
+            "kind": "notation",
+            "latex": "P-ABCD"
+          },
+          "edge": {
+            "given": "edge",
+            "source": "sqrt(6)"
+          },
+          "ee": {
+            "kind": "notation",
+            "latex": "E"
+          },
+          "ff": {
+            "kind": "notation",
+            "latex": "F"
+          },
+          "ab": {
+            "kind": "notation",
+            "latex": "AB"
+          },
+          "pc": {
+            "kind": "notation",
+            "latex": "PC"
+          },
+          "parallel": {
+            "kind": "notation",
+            "latex": "EF"
+          },
+          "planes": {
+            "kind": "notation",
+            "latex": "PEF"
+          },
+          "qq": {
+            "kind": "notation",
+            "latex": "Q"
+          },
+          "pd": {
+            "kind": "notation",
+            "latex": "PD"
+          },
+          "aq": {
+            "kind": "notation",
+            "latex": "AQ"
+          },
+          "pad": {
+            "kind": "notation",
+            "latex": "PAD"
+          }
+        },
+        "condition_anchors": [
+          "正四棱锥",
+          "底面边长为2",
+          "侧棱长",
+          "中点"
+        ],
+        "request_anchors": [
+          "证明",
+          "二面角",
+          "是否存在"
+        ],
+        "definitions": [
+          {
+            "symbol": "P",
+            "anchor": "正四棱锥"
+          },
+          {
+            "symbol": "A",
+            "anchor": "正四棱锥"
+          },
+          {
+            "symbol": "B",
+            "anchor": "正四棱锥"
+          },
+          {
+            "symbol": "C",
+            "anchor": "正四棱锥"
+          },
+          {
+            "symbol": "D",
+            "anchor": "正四棱锥"
+          },
+          {
+            "symbol": "E",
+            "anchor": "点"
+          },
+          {
+            "symbol": "F",
+            "anchor": "点"
+          },
+          {
+            "symbol": "Q",
+            "anchor": "是否存在"
+          }
+        ],
+        "used_symbols": [
+          "P",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "Q"
+        ],
+        "figure": {
+          "type": "wireframe",
+          "vertices": {
+            "P": [
+              0,
+              0,
+              2
+            ],
+            "A": [
+              -1,
+              -1,
+              0
+            ],
+            "B": [
+              1,
+              -1,
+              0
+            ],
+            "C": [
+              1,
+              1,
+              0
+            ],
+            "D": [
+              -1,
+              1,
+              0
+            ],
+            "E": [
+              0,
+              -1,
+              0
+            ],
+            "F": [
+              0.5,
+              0.5,
+              1
+            ]
+          },
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "P",
+              "A"
+            ],
+            [
+              "P",
+              "B"
+            ],
+            [
+              "P",
+              "C"
+            ],
+            [
+              "P",
+              "D"
+            ],
+            [
+              "E",
+              "F"
+            ]
+          ],
+          "hidden_edges": [
+            [
+              "P",
+              "D"
+            ],
+            [
+              "A",
+              "D"
+            ],
+            [
+              "D",
+              "C"
+            ]
+          ],
+          "label_offsets": {
+            "A": [
+              -8,
+              -6
+            ],
+            "B": [
+              4,
+              -6
+            ],
+            "C": [
+              5,
+              0
+            ],
+            "D": [
+              -9,
+              3
+            ],
+            "E": [
+              -3,
+              -8
+            ],
+            "F": [
+              5,
+              2
+            ],
+            "P": [
+              1,
+              5
+            ]
+          }
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 12,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modelling": 2,
+          "logical_depth": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 3
+        },
+        "points_justification": "15分空间题含线面平行证明、斜截面角度、受棱上约束的位置存在性，三个层次依赖同一构型。",
+        "linked_progression": "第一问识别中位线和平面方向，第二问建立斜平面，第三问复用其方向并回查位置约束。",
+        "part_points": [
+          4,
+          5,
+          6
+        ],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）设G为PB中点，则EG为△ABP的中位线，所以\\(EG\\parallel PA\\)。又FG为△PBC的中位线，所以\\(FG\\parallel BC\\parallel AD\\)。平面EGF内两条相交直线分别平行于平面PAD内两条相交直线，故两平面平行，从而EF平行于平面PAD。",
+          "（2）以底面中心为原点、底边方向为x、y轴建系，取\\(A(-1,-1,0),B(1,-1,0),C(1,1,0),D(-1,1,0)\\)。由侧棱长\\(\\sqrt6\\)知高为2，故\\(P(0,0,2)\\)，\\(E(0,-1,0),F(\\frac12,\\frac12,1)\\)。",
+          "平面PEF的一个法向量为\\((4,-2,1)\\)，底面法向量为\\((0,0,1)\\)，所以两平面夹角的余弦为\\(\\frac1{\\sqrt{21}}\\)。",
+          "（3）设\\(Q=P+t(D-P)\\)，其中\\(0\\le t\\le1\\)。则\\(\\overrightarrow{AQ}=(1-t,1+t,2-2t)\\)。",
+          "若AQ平行于平面PEF，其方向向量与法向量垂直，得\\(4(1-t)-2(1+t)+(2-2t)=0\\)，即\\(t=\\frac12\\)。又A不在平面PEF内，故Q为PD中点时确有AQ平行于平面PEF，且Q唯一。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q017:v2",
+      "order": 17,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "数列",
+      "math_spec": {
+        "givens": {
+          "nn": "n"
+        },
+        "tasks": [
+          {
+            "op": "recurrence_transform",
+            "relation": "u(n+2)-3*u(n+1)+2*u(n)-2**n",
+            "initial": {
+              "1": "1",
+              "2": "2"
+            },
+            "transformation": "u(n+1)-2*u(n)"
+          },
+          {
+            "op": "linear_recurrence",
+            "relation": "u(n+2)-3*u(n+1)+2*u(n)-2**n",
+            "initial": {
+              "1": "1",
+              "2": "2"
+            }
+          },
+          {
+            "op": "reasoning",
+            "ask": "求使a_n<n^2成立的全部正整数n并证明无遗漏",
+            "algebra_checks": {
+              "lower_bound_excess": "(n-2)*(1+(n-1)+(n-1)*(n-2)/2)+2-n*n-n*(n-1)*(n-4)/2"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "e17e4c9079929dac72f5155fed25a101ebcc6f8f7fafd59a9f08f7a3f58db588",
+        "stem": "已知数列{{seq}}满足{{initial}}，且{{rec}}。",
+        "parts": [
+          {
+            "text": "设{{bn}}，求数列{{bs}}的通项公式。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求数列{{seq}}的通项公式。",
+            "task_refs": [
+              1
+            ]
+          },
+          {
+            "text": "求使{{ineq}}成立的全部正整数{{nn}}，并证明你的结论。",
+            "task_refs": [
+              2
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "seq": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "initial": {
+            "kind": "notation",
+            "latex": "a_1=1,\\ a_2=2"
+          },
+          "rec": {
+            "kind": "notation",
+            "latex": "a_{n+2}=3a_{n+1}-2a_n+2^n\\ (n\\in\\mathbb N^*)"
+          },
+          "bn": {
+            "kind": "notation",
+            "latex": "b_n=a_{n+1}-2a_n"
+          },
+          "bs": {
+            "kind": "notation",
+            "latex": "\\{b_n\\}"
+          },
+          "ineq": {
+            "kind": "notation",
+            "latex": "a_n<n^2"
+          },
+          "nn": {
+            "given": "nn",
+            "source": "n"
+          }
+        },
+        "condition_anchors": [
+          "数列",
+          "{{initial}}",
+          "{{rec}}"
+        ],
+        "request_anchors": [
+          "通项公式",
+          "全部正整数",
+          "证明"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "数列"
+          },
+          {
+            "symbol": "b",
+            "anchor": "{{bn}}"
+          },
+          {
+            "symbol": "n",
+            "anchor": "{{rec}}"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "b",
+          "n"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 15,
+        "dimensions": {
+          "knowledge": 4,
+          "condition_comprehension": 3,
+          "modelling": 3,
+          "logical_depth": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 4
+        },
+        "points_justification": "15分递推与离散不等式综合：由二阶关系提取一阶差，二次变换恢复通项，最后必须构造全域估计排除所有n≥4，不能用有限枚举或简单比值检查代替证明。",
+        "linked_progression": "前两问层层消解二阶非齐次递推，第三问把通项用于全体整数范围的逻辑排除，与前两问有实质依赖。",
+        "part_points": [
+          4,
+          5,
+          6
+        ],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）由递推关系，\\(b_{n+1}=a_{n+2}-2a_{n+1}=b_n+2^n\\)，且\\(b_1=0\\)。累加得\\(b_n=2^n-2\\)。",
+          "（2）由（1）得\\(\\frac{a_{n+1}}{2^n}-\\frac{a_n}{2^{n-1}}=1-\\frac1{2^{n-1}}\\)。从1至\\(n-1\\)累加并利用\\(a_1=1\\)，得\\(\\frac{a_n}{2^{n-1}}=n-2+\\frac1{2^{n-2}}\\)，所以\\(a_n=(n-2)2^{n-1}+2\\)。",
+          "（3）直接算得\\(a_1=1,a_2=2,a_3=6\\)，故n=2、3符合，n=1不符合。",
+          "当\\(n\\ge4\\)时，二项式展开各项非负，且有至少一个三次及以上项，所以\\(2^{n-1}>1+(n-1)+\\frac{(n-1)(n-2)}2\\)。",
+          "因此\\(a_n>(n-2)\\left[1+(n-1)+\\frac{(n-1)(n-2)}2\\right]+2=n^2+\\frac{n(n-1)(n-4)}2\\ge n^2\\)。故全部解为n=2、3。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q018:v1",
+      "order": 18,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "解析几何",
+      "math_spec": {
+        "givens": {},
+        "tasks": [
+          {
+            "op": "system",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "expressions": [
+              "a*a-2*b*b",
+              "2/(a*a)+1/(b*b)-1"
+            ],
+            "conditions": [
+              "a>b",
+              "b>0"
+            ]
+          },
+          {
+            "op": "line_section",
+            "curve": "x*x/4+y*y/2-1",
+            "line": "y-k*x-2",
+            "parameter": "k",
+            "eliminate": "y",
+            "optimise_area_squared_parameter": true
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "b1a487c19cebb28a9999277d9db2be43e29ef4c82baa7981d03bede7602e1940",
+        "stem": "椭圆{{ellipse}}的离心率为{{ecc}}，且经过点{{point}}。过点{{fixed}}的直线{{line}}与椭圆交于两个不同的点{{ends}}，记弦的中点为{{mid}}。",
+        "parts": [
+          {
+            "text": "求椭圆{{cname}}的标准方程。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "当{{line}}不垂直于{{xx}}轴时，求点{{mid}}的轨迹方程，并写出取值范围。",
+            "task_refs": [
+              1
+            ]
+          },
+          {
+            "text": "设{{origin}}为坐标原点，求三角形{{tri}}面积的最大值，并求取到最大值时{{line}}的方程。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "ellipse": {
+            "kind": "notation",
+            "latex": "C:\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\\ (a>b>0)"
+          },
+          "ecc": {
+            "kind": "notation",
+            "latex": "\\frac{\\sqrt{2}}2"
+          },
+          "point": {
+            "kind": "notation",
+            "latex": "(\\sqrt{2},1)"
+          },
+          "fixed": {
+            "kind": "notation",
+            "latex": "T(0,2)"
+          },
+          "line": {
+            "kind": "notation",
+            "latex": "l"
+          },
+          "ends": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "mid": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "origin": {
+            "kind": "notation",
+            "latex": "O"
+          },
+          "cname": {
+            "kind": "notation",
+            "latex": "C"
+          },
+          "xx": {
+            "kind": "notation",
+            "latex": "x"
+          },
+          "tri": {
+            "kind": "notation",
+            "latex": "OAB"
+          }
+        },
+        "condition_anchors": [
+          "椭圆",
+          "离心率",
+          "经过点",
+          "两个不同"
+        ],
+        "request_anchors": [
+          "标准方程",
+          "轨迹方程",
+          "面积的最大值"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "b",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "x",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "y",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "C",
+            "anchor": "椭圆"
+          },
+          {
+            "symbol": "T",
+            "anchor": "过点"
+          },
+          {
+            "symbol": "l",
+            "anchor": "直线"
+          },
+          {
+            "symbol": "A",
+            "anchor": "交于"
+          },
+          {
+            "symbol": "B",
+            "anchor": "交于"
+          },
+          {
+            "symbol": "M",
+            "anchor": "中点"
+          },
+          {
+            "symbol": "O",
+            "anchor": "坐标原点"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "b",
+          "x",
+          "y",
+          "C",
+          "T",
+          "l",
+          "A",
+          "B",
+          "M",
+          "O"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 17,
+        "dimensions": {
+          "knowledge": 4,
+          "condition_comprehension": 3,
+          "modelling": 3,
+          "logical_depth": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 4
+        },
+        "points_justification": "17分解析几何题包含由条件建椭圆、受弦存在条件约束的中点轨迹及范围、外点弦面积最优，必须处理竖直弦边界。",
+        "linked_progression": "第一问定曲线，第二问通过弦参数和判别式得到轨迹，第三问在有效参数域优化面积并回查竖直例外。",
+        "part_points": [
+          4,
+          6,
+          7
+        ],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）由\\(b^2=a^2(1-\\frac12)=\\frac{a^2}2\\)和\\(\\frac2{a^2}+\\frac1{b^2}=1\\)，得\\(a^2=4,b^2=2\\)。故椭圆为\\(\\frac{x^2}4+\\frac{y^2}2=1\\)。",
+          "（2）当l不垂直于x轴时，设\\(l:y=kx+2\\)。联立得\\((1+2k^2)x^2+8kx+4=0\\)，两不同交点要求\\(k^2>\\frac12\\)。",
+          "由韦达定理，中点\\(M(X,Y)\\)满足\\(X=-\\frac{4k}{1+2k^2},Y=\\frac2{1+2k^2}\\)。消去k，得\\(\\frac{X^2}2+(Y-1)^2=1,\\ 0<Y<1\\)。反之，此轨迹上任一点都有\\(k=-X/(2Y)\\)，满足\\(k^2>\\frac12\\)，故范围无遗漏。",
+          "（3）当l垂直x轴时，l为x=0，O、A、B共线，面积为0。其余情形，设交点横坐标为\\(x_1,x_2\\)，由\\(y_i=kx_i+2\\)，得\\(S_{\\triangle OAB}=|x_1-x_2|=\\frac{4\\sqrt{2k^2-1}}{1+2k^2}\\)。",
+          "令\\(t=\\sqrt{2k^2-1}>0\\)，则面积为\\(\\frac{4t}{t^2+2}\\le\\sqrt2\\)，等号当且仅当\\(t=\\sqrt2\\)，即\\(k^2=\\frac32\\)。所以最大面积为\\(\\sqrt2\\)，对应直线\\(y=\\pm\\sqrt{\\frac32}x+2\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    },
+    {
+      "id": "orig:ai:phase4:fullA:q019:v1",
+      "order": 19,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {
+          "aa": "a"
+        },
+        "tasks": [
+          {
+            "op": "monotonicity",
+            "expression": "x-log(x)",
+            "domain": [
+              0,
+              "oo"
+            ],
+            "open": [
+              true,
+              true
+            ]
+          },
+          {
+            "op": "extrema",
+            "expression": "x-log(x)",
+            "domain": [
+              0,
+              "oo"
+            ],
+            "open": [
+              true,
+              true
+            ]
+          },
+          {
+            "op": "level_classification",
+            "expression": "x-log(x)",
+            "domain": [
+              0,
+              "oo"
+            ]
+          },
+          {
+            "op": "root_pair_bound",
+            "expression": "x-log(x)",
+            "transformation": "2-x",
+            "pivot": "1"
+          },
+          {
+            "op": "root_pair_bound",
+            "expression": "x-log(x)",
+            "transformation": "1/x",
+            "pivot": "1"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "7a8d110bd1a1cef25b56d3e84d8376ae02fc27f98b8e8baf84a52054de8dca05",
+        "stem": "已知函数{{fn}}，其中{{domain}}。",
+        "parts": [
+          {
+            "text": "求{{f}}的单调区间和最小值。",
+            "task_refs": [
+              0,
+              1
+            ]
+          },
+          {
+            "text": "讨论实数{{aa}}取不同值时，方程{{level}}的实根个数。",
+            "task_refs": [
+              2
+            ]
+          },
+          {
+            "text": "当{{ap}}时，设方程{{level}}的两个实根为{{roots}}，证明：{{claim}}。",
+            "task_refs": [
+              3,
+              4
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "fn": {
+            "kind": "notation",
+            "latex": "f(x)=x-\\ln x"
+          },
+          "domain": {
+            "kind": "notation",
+            "latex": "x>0"
+          },
+          "f": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "level": {
+            "kind": "notation",
+            "latex": "f(x)=a"
+          },
+          "aa": {
+            "given": "aa",
+            "source": "a"
+          },
+          "ap": {
+            "kind": "notation",
+            "latex": "a>1"
+          },
+          "roots": {
+            "kind": "notation",
+            "latex": "x_1<x_2"
+          },
+          "claim": {
+            "kind": "notation",
+            "latex": "x_1+x_2>2,\\quad x_1x_2<1"
+          }
+        },
+        "condition_anchors": [
+          "函数",
+          "{{domain}}"
+        ],
+        "request_anchors": [
+          "单调区间",
+          "实根个数",
+          "证明"
+        ],
+        "definitions": [
+          {
+            "symbol": "f",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "x",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "a",
+            "anchor": "实数"
+          },
+          {
+            "symbol": "x_1",
+            "anchor": "实根"
+          },
+          {
+            "symbol": "x_2",
+            "anchor": "实根"
+          }
+        ],
+        "used_symbols": [
+          "f",
+          "x",
+          "a",
+          "x_1",
+          "x_2"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 20,
+        "dimensions": {
+          "knowledge": 4,
+          "condition_comprehension": 3,
+          "modelling": 3,
+          "logical_depth": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "exam_comparison": 4
+        },
+        "points_justification": "17分函数综合题：整体单调/极值、水平集根分类、同水平两支根的和与积比较。一般a>1不再有小样a=2的一行特例，需两种不同变换的比较推理。",
+        "linked_progression": "前两问建立两个分支与根的位置，第三问须自主构造比较函数并使用单调性，不在题干给方法。",
+        "part_points": [
+          4,
+          6,
+          7
+        ],
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）\\(f'(x)=\\frac{x-1}x\\)。函数在\\((0,1)\\)递减，在\\((1,+\\infty)\\)递增，最小值为\\(f(1)=1\\)。",
+          "（2）当\\(a<1\\)时无实根；当\\(a=1\\)时唯一实根为1；当\\(a>1\\)时，由两端函数值趋于正无穷及严格单调性，恰有两根\\(0<x_1<1<x_2\\)。",
+          "（3）先证根和。对\\(0<t<1\\)，令\\(g(t)=f(2-t)-f(t)\\)，则\\(g'(t)=\\frac{2(t-1)^2}{t(2-t)}>0\\)，且\\(g(1)=0\\)，故\\(g(t)<0\\)。",
+          "于是\\(f(2-x_1)<f(x_1)=f(x_2)\\)。两边的自变量都在\\((1,+\\infty)\\)，利用严格递增性得\\(2-x_1<x_2\\)，即\\(x_1+x_2>2\\)。",
+          "再证根积。令\\(h(t)=f(1/t)-f(t)=\\frac1t-t+2\\ln t\\)。在\\((0,1)\\)内，\\(h'(t)=-\\frac{(t-1)^2}{t^2}<0\\)，且\\(h(1)=0\\)，故\\(h(t)>0\\)。",
+          "因此\\(f(1/x_1)>f(x_1)=f(x_2)\\)，而\\(1/x_1,x_2>1\\)，由递增性得\\(1/x_1>x_2\\)，从而\\(x_1x_2<1\\)。"
+        ]
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true
+      }
+    }
+  ]
+}

@@ -13,6 +13,10 @@ def attest(run_path, report_path, blind_path=None, export=True):
     record = read_json(run_path)
     report = read_json(report_path)
     require(record.get("generation_mode") == "ai", "仅接受动态AI记录")
+    require(
+        not export,
+        "旧数学规格不能直出考生PDF。请迁移到v2中文写作层，完成PDF-only考生审题后使用publish。",
+    )
     rows = {}
     for row in report.get("questions", []) + report.get("re_reviews", []):
         sha = row.get("candidate_sha256")

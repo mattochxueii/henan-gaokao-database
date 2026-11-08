@@ -1,0 +1,201 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "sqrt(2)",
+        "steps": [
+          "代入题设条件，化简 \\(\\sqrt{2}\\)，得到 \\(\\sqrt{2}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:pilot:q001:v1",
+    "math_spec_sha256": "c3e4ff14902837b60e865e9409e2753d3a08c34637e9fcdde2e8f31d9f5a30a0",
+    "writing_sha256": "89684c458843169d22835cf0f64961f7759122bd7cfbd7eceed38dbf4314a122"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "derivative": "2*x - 2",
+          "violating_set": "Interval.open(0, 1)"
+        }
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "roots": "{-1, 3}"
+        }
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "ideal_remainder": "0"
+        }
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "ACD",
+    "id": "orig:ai:phase4:pilot:q002:v1",
+    "math_spec_sha256": "cac591d93e9c1af26e0e2490816ca239dee2fc2e87f052604868be0efa91d39d",
+    "writing_sha256": "b191490de2c800cda1fa245244c3a5e3516333613186c6e83de80533ab4e7233"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4/9",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共9个有序结果，其中4个满足目标事件，故概率为\\(\\frac{4}{9}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:pilot:q003:v1",
+    "math_spec_sha256": "0477ea9f8d9e85aeed300bf1d4ec4848c01badf50ee77147d42f83bffda3ab4a",
+    "writing_sha256": "261ad06909abb0aa6b76d022152734dfeb17c9fede89e2c43eb9aebc5d12bc53"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "n*factorial(n)",
+        "steps": [
+          "独立求解递推后，通项为 \\(n n!\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "n*(n + 1)/2",
+        "steps": [
+          "独立求解递推后，通项为 \\(n n!\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。",
+          "将独立求出的通项代入加权和，拆项求和并保留有限边界，得到\\(\\frac{n \\left(n + 1\\right)}{2}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:pilot:q004:v1",
+    "math_spec_sha256": "ea9815955ebb7112ea079645a3397aa110c7c225f4c134acee885a454f60335d",
+    "writing_sha256": "dcafd54bdb4f255da992cf7cab989c60d02d6e9294ae363b12bf320caa4284c5"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "increasing": "Interval(1, oo)",
+          "decreasing": "Interval.Lopen(0, 1)",
+          "critical": [
+            "1"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{x - 1}{x}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[1, \\infty\\right)\\)，为负的区间为\\(\\left(0, 1\\right]\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": {
+          "minimum": "1",
+          "maximum": "oo",
+          "minimum_at": [
+            "1"
+          ],
+          "maximum_at": []
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{x - 1}{x}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[1, \\infty\\right)\\)，为负的区间为\\(\\left(0, 1\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': '1', 'maximum': 'oo', 'minimum_at': ['1'], 'maximum_at': []}"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "requires_independent_reasoning": true,
+        "facts": {
+          "derivative": "1 - 1/x",
+          "comparison": "-2*x + log(x) - log(2 - x) + 2",
+          "comparison_derivative": "-2*(x - 1)**2/(x*(x - 2))",
+          "at_pivot": "0"
+        },
+        "scope": "只核查比较函数代数及导数，零点位置推理必须由独立PDF审题者完成"
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:pilot:q005:v1",
+    "math_spec_sha256": "ad4a3eed25d22497a680d9933b568f63603fcc257b6c56f5d0651c6b5422ec29",
+    "writing_sha256": "8b81aeed4b543848d20a9adb9e8308297c8422b7676160fde7936d96b9881e3a"
+  }
+]

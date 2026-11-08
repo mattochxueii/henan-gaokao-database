@@ -736,12 +736,34 @@ def paper_review(blueprint, questions, verifications):
     }
 
 
-def run_ai(root, provider, output, export=True, solver_timeout=18):
+def run_ai(
+    root, provider, output, export=True, solver_timeout=18, pilot_certificate=None
+):
     require(not output.exists(), "输出目录已存在")
     document = provider.propose(
         context(root),
-        "依据研究上下文动态设计新数学结构，输出schema_version=1的JSON，蓝图与题目协议见技能ai-protocol.md。所有题面数学条件放入problem.tasks，禁止模板family字段。",
+        "依据研究上下文动态设计新数学结构，输出schema_version=2的JSON。数学规格、AI中文写作、排版必须分层，协议见writing-protocol.md。不给考生看AST、内部任务名或解题方法。禁止family。"
+        + (
+            "已提供5题样卷证书，可以按目标蓝图构造整卷。"
+            if pilot_certificate
+            else "本次只能先设计5题pilot，未完成PDF-only样卷审题前禁止生成整卷。"
+        ),
     )
+    if document.get("schema_version") == 2:
+        from .exam_workflow import prepare
+
+        manifest = prepare(root, document, output, pilot_certificate)
+        return {
+            "generation_mode": "ai",
+            "provider": provider.name,
+            "structure": {
+                "questions": manifest["question_count"],
+                "points": document["paper"]["total_points"],
+                "passed": False,
+            },
+            "overall_status": "中文写作与程序支持通过；等待PDF-only独立考生审题",
+            "review_manifest": manifest,
+        }
     output.mkdir(parents=True)
     atomic_json(output / "raw-ai-proposal.json", document)
     proposed = document["blueprint"]

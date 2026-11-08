@@ -1,0 +1,780 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-2",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "1",
+              "y": "-1"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase4:fullB:q001:v2",
+    "math_spec_sha256": "9e3889ffda8f6547b02831397f8a35117141d81f73824cf5775ec406ccab251b",
+    "writing_sha256": "0e156764f09d8c2ca72992b789a658f744f5f7bead057eca580162384dfe2678"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase4:fullB:q002:v1",
+    "math_spec_sha256": "89fb4f9c28a46b7ef15ba06e570294df2b80342c9125f092da92405bd758e050",
+    "writing_sha256": "fc09a7a7d5b636005b7e2f7c8e7940fafa9a19fcd1211ccbfac7f0c1070e6b80"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "1/7",
+        "steps": [
+          "代入题设条件，化简 \\(\\frac{\\frac{2 t}{1 - t^{2}} - 1}{\\frac{2 t}{1 - t^{2}} + 1}\\)，得到 \\(\\frac{1}{7}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:fullB:q003:v2",
+    "math_spec_sha256": "97697ce3b4f58638366e3815c277288873a2c5cf695f08b42851d7a9d2a01cc1",
+    "writing_sha256": "5867abff3837c6da285cb9e45d033bf363391b375ea403371c25bab0b6b9cd91"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "3/5",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共5个有序结果，其中3个满足目标事件，故概率为\\(\\frac{3}{5}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase4:fullB:q004:v1",
+    "math_spec_sha256": "5479f2b71fa0083a569832de78e1b2a2bbbe0039bd7b495054e4ce47ce9052b2",
+    "writing_sha256": "dceeb81c920bdc8f27cb2d45531410889e4e70ab95ca3b3df60882e452536f1f"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-4/3",
+        "steps": [
+          "将条件移项并因式分解为 \\(2 \\left(3 x + 4\\right)\\)=0，限制在题设区间内，得到 \\(\\left\\{- \\frac{4}{3}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase4:fullB:q005:v1",
+    "math_spec_sha256": "f868bf8b75ac3ea9f1409848cbbadcfb0e8111b6deae4ea65225596084c793b8",
+    "writing_sha256": "0551de2d43152aa4f05d835ddffb444df24dd7b1dc9d209e9172b86946ceff81"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4*sqrt(3)/3",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "1",
+              "b": "sqrt(3)/3"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase4:fullB:q006:v1",
+    "math_spec_sha256": "e2f8349e42bffb99a28eaa6387c570430d3bb3c4dcc723880e3bdd652785c9b0",
+    "writing_sha256": "f57bba94b0b2ebb5a5d314f3c1fc089b98a69fc2364620461922f461e6013f5a"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "17",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "2",
+              "y": "8"
+            },
+            {
+              "x": "8",
+              "y": "2"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase4:fullB:q007:v1",
+    "math_spec_sha256": "4f0176f71ab38ce8bb98f1f289ab31297556d28b05d335ba2d74ea815ac558f7",
+    "writing_sha256": "eab8ae77aa2e883cd60d3a7ef9b10993ad63e4631b471cb3f1da516a1127ea08"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": 4,
+        "steps": [
+          "将条件移项并因式分解为 \\(- x + \\left|{- x^{2} + 2 x + 3}\\right| - 3\\)=0，限制在题设区间内，得到 \\(\\left\\{0, 1, \\frac{3}{2} - \\frac{\\sqrt{33}}{2}, \\frac{3}{2} + \\frac{\\sqrt{33}}{2}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase4:fullB:q008:v1",
+    "math_spec_sha256": "23814233cc1070f84c5a7307ea4d6e1d28e6d7b3bdcdb274a4fb5da5080a09d4",
+    "writing_sha256": "ca5659e298e0cf4b07536a3b6a564367530859c8cca912add36e6b576a872708"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "computed_mean": "0",
+          "computed_variance": "12",
+          "scope": "由原始一阶、二阶矩独立重算，未使用命题者答案作为求值依据"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "computed_mean": "0",
+          "computed_variance": "12",
+          "scope": "由原始一阶、二阶矩独立重算，未使用命题者答案作为求值依据"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "computed_mean": "2",
+          "computed_variance": "5/2",
+          "scope": "由原始一阶、二阶矩独立重算，未使用命题者答案作为求值依据"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "sum_deviations": "0",
+          "sum_squares_deviations": "15"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase4:fullB:q009:v2",
+    "math_spec_sha256": "03e8b94d55956e735d78f03e98c7a05b081be2a8188ad35e06135962b7c4458c",
+    "writing_sha256": "b034973fc4fbd5c0d0e276310322c75f9a497d69da9308eb4d2911f73b4dbcd7"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "逐项代入条件计算命题真值。True"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "3",
+            "steps": [
+              "定义域内连续，导数为\\(\\frac{2 \\sin{\\left(x \\right)}}{\\sqrt{5 - 4 \\cos{\\left(x \\right)}}}\\)，驻点为\\(\\left\\{0, \\pi, 2 \\pi\\right\\}\\)。",
+              "导数为正的区间为\\(\\left[0, \\pi\\right]\\)，为负的区间为\\(\\left[\\pi, 2 \\pi\\right]\\)。",
+              "逐一比较驻点值、端点值与开端点极限。3"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "common_point_C1": "0",
+          "common_point_C2": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "line_of_centres_diameter": "2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase4:fullB:q010:v1",
+    "math_spec_sha256": "3246f2e7e3a8f5c951ce2658bb1e80d1988db0ac5229967a4187105f4ca85b09",
+    "writing_sha256": "350e3979d05c5e94132927adb9c95eb2d7d7d1cdd3e1574d76c57e9614a3c502"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "derivative": "3*x**2 - 6*x",
+          "violating_set": "EmptySet"
+        }
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "roots": "{0, 3}"
+        }
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x**3 - 3*x**2",
+          "derivative": "3*x*(x - 2)",
+          "critical_value_at0": "a",
+          "critical_value_at2": "a - 4"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "a + x**3 - 3*x**2",
+          "derivative": "3*x*(x - 2)",
+          "at0": "a",
+          "at2": "a - 4"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase4:fullB:q011:v1",
+    "math_spec_sha256": "be18c89a6e0e1cde58bcd526de0f24b27e084493aace36e6c0bafabdaee1f021",
+    "writing_sha256": "8448bda3c947c5d67548c2b8e2a03d2a0fbd658cf2df7f97497c9db295bf178f"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "5/7",
+        "steps": [
+          "将条件移项并因式分解为 \\(- \\frac{7 x - 5}{x - 1}\\)=0，限制在题设区间内，得到 \\(\\left\\{\\frac{5}{7}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q012:v1",
+    "math_spec_sha256": "c9888dd5dc8260d2168ef55856f1534785e710b49ddb58f3b86b3c8bf1352f7e",
+    "writing_sha256": "84396bc322f49fbb610bd4c6a545f5790bc5061a822006e848e9e7e1ee73ec2d"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": [
+          "sqrt(13)",
+          "sqrt(37)"
+        ],
+        "steps": [
+          "将条件移项并因式分解为 \\(\\left(x^{2} - 37\\right) \\left(x^{2} - 13\\right)\\)=0，限制在题设区间内，得到 \\(\\left\\{\\sqrt{13}, \\sqrt{37}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q013:v1",
+    "math_spec_sha256": "cdb60051332aa41732b7b3cd047d8dd452417b6fd577ac452ad527d1df9bac66",
+    "writing_sha256": "73ac46cb4508bb935236a2966955318c06f451a14cd31b97477f3d4e9ebb55f8"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4*sqrt(5)/15",
+        "steps": [
+          "代入题设条件，化简 \\(\\frac{4 \\sqrt{5}}{15}\\)，得到 \\(\\frac{4 \\sqrt{5}}{15}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q014:v2",
+    "math_spec_sha256": "6dcafb0bd5f9651efcd01350a16b73416734272ecb7c1e457f7b3f6581e15e77",
+    "writing_sha256": "819f679b2fd16c7df29b1b6fbd11f48e5ef412d22ce62d9ba4ec93c191428b21"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "1/5",
+        "steps": [
+          "代入题设条件，化简 \\(\\frac{1}{5}\\)，得到 \\(\\frac{1}{5}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": {
+          "distribution": {
+            "0": "64/125",
+            "1": "48/125",
+            "2": "12/125",
+            "3": "1/125"
+          },
+          "expectation": "3/5",
+          "variance": "12/25"
+        },
+        "complete": true,
+        "facts": {
+          "normalisation": "1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "1/13",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共13个有序结果，其中1个满足目标事件，故概率为\\(\\frac{1}{13}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "4*x**3 - 6*x**2 + 1",
+          "derivative": "12*x*(x - 1)",
+          "gain_from_binomial": "0",
+          "at_one_half": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q015:v2",
+    "math_spec_sha256": "07e953e47c823a18bfd292f2165cc6e1ab2381d684e3704e800372aa1073b1f9",
+    "writing_sha256": "6d9d3842ad805792d19299d159b9a5ae2341e82505cfbedcbf50205fc5cc5614"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "normal": [
+            "4",
+            "4",
+            "4"
+          ],
+          "dot": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "normal": [
+            "4",
+            "4",
+            "4"
+          ],
+          "dot": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "1/2",
+        "complete": true,
+        "facts": {
+          "determinant": "-3"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": {
+          "minimum": "sqrt(3)/3",
+          "maximum": "sqrt(6)/3",
+          "minimum_at": [
+            "0"
+          ],
+          "maximum_at": [
+            "1"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(- \\frac{\\sqrt{3} \\left(x - 1\\right)}{3 \\left(x^{2} + 1\\right)^{\\frac{3}{2}}}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[0, 1\\right]\\)，为负的区间为\\(\\left[1, 2\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': 'sqrt(3)/3', 'maximum': 'sqrt(6)/3', 'minimum_at': ['0'], 'maximum_at': ['1']}"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q016:v1",
+    "math_spec_sha256": "45f97d11c793feb355c465307735f220506afa7debdb56147faa211ae26937f5",
+    "writing_sha256": "8db653b162efc9254c516bf504fc8860c422812aa11aa6e0c62a7867a3b72700"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-2 + 2*3**n/2**n",
+        "steps": [
+          "独立求解递推后，通项为 \\(-2 + 2 \\cdot 2^{- n} 3^{n}\\)。将n与n+1分别代入，原递推的差化为0；首项逐项回代也成立。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "6*(2*2**n + 3**n*n - 2*3**n)/2**n",
+        "complete": true,
+        "facts": {
+          "recurrence_solution": "2*(3/2)**n - 2",
+          "additive_shift": "2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "weighted_sum": "6*(3/2)**n*(n - 2) + 12",
+          "n1": "3",
+          "n2": "12"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q017:v1",
+    "math_spec_sha256": "d74280773e938566b50dd0d0c71b075309c89f5bc914a17713ae9fdc9f2d0e0c",
+    "writing_sha256": "8481f95127278ba7d5d6974a6144d8e6135fe6e5948098d6c6eba2572c888ac2"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "p": "1"
+            }
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "-1",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "y/2 - sqrt(y**2 + 4)/2",
+              "b": "y/2 + sqrt(y**2 + 4)/2",
+              "x": "-1"
+            },
+            {
+              "a": "y/2 + sqrt(y**2 + 4)/2",
+              "b": "y/2 - sqrt(y**2 + 4)/2",
+              "x": "-1"
+            }
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "parameter_discriminant": "x**2 + 4"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "ideal_remainder": "0"
+        }
+      },
+      {
+        "result": {
+          "minimum": "4",
+          "maximum": "oo",
+          "minimum_at": [
+            "0"
+          ],
+          "maximum_at": []
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{3 x \\sqrt{x^{2} + 4}}{2}\\)，驻点为\\(\\left\\{0\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[0, \\infty\\right)\\)，为负的区间为\\(\\left(-\\infty, 0\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': '4', 'maximum': 'oo', 'minimum_at': ['0'], 'maximum_at': []}"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q018:v1",
+    "math_spec_sha256": "e5d2a4e8a681fadf5f9b8030c484932224768496bfd390c7ed3af16faf07bc0a",
+    "writing_sha256": "cca5dfc12a43295e2a481074b818c87c8e749dc511d4f792e6d0a2ae730bcdc0"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "increasing": "Interval.open(0, oo)",
+          "decreasing": "EmptySet",
+          "critical": [
+            "1"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{\\left(x - 1\\right)^{2}}{x \\left(x + 1\\right)^{2}}\\)，驻点为\\(\\left\\{1\\right\\}\\)。",
+          "导数为正的区间为\\(\\left(0, \\infty\\right)\\)，为负的区间为\\(\\emptyset\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": 1,
+        "complete": true,
+        "facts": {
+          "critical_points": [
+            "0",
+            "1",
+            "oo"
+          ],
+          "branch_limits": [
+            "-oo",
+            "0",
+            "oo"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-a*(x - 1)/(x + 1) + log(x)",
+          "derivative": "(-2*a*x + x**2 + 2*x + 1)/(x*(x + 1)**2)",
+          "critical_discriminant_identity": "0",
+          "at_a2_numerator_identity": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-a*(x - 1)/(x + 1) + log(x)",
+          "derivative": "(-2*a*x + x**2 + 2*x + 1)/(x*(x + 1)**2)",
+          "reciprocal_sum": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase4:fullB:q019:v1",
+    "math_spec_sha256": "0e89533edd76004e55fbf52beea97f8f73bd32aa72c2741316b673be9bee0ef3",
+    "writing_sha256": "a913ebae6baefcb60792d0849b85640d6f130c128c5d134ef3ff1ab544a60c97"
+  }
+]

@@ -43,10 +43,58 @@ PROTOCOL = {
     },
     "constraints": "所有数学条件显式进入规格。表达式只允许安全四则、幂、初等函数。单选只求一个标量；含证明的题目用constructed_response。",
 }
+LEGACY_PROTOCOL = PROTOCOL
+PROTOCOL = {
+    "schema_version": 2,
+    "paper": {
+        "mode": "pilot|full",
+        "title": "规范中文数学模拟试卷标题",
+        "total_points": "按已核实卷型",
+        "minutes": 120,
+    },
+    "questions": "每题含id/order/kind/points/module/math_spec/writing/assessment/solution；禁止family",
+    "math_spec": {
+        "givens": "原始数学条件",
+        "tasks": "安全数学操作，供独立求解；不得含命题者标准答案",
+        "options": "数值选项语义或多选assertions",
+    },
+    "writing": {
+        "stem": "AI单独写作的自然中文题面，用{{key}}引用公式",
+        "parts": "递进中文设问与task_refs",
+        "options": "A-D的中文/公式文本",
+        "formulae": "source与given绑定，或常用高中notation；禁止AST、程序词和方法提示",
+        "condition_anchors": "必须在题面出现的必要条件",
+        "request_anchors": "明确设问",
+        "definitions": "symbol/anchor定义",
+        "used_symbols": "已定义符号",
+        "spec_sha256": "本地绑定math_spec的校验值",
+    },
+    "assessment": "八维以上能力判断、具体分值依据、子问分值及递进关系、预计时间；不能按任务数套标签",
+    "solution": "独立求解前保存的命题解答，不送入求解器或考生盲审者",
+    "release_policy": "先5题pilot的PDF-only审查通过，再full；发布必须绑定全部PDF页、独立数学对照，程序通过不是高考风格通过",
+    "supported_legacy_math_operations": LEGACY_PROTOCOL["task_fields"],
+}
 
 
 def validate_document(document):
-    require(document.get("schema_version") == 1, "候选协议版本无效")
+    require(document.get("schema_version") in (1, 2), "候选协议版本无效")
+    if document.get("schema_version") == 2:
+        require(
+            isinstance(document.get("paper"), dict)
+            and isinstance(document.get("questions"), list)
+            and 0 < len(document["questions"]) <= 60,
+            "中文题面协议缺少试卷/题目",
+        )
+        for q in document["questions"]:
+            require(
+                "family" not in q
+                and all(
+                    key in q
+                    for key in ("math_spec", "writing", "assessment", "solution")
+                ),
+                "缺少独立写作层或伪装模板",
+            )
+        return document
     require(
         isinstance(document.get("questions"), list)
         and 0 < len(document["questions"]) <= 60,
@@ -91,6 +139,8 @@ class HostAIProvider:
             provenance.get("mode") == "ai" and provenance.get("provider") == "host_ai",
             "缺少宿主AI原始生成声明",
         )
+        if self.document.get("schema_version") == 2:
+            return
         require(
             "questions" in self.document and "blueprint" in self.document,
             "候选缺题目或蓝图",
@@ -192,6 +242,7 @@ class OpenAIProvider:
                     "model": self.model,
                     "response_id": envelope.get("id"),
                     "api_calls": self.calls,
+                    "template_calls": 0,
                     "usage": envelope.get("usage"),
                     "raw_response_sha256": fingerprint(envelope),
                 }

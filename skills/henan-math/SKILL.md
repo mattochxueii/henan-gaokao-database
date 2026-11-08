@@ -1,54 +1,58 @@
 ---
 name: henan-math
-description: 检索河南数学候选真题并研究命题特点，通过宿主AI或已配置API动态设计原创数列、导数、专项及高考风格模拟卷，独立求解、审题并输出PDF；保留明确标记的template备用模式。
+description: 检索河南数学候选真题与命题分析，通过宿主AI或已有API动态设计原创数学题；严格分离内部规格、中文题面与PDF，经独立求解、PDF考生盲审和数学对照后发布；保留明确标记的template备用练习模式。
 ---
 
-# 河南数学研究与动态AI命题
+# 河南数学研究与AI题面写作
 
-使用时告知正在应用henan-math。先实际研究题库，再动态创作、独立求解、审题与交付。不得把运行模板或重放旧JSON说成一次新的AI创作。
+使用时告知正在应用 henan-math。先读取实际题库和分析，再创作。现有候选、模板换参或历史JSON重放不能称为一次新的AI原创。
 
-## 定位与恢复
+## 定位与研究
 
-运行技能scripts/run.py。支持--database <仓库>、HENAN_MATH_DB及安装相对配置。私有原文需单独密钥恢复，见references/storage.md。未恢复时可以读取分析与规则、验证新原创题，不能声称已阅读完整原题。候选尚未获命题机构逐题确认。
+运行 scripts/run.py；支持 --database、HENAN_MATH_DB 及相对安装配置。先执行 research --topic 数列、research --topic 导数 和 rules，按要求检索年份、题型。原文须单独密钥恢复，见 [storage.md](references/storage.md)。未恢复时不能声称读过完整原题。
 
-## 研究与规划
+38份逐题分析基于2025/2026第三方候选，不是命题机构确认原卷。研究必须关联题目ID、版本、来源页及证据。读取 analysis/review-overrides.json 的哈希绑定更正层，不改写原数据。官方要求、候选事实、有限样本观察与模拟设定分开。2027卷型尚未确认。
 
-先执行research --topic 数列及research --topic 导数，并读取rules。必要时按年份和题型检索。分析须关联原题ID、版本哈希、页码与证据。命题规则区分官方要求、候选事实、有限样本观察和模拟设定。2027详细结构未确认。
+## 三层命题
 
-执行plan --mode full --profile balanced --output <蓝图.json>，根据研究证据与覆盖目标制定槽位。AI可以改变知识搭配、条件与解法，不得复制固定族布局。150分历史结构为8单选、3多选、3填空、5解答；2027沿用只是模拟假设。
+必须阅读 [writing-protocol.md](references/writing-protocol.md) 和数据库 analysis/language-rules.json。依次完成：
 
-## 动态命题（原创请求必须显式ai）
+1. 动态规划知识覆盖、推理层次和关联子问，AI自行创作 math_spec，保留原始版本、真实模型身份（不可得则 not_exposed_by_host）、条件结构及拒绝修订。
+2. 通过 writing-request 生成不带答案/设计提示的独立写作请求。AI用规范中文组织条件和设问，用公式注册表输出常见高中记号，再 attach-writing。不得将程序内部任务直接印成试卷。
+3. 先独立数学核查，再排版 student-text，得到 review-only PDF 和页图。无法规范转换的公式、缺条件、未定义符号、提示、无依据高分均退回修订。
 
-当前宿主AI阅读研究结果，依据蓝图自主设计不同数学结构，输出references/ai-protocol.md协议JSON。保留原始候选、模型标识（未知则not_exposed_by_host）、设计路径、干扰项误解路径。不能只替换原题数字。
+完整 v2 候选见 experiments/phase4/proposals，历史 v1 见 [ai-protocol.md](references/ai-protocol.md)，v1不再允许直接导出AI学生卷。复用格式不等于复用题目。输出到新目录，不能覆盖失败记录。
 
-python <技能目录>/scripts/run.py generate --engine ai --candidates <宿主新候选.json> --output <新目录> --no-export
+## 先样卷再整卷
 
-可选API：用户已有环境密钥时，--engine ai --model <显式模型>启用Responses。无需为默认宿主流程购买API。请求、失败修订共享有界调用预算，密钥仅环境读取。无AI时明确报告；仅允许显式--allow-template-fallback回退。
+先用5题不同题型生成 pilot，由独立审题者只看最终PDF与实际渲染图，不读JSON、答案、设计和源码。逐页实际查看，逐题独立求解、检查条件、中文、记号、分值与整卷风格。保存真哈希和完整推理，不以程序成功代替考生体验。
 
-## 独立验证与修订
+执行 publish 需同时提供匹配PDF的 --student-review 与 --math-comparison。所有题及整卷均须通过；数学比对含程序结果和独立PDF解答。发布复制同一PDF字节，修订后旧审核作废。未审题稿只称审阅草稿。
 
-求解进程只读取problem.tasks，绝不以命题者标准答案、设计解法或选项解释为求解依据。检查定义域、边界、根集、参数、唯一性、选项范围与题意。失败保留rejected/events；宿主根据反馈修订，记录旧哈希及理由，换新目录重新运行。API按剩余预算自动修订。
+full 必须传 --pilot-certificate <已发布5题目录>/publication.json。历史结构8单选、3多选、3填空、5解答及150分只是目标模拟依据，不能据此认定已达到高考难度。
 
-验证失败或未知不得进入通过卷。状态区分程序、符号数值交叉、独立AI推理、人工待审与失败。全部验证均不等于任意自然语言的形式化证明。
+## 独立数学验证
 
-python <技能目录>/scripts/run.py verify <目录>/run.json
+求解进程只接收 math_spec，不接收命题者答案或思路。处理定义域、根集、边界、唯一性、选项、图形条件和递推。检查不支持的部分保持 complete=false，不能默认正确。无穷项证明、轨迹充分性和一般参数分类另由PDF独立推理完成。
 
-## 独立审题与导出
+状态分为程序验证、符号数值交叉、独立AI推理、人工待审、失败。全部AI审校均不等于形式化证明或教师确认。记录干扰项的具体错误路径；选项数值相等只证明代数一致，不证明错误路径合理或学生真实误选频率。
 
-另起不读标准答案的独立推理流程审查原始题意、课程范围、条件、解法和干扰项。复杂风险任务由独立审题者复核。可用新上下文独立AI，但不得称为人类盲审。保存candidate_sha256及高中解法。修改题目后重新求解、审题，不能复用旧哈希。
+估计难度须有知识、读题、建模、推理、运算、综合、突破口、时间及来源层次依据。不能将简单求导/代入赋予高分。主观估时与实际考生统计分开。
 
-python <技能目录>/scripts/run.py review <目录>/run.json --report <独立审题.json>
+## 输出与验收
 
-review仅对匹配版本且程序通过的题导出研究审阅版paper.pdf、solutions.pdf及可编辑Markdown。未审题的generate默认只保存候选草稿，交付前必须review。PDF逐页渲染检查公式、图、页边界、答题空间。高质量评级还需教师审核和作答实测。
+输出题目、正常中文高中解法、题目分析及质量报告。答案PDF另做独立校审，实际查看公式、图、分页与答题区域。新样卷、两套新整卷及逐题证据在 experiments/phase4；推荐成品仅 final/fullA、final/fullB，旧失败稿不可交付为合格试卷。
 
-## 模板备用模式
+验收请求须真实研究→新AI创作→独立写作→数学检查→PDF盲审→数学比对→publish。重放历史证据只称复现。高考风格相似性是有来源、有限样本的编辑判断，不声称全网原创、高考等难或经验验证。
 
+## 模型与备用模式
+
+默认使用当前宿主AI写候选文件，无需购买API。若用户已有环境密钥，可使用 --engine ai --model <显式模型>，调用/重试/上下文受预算限制，密钥不写文件。API输出仍须遵守v2写作和PDF审查，不能绕过发布检查。
+
+AI不可用就如实报告；只在显式 --allow-template-fallback 时回退。备用练习使用：
+
+```powershell
 python <技能目录>/scripts/run.py generate --engine template --mode full --output <新目录>
+```
 
-26族参数化模式只称template备用练习。它的可靠性不能作为AI自由命题已验证的证据。覆盖详见references/coverage.md。
-
-## 验收与边界
-
-用户要求研究数列与导数、生成5道不同结构时：研究二者→读取规则→动态规划5槽→宿主逐题创作新JSON→generate ai→独立AI推理与程序比对→review→verify→逐页检查PDF。保存原始候选和修改；报告真实失败及不确定性。本轮可重放的验收证据位于experiments/phase3/release/acceptance5，但重放不算新的生成。
-
-使用原创性报告比较条件结构、数学模型、解法、知识组合与情境。允许经典方法，不声称全网首次。任意证明、课程标准语义、实测难度均有未解决边界。若数学质量不足，即使测试通过，也只能交付带限制的研究版。
+26族模板只称参数化练习。不得假称动态AI。安装及完整命令见仓库README和写作协议。

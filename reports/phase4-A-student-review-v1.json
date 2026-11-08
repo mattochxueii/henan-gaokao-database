@@ -1,0 +1,417 @@
+{
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "model_version": "not_exposed_by_host",
+  "human_reviewed": false,
+  "pdf_path": "D:/chatgptfile/2026-11-06/ai-ai-1-2-ai-3/outputs/henan-gaokao-database/experiments/phase4/fullA-v4/review-only/paper.pdf",
+  "pdf_sha256": "9aaf237462cf6d4f8905013ce82678acb0a10bbffeafe4aff789568e69a26417",
+  "scope_detail": "只读取指定PDF二进制以计算哈希，实际用view_image逐页查看全部9张指定渲染图，依据其可见题面独立推导。未读取仓库其他JSON、源码、答案、命题说明、报告或试卷。文字抽取尝试因fitz/pypdf及所给根目录.deps不存在而失败，未依赖文本抽取；解题以逐页渲染内容为准。报告写出后仅核验本报告结构。",
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "693b55bf7979e57f3b64a7dccb77e10413b26d4b780fbd496eebbf10c2efa604",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第1页实际查看：卷名、150分/120分钟、答题说明和1—3题清楚，题目及选项完整；选项竖排使密度偏低，第三题D项负号表达略生硬，无截断。"
+    },
+    {
+      "number": 2,
+      "sha256": "5a2bd083edbd382a84e5db6a305f1007b9788159dc3d4e3c8a87f85c5db84cbd",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第2页实际查看：4—6题完整，条件和分式清楚，均未跨页；选项间距较大。"
+    },
+    {
+      "number": 3,
+      "sha256": "aca556d6c774e0af348975889d1066447479ea27798f40e128ffde7f3092740e",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第3页实际查看：7—9题、多选说明及9题全部选项可读；奇偶下标清楚，无漏行或选项跨页。"
+    },
+    {
+      "number": 4,
+      "sha256": "2bf9810c7e60065e8ffca12d6cf4a74e71894a3d02bbf58bd63c0f620a8ddfa5",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第4页实际查看：10—14题完整，分式、指数、下标可读；本页较其他前部页面密集但仍有足够间距。"
+    },
+    {
+      "number": 5,
+      "sha256": "5697d524920a1abfe3825d001598b8b62b9d65c34f717a49ae85567a1f4f21f2",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第5页实际查看：15题与三小问完整，(2)与(3)的条件连接清楚，下面大块空白可答题。"
+    },
+    {
+      "number": 6,
+      "sha256": "391a612b5d15256301f0a910b2ca48038186b06b219a5e154495630784a1ba1c",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第6页实际查看：16题、空间图和三小问同页；E在AB上、F在PC上，与文字相符。后棱未用虚线、线交叉较多，是绘图表现层面的改进项。答题空白足够。"
+    },
+    {
+      "number": 7,
+      "sha256": "915c9e7e70e2f73f490f269fcc82f2b4ff3fde9db96e16868c02e74b69a02133",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第7页实际查看：17题加权和上下限、2^(k−1)和c_n分母n²均可辨，三问完整，无分页负担，留白充足。"
+    },
+    {
+      "number": 8,
+      "sha256": "fa8c46afed0d35e123eb79580053063ce14a47daa5d73ee216c09e269863c19a",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第8页实际查看：18题条件、两点不同、第二问非竖直限定及第三问面积目标可读；无配图不影响独立作图，留白充足。"
+    },
+    {
+      "number": 9,
+      "sha256": "c71719ea8bab5e590ad54feb26d1649e84c53ad32126dfb19a2a63545190b025",
+      "actually_viewed_with_view_image": true,
+      "visual_observation": "第9页实际查看：19题定义域、参数及两根严格不等式清楚，三小问完整，答题空间充足。"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "z=(1+2i)/(2−i)，求z−1的模。",
+      "request_understood": "从四个数值中选择模。",
+      "independent_solution": "有 \\(1+2i=i(2-i)\\)，故 \\(z=i\\)。于是 \\(|z-1|=|-1+i|=\\sqrt{(-1)^2+1^2}=\\sqrt2\\)，选B。",
+      "answer_key": "B",
+      "answer": "\\sqrt2",
+      "blocking_issues": [],
+      "nonblocking_observations": [],
+      "estimated_minutes": 1,
+      "difficulty_reason": "一次复数除法及模的计算，基础识记题。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "A为实数区间(1,5]；B为平方不超过10的整数。",
+      "request_understood": "求交集元素个数。",
+      "independent_solution": "\\(B=\\{-3,-2,-1,0,1,2,3\\}\\)，与 \\(A=(1,5]\\) 相交得到 \\(\\{2,3\\}\\)，故有2个元素，选B。",
+      "answer_key": "B",
+      "answer": "2",
+      "blocking_issues": [],
+      "nonblocking_observations": [],
+      "estimated_minutes": 1,
+      "difficulty_reason": "区间与整数集合交集，推理很短。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "π/4<α<3π/4，且sin(α+π/4)=3/5。",
+      "request_understood": "选择cosα的值。",
+      "independent_solution": "令 \\(\\beta=\\alpha+\\pi/4\\)，则 \\(\\pi/2<\\beta<\\pi\\)，所以 \\(\\cos\\beta=-4/5\\)。由 \\(\\cos\\alpha=\\cos(\\beta-\\pi/4)=(\\cos\\beta+\\sin\\beta)/\\sqrt2\\)，得 \\(\\cos\\alpha=-\\sqrt2/10\\)，选A。",
+      "answer_key": "A",
+      "answer": "-\\sqrt2/10",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "D项把负系数写成(-7)√2/10略生硬，可直接用−7√2/10。"
+      ],
+      "estimated_minutes": 2,
+      "difficulty_reason": "需先判断象限，再用差角公式。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "3红2白，等可能不放回抽2球，已知至少一红。",
+      "request_understood": "求两球均红的条件概率。",
+      "independent_solution": "设 \\(R\\) 表示两球均红，\\(H\\) 表示至少一红。共有 \\(\\binom52=10\\) 种等可能组合，\\(H\\) 有 \\(10-\\binom22=9\\) 种，\\(R\\) 有 \\(\\binom32=3\\) 种。因此 \\(P(R\\mid H)=3/9=1/3\\)，选C。",
+      "answer_key": "C",
+      "answer": "1/3",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与15题摸球模型及条件概率高度重复，削弱覆盖效率。"
+      ],
+      "estimated_minutes": 2,
+      "difficulty_reason": "标准条件概率计数。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "t>0，向量(t,1)与(1,t)的夹角余弦为4/5。",
+      "request_understood": "求所有正实数解之和。",
+      "independent_solution": "两向量模均为 \\(\\sqrt{t^2+1}\\)，点积为 \\(2t\\)。故 \\(2t/(t^2+1)=4/5\\)，整理为 \\(2t^2-5t+2=0\\)，即 \\((2t-1)(t-2)=0\\)。两根 \\(1/2,2\\) 均满足正数条件，和为 \\(5/2\\)，选B。",
+      "answer_key": "B",
+      "answer": "5/2",
+      "blocking_issues": [],
+      "nonblocking_observations": [],
+      "estimated_minutes": 2,
+      "difficulty_reason": "向量夹角公式转二次方程，需检验两根均有效。"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "直线y=x+b与x²=4y相切于P。",
+      "request_understood": "求抛物线焦点至切点的距离。",
+      "independent_solution": "抛物线为 \\(y=x^2/4\\)，导数为 \\(x/2\\)。切线斜率为1，故切点横坐标为2，\\(P=(2,1)\\)。焦点为 \\((0,1)\\)，两点距离为2，选B。也可联立得 \\(x^2-4x-4b=0\\)，令判别式为0求得相同结果。",
+      "answer_key": "B",
+      "answer": "2",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与10题再次考查同类抛物线切线，后者仅更换缩放系数。"
+      ],
+      "estimated_minutes": 2,
+      "difficulty_reason": "切线和标准抛物线的直接运算。"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "过原点作三次曲线y=x³−3x²+x+4的切线。",
+      "request_understood": "确定该切线的斜率。",
+      "independent_solution": "设切点横坐标为 \\(t\\)。曲线在该点的切线过原点等价于 \\(f(t)=tf'(t)\\)，即 \\(2t^3-3t^2-4=0\\)。因式分解为 \\((t-2)(2t^2+t+2)=0\\)。第二因子判别式为 \\(1-16<0\\)，所以唯一实切点横坐标为2。切线斜率 \\(f'(2)=12-12+1=1\\)，选C。",
+      "answer_key": "C",
+      "answer": "1",
+      "blocking_issues": [],
+      "nonblocking_observations": [],
+      "estimated_minutes": 3,
+      "difficulty_reason": "相比前题增加切点参数及唯一性检验，有适度提升。"
+    },
+    {
+      "number": 8,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "对任意x>0，都有ln x≤ax−1。",
+      "request_understood": "求满足恒成立的a的最小值。",
+      "independent_solution": "令 \\(x=1\\)，即得 \\(0\\le a-1\\)，故必要条件为 \\(a\\ge1\\)。另一方面，\\(h(x)=x-1-\\ln x\\) 的导数为 \\((x-1)/x\\)，在1处取得最小值0，所以 \\(\\ln x\\le x-1\\)。当 \\(a=1\\) 时恒成立；当 \\(a>1\\) 时由 \\(x>0\\) 亦恒成立。因此最小值为1，选B。",
+      "answer_key": "B",
+      "answer": "1",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与11、19题反复调用对数函数及导数，单选末题的难度回升不足。"
+      ],
+      "estimated_minutes": 2,
+      "difficulty_reason": "特殊点给出必要性，基本对数不等式给出充分性；位于单选末题仍偏容易。"
+    },
+    {
+      "number": 9,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "a_n=(-1)^(n−1)(n+1)，S_n为前n项和。",
+      "request_understood": "多选判断奇偶子列、公差及两种部分和公式。",
+      "independent_solution": "直接代入得 \\(a_{2k-1}=2k\\)，故奇数项子列公差为2，A正确；\\(a_{2k}=-(2k+1)\\)，故偶数项子列公差为−2，B正确。每一对 \\(a_{2k-1}+a_{2k}=-1\\)，所以 \\(S_{2n}=-n\\)，C正确。另 \\(S_{2n-1}=S_{2n}-a_{2n}=-n+(2n+1)=n+1\\)，D错误。",
+      "answer_key": "ABC",
+      "answer": "A、B、C",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "全卷另有13、17题数列，其中递推求通项的训练色彩较强。"
+      ],
+      "estimated_minutes": 2,
+      "difficulty_reason": "奇偶拆分后各项可直接验证，多选首题基础。"
+    },
+    {
+      "number": 10,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "抛物线C:y=x²，四个命题涉及点外切线、焦点、指定切线和弦长。",
+      "request_understood": "多选所有正确命题。",
+      "independent_solution": "设切点横坐标为 \\(t\\)，切线为 \\(y=2tx-t^2\\)。通过 \\((0,-1)\\) 等价于 \\(t^2=1\\)，得到两条不同切线，A正确。将 \\(x^2=y\\) 与标准式 \\(x^2=4py\\) 比较可得 \\(p=1/4\\)，焦点为 \\((0,1/4)\\)，B错误。取 \\(t=1\\)，切线即 \\(y=2x-1\\)，C正确。联立 \\(y=-x\\) 与 \\(y=x^2\\)，得 \\(x(x+1)=0\\)，交点为 \\((0,0),(-1,1)\\)，弦长为 \\(\\sqrt2\\)，D错误。",
+      "answer_key": "AC",
+      "answer": "A、C",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与6题的抛物线切线素材重复，四个选项较像知识点清单。"
+      ],
+      "estimated_minutes": 3,
+      "difficulty_reason": "四个标准结论逐一核验，计算短且互相独立。"
+    },
+    {
+      "number": 11,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "f(x)=ln x/x，定义域为正数。",
+      "request_understood": "多选最大值、单调性和水平线交点判断。",
+      "independent_solution": "\\(f'(x)=(1-\\ln x)/x^2\\)，所以在 \\((0,e)\\) 严格增加，在 \\((e,+\\infty)\\) 严格减少，最大值为 \\(f(e)=1/e\\)。故A、B正确。又在 \\((0,1)\\) 上从负无穷增至0，在 \\(x\\ge1\\) 时函数非负，因此 \\(f(x)=-1\\) 仅有一个根，C错误。方程有两个不同实根时，右侧水平值须满足 \\(0<a<1/e\\)，两根分别位于 \\((1,e)\\)、\\((e,+\\infty)\\)，从而 \\(x_1<e<x_2\\)，D正确。",
+      "answer_key": "ABD",
+      "answer": "A、B、D",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与8、19题对数函数分析重复；作为最后一道多选，主要仍为基础图像识别。"
+      ],
+      "estimated_minutes": 3,
+      "difficulty_reason": "一次导数与完整图像分析即可覆盖所有选项。"
+    },
+    {
+      "number": 12,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "二项式(x−1/x)^6的展开式，按通常代数表达式理解x≠0。",
+      "request_understood": "求x²项的系数。",
+      "independent_solution": "通项为 \\(\\binom6k x^{6-k}(-x^{-1})^k=(-1)^k\\binom6k x^{6-2k}\\)。令 \\(6-2k=2\\)，得 \\(k=2\\)，系数为 \\(\\binom62=15\\)。",
+      "answer_key": null,
+      "answer": "15",
+      "blocking_issues": [],
+      "nonblocking_observations": [],
+      "estimated_minutes": 1,
+      "difficulty_reason": "二项式通项的直接应用。"
+    },
+    {
+      "number": 13,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "a_1=1，a_{n+1}=2a_n+1。",
+      "request_understood": "求前5项的和。",
+      "independent_solution": "递推依次得 \\(a_2=3,a_3=7,a_4=15,a_5=31\\)，故 \\(S_5=1+3+7+15+31=57\\)。亦可由 \\(a_{n+1}+1=2(a_n+1)\\) 得 \\(a_n=2^n-1\\)，同样算得57。",
+      "answer_key": null,
+      "answer": "57",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与17题的一阶非齐次递推具有相近形式；本题甚至不需要求通项。"
+      ],
+      "estimated_minutes": 1,
+      "difficulty_reason": "只需四次倍增加一和求和，填空中偏简单。"
+    },
+    {
+      "number": 14,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "正四面体棱长均为2。",
+      "request_understood": "求内切球半径。",
+      "independent_solution": "每个面是边长2的等边三角形，面积为 \\(\\sqrt3\\)，总表面积为 \\(4\\sqrt3\\)。底面外心至顶点距离为 \\(2/\\sqrt3\\)，所以四面体高 \\(h=\\sqrt{4-4/3}=2\\sqrt6/3\\)。体积 \\(V=\\frac13\\sqrt3h=2\\sqrt2/3\\)。将内心与四个面连接，\\(V=\\frac13r(4\\sqrt3)\\)，得 \\(r=\\sqrt6/6\\)。",
+      "answer_key": null,
+      "answer": "\\sqrt6/6",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "没有图示仍可唯一确定模型，不构成条件不足。"
+      ],
+      "estimated_minutes": 3,
+      "difficulty_reason": "需记忆或推导正四面体体积与内切球关系，有一定空间理解，但常规模型明显。"
+    },
+    {
+      "number": 15,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "4红2白，首次不放回抽3球，X为红球数；(2)(3)均以首次至少两红为条件，(3)再从余下3球中随机取1球。",
+      "request_understood": "求分布、期望、首次三红的条件概率及下一球为红的条件概率。",
+      "independent_solution": "共有 \\(\\binom63=20\\) 种等可能首次组合。\\(X\\in\\{1,2,3\\}\\)，且 \\(P(X=k)=\\binom4k\\binom2{3-k}/20\\)。由此 \\(P(X=1)=1/5,P(X=2)=3/5,P(X=3)=1/5\\)，\\(E(X)=1/5+6/5+3/5=2\\)。设 \\(H=\\{X\\ge2\\}\\)，则 \\(P(H)=4/5\\)，故 \\(P(X=3\\mid H)=1/4\\)。条件 \\(H\\) 下 \\(X=2,3\\) 的概率分别为 \\(3/4,1/4\\)，相应剩余红球数为2、1。因此下一球为红的概率为 \\((3/4)(2/3)+(1/4)(1/3)=7/12\\)。注意第三问的“已知条件”指首次至少两红，并不是把第二问所求的“三红”当成新增条件。",
+      "answer_key": null,
+      "answer": "(1)P(X=1,2,3)=(1/5,3/5,1/5)，E(X)=2；(2)1/4；(3)7/12",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "与4题袋中红白球条件概率模型高度重复，13分主要来自程序性计数。"
+      ],
+      "estimated_minutes": 8,
+      "difficulty_reason": "分布表、条件概率、条件全概率三层递进，作为首道解答题合适。"
+    },
+    {
+      "number": 16,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "正四棱锥底面边长2、侧棱√6；E为AB中点、F为PC中点；Q限于棱PD。",
+      "request_understood": "证明EF与平面PAD平行，求平面PEF与底面夹角余弦，并判断AQ与平面PEF平行时Q的位置。",
+      "independent_solution": "取 \\(A=(-1,-1,0),B=(1,-1,0),C=(1,1,0),D=(-1,1,0)\\)。底面中心至顶点距离为 \\(\\sqrt2\\)，由侧棱长 \\(\\sqrt6\\) 得高2，故取 \\(P=(0,0,2)\\)，从而 \\(E=(0,-1,0),F=(1/2,1/2,1)\\)。平面PAD方程为 \\(2x-z=-2\\)，法向量 \\((2,0,-1)\\)。\\(\\overrightarrow{EF}=(1/2,3/2,1)\\) 与该法向量点积为0，且E不在该平面上，故 \\(EF\\parallel\\text{平面}PAD\\)。平面PEF可取法向量 \\(\\boldsymbol n=(-4,2,-1)\\)，方程为 \\(-4x+2y-z+2=0\\)，与底面法向量 \\((0,0,1)\\) 所成角的余弦绝对值为 \\(1/\\sqrt{21}\\)，即所求锐二面角余弦。令 \\(Q=P+t(D-P)=(-t,t,2-2t)\\)，\\(0\\le t\\le1\\)。条件 \\(\\overrightarrow{AQ}\\cdot\\boldsymbol n=0\\) 给出 \\(-4+8t=0\\)，即 \\(t=1/2\\)。又A不在平面PEF上，故相应直线确与平面平行。这样的Q存在且唯一，为PD中点。",
+      "answer_key": null,
+      "answer": "(1)EF∥平面PAD；(2)1/√21；(3)Q为PD中点",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "实际查看图后，E、F位置与文字相符；后方棱没有虚线区分，交叉线较密，宜提高空间图的可读性。",
+        "图与题目完整保留在同一页，答题空间足够；未见图上直接标出所求结果。"
+      ],
+      "estimated_minutes": 11,
+      "difficulty_reason": "空间坐标、线面平行判定、二面角和存在性三步，工作量与15分基本相称。"
+    },
+    {
+      "number": 17,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": false,
+      "conditions_understood": "a_1=1，a_{n+1}=2a_n+n；T_n为a_k/2^(k−1)之和；c_n=(a_n+n+1)/n²。",
+      "request_understood": "求通项、加权和与离散最小值及取到时的n。",
+      "independent_solution": "令 \\(b_n=a_n+n+1\\)，则 \\(b_{n+1}=a_{n+1}+n+2=2a_n+2n+2=2b_n\\)，且 \\(b_1=3\\)。故 \\(a_n=3\\cdot2^{n-1}-n-1\\)。于是 \\(T_n=3n-\\sum_{k=1}^n(k+1)/2^{k-1}\\)。记后一个和为 \\(U_n\\)，错位相减得 \\(U_n=6-(n+3)/2^{n-1}\\)，所以 \\(T_n=3n-6+(n+3)/2^{n-1}\\)。第三问中 \\(c_n=3\\cdot2^{n-1}/n^2\\)，故 \\(c_{n+1}/c_n=2n^2/(n+1)^2\\)。当n=1、2时比值小于1；当整数n≥3时大于1。因此 \\(c_n\\) 先严格下降至n=3再严格上升，唯一最小值为 \\(c_3=4/3\\)。",
+      "answer_key": null,
+      "answer": "(1)a_n=3·2^(n−1)−n−1；(2)T_n=3n−6+(n+3)/2^(n−1)；(3)最小4/3，仅n=3取到",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "第一问与13题递推训练相近；全卷再叠加9题使数列重复明显。",
+        "第三问直接给出a_n+n+1这一恰好消去非齐次项的组合，虽属合法定义，但会反向提示第一问的代换，降低独立发现方法的要求。",
+        "第7页留有充足解答空间，无跨页阅读负担。"
+      ],
+      "estimated_minutes": 9,
+      "difficulty_reason": "三问均为熟悉的代换、错位相减和相邻项比值；后两问直接代入第一问，15分的推理密度偏低。"
+    },
+    {
+      "number": 18,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "椭圆中心在原点，a>b>0，离心率√2/2，经过(√2,1)；过T(0,2)的直线与椭圆有两个不同交点，M为弦中点。",
+      "request_understood": "求椭圆；非竖直截线下求中点轨迹及范围；所有有效截线下求三角形OAB面积最大值和直线。",
+      "independent_solution": "由 \\(e^2=1-b^2/a^2=1/2\\)，得 \\(b^2=a^2/2\\)。代入点 \\((\\sqrt2,1)\\) 有 \\(2/a^2+1/b^2=4/a^2=1\\)，所以 \\(a^2=4,b^2=2\\)，椭圆为 \\(x^2/4+y^2/2=1\\)。非竖直直线写为 \\(y=kx+2\\)，联立得 \\((1+2k^2)x^2+8kx+4=0\\)，判别式为 \\(16(2k^2-1)\\)。两个不同交点等价于 \\(k^2>1/2\\)。设 \\(M=(u,v)\\)，韦达定理给出 \\(u=-4k/(1+2k^2)\\)，\\(v=2/(1+2k^2)\\)。消参得到 \\(u^2+2(v-1)^2=2\\)，且 \\(0<v<1\\)。反之，这段曲线上每一点均有 \\(k=-u/(2v)\\)，满足 \\(k^2>1/2\\)，故范围完整。对于面积，\\(\\frac12|x_Ay_B-x_By_A|=|x_A-x_B|=4\\sqrt{2k^2-1}/(1+2k^2)\\)。令 \\(s=2k^2-1>0\\)，面积为 \\(4\\sqrt s/(s+2)\\)。由 \\(s+2\\ge2\\sqrt{2s}\\)，得面积不超过 \\(\\sqrt2\\)，等号当且仅当s=2，即 \\(k=\\pm\\sqrt6/2\\)。竖直直线x=0也交于两点，但O、A、B共线，面积为0，不改变最大值。故最大面积为 \\(\\sqrt2\\)，对应 \\(y=\\pm(\\sqrt6/2)x+2\\)。",
+      "answer_key": null,
+      "answer": "(1)x²/4+y²/2=1；(2)x²+2(y−1)²=2且0<y<1；(3)最大√2，y=±(√6/2)x+2",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "第二问明确排除竖直线，第三问并未排除；必须补查x=0，不能沿用第二问假定。这是合理区分，不是歧义。",
+        "最后阶段具有中等综合度，但不足单独支持“仿真高考压轴难度”的结论。"
+      ],
+      "estimated_minutes": 14,
+      "difficulty_reason": "需处理判别式、轨迹充要性、范围端点和竖直线特例，17分基本匹配；方法仍属典型中点弦与面积最值模板。"
+    },
+    {
+      "number": 19,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "f(x)=x−ln x，x>0；a为实参数，a>1时两根记为x_1<x_2。",
+      "request_understood": "求单调区间、最小值、参数方程根数，并证明两根和大于2而积小于1。",
+      "independent_solution": "\\(f'(x)=1-1/x=(x-1)/x\\)，因此f在 \\((0,1)\\) 严格递减、在 \\((1,+\\infty)\\) 严格递增，最小值为 \\(f(1)=1\\)。又两端分别满足 \\(x\\to0^+\\) 时 \\(f(x)\\to+\\infty\\)、\\(x\\to+\\infty\\) 时 \\(f(x)\\to+\\infty\\)。故a<1无根，a=1只有根x=1，a>1有两个根且 \\(0<x_1<1<x_2\\)。以下独立证明第三问：由两根函数值相等可得 \\(x_2-x_1=\\ln(x_2/x_1)\\)。设 \\(t=x_2/x_1>1\\)，则 \\(x_1=\\ln t/(t-1)\\)，\\(x_2=t\\ln t/(t-1)\\)。令 \\(g(t)=\\ln t-2(t-1)/(t+1)\\)，则 \\(g(1)=0\\)，\\(g'(t)=(t-1)^2/[t(t+1)^2]>0\\)，故 \\((t+1)\\ln t/(t-1)>2\\)，即 \\(x_1+x_2>2\\)。再令 \\(h(t)=\\sqrt t-1/\\sqrt t-\\ln t\\)，有 \\(h(1)=0\\)，\\(h'(t)=(\\sqrt t-1)^2/(2t^{3/2})>0\\)。所以 \\(0<\\ln t<(t-1)/\\sqrt t\\)，从而 \\(x_1x_2=t[\\ln t/(t-1)]^2<1\\)。两不等式均严格成立。",
+      "answer_key": null,
+      "answer": "(1)(0,1)递减、(1,+∞)递增，最小1；(2)a<1为0根，a=1为1根，a>1为2根；(3)x_1+x_2>2且x_1x_2<1",
+      "blocking_issues": [],
+      "nonblocking_observations": [
+        "证明目标明确，未泄露辅助函数；同一对根的两项不等式可形成综合训练。",
+        "但此前8、11题已密集考查对数导数，末题题材的独立性不足。"
+      ],
+      "estimated_minutes": 15,
+      "difficulty_reason": "前两问基础，末问需从根的关系构造并证明两条对数不等式，具有本卷最强的发现和证明要求；17分可接受。"
+    }
+  ],
+  "overall_pass": false,
+  "overall_pass_interpretation": "单题可读性、条件充分性和数学可解性通过；整卷作为冠名“河南省新高考数学模拟试卷”的仿真交付，题材重复与后段梯度/分值密度不通过。此否决属于整卷命题质量判断，不是声称某道题数学错误，也不是依据实测难度或与未读取的内部指标比对。",
+  "overall_math_pass": true,
+  "overall_readability_pass": true,
+  "style_pass": false,
+  "difficulty_progression_pass": false,
+  "blocking_issues": [
+    "整卷存在显著素材与技术聚集：4和15均为红白球不放回抽取及条件概率；6和10均为抛物线切线且方程仅缩放；9、13、17聚集数列，13与17均为一阶递推；8、11、19聚集对数函数与导数。重复本身并不造成单题错误，但在完整仿真卷中压缩题材跨度，机械拼接感较强。",
+    "后段提升不足且分值密度不均：17题15分可由标准代换、一个错位相减和相邻项比值完成，第三问给出的组合还直接提示第一问代换；18题主要为中点弦及面积有理式最值模板。19末问有独立证明要求，但前两问很短。当前不足以通过高考仿真风格及末段区分要求的审查。"
+  ],
+  "nonblocking_observations": [
+    "所有19题均有确定的数学回答；未发现按题面自然中文理解会产生不同答案的地方，未自行增加题设。",
+    "单选8题40分、多选3题18分、填空3题15分、解答5题77分，合计150分；这一结构只能说明分值总数一致，不能单独证明高考风格。",
+    "除17题组合对第一问有反向提示外，其余题干没有直接给出关键求解方法；大题小问的常规铺垫不等同泄露答案。",
+    "选项过度竖排导致前几页疏松、共9页；大题一题一页留白足够，无题目或选项跨页截断。",
+    "多选只说明部分选对得部分分，没有明确具体分档。如用于正式计分，宜给出各部分选对情形的分值。",
+    "16题空间图的后棱虚实可改进；并未发现图与文字条件矛盾。",
+    "建议减少重复题材、加强题目间不同的思考方式及后段真正的综合性，再进行独立考生审查；不能仅通过增加运算或增加分值宣称难度提升。"
+  ],
+  "whole_paper_style_assessment": "中文整体自然，符号常见，阅读障碍小，题设大多为教材式短条件，能够作为基础到中等程度练习卷使用。对数、数列、抛物线、摸球的重复分布，使其更像多块常规练习的组合。统计情境和较完整的三角几何分析等体验较弱；这只是内容跨度观察，不主张每张卷必须固定覆盖所有模块。高考风格评估以思考跨度和题间配合为依据，不以19题150分为充分依据。",
+  "difficulty_gradient_assessment": "前6题以1—2步基础计算为主；7题略升，8题又回到特殊点及常用不等式。多选9—11均是分解为短命题后的常规核验，末道多选未形成明显跃升。12—14也主要为直接运算与标准空间模型。15、16适度提升，17再回落，18为中等解析几何综合，19末问是本卷最强证明环节。整体偏基础至中等、梯度起伏而非稳定推进，末端区分主要压在19末问。",
+  "estimated_minutes": 85,
+  "estimated_minutes_interpretation": "逐题数值是AI对熟悉相关方法的考生完成推导和基本书写的粗略估计，合计85分钟；另需阅读整理、检查和状态切换时间。并非计时实做数据，不应转换为考生平均完成时间或难度系数。",
+  "limits": [
+    "本报告为AI独立解题与视觉审查，未由真人考生或教师复核。",
+    "没有考生样本、得分率、区分度或限时作答数据；所有难度和分钟数均为AI估计。",
+    "数学证明经逐步推导核查，但未运行形式化证明系统；少量排版和视觉判断仍可能遗漏。",
+    "未读取或比对参考答案、命题设计、内部规格或其他审查结论，不能声称已验证其一致性。",
+    "本审查未联网对照河南最新考试规定；不对外部最新政策一致性作出结论。"
+  ]
+}
