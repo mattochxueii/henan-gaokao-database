@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "question_id": "2025-cn-math-national-1:q004",
+      "candidate_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+      "description": "当前中心族的最小正横坐标",
+      "computed": "pi/3",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "jin-2025-math-paper",
+      "page": 1
+    },
+    {
+      "question_id": "2025-cn-math-national-1:q006",
+      "candidate_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+      "description": "按页图两个有向箭头求真实风速",
+      "computed": "2*sqrt(2)",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "jin-2025-math-paper",
+      "page": 1
+    },
+    {
+      "question_id": "2025-cn-math-national-1:q009",
+      "candidate_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+      "description": "BC垂直AD与侧棱；CC1方向在AA1D平面内",
+      "computed": "B,C成立",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "jin-2025-math-paper",
+      "page": 2
+    },
+    {
+      "question_id": "2025-cn-math-national-1:q011",
+      "candidate_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+      "description": "已证明C为直角后的正弦和与边平方和",
+      "computed": "sqrt(6)/2",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "jin-2025-math-paper",
+      "page": 2
+    },
+    {
+      "question_id": "2025-cn-math-national-1:q015",
+      "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+      "description": "列联表卡方与所用0.001临界值",
+      "computed": "6125/8",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "jin-2025-math-paper",
+      "page": 2
+    },
+    {
+      "question_id": "2026-cn-math-national-1:q009",
+      "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+      "description": "D项在两份原始候选上的真值",
+      "computed": "z-i: 2; z-1: 2 - I",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "math-2026-village-scan",
+      "page": 2
+    },
+    {
+      "question_id": "2026-cn-math-national-1:q012",
+      "candidate_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+      "description": "当前系数5的离心率，另一版系数3单独计算",
+      "computed": "sqrt(66)/6",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "math-2026-village-scan",
+      "page": 3
+    },
+    {
+      "question_id": "2026-cn-math-national-1:q013",
+      "candidate_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+      "description": "偶性和单调性推理允许的全部整数频率代入目标值",
+      "computed": "[1, 1, 1, 1]",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "math-2026-village-scan",
+      "page": 3
+    },
+    {
+      "question_id": "2026-cn-math-national-1:q017",
+      "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+      "description": "枚举截断停止规则后分布归一和末项",
+      "computed": "[1/3, 2/9, 4/27, 8/27]",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "math-2026-village-scan",
+      "page": 4
+    },
+    {
+      "question_id": "2026-cn-math-national-1:q018",
+      "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+      "description": "Q第三象限版面积根比；P第三象限版将要求负根和",
+      "computed": "[-3/4, 3/2]",
+      "passed": true,
+      "scope": "显式转录条件的程序复算，题面页图仍由AI视觉审阅",
+      "source_id": "math-2026-village-scan",
+      "page": 4
+    }
+  ],
+  "passed": 10,
+  "whole_paper_proofs_programmatically_verified": false,
+  "human_reviewed": false
+}

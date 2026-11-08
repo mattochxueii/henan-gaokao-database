@@ -19,3 +19,11 @@ questions/**
 !questions/2026/math/
 !questions/2026/math/2026-cn-math-national-1.jsonl
 *.sqlite*
+.private/
+.venv/
+.deps/
+.agents/
+private-data/math-reference.enc
+experiments/*/assets/[0-9a-f]*.png
+*.key
+*.env

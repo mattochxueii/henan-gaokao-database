@@ -1,71 +1,111 @@
-# 河南新高考真题数据库 · 第一阶段
+# 河南新高考真题数据库与数学命题原型
 
-本地仓库，调查截至 2026-11-06。目录覆盖 2025、2026 年河南普通高考六科的 12 份正式主考卷。数学两卷各登记 19 个题号、题型、分值和候选页码，另有逐题独立推导。文件级保存许可尚未核实，完整数学卷面、正式参考答案和题图尚无本地登记。
+截至2026-11-08，沿用第一阶段的12卷归属登记、71条来源、38条数学索引和独立推导。2025、2026数学各19道完整候选题面现有仓库内私有工作目录及可迁移的加密备份。另有38条版本绑定分析、命题规则、可安装Skill、四组真实运行实验。
 
-## 快速开始
+当前可检索题面来自2025锦宏回忆重排版与2026第三方扫描候选。命题机构确认的完整原卷仍为0，人工逐题审核仍为0。候选原文保存在受控解密目录。
 
-在仓库根目录运行。检索、登记和检查只需 Python 3.10 或以上版本。
+## 新环境恢复
+
+需要Python 3.10以上及单独保存的恢复密钥。在仓库根目录执行。
 
 ```powershell
-python scripts/cli.py query --year 2025 --subject 数学 --region cn-ha
-python scripts/cli.py query --year 2026 --subject math --region cn-ha --number 17
+python -m pip install --target .deps -r requirements.txt
+python scripts/private_data.py restore --key <另外保存的恢复密钥>
+python scripts/cli.py validate
+python scripts/cli.py query --year 2025 --subject math --number 1
+python scripts/cli.py query --year 2026 --subject math --number 17
+python scripts/math_skill.py research --topic 数列
+```
+
+database.json 的 reference_dir 指向 .private/math-reference，backup_parts_manifest 指向private-data/backup-parts.json，均使用相对路径。版本管理保存63个加密分片。恢复时按清单重组到.private/cipher-cache，校验整份密文，再解密。覆盖全部23个原有资料文件的inventory记录文件大小和SHA-256。恢复会检查认证加密、重复或越界路径、大小限制、文件清单和哈希，拒绝覆盖已有目录。读取时也会核对题面和页图哈希。全新目录、独立解释器的恢复和Skill测试见 reports/fresh-environment.json。
+
+密钥不在仓库或ZIP中。请分别备份交付的恢复密钥和项目ZIP，丢失密钥无法解密。此仓库保持私有。加密备份用于现有私有项目连续访问，解密后原文的再分发仍受各来源权利条件约束。
+
+## 查询和状态
+
+```powershell
 python scripts/cli.py query --subject math --kind fill_in
 python scripts/cli.py query --subject math --kind fill_in --complete-only
-python scripts/cli.py report --region cn-ha --output reports/completeness.json
-python scripts/cli.py validate
-python -m unittest discover -s tests -v
+python scripts/math_skill.py research --year 2026 --kind constructed_response
+python scripts/math_skill.py research --topic 等比数列
+python scripts/math_skill.py rules
 ```
 
-第二条命令返回第 17 题的索引、候选页码和独立解答。索引的 `stem` 为 `null`。`--kind` 查询该题型的已登记条目，`--complete-only` 仅查询对照原卷人工核验并明确标为完整的题面。可用中文科目名或英文代码，题号查询使用原始题号字符串。
+普通题号查询返回完整候选题面、公式、选项、子问、图表定位、来源页码及答案。current_solution 和 answer_for_current_candidate 对应当前候选版本，independent_solution 保留历史推导。图表的image路径相对于database.json指定的reference_dir。asset_refs保留原页坐标框。
 
-## 文件位置
+完整候选、候选页图视觉核对、版本冲突、条件解答、程序复算、独立推理审核分别记录。content_complete和--complete-only仍要求正式原卷及人工核验，所以当前结果为0。分析文件的模型标识为not_exposed_by_host，环境未提供可核实的精确宿主模型版本。
 
-- `metadata/sources.jsonl` 保存发布者、访问日期、网址、证据用途与权利状态。
-- `metadata/papers/` 每卷一份 JSON，保存正式考试名称、卷型、命题主体、已核适用地区、候选来源、听力政策和版本差异。
-- `metadata/files/` 每个实际导入的文件版本一份登记。原始路径、采集日期、文件格式、SHA-256、大小、许可和发布者身份保存在此。
-- `originals/`、`answers/`、`assets/` 分别存放获准保存的试卷、答案解析、图像和听力资料。首次入库按年份、学科和试卷 ID 分类。
-- `parsed/` 保存获准处理的 PDF 逐页原生文本。`questions/<year>/<subject>/<paper_id>.jsonl` 保存题号索引或经许可转写后的记录。
-- `reports/` 保存逐卷完整性、候选排除、命令输出和后续技术建议。`tests/` 使用临时合成样本验证脚本。
-
-JSON 与 JSONL 使用 UTF-8，是当前数据主档。首批体量很小，查询直接读主档，便于审阅和版本控制。后续可按需从主档重建 SQLite 索引。全国卷 ID 的地域段用 `cn`，河南省卷用 `cn-ha`。同一全国卷确认在另一省使用后，给现有记录追加已核地区和证据，避免重复创建试卷。河南记录的 `regions` 仅列本次核实的省份。
-
-## 新增或补齐试卷
-
-1. 核对年份、考试性质、命题主体、卷型和实际用卷地区。加入至少两个归属证据，其中至少一个为官方来源。把模拟卷、适应性考试、回忆版和其他省独立命题试卷放在候选或排除记录中。
-2. 在 `metadata/sources.jsonl` 添加来源。参照现有试卷 JSON 填写新的清单，按 `<year>-<scope>-<subject>-<edition>` 命名。运行 `python scripts/cli.py register <清单.json>`。更新同一卷时，审阅并编辑现有清单，随后运行校验。
-3. 核验文件对应的权利人、版本和使用范围。针对原卷、答案、解析、图片、音频分别保存权利依据。保存、派生处理和再分发分别记录，按授权条件执行。内容来源、站方下载条件和底层权利分开核实。
-4. 将已经合规取得的本地文件登记。示例命令中的路径由维护者替换为真实文件和收据。系统按 SHA-256 去重，逐份保留独立授权记录。排版、扫描或答案版本不同且字节不同会独立留存。
+## 安装和使用Skill
 
 ```powershell
-python scripts/cli.py import-file 2025-cn-math-national-1 <已获许可的卷面.pdf> --receipt <收据.json>
-python scripts/cli.py extract-pdf <导入输出中的文件ID>
+python scripts/install_math_skill.py
 ```
 
-收据为 JSON，字段见 [登记与题目数据字典](metadata/data-dictionary.md)。导入会记录首次保存的路径。相同字节被其他试卷或资料角色合法引用时共用一个文件。导入中断后用同一输入重试，程序可复用已写好的文件。如果异常退出留下 `metadata/.intake.lock` 空目录，确认当前没有登记进程后清理空目录再重试。
+默认安装到本项目的.agents/skills/henan-math，配置为指向仓库的相对链接。打开项目后由支持SKILL.md的宿主加载。独立安装包可以解压后使用--database指定仓库根目录，或设置HENAN_MATH_DB。仓库与项目内安装一起移动仍可定位。外部安装后单独移动仓库需要重新安装相对配置。
 
-PDF 提取命令使用可选的 Poppler `pdftotext`。结果按页保存并标记待校对。空白文本页交给获准的 OCR 流程，复杂公式和图像安排人工比对。当前环境未安装该工具，测试以模拟输出验证了逐页提取逻辑。
+```powershell
+python .agents/skills/henan-math/scripts/run.py research --topic 数列
+python .agents/skills/henan-math/scripts/run.py generate --mode sequence --seed 20261107 --output <新的输出目录>
+python .agents/skills/henan-math/scripts/run.py verify <输出目录>/run.json
+python scripts/math_skill.py generate --topic 等比数列 --count 1 --kind constructed_response --difficulty 4 --output <新的输出目录>
+python scripts/math_skill.py generate --mode derivative --output <新的输出目录>
+python scripts/math_skill.py generate --mode mixed --output <新的输出目录>
+python scripts/math_skill.py generate --mode full --output <新的输出目录>
+```
 
-## 内容核验
+支持知识模块、题型、题量和设计难度筛选。26个受支持题目族在执行时按种子采样，题目结构由本轮AI研究设计。宿主AI使用Skill编排研究、设计和推理复核，本地求解器重新计算数学结果。本轮未调用外部模型API，远程调用与费用预算均为0。自由自然语言题面的任意语义验证尚未实现，增加题目族需要同步扩展独立求解器与测试。
 
-- **已发现来源**：可以回溯到候选链接。已有题号索引也使用此状态。
-- **已获取原始资料**：已登记一个具有本地保存许可的卷面版本。文件登记区分官方原卷、扫描、重排及第三方。
-- **已解析**：已产出可定位原卷的结构化题干，公式与图表仍需核对。
-- **已自动校验**：题号、顺序、字段、哈希、图片引用和已知分值通过检查。校验命令只报告结果，审核员可据记录更新条目状态。
-- **已人工核验**：审核人对照合法原卷逐题检查并记录姓名或内部 ID、日期、说明。
-- **存在问题**：归属之外的版本缺页、题干、答案、公式等差异应登记来源和处理意见。涉及本轮数学第 13、17、18 题的差异见报告。
+每题最多3次重试，每次重做验证并保存attempts.json。新输出目录保护历史记录。题面校验值变化会使旧验证失效。数值替换形式的同卷重复会被相似度门槛拦截。文本检测范围为当前38候选及同卷生成题，全球原创性与真实难度仍需要外部评审。
 
-原生提取先核对页码和顺序，再核对题号、分值、选项、子问、公式、图像和答题指示。原卷层保留原始符号，结构化层可另记 LaTeX 及原页位置。数学检查根号范围、上下标和不等式。物理检查单位、箭头、图示标号和实验装置连线。化学检查元素上下标、电荷、反应条件和方程式。生物学检查基因符号、实验对照、图例与比例尺。独立记录答案版本、解析版本与勘误。
+150分模拟采用历史候选的19题结构。2027的细节仍属模拟设定，正式考试通知优先。多选题部分得分在模拟卷头明确约定。
 
-## 资料报告与后续工作
+## 已运行成果
 
-- [逐卷完整性与核验报告](reports/completeness.md)
-- [机器可读完整性报告](reports/completeness.json)
-- [数学逐题核验报告](reports/math-completeness.md)
-- [数学版本冲突报告](reports/math-version-conflicts.md)
-- [数学资料补充清单](reports/math-intake-checklist.md)
-- [数学实际查询输出](reports/math-retrieval.json)
-- [数学本地候选卷采集与查询](reports/math-local-reference.md)
-- [登记与题目数据字典](metadata/data-dictionary.md)
-- [下一阶段接入建议](reports/next-stage.md)
+- experiments/sequence 含5道递进数列题，共50分。
+- experiments/derivative 含5道导数综合题，共50分。
+- experiments/mixed 含7道跨模块题，共50分。
+- experiments/full 含19道模拟题，共150分。结构为8单选、3多选、3填空、5解答。
+- 每组提供paper.pdf、solutions.pdf、可编辑Markdown、图像、run.json与attempts.json。
+- 答案册含结果、完整推导、知识模块、设计难度、独立计算结果及质量边界。
+- 本环境未找到LibreOffice，Word无法完成要求的渲染核验。本次可编辑源为Markdown和JSON。
 
-本地 Git 已初始化。版权敏感文件、登记收据和后续题干转写默认被忽略。新增纯题号索引时可逐个审阅并加入版本控制。正式备份应覆盖获准保存的本地文件与登记，并按权限区分访问。
+PDF使用中文字体和渲染后的LaTeX。可通过HENAN_MATH_FONT指定字体文件。未找到可嵌入字体时使用STSong-Light，换环境应重新渲染检查。原型图像以坐标构型为准，示意图标明特定参数。
+
+## 数据文件
+
+- metadata保留原有来源、用卷归属、独立推导与冲突记录。
+- questions保留原有索引，原始数据未修改。
+- .private/math-reference含完整候选题面、PDF及页图，默认忽略Git。
+- private-data含认证加密备份和逐文件校验清单，密钥独立保存。
+- analysis/questions.jsonl含38条逐题知识、能力、方法、条件设计、计算、推理、难度、创新及跨题比较。
+- analysis/curation.jsonl含当前版本答案、修订推导、视觉复核与争议。
+- analysis/rules.json区分官方要求、候选事实、有限样本观察、假设和模拟设定。
+- analysis/paper-patterns.json给出按AI标签统计的覆盖、核心素养及难度分布。
+- scripts/mathgen将题目提案、求解、质量门槛、蓝图和输出分为独立模块。
+
+## 检查和重现
+
+```powershell
+python scripts/build_analysis.py
+python scripts/audit_math.py
+python scripts/evaluate.py
+python scripts/qa_outputs.py
+python scripts/math_skill.py verify experiments/sequence/run.json
+python scripts/math_skill.py verify experiments/derivative/run.json
+python scripts/math_skill.py verify experiments/mixed/run.json
+python scripts/math_skill.py verify experiments/full/run.json
+```
+
+evaluate运行全部测试并保存结果。专项复算覆盖10道重点题，38题另有字段、题号、分值、源文件哈希、图表定位、题面分析绑定和AI页图检查。数学证明的AI复核与程序可复算部分分别说明，教师人工核验仍待补充。
+
+## 继续维护
+
+第一阶段的register、import-file、extract-pdf和report命令继续可用。新增试卷先核验地区、年份、命题主体与许可，再登记来源、导入允许保存的原件。授权PDF使用可选pdftotext提取，公式和图表另行审阅。数据字典见metadata/data-dictionary.md。
+
+候选的新版本另存私有目录及清单，保留既有版本，生成新的分析校验值。先恢复旧密文到新空目录，再导入新版本。为新一代备份配置新的encrypted_backup、backup_parts_manifest和backup_inventory相对路径，再选新密钥备份。当前backup拒绝覆盖已有密文、密钥、分片或库存。
+
+新题目族须增加规范题面、独立求解、选项判定、相似度与失败测试。新增命题规则须给证据和分类。样本量为两套，观察频率不能直接升级为固定命题比例。
+
+## 报告
+
+详细验收见reports/phase2-delivery.md。逐题记录见reports/question-audit.json和analysis/curation.jsonl，异文见reports/phase2-conflicts.md，命题规律见reports/paper-patterns.md，程序与恢复结果见reports/test-results.json及reports/fresh-environment.json，PDF逐页结果见reports/pdf-qa.json。第一阶段报告作为历史记录保留。

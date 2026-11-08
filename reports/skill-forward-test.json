@@ -1,0 +1,258 @@
+{
+  "test": "independent_skill_forward",
+  "commands": [
+    {
+      "action": "research",
+      "returncode": 0,
+      "stderr": "",
+      "count": 4,
+      "items": [
+        {
+          "id": "2025-cn-math-national-1:q013",
+          "version": "publisher_recall_retypeset",
+          "page": 2,
+          "body_state": "完整候选题面",
+          "primary": [
+            "等比数列求和"
+          ],
+          "key_idea": "后四项和是前四项和的q四次倍"
+        },
+        {
+          "id": "2025-cn-math-national-1:q016",
+          "version": "publisher_recall_retypeset",
+          "page": 3,
+          "body_state": "完整候选题面",
+          "primary": [
+            "递推数列变换"
+          ],
+          "key_idea": "令b_n=na_n消去分母再对有限和求导"
+        },
+        {
+          "id": "2026-cn-math-national-1:q007",
+          "version": "third_party_scan_candidate",
+          "page": 2,
+          "body_state": "完整候选题面",
+          "primary": [
+            "等差数列与配对"
+          ],
+          "key_idea": "由总和求六个组和均值再以奇偶约束筛公差并构造配对"
+        },
+        {
+          "id": "2026-cn-math-national-1:q014",
+          "version": "third_party_scan_candidate",
+          "page": 3,
+          "body_state": "完整候选题面",
+          "primary": [
+            "数列分块和与局部等比"
+          ],
+          "key_idea": "由S3n差得每三项和2n，分析九项窗可覆盖的整块"
+        }
+      ]
+    },
+    {
+      "action": "rules",
+      "returncode": 0,
+      "stderr": "",
+      "rule_classes": [
+        "direct_candidate_fact",
+        "limited_sample_observation",
+        "official_requirement",
+        "simulation_setting",
+        "unverified_hypothesis"
+      ],
+      "blueprint": {
+        "id": "historical-19q-150-v1",
+        "target_year": 2027,
+        "structure_status": "historical_candidate_structure_used_as_simulation_setting",
+        "official_2027_structure_verified": false,
+        "total_points": 150,
+        "duration_minutes": 120,
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 8,
+            "points_each": 5
+          },
+          {
+            "kind": "multiple_choice",
+            "count": 3,
+            "points_each": 6
+          },
+          {
+            "kind": "fill_in",
+            "count": 3,
+            "points_each": 5
+          },
+          {
+            "kind": "constructed_response",
+            "count": 5,
+            "points": [
+              13,
+              15,
+              15,
+              17,
+              17
+            ]
+          }
+        ],
+        "difficulty_target": {
+          "basis": "命题设计设定，未获得真实作答数据",
+          "foundation": 5,
+          "medium": 9,
+          "advanced": 5
+        },
+        "module_constraints": {
+          "minimum_distinct_modules": 6,
+          "required": [
+            "数列",
+            "函数与导数",
+            "概率统计",
+            "解析几何",
+            "立体几何",
+            "三角与向量"
+          ]
+        },
+        "scoring_multiple_choice": "全对6分，部分选对的具体分数未从候选卷确定，模拟卷另行约定选对1项2分、2项4分，错选0分。"
+      }
+    },
+    {
+      "action": "generate",
+      "returncode": 0,
+      "stderr": "",
+      "result": {
+        "output": "D:\\chatgptfile\\2026-11-06\\ai-ai-1-2-ai-3\\work\\skill-independent-test",
+        "status": "prototype_verified_with_reasoning_review",
+        "structure": {
+          "passed": true,
+          "questions": 5,
+          "points": 50,
+          "kind_counts": {
+            "constructed_response": 5
+          },
+          "module_counts": {
+            "数列": 5
+          },
+          "difficulty_counts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          }
+        },
+        "files": {},
+        "attempts": 5
+      }
+    },
+    {
+      "action": "verify",
+      "returncode": 0,
+      "stderr": "",
+      "result": [
+        {
+          "id": "orig:henan-math:sequence:20261121:q001:v1",
+          "passed": true,
+          "status": "programmatically_verified"
+        },
+        {
+          "id": "orig:henan-math:sequence:20261121:q002:v1",
+          "passed": true,
+          "status": "programmatically_verified"
+        },
+        {
+          "id": "orig:henan-math:sequence:20261121:q003:v1",
+          "passed": true,
+          "status": "programmatically_verified"
+        },
+        {
+          "id": "orig:henan-math:sequence:20261121:q004:v1",
+          "passed": true,
+          "status": "programmatically_verified"
+        },
+        {
+          "id": "orig:henan-math:sequence:20261121:q005:v1",
+          "passed": true,
+          "status": "symbolic_checks_and_reasoning_review"
+        }
+      ]
+    }
+  ],
+  "independent_fraction_checks": [
+    {
+      "question_id": "orig:henan-math:sequence:20261121:q001:v1",
+      "family": "seq_interlace",
+      "passed": true,
+      "method": "逐项递推并求和"
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261121:q002:v1",
+      "family": "seq_reciprocal",
+      "passed": true,
+      "method": "有理数递推并独立累加乘积"
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261121:q003:v1",
+      "family": "seq_telescope",
+      "passed": true,
+      "method": "逐项累加并检查最小整数相邻边界"
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261121:q004:v1",
+      "family": "seq_alternating",
+      "passed": true,
+      "method": "直接递推整数数列，独立于通项公式"
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261121:q005:v1",
+      "family": "seq_optimize",
+      "passed": true,
+      "method": "检验正项等号构造和目标值；普遍下界另由柯西证明"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "area": "解答步骤",
+      "families": [
+        "seq_alternating"
+      ],
+      "finding": "解析提到解线性非齐次递推，却没有给出可逐步执行的初等变换和有限和细节，尚不足完整解题过程。"
+    },
+    {
+      "severity": "medium",
+      "area": "解答符号",
+      "families": [
+        "seq_telescope",
+        "seq_alternating",
+        "seq_reciprocal"
+      ],
+      "finding": "解析使用m、b等内部模板参数，但具体题面只给相应数字，应说明或替换为实值。"
+    },
+    {
+      "severity": "limitation",
+      "area": "任意知识点命题",
+      "finding": "custom_blueprint目前以模块名称筛选，粒度更细的等比数列关键词不能直接匹配。数列或导数模块命令可用。"
+    },
+    {
+      "severity": "limitation",
+      "area": "验收范围",
+      "finding": "本独立测试按任务要求使用no-export，未验证PDF排版，需由主流程完成逐页渲染审阅。"
+    },
+    {
+      "severity": "limitation",
+      "area": "验证独立性",
+      "finding": "独立函数与生成器分离，属于同一代码库的不同计算路径。优化题保留符号检查与AI证明复核，尚无教师盲审。"
+    }
+  ],
+  "overall": {
+    "commands_passed": 4,
+    "commands_total": 4,
+    "candidate_sequence_items": 4,
+    "generated_questions": 5,
+    "independent_fraction_checks_passed": 5,
+    "programmatically_verified": 4,
+    "symbolic_and_reasoning_reviewed": 1,
+    "complete_solution_prose_requires_revision": true,
+    "pdf_reviewed": false
+  }
+}

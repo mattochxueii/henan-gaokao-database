@@ -1,0 +1,281 @@
+[
+  {
+    "question_id": "orig:henan-math:sequence:20261107:q001:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "b297d7fd424c7506206351ec215a1c8b448bcb61e5308a7e2c86cd4097582488",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "64"
+      ],
+      "values_latex": [
+        "64"
+      ],
+      "steps": [
+        "奇数项a₂ⱼ₋₁=3+2(j-1)，偶数项a₂ⱼ=7+2(j-1)。",
+        "相邻两项之和为10+4(j-1)，j从1取到4，故总和为4×10+4×4×3/2=64。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2025-cn-math-national-1:q016",
+          "score": 0.3571
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:sequence:20261107:q002:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "72c38bcb1d4803cf3a5226839406f868ec068aef7dd7dcdf94401d00e6e00a27",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "5/(5*n - 4)",
+        "150/31"
+      ],
+      "values_latex": [
+        "\\frac{5}{5 n - 4}",
+        "\\frac{150}{31}"
+      ],
+      "steps": [
+        "取倒数得1/aₙ₊₁=1/aₙ+1，所以1/aₙ=1/5+n-1，通项为5/[1+5(n-1)]。",
+        "将原递推移项，aₖ-aₖ₊₁=aₖ²/(1+aₖ)=aₖaₖ₊₁。",
+        "从k=1加到6，中间项全部抵消，得到a₁-a7=5-5/31=150/31。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:sequence:20261107:q001:v1",
+          "score": 0.3889
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:sequence:20261107:q003:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "d4a83b501382fc76f899d0cffbded79ebf0101aa7178c0a8152eaa0e7d67f30c",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "n*(n + 1)",
+        "n/(n + 1)",
+        "5"
+      ],
+      "values_latex": [
+        "n \\left(n + 1\\right)",
+        "\\frac{n}{n + 1}",
+        "5"
+      ],
+      "steps": [
+        "累加递推得到uₙ=n(n+1)。",
+        "1/[k(k+1)]=1/k-1/(k+1)，所以Tₙ=n/(n+1)。",
+        "严格不等式化为n+1>5，最小整数n=5，边界n=4只能取等。"
+      ],
+      "program_checks": [
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:sequence:20261107:q002:v1",
+          "score": 0.5
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:sequence:20261107:q004:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "9eef457b3574eda57302ebb1786fd6447b88a7c82a4aed63a46060238c420672",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-(-1)**n + 3*2**n",
+        "90"
+      ],
+      "values_latex": [
+        "- \\left(-1\\right)^{n} + 3 \\cdot 2^{n}",
+        "90"
+      ],
+      "steps": [
+        "令cₙ=aₙ-(-1)ⁿ⁻¹。代入原递推可得cₙ₊₁=2cₙ，且c₁=6。",
+        "所以cₙ=6×2ⁿ⁻¹，aₙ=6×2ⁿ⁻¹+(-1)ⁿ⁻¹。代回原递推与首项均相符。",
+        "前4项的等比部分和为(6)(2^4-1)/(2-1)；交错部分和为[1-(-1)^4]/2。相加为90。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:sequence:20261107:q001:v1",
+          "score": 0.5854
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:sequence:20261107:q005:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "1b09daaeb5f25e412deb976293645fbb597e8a994086af097e2c03f784e79bf8",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "147/4",
+        "4*k/7"
+      ],
+      "values_latex": [
+        "\\frac{147}{4}",
+        "\\frac{4 k}{7}"
+      ],
+      "steps": [
+        "记W=1+…+6=21，C=Σaₖ=12，T=Σk²/aₖ。由平方和非负，Σ(k/√aₖ-W√aₖ/C)²=T-W²/C≥0。因此T≥21²/12=147/4。",
+        "等号当且仅当k/aₖ为同一正常数。由总和得aₖ=(12/21)k，对k=1,…,6均为正且满足总和，代入达到下界。",
+        "程序验证等号构造及其代入值。全体正项上的下界依赖上述不等式证明。"
+      ],
+      "program_checks": [
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:sequence:20261107:q003:v1",
+          "score": 0.28
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  }
+]

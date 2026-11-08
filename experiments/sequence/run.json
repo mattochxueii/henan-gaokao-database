@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "blueprint": {
+    "mode": "sequence",
+    "title": "数列专项 · 五题递进",
+    "slots": [
+      {
+        "family": "seq_interlace",
+        "kind": "constructed_response",
+        "points": 6
+      },
+      {
+        "family": "seq_reciprocal",
+        "kind": "constructed_response",
+        "points": 8
+      },
+      {
+        "family": "seq_telescope",
+        "kind": "constructed_response",
+        "points": 10
+      },
+      {
+        "family": "seq_alternating",
+        "kind": "constructed_response",
+        "points": 12
+      },
+      {
+        "family": "seq_optimize",
+        "kind": "constructed_response",
+        "points": 14
+      }
+    ],
+    "total_points": 50,
+    "rules_sha256": "536a72ff8349e505dc2f8621f61143b4fb70dd1ca4680d05d4d96b99a43d071d",
+    "target_year": 2027,
+    "difficulty_target": null,
+    "verified_features": [
+      "本次指定题量与总分"
+    ],
+    "simulation_settings": [
+      "2027详细结构沿用历史候选；正式通知优先",
+      "难度按方法与推理层数设计，未实测",
+      "本地题目族生成，AI设计与数学验证分离"
+    ],
+    "official_2027_paper_prediction": false
+  },
+  "seed": 20261107,
+  "provider": "local_verified_families",
+  "limits": {
+    "max_questions": 30,
+    "max_attempts_per_question": 3,
+    "max_output_characters": 160000,
+    "max_model_calls": 0,
+    "max_remote_retries": 0,
+    "remote_timeout_seconds": 30,
+    "estimated_remote_cost_limit_usd": 0.0
+  },
+  "remote_model_calls": 0,
+  "host_model_version": "not_exposed_by_host",
+  "questions": [
+    {
+      "family": "seq_interlace",
+      "parameters": {
+        "a": 3,
+        "b": 4,
+        "m": 4
+      },
+      "stem": "数列满足a₁=3，a₂=7，且对每个正整数n有aₙ₊₂=aₙ+2。求前8项的和。",
+      "proposed_values": [
+        "64"
+      ],
+      "kind": "constructed_response",
+      "points": 6,
+      "module": "数列",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261208,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:sequence:20261107:q001:v1",
+      "order": 1,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "seq_reciprocal",
+      "parameters": {
+        "a": 5,
+        "b": 2,
+        "m": 6
+      },
+      "stem": "正项数列a₁=5，aₙ₊₁=aₙ/(1+aₙ)。求\\(a_{n}\\)及\\(\\sum_{k=1}^{6} a_{k} a_{k+1}\\)。",
+      "proposed_values": [
+        "5/(5*n - 4)",
+        "150/31"
+      ],
+      "kind": "constructed_response",
+      "points": 8,
+      "module": "数列",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261309,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:sequence:20261107:q002:v1",
+      "order": 2,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "seq_telescope",
+      "parameters": {
+        "a": 3,
+        "b": 2,
+        "m": 5
+      },
+      "stem": "数列u₁=2，uₙ₊₁=uₙ+2(n+1)。令Tₙ=\\(\\sum_{k=1}^{n} \\frac{1}{u_{k}}\\)。求uₙ、Tₙ及使Tₙ>1-1/5的最小正整数n。",
+      "proposed_values": [
+        "n*(n + 1)",
+        "n/(n + 1)",
+        "5"
+      ],
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "数列",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261410,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:sequence:20261107:q003:v1",
+      "order": 3,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "seq_alternating",
+      "parameters": {
+        "a": 4,
+        "b": 2,
+        "m": 4
+      },
+      "stem": "数列满足a₁=7，aₙ₊₁=2aₙ+(3)(-1)ⁿ。求通项aₙ及前4项和。",
+      "proposed_values": [
+        "(-1)**(n - 1) + 6*2**(n - 1)",
+        "90"
+      ],
+      "kind": "constructed_response",
+      "points": 12,
+      "module": "数列",
+      "difficulty": 4,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261511,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:sequence:20261107:q004:v1",
+      "order": 4,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "seq_optimize",
+      "parameters": {
+        "a": 2,
+        "b": 3,
+        "m": 6
+      },
+      "stem": "正项数列的前6项满足\\(\\sum_{k=1}^{6} a_{k}\\)=12。求\\(\\sum_{k=1}^{6} \\frac{k^{2}}{a_{k}}\\)的最小值，并写出所有取等的前6项。",
+      "proposed_values": [
+        "147/4",
+        "4*k/7"
+      ],
+      "kind": "constructed_response",
+      "points": 14,
+      "module": "数列",
+      "difficulty": 5,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261612,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:sequence:20261107:q005:v1",
+      "order": 5,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    }
+  ],
+  "verifications": [
+    {
+      "question_sha256": "b297d7fd424c7506206351ec215a1c8b448bcb61e5308a7e2c86cd4097582488",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "64"
+      ],
+      "values_latex": [
+        "64"
+      ],
+      "steps": [
+        "奇数项a₂ⱼ₋₁=3+2(j-1)，偶数项a₂ⱼ=7+2(j-1)。",
+        "相邻两项之和为10+4(j-1)，j从1取到4，故总和为4×10+4×4×3/2=64。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "72c38bcb1d4803cf3a5226839406f868ec068aef7dd7dcdf94401d00e6e00a27",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "5/(5*n - 4)",
+        "150/31"
+      ],
+      "values_latex": [
+        "\\frac{5}{5 n - 4}",
+        "\\frac{150}{31}"
+      ],
+      "steps": [
+        "取倒数得1/aₙ₊₁=1/aₙ+1，所以1/aₙ=1/5+n-1，通项为5/[1+5(n-1)]。",
+        "将原递推移项，aₖ-aₖ₊₁=aₖ²/(1+aₖ)=aₖaₖ₊₁。",
+        "从k=1加到6，中间项全部抵消，得到a₁-a7=5-5/31=150/31。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "d4a83b501382fc76f899d0cffbded79ebf0101aa7178c0a8152eaa0e7d67f30c",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "n*(n + 1)",
+        "n/(n + 1)",
+        "5"
+      ],
+      "values_latex": [
+        "n \\left(n + 1\\right)",
+        "\\frac{n}{n + 1}",
+        "5"
+      ],
+      "steps": [
+        "累加递推得到uₙ=n(n+1)。",
+        "1/[k(k+1)]=1/k-1/(k+1)，所以Tₙ=n/(n+1)。",
+        "严格不等式化为n+1>5，最小整数n=5，边界n=4只能取等。"
+      ],
+      "program_checks": [
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "9eef457b3574eda57302ebb1786fd6447b88a7c82a4aed63a46060238c420672",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-(-1)**n + 3*2**n",
+        "90"
+      ],
+      "values_latex": [
+        "- \\left(-1\\right)^{n} + 3 \\cdot 2^{n}",
+        "90"
+      ],
+      "steps": [
+        "令cₙ=aₙ-(-1)ⁿ⁻¹。代入原递推可得cₙ₊₁=2cₙ，且c₁=6。",
+        "所以cₙ=6×2ⁿ⁻¹，aₙ=6×2ⁿ⁻¹+(-1)ⁿ⁻¹。代回原递推与首项均相符。",
+        "前4项的等比部分和为(6)(2^4-1)/(2-1)；交错部分和为[1-(-1)^4]/2。相加为90。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "1b09daaeb5f25e412deb976293645fbb597e8a994086af097e2c03f784e79bf8",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "147/4",
+        "4*k/7"
+      ],
+      "values_latex": [
+        "\\frac{147}{4}",
+        "\\frac{4 k}{7}"
+      ],
+      "steps": [
+        "记W=1+…+6=21，C=Σaₖ=12，T=Σk²/aₖ。由平方和非负，Σ(k/√aₖ-W√aₖ/C)²=T-W²/C≥0。因此T≥21²/12=147/4。",
+        "等号当且仅当k/aₖ为同一正常数。由总和得aₖ=(12/21)k，对k=1,…,6均为正且满足总和，代入达到下界。",
+        "程序验证等号构造及其代入值。全体正项上的下界依赖上述不等式证明。"
+      ],
+      "program_checks": [
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "question_id": "orig:henan-math:sequence:20261107:q001:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "b297d7fd424c7506206351ec215a1c8b448bcb61e5308a7e2c86cd4097582488",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "64"
+        ],
+        "values_latex": [
+          "64"
+        ],
+        "steps": [
+          "奇数项a₂ⱼ₋₁=3+2(j-1)，偶数项a₂ⱼ=7+2(j-1)。",
+          "相邻两项之和为10+4(j-1)，j从1取到4，故总和为4×10+4×4×3/2=64。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q016",
+            "score": 0.3571
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261107:q002:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "72c38bcb1d4803cf3a5226839406f868ec068aef7dd7dcdf94401d00e6e00a27",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "5/(5*n - 4)",
+          "150/31"
+        ],
+        "values_latex": [
+          "\\frac{5}{5 n - 4}",
+          "\\frac{150}{31}"
+        ],
+        "steps": [
+          "取倒数得1/aₙ₊₁=1/aₙ+1，所以1/aₙ=1/5+n-1，通项为5/[1+5(n-1)]。",
+          "将原递推移项，aₖ-aₖ₊₁=aₖ²/(1+aₖ)=aₖaₖ₊₁。",
+          "从k=1加到6，中间项全部抵消，得到a₁-a7=5-5/31=150/31。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:sequence:20261107:q001:v1",
+            "score": 0.3889
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261107:q003:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "d4a83b501382fc76f899d0cffbded79ebf0101aa7178c0a8152eaa0e7d67f30c",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "n*(n + 1)",
+          "n/(n + 1)",
+          "5"
+        ],
+        "values_latex": [
+          "n \\left(n + 1\\right)",
+          "\\frac{n}{n + 1}",
+          "5"
+        ],
+        "steps": [
+          "累加递推得到uₙ=n(n+1)。",
+          "1/[k(k+1)]=1/k-1/(k+1)，所以Tₙ=n/(n+1)。",
+          "严格不等式化为n+1>5，最小整数n=5，边界n=4只能取等。"
+        ],
+        "program_checks": [
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:sequence:20261107:q002:v1",
+            "score": 0.5
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261107:q004:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "9eef457b3574eda57302ebb1786fd6447b88a7c82a4aed63a46060238c420672",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "-(-1)**n + 3*2**n",
+          "90"
+        ],
+        "values_latex": [
+          "- \\left(-1\\right)^{n} + 3 \\cdot 2^{n}",
+          "90"
+        ],
+        "steps": [
+          "令cₙ=aₙ-(-1)ⁿ⁻¹。代入原递推可得cₙ₊₁=2cₙ，且c₁=6。",
+          "所以cₙ=6×2ⁿ⁻¹，aₙ=6×2ⁿ⁻¹+(-1)ⁿ⁻¹。代回原递推与首项均相符。",
+          "前4项的等比部分和为(6)(2^4-1)/(2-1)；交错部分和为[1-(-1)^4]/2。相加为90。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:sequence:20261107:q001:v1",
+            "score": 0.5854
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:sequence:20261107:q005:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "1b09daaeb5f25e412deb976293645fbb597e8a994086af097e2c03f784e79bf8",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "147/4",
+          "4*k/7"
+        ],
+        "values_latex": [
+          "\\frac{147}{4}",
+          "\\frac{4 k}{7}"
+        ],
+        "steps": [
+          "记W=1+…+6=21，C=Σaₖ=12，T=Σk²/aₖ。由平方和非负，Σ(k/√aₖ-W√aₖ/C)²=T-W²/C≥0。因此T≥21²/12=147/4。",
+          "等号当且仅当k/aₖ为同一正常数。由总和得aₖ=(12/21)k，对k=1,…,6均为正且满足总和，代入达到下界。",
+          "程序验证等号构造及其代入值。全体正项上的下界依赖上述不等式证明。"
+        ],
+        "program_checks": [
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:sequence:20261107:q003:v1",
+            "score": 0.28
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    }
+  ],
+  "structure": {
+    "passed": true,
+    "questions": 5,
+    "points": 50,
+    "kind_counts": {
+      "constructed_response": 5
+    },
+    "module_counts": {
+      "数列": 5
+    },
+    "difficulty_counts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "overall_status": "prototype_verified_with_reasoning_review",
+  "limitations": [
+    "主观难度与高考风格尚无教师盲评或考生实测",
+    "符号验证仅覆盖受支持数学题目族",
+    "文本相似度不能排除外部题库重复"
+  ],
+  "files": {
+    "paper_pdf": "paper.pdf",
+    "solutions_pdf": "solutions.pdf",
+    "paper_editable": "paper.md",
+    "solutions_editable": "solutions.md",
+    "word_status": "未生成DOCX。本环境未找到LibreOffice，无法完成文档技能要求的渲染核验。"
+  },
+  "export_revision": "v2-explicit-subscript-and-answer-labels",
+  "rules_snapshot": {
+    "schema_version": 1,
+    "revision": "2026-11-07-v1",
+    "scope": "河南2025–2026数学候选样本，共2卷38题",
+    "sources": [
+      {
+        "id": "haeea-2027-registration",
+        "url": "https://www.haeea.cn/a/202610/43749_c5d5e459.shtml",
+        "retrieved_at": "2026-11-07",
+        "finding": "第11问，全国统考含数学，3+1+2。未给2027数学详细卷面结构。"
+      },
+      {
+        "id": "moe-2026-math-review",
+        "url": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2026/2026_zt08/mtbd/202606/t20260608_1439853.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "强调基础知识与关键能力、综合性和创新性。官方发布的媒体报道，非2027结构通知。"
+      },
+      {
+        "id": "moe-competencies",
+        "url": "https://hudong.moe.gov.cn/jyb_xwfb/moe_2082/2021/2021_zl35/dudao/202104/t20210428_528952.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "数学核心素养六项名称。"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "official-national-math",
+        "class": "official_requirement",
+        "claim": "2027河南数学为全国统考科目",
+        "evidence": [
+          "haeea-2027-registration"
+        ],
+        "applies_year": 2027
+      },
+      {
+        "id": "official-competencies",
+        "class": "official_requirement",
+        "claim": "数学抽象、逻辑推理、数学建模、直观想象、数学运算、数据分析",
+        "evidence": [
+          "moe-competencies"
+        ]
+      },
+      {
+        "id": "historical-structure",
+        "class": "direct_candidate_fact",
+        "claim": "两份保存的候选卷均19题150分，8单选、3多选、3填空、5解答",
+        "evidence": [
+          "2025-cn-math-national-1:pages1-4",
+          "2026-cn-math-national-1:pages1-4"
+        ],
+        "official_original_confirmed": false
+      },
+      {
+        "id": "sequence-variety",
+        "class": "limited_sample_observation",
+        "claim": "2025有等比块和及递推-导数综合，2026有分块和-局部等比存在性",
+        "question_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q014"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "scaffold",
+        "class": "limited_sample_observation",
+        "claim": "解答题多以基础计算或证明起步，再要求综合推理",
+        "question_ids": [
+          "2025-cn-math-national-1:q017",
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q017",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "final-function",
+        "class": "limited_sample_observation",
+        "claim": "当前两套候选末题均有函数量词与全域论证",
+        "question_ids": [
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "2027-final",
+        "class": "unverified_hypothesis",
+        "claim": "2027可能继续采用函数综合末题",
+        "enabled_as_hard_constraint": false,
+        "reason": "两套样本不能证明固定位置规律"
+      },
+      {
+        "id": "2027-structure",
+        "class": "simulation_setting",
+        "claim": "本原型2027模拟沿用两年观察结构，正式新通知优先",
+        "official_2027_structure_verified": false
+      }
+    ],
+    "blueprint": {
+      "id": "historical-19q-150-v1",
+      "target_year": 2027,
+      "structure_status": "historical_candidate_structure_used_as_simulation_setting",
+      "official_2027_structure_verified": false,
+      "total_points": 150,
+      "duration_minutes": 120,
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 8,
+          "points_each": 5
+        },
+        {
+          "kind": "multiple_choice",
+          "count": 3,
+          "points_each": 6
+        },
+        {
+          "kind": "fill_in",
+          "count": 3,
+          "points_each": 5
+        },
+        {
+          "kind": "constructed_response",
+          "count": 5,
+          "points": [
+            13,
+            15,
+            15,
+            17,
+            17
+          ]
+        }
+      ],
+      "difficulty_target": {
+        "basis": "模拟设定，按题目族的推理设计等级分类，尚无实测",
+        "level_groups": {
+          "foundation": [
+            1
+          ],
+          "medium": [
+            2,
+            3
+          ],
+          "advanced": [
+            4,
+            5
+          ]
+        },
+        "foundation": 4,
+        "medium": 11,
+        "advanced": 4,
+        "ordinal_counts": {
+          "1": 4,
+          "2": 6,
+          "3": 5,
+          "4": 3,
+          "5": 1
+        }
+      },
+      "module_constraints": {
+        "minimum_distinct_modules": 6,
+        "required": [
+          "数列",
+          "函数与导数",
+          "概率统计",
+          "解析几何",
+          "立体几何",
+          "三角与向量"
+        ]
+      },
+      "scoring_multiple_choice": "全对6分，部分选对的具体分数未从候选卷确定，模拟卷另行约定选对1项2分、2项4分，错选0分。"
+    }
+  }
+}

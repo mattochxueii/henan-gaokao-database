@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "revision": "2026-11-07-v1",
+  "scope": "河南2025–2026数学候选样本，共2卷38题",
+  "sources": [
+    {
+      "id": "haeea-2027-registration",
+      "url": "https://www.haeea.cn/a/202610/43749_c5d5e459.shtml",
+      "retrieved_at": "2026-11-07",
+      "finding": "第11问，全国统考含数学，3+1+2。未给2027数学详细卷面结构。"
+    },
+    {
+      "id": "moe-2026-math-review",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2026/2026_zt08/mtbd/202606/t20260608_1439853.html",
+      "retrieved_at": "2026-11-07",
+      "finding": "强调基础知识与关键能力、综合性和创新性。官方发布的媒体报道，非2027结构通知。"
+    },
+    {
+      "id": "moe-competencies",
+      "url": "https://hudong.moe.gov.cn/jyb_xwfb/moe_2082/2021/2021_zl35/dudao/202104/t20210428_528952.html",
+      "retrieved_at": "2026-11-07",
+      "finding": "数学核心素养六项名称。"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "official-national-math",
+      "class": "official_requirement",
+      "claim": "2027河南数学为全国统考科目",
+      "evidence": [
+        "haeea-2027-registration"
+      ],
+      "applies_year": 2027
+    },
+    {
+      "id": "official-competencies",
+      "class": "official_requirement",
+      "claim": "数学抽象、逻辑推理、数学建模、直观想象、数学运算、数据分析",
+      "evidence": [
+        "moe-competencies"
+      ]
+    },
+    {
+      "id": "historical-structure",
+      "class": "direct_candidate_fact",
+      "claim": "两份保存的候选卷均19题150分，8单选、3多选、3填空、5解答",
+      "evidence": [
+        "2025-cn-math-national-1:pages1-4",
+        "2026-cn-math-national-1:pages1-4"
+      ],
+      "official_original_confirmed": false
+    },
+    {
+      "id": "sequence-variety",
+      "class": "limited_sample_observation",
+      "claim": "2025有等比块和及递推-导数综合，2026有分块和-局部等比存在性",
+      "question_ids": [
+        "2025-cn-math-national-1:q013",
+        "2025-cn-math-national-1:q016",
+        "2026-cn-math-national-1:q014"
+      ],
+      "sample_papers": 2
+    },
+    {
+      "id": "scaffold",
+      "class": "limited_sample_observation",
+      "claim": "解答题多以基础计算或证明起步，再要求综合推理",
+      "question_ids": [
+        "2025-cn-math-national-1:q017",
+        "2025-cn-math-national-1:q019",
+        "2026-cn-math-national-1:q017",
+        "2026-cn-math-national-1:q019"
+      ],
+      "sample_papers": 2
+    },
+    {
+      "id": "final-function",
+      "class": "limited_sample_observation",
+      "claim": "当前两套候选末题均有函数量词与全域论证",
+      "question_ids": [
+        "2025-cn-math-national-1:q019",
+        "2026-cn-math-national-1:q019"
+      ],
+      "sample_papers": 2
+    },
+    {
+      "id": "2027-final",
+      "class": "unverified_hypothesis",
+      "claim": "2027可能继续采用函数综合末题",
+      "enabled_as_hard_constraint": false,
+      "reason": "两套样本不能证明固定位置规律"
+    },
+    {
+      "id": "2027-structure",
+      "class": "simulation_setting",
+      "claim": "本原型2027模拟沿用两年观察结构，正式新通知优先",
+      "official_2027_structure_verified": false
+    }
+  ],
+  "blueprint": {
+    "id": "historical-19q-150-v1",
+    "target_year": 2027,
+    "structure_status": "historical_candidate_structure_used_as_simulation_setting",
+    "official_2027_structure_verified": false,
+    "total_points": 150,
+    "duration_minutes": 120,
+    "sections": [
+      {
+        "kind": "single_choice",
+        "count": 8,
+        "points_each": 5
+      },
+      {
+        "kind": "multiple_choice",
+        "count": 3,
+        "points_each": 6
+      },
+      {
+        "kind": "fill_in",
+        "count": 3,
+        "points_each": 5
+      },
+      {
+        "kind": "constructed_response",
+        "count": 5,
+        "points": [
+          13,
+          15,
+          15,
+          17,
+          17
+        ]
+      }
+    ],
+    "difficulty_target": {
+      "basis": "模拟设定，按题目族的推理设计等级分类，尚无实测",
+      "level_groups": {
+        "foundation": [
+          1
+        ],
+        "medium": [
+          2,
+          3
+        ],
+        "advanced": [
+          4,
+          5
+        ]
+      },
+      "foundation": 4,
+      "medium": 11,
+      "advanced": 4,
+      "ordinal_counts": {
+        "1": 4,
+        "2": 6,
+        "3": 5,
+        "4": 3,
+        "5": 1
+      }
+    },
+    "module_constraints": {
+      "minimum_distinct_modules": 6,
+      "required": [
+        "数列",
+        "函数与导数",
+        "概率统计",
+        "解析几何",
+        "立体几何",
+        "三角与向量"
+      ]
+    },
+    "scoring_multiple_choice": "全对6分，部分选对的具体分数未从候选卷确定，模拟卷另行约定选对1项2分、2项4分，错选0分。"
+  }
+}

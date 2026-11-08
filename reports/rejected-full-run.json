@@ -1,0 +1,694 @@
+[
+  {
+    "question_id": "orig:henan-math:full:20261110:q001:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "e7eebc8511f961c6ff8092ffef99b3717f1c8052477222b4e5bfdfd40c0c62f5",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "A",
+      "values": [
+        "4"
+      ],
+      "values_latex": [
+        "4"
+      ],
+      "steps": [
+        "由z+共轭z=10得Re z=5。令z=5+yi，模平方条件成为(5-2)²+y²=13，因此y²=4。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2025-cn-math-national-1:q016",
+          "score": 0.3529
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "集合与复数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q002:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "c3f11dfaa5db68d413d34baa176aed0af266534b96d4e1b3e82b04b7d85ba1b8",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "A",
+      "values": [
+        "6"
+      ],
+      "values_latex": [
+        "6"
+      ],
+      "steps": [
+        "二次不等式给出4≤x≤12，取其中整数再剔除3的整倍数，保留[4, 5, 7, 8, 10, 11]，共6个。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2025-cn-math-national-1:q002",
+          "score": 0.3721
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "集合与复数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q003:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "35ebd551b1e8cd210ddb73a7d4e5461a1707e254c96c22afc50face283d2886c",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "B",
+      "values": [
+        "1/2"
+      ],
+      "values_latex": [
+        "\\frac{1}{2}"
+      ],
+      "steps": [
+        "两边平方并用sin²t+cos²t=1，得到sin 2t=(sin t+cos t)²-1。给定和在第一象限的可取范围内。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2026-cn-math-national-1:q003",
+          "score": 0.3333
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "三角与向量",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q004:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "c43b4c7138d044eb703b1f97c84ed363b7b9b6e35ddac3e18e51a95c955c371a",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "10"
+      ],
+      "values_latex": [
+        "10"
+      ],
+      "steps": [
+        "垂直要求u·v=2+t=0，故t=-2。和向量为(3,-1)，长度平方为(3)²+(-1)²=10。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q001:v1",
+          "score": 0.4
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "三角与向量",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q005:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "89c645f305d95b76a0115e050d13f58286a431482fc7719b75d9300511e08536",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "D",
+      "values": [
+        "9*sqrt(3)"
+      ],
+      "values_latex": [
+        "9 \\sqrt{3}"
+      ],
+      "steps": [
+        "代入y=2，纵坐标项为1/4，所以x²=3×81/4。两个端点横坐标为±9/2√3，弦长为9√3。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2026-cn-math-national-1:q011",
+          "score": 0.2909
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "解析几何",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q006:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "d352607b9b0c78d89ad5f722f2816774bb85074f45ed33c5baafc17f7989df72",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "4/7"
+      ],
+      "values_latex": [
+        "\\frac{4}{7}"
+      ],
+      "steps": [
+        "给每球编号，有序不放回二元组总数为7×6=42。两颜色不同有2×3×4=24种，概率为24/42=4/7。程序逐组枚举也得到相同计数。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2025-cn-math-national-1:q014",
+          "score": 0.2105
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "概率统计",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q007:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "25a0e506f4953140f261c681f5f8105024bb2b04ba309f4f223b555a38dc9f37",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "1"
+      ],
+      "values_latex": [
+        "1"
+      ],
+      "steps": [
+        "两根互异实根要求判别式4t(t-1)>0；两根为正还要求和2t>0、积t>0。合并得到t>1，有限端点1不取。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2025-cn-math-national-1:q007",
+          "score": 0.2258
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "函数与导数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q008:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "5c65e69b65b11a02cfdbe4cf4d13b6fa59ac7c86a79d1c0fce184c936a009062",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "4"
+      ],
+      "values_latex": [
+        "4"
+      ],
+      "steps": [
+        "令u=2x，则0<u<4π。每个完整周期sin u=1/2有两解，两个周期共4解，均不在端点。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q007:v1",
+          "score": 0.2609
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "三角与向量",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q009:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "d1ae683da8c9b37a9289d6c5c3d869121c6de3d5951d4ae832ac14845f5c91e9",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "AC",
+      "values": [
+        "48"
+      ],
+      "values_latex": [
+        "48"
+      ],
+      "steps": [
+        "奇数项a₂ⱼ₋₁=2+2(j-1)，偶数项a₂ⱼ=4+2(j-1)。",
+        "相邻两项之和为6+4(j-1)，j从1取到4，故总和为4×6+4×4×3/2=48。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "2026-cn-math-national-1:q014",
+          "score": 0.2558
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "数列",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q010:v1",
+    "attempt": 1,
+    "passed": true,
+    "verification": {
+      "question_sha256": "458283b085901249ee902c0a6a716128f3c83c0bf936a98a7ee7b573129c63a1",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "AC",
+      "values": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "用坐标向量判断。OA与OB、OC均垂直，故垂直于其张成平面；CM·AB=0；另外两个平行条件的叉积均不为零。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q009:v1",
+          "score": 0.4615
+        },
+        "threshold": 0.78,
+        "passed": true,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "立体几何",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": true
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q011:v1",
+    "attempt": 1,
+    "passed": false,
+    "verification": {
+      "question_sha256": "64cb33abc52b316a6f5443937b5cc1f97599eff6f6e92d6597119b4fea69dc56",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "ABC",
+      "values": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "f′=1/x-ax，唯一正零点为1/√a；f″=-1/x²-a<0，故导数严格递减，零点为全局最大点。",
+        "代入得最大值-(ln a+1)/2。x趋于0的正侧时f趋于负无穷，故无可取的最小值。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q010:v1",
+          "score": 0.8148
+        },
+        "threshold": 0.78,
+        "passed": false,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "函数与导数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": false
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q011:v2",
+    "attempt": 2,
+    "passed": false,
+    "verification": {
+      "question_sha256": "6dcf0efb83a1be89a77acd557481c46385222ba913dca9b97206f02233ae8620",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "ABC",
+      "values": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "f′=1/x-ax，唯一正零点为1/√a；f″=-1/x²-a<0，故导数严格递减，零点为全局最大点。",
+        "代入得最大值-(ln a+1)/2。x趋于0的正侧时f趋于负无穷，故无可取的最小值。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q010:v1",
+          "score": 0.8148
+        },
+        "threshold": 0.78,
+        "passed": false,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "函数与导数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": false
+    }
+  },
+  {
+    "question_id": "orig:henan-math:full:20261110:q011:v3",
+    "attempt": 3,
+    "passed": false,
+    "verification": {
+      "question_sha256": "a987c27fa730de207de4b3c98598c1669632d97838572403776cf8eac5d7efba",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "ABC",
+      "values": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "f′=1/x-ax，唯一正零点为1/√a；f″=-1/x²-a<0，故导数严格递减，零点为全局最大点。",
+        "代入得最大值-(ln a+1)/2。x趋于0的正侧时f趋于负无穷，故无可取的最小值。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    "quality": {
+      "duplicate": {
+        "closest": {
+          "id": "orig:henan-math:full:20261110:q010:v1",
+          "score": 0.8148
+        },
+        "threshold": 0.78,
+        "passed": false,
+        "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+        "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+      },
+      "syllabus_module": "函数与导数",
+      "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+      "passed": false
+    }
+  }
+]

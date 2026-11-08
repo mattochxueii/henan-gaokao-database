@@ -1,0 +1,894 @@
+{
+  "schema_version": 1,
+  "blueprint": {
+    "mode": "derivative",
+    "title": "导数专项 · 推理与综合",
+    "slots": [
+      {
+        "family": "deriv_tangent",
+        "kind": "constructed_response",
+        "points": 6
+      },
+      {
+        "family": "deriv_logquad",
+        "kind": "constructed_response",
+        "points": 8
+      },
+      {
+        "family": "deriv_cubic",
+        "kind": "constructed_response",
+        "points": 10
+      },
+      {
+        "family": "deriv_logbound",
+        "kind": "constructed_response",
+        "points": 12
+      },
+      {
+        "family": "deriv_logroots",
+        "kind": "constructed_response",
+        "points": 14
+      }
+    ],
+    "total_points": 50,
+    "rules_sha256": "536a72ff8349e505dc2f8621f61143b4fb70dd1ca4680d05d4d96b99a43d071d",
+    "target_year": 2027,
+    "difficulty_target": null,
+    "verified_features": [
+      "本次指定题量与总分"
+    ],
+    "simulation_settings": [
+      "2027详细结构沿用历史候选；正式通知优先",
+      "难度按方法与推理层数设计，未实测",
+      "本地题目族生成，AI设计与数学验证分离"
+    ],
+    "official_2027_paper_prediction": false
+  },
+  "seed": 20261108,
+  "provider": "local_verified_families",
+  "limits": {
+    "max_questions": 30,
+    "max_attempts_per_question": 3,
+    "max_output_characters": 160000,
+    "max_model_calls": 0,
+    "max_remote_retries": 0,
+    "remote_timeout_seconds": 30,
+    "estimated_remote_cost_limit_usd": 0.0
+  },
+  "remote_model_calls": 0,
+  "host_model_version": "not_exposed_by_host",
+  "questions": [
+    {
+      "family": "deriv_tangent",
+      "parameters": {
+        "a": 4,
+        "b": 4,
+        "m": 6
+      },
+      "stem": "函数f(x)=x³+Ax²+B在x=4处的切线为y=4。求(A,B)，并给出f的全部单调区间。",
+      "proposed_values": [
+        "-6",
+        "36"
+      ],
+      "kind": "constructed_response",
+      "points": 6,
+      "module": "函数与导数",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261209,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:derivative:20261108:q001:v1",
+      "order": 1,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "deriv_logquad",
+      "parameters": {
+        "a": 2,
+        "b": 4,
+        "m": 8
+      },
+      "stem": "设c>0，f(x)=ln x-cx²（x>0）。求最大值及取到最大值的x；再求使f(x)≤-1/2对所有x>0成立的c的范围。",
+      "proposed_values": [
+        "sqrt(2)/(2*sqrt(c))",
+        "-log(2*c)/2 - 1/2",
+        "1/2"
+      ],
+      "kind": "constructed_response",
+      "points": 8,
+      "module": "函数与导数",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261310,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:derivative:20261108:q002:v1",
+      "order": 2,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "deriv_cubic",
+      "parameters": {
+        "a": 3,
+        "b": 3,
+        "m": 8
+      },
+      "stem": "设c≥0，f(x)=x³-3cx。讨论f在[-3,3]上的最大值M(c)，写明所有分界点。",
+      "proposed_values": [
+        "9/4",
+        "9"
+      ],
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "函数与导数",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261411,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:derivative:20261108:q003:v1",
+      "order": 3,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "deriv_logbound",
+      "parameters": {
+        "a": 2,
+        "b": 3,
+        "m": 6
+      },
+      "stem": "求实数c的最大值，使ln x≥c(x-1)/(x+1)对所有x≥1成立。证明所得常数最优。",
+      "proposed_values": [
+        "2"
+      ],
+      "kind": "constructed_response",
+      "points": 12,
+      "module": "函数与导数",
+      "difficulty": 4,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261512,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:derivative:20261108:q004:v1",
+      "order": 4,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    },
+    {
+      "family": "deriv_logroots",
+      "parameters": {
+        "a": 3,
+        "b": 2,
+        "m": 5
+      },
+      "stem": "设F(x)=(ln x)³-3ln x-c（x>0）。(1)求F(x)=0有三个互异正根的c的范围；(2)记三根x₁<x₂<x₃，证明乘积为1；(3)若x₁x₃=x₂²，求c和三根。",
+      "proposed_values": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "exp(-sqrt(3))",
+        "1",
+        "exp(sqrt(3))"
+      ],
+      "kind": "constructed_response",
+      "points": 14,
+      "module": "函数与导数",
+      "difficulty": 5,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261613,
+        "host_authored_design_revision": "v1",
+        "model_version": "not_exposed_by_host"
+      },
+      "id": "orig:henan-math:derivative:20261108:q005:v1",
+      "order": 5,
+      "revision": 1,
+      "novelty_basis": "与38道候选比较题面，AI设计不同条件结构。通用方法可重合，未证明全球首创。"
+    }
+  ],
+  "verifications": [
+    {
+      "question_sha256": "b1953786a9cd5318c368f695a5bc2db9c255e1cbc673a31d6853effe6d64b677",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-6",
+        "36"
+      ],
+      "values_latex": [
+        "-6",
+        "36"
+      ],
+      "steps": [
+        "水平切线要求f′(a)=0、f(a)=b。联立求两个系数。",
+        "代回得f′(x)=3x(x-4)。增区间为(-∞,0)、(4,∞)，减区间为(0,4)。端点的区间合并按单调定义处理。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "e43271e1db58f5a49202fd50e55ba950c750f1a75e793d1f774f4bccefe24308",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "sqrt(2)/(2*sqrt(c))",
+        "-log(c)/2 - 1/2 - log(2)/2",
+        "1/2"
+      ],
+      "values_latex": [
+        "\\frac{\\sqrt{2}}{2 \\sqrt{c}}",
+        "- \\frac{\\log{\\left(c \\right)}}{2} - \\frac{1}{2} - \\frac{\\log{\\left(2 \\right)}}{2}",
+        "\\frac{1}{2}"
+      ],
+      "steps": [
+        "f′=1/x-2cx，在唯一正零点前正后负，故为全局最大点。",
+        "最大值为-(ln(2c)+1)/2。它≤-1/2等价于ln(2c)≥0，即c≥1/2。"
+      ],
+      "program_checks": [
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "5d13af03da3263f0dae606c05c6db2acffa04c41492137aa08e8fc6e9a7f5919",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "9/4",
+        "9"
+      ],
+      "values_latex": [
+        "\\frac{9}{4}",
+        "9"
+      ],
+      "steps": [
+        "f′=3(x²-c)。当0≤c≤9时内部极大点为-√c，候选最大值是2c√c与27-9c。",
+        "令t=√c/3，两者之差除以27为(2t-1)(t+1)²，故切换点c=9/4。",
+        "M(c)分三段为 27-9c（0≤c≤9/4），2c√c（9/4≤c≤9），9c-27（c≥9）。交界处值相同。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "25792336c3bc40813dd8776bf82d374f753a18c1a5491180ddd78c57896076e6",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "2"
+      ],
+      "values_latex": [
+        "2"
+      ],
+      "steps": [
+        "c=2时差函数在x=1为0，导数为(x-1)²/[x(x+1)²]≥0，所以全域成立。",
+        "若c>2，差函数在1的右导数1-c/2<0，故足够靠近1的右侧取负值，不能成立。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "edcf972d8d9213d25df8b520d825f240a63c6767250efa197ed6f38a6a5d0bb6",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "exp(-sqrt(3))",
+        "1",
+        "exp(sqrt(3))"
+      ],
+      "values_latex": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "e^{- \\sqrt{3}}",
+        "1",
+        "e^{\\sqrt{3}}"
+      ],
+      "steps": [
+        "令t=ln x，实数t与正数x一一对应。g(t)=t³-3t在(-∞,-1)、(1,∞)递增，在(-1,1)递减，极值2、-2。",
+        "因此恰有三个互异正根当且仅当-2<c<2，端点会产生重根。",
+        "由三次方程韦达定理，三个t根之和为0，故三个x根之积为exp(0)=1。",
+        "附加条件结合乘积得x₂³=1，所以x₂=1、t₂=0、c=0，另两根为exp(±√3)。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "question_id": "orig:henan-math:derivative:20261108:q001:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "b1953786a9cd5318c368f695a5bc2db9c255e1cbc673a31d6853effe6d64b677",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "-6",
+          "36"
+        ],
+        "values_latex": [
+          "-6",
+          "36"
+        ],
+        "steps": [
+          "水平切线要求f′(a)=0、f(a)=b。联立求两个系数。",
+          "代回得f′(x)=3x(x-4)。增区间为(-∞,0)、(4,∞)，减区间为(0,4)。端点的区间合并按单调定义处理。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q004",
+            "score": 0.3448
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:derivative:20261108:q002:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "e43271e1db58f5a49202fd50e55ba950c750f1a75e793d1f774f4bccefe24308",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "sqrt(2)/(2*sqrt(c))",
+          "-log(c)/2 - 1/2 - log(2)/2",
+          "1/2"
+        ],
+        "values_latex": [
+          "\\frac{\\sqrt{2}}{2 \\sqrt{c}}",
+          "- \\frac{\\log{\\left(c \\right)}}{2} - \\frac{1}{2} - \\frac{\\log{\\left(2 \\right)}}{2}",
+          "\\frac{1}{2}"
+        ],
+        "steps": [
+          "f′=1/x-2cx，在唯一正零点前正后负，故为全局最大点。",
+          "最大值为-(ln(2c)+1)/2。它≤-1/2等价于ln(2c)≥0，即c≥1/2。"
+        ],
+        "program_checks": [
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q009",
+            "score": 0.2222
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:derivative:20261108:q003:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "5d13af03da3263f0dae606c05c6db2acffa04c41492137aa08e8fc6e9a7f5919",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "9/4",
+          "9"
+        ],
+        "values_latex": [
+          "\\frac{9}{4}",
+          "9"
+        ],
+        "steps": [
+          "f′=3(x²-c)。当0≤c≤9时内部极大点为-√c，候选最大值是2c√c与27-9c。",
+          "令t=√c/3，两者之差除以27为(2t-1)(t+1)²，故切换点c=9/4。",
+          "M(c)分三段为 27-9c（0≤c≤9/4），2c√c（9/4≤c≤9），9c-27（c≥9）。交界处值相同。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q006",
+            "score": 0.3077
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:derivative:20261108:q004:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "25792336c3bc40813dd8776bf82d374f753a18c1a5491180ddd78c57896076e6",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "2"
+        ],
+        "values_latex": [
+          "2"
+        ],
+        "steps": [
+          "c=2时差函数在x=1为0，导数为(x-1)²/[x(x+1)²]≥0，所以全域成立。",
+          "若c>2，差函数在1的右导数1-c/2<0，故足够靠近1的右侧取负值，不能成立。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:derivative:20261108:q002:v1",
+            "score": 0.3922
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:derivative:20261108:q005:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "edcf972d8d9213d25df8b520d825f240a63c6767250efa197ed6f38a6a5d0bb6",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "-2",
+          "2",
+          "1",
+          "0",
+          "exp(-sqrt(3))",
+          "1",
+          "exp(sqrt(3))"
+        ],
+        "values_latex": [
+          "-2",
+          "2",
+          "1",
+          "0",
+          "e^{- \\sqrt{3}}",
+          "1",
+          "e^{\\sqrt{3}}"
+        ],
+        "steps": [
+          "令t=ln x，实数t与正数x一一对应。g(t)=t³-3t在(-∞,-1)、(1,∞)递增，在(-1,1)递减，极值2、-2。",
+          "因此恰有三个互异正根当且仅当-2<c<2，端点会产生重根。",
+          "由三次方程韦达定理，三个t根之和为0，故三个x根之积为exp(0)=1。",
+          "附加条件结合乘积得x₂³=1，所以x₂=1、t₂=0、c=0，另两根为exp(±√3)。"
+        ],
+        "program_checks": [
+          true,
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:derivative:20261108:q002:v1",
+            "score": 0.2812
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "中文题干归一化后顺序相似度；去除数字与拉丁字符",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "passed": true
+      }
+    }
+  ],
+  "structure": {
+    "passed": true,
+    "questions": 5,
+    "points": 50,
+    "kind_counts": {
+      "constructed_response": 5
+    },
+    "module_counts": {
+      "函数与导数": 5
+    },
+    "difficulty_counts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "overall_status": "prototype_verified_with_reasoning_review",
+  "limitations": [
+    "主观难度与高考风格尚无教师盲评或考生实测",
+    "符号验证仅覆盖受支持数学题目族",
+    "文本相似度不能排除外部题库重复"
+  ],
+  "files": {
+    "paper_pdf": "paper.pdf",
+    "solutions_pdf": "solutions.pdf",
+    "paper_editable": "paper.md",
+    "solutions_editable": "solutions.md",
+    "word_status": "未生成DOCX。本环境未找到LibreOffice，无法完成文档技能要求的渲染核验。"
+  },
+  "export_revision": "v2-explicit-subscript-and-answer-labels",
+  "rules_snapshot": {
+    "schema_version": 1,
+    "revision": "2026-11-07-v1",
+    "scope": "河南2025–2026数学候选样本，共2卷38题",
+    "sources": [
+      {
+        "id": "haeea-2027-registration",
+        "url": "https://www.haeea.cn/a/202610/43749_c5d5e459.shtml",
+        "retrieved_at": "2026-11-07",
+        "finding": "第11问，全国统考含数学，3+1+2。未给2027数学详细卷面结构。"
+      },
+      {
+        "id": "moe-2026-math-review",
+        "url": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2026/2026_zt08/mtbd/202606/t20260608_1439853.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "强调基础知识与关键能力、综合性和创新性。官方发布的媒体报道，非2027结构通知。"
+      },
+      {
+        "id": "moe-competencies",
+        "url": "https://hudong.moe.gov.cn/jyb_xwfb/moe_2082/2021/2021_zl35/dudao/202104/t20210428_528952.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "数学核心素养六项名称。"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "official-national-math",
+        "class": "official_requirement",
+        "claim": "2027河南数学为全国统考科目",
+        "evidence": [
+          "haeea-2027-registration"
+        ],
+        "applies_year": 2027
+      },
+      {
+        "id": "official-competencies",
+        "class": "official_requirement",
+        "claim": "数学抽象、逻辑推理、数学建模、直观想象、数学运算、数据分析",
+        "evidence": [
+          "moe-competencies"
+        ]
+      },
+      {
+        "id": "historical-structure",
+        "class": "direct_candidate_fact",
+        "claim": "两份保存的候选卷均19题150分，8单选、3多选、3填空、5解答",
+        "evidence": [
+          "2025-cn-math-national-1:pages1-4",
+          "2026-cn-math-national-1:pages1-4"
+        ],
+        "official_original_confirmed": false
+      },
+      {
+        "id": "sequence-variety",
+        "class": "limited_sample_observation",
+        "claim": "2025有等比块和及递推-导数综合，2026有分块和-局部等比存在性",
+        "question_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q014"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "scaffold",
+        "class": "limited_sample_observation",
+        "claim": "解答题多以基础计算或证明起步，再要求综合推理",
+        "question_ids": [
+          "2025-cn-math-national-1:q017",
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q017",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "final-function",
+        "class": "limited_sample_observation",
+        "claim": "当前两套候选末题均有函数量词与全域论证",
+        "question_ids": [
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "2027-final",
+        "class": "unverified_hypothesis",
+        "claim": "2027可能继续采用函数综合末题",
+        "enabled_as_hard_constraint": false,
+        "reason": "两套样本不能证明固定位置规律"
+      },
+      {
+        "id": "2027-structure",
+        "class": "simulation_setting",
+        "claim": "本原型2027模拟沿用两年观察结构，正式新通知优先",
+        "official_2027_structure_verified": false
+      }
+    ],
+    "blueprint": {
+      "id": "historical-19q-150-v1",
+      "target_year": 2027,
+      "structure_status": "historical_candidate_structure_used_as_simulation_setting",
+      "official_2027_structure_verified": false,
+      "total_points": 150,
+      "duration_minutes": 120,
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 8,
+          "points_each": 5
+        },
+        {
+          "kind": "multiple_choice",
+          "count": 3,
+          "points_each": 6
+        },
+        {
+          "kind": "fill_in",
+          "count": 3,
+          "points_each": 5
+        },
+        {
+          "kind": "constructed_response",
+          "count": 5,
+          "points": [
+            13,
+            15,
+            15,
+            17,
+            17
+          ]
+        }
+      ],
+      "difficulty_target": {
+        "basis": "模拟设定，按题目族的推理设计等级分类，尚无实测",
+        "level_groups": {
+          "foundation": [
+            1
+          ],
+          "medium": [
+            2,
+            3
+          ],
+          "advanced": [
+            4,
+            5
+          ]
+        },
+        "foundation": 4,
+        "medium": 11,
+        "advanced": 4,
+        "ordinal_counts": {
+          "1": 4,
+          "2": 6,
+          "3": 5,
+          "4": 3,
+          "5": 1
+        }
+      },
+      "module_constraints": {
+        "minimum_distinct_modules": 6,
+        "required": [
+          "数列",
+          "函数与导数",
+          "概率统计",
+          "解析几何",
+          "立体几何",
+          "三角与向量"
+        ]
+      },
+      "scoring_multiple_choice": "全对6分，部分选对的具体分数未从候选卷确定，模拟卷另行约定选对1项2分、2项4分，错选0分。"
+    }
+  }
+}
