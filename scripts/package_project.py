@@ -8,13 +8,25 @@ from gaokao import ROOT, require
 from storage import atomic_json
 
 
-def package():
+def package(phase="4", working_copy=False):
     paths = (
-        subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT)
+        subprocess.check_output(
+            [
+                "git",
+                "ls-files",
+                *(
+                    ["--cached", "--others", "--exclude-standard"]
+                    if working_copy
+                    else []
+                ),
+                "-z",
+            ],
+            cwd=ROOT,
+        )
         .decode("utf-8")
         .split("\0")
     )
-    paths = [path for path in paths if path]
+    paths = sorted(set(path for path in paths if path))
     require(paths, "需要先审阅并暂存项目文件")
     for value in paths:
         path = Path(value)
@@ -25,7 +37,8 @@ def package():
             and path.suffix not in (".key", ".env"),
             "暂存区包含私有目录或密钥",
         )
-    target = ROOT.parent / "henan-gaokao-database-phase4.zip"
+    require(phase in ("4", "5"), "未知交付阶段")
+    target = ROOT.parent / f"henan-gaokao-database-phase{phase}.zip"
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
         for value in paths:
             archive.write(ROOT / value, "henan-gaokao-database/" + value)
@@ -36,7 +49,7 @@ def package():
             if relative not in staged:
                 archive.write(path, "henan-gaokao-database/" + relative)
     skill = ROOT / "skills/henan-math"
-    skill_target = ROOT.parent / "henan-math-skill-phase4.zip"
+    skill_target = ROOT.parent / f"henan-math-skill-phase{phase}.zip"
     with zipfile.ZipFile(skill_target, "w", zipfile.ZIP_DEFLATED) as archive:
         for path in skill.rglob("*"):
             if path.is_file() and "__pycache__" not in path.parts:
@@ -46,4 +59,14 @@ def package():
 
 
 if __name__ == "__main__":
-    package()
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--phase", choices=("4", "5"), default="4")
+    parser.add_argument(
+        "--working-copy",
+        action="store_true",
+        help="包含未跟踪且未被忽略的已审阅文件，无需写Git索引",
+    )
+    args = parser.parse_args()
+    package(args.phase, args.working_copy)

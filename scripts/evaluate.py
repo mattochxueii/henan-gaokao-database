@@ -31,7 +31,7 @@ def main():
         "elapsed_seconds": round(time.monotonic() - start, 3),
         "date": datetime.now(timezone(timedelta(hours=8))).date().isoformat(),
         "command": "python scripts/evaluate.py",
-        "scope": "Historical private integration and Phase3 public tests plus Phase4 adversarial writing, PDF-only review, stale hash and independent mathematics regressions",
+        "scope": "Legacy private integration, Phase3/4 generation and PDF gates, Phase5 national ingestion, deduplication, subject systems, relevance, context budget and private cross-year retrieval",
     }
     atomic_json(ROOT / "reports/test-results.json", report)
     (ROOT / "reports/test-results.txt").write_text(stream.getvalue(), encoding="utf-8")

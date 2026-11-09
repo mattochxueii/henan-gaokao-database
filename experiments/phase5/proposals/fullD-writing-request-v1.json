@@ -1,0 +1,1478 @@
+{
+  "version": "AI-school-writing-request-v1",
+  "questions": [
+    {
+      "id": "orig:ai:phase5:D:q001:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "B": "{2,a}",
+          "domain": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "condition": "A∩B={2}",
+          "target": "a的可取值个数"
+        },
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "event": "(x!=1) and (x!=3)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "2"
+          },
+          "B": {
+            "semantic_value": "3"
+          },
+          "C": {
+            "semantic_value": "4"
+          },
+          "D": {
+            "semantic_value": "5"
+          }
+        }
+      },
+      "original_spec_sha256": "8889ed2643194d26a20998517f5c81e3972805319752d7bfbdedd1bf490ebe42"
+    },
+    {
+      "id": "orig:ai:phase5:D:q002:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "locus": "abs(z-1)==abs(z+I)",
+          "unit": "abs(z)==1",
+          "target": "z**2"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "-I"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "equal_distance": "(x-1)**2+y*y-x*x-(y+1)**2",
+              "square": "(x+I*(-x))**2+2*I*x*x"
+            },
+            "claim": "单位圆与等距离直线交点均产生z²=-i，坐标翻译与解集须独立核对"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "-I"
+          },
+          "B": {
+            "semantic_value": "I"
+          },
+          "C": {
+            "semantic_value": "-1"
+          },
+          "D": {
+            "semantic_value": "1"
+          }
+        }
+      },
+      "original_spec_sha256": "0630be2bb0aab935f03d8a48da5c9a4c0927bee9d35dcef550ac2dde57654736"
+    },
+    {
+      "id": "orig:ai:phase5:D:q003:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "group1_mean": "2",
+          "group1_variance": "1",
+          "group2_mean": "5",
+          "group2_variance": "4",
+          "pooled_mean": "4",
+          "definition": "方差为离均差平方和除以该组数据个数"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "(1+(2-4)**2)/3+2*(4+(5-4)**2)/3"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "5/2"
+          },
+          "B": {
+            "semantic_value": "3"
+          },
+          "C": {
+            "semantic_value": "5"
+          },
+          "D": {
+            "semantic_value": "9"
+          }
+        }
+      },
+      "original_spec_sha256": "e54de2c65289022830d72406fbcb636bc92ddabf76b0e2fa1d9d38e2c7d58545"
+    },
+    {
+      "id": "orig:ai:phase5:D:q004:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "equation": "sin(x)+cos(x)==1",
+          "domain": "0<=x<=2*pi",
+          "target": "不同实根个数"
+        },
+        "tasks": [
+          {
+            "op": "root_count",
+            "expression": "sin(x)+cos(x)-1",
+            "domain": [
+              0,
+              "2*pi"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1"
+          },
+          "B": {
+            "semantic_value": "2"
+          },
+          "C": {
+            "semantic_value": "3"
+          },
+          "D": {
+            "semantic_value": "4"
+          }
+        }
+      },
+      "original_spec_sha256": "5c29a65eb10accbb5a45149ffabce0a58d9dfd2169321ed2846cb02bb900cb87"
+    },
+    {
+      "id": "orig:ai:phase5:D:q005:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "sequence": "等差数列",
+          "condition": "a3+a8=22",
+          "target": "S10"
+        },
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "equations": [
+              "2*a+9*b-22"
+            ],
+            "conditions": [],
+            "value": "10*a+45*b",
+            "unique_value": true
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "55"
+          },
+          "B": {
+            "semantic_value": "110"
+          },
+          "C": {
+            "semantic_value": "220"
+          },
+          "D": {
+            "semantic_value": "121"
+          }
+        }
+      },
+      "original_spec_sha256": "71d5a43e8d64f51a5cceaa0fdd09d5f53dca31a83ba13781524994d5c62eb305"
+    },
+    {
+      "id": "orig:ai:phase5:D:q006:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "hyperbola": "x*x/9-y*y/16=1",
+          "focus": "右焦点F",
+          "target": "F到任一渐近线的距离"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "4*5/sqrt(4**2+3**2)"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "3"
+          },
+          "B": {
+            "semantic_value": "5"
+          },
+          "C": {
+            "semantic_value": "4"
+          },
+          "D": {
+            "semantic_value": "20"
+          }
+        }
+      },
+      "original_spec_sha256": "5227aee4df41303289b148792a5d665818a14c2620567f7f038d0ea9e5296d74"
+    },
+    {
+      "id": "orig:ai:phase5:D:q007:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "vertices": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              6
+            ]
+          ],
+          "target": "四点所在球的表面积"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "4*pi*(1**2+2**2+3**2)"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "radius0": "1**2+2**2+3**2",
+              "radiusA": "(2-1)**2+2**2+3**2",
+              "radiusB": "1**2+(4-2)**2+3**2",
+              "radiusC": "1**2+2**2+(6-3)**2"
+            },
+            "claim": "等距方程确定唯一球心(1,2,3)，需独立核对"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "14*pi"
+          },
+          "B": {
+            "semantic_value": "28*pi"
+          },
+          "C": {
+            "semantic_value": "112*pi"
+          },
+          "D": {
+            "semantic_value": "56*pi"
+          }
+        }
+      },
+      "original_spec_sha256": "3b4e66ebea9d0243c37a330b334fcbb1592166bde8edc17e1346913527288e5f"
+    },
+    {
+      "id": "orig:ai:phase5:D:q008:v1",
+      "kind": "single_choice",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "curve": "y=x**3",
+          "point": [
+            1,
+            0
+          ],
+          "target": "过该点的不同切线条数"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "2"
+          },
+          {
+            "op": "tangent_through",
+            "expression": "x**3",
+            "point": [
+              "1",
+              "0"
+            ],
+            "ask": "all"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1"
+          },
+          "B": {
+            "semantic_value": "2"
+          },
+          "C": {
+            "semantic_value": "3"
+          },
+          "D": {
+            "semantic_value": "4"
+          }
+        }
+      },
+      "original_spec_sha256": "ffeb493eb241037d4a64391fa1d4f91d1443065be585f92c67b60da704ec9ba5"
+    },
+    {
+      "id": "orig:ai:phase5:D:q009:v1",
+      "kind": "multiple_choice",
+      "points": 6,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "experiment": "独立抛掷均匀硬币4次，X为正面次数"
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "4/2"
+            },
+            "expected": "2"
+          },
+          "B": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "4/2*(1-1/2)"
+            },
+            "expected": "2"
+          },
+          "C": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "(binomial(4,3)+1)/16"
+            },
+            "expected": "5/16"
+          },
+          "D": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "(binomial(4,2)/16)/(1-1/16)"
+            },
+            "expected": "2/5"
+          }
+        }
+      },
+      "original_spec_sha256": "fe095c383625652ae8b13708fffe580d522e4f1648456726c433e87354bf224f"
+    },
+    {
+      "id": "orig:ai:phase5:D:q010:v1",
+      "kind": "multiple_choice",
+      "points": 6,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "ellipse": "x*x/9+y*y/4=1",
+          "foci": "F1,F2"
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "sqrt(9-4)/3"
+            },
+            "expected": "sqrt(5)/3"
+          },
+          "B": {
+            "op": "reasoning",
+            "claim": "椭圆上任一点至两焦点距离和为6，须核对椭圆定义"
+          },
+          "C": {
+            "op": "tangent_line_claim",
+            "expression": "4*x*x+36-36",
+            "line_expression": "0"
+          },
+          "D": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "2*sqrt(4*(1-5/9))"
+            },
+            "expected": "4/3"
+          }
+        }
+      },
+      "original_spec_sha256": "333dd9f052528236ccb2aa9f7061260a244b541970ec296be1961dc298f572b4"
+    },
+    {
+      "id": "orig:ai:phase5:D:q011:v1",
+      "kind": "multiple_choice",
+      "points": 6,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "sequence": "a_n=n²/2^n，n为正整数"
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "reasoning",
+            "algebra_checks": {
+              "ratio": "(n+1)**2/(2*n*n)",
+              "at3": "9/8"
+            },
+            "claim": "全正整数最大值9/8，需对比相邻比值"
+          },
+          "B": {
+            "op": "reasoning",
+            "claim": "a_n>=1恰有两个正整数n，此断言为假；需完整整数分类"
+          },
+          "C": {
+            "op": "reasoning",
+            "algebra_checks": {
+              "sum_residual": "6-((n+1)**2+4*(n+1)+6)/2**(n+1)-(6-(n*n+4*n+6)/2**n)-(n+1)**2/2**(n+1)"
+            },
+            "claim": "有限和严格小于6，归纳式与余项正性待审"
+          },
+          "D": {
+            "op": "reasoning",
+            "algebra_checks": {
+              "difference": "n**4-(n*n-1)**2"
+            },
+            "claim": "n>=2时a_n²>a_(n-1)a_(n+1)，须独立证明量词范围"
+          }
+        }
+      },
+      "original_spec_sha256": "ebf3d4b82774b0f08cb57e0ba4c9b04782158c601686c6aa734f9b0e662194eb"
+    },
+    {
+      "id": "orig:ai:phase5:D:q012:v1",
+      "kind": "fill_in",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "people": "A、B与其他4名不同学生，共6名排成一列",
+          "conditions": "A在B左侧，且A与B不相邻",
+          "target": "不同排法数"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "(binomial(6,2)-5)*factorial(4)"
+          }
+        ]
+      },
+      "original_spec_sha256": "7acaa86acd1c0b71c66f9a7cd36556890d386eb90b6115c2c0d71da805823a63"
+    },
+    {
+      "id": "orig:ai:phase5:D:q013:v1",
+      "kind": "fill_in",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "ellipse": "x*x/4+y*y=1",
+          "focus": "F(sqrt(3),0)",
+          "origin": "O(0,0)",
+          "condition": "OP⊥FP",
+          "target": "|OP|²"
+        },
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "equations": [
+              "x*x/4+y*y-1",
+              "x*x+y*y-sqrt(3)*x"
+            ],
+            "conditions": [],
+            "value": "x*x+y*y",
+            "unique_value": true
+          }
+        ]
+      },
+      "original_spec_sha256": "48ee19c5e2b6e7be1b131ea1302d57cf9d394dd3fddcdc02e21aa1550d6abfc1"
+    },
+    {
+      "id": "orig:ai:phase5:D:q014:v1",
+      "kind": "fill_in",
+      "points": 5,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "equation": "abs(x-1)+abs(x+1)=a*x+2",
+          "parameter": "a>0",
+          "target": "使方程恰有一个实根的a的最小值"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "2"
+          },
+          {
+            "op": "reasoning",
+            "claim": "分x<=-1，-1<=x<=1，x>=1讨论；a>=2唯一根0，0<a<2额外正根2/(2-a)"
+          }
+        ]
+      },
+      "original_spec_sha256": "b227c5bf0d6a08e8b7765aba1d8fb8d291e673764248397e958b8645f869f068"
+    },
+    {
+      "id": "orig:ai:phase5:D:q015:v1",
+      "kind": "constructed_response",
+      "points": 13,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "batch": "8件产品中3件次品、5件合格品，各件有不同编号",
+          "sample": "一次等可能抽取4件，不放回",
+          "X": "样本中的次品件数",
+          "policies": "甲：只要X>=1就复检余下4件；乙：只有X>=2才复检余下4件",
+          "costs": "每次复检费用c元；不复检且余下4件含次品时损失6元；其余情况无损失，首次抽样费用不计",
+          "parameter": "c>0"
+        },
+        "tasks": [
+          {
+            "op": "distribution",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "p": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "condition": "(x<y) and (y<t) and (t<p)",
+            "value": "indicator(x<=3)+indicator(y<=3)+indicator(t<=3)+indicator(p<=3)"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "t": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "p": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "condition": "(x<y) and (y<t) and (t<p)",
+            "event": "(indicator(x<=3)+indicator(y<=3)+indicator(t<=3)+indicator(p<=3))==1"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "strategy_difference": "(13/14-1/2)*c-6*(13/14-1/2)"
+            },
+            "claim": "分别按X=0,1,2,3分类建立甲乙期望费用，只在X=1上行为不同；复检后不再发生损失"
+          }
+        ]
+      },
+      "original_spec_sha256": "2974ebeb3f3a17276604b8c71894476de62983104cef99355fc95a0491b75a34"
+    },
+    {
+      "id": "orig:ai:phase5:D:q016:v1",
+      "kind": "constructed_response",
+      "points": 15,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "tetrahedron": "OABC，OA、OB、OC两两垂直，OA=2、OB=3、OC=4",
+          "P": "线段BC上的动点",
+          "target": "OA垂直面OBC；面ABC与OBC锐二面角；直线AP与面OBC所成角最大值正弦"
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "claim": "OA同时垂直平面OBC内两相交直线OB、OC"
+          },
+          {
+            "op": "plane_angle",
+            "plane": [
+              [
+                "2",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "3",
+                "0"
+              ],
+              [
+                "0",
+                "0",
+                "4"
+              ]
+            ],
+            "other": [
+              [
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "3",
+                "0"
+              ],
+              [
+                "0",
+                "0",
+                "4"
+              ]
+            ]
+          },
+          {
+            "op": "reasoning",
+            "expression": "4+9*(1-x)**2+16*x*x",
+            "algebra_checks": {
+              "square_completion": "4+9*(1-x)**2+16*x*x-(25*(x-9/25)**2+244/25)",
+              "max_sine": "2/sqrt(244/25)"
+            },
+            "claim": "P(t)=(0,3(1-t),4t)，0<=t<=1；角正弦=OA/AP，最短AP产生最大角，需验证点在线段内"
+          }
+        ]
+      },
+      "original_spec_sha256": "83dd43b66545f17a989fd82393fd7b1b76c484a46fc13a818f712c91e46e5899"
+    },
+    {
+      "id": "orig:ai:phase5:D:q017:v1",
+      "kind": "constructed_response",
+      "points": 15,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "sequence": "各项为正数",
+          "initial": "a1=2",
+          "recurrence": "a_(n+1)²-a_n²=2n+1，n为正整数",
+          "target3": "实数M使所有正整数n满足a_n<n+M/n，求M最小值"
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "telescope": "(n+1)**2+3-(n*n+3)-(2*n+1)"
+            },
+            "claim": "由平方差的累加与各项正性得到通项sqrt(n²+3)，需独立核对归纳与取正根"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "term": "(2*k+1)/(sqrt((k+1)**2+3)+sqrt(k*k+3))-(sqrt((k+1)**2+3)-sqrt(k*k+3))"
+            },
+            "claim": "求sum(2k+1)/(a_k+a_(k+1))，从k=1至n，逐项恒等并累加"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "gap": "3/(sqrt(1+3/x**2)+1)"
+            },
+            "claim": "严格统一界M>=3/2；等于3/2仍可行，M<3/2需构造足够大正整数反例；不以有限枚举代替无穷量词"
+          }
+        ]
+      },
+      "original_spec_sha256": "f20f363dadece8df7f7959b973c866f8cdedfeeb4e4b470dfe0256da350e688f"
+    },
+    {
+      "id": "orig:ai:phase5:D:q018:v1",
+      "kind": "constructed_response",
+      "points": 17,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "parabola": "y²=4x",
+          "fixed_point": "P(-1,0)",
+          "origin": "O(0,0)",
+          "line": "y=k(x+1)，k为实数",
+          "chord": "直线与抛物线交于两个不同点A、B"
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "discriminant": "(2*x*x-4)**2-4*x**4"
+            },
+            "claim": "先讨论过P的切线，含竖直线x=-1无交点，非竖直线判别式给出k=±1"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "sum_ab": "(4-2*x*x)/(x*x)",
+              "mid_x": "2/x**2-1",
+              "mid_y": "2/x",
+              "locus": "(2/x)**2-2*((2/x**2-1)+1)"
+            },
+            "claim": "0<|k|<1，弦中点M轨迹y²=2(x+1), |y|>2，须证明必要性与每点可达充分性"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "dot": "1+x*x*(2+(4-2*x*x)/(x*x))",
+              "product_norm_squared": "1+4*(4-2*x*x)/(x*x)+16",
+              "slope": "sqrt(16/91)"
+            },
+            "claim": "以韦达与点积求∠AOB=60°时k=±4/sqrt91，须检验角余弦符号与斜率范围"
+          }
+        ]
+      },
+      "original_spec_sha256": "37a9975d97d1c1bcb8940b4726b4536a9962fa24ec3ac316e5e698976fee9d8a"
+    },
+    {
+      "id": "orig:ai:phase5:D:q019:v1",
+      "kind": "constructed_response",
+      "points": 17,
+      "math_spec": {
+        "symbols": [
+          "x",
+          "y",
+          "a",
+          "b",
+          "t",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "function": "F_a(x)=exp(x)-1-x-a*x²，x∈R，a∈R",
+          "auxiliary": "h(x)=(exp(x)-1-x)/x²，x≠0"
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "expression": "exp(x)-1-x",
+            "claim": "证明e^x>=1+x，且等号当且仅当x=0"
+          },
+          {
+            "op": "reasoning",
+            "expression": "(exp(x)-1-x)/x**2",
+            "algebra_checks": {
+              "p_derivative": "(x-1)*exp(x)+1",
+              "p_second": "x*exp(x)",
+              "half_derivative": "exp(x)-1-x"
+            },
+            "claim": "证明h在(-∞,0)、(0,∞)各严格递增，并分别小于、大于1/2；完整符号分类不能由抽样导数代替"
+          },
+          {
+            "op": "reasoning",
+            "expression": "exp(x)-1-x-a*x*x",
+            "algebra_checks": {
+              "second_at_zero": "1-2*a"
+            },
+            "claim": "全实参数零点分类：a<=0只有0；0<a<1/2有0及唯一负根；a=1/2只有0；a>1/2有0及唯一正根。近0符号与无穷端存在性、重根只计一个均须独立证明"
+          }
+        ]
+      },
+      "original_spec_sha256": "f1e1807cbf74986c90353c4c54c9653bd317e337fe18bcf77b440c5f847de32c"
+    }
+  ],
+  "language_rules": {
+    "schema_version": 1,
+    "version": "phase4-language-v1",
+    "created_at": "2026-11-08",
+    "author": "independent_host_AI_editorial_audit",
+    "model_version": "not_exposed_by_host",
+    "source_scope": {
+      "papers": 2,
+      "questions": 38,
+      "official_body_confirmed_questions": 0,
+      "originals_not_reproduced": true,
+      "metric_scope": "仅统计版本绑定候选文本，不把归一化转写当作官方逐字卷面"
+    },
+    "official_language_requirements": [],
+    "official_language_requirements_note": "未检索并核实官方题面写作规范文件；本规则不冒称官方语言标准。官方考试结构另见analysis/rules.json。",
+    "rules": [
+      {
+        "id": "L01",
+        "category": "engineering_requirement",
+        "rule": "数学规格、AI中文题面、排版三层分离。考生题面不得由任务标签或AST字符串直接拼接。",
+        "basis": "第四阶段用户要求与旧70题实际失败",
+        "blocking": true
+      },
+      {
+        "id": "L02",
+        "category": "editorial_requirement",
+        "rule": "先定义数学对象和全部必要条件，再写明确设问；已给条件不在每个小问重新打印。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q016",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              3
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q017",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L03",
+        "category": "editorial_requirement",
+        "rule": "数列用下标；代数式用高中常见形式，去掉仅服务AST的括号和逐次乘法。不得通过化简把待求问题变成答案。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q016",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              3
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q007",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              2
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L04",
+        "category": "editorial_requirement",
+        "rule": "抽样、概率与计数必须交代对象、等可能性、是否放回、是否计顺序和事件；用题意对应的中文叙述，不打印目标事件占位真值。",
+        "evidence": [
+          {
+            "question_id": "2026-cn-math-national-1:q017",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2025-cn-math-national-1:q015",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              2,
+              3
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L05",
+        "category": "editorial_requirement",
+        "rule": "导语不得告诉考生裂项、错位相减、恰当代换或关键推理结论；数学定义和必要情境不算提示。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q018",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q018",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L06",
+        "category": "candidate_observation",
+        "rule": "多选可考同一对象的多种性质，允许基础题；整组应有层次，不能四项反复做同一种代入。",
+        "evidence": [
+          {
+            "question_id": "2026-cn-math-national-1:q009",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              2
+            ]
+          },
+          {
+            "question_id": "2025-cn-math-national-1:q010",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              2
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q010",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              2
+            ]
+          }
+        ],
+        "not_universal_law": true,
+        "blocking": false
+      },
+      {
+        "id": "L07",
+        "category": "editorial_requirement",
+        "rule": "解答题的小问围绕共同对象实质关联，可从求值/证明基础关系进入参数、存在性、范围或综合论证；后问不得明列前问待求答案。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q016",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              3
+            ]
+          },
+          {
+            "question_id": "2025-cn-math-national-1:q018",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q017",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L08",
+        "category": "editorial_requirement",
+        "rule": "变量范围、量词、端点和极值存在性须完整；f'(1)不能写成“指定值1”，新符号必须先定义。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q019",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q019",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L09",
+        "category": "editorial_requirement",
+        "rule": "13/15/17分解答槽位须由条件理解、建模、逻辑、运算、综合度、突破口与预计用时共同支持；题号和小问数量不能作依据。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q015",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          {
+            "question_id": "2025-cn-math-national-1:q018",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q017",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true,
+        "empirical_score_difficulty_relation": false
+      },
+      {
+        "id": "L10",
+        "category": "engineering_requirement",
+        "rule": "AI写作稿必须绑定数学规格哈希，并审查语义、完整性和题型；再对实际PDF/页面哈希做只看考生材料的独立审查，文本或排版变化作废旧审查。",
+        "basis": "本阶段用户验收要求；不是由两套真题统计推导",
+        "blocking": true
+      },
+      {
+        "id": "L11",
+        "category": "editorial_requirement",
+        "rule": "复杂逻辑条件可保留规范数学含义，但面向考生优先写成“至少一次”“恰有”“且/或”“对任意”等明确中文，不为去符号而改变事件。",
+        "evidence": [
+          {
+            "question_id": "2026-cn-math-national-1:q010",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              2
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q017",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q019",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": true
+      },
+      {
+        "id": "L12",
+        "category": "hypothesis_requiring_more_samples",
+        "rule": "题面长度与结构只作同模块同题型对照，不设由两套候选导出的硬性字数、知识点比例或压轴套路。",
+        "evidence": [
+          {
+            "question_id": "2025-cn-math-national-1:q019",
+            "candidate_version": "publisher_recall_retypeset",
+            "candidate_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+            "source_id": "jin-2025-math-paper",
+            "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+            "pages": [
+              4
+            ]
+          },
+          {
+            "question_id": "2026-cn-math-national-1:q019",
+            "candidate_version": "third_party_scan_candidate",
+            "candidate_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+            "source_id": "math-2026-village-scan",
+            "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "blocking": false
+      },
+      {
+        "id": "L13",
+        "category": "editorial_requirement",
+        "rule": "每个干扰项的错误路径应能实际计算出该选项；不能只检查error_path非空，也不能把有理范围内任意值冒称典型错误。无考生错误样本实证时，认知归因仅为设计假设。",
+        "basis": "本次旧选项审查发现fullB第3题所谓极差实际为10而非选项9等真实错配",
+        "blocking": true,
+        "student_error_empirically_validated": false
+      }
+    ],
+    "observed_statistics": {
+      "single_choice": {
+        "count": 16,
+        "raw_length_median": 94.0,
+        "chinese_length_median": 18.0,
+        "subquestion_counts": {
+          "0": 16
+        },
+        "top_level_subquestion_counts": {
+          "0": 16
+        },
+        "points": {
+          "5": 16
+        },
+        "machine_term_count": 0
+      },
+      "multiple_choice": {
+        "count": 6,
+        "raw_length_median": 176.5,
+        "chinese_length_median": 25.0,
+        "subquestion_counts": {
+          "0": 6
+        },
+        "top_level_subquestion_counts": {
+          "0": 6
+        },
+        "points": {
+          "6": 6
+        },
+        "machine_term_count": 0
+      },
+      "fill_in": {
+        "count": 6,
+        "raw_length_median": 55.5,
+        "chinese_length_median": 21.0,
+        "subquestion_counts": {
+          "0": 6
+        },
+        "top_level_subquestion_counts": {
+          "0": 6
+        },
+        "points": {
+          "5": 6
+        },
+        "machine_term_count": 0
+      },
+      "constructed_response": {
+        "count": 10,
+        "raw_length_median": 229.0,
+        "chinese_length_median": 34.0,
+        "subquestion_counts": {
+          "2": 4,
+          "3": 5,
+          "4": 1
+        },
+        "top_level_subquestion_counts": {
+          "2": 8,
+          "3": 2
+        },
+        "points": {
+          "13": 2,
+          "15": 4,
+          "17": 4
+        },
+        "machine_term_count": 0
+      }
+    },
+    "rubric_dimensions": [
+      "knowledge",
+      "condition_comprehension",
+      "modeling",
+      "logical_reasoning",
+      "calculation",
+      "integration",
+      "breakthrough_visibility",
+      "estimated_minutes",
+      "source_level_difference"
+    ],
+    "empirical_calibration": false,
+    "remaining_review": "新试卷还必须数学核查、仅PDF独立可读性审查及教师审核；本规则自身不认证高考质量"
+  },
+  "instructions": "逐题只写自然中文的条件与设问，用formulae形成常用高中记号。不得添加解题提示、结果或验证术语。输出writing字段并绑定original_spec_sha256。条件、顺序、放回与定义域不能为简练而改变。无法明确转换时退回，不输出AST。",
+  "proposer_answers_included": false,
+  "proposer_design_included": false
+}

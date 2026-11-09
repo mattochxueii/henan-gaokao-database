@@ -1,3 +1,62 @@
+# 第五阶段：全国历年高考数学数据库
+
+已实际扩容21份完整第三方卷面及458条题目实例（449个去重主记录）。保留原有38题，合计23份数学卷、496个实例、487个主记录。2023乙卷理科23条因实质转写错误整卷隔离，默认研究检索排除；剩余473条仍是候选，不是官方认证或全部答案已验证。
+
+新高考Ⅰ卷2020—2026形成连续145题系列，新Ⅱ卷七年145题；河南2020—2023旧文理数学分别登记，2024与新课标Ⅰ卷共享主卷；另有浙江2022特色样本。原数据、独立解答、备份、Skill、模拟卷均保留。每年每卷的真实数量与缺项见 [完整性报告](reports/phase5-completeness.md)，机器统计见同名JSON，原文/公式抽查范围见phase5-visual-review.json。
+
+## 恢复与全文查询
+
+安装requirements.txt；原件渲染需要Poppler与中文字体。完整第三方原文和答案不进入Git明文，恢复两个独立备份需分别持有仓库外的密钥，勿将密钥放入仓库或ZIP。
+
+```powershell
+python scripts/private_data.py restore --key <旧库密钥文件>
+python scripts/national_cli.py restore --key <全国库密钥文件>
+python scripts/national_cli.py validate
+python scripts/national_cli.py build-index
+python scripts/national_cli.py sqlite-query --year 2020 --series cn-new-gaokao-1 --number 18
+python scripts/national_cli.py query --region 河南 --year-from 2020 --year-to 2024 --topic 导数
+python scripts/national_cli.py stats
+```
+
+源JSONL位于相对目录.private/national-reference，SQLite是可重建索引。同一题可在多份卷出现，保留各自题号、分值、答案与原页码；省份通过关系表使用同一卷。两套备份不互相覆盖。全国库45个加密分片含149文件，旧库63分片继续有效。实际全新目录/独立Python恢复报告见reports/phase5-fresh-restore.json。
+
+## Skill与目标制度
+
+```powershell
+python scripts/install_math_skill.py --destination <新的技能安装目录>
+python <技能目录>/scripts/run.py research --series cn-new-gaokao-1 --year-from 2020 --year-to 2026 --topic 数列
+python scripts/national_cli.py reference-pack --topic 导数 --target-region 河南 --target-year 2027 --output <私有工作目录>/references.json
+python scripts/math_skill.py plan --mode full --output <蓝图.json>
+```
+
+支持年份范围、省份、学科、系列、知识点、题型、已标注难度、思想方法和能力。未标注不按位置猜测。参考分层为当前适用系列、同系列历史、可比新卷、旧卷/特色；课标待核降权，每卷限额，不能按网站或题数投票。目标年度未登记就停止猜测；2027结构仍是模拟设定，历史选考制和22题结构不能覆盖当前19题150分规则。Skill详见skills/henan-math/references/national.md。
+
+## 新实验与验证边界
+
+任务A数列纵向研究见reports/phase5-task-A.md；任务B跨卷型导数研究见phase5-task-B.md，均绑定实际原题和来源。新增29条内容分析，未知字段保留空值。
+
+本轮宿主AI实际创作了五题样卷C及150分整卷D，无模板族调用；不是旧候选重放。交付位于experiments/phase5/pilotC-v3与fullD-v3，含题目/答案PDF、候选、独立PDF考生审题、数学对照及证书。失败稿与修订保留。作者估时134分钟与独立审题119分钟有分歧，均非实测；不得认定高考等难。已修复并回归阻断公式内中文缺字占位符，答案排版另行实际查看。
+
+```powershell
+python scripts/evaluate.py
+python scripts/national_duplicates.py
+python scripts/package_project.py --phase 5
+python scripts/check_phase5_restore.py --archive <项目ZIP> --legacy-key <旧库密钥> --national-key <全国库密钥> --output <新空目录> --report <恢复报告.json>
+```
+
+模板练习模式、AI三层写作与严格发布流程仍可用，下面保留第四阶段操作说明。公开CI无需密钥，运行生成、题面和全国数据导入回归；真实全文与备份集成在私有环境运行。测试通过不等于题面或高考质量认证。
+
+## 继续添加历史卷
+
+1. 先核实卷名、年度、地区关系、制度和许可。全国同卷只追加paper-regions，独立省卷另建Paper；六学科component约束见national/schema.json。
+2. 对具有可处理条件的公开版本，在national/acquisition.json加入固定提交的真实文件及Git blob SHA；登记实际依赖图到asset-manifest.json。保留来源许可通知，不把项目自身整理许可当作所有底层题目授权。
+3. collect_national.py下载或校验已有缓存，同时获取图像；import_national.py解析TeX、选项、子问和答案并检查原PDF定位。个别新增卷预检查失败会记录并跳过，不用空索引补数。首次解析后运行render_national_assets.py建立TikZ关联PDF页预览，再重新解析；不执行不受信TeX。
+4. 逐页、逐公式对照原文件；错误来源先隔离，修订用curation哈希绑定并保存差异。新格式先加解析器和错误夹具测试，不能靠改预计题数通过。
+5. 更新catalog、目标规则及版本绑定分析，运行validate、去重、全部测试与独立审查。源码不改变原件；未验证答案继续标候选。对新数据选一个新的备份版本及仓库外新密钥，执行national_backup.py --version <新版本> --key <新密钥>，保留旧分片，实际恢复后提交。避免只在当前工作目录保留全文查询结果。
+6. 不要直接提交research导出的完整第三方原题JSON。完整原文进入受控私有层及新备份，公开元数据只记定位和状态。人工核验与AI/自动校验分开。
+
+---
+
 # 第四阶段：规范中文题面与独立PDF考生审题
 
 当前推荐 `experiments/phase4/final/fullA/` 与 `final/fullB/`：各19题150分、8页题目；A卷答案5页、B卷答案6页。先完成5题样卷，再创建整卷；A初稿被独立审题拒收后，实际替换统计、计数、图像题并重设计数列解答题。旧70题保留作审计证据，不再推荐作合格高考模拟卷。

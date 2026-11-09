@@ -35,6 +35,11 @@ def shifted_review(folder):
 
 
 class WritingTests(unittest.TestCase):
+    def test_chinese_in_math_font_is_rejected_before_rendering(self):
+        for text in (r"E_甲", r"OA\perp\text{平面}OBC"):
+            with self.assertRaisesRegex(ValueError, "公式内中文"):
+                normalise_tex(text)
+
     def test_separate_writing_request_omits_answers_and_design(self):
         from mathgen.writing_packet import request, attach
 

@@ -30,6 +30,10 @@ VERSION = "student-layout-v2"
 
 def normalise_tex(text):
     """Expand TeX's single-token macro arguments, preserving their mathematical meaning."""
+    require(
+        not re.search(r"[\u3400-\u9fff]", text),
+        "数学字体不支持公式内中文，须将中文说明移到正文，不能用缺字占位符发布",
+    )
     text = re.sub(
         r"\\(le|ge)(?![A-Za-z])", lambda m: r"\leq" if m[1] == "le" else r"\geq", text
     )

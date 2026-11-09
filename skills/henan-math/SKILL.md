@@ -1,15 +1,15 @@
 ---
 name: henan-math
-description: 检索河南数学候选真题与命题分析，通过宿主AI或已有API动态设计原创数学题；严格分离内部规格、中文题面与PDF，经独立求解、PDF考生盲审和数学对照后发布；保留明确标记的template备用练习模式。
+description: 按省份、年份、全国或地方试卷系列检索历史数学候选真题及命题分析，依据目标考试制度分层选材，由宿主AI或已有API创作并独立验证原创题；分离数学规格、中文题面和PDF，经考生盲审与数学对照后发布，保留template备用练习模式。
 ---
 
-# 河南数学研究与AI题面写作
+# 全国历史数学研究与目标省份AI题面写作
 
 使用时告知正在应用 henan-math。先读取实际题库和分析，再创作。现有候选、模板换参或历史JSON重放不能称为一次新的AI原创。
 
 ## 定位与研究
 
-运行 scripts/run.py；支持 --database、HENAN_MATH_DB 及相对安装配置。先执行 research --topic 数列、research --topic 导数 和 rules，按要求检索年份、题型。原文须单独密钥恢复，见 [storage.md](references/storage.md)。未恢复时不能声称读过完整原题。
+运行 scripts/run.py；支持 --database、HENAN_MATH_DB 及相对安装配置。研究前阅读 [national.md](references/national.md)，按年份范围、省份、学科、系列、知识点、题型、难度、思想方法和能力检索。先读取目标制度和当前规则，再构建分层、每卷限额的完整参考包。原文须分离密钥恢复，见 [storage.md](references/storage.md)。未恢复时不能声称读过完整原题。
 
 38份逐题分析基于2025/2026第三方候选，不是命题机构确认原卷。研究必须关联题目ID、版本、来源页及证据。读取 analysis/review-overrides.json 的哈希绑定更正层，不改写原数据。官方要求、候选事实、有限样本观察与模拟设定分开。2027卷型尚未确认。
 

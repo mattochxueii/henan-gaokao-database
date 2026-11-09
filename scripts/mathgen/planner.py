@@ -25,6 +25,25 @@ def context(root):
                         "module": change["reviewed_value"],
                     }
                     applied.append(change)
+    national_summary = {}
+    if (root / "national/config.json").is_file():
+        from national_db import catalog, target, available, planning_references
+
+        national_summary = {
+            "target": target(root),
+            "papers": [
+                {
+                    k: p[k]
+                    for k in ("id", "year", "series_id", "track", "question_count")
+                }
+                for p in catalog(root, "papers")
+            ],
+            "full_history_available": available(root),
+            "question_registry_is_not_full_text": True,
+            "retrieval_entry": "national_cli.py research --target-region 河南 --target-year 2027",
+        }
+    if national_summary.get("full_history_available"):
+        national_summary["bounded_reference_packs"] = planning_references(root)
     return {
         "rules": read_json(root / "analysis/rules.json"),
         "analyses": [
@@ -42,6 +61,7 @@ def context(root):
         "sample_papers": 2,
         "applied_review_overrides": applied,
         "scope": "候选版本绑定的AI分析，尚无命题机构逐题认证",
+        "national_archive": national_summary,
     }
 
 
@@ -50,6 +70,10 @@ def plan(root, mode, profile="balanced", seed=0, proposed=None):
     rules = evidence["rules"]
     rng = random.Random(seed)
     weights = Counter(r["knowledge"]["module"] for r in evidence["analyses"])
+    if evidence.get("national_archive"):
+        weights = Counter(
+            evidence["national_archive"]["target"]["module_coverage_weights"]
+        )
     kinds = []
     if mode == "full":
         for section in rules["blueprint"]["sections"]:
@@ -105,6 +129,16 @@ def plan(root, mode, profile="balanced", seed=0, proposed=None):
                 "points": points,
                 "module": module,
                 "research_ids": ids,
+                "national_reference_ids": [
+                    r["occurrence_id"]
+                    for pack in evidence.get("national_archive", {})
+                    .get("bounded_reference_packs", {})
+                    .values()
+                    for r in pack["references"]
+                    if module in str(r.get("topic_flags", []))
+                    or module
+                    in str(r.get("national_analysis", {}).get("knowledge", []))
+                ],
                 "reasoning_target": "基本转化"
                 if i < 5
                 else "条件关联"
@@ -131,6 +165,7 @@ def plan(root, mode, profile="balanced", seed=0, proposed=None):
         "rules_sha256": fingerprint(rules),
         "sample_size": 2,
         "official_2027_structure_verified": False,
+        "reference_policy": evidence.get("national_archive", {}).get("target"),
         "planning_basis": "读取逐题知识与条件设计分析，结合AI本轮提出的模块搭配；计分结构由历史候选规则约束",
         "simulation_settings": [
             "2027详细结构尚为模拟设定",

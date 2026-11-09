@@ -11,6 +11,63 @@ test_refuse_missing_permission_before_copy (test_gaokao.IntakeTests.test_refuse_
 test_register_is_idempotent_and_rejects_mock_paper (test_gaokao.IntakeTests.test_register_is_idempotent_and_rejects_mock_paper) ... ok
 test_repeat_and_cross_paper_deduplication (test_gaokao.IntakeTests.test_repeat_and_cross_paper_deduplication) ... ok
 test_validate_rejects_modified_blob (test_gaokao.IntakeTests.test_validate_rejects_modified_blob) ... ok
+test_authenticated_roundtrip_and_wrong_key_fail (test_national.BackupTests.test_authenticated_roundtrip_and_wrong_key_fail) ... ok
+test_modified_plaintext_inventory_is_detected (test_national.BackupTests.test_modified_plaintext_inventory_is_detected) ... ok
+test_all_new_papers_have_content_backed_counts (test_national.NationalCatalogTests.test_all_new_papers_have_content_backed_counts) ... ok
+test_composite_science_requires_parent (test_national.NationalCatalogTests.test_composite_science_requires_parent) ... ok
+test_curation_is_bound_to_pdf_and_tex (test_national.NationalCatalogTests.test_curation_is_bound_to_pdf_and_tex) ... ok
+test_current_rules_not_replaced_by_historical_sample_volume (test_national.NationalCatalogTests.test_current_rules_not_replaced_by_historical_sample_volume) ... ok
+test_english_components_are_not_conflated (test_national.NationalCatalogTests.test_english_components_are_not_conflated) ... ok
+test_existing_math_papers_are_links_not_recollected (test_national.NationalCatalogTests.test_existing_math_papers_are_links_not_recollected) ... ok
+test_henan_2020_and_2021_have_year_specific_math_evidence (test_national.NationalCatalogTests.test_henan_2020_and_2021_have_year_specific_math_evidence) ... ok
+test_henan_2024_shares_I_paper (test_national.NationalCatalogTests.test_henan_2024_shares_I_paper) ... ok
+test_old_and_new_national_I_are_distinct (test_national.NationalCatalogTests.test_old_and_new_national_I_are_distinct) ... ok
+test_old_arts_and_science_separate (test_national.NationalCatalogTests.test_old_arts_and_science_separate) ... ok
+test_same_name_different_years_have_different_identity (test_national.NationalCatalogTests.test_same_name_different_years_have_different_identity) ... ok
+test_science_selective_requires_province (test_national.NationalCatalogTests.test_science_selective_requires_province) ... ok
+test_shared_question_occurrences_keep_their_numbers (test_national.NationalCatalogTests.test_shared_question_occurrences_keep_their_numbers) ... ok
+test_undefined_target_is_rejected (test_national.NationalCatalogTests.test_undefined_target_is_rejected) ... ok
+test_wrong_math_track_is_rejected (test_national.NationalCatalogTests.test_wrong_math_track_is_rejected) ... ok
+test_wrong_subject_is_rejected (test_national.NationalCatalogTests.test_wrong_subject_is_rejected) ... ok
+test_year_structure_changes_are_preserved (test_national.NationalCatalogTests.test_year_structure_changes_are_preserved) ... ok
+test_alignment_warning_does_not_falsely_prove_content_error (test_national.SourceGateTests.test_alignment_warning_does_not_falsely_prove_content_error) ... ok
+test_backup_version_cannot_escape_directory (test_national.SourceGateTests.test_backup_version_cannot_escape_directory) ... ok
+test_default_query_excludes_conflicts_but_explicit_investigation_preserves_them (test_national.SourceGateTests.test_default_query_excludes_conflicts_but_explicit_investigation_preserves_them) ... ok
+test_elementary_function_flag_is_not_derivative_evidence (test_national.SourceGateTests.test_elementary_function_flag_is_not_derivative_evidence) ... ok
+test_entire_corrupt_source_stays_quarantined_without_per_item_note (test_national.SourceGateTests.test_entire_corrupt_source_stays_quarantined_without_per_item_note) ... ok
+test_negative_and_zero_limits_are_rejected (test_national.SourceGateTests.test_negative_and_zero_limits_are_rejected) ... ok
+test_new_key_must_be_outside_repository (test_national.SourceGateTests.test_new_key_must_be_outside_repository) ... ok
+test_original_pdf_note_cannot_be_silently_promoted (test_national.SourceGateTests.test_original_pdf_note_cannot_be_silently_promoted) ... ok
+test_planning_context_remains_within_model_budget (test_national.SourceGateTests.test_planning_context_remains_within_model_budget) ... ok
+test_reference_pack_excludes_known_legacy_version_disputes (test_national.SourceGateTests.test_reference_pack_excludes_known_legacy_version_disputes) ... ok
+test_reverse_year_range_rejected (test_national.SourceGateTests.test_reverse_year_range_rejected) ... ok
+test_shared_master_is_one_planning_reference (test_national.SourceGateTests.test_shared_master_is_one_planning_reference) ... ok
+test_answer_after_environment_is_associated (test_national.TexTests.test_answer_after_environment_is_associated) ... ok
+test_answer_figures_do_not_pollute_question_assets (test_national.TexTests.test_answer_figures_do_not_pollute_question_assets) ... ok
+test_braced_solution_is_not_lost (test_national.TexTests.test_braced_solution_is_not_lost) ... ok
+test_changed_condition_is_not_duplicate (test_national.TexTests.test_changed_condition_is_not_duplicate) ... ok
+test_changed_image_is_not_duplicate (test_national.TexTests.test_changed_image_is_not_duplicate) ... ok
+test_embedded_answer_never_enters_student_stem (test_national.TexTests.test_embedded_answer_never_enters_student_stem) ... ok
+test_missing_fourth_choice_is_rejected (test_national.TexTests.test_missing_fourth_choice_is_rejected) ... ok
+test_nested_choice_braces_are_complete (test_national.TexTests.test_nested_choice_braces_are_complete) ... ok
+test_nested_parts_keep_last_outer_request (test_national.TexTests.test_nested_parts_keep_last_outer_request) ... ok
+test_same_math_style_normalizes (test_national.TexTests.test_same_math_style_normalizes) ... ok
+test_separate_lists_do_not_overwrite_earlier_one (test_national.TexTests.test_separate_lists_do_not_overwrite_earlier_one) ... ok
+test_tables_are_retained (test_national.TexTests.test_tables_are_retained) ... ok
+test_tikz_dependency_is_real_asset (test_national.TexTests.test_tikz_dependency_is_real_asset) ... ok
+test_unclosed_formula_is_rejected (test_national.TexTests.test_unclosed_formula_is_rejected) ... ok
+test_unclosed_nested_parts_are_rejected (test_national.TexTests.test_unclosed_nested_parts_are_rejected) ... ok
+test_unclosed_problem_is_rejected (test_national.TexTests.test_unclosed_problem_is_rejected) ... ok
+test_unknown_section_is_not_guessed (test_national.TexTests.test_unknown_section_is_not_guessed) ... ok
+test_II_has_seven_years (test_national_private.NationalPrivateTests.test_II_has_seven_years) ... ok
+test_I_is_continuous_and_full (test_national_private.NationalPrivateTests.test_I_is_continuous_and_full) ... ok
+test_actual_reference_cap_and_no_old_blueprint (test_national_private.NationalPrivateTests.test_actual_reference_cap_and_no_old_blueprint) ... ok
+test_all_original_ids_still_exist (test_national_private.NationalPrivateTests.test_all_original_ids_still_exist) ... ok
+test_annotations_are_bound (test_national_private.NationalPrivateTests.test_annotations_are_bound) ... ok
+test_conflicted_paper_excluded_not_deleted (test_national_private.NationalPrivateTests.test_conflicted_paper_excluded_not_deleted) ... ok
+test_inventory_and_legacy (test_national_private.NationalPrivateTests.test_inventory_and_legacy) ... ok
+test_source_answers_all_bound_without_authority_upgrade (test_national_private.NationalPrivateTests.test_source_answers_all_bound_without_authority_upgrade) ... ok
+test_sqlite_shared_master_keeps_occurrence_provenance (test_national_private.NationalPrivateTests.test_sqlite_shared_master_keeps_occurrence_provenance) ... ok
 test_actual_recovery_key_absent_from_tracked_data_and_logs (test_phase2.DatabaseResearchTests.test_actual_recovery_key_absent_from_tracked_data_and_logs) ... ok
 test_all_38_have_content_and_bound_analysis (test_phase2.DatabaseResearchTests.test_all_38_have_content_and_bound_analysis) ... ok
 test_every_comparison_is_version_bound (test_phase2.DatabaseResearchTests.test_every_comparison_is_version_bound) ... ok
@@ -62,6 +119,7 @@ test_visible_text_change_invalidates_review (test_phase4.ReleaseTests.test_visib
 test_whole_paper_failure_cannot_release (test_phase4.ReleaseTests.test_whole_paper_failure_cannot_release) ... ok
 test_wrong_independent_answer_key_cannot_release (test_phase4.ReleaseTests.test_wrong_independent_answer_key_cannot_release) ... ok
 test_boolean_is_not_student_formula (test_phase4.WritingTests.test_boolean_is_not_student_formula) ... ok
+test_chinese_in_math_font_is_rejected_before_rendering (test_phase4.WritingTests.test_chinese_in_math_font_is_rejected_before_rendering) ... ok
 test_compiled_text_has_no_internal_task_labels (test_phase4.WritingTests.test_compiled_text_has_no_internal_task_labels) ... ok
 test_disconnected_parts_are_blocked (test_phase4.WritingTests.test_disconnected_parts_are_blocked) ... ok
 test_formula_and_spec_mismatch_is_blocked (test_phase4.WritingTests.test_formula_and_spec_mismatch_is_blocked) ... ok
@@ -125,6 +183,6 @@ test_wrong_proposed_answer_is_not_read_by_solver (test_public.DefectRegressionTe
 test_wrong_syllabus_is_rejected (test_public.DefectRegressionTests.test_wrong_syllabus_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 125 tests in 34.756s
+Ran 183 tests in 30.533s
 
 OK

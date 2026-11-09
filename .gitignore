@@ -29,3 +29,8 @@ experiments/**/assets/[0-9a-f]*.png
 *.env
 tests/.scratch/
 experiments/phase4/**/review-only/pages/
+# Full third-party query exports are private; originals persist in the encrypted national dataset.
+experiments/phase5/research/*-20*.json
+# Derived previews duplicate the original AI candidate/PDF; keep them locally.
+experiments/phase5/fullD-v*/review-only/paper.md
+work/

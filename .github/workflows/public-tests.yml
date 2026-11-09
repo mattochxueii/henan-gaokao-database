@@ -24,7 +24,9 @@ jobs:
         run: python -m unittest discover -s tests -p test_public.py -v
       - name: Student-language and PDF review gates
         run: python -m unittest discover -s tests -p test_phase4.py -v
+      - name: National import and reference policy regressions
+        run: python -m unittest discover -s tests -p test_national.py -v
       - name: Ensure private material is absent
         run: |
-          python -c "from pathlib import Path; import subprocess; p=subprocess.check_output(['git','ls-files','-z'],text=True).split('\0'); assert not any(x.endswith('.key') or x.startswith('.private/') for x in p if x); assert not Path('.private/math-reference').exists()"
+          python -c "from pathlib import Path; import subprocess; p=subprocess.check_output(['git','ls-files','-z'],text=True).split('\0'); assert not any(x.endswith('.key') or x.startswith('.private/') for x in p if x); assert not Path('.private/math-reference').exists(); assert not Path('.private/national-reference').exists()"
 

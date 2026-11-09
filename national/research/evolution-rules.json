@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "observations": [
+    {
+      "id": "sequence-modes",
+      "class": "limited_sample_observation",
+      "claim": "本批样本覆盖公共项、奇偶递推、部分和商、充要条件、有理变换、序号构造和局部存在性；没有单一固定考法",
+      "evidence": [
+        "2020-cn-math-new-gaokao-1:q014",
+        "2020-cn-math-new-gaokao-1:q018",
+        "2021-cn-math-new-gaokao-1:q016",
+        "2021-cn-math-new-gaokao-1:q017",
+        "2022-cn-math-new-gaokao-1:q017",
+        "2022-cn-math-new-gaokao-1:q022",
+        "2023-cn-math-new-gaokao-1:q007",
+        "2023-cn-math-new-gaokao-1:q020",
+        "2024-cn-math-new-gaokao-1:q019",
+        "2025-cn-math-national-1:q013",
+        "2024-cn-math-new-gaokao-1:q008",
+        "2025-cn-math-national-1:q016",
+        "2026-cn-math-national-1:q007",
+        "2026-cn-math-national-1:q014"
+      ]
+    },
+    {
+      "id": "position-not-fixed",
+      "class": "direct_candidate_fact",
+      "claim": "2024I末题为等差分组新定义，2025/2026保存候选末题为函数综合，不能把函数末题当硬约束",
+      "evidence": [
+        "2024-cn-math-new-gaokao-1:q019",
+        "2025-cn-math-national-1:q019",
+        "2026-cn-math-national-1:q019"
+      ]
+    },
+    {
+      "id": "cross-series-derivative",
+      "class": "limited_sample_observation",
+      "claim": "新旧卷均涉及参数、零点和不等式，但具体定义域、量词、局部/全域及择一条件不同；不能按卷名预设难度",
+      "evidence": [
+        "2020-cn-math-new-gaokao-1:q021",
+        "2020-cn-math-new-gaokao-2:q022",
+        "2021-cn-math-new-gaokao-1:q022",
+        "2021-cn-math-new-gaokao-2:q022",
+        "2022-cn-math-new-gaokao-2:q022",
+        "2023-cn-math-new-gaokao-1:q019",
+        "2023-cn-math-new-gaokao-2:q022",
+        "2024-cn-math-new-gaokao-1:q018",
+        "2024-cn-math-new-gaokao-2:q016",
+        "2020-cn-math-national-1-legacy-liberal:q020",
+        "2020-cn-math-national-1-legacy-science:q021",
+        "2021-cn-math-national-b-science:q020",
+        "2022-cn-math-national-b-science:q021",
+        "2023-cn-math-national-b-liberal:q020",
+        "2022-cn-zj-math:q022"
+      ]
+    },
+    {
+      "id": "no-next-year-certainty",
+      "class": "unverified_hypothesis",
+      "claim": "历史考点或位置连续出现不保证2027重复",
+      "enabled_as_hard_constraint": false
+    }
+  ],
+  "official_facts": [
+    {
+      "claim": "2024数学新课标卷调整为19题",
+      "source_id": "moe-2024-review-reprint",
+      "scope": "结构调整，不是2027命题公告"
+    }
+  ]
+}

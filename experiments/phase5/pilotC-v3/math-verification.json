@@ -1,0 +1,247 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-1/2",
+        "steps": [
+          "代入题设条件，化简 \\(- \\frac{1}{2}\\)，得到 \\(- \\frac{1}{2}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "third_iterate": "0",
+          "first": "-1/2",
+          "second": "-2",
+          "third": "1",
+          "index_remainder": "2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase5:C:q001:v3",
+    "math_spec_sha256": "c3ce148a974c72d8bb44a4ad0a1061cf2e387ac8f4c4eb243e7bc7245ffbcb67",
+    "writing_sha256": "b94de7d22f9799f4d9867a238eb77eacc2772f2a8a719b7d7e4ea2f6f7a3c35b"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "derivative": "3*x**2 - 3",
+          "violating_set": "EmptySet"
+        }
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "roots": "{-2, 1}"
+        }
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x**3 - 3*x + 2",
+          "derivative": "3*(x - 1)*(x + 1)",
+          "at_contact": "2",
+          "slope_at_contact": "-3"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "tangent_data": {
+            "result": [
+              "-3"
+            ],
+            "complete": true,
+            "facts": {
+              "contact_points": [
+                "0"
+              ]
+            },
+            "formal_proof": false
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase5:C:q002:v1",
+    "math_spec_sha256": "3ea15f1e7c61d17f2dc0d80f8f6618637531f7ccb98b64a4077e39f914420d95",
+    "writing_sha256": "13480bdfc3473ba6279acf6b2bc0615ce237e9085849e3833c2e5f481cec5c73"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2*sqrt(7)",
+        "steps": [
+          "代入题设条件，化简 \\(2 \\sqrt{7}\\)，得到 \\(2 \\sqrt{7}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:C:q003:v1",
+    "math_spec_sha256": "ce77bba53e84ea8f438e82e3c87a33c401575c3cac9868616e04629b934ca699",
+    "writing_sha256": "70bf6118e8057edb46b384826ed7e335c93c18cc3b48120273ec1772a0cba801"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "reciprocal_step": "2",
+          "candidate_residual": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "n/(2*n + 1)",
+        "steps": [
+          "先分解通项 \\(\\frac{1}{\\left(2 k - 1\\right) \\left(2 k + 1\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{n}{2 n + 1}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:C:q004:v1",
+    "math_spec_sha256": "62dd03fbaa6ebeb69b20e41cbe18f539a461853d39b9c4f4ac5d973b56ef99cc",
+    "writing_sha256": "bff8f892139ff394c8e45121b1839cb02e7f1e56816ce18c07fb1fb3ffd8bef3"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "increasing": "Interval.Lopen(0, exp(2))",
+          "decreasing": "Interval(exp(2), oo)",
+          "critical": [
+            "exp(2)"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(- \\frac{\\log{\\left(x \\right)} - 2}{2 x^{\\frac{3}{2}}}\\)，驻点为\\(\\left\\{e^{2}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left(0, e^{2}\\right]\\)，为负的区间为\\(\\left[e^{2}, \\infty\\right)\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": {
+          "minimum": "-oo",
+          "maximum": "2*exp(-1)",
+          "minimum_at": [],
+          "maximum_at": [
+            "exp(2)"
+          ]
+        },
+        "steps": [
+          "定义域内连续，导数为\\(- \\frac{\\log{\\left(x \\right)} - 2}{2 x^{\\frac{3}{2}}}\\)，驻点为\\(\\left\\{e^{2}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left(0, e^{2}\\right]\\)，为负的区间为\\(\\left[e^{2}, \\infty\\right)\\)。",
+          "逐一比较驻点值、端点值与开端点极限。{'minimum': '-oo', 'maximum': '2*exp(-1)', 'minimum_at': [], 'maximum_at': ['exp(2)']}"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": [
+          {
+            "level_interval": "Interval.open(-oo, 0)",
+            "roots": 1
+          },
+          {
+            "level_interval": "Interval.open(0, 2*exp(-1))",
+            "roots": 2
+          },
+          {
+            "level_interval": "Interval.open(2*exp(-1), oo)",
+            "roots": 0
+          },
+          {
+            "level": "0",
+            "roots": 1
+          },
+          {
+            "level": "2*exp(-1)",
+            "roots": 1
+          }
+        ],
+        "complete": true,
+        "facts": {
+          "critical_points": [
+            "0",
+            "exp(2)",
+            "oo"
+          ],
+          "branch_limits": [
+            "-oo",
+            "2*exp(-1)",
+            "0"
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:C:q005:v1",
+    "math_spec_sha256": "91a488f4789d766eaee63bf21c1e1e118c81845d2b594dca9f95672d452794ac",
+    "writing_sha256": "3db259158e7f0b59324d5e304a61f82e081fbdd33ed2c5cf11af1ea9dab709de"
+  }
+]

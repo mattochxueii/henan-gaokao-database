@@ -1,0 +1,755 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "3",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(3\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase5:D:q001:v1",
+    "math_spec_sha256": "8889ed2643194d26a20998517f5c81e3972805319752d7bfbdedd1bf490ebe42",
+    "writing_sha256": "35961e4b71f632445945a415f64baf6e5fece0156091ecd5fe010074ada76c95"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-I",
+        "steps": [
+          "代入题设条件，化简 \\(- i\\)，得到 \\(- i\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "equal_distance": "-2*x - 2*y",
+          "square": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase5:D:q002:v1",
+    "math_spec_sha256": "0630be2bb0aab935f03d8a48da5c9a4c0927bee9d35dcef550ac2dde57654736",
+    "writing_sha256": "862052e78493a4411b4036ef40906eb781e3f89d989a3f96c600f5b4b5a17a17"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "5",
+        "steps": [
+          "代入题设条件，化简 \\(5\\)，得到 \\(5\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase5:D:q003:v1",
+    "math_spec_sha256": "e54de2c65289022830d72406fbcb636bc92ddabf76b0e2fa1d9d38e2c7d58545",
+    "writing_sha256": "0f4cd4a8253d1b7f8f4958da11ecdb0ce6a279ee8337cc6cfe73838b4decc941"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": 3,
+        "steps": [
+          "将条件移项并因式分解为 \\(\\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} - 1\\)=0，限制在题设区间内，得到 \\(\\left\\{0, \\frac{\\pi}{2}, 2 \\pi\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase5:D:q004:v1",
+    "math_spec_sha256": "5c29a65eb10accbb5a45149ffabce0a58d9dfd2169321ed2846cb02bb900cb87",
+    "writing_sha256": "fc1bd4884d0c1c43da421488787a6660d943c266103e510e2a23033b0cdc9742"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "110",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "11 - 9*b/2"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase5:D:q005:v1",
+    "math_spec_sha256": "71d5a43e8d64f51a5cceaa0fdd09d5f53dca31a83ba13781524994d5c62eb305",
+    "writing_sha256": "414c71b5dfd5af98b22dbbeab2062b48de3e13f00b4264b20a6fa934d91be4a2"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4",
+        "steps": [
+          "代入题设条件，化简 \\(4\\)，得到 \\(4\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase5:D:q006:v1",
+    "math_spec_sha256": "5227aee4df41303289b148792a5d665818a14c2620567f7f038d0ea9e5296d74",
+    "writing_sha256": "7bb12494b3a94759359e2f2ee352470a67f7db6f5e5bfc1b7e73313d69acb720"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "56*pi",
+        "steps": [
+          "代入题设条件，化简 \\(56 \\pi\\)，得到 \\(56 \\pi\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "radius0": "14",
+          "radiusA": "14",
+          "radiusB": "14",
+          "radiusC": "14"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase5:D:q007:v1",
+    "math_spec_sha256": "3b4e66ebea9d0243c37a330b334fcbb1592166bde8edc17e1346913527288e5f",
+    "writing_sha256": "a4061e95b2747b0b9922fb1bf5cf1109e7f338da88aa439482d919a1ab5de21b"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "steps": [
+          "代入题设条件，化简 \\(2\\)，得到 \\(2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": [
+          "0",
+          "27/4"
+        ],
+        "complete": true,
+        "facts": {
+          "contact_points": [
+            "0",
+            "3/2"
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase5:D:q008:v1",
+    "math_spec_sha256": "ffeb493eb241037d4a64391fa1d4f91d1443065be585f92c67b60da704ec9ba5",
+    "writing_sha256": "6ec9b001ff4c3f8b0ce9a2c0fd8a4f6e0d22bdd9038e2490190e2dc4a1c13b93"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "2",
+            "steps": [
+              "代入题设条件，化简 \\(2\\)，得到 \\(2\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "1",
+            "steps": [
+              "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "5/16",
+            "steps": [
+              "代入题设条件，化简 \\(\\frac{5}{16}\\)，得到 \\(\\frac{5}{16}\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "2/5",
+            "steps": [
+              "代入题设条件，化简 \\(\\frac{2}{5}\\)，得到 \\(\\frac{2}{5}\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": "ACD",
+    "id": "orig:ai:phase5:D:q009:v1",
+    "math_spec_sha256": "fe095c383625652ae8b13708fffe580d522e4f1648456726c433e87354bf224f",
+    "writing_sha256": "bf01569e5ecf1e1dd25d944e615ec0d07385bf868b50c893f34eef10145f293c"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "sqrt(5)/3",
+            "steps": [
+              "代入题设条件，化简 \\(\\frac{\\sqrt{5}}{3}\\)，得到 \\(\\frac{\\sqrt{5}}{3}\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "discriminant": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "8/3",
+            "steps": [
+              "代入题设条件，化简 \\(\\frac{8}{3}\\)，得到 \\(\\frac{8}{3}\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase5:D:q010:v1",
+    "math_spec_sha256": "333dd9f052528236ccb2aa9f7061260a244b541970ec296be1961dc298f572b4",
+    "writing_sha256": "fb3e91dc54d0d63eb8410d7d8b58b923dc2f176eed42dd0356c6471c4fd526b3"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "ratio": "(n + 1)**2/(2*n**2)",
+          "at3": "9/8"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "sum_residual": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "difference": "2*n**2 - 1"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase5:D:q011:v1",
+    "math_spec_sha256": "ebf3d4b82774b0f08cb57e0ba4c9b04782158c601686c6aa734f9b0e662194eb",
+    "writing_sha256": "8d226be3e96d0657ccbfe7a62881286f227105ab74de70affd75d0342ea8cf9e"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "240",
+        "steps": [
+          "代入题设条件，化简 \\(240\\)，得到 \\(240\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q012:v1",
+    "math_spec_sha256": "7acaa86acd1c0b71c66f9a7cd36556890d386eb90b6115c2c0d71da805823a63",
+    "writing_sha256": "58a83d7bd805d6528c06c1a8ab9be1555abc09947dd1858676d2d3c97febcdaf"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "2*sqrt(3)/3",
+              "y": "-sqrt(6)/3"
+            },
+            {
+              "x": "2*sqrt(3)/3",
+              "y": "sqrt(6)/3"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q013:v1",
+    "math_spec_sha256": "48ee19c5e2b6e7be1b131ea1302d57cf9d394dd3fddcdc02e21aa1550d6abfc1",
+    "writing_sha256": "5d1f5e18b9ce271ad9312dc4bebd86dfe7aef1e8e389a1ea28a37948b4881c5f"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "steps": [
+          "代入题设条件，化简 \\(2\\)，得到 \\(2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q014:v1",
+    "math_spec_sha256": "b227c5bf0d6a08e8b7765aba1d8fb8d291e673764248397e958b8645f869f068",
+    "writing_sha256": "082589e094781cb4b1fa6cb3eaece157dd929930dc084cb8e4556b35eb855633"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "distribution": {
+            "0": "1/14",
+            "1": "3/7",
+            "2": "3/7",
+            "3": "1/14"
+          },
+          "expectation": "3/2",
+          "variance": "15/28"
+        },
+        "complete": true,
+        "facts": {
+          "normalisation": "1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "3/7",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共70个有序结果，其中30个满足目标事件，故概率为\\(\\frac{3}{7}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "strategy_difference": "3*c/7 - 18/7",
+          "expected_A": "13*c/14 + 3/7",
+          "expected_B": "c/2 + 3"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q015:v1",
+    "math_spec_sha256": "9511b785f6811a7383c6f2593e78d6084069b3f26a342bd87cc4b415add6a841",
+    "writing_sha256": "9bae59c8e3eddf4286e12e8f8cbf01909d126afe1aff67b5eeb6688a134de892"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "6*sqrt(61)/61",
+        "complete": true,
+        "facts": {
+          "normal_one": [
+            "12",
+            "8",
+            "6"
+          ],
+          "normal_two": [
+            "12",
+            "0",
+            "0"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "16*x**2 + 9*(1 - x)**2 + 4",
+          "derivative": "2*(25*x - 9)",
+          "square_completion": "0",
+          "max_sine": "5*sqrt(61)/61"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q016:v1",
+    "math_spec_sha256": "5cf8a0dd0e0a9f69aa17650d0ad91aeb9f4306f5b7b20c952294ffa804ddc2b9",
+    "writing_sha256": "d50c785b3707d226450a96e2a320c44000a86d52050493b39c01a95170e49b3e"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "telescope": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "term": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "gap": "3*Abs(x)/(sqrt(x**2 + 3) + Abs(x))"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q017:v1",
+    "math_spec_sha256": "f20f363dadece8df7f7959b973c866f8cdedfeeb4e4b470dfe0256da350e688f",
+    "writing_sha256": "957834c65d2ae6d48566889687187763282708e57353f43af3a0a89f349a3b24"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "discriminant": "16 - 16*x**2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "sum_ab": "-2 + 4/x**2",
+          "mid_x": "-1 + 2/x**2",
+          "mid_y": "2/x",
+          "locus": "0"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "dot": "5",
+          "product_norm_squared": "9 + 16/x**2",
+          "slope": "4*sqrt(91)/91"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q018:v1",
+    "math_spec_sha256": "37a9975d97d1c1bcb8940b4726b4536a9962fa24ec3ac316e5e698976fee9d8a",
+    "writing_sha256": "6e2621712b75bb06174ac54a3aba82d5cfe5dc8036a279ee1eec291c10063db8"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-x + exp(x) - 1",
+          "derivative": "exp(x) - 1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "(-x + exp(x) - 1)/x**2",
+          "derivative": "(x*exp(x) + x - 2*exp(x) + 2)/x**3",
+          "p_derivative": "(x - 1)*exp(x) + 1",
+          "p_second": "x*exp(x)",
+          "half_derivative": "-x + exp(x) - 1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-a*x**2 - x + exp(x) - 1",
+          "derivative": "-2*a*x + exp(x) - 1",
+          "second_at_zero": "1 - 2*a"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:phase5:D:q019:v1",
+    "math_spec_sha256": "f1e1807cbf74986c90353c4c54c9653bd317e337fe18bcf77b440c5f847de32c",
+    "writing_sha256": "a8fc51b280ef61485c5b312883a5caee84a43c8b539b4984ac55ce411fbed0d7"
+  }
+]

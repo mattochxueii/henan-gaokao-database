@@ -1,0 +1,756 @@
+{
+  "encrypted_backup": ".private/national-v1.enc",
+  "backup_parts_manifest": "private-data/national-v1/backup-parts.json",
+  "cipher_sha256": "f012defc2c4fbc7ad44c86b20a40ef4e398c12518f47bae53c1645f60cdd1b48",
+  "files": [
+    {
+      "path": "acquisition-results.json",
+      "sha256": "a2ea5795595784ffcd95ee911df7254d508b1e6e9d600ebc9faa3146493fc880",
+      "bytes": 50176
+    },
+    {
+      "path": "alternative-versions.jsonl",
+      "sha256": "ab8b7b588638bdb6d2388b9f56f7437399702bcbdafe54a705553d921b34d52d",
+      "bytes": 590
+    },
+    {
+      "path": "answers.jsonl",
+      "sha256": "e98b907cfe6b7c2e4315f5493ec8db3e980299cfabbd02db882c88c2078be307",
+      "bytes": 919544
+    },
+    {
+      "path": "assets.json",
+      "sha256": "6b0ad78d19caae6c10c189081be3b88d4834ddada117dd9e5eb88e4afcdba9fa",
+      "bytes": 41693
+    },
+    {
+      "path": "derived/2022-cn-math-national-b-liberal-p1.png",
+      "sha256": "4118ffc639dae21f7096355446301e7cd02c7427465d174701bc1ff103124fff",
+      "bytes": 387663
+    },
+    {
+      "path": "derived/2022-cn-math-national-b-science-p1.png",
+      "sha256": "b78886b89d0156026722ae80c3a9519e0bfec45e29b70d279d99acf0b3038be5",
+      "bytes": 430615
+    },
+    {
+      "path": "derived/2022-cn-math-new-gaokao-2-p2.png",
+      "sha256": "f1e7fc59e03289266bc20dd038175a14906bf9aff1010782ec1ce0d62022cfac",
+      "bytes": 237700
+    },
+    {
+      "path": "derived/2023-cn-math-new-gaokao-2-p1.png",
+      "sha256": "98a1bdfa2a631ff178b2f2d4ebad4488bc6a4c1b1e0c0849cc74a00c5e507a5f",
+      "bytes": 613053
+    },
+    {
+      "path": "derived/2026-cn-math-new-gaokao-2-p2.png",
+      "sha256": "bae8d95f9577e7ad4ae06d977dd27b9b283ea0a982d24719e3c03d6e3b3a1c09",
+      "bytes": 212284
+    },
+    {
+      "path": "figure-previews.json",
+      "sha256": "acd4b9f688a218841234abcfaaf1adeff90cf7efaa5a54664e1875f6a5a81a7f",
+      "bytes": 2238
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "9c4c4bce3bd008726b66261b9eded33566a27ce34930ab871c2381d45a232972",
+      "bytes": 25421
+    },
+    {
+      "path": "occurrences.jsonl",
+      "sha256": "03a94b4aff5a38d7aacb8f562738879a5489e912a4dfef1ff70e6c45bbeff32f",
+      "bytes": 366051
+    },
+    {
+      "path": "questions.jsonl",
+      "sha256": "bc77c47d3468bb0916fa68987413eeaf15fd1b9e57feeda6f79f36a87e1b9bb5",
+      "bytes": 682374
+    },
+    {
+      "path": "sequence-research.json",
+      "sha256": "d7cfa47d5e1024fdc9373ed9add88acde4292a2aed0ee9d5c005394cff3a504b",
+      "bytes": 87132
+    },
+    {
+      "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+      "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945",
+      "bytes": 559508
+    },
+    {
+      "path": "upstream/pdf/2020-cn-math-national-1-legacy-science.pdf",
+      "sha256": "2f775dba533e3bf5b948e8c6117bbd12273f38c1af10b94fb305c11a301159f6",
+      "bytes": 558549
+    },
+    {
+      "path": "upstream/pdf/2020-cn-math-new-gaokao-1.pdf",
+      "sha256": "9e5866e22595c60ae0739bcc8f2a4910916c3b154e36da3ecefce3242a0424bf",
+      "bytes": 660877
+    },
+    {
+      "path": "upstream/pdf/2020-cn-math-new-gaokao-2.pdf",
+      "sha256": "781ae3ba46649ff73d54a4206cc16d99327d4c61ef98ea977ab3643f551a825d",
+      "bytes": 660208
+    },
+    {
+      "path": "upstream/pdf/2021-cn-math-national-b-liberal.pdf",
+      "sha256": "762437e457e74336d236994521d79c0161b8f6e90fa06aa623efb9630b9dce08",
+      "bytes": 505103
+    },
+    {
+      "path": "upstream/pdf/2021-cn-math-national-b-science.pdf",
+      "sha256": "d589190dad6191bf8779720c7e8f30c26966a09f3282f4188e5f719e2ab1f483",
+      "bytes": 508170
+    },
+    {
+      "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+      "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513",
+      "bytes": 501645
+    },
+    {
+      "path": "upstream/pdf/2021-cn-math-new-gaokao-2.pdf",
+      "sha256": "cf3ee8444da42aa41e561160971b5a364794c76fae50b557c94b0991af928bf5",
+      "bytes": 507006
+    },
+    {
+      "path": "upstream/pdf/2022-cn-math-national-b-liberal.pdf",
+      "sha256": "f4eaf62256df8f5b183c178cae7197bb3f7dceea68d4181e7b1f8fd7177b913f",
+      "bytes": 515356
+    },
+    {
+      "path": "upstream/pdf/2022-cn-math-national-b-science.pdf",
+      "sha256": "0f413c949aa306bfd5894134a34244d4bb9629dea8766cfe6340bf3c43790e31",
+      "bytes": 511772
+    },
+    {
+      "path": "upstream/pdf/2022-cn-math-new-gaokao-1.pdf",
+      "sha256": "0e3b30ef1870c3bde56368f48e67f7711e6f50dde44f3dd5fc0cfd8cae2045a3",
+      "bytes": 503488
+    },
+    {
+      "path": "upstream/pdf/2022-cn-math-new-gaokao-2.pdf",
+      "sha256": "a25b45fa49abc3913e6a16eafadad12bff418468d93d072a97f7bf6adf9cede7",
+      "bytes": 607669
+    },
+    {
+      "path": "upstream/pdf/2022-cn-zj-math.pdf",
+      "sha256": "73adc185fb5f9abefd52b4299b855ad21b98b83d3789993c64836bc6d18c9b8f",
+      "bytes": 501626
+    },
+    {
+      "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+      "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0",
+      "bytes": 501708
+    },
+    {
+      "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+      "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39",
+      "bytes": 500624
+    },
+    {
+      "path": "upstream/pdf/2023-cn-math-new-gaokao-1.pdf",
+      "sha256": "208f3c2076d9739f51107ec777f9f937eabe8af97c41695ec7d750a8be4ca140",
+      "bytes": 502421
+    },
+    {
+      "path": "upstream/pdf/2023-cn-math-new-gaokao-2.pdf",
+      "sha256": "7fe5ff93dcff627e2346abb6d76fdffd9d3faa1ae2c668a29a8b758ab0ea9a10",
+      "bytes": 513153
+    },
+    {
+      "path": "upstream/pdf/2024-cn-math-new-gaokao-1.pdf",
+      "sha256": "a8877417b265b5d1b8ab525d63946f63e0e41b611d37b1c0c0d01fd5a24fca7c",
+      "bytes": 579269
+    },
+    {
+      "path": "upstream/pdf/2024-cn-math-new-gaokao-2.pdf",
+      "sha256": "60ea0689fc45a2f07c736488ed7d14cac815b1d6254760a950050fa343e0e60f",
+      "bytes": 502556
+    },
+    {
+      "path": "upstream/pdf/2025-cn-math-new-gaokao-2.pdf",
+      "sha256": "407a0c8bd7e616955121d02b08946e80a8f607f0960cce520eccf66e6a61ccdf",
+      "bytes": 500030
+    },
+    {
+      "path": "upstream/pdf/2026-cn-math-new-gaokao-2.pdf",
+      "sha256": "4d570a5947b71464c31c534f44ef91c0777d6ed4017fb4b3ec0b38b1b1f92a42",
+      "bytes": 105326
+    },
+    {
+      "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+      "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0",
+      "bytes": 17187
+    },
+    {
+      "path": "upstream/tex/content/2020/national_paper_1_science.tex",
+      "sha256": "55e7f7e8a4aa74d6f487ab848796bf981aecc61765ce85cac0a7325e7bda37fb",
+      "bytes": 18996
+    },
+    {
+      "path": "upstream/tex/content/2020/new_gaokao_paper_1.tex",
+      "sha256": "bd587be9c0849410f09ed4c52082ad51a89a45235e3b4aa54770569b07b46cf3",
+      "bytes": 17539
+    },
+    {
+      "path": "upstream/tex/content/2020/new_gaokao_paper_2.tex",
+      "sha256": "fed02ee021f4759c5a870ad75267dacc57d2eff2874d044befa396bdb987292b",
+      "bytes": 15752
+    },
+    {
+      "path": "upstream/tex/content/2021/national_paper_b_liberal.tex",
+      "sha256": "b40261b8a739d64edfe7ea31b4b9b83ce7e46673e20d4051f59a15d499ad7d9a",
+      "bytes": 15690
+    },
+    {
+      "path": "upstream/tex/content/2021/national_paper_b_science.tex",
+      "sha256": "0a4a491f471092b0e7fbc1f5243b6084e3848a375462329db3df5fc70cbb4b32",
+      "bytes": 19056
+    },
+    {
+      "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+      "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e",
+      "bytes": 19593
+    },
+    {
+      "path": "upstream/tex/content/2021/new_gaokao_paper_2.tex",
+      "sha256": "18d6de0043b6dc13920f622d1d2922007cb78cf1f208c77f3a983b7e45be83aa",
+      "bytes": 19233
+    },
+    {
+      "path": "upstream/tex/content/2022/national_paper_b_liberal.tex",
+      "sha256": "702d50bf0e3ac11ce6e190f6dd75989ae2d4fc47b788cefee1ae1f577a1df45d",
+      "bytes": 25459
+    },
+    {
+      "path": "upstream/tex/content/2022/national_paper_b_science.tex",
+      "sha256": "bfdcdc80a18dc6251bff6656d2962724deff24380b7d1541c44dd81e74958293",
+      "bytes": 35127
+    },
+    {
+      "path": "upstream/tex/content/2022/new_gaokao_paper_1.tex",
+      "sha256": "010d0dd928f51cbd275549c97374d6599695fcefee63e9a4038fe66cb81fbfed",
+      "bytes": 42214
+    },
+    {
+      "path": "upstream/tex/content/2022/new_gaokao_paper_2.tex",
+      "sha256": "d0e98b68b43eeed036ffd5542a2ca999785fb511b4bbddfe6216f964a46ae2fd",
+      "bytes": 24671
+    },
+    {
+      "path": "upstream/tex/content/2022/zhejiang.tex",
+      "sha256": "41b8ec7589346077518f5a2b79edb3133ddae4770d362f11cc0d9c70c1237a42",
+      "bytes": 21937
+    },
+    {
+      "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+      "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc",
+      "bytes": 15959
+    },
+    {
+      "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+      "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b",
+      "bytes": 36848
+    },
+    {
+      "path": "upstream/tex/content/2023/new_gaokao_paper_1.tex",
+      "sha256": "ee9ad530142cafb0cb8c47dd7653025676f15a0659581e67ad7e370ad0a14ed8",
+      "bytes": 23481
+    },
+    {
+      "path": "upstream/tex/content/2023/new_gaokao_paper_2.tex",
+      "sha256": "0bffe12415f8440f6cd4534aaa430ba6d9dbbd417e953e7a7f8a5072f13b4e96",
+      "bytes": 25395
+    },
+    {
+      "path": "upstream/tex/content/2024/new_gaokao_paper_1.tex",
+      "sha256": "482334d3d5c249a89e630d313d3c69e11fbfb7d7717e96c771371a8d49bc160b",
+      "bytes": 20832
+    },
+    {
+      "path": "upstream/tex/content/2024/new_gaokao_paper_2.tex",
+      "sha256": "715f088bbbabd5461fb1d9e3ab05f33a15aec0c70a94d2d1ef03d1a07d8d2ca5",
+      "bytes": 26628
+    },
+    {
+      "path": "upstream/tex/content/2025/national_paper_2.tex",
+      "sha256": "da767980f91ac44b5c212a73591239506b5e53b2e90767ed69d8f96f99b6be89",
+      "bytes": 20011
+    },
+    {
+      "path": "upstream/tex/content/2026/national_paper_2.tex",
+      "sha256": "ce22b9b3c63eaf1cc443703226452214257f3b4cb65812ef395d73a525c05e8f",
+      "bytes": 28609
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q19_fig1.png",
+      "sha256": "1d5d05735f64ead3b3898f4731b4dfc522cc0edf7f5fc26618cd3e87a822df79",
+      "bytes": 30409
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q23_question_fig1.png",
+      "sha256": "dc18f0e573b8820603caffec47e30f95e822d0fad12c31a6480c280fbfe775fe",
+      "bytes": 2101
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q3_question_fig1.png",
+      "sha256": "54f8ff0ab8e68fc2d71da825334658876ca40d06ff35c9defbb0c55b1a5c178a",
+      "bytes": 322938
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q5_fig1.png",
+      "sha256": "fc2db6cfff581a264b39108db0386d9fa4babae14d6d8b9cc737491ccb82de2b",
+      "bytes": 34002
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q7_fig1.png",
+      "sha256": "2bb2c767d12aab4a2104c1df6e6d0d6ea7958a6ba0e456580026385fea3155aa",
+      "bytes": 17330
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_liberal/q9_fig1.png",
+      "sha256": "9bc29002ea7de3047fd66d3a27ad1d9d483fced62c57b5f99e9194cb52354089",
+      "bytes": 39149
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q16_fig1.png",
+      "sha256": "785a8b2b694a354d03b5cf59884e3f95b543d29d369c287783f544619a6c18ba",
+      "bytes": 23290
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q18_fig1.png",
+      "sha256": "4326455923158d31c8bd86659275214d2c056db105b98bafa5e38cce3ffa4bee",
+      "bytes": 38149
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q23_fig1.png",
+      "sha256": "823c01ea8085ae884cb985a4957bd349a61ff36f994c31a29e3db31a47bce1d9",
+      "bytes": 8853
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q23_solution_fig1.png",
+      "sha256": "64a13caf79d4e28692dc201dbd2cc00a2c867996c55f4a666f67e975bdff0ce3",
+      "bytes": 17570
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q3_fig1.png",
+      "sha256": "99b340351f539c79aa05f73f9601aa13a7eebfbf47a62666edf418c1418d6622",
+      "bytes": 327293
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q5_fig1.png",
+      "sha256": "8b5d7c53a6d6ce4c980afa22bb3220e28247ef3072a395edee7bbf7922161240",
+      "bytes": 29265
+    },
+    {
+      "path": "upstream/tex/img/2020/national_paper_1_science/q7_fig1.png",
+      "sha256": "3c7c8977b313596f2a221cd6b6c7166984898cda22105a2892ac90743d160f30",
+      "bytes": 17248
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_1/q10_fig1.png",
+      "sha256": "1f8c687d9c8403098b32e675b1d65fffc2ce447470b97d5918a70e843f80d6ba",
+      "bytes": 15226
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_1/q15_fig1.png",
+      "sha256": "b77ef82fc9daa5e1e4196eca01a4f35e776143ad90bb5519868bc2f20e27d55a",
+      "bytes": 15055
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_1/q20_fig1.png",
+      "sha256": "7fc7214bacb08835c3be53ed3c66b34b7eac520b93186d87998a8da1c0576a3c",
+      "bytes": 17781
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_1/q4_fig1.png",
+      "sha256": "2176c6ddd2d7d3dd49e683ec1abf3b8b6836d99be9f095f7da2fdef1586ea087",
+      "bytes": 451820
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_2/q11_fig1.png",
+      "sha256": "925edacd3d2e3ccc261192e0da274728ad0794e27ee3d424bfa476613b1fd494",
+      "bytes": 15318
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_2/q16_fig1.png",
+      "sha256": "96f0dfd193872ad8961335784975764dce7f5010ee5601c3db325249d41d3b52",
+      "bytes": 28561
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_2/q20_fig1.png",
+      "sha256": "b007a3135209ac8dc01b25b638a357a80aee7fc804964d0fc0dc3ea15db986e2",
+      "bytes": 17926
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_2/q4_fig1.png",
+      "sha256": "32b12ad017d1713958b9b3ebf7f9ab5012d91b55c3cb1430dc20a5ce1861ee4b",
+      "bytes": 428656
+    },
+    {
+      "path": "upstream/tex/img/2020/new_gaokao_paper_2/q9_fig1.png",
+      "sha256": "9b9df06923a741fff1767786593323cff498621c572bb6d6cc78b8d207b2f599",
+      "bytes": 54113
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_liberal/q16_fig1.png",
+      "sha256": "5a4bd73968a3b0ef6956a85e3acc1ceebc2f278eb429a96bc3596c70ad491c95",
+      "bytes": 19947
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_liberal/q18_fig1.png",
+      "sha256": "f28d130dd7cd89dbf5638d6f5ccf95e6e232826b36174d4cc09977ff9df86a05",
+      "bytes": 27192
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_science/q16_fig1.png",
+      "sha256": "1e2aafb23b894638fc84e2a6e7d10d7cfd754e521d388be8abfcf66e56894f95",
+      "bytes": 19576
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_science/q18_fig1.png",
+      "sha256": "ead145a8c89cb9a6cbf30707b731b4009bf1569ac3dfb26da74e5c01d13230f5",
+      "bytes": 26595
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_science/q5_fig1.png",
+      "sha256": "086d496bd77171997c9d20829869e38b701fc26e1903572ee54628095eb7aa84",
+      "bytes": 12090
+    },
+    {
+      "path": "upstream/tex/img/2021/national_paper_B_science/q9_fig1.png",
+      "sha256": "20b6983ff104e9157fea7fb98f94454bb53cfe05fb7d7932257f2dfb9d6e7833",
+      "bytes": 45592
+    },
+    {
+      "path": "upstream/tex/img/2021/new_gaokao_paper_1/q20_fig1.png",
+      "sha256": "ae989446149a80ca7d7e23dc4f46d9ed6e1a46f0016ff9eead1537a0739d50fd",
+      "bytes": 20770
+    },
+    {
+      "path": "upstream/tex/img/2021/new_gaokao_paper_2/q19_fig1.png",
+      "sha256": "4e5f6880ed93385a86d1b1ed9884e09a38bd6639f624f4dbc7ebf7ae9a070e6f",
+      "bytes": 13293
+    },
+    {
+      "path": "upstream/tex/img/2022/national_paper_B_liberal/q18_fig1.png",
+      "sha256": "75a2fee79234d9ed2150bd716a6a9aea4b87fdb047062511d3e67594b8865a1d",
+      "bytes": 26434
+    },
+    {
+      "path": "upstream/tex/img/2022/national_paper_B_liberal/q18_solution_fig1.png",
+      "sha256": "89b5ef83676b186f691a144ddbcd01fa494c97af1a302260d7083140a4882afb",
+      "bytes": 21559
+    },
+    {
+      "path": "upstream/tex/img/2022/national_paper_b_science/q18_fig1.png",
+      "sha256": "a8ca6cce84ed22054833d087af1251d00df2cb1ac1487f46e48b22f15ce5e91a",
+      "bytes": 12051
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q14_solution_fig1.png",
+      "sha256": "c7a0e449715b29c3132d0332bfe3a197d0f82f38738a2820e92d198cb1965219",
+      "bytes": 28202
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q19_fig1.png",
+      "sha256": "235a096e3a334836d6c658e8e41f91e5985cb2fff855554c12bbd38e15a241ef",
+      "bytes": 23940
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q19_solution_fig1.png",
+      "sha256": "e59152ed2ebb9c91c9e880dfb68258be8ec5954f5cbe8a50609bf127d3f17004",
+      "bytes": 17963
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q3_solution_fig1.png",
+      "sha256": "599c519f7ea997f723407d91d8d2f107db0bde4f0a53850e7fd23cd6f9016d36",
+      "bytes": 2300
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q8_solution_fig1.png",
+      "sha256": "d59d31e17c77e7f62cfb8aa109b70ef1e583d8fe0b780089a06a522141f23d6b",
+      "bytes": 32191
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_1/q9_solution_fig1.png",
+      "sha256": "10a7fcae90b8b3355a27ebbf81844eaf5c0c054534ca40283e7ddbafa0862a17",
+      "bytes": 26800
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_2/q11_fig1.png",
+      "sha256": "91964c3640aa7ed94ec144e668f13bb1605ff491fda0bcaec1b272e94e380227",
+      "bytes": 11436
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_2/q20_fig1.png",
+      "sha256": "59404cffa7f1ba86c9a707cda12af00eeaab80b8c5e7ea52d466764bc06a3b0c",
+      "bytes": 20076
+    },
+    {
+      "path": "upstream/tex/img/2022/new_gaokao_paper_2/q3_fig1.png",
+      "sha256": "a1807ae1f59992cc1dbbac28710c7deaecbe76fce022812f8d000003a00e5d79",
+      "bytes": 133533
+    },
+    {
+      "path": "upstream/tex/img/2022/zhejiang/q19_fig1.png",
+      "sha256": "5675da3455dd13038d8fcd25a17f67f65e372b46e4471525bb1b25b6d0c1199c",
+      "bytes": 28232
+    },
+    {
+      "path": "upstream/tex/img/2022/zhejiang/q21_fig1.png",
+      "sha256": "12c7eacdeb79e6368fe4b7cec0a71e01ab1c6efdb2bebb4abe1b2669cf6c895b",
+      "bytes": 35290
+    },
+    {
+      "path": "upstream/tex/img/2022/zhejiang/q5_fig1.png",
+      "sha256": "cad3e727b6d928de8daf97cad026b91393d3ac2c8cf1147fb3cb6c2e7cb9e54c",
+      "bytes": 38761
+    },
+    {
+      "path": "upstream/tex/img/2022/zhejiang/q8_fig1.png",
+      "sha256": "cb3a74fb57c771b723271876698059cde4d0ebf16a3d217c540d7e899924f096",
+      "bytes": 17831
+    },
+    {
+      "path": "upstream/tex/img/2023/national_paper_b_liberal/q19_fig1.png",
+      "sha256": "0a70230794f2acadc78ad59a23b2ce8580d650c27d0cc37e553d024d8f55c91d",
+      "bytes": 26962
+    },
+    {
+      "path": "upstream/tex/img/2023/national_paper_b_liberal/q3_fig1.png",
+      "sha256": "a720283ba6f0849cd343930bf27c983e973453a7151b2d4e1d3d261991489756",
+      "bytes": 6140
+    },
+    {
+      "path": "upstream/tex/img/2023/national_paper_b_science/q19_fig1.png",
+      "sha256": "910e4f9bb78e65d837a00a8f761755d2a09815fd1d70f7976b95b29f1dd824db",
+      "bytes": 22786
+    },
+    {
+      "path": "upstream/tex/img/2023/national_paper_b_science/q3_fig1.png",
+      "sha256": "df0fcbc17f3a8b0c6682a050095f51dd84e1bbd39e5e1937747e873434ceefd5",
+      "bytes": 6847
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q12_solution_fig1.png",
+      "sha256": "be23abbf9f12827b909bafbd3773329c0ec586705f1c8e81e389c09bc533837b",
+      "bytes": 257179
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q14_solution_fig1.png",
+      "sha256": "1be9372755e36a3792bea551f06e3f0531fb181116347a59b0bd6236ea7a11c3",
+      "bytes": 81963
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q15_solution_fig1.png",
+      "sha256": "26c0fe8ed5d9558d3bfdcfb3fc2838b247cab1b9569304c02ca657ade24f1913",
+      "bytes": 75088
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q16_solution_fig1.png",
+      "sha256": "cde464d80e57ee5d528d4f618f38239803229edb8afe479c78809085f0ababb1",
+      "bytes": 78891
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q17_solution_fig1.png",
+      "sha256": "e4c37f5c1472b8d508580a8ff010f9098cd830cf9d271fb9fb63b7e1b6c3a5c7",
+      "bytes": 10483
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q18_fig1.png",
+      "sha256": "d4ce392041114a07a9489e2d7de7c0a61df600084a017853e5b2c72f445bde1e",
+      "bytes": 28035
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q18_solution_fig1.png",
+      "sha256": "a5afbf74ae158e8569b283267e12fad25636188a316e094f2d07adf283321870",
+      "bytes": 27729
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q4_solution_fig1.png",
+      "sha256": "7ee7916b0abaddea0984af923aa6f03385875e221c623fab7a4437fcd45eee9b",
+      "bytes": 33899
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_1/q6_solution_fig1.png",
+      "sha256": "7ad5f414be8c0fdc1a2fa62755a683f4fc91112e9faa7ddb6dff7bbe98a7629e",
+      "bytes": 47032
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q10_solution_fig1.png",
+      "sha256": "ff2f6473c06168a761f35ed16d576f528689ec1beb73a13dadb5d04b9c017f31",
+      "bytes": 40304
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q14_solution_fig1.png",
+      "sha256": "126720882db25e2085b54602a29536575b05d816f6c486608f4d07f00d7d3f1e",
+      "bytes": 63019
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q15_solution_fig1.png",
+      "sha256": "5e32bba4f51dbe52ba3455688c28342c60494ddaa9c32960e03356b78b1f5b5d",
+      "bytes": 35932
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q16_fig1.png",
+      "sha256": "2719cfabcaa4fe4e288eb0094a90099e8a1130a6c46f5bbfdef2c3b7acd768f1",
+      "bytes": 21082
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q16_solution_fig1.png",
+      "sha256": "a9a1380c02d0339fc5c6d01a407510caa9741b84ef7dc32b172af64eff749556",
+      "bytes": 64603
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q17_solution_fig1.png",
+      "sha256": "0868100f4ba94ed7cd73a49cc8d136bade1ffd859a29c2ecea0551ba2054c89f",
+      "bytes": 8353
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q20_fig1.png",
+      "sha256": "8fe8ea0bc655414e19c49d0ce5274661cc59a652fa43c40dc2fe262486fae992",
+      "bytes": 29002
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q20_solution_fig1.png",
+      "sha256": "17a6b7fb169678b7c6756d18cacb0c366617536edc712619426676dd59b64505",
+      "bytes": 27467
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q21_solution_fig1.png",
+      "sha256": "da029499e0ce60120faa963c91db099cb5c3b9b70f8e2b25258a7bffd3fad706",
+      "bytes": 22957
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q5_solution_fig1.png",
+      "sha256": "cf2249ed2b8622353f1cfec821b9fa462099d9e3bf8dcde21b3c37bf95ef1aab",
+      "bytes": 63661
+    },
+    {
+      "path": "upstream/tex/img/2023/new_gaokao_paper_2/q9_solution_fig1.png",
+      "sha256": "754fd3d9c784cdb5268086436af1ef9caee7b66a6365af9ec784fd474192fd9e",
+      "bytes": 57087
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_1/q11_fig1.png",
+      "sha256": "13e5c76774f769169f53a4e53fa673ca51430f914c549916f0ad3ac7a262a6b7",
+      "bytes": 17331
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_1/q12_fig1.png",
+      "sha256": "622a5bb47c068dd43ad930285171168449fb67a7ce8b5ba13a4b2ea401d7869e",
+      "bytes": 23444
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_1/q17_fig1.png",
+      "sha256": "78d185415857266b7db523ef9cfc0e8ef59bb76a97f8d64424d4decd2cd541c4",
+      "bytes": 19867
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_1/q17_solution_fig1.png",
+      "sha256": "355ccd971c046499a01a8761b9c33894832082d45351f1100341e0703dca1452",
+      "bytes": 32407
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_1/q7_fig1.png",
+      "sha256": "52823a0965591b3ece84a1f09dd862a3ff1f46f69890997d20492fac8dc50f45",
+      "bytes": 46238
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_2/q10_fig1.png",
+      "sha256": "66753f61e2025f9d72b2dc777e3c320e4ca01ddf260e277d8ad851a243a0e730",
+      "bytes": 10758
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_2/q17_fig1.png",
+      "sha256": "316ae7395a99c7030afb5336c93abb7d1c167e5905b563ef68b538479ed6158c",
+      "bytes": 21566
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_2/q17_solution_fig1.png",
+      "sha256": "9155d910356246c47ead8c916b7f6a9e55d48a8f6b9b636d6c87e21cc39e4357",
+      "bytes": 31709
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_2/q19_solution_fig1.png",
+      "sha256": "1ed8ad7280ce32e3cb277d7ef56f0e2975e4e1550368844b232223eafe158d18",
+      "bytes": 15103
+    },
+    {
+      "path": "upstream/tex/img/2024/new_gaokao_paper_2/q7_solution_fig1.png",
+      "sha256": "9fce06f3c2380a420c5f683975058dada25fc1e390d0670adf8eff879fb48b5d",
+      "bytes": 12405
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q11_solution_fig1.png",
+      "sha256": "ea863fbe9497fcd8830d76890d2982720e262196a09b65381397880b31936664",
+      "bytes": 26215
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q11_solution_fig2.png",
+      "sha256": "bb3d29785e993affa12190928e460cfcdbccf46000092c1c9c0c8eef3e7c534e",
+      "bytes": 13489
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q14_fig1.png",
+      "sha256": "aa6fc2d079708926a4ac0d6177b05d6dcbeab7cc19a40fdb92f81c68d7e1a0bd",
+      "bytes": 7582
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q16_solution_fig1.png",
+      "sha256": "69ff68a4fb55b940ca3077e02371e07db19bf6f5c0f7c2e0a6d23c7c18217cc8",
+      "bytes": 7741
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q17_fig1.png",
+      "sha256": "514e6547bcc291a54019b3b5bfa34b6c003f02f19b9f228e75f4d35f0576a497",
+      "bytes": 27423
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q17_solution_fig1.png",
+      "sha256": "cfb347e27eaad2d08408e10cbe80dab52bd966d1e1da8ec822ee7efd38d20c8c",
+      "bytes": 9915
+    },
+    {
+      "path": "upstream/tex/img/2025/national_paper_2/q6_solution_fig1.png",
+      "sha256": "89abf6bb560559a461d2dcfe1757c69a57ec9708b134c16437ff503c7d3f4247",
+      "bytes": 6933
+    },
+    {
+      "path": "upstream/tex/img/2026/national_paper_2/q16_fig1.png",
+      "sha256": "de4bcac6b9709834e7afb2ab1160bd87f60ef0b41b04810fe372f4d64f1ef2fc",
+      "bytes": 48173
+    },
+    {
+      "path": "upstream/tex/img_repaint/2022/national_paper_b_liberal/q7_fig1.tex",
+      "sha256": "eca4245996e6591a4a4a529083d2bcb2718759401d27c8f95514bb8eeff4a17a",
+      "bytes": 3284
+    },
+    {
+      "path": "upstream/tex/img_repaint/2022/national_paper_b_science/q6_fig1.tex",
+      "sha256": "6f13237df526fc0310adcf221b7b3432c1b05ff4064ee3cb7b4bb9a75cb3174e",
+      "bytes": 3966
+    },
+    {
+      "path": "upstream/tex/img_repaint/2022/new_gaokao_paper_2/q19_fig1.tex",
+      "sha256": "3b0642d4eda1fe66863dacd4731ef2c8f1bc4e755eed925f540c537d6d9c4390",
+      "bytes": 5204
+    },
+    {
+      "path": "upstream/tex/img_repaint/2023/new_gaokao_paper_2/q19_fig1.tex",
+      "sha256": "35e1335f643debcf2f02f5640aecb963591f28f17be739ee4f49d71d26a601fe",
+      "bytes": 3636
+    },
+    {
+      "path": "upstream/tex/img_repaint/2026/national_paper_2/q15_fig1.tex",
+      "sha256": "95a8d57f8e7a6242463257fe60ebd9f6b07b0da71de3b9f140c945ddc2a8b082",
+      "bytes": 2698
+    }
+  ],
+  "encryption": "Fernet authenticated encryption",
+  "dataset": "national-reference",
+  "key_in_repository": false,
+  "version": "national-v1"
+}

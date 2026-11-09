@@ -21,6 +21,18 @@ def main(argv=None):
     action.add_argument("--year", type=int)
     action.add_argument("--kind")
     action.add_argument("--output", type=Path)
+    action.add_argument("--year-from", type=int)
+    action.add_argument("--year-to", type=int)
+    action.add_argument("--region")
+    action.add_argument("--subject", default="math")
+    action.add_argument("--series")
+    action.add_argument("--difficulty", type=int)
+    action.add_argument("--method")
+    action.add_argument("--capability")
+    action.add_argument("--target-region")
+    action.add_argument("--target-year", type=int, default=2027)
+    action.add_argument("--limit", type=int)
+    action.add_argument("--legacy-only", action="store_true")
     actions.add_parser("rules")
     planning = actions.add_parser("plan")
     planning.add_argument(
@@ -72,11 +84,62 @@ def main(argv=None):
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     try:
         if args.action == "research":
-            result = research(root, args.topic, args.year, args.kind)
+            import national_db
+
+            extended = any(
+                getattr(args, k) is not None
+                for k in (
+                    "year_from",
+                    "year_to",
+                    "region",
+                    "series",
+                    "difficulty",
+                    "method",
+                    "capability",
+                    "target_region",
+                )
+            )
+            if not args.legacy_only and national_db.available(root):
+                result = national_db.query(
+                    root,
+                    topic=args.topic,
+                    year=args.year,
+                    kind=args.kind,
+                    year_from=args.year_from,
+                    year_to=args.year_to,
+                    region=args.region,
+                    subject=args.subject,
+                    series=args.series,
+                    difficulty=args.difficulty,
+                    method=args.method,
+                    capability=args.capability,
+                    target_region=args.target_region,
+                    target_year=args.target_year,
+                    limit=args.limit,
+                )
+            elif extended and not args.legacy_only:
+                raise ValueError(
+                    "全国历史题面未恢复，无法执行跨年筛选；请先national_cli.py restore"
+                )
+            else:
+                require(
+                    args.subject == "math",
+                    "旧库适配器仅包含数学，不能将其他学科请求转为数学",
+                )
+                if not args.legacy_only:
+                    logging.warning(
+                        "全国历史题面未恢复，本次仅返回已恢复的旧库候选；不代表全国检索完成"
+                    )
+                result = research(root, args.topic, args.year, args.kind)
             if args.output:
                 from storage import atomic_json
 
                 atomic_json(args.output, result)
+                result = {
+                    "output": str(args.output),
+                    "records": len(result),
+                    "full_questions_written": True,
+                }
         elif args.action == "plan":
             from mathgen.planner import plan
 

@@ -1,0 +1,708 @@
+{
+  "schema_version": 2,
+  "paper": {
+    "mode": "pilot",
+    "title": "数学原创结构小样卷C（审阅草稿）",
+    "total_points": 34,
+    "minutes": 40
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "template_calls": 0,
+    "api_calls": 0,
+    "authorship": "本轮宿主AI先设计数学结构，再经独立写作请求撰写中文；未调用模板族，非官方认证。",
+    "official_2027_structure_verified": false
+  },
+  "questions": [
+    {
+      "id": "orig:ai:phase5:C:q001:v1",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [
+          "n",
+          "a",
+          "S"
+        ],
+        "givens": {
+          "sequence": "(-1)**(n-1)*n",
+          "upper": "20"
+        },
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "(-1)**(k-1)*k",
+            "variable": "k",
+            "lower": "1",
+            "upper": "20"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "-10"
+          },
+          "B": {
+            "semantic_value": "-20",
+            "error_calculation": "-20",
+            "error_path": "只取最后一项，遗漏前19项，a20=-20"
+          },
+          "C": {
+            "semantic_value": "10",
+            "error_calculation": "10*(2-1)",
+            "error_path": "交换每对的减法方向，把(2j-1)-2j写成2j-(2j-1)"
+          },
+          "D": {
+            "semantic_value": "210",
+            "error_calculation": "20*21/2",
+            "error_path": "忽略交错符号，直接求1至20的和"
+          }
+        }
+      },
+      "solution": {
+        "paragraphs": [
+          "每相邻两项之和均为\\(-1\\)，共10对，因此\\(S_{20}=-10\\)，选A。"
+        ]
+      },
+      "assessment": {
+        "level": 1,
+        "estimated_minutes": 2,
+        "dimensions": {
+          "knowledge": 1,
+          "condition_comprehension": 2,
+          "modeling": 2,
+          "logical_reasoning": 1,
+          "calculation": 2,
+          "integration": 1,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "第三方历史题结构对照；非实测等难"
+        },
+        "points_justification": "5分单选，需识别符号交替并成对计数；不赋高阶分值。",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true,
+        "original_structure": "交错项配对，辨别项值与部分和",
+        "template_calls": 0
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "9677642c48e7357850d2a0d4ca8c0152423d95947b46571bb5b9cd5d9aec8bcd",
+        "stem": "已知数列{{seq}}的通项公式为{{term}}，其前{{n}}项和为{{sum}}，则{{ask}}等于",
+        "parts": [],
+        "options": {
+          "A": "{{A}}",
+          "B": "{{B}}",
+          "C": "{{C}}",
+          "D": "{{D}}"
+        },
+        "formulae": {
+          "seq": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "term": {
+            "kind": "notation",
+            "latex": "a_n=(-1)^{n-1}n"
+          },
+          "n": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "sum": {
+            "kind": "notation",
+            "latex": "S_n"
+          },
+          "ask": {
+            "kind": "notation",
+            "latex": "S_{20}"
+          },
+          "A": {
+            "kind": "notation",
+            "latex": "-10"
+          },
+          "B": {
+            "kind": "notation",
+            "latex": "-20"
+          },
+          "C": {
+            "kind": "notation",
+            "latex": "10"
+          },
+          "D": {
+            "kind": "notation",
+            "latex": "210"
+          }
+        },
+        "condition_anchors": [
+          "通项公式",
+          "前{{n}}项和"
+        ],
+        "request_anchors": [
+          "等于"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "数列"
+          },
+          {
+            "symbol": "n",
+            "anchor": "通项公式"
+          },
+          {
+            "symbol": "S",
+            "anchor": "项和"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "n",
+          "S"
+        ]
+      }
+    },
+    {
+      "id": "orig:ai:phase5:C:q002:v1",
+      "order": 2,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "函数与导数",
+      "math_spec": {
+        "symbols": [
+          "f",
+          "x"
+        ],
+        "givens": {
+          "function": "x**3-3*x+2"
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "monotonicity_boolean",
+            "expression": "x**3-3*x+2",
+            "domain": [
+              -1,
+              1
+            ],
+            "direction": "decreasing"
+          },
+          "B": {
+            "op": "root_count_claim",
+            "expression": "x**3-3*x+2",
+            "claimed_count": 3
+          },
+          "C": {
+            "op": "reasoning",
+            "expression": "x**3-3*x+2",
+            "algebra_checks": {
+              "at_contact": "0**3-3*0+2",
+              "slope_at_contact": "3*0**2-3"
+            },
+            "claim": "切线y=-3x+2，待独立审题核对点与斜率"
+          },
+          "D": {
+            "op": "tangent_count_claim",
+            "expression": "x**3-3*x+2",
+            "point": [
+              "0",
+              "2"
+            ],
+            "claimed_count": 1
+          }
+        }
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(f\\prime(x)=3(x^2-1)\\)，在\\((-1,1)\\)上为负，A正确。",
+          "\\(f(x)=(x-1)^2(x+2)\\)，只有两个不同零点，B错误。又\\(f(0)=2\\)，\\(f\\prime(0)=-3\\)，在\\((0,2)\\)处的切线为\\(y=-3x+2\\)，C正确。",
+          "设切点横坐标为\\(t\\)。切线过\\((0,2)\\)当且仅当\\(f(t)-tf\\prime(t)=2\\)，即\\(-2t^3+2=2\\)，所以\\(t=0\\)，只有一条切线，D正确。答案ACD。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 5,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 2,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "第三方历史题结构对照；非实测等难"
+        },
+        "points_justification": "6分多选，同一三次函数联结单调、重根、切线方程与切线计数，四项不全是代入。",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true,
+        "original_structure": "三次函数局部性质与过定点切线计数",
+        "template_calls": 0
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "3ea15f1e7c61d17f2dc0d80f8f6618637531f7ccb98b64a4077e39f914420d95",
+        "stem": "已知函数{{f}}，下列结论正确的是",
+        "parts": [],
+        "options": {
+          "A": "{{fx}}在{{interval}}上单调递减",
+          "B": "{{fx}}有三个不同的零点",
+          "C": "曲线{{curve}}在点{{point}}处的切线方程为{{line}}",
+          "D": "过点{{point}}且与曲线{{curve}}相切的直线恰有一条"
+        },
+        "formulae": {
+          "f": {
+            "kind": "notation",
+            "latex": "f(x)=x^3-3x+2"
+          },
+          "interval": {
+            "kind": "notation",
+            "latex": "(-1,1)"
+          },
+          "fx": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "point": {
+            "kind": "notation",
+            "latex": "(0,2)"
+          },
+          "line": {
+            "kind": "notation",
+            "latex": "y=-3x+2"
+          },
+          "curve": {
+            "kind": "notation",
+            "latex": "y=f(x)"
+          }
+        },
+        "condition_anchors": [
+          "已知函数"
+        ],
+        "request_anchors": [
+          "结论正确"
+        ],
+        "definitions": [
+          {
+            "symbol": "f",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "x",
+            "anchor": "函数"
+          }
+        ],
+        "used_symbols": [
+          "f",
+          "x"
+        ]
+      }
+    },
+    {
+      "id": "orig:ai:phase5:C:q003:v1",
+      "order": 3,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "三角与向量",
+      "math_spec": {
+        "symbols": [
+          "a",
+          "b"
+        ],
+        "givens": {
+          "norm_a": "2",
+          "norm_b": "3",
+          "dot": "3",
+          "target": "abs(a-2*b)"
+        },
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "sqrt(2**2+4*3**2-4*3)"
+          }
+        ]
+      },
+      "solution": {
+        "paragraphs": [
+          "\\(|\\boldsymbol a-2\\boldsymbol b|^2=|\\boldsymbol a|^2+4|\\boldsymbol b|^2-4\\boldsymbol a\\cdot\\boldsymbol b=4+36-12=28\\)，故答案为\\(2\\sqrt7\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 1,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 1,
+          "condition_comprehension": 2,
+          "modeling": 2,
+          "logical_reasoning": 1,
+          "calculation": 2,
+          "integration": 1,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "第三方历史题结构对照；非实测等难"
+        },
+        "points_justification": "5分填空，展开模平方并辨别数量积的交叉项系数。",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true,
+        "original_structure": "数量积恢复线性组合的模",
+        "template_calls": 0
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "ce77bba53e84ea8f438e82e3c87a33c401575c3cac9868616e04629b934ca699",
+        "stem": "已知平面向量{{vectors}}满足{{norms}}，且{{dot}}，则{{target}}＝________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "vectors": {
+            "kind": "notation",
+            "latex": "\\boldsymbol a,\\boldsymbol b"
+          },
+          "norms": {
+            "kind": "notation",
+            "latex": "|\\boldsymbol a|=2,\\ |\\boldsymbol b|=3"
+          },
+          "dot": {
+            "kind": "notation",
+            "latex": "\\boldsymbol a\\cdot\\boldsymbol b=3"
+          },
+          "target": {
+            "kind": "notation",
+            "latex": "|\\boldsymbol a-2\\boldsymbol b|"
+          }
+        },
+        "condition_anchors": [
+          "平面向量",
+          "{{norms}}",
+          "{{dot}}"
+        ],
+        "request_anchors": [
+          "________"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "平面向量"
+          },
+          {
+            "symbol": "b",
+            "anchor": "平面向量"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "b"
+        ]
+      }
+    },
+    {
+      "id": "orig:ai:phase5:C:q004:v1",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 8,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [
+          "a",
+          "n",
+          "k"
+        ],
+        "givens": {
+          "initial": "1",
+          "recurrence": "u(n+1)==u(n)/(1+2*u(n))",
+          "domain": "正整数n，a_n>0"
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "reciprocal_step": "1/(a/(1+2*a))-1/a",
+              "candidate_residual": "1/(2*n+1)-(1/(2*n-1))/(1+2/(2*n-1))"
+            },
+            "claim": "求递推数列的通项；归纳与非零条件待审"
+          },
+          {
+            "op": "sum",
+            "expression": "1/((2*k-1)*(2*k+1))",
+            "variable": "k",
+            "lower": "1",
+            "upper": "n"
+          }
+        ]
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）各项为正，递推式两边取倒数得\\(\\frac1{a_{n+1}}=\\frac1{a_n}+2\\)。故\\(\\{1/a_n\\}\\)是首项1、公差2的等差数列，\\(a_n=\\frac1{2n-1}\\)。",
+          "（2）\\(a_ka_{k+1}=\\frac1{(2k-1)(2k+1)}=\\frac12(\\frac1{2k-1}-\\frac1{2k+1})\\)。累加得\\(\\sum_{k=1}^n a_ka_{k+1}=\\frac12(1-\\frac1{2n+1})=\\frac{n}{2n+1}\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 7,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modeling": 2,
+          "logical_reasoning": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "第三方历史题结构对照；非实测等难"
+        },
+        "points_justification": "8分短解答：倒数变换、通项与邻项积求和；变换后的求和较短，不赋15分。",
+        "part_points": [
+          4,
+          4
+        ],
+        "linked_progression": "通项支撑邻项积求和，题面不提示倒数与裂项。",
+        "empirical": false
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true,
+        "original_structure": "正有理递推的倒数线性化与相邻项积",
+        "template_calls": 0
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "7a77336c3cd1795272de87c3c63dbc9d3b8151609b7f9e73b47cc1f8033435c9",
+        "stem": "已知各项均为正数的数列{{seq}}满足{{initial}}，且对任意正整数{{n}}都有{{rec}}。",
+        "parts": [
+          {
+            "text": "求数列{{seq}}的通项公式。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求{{summation}}。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "seq": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "initial": {
+            "kind": "notation",
+            "latex": "a_1=1"
+          },
+          "n": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "rec": {
+            "kind": "notation",
+            "latex": "a_{n+1}=\\frac{a_n}{1+2a_n}"
+          },
+          "summation": {
+            "kind": "notation",
+            "latex": "\\sum_{k=1}^{n}a_ka_{k+1}"
+          }
+        },
+        "condition_anchors": [
+          "均为正数",
+          "{{initial}}",
+          "正整数",
+          "{{rec}}"
+        ],
+        "request_anchors": [
+          "通项公式",
+          "求{{summation}}"
+        ],
+        "definitions": [
+          {
+            "symbol": "a",
+            "anchor": "数列"
+          },
+          {
+            "symbol": "n",
+            "anchor": "正整数"
+          },
+          {
+            "symbol": "k",
+            "anchor": "{{summation}}"
+          }
+        ],
+        "used_symbols": [
+          "a",
+          "n",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "orig:ai:phase5:C:q005:v1",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "函数与导数",
+      "math_spec": {
+        "symbols": [
+          "f",
+          "x",
+          "a"
+        ],
+        "givens": {
+          "function": "log(x)/sqrt(x)",
+          "domain": "x>0",
+          "parameter": "a为实数"
+        },
+        "tasks": [
+          {
+            "op": "monotonicity",
+            "expression": "log(x)/sqrt(x)",
+            "domain": [
+              0,
+              "oo"
+            ]
+          },
+          {
+            "op": "extrema",
+            "expression": "log(x)/sqrt(x)",
+            "domain": [
+              0,
+              "oo"
+            ]
+          },
+          {
+            "op": "level_classification",
+            "expression": "log(x)/sqrt(x)",
+            "domain": [
+              0,
+              "oo"
+            ]
+          }
+        ]
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）\\(f\\prime(x)=\\frac{2-\\ln x}{2x\\sqrt x}\\)。故在\\((0,e^2)\\)上递增，在\\((e^2,+\\infty)\\)上递减，最大值\\(f(e^2)=2/e\\)。",
+          "（2）原方程等价于\\(f(x)=a\\)。当\\(x\\to0^+\\)时\\(f(x)\\to-\\infty\\)；当\\(x\\to+\\infty\\)时\\(f(x)\\to0\\)，且\\(x>1\\)时\\(f(x)>0\\)，\\(f(1)=0\\)。",
+          "由单调性：\\(a\\leq0\\)时恰有1根（\\(a=0\\)时根为1）；\\(0<a<2/e\\)时恰有2根；\\(a=2/e\\)时恰有1根；\\(a>2/e\\)时无根。端点0只是右支趋近值，不多计一根。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 9,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 2,
+          "modeling": 2,
+          "logical_reasoning": 3,
+          "calculation": 2,
+          "integration": 3,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "第三方历史题结构对照；非实测等难"
+        },
+        "points_justification": "10分短综合：求导和极值进入参数水平线根数，必须区别有限零点与无穷远趋近值。",
+        "part_points": [
+          4,
+          6
+        ],
+        "linked_progression": "单调分支及端点极限共同支撑全参数根数分类。",
+        "empirical": false
+      },
+      "generation": {
+        "provider": "host_ai",
+        "model_version": "not_exposed_by_host",
+        "mode": "ai",
+        "structure_authored_in_current_session": true,
+        "original_structure": "对数除根式函数的非对称两分支根数分类",
+        "template_calls": 0
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "91a488f4789d766eaee63bf21c1e1e118c81845d2b594dca9f95672d452794ac",
+        "stem": "已知函数{{f}}。",
+        "parts": [
+          {
+            "text": "求{{fx}}的单调区间和最大值。",
+            "task_refs": [
+              0,
+              1
+            ]
+          },
+          {
+            "text": "讨论实数{{parameter}}取不同值时，方程{{equation}}的实根个数。",
+            "task_refs": [
+              2
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f": {
+            "kind": "notation",
+            "latex": "f(x)=\\frac{\\ln x}{\\sqrt{x}}\\ (x>0)"
+          },
+          "fx": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "parameter": {
+            "kind": "notation",
+            "latex": "a"
+          },
+          "equation": {
+            "kind": "notation",
+            "latex": "\\ln x=a\\sqrt{x}"
+          }
+        },
+        "condition_anchors": [
+          "函数{{f}}",
+          "实数{{parameter}}"
+        ],
+        "request_anchors": [
+          "单调区间和最大值",
+          "实根个数"
+        ],
+        "definitions": [
+          {
+            "symbol": "f",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "x",
+            "anchor": "函数"
+          },
+          {
+            "symbol": "a",
+            "anchor": "实数"
+          }
+        ],
+        "used_symbols": [
+          "f",
+          "x",
+          "a"
+        ]
+      }
+    }
+  ]
+}
