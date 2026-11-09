@@ -2,7 +2,7 @@
 
 1. 命题 AI 阅读 research、rules 和 analysis/language-rules.json，设计数学结构。内部规格保存在 math_spec；另存 solution、assessment 与真实 provenance。禁止 family。
 2. 运行 writing-request 输出不含命题答案、设计路径、干扰项错因的写作请求。写作 AI 根据条件和任务写自然中文，用 {{formula_key}} 引用 formulae。attach-writing 绑定 math_spec SHA256，拒绝缺条件、公式来源不匹配、未定义符号、内部术语、提示和无依据高分。
-3. 每题含 id/order/kind/points/module、math_spec、writing、solution.paragraphs、assessment。完整实物协议见 experiments/phase4/proposals/pilot.json、fullA.json、fullB.json；它们是历史生成证据，不是重新创作。
+3. 每题含 id/order/kind/points/module、math_spec、writing、solution.paragraphs、assessment。公开版的格式实例见 examples/pilot/candidate-format.json，私有存档版见 experiments/phase4/proposals/pilot.json。重放这些文件属于复现已有样卷。
 4. math_spec 包含 symbols、givens、tasks 与可选 options；expr 公式必须引用 givens 的同一表达式，由 notation.py 转成规范数学记号。自由 authored notation 仍需独立语义核对，程序不假装自动证明全部自然语言语义。
 5. writing 含 spec_sha256、stem、parts、options、formulae、条件与任务锚点、used_symbols。生成器只向排版器传递 compile_writing 允许的学生可见字段。无法转换就拒绝，禁止原样回退 AST。
 6. generate v2 返回 review-only/paper.pdf、student-text.json、数学验证和页面 manifest；尚不是可发布成品。先生成5题 pilot 并通过独立 PDF-only 审题，full 才接受 --pilot-certificate。

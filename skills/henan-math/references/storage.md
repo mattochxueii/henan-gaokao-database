@@ -1,5 +1,11 @@
 # 存储和恢复
 
+## 公开候选版
+
+database.json 标为 `edition: public` 时，在仓库根目录运行 `python scripts/local_data.py init`。直接查询随包原创样题。历史来源目录使用 `python scripts/local_data.py sources`。自行取得合法资料后，按仓库 docs/DATA.md 制作并导入标准 JSONL 数据包。数据库、索引和 Skill 日常使用均无需个人密钥。个人加密备份为可选功能，另装 requirements-backup.txt。
+
+## 私有存档版
+
 仓库的 database.json 使用相对路径。结构化分析与来源索引进入版本管理，候选原文和页图在 .private/math-reference。加密备份以private-data/parts中的63个分片保存，backup-parts.json记录顺序与哈希。恢复自动合并并验证完整密文，缓存位于.private/cipher-cache。
 
 在新仓库根目录安装 requirements.txt，运行以下命令。密钥由所有者另外保管。

@@ -740,8 +740,9 @@ def run_ai(
     root, provider, output, export=True, solver_timeout=18, pilot_certificate=None
 ):
     require(not output.exists(), "输出目录已存在")
+    research_context = context(root, include_local=not isinstance(provider, OpenAIProvider))
     document = provider.propose(
-        context(root),
+        research_context,
         "依据研究上下文动态设计新数学结构，输出schema_version=2的JSON。数学规格、AI中文写作、排版必须分层，协议见writing-protocol.md。不给考生看AST、内部任务名或解题方法。禁止family。"
         + (
             "已提供5题样卷证书，可以按目标蓝图构造整卷。"
@@ -802,7 +803,7 @@ def run_ai(
                 }
                 try:
                     revision = provider.propose(
-                        context(root),
+                        research_context,
                         "修订失败题目，保持蓝图与槽位，不得读取或复用旧标准答案。反馈："
                         + json.dumps(feedback, ensure_ascii=False),
                     )
@@ -875,7 +876,7 @@ def run_ai(
         "generation_mode": "ai",
         "provider": provider.name,
         "blueprint": blueprint,
-        "research_context_sha256": fingerprint(context(root)),
+        "research_context_sha256": fingerprint(research_context),
         "provenance": {
             **document["provenance"],
             "api_calls": getattr(

@@ -1,6 +1,6 @@
 # 全国历史资料检索与参考选择
 
-使用完整题面需分别恢复旧库与全国扩容库；只有catalog不等于已读题。source-conflict隔离题默认不得用于研究或命题。需要调查冲突时用national_cli.py query --include-quarantined，必须保留警示，不能借此绕开质量门。
+先看 database.json。公开版可直接读取原创样例和已导入的本地数据，来源目录仅用于定位历史资料。私有存档版可恢复旧库与全国扩容库。source-conflict隔离题默认从研究与命题中排除。调查冲突用 national_cli.py query --include-quarantined 并保留警示。
 
 ## 检索
 

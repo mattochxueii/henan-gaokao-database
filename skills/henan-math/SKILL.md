@@ -9,9 +9,9 @@ description: 按省份、年份、全国或地方试卷系列检索历史数学�
 
 ## 定位与研究
 
-运行 scripts/run.py；支持 --database、HENAN_MATH_DB 及相对安装配置。研究前阅读 [national.md](references/national.md)，按年份范围、省份、学科、系列、知识点、题型、难度、思想方法和能力检索。先读取目标制度和当前规则，再构建分层、每卷限额的完整参考包。原文须分离密钥恢复，见 [storage.md](references/storage.md)。未恢复时不能声称读过完整原题。
+运行 scripts/run.py。支持 --database、HENAN_MATH_DB 及相对安装配置。研究前阅读 [national.md](references/national.md)，按年份范围、省份、学科、系列、知识点、题型、难度、思想方法和能力检索。先读取目标制度和当前规则，再构建分层、每卷限额的完整参考包。查看 database.json 确认版本。公开版直接使用原创样本和用户合法导入的题目，私有存档版可另行恢复历史资料。见 [storage.md](references/storage.md)。
 
-38份逐题分析基于2025/2026第三方候选，不是命题机构确认原卷。研究必须关联题目ID、版本、来源页及证据。读取 analysis/review-overrides.json 的哈希绑定更正层，不改写原数据。官方要求、候选事实、有限样本观察与模拟设定分开。2027卷型尚未确认。
+研究必须关联题目ID、版本、来源页及证据。公开版的历史来源目录只提供线索，研究结论以实际查询到的完整题面为依据。私有存档版的38份分析基于2025/2026第三方候选，如存在 analysis/review-overrides.json 则读取哈希绑定更正层。官方要求、候选事实、有限样本观察与模拟设定分开。2027卷型尚未确认。
 
 ## 三层命题
 
@@ -21,7 +21,7 @@ description: 按省份、年份、全国或地方试卷系列检索历史数学�
 2. 通过 writing-request 生成不带答案/设计提示的独立写作请求。AI用规范中文组织条件和设问，用公式注册表输出常见高中记号，再 attach-writing。不得将程序内部任务直接印成试卷。
 3. 先独立数学核查，再排版 student-text，得到 review-only PDF 和页图。无法规范转换的公式、缺条件、未定义符号、提示、无依据高分均退回修订。
 
-完整 v2 候选见 experiments/phase4/proposals，历史 v1 见 [ai-protocol.md](references/ai-protocol.md)，v1不再允许直接导出AI学生卷。复用格式不等于复用题目。输出到新目录，不能覆盖失败记录。
+候选格式见 [写作协议](references/writing-protocol.md)。历史 v1 见 [ai-protocol.md](references/ai-protocol.md)，出版流程使用 v2。输出到新目录，保留失败记录和修订依据。
 
 ## 先样卷再整卷
 
@@ -41,7 +41,7 @@ full 必须传 --pilot-certificate <已发布5题目录>/publication.json。历�
 
 ## 输出与验收
 
-输出题目、正常中文高中解法、题目分析及质量报告。答案PDF另做独立校审，实际查看公式、图、分页与答题区域。新样卷、两套新整卷及逐题证据在 experiments/phase4；推荐成品仅 final/fullA、final/fullB，旧失败稿不可交付为合格试卷。
+输出题目、正常中文高中解法、题目分析及质量报告。答案PDF另做独立校审，实际查看公式、图、分页与答题区域。公开版的原创样卷和解析位于 examples/pilot。私有存档版历史实验及逐题证据位于 experiments。
 
 验收请求须真实研究→新AI创作→独立写作→数学检查→PDF盲审→数学比对→publish。重放历史证据只称复现。高考风格相似性是有来源、有限样本的编辑判断，不声称全网原创、高考等难或经验验证。
 

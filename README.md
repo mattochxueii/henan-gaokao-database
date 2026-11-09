@@ -223,3 +223,6 @@ evaluate运行全部测试并保存结果。专项复算覆盖10道重点题，3
 ## 报告
 
 详细验收见reports/phase2-delivery.md。逐题记录见reports/question-audit.json和analysis/curation.jsonl，异文见reports/phase2-conflicts.md，命题规律见reports/paper-patterns.md，程序与恢复结果见reports/test-results.json及reports/fresh-environment.json，PDF逐页结果见reports/pdf-qa.json。第一阶段报告作为历史记录保留。
+## 公开候选版
+
+当前仓库仍是私有存档。运行 `python scripts/build_public_release.py --output ../gaokao-public --zip ../gaokao-public.zip`，可从明确审查的文件清单生成无私有 Git 历史的独立候选版。公开候选可直接初始化并查询原创样题，无需历史恢复密钥。历史原卷、全量题面、受限附件、加密分片和密钥保留在私有范围内。详见 [候选版说明](public-release/README.md)、[资料边界](public-release/DATA.md) 和 [验收记录](reports/opensource-readiness.md)。

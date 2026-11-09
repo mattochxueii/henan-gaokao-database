@@ -96,6 +96,8 @@ def main():
         elif args.action == "sqlite-query":
             result = db.sqlite_query(args.root, args.year, args.series, args.number)
         else:
+            if db.local_archive.public_edition(args.root):
+                raise ValueError("公开版请使用 local_data.py import 或可选的个人备份恢复")
             from national_backup import restore_national
 
             result = restore_national(args.root, args.key, args.destination)

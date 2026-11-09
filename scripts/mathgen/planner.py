@@ -6,7 +6,10 @@ from analysis_db import fingerprint
 from gaokao import read_json, read_lines, require
 
 
-def context(root):
+def context(root, include_local=True):
+    from local_archive import public_edition, read_bundle
+
+    public = public_edition(root)
     records = list(read_lines(root / "analysis/questions.jsonl"))
     applied = []
     override_path = root / "analysis/review-overrides.json"
@@ -29,6 +32,11 @@ def context(root):
     if (root / "national/config.json").is_file():
         from national_db import catalog, target, available, planning_references
 
+        papers = (
+            read_bundle(root / "sample-data")[1]["papers"]
+            if public and not include_local
+            else catalog(root, "papers")
+        )
         national_summary = {
             "target": target(root),
             "papers": [
@@ -36,14 +44,18 @@ def context(root):
                     k: p[k]
                     for k in ("id", "year", "series_id", "track", "question_count")
                 }
-                for p in catalog(root, "papers")
+                for p in papers
             ],
-            "full_history_available": available(root),
+            "full_history_available": available(root) and not public,
             "question_registry_is_not_full_text": True,
             "retrieval_entry": "national_cli.py research --target-region 河南 --target-year 2027",
         }
-    if national_summary.get("full_history_available"):
+    if (public and include_local) or national_summary.get("full_history_available"):
         national_summary["bounded_reference_packs"] = planning_references(root)
+        if public:
+            national_summary["dataset_scope"] = "原创样本与用户本地导入资料"
+    elif public:
+        national_summary["dataset_scope"] = "外部模型不接收本地导入资料"
     return {
         "rules": read_json(root / "analysis/rules.json"),
         "analyses": [
@@ -58,9 +70,11 @@ def context(root):
             }
             for r in records
         ],
-        "sample_papers": 2,
+        "sample_papers": 0 if public else 2,
         "applied_review_overrides": applied,
-        "scope": "候选版本绑定的AI分析，尚无命题机构逐题认证",
+        "scope": "公开原创样本与本地导入"
+        if public
+        else "候选版本绑定的AI分析，尚无命题机构逐题认证",
         "national_archive": national_summary,
     }
 
@@ -163,7 +177,7 @@ def plan(root, mode, profile="balanced", seed=0, proposed=None):
         "total_points": sum(p for _, p in kinds),
         "research_context_sha256": fingerprint(evidence),
         "rules_sha256": fingerprint(rules),
-        "sample_size": 2,
+        "sample_size": evidence["sample_papers"],
         "official_2027_structure_verified": False,
         "reference_policy": evidence.get("national_archive", {}).get("target"),
         "planning_basis": "读取逐题知识与条件设计分析，结合AI本轮提出的模块搭配；计分结构由历史候选规则约束",

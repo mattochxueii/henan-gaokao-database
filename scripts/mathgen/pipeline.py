@@ -216,7 +216,14 @@ def run(root, mode, seed, output, export=True, plan=None):
     plan = plan or blueprint(root, mode)
     limits = Limits()
     require(len(plan["slots"]) <= limits.max_questions, "超过单次命题数量限制")
-    originals = research(root)
+    from local_archive import public_edition
+
+    if public_edition(root):
+        from national_db import rows
+
+        originals = [{"id": row["id"], "candidate": {"stem": row["stem"]}} for row in rows(root)]
+    else:
+        originals = research(root)
     provider = FamilyProvider()
     questions, verifications, events = [], [], []
     output.mkdir(parents=True)

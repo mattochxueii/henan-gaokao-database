@@ -1,10 +1,14 @@
 """National read model, legacy adapters, explicit relevance tiers and rebuildable SQLite."""
 
 import json, sqlite3, os
+import tempfile
 from collections import Counter
+from contextlib import closing
+from pathlib import Path
 from gaokao import read_json, read_lines, require, digest
 from analysis_db import fingerprint
 from national_quality import research_eligible
+import local_archive
 
 ALIASES = {
     "新高考Ⅰ卷": "cn-new-gaokao-1",
@@ -30,12 +34,21 @@ def private_folder(root):
 
 
 def available(root):
+    if local_archive.public_edition(root):
+        return (root / "sample-data/manifest.json").is_file()
     return (root / "national/config.json").exists() and (
         private_folder(root) / "manifest.json"
     ).is_file()
 
 
 def catalog(root, name):
+    if local_archive.public_edition(root) and name in (
+        "papers",
+        "legacy-papers",
+        "paper-regions",
+        "sources",
+    ):
+        return local_archive.load(root)[name]
     return list(read_lines(root / settings(root)["catalog_dir"] / (name + ".jsonl")))
 
 
@@ -94,6 +107,8 @@ def legacy_rows(root):
 
 
 def rows(root, include_legacy=True):
+    if local_archive.public_edition(root):
+        return local_archive.load(root)["rows"]
     require(
         available(root),
         "全国题面尚未恢复；运行national_cli.py restore --key <分离密钥>",
@@ -161,7 +176,9 @@ def target(root, region="河南", year=2027, subject="math"):
 def relevance(row, policy, kind=None, topic=None):
     y = policy["year"]
     same = row["series_id"] == policy["primary_series"]
-    if same and row["year"] >= y - 2:
+    if row.get("record_origin") == "original_sample":
+        tier = "project_original_example"
+    elif same and row["year"] >= y - 2:
         tier = "current_used_series"
     elif same:
         tier = "same_series_history"
@@ -169,7 +186,7 @@ def relevance(row, policy, kind=None, topic=None):
         tier = "comparable_new_series"
     else:
         tier = "legacy_or_specialty"
-    score = policy["reference_tiers"][tier] + max(0, 10 - abs(y - row["year"]))
+    score = policy["reference_tiers"].get(tier, 0) + max(0, 10 - abs(y - row["year"]))
     reasons = [tier, "年份接近度"]
     if row.get("curriculum_id") and row["curriculum_id"] != policy["curriculum_id"]:
         score -= 8
@@ -293,6 +310,16 @@ def query(
 
 
 def validate(root):
+    if local_archive.public_edition(root):
+        data = local_archive.load(root, check_files=True)
+        return {
+            "valid": True,
+            "edition": "public",
+            "datasets": data["dataset_ids"],
+            "paper_count": len(data["papers"]),
+            "question_occurrences": len(data["rows"]),
+            "answers_version_bound": True,
+        }
     folder = private_folder(root)
     manifest = read_json(folder / "manifest.json")
     errors = []
@@ -365,7 +392,8 @@ def statistics(root):
                 "year": paper["year"],
                 "series_id": paper["series_id"],
                 "paper_id": paper["id"],
-                "track": paper["track"],
+                "record_origin": paper.get("record_origin", "historical_candidate"),
+                "track": paper.get("track"),
                 "question_occurrences": len(group),
                 "full_candidate_stems": sum(bool(r["stem"]) for r in group),
                 "research_eligible_candidates": sum(
@@ -393,18 +421,27 @@ def statistics(root):
         "paper_count": len(out),
         "question_occurrences": len(data),
         "unique_questions": len({r["id"] for r in data}),
+        "original_sample_occurrences": sum(
+            r.get("record_origin") == "original_sample" for r in data
+        ),
         "new_data_only": False,
         "links_counted_as_questions": False,
-        "all_complete_are_candidates_not_official_originals": True,
+        "all_complete_are_candidates_not_official_originals": not any(
+            r.get("record_origin") == "original_sample" for r in data
+        ),
     }
 
 
-def rebuild_index(root):
+def rebuild_index(root, snapshot=None):
     cfg = settings(root)
+    if snapshot is None and local_archive.public_edition(root):
+        snapshot = local_archive.load(root)
     path = root / cfg["index"]
     path.parent.mkdir(exist_ok=True, parents=True)
-    tmp = path.with_suffix(".building")
-    tmp.unlink(missing_ok=True)
+    with tempfile.NamedTemporaryFile(
+        dir=path.parent, suffix=".sqlite", delete=False
+    ) as file:
+        tmp = Path(file.name)
     connection = sqlite3.connect(tmp)
     try:
         connection.execute("PRAGMA foreign_keys=ON")
@@ -415,8 +452,17 @@ def rebuild_index(root):
         CREATE TABLE paper_region(paper_id TEXT REFERENCES paper(id),region_id TEXT,year INTEGER,status TEXT,PRIMARY KEY(paper_id,region_id));
         CREATE INDEX paper_filter ON paper(year,subject,series_id,track);
         CREATE INDEX occurrence_number ON occurrence(paper_id,number);
+        CREATE TABLE index_state(version TEXT);
         """)
-        papers = [*catalog(root, "papers"), *catalog(root, "legacy-papers")]
+        if snapshot is not None:
+            connection.execute(
+                "INSERT INTO index_state VALUES (?)", (snapshot["revision"],)
+            )
+        papers = (
+            snapshot["papers"]
+            if snapshot is not None
+            else [*catalog(root, "papers"), *catalog(root, "legacy-papers")]
+        )
         for p in papers:
             connection.execute(
                 "INSERT INTO paper VALUES(?,?,?,?,?,?)",
@@ -425,12 +471,12 @@ def rebuild_index(root):
                     p["year"],
                     p["subject"],
                     p["series_id"],
-                    p["track"],
+                    p.get("track"),
                     json.dumps(p, ensure_ascii=False),
                 ),
             )
         seen = set()
-        for r in rows(root):
+        for r in snapshot["rows"] if snapshot is not None else rows(root):
             if r["id"] not in seen:
                 connection.execute(
                     "INSERT INTO question VALUES(?,?,?)",
@@ -451,21 +497,37 @@ def rebuild_index(root):
                     json.dumps(r, ensure_ascii=False),
                 ),
             )
-        for u in catalog(root, "paper-regions"):
+        for u in (
+            snapshot["paper-regions"]
+            if snapshot is not None
+            else catalog(root, "paper-regions")
+        ):
             connection.execute(
                 "INSERT INTO paper_region VALUES(?,?,?,?)",
                 (u["paper_id"], u["region_id"], u["year"], u["usage_status"]),
             )
         connection.commit()
+    except BaseException:
+        connection.close()
+        tmp.unlink(missing_ok=True)
+        raise
     finally:
         connection.close()
-    os.replace(tmp, path)
+    try:
+        os.replace(tmp, path)
+    finally:
+        tmp.unlink(missing_ok=True)
     return {"index": cfg["index"], "rebuildable": True, "questions": len(seen)}
 
 
 def sqlite_query(root, year, series, number):
-    require((root / settings(root)["index"]).is_file(), "请先build-index")
-    with sqlite3.connect(root / settings(root)["index"]) as db:
+    path = root / settings(root)["index"]
+    if local_archive.public_edition(root):
+        snapshot = local_archive.load(root)
+        if not _current_public_index(path, snapshot["revision"]):
+            rebuild_index(root, snapshot)
+    require(path.is_file(), "请先build-index")
+    with closing(sqlite3.connect(path)) as db:
         db.row_factory = sqlite3.Row
         result = db.execute(
             "SELECT p.id paper_id,p.year,o.number,o.question_id,q.stem,o.payload,o.answer FROM paper p JOIN occurrence o ON o.paper_id=p.id JOIN question q ON q.id=o.question_id WHERE p.year=? AND p.series_id=? AND o.number=?",
@@ -482,6 +544,18 @@ def sqlite_query(root, year, series, number):
             }
             for r in result
         ]
+
+
+def _current_public_index(path, revision):
+    if not path.is_file():
+        return False
+    try:
+        with closing(sqlite3.connect(path)) as db:
+            return db.execute("SELECT version FROM index_state").fetchone() == (
+                revision,
+            )
+    except sqlite3.DatabaseError:
+        return False
 
 
 def reference_pack(

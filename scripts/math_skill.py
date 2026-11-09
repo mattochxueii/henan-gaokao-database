@@ -85,6 +85,12 @@ def main(argv=None):
     try:
         if args.action == "research":
             import national_db
+            from local_archive import public_edition
+
+            require(
+                not (public_edition(root) and args.legacy_only),
+                "公开版使用标准数据包，请省略 --legacy-only",
+            )
 
             extended = any(
                 getattr(args, k) is not None
