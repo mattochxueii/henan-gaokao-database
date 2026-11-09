@@ -6,12 +6,14 @@ from analysis_db import fingerprint
 from gaokao import read_json, read_lines, require
 
 
-def context(root, include_local=True):
+def context(root, include_local=True, evaluation_split=None, strict=False, topics=None):
     from local_archive import public_edition, read_bundle
 
     public = public_edition(root)
     records = (
-        list(read_lines(root / "analysis/questions.jsonl")) if include_local else []
+        list(read_lines(root / "analysis/questions.jsonl"))
+        if include_local and evaluation_split is None and not strict
+        else []
     )
     applied = []
     override_path = root / "analysis/review-overrides.json"
@@ -53,7 +55,14 @@ def context(root, include_local=True):
             "retrieval_entry": "national_cli.py research --target-region 河南 --target-year 2027",
         }
     if include_local and (public or national_summary.get("full_history_available")):
-        national_summary["bounded_reference_packs"] = planning_references(root)
+        national_summary["bounded_reference_packs"] = planning_references(
+            root,
+            **({"topics": topics} if topics else {}),
+            verified_only=(strict and not public) or evaluation_split is not None,
+            allowed_ids=evaluation_split["reference"] if evaluation_split else None,
+        )
+        if evaluation_split:
+            national_summary["evaluation_split_sha256"] = evaluation_split["sha256"]
         if public:
             national_summary["dataset_scope"] = "原创样本与用户本地导入资料"
     elif not include_local:

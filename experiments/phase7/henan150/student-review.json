@@ -1,0 +1,535 @@
+{
+  "pdf_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "8c603545d10648878c2b49c5f2c29eb2577ec7da741fc618df8818417f98f403"
+    },
+    {
+      "number": 2,
+      "sha256": "7d9ebdc3e4fe23dd68afb2838b0b0aca8becf3872f8b96e356b8ae6f3a52e7ad"
+    },
+    {
+      "number": 3,
+      "sha256": "eb8660b7dbdbee73f793c31eb8009d3eadf5de83d70258db9a02174389b4a838"
+    },
+    {
+      "number": 4,
+      "sha256": "feea5e4934a30b75cc16504673079cbc7f6b8a0d6ef0832d917efde397bc54ea"
+    },
+    {
+      "number": 5,
+      "sha256": "28365083cdf9d6e43e622c7d39dc28c589685f3949e8d1b02949b25ecba15f78"
+    },
+    {
+      "number": 6,
+      "sha256": "82f8efbaabd7dbc74b66356c82f381941bb2cf0fd827ee2ecbc42d5e5c1eaee1"
+    },
+    {
+      "number": 7,
+      "sha256": "6c6e42b202794342dfee16699ac640d819964fbe7f0aa3dc3409ddc79162058d"
+    },
+    {
+      "number": 8,
+      "sha256": "faf01738926570c6d4d15eec56dd780679d9d93c753f2b3c3d5e7d496355fd97"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "z+ki=2+(k−1)i。两侧模平方相等给 4+(k−1)²=|2−i|²=5，所以 (k−1)²=1，候选为 k=0、2。题设 k≠0，唯一留下 k=2，代入得到 z+2i=2+i，确与 z 等模。也可在复平面上看：实部固定为 2，等模的两点关于实轴对称，非零变化只能把 z 变为其共轭。A、C、D 都不是上述两根。",
+      "answer": "2",
+      "answer_key": "B",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "13/20。模平方等式产生两个候选，非零限制决定唯一解。也可直接由实部固定、圆上两点关于实轴对称得到共轭，提供几何解法。题干、选项与五分的基础定位相称。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "把 −2、−1、0、2、3 分别代入 x²−1，得到 3、0、−1、3、8。去重后 B={−1,0,3,8}，故 A∩B={−1,0,3}，元素数为 3。也可从 A 的候选值反解 x²=b+1。只有 C 符合。",
+      "answer": "3",
+      "answer_key": "C",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 0,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "11/20。平方映射产生重复的 3，需按集合去重再取交集。可正向列表也可反解，题干紧凑，基础题赋分合理。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "由 (a−b)·b=(1,−1−t)·(1,t)=0 得 t²+t−1=0。判别式为 5，因此恰有两个不同实根。根和为 −1，根积为 −1，故平方和为 (−1)²−2(−1)=3。也可由 t²=1−t 对两根相加，或直接求两根再平方。A 唯一正确。",
+      "answer": "3",
+      "answer_key": "A",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "17/20。把向量垂直转为方程，再用根的对称式求目标量。实根存在性与根数清楚，多个中学方法可核。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "令 β=α+π/6，则 β∈(π/6,π/2)，故 sinβ>0。由 cosβ=2/3 得 sinβ=√5/3。2α+π/3=2β，所以 sin(2α+π/3)=2sinβcosβ=4√5/9。余弦在该开区间的值域为 (0,√3/2)，含 2/3，条件可实现。只有 D 符合。",
+      "answer": "4√5/9",
+      "answer_key": "D",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "12/20。换元使倍角显现，给定区间保证平方根符号。选项区分了倍角系数和正负号，符合基础单选工作量。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "设 s_n=a_n+a_(n+1)。把相邻两条递推式相加，(−1)^n 与 (−1)^(n+1) 相消，得 s_(n+1)=2s_n。a₂=2a₁−1=3，所以 s₁=5，s₅=2⁴s₁=80。直接逐项核对得到 a₂ 至 a₆ 为 3、7、13、27、53，也给出 27+53=80。只有 C 符合。",
+      "answer": "80",
+      "answer_key": "C",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "18/20。目标相邻项和正好消掉交替项，结构法比直接递推更短。两种路线都自然，运算轻量，五分相称。"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "以 R 表示向右、U 表示向上，共各三步。条件等价于每个前缀的 U 数不超过 R 数。合法序列为 RRRUUU、RRURUU、RRUURU、RURRUU、RURURU，共 5 种。也可从 20 种排列减去非法路径：在首次 U 数比 R 数多 1 的位置反射前缀，非法路径与四个 R、两个 U 的序列一一对应，故减去 C(6,2)=15。只有 B 符合。",
+      "answer": "5",
+      "answer_key": "B",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "18/20。逐步约束须保留在前缀模型中。按前缀穷举或反射计数均可，选项区分无约束总数与实际合法数，文字充分。"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "independent_solution": "设椭圆中心为 O，长半轴为 a，半焦距为 c。短轴端点 B 到两焦点等距，椭圆定义给 BF₁=BF₂=a。BO 垂直且平分 F₁F₂，也平分 120° 顶角，所以直角三角形 BOF₁ 中 OF₁/BF₁=sin60°=√3/2。这就是离心率 c/a。也可对两条长为 a 的焦半径用余弦定理，得 (2c)²=3a²。只有 D 符合。",
+      "answer": "√3/2",
+      "answer_key": "D",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "14/20。关键是把短轴端点与焦点组成的三角形边长同椭圆参数对应。半角或余弦定理都可，推理较短但模型清楚，五分适中。"
+    },
+    {
+      "number": 8,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "两个端点均为最大值点，先得f(1)=f(4)，即a=ln4+a/4，解得a=(4/3)ln4。为检验充分性，对这个a应用罗尔定理，存在c∈(1,4)使f′(c)=0。由f′(x)=(x−a)/x²可知c=a，因此函数先严格递减后严格递增。两端点的相等函数值确为区间最大值。只有A成立。",
+      "answer": "(4/3)ln4",
+      "answer_key": "A",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "端点取同一最大值的条件先确定参数，再由导数的符号验证整个区间。也可用ln4的上下界直接验证1<a<4。选项涵盖交换分数系数、漏系数等常见错误。分式及区间在整页和放大PDF中均清楚，5分与计算量相称。"
+    },
+    {
+      "number": 9,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "两组样本数相同，故合并均值为(4+8)/2=6，A对。相对于合并均值6，甲、乙组平均平方偏差分别为1+(4−6)²=5与9+(8−6)²=13，所以合并方差为9，B错。乙组整体减4后均值变成4，方差仍为9，两组同均值时合并方差是(1+9)/2=5，C对。取甲组(3,5)、乙组(5,11)，两组满足已知均值和方差，合并中位数为5，D错。",
+      "answer": "A、C",
+      "answer_key": [
+        "A",
+        "C"
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "B与C成对检验能否识别组间均值差对方差的影响，并区分平移与合并。可用中心距平方或二阶矩两条路径。D需要构造保留两组统计量的反例。题干数字、选项与节标题均完整，6分适合四项判断。"
+    },
+    {
+      "number": 10,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "设首项为a₁，公差为d。S₃=9给a₁+d=3，S₆=0给2a₁+5d=0，故d=−2、a₁=5。于是a₃=1，A对。Sₙ=n(6−n)=9−(n−3)²，所以最大值为9，B对。正整数n下Sₙ>0等价于n<6，C错。S₂=S₄=8，D错。",
+      "answer": "A、B",
+      "answer_key": [
+        "A",
+        "B"
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "部分和的二次模型同时解释最大值、严格正值范围和对称处取同值。可先解首项、公差，也可直接用S₀=S₆=0及S₃=9确定二次式，再差分求项。边界n=6及两个不同指标是有效干扰，6分适当，所有不等号和下标清楚。"
+    },
+    {
+      "number": 11,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "两圆圆心距为3，半径为2与r。r=1时半径和为3，故A对。r=5时半径差为3，故B对。r=√13时两圆方程相减得到x=0，再由第一圆得交点(0,2)、(0,−2)，弦长4，C对。两交点存在当且仅当|2−r|<3<2+r，即1<r<5，例如r=4也有两交点，D错。",
+      "answer": "A、B、C",
+      "answer_key": [
+        "A",
+        "B",
+        "C"
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "外切、内切和相交构成递进，公共弦将几何判断转入消元。第三项的弦恰为直径，既可联立也可由勾股关系识别。第四项的范围截断有意义。圆方程、根号和范围在整页及放大图中可辨，6分适当。"
+    },
+    {
+      "number": 12,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "由f(x+2)=−f(x)与f(1)=3，逐次迭代得f(2k+1)=3(−1)^k。求和下限0、上限2027，共2028项。把k=2j与k=2j+1相邻配对，每组的两项之和为3(2j+1)−3(2j+2)=−3。j取0至1013，共1014组，所以总和为−3×1014=−3042。",
+      "answer": "−3042",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "题目先由移位关系推出奇数自变量对应的符号交替，再把随指标增长的权重配成固定差。也可分别求偶指标与奇指标所对应的等差和。两段推理衔接自然，端点检查避免多算或漏算一组。求和上下限、权重和函数自变量在整页与直接放大的PDF中均清楚。5分与工作量相称。"
+    },
+    {
+      "number": 13,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "在六个因子中取k个1/x，其余取x²。相应指数为2(6−k)−k=12−3k，只有k=4产生常数项，系数为C(6,4)=15。等价地，将表达式写成x⁻⁶(1+x³)⁶，取分子x⁶的系数。",
+      "answer": "15",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "负幂抵消条件与二项式系数都是必需的，求解可从选项计数或提出x⁻⁶入手。指数平衡和组合数形成紧凑的两步计算。分式、幂和空格清晰，5分适合，题型常规。"
+    },
+    {
+      "number": 14,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "矩形边平行于坐标轴，同一水平边的两个端点具有相同y，故在椭圆上横坐标互为相反数。同一竖直边同理，故顶点可写为(±a,±b)，a,b>0且a²/9+b²/4=1。周长为4(a+b)。由柯西不等式，a+b=3(a/3)+2(b/2)≤√13。等号在a=9/√13、b=4/√13时取得，这两值给出非退化矩形。故最大周长为4√13。",
+      "answer": "4√13",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "由轴平行和四顶点在椭圆上确定对称模型，再将周长转为单位圆上的线性极值。柯西不等式、三角参数或支撑直线均可求解，并能直接核查等号。题干换行完整、留空及页脚均清楚，5分符合中等长度填空题。"
+    },
+    {
+      "number": 15,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "在非退化三角形 ABC 中，a、b、c 分别为 A、B、C 的对边，且 b+c=8，a²=b²+c²−bc。第二问 S 为三角形面积。",
+      "request_understood": "（1）求角 A。（2）求 2S/(a+b+c) 的完整取值范围。",
+      "independent_solution": "由余弦定理，2bc cos A=bc。因 b,c>0 且 A∈(0,π)，得 A=π/3。令 t=bc，由 b+c=8 和均值不等式知 0<t≤16。条件化为 a²=64−3t，故 4≤a<8。又 S=bc sin A/2=√3t/4，故 2S/(a+b+c)=√3t/[2(a+8)]=(√3/6)(8−a)。对任意 t∈(0,16]，方程 z²−8z+t=0 有两个允许相等的正根 b,c，取它们为夹角 π/3 的两边，就能构造满足题设的三角形。因此范围为 (0,2√3/3]，上端在 b=c=4 时取得，下端只在一边趋近 0 时逼近。",
+      "answer": "（1）A=π/3。（2）(0,2√3/3]。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "第二问将面积和周长统一成一个参数，并借平方差消去分母。既可直接化为 a 的一次式，也可按 bc 分析单调性。非退化条件、区间的可达性与取等均可说明。题面简洁，13 分与两问工作量相称。"
+    },
+    {
+      "number": 16,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "直四棱柱 ABCD–A₁B₁C₁D₁ 的底面为边长 2 的正方形，E 为 BB₁ 中点、F 为 CD 中点。第二问平面 AEF 与底面的锐二面角为 45°。",
+      "request_understood": "（1）求平面 AEF 与棱 CC₁ 的交点 G 所满足的比 CG:GC₁。（2）求 D₁ 到平面 AEF 的距离。",
+      "independent_solution": "取 A=(0,0,0)、B=(2,0,0)、C=(2,2,0)、D=(0,2,0)，设侧棱长为 h>0。则 E=(2,0,h/2)、F=(1,2,0)，由 AE、AF 得平面 AEF 的法向量可取 (2h,−h,−8)，方程为 2hx−hy−8z=0。与 CC₁ 相交时 x=y=2，故 z=h/4，处于棱的内部，CG:GC₁=1:3。底面法向量为 (0,0,1)，两法向量所成锐角的余弦为 8/√(5h²+64)。由 45° 得 h=8/√5。D₁=(0,2,h)，故点面距离为 10h/√(5h²+64)=√10。",
+      "answer": "（1）CG:GC₁=1:3。（2）√10。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "正方形与中点给出易读的坐标关系，交点比例与二面角、点面距离递进。也可将 AF 延长至与 BC 的延长线相交于 K，以 C 是 BK 的中点推出 G 是 EK 的中点。第 5 页新版图的 B₁、E、F 标签与各线段均清楚分离，两个实心点仍准确位于 BB₁、CD 中部，题干、图形与小问一致。独立从当前 PDF 以 120 dpi 渲染第 5 页，与本次核验 PNG 逐字节相同。15 分合适。"
+    },
+    {
+      "number": 17,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "编号为 1 至 6 的六张卡随机等可能地分给有区别的甲、乙，各三张，X 为甲的卡片编号和。第二问条件是原先 X=12，双方从各自三张卡中独立、等可能地各取一张交换。",
+      "request_understood": "（1）求 P(X=12) 和 E(X)。（2）求在 X=12 条件下，交换后甲的和为 11 的概率。",
+      "independent_solution": "甲的三张卡共有 C(6,3)=20 个等可能集合，和为 12 的集合为 {1,5,6}、{2,4,6}、{3,4,5}，所以 P(X=12)=3/20。每张卡给甲的概率为 1/2，由期望线性性得 E(X)=(1+2+3+4+5+6)/2=21/2。给定 X=12，三集合等可能，每个集合下交换的有序对有 3×3=9 个等可能结果。要使甲的和减少 1，甲交出的号码须比乙交出的大 1。三集合的合格交换分别为 (5,4)，(2,1)、(4,3)、(6,5)，以及 (3,2)，故所求概率为 (1+3+1)/27=5/27。",
+      "answer": "（1）P(X=12)=3/20，E(X)=21/2。（2）5/27。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "第一问可用指示变量或甲乙对称性求期望。第二问须保持原分配的条件分布，并按交换对重新计数，两个阶段的等可能性清楚。题量与 15 分相称。"
+    },
+    {
+      "number": 18,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "P 在 y²=4x 上且横坐标大于 1，A=(1,2)、B=(1,−2)，PA、PB 分别交 y 轴于 M、N，O 为原点。P 可以在抛物线的上半支或下半支。",
+      "request_understood": "（1）证明 1/|OM|+1/|ON|=1。（2）求 △PMN 的最小面积及所有取等的 P。",
+      "independent_solution": "设 P=(t²,2t)，则 |t|>1。由直线斜率得 M=(0,2t/(t+1))、N=(0,−2t/(t−1))。在 t>1 或 t<−1 时两分式 t/(t±1) 均为正，所以 M 在 O 上方、N 在 O 下方，且 1/|OM|+1/|ON|=(t+1)/(2t)+(t−1)/(2t)=1。又 |MN|=4t²/(t²−1)，P 到 y 轴的距离为 t²，所以面积为 2t⁴/(t²−1)。令 s=t²−1>0，面积等于 2(s+2+1/s)≥8，当且仅当 s=1。故 t=±√2，P=(2,±2√2)，均在题设范围内。",
+      "answer": "（1）倒数和为 1。（2）最小面积为 8，在 P=(2,2√2) 或 (2,−2√2) 时达到。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 1,
+        "originality": 1
+      },
+      "quality_evidence": "抛物线参数使两截距及倒数关系清晰。须检查两支的符号与取等，面积可用均值不等式或导数求极值。17 分处于该工作量可接受范围的上端。题面条件和绝对值符号均清楚。"
+    },
+    {
+      "number": 19,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "f(x)=x+1/x+ln x，定义域 x>0。r 为 f 取得最小值处的自变量。对任意 m>f(r)，设 f(x)=m 的两正根为 α<β。",
+      "request_understood": "（1）求 r，并证明每个 m>f(r) 恰有两个正根。（2）证明严格乘积界 r²<αβ<1。",
+      "independent_solution": "f′(x)=(x²+x−1)/x²，唯一正驻点为 r=(√5−1)/2，且 f 在 (0,r) 严格递减、在 (r,∞) 严格递增。x→∞ 时 f(x)→∞。x→0+ 时令 w=1/x，f=1/w+w−ln w，而 w≥2 时 (w−ln w)′≥1/2，故也趋向 ∞。由连续性和严格单调性，对任意 m>f(r) 两侧各有且仅有一根。（2）令 u=√(αβ)>0、v=√(β/α)>1，则 α=u/v、β=uv。相减 f(β)−f(α)=0 得 1/u−u=2 ln v/(v−1/v)。函数 v−1/v−2 ln v 在 v=1 时为 0，而导数为 (v−1)²/v²>0（v>1），故该比值严格在 0 与 1 之间。函数 H(u)=1/u−u 在正数上严格递减，H(1)=0，且 r²+r=1 给出 H(r)=1，故 r<u<1，即 r²<αβ<1。",
+      "answer": "（1）r=(√5−1)/2，每个 m>f(r) 恰有两个正根。（2）r²<αβ<1。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "两端发散和两段严格单调保证存在性及唯一性。第二问由等值根的差式构造积和比，再用可直接求导的对数不等式得严格界。也可利用右支严格递增，分别比较 f(r²/α)、f(1/α) 与 f(α)，把乘积上下界转化成单根的位置比较。两问自然衔接，只需高中导数和函数知识，17 分适合压轴题。"
+    }
+  ],
+  "group_reports": [
+    {
+      "source_pdf_sha256": "b1ea90acc61c2eee05af50aa0c4e47e58b43693704d11dd8f22a0b86a8be06a8",
+      "report_sha256": "76a3366ec2c6816cd45d7ecf15d7100f416e2fbc7c35ecceb8ae242e7643e675"
+    },
+    {
+      "source_pdf_sha256": "b1ea90acc61c2eee05af50aa0c4e47e58b43693704d11dd8f22a0b86a8be06a8",
+      "report_sha256": "01bdf6025c51e41180d2bdecfbfb9f1af90a7739b1abfba94144bdd378394e56"
+    },
+    {
+      "source_pdf_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "report_sha256": "0751081b73f52bdf81052e2d3f34fa1af17178b8ee18aec429891db52366d042"
+    }
+  ]
+}

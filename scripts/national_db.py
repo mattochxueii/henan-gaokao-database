@@ -596,6 +596,7 @@ def reference_pack(
     target_year=2027,
     limit=12,
     verified_only=False,
+    allowed_ids=None,
 ):
     """Bound actual full-text retrieval by paper, not manifest or popularity."""
     require(limit > 0, "limit须为正整数")
@@ -612,6 +613,8 @@ def reference_pack(
     selected = []
     seen_questions = set()
     for row in found:
+        if allowed_ids is not None and row["occurrence_id"] not in allowed_ids:
+            continue
         if row.get("curation", {}).get("body_state") == "存在版本冲突":
             continue
         if counts[row["paper_id"]] >= policy["per_paper_reference_cap"]:
@@ -642,12 +645,18 @@ def reference_pack(
     }
 
 
-def planning_references(root, topics=("数列", "导数", "解析几何"), max_chars=12000):
+def planning_references(
+    root, topics=("数列", "导数", "解析几何"), max_chars=12000,
+    *, verified_only=False, allowed_ids=None,
+):
     """Whole student-facing questions only; do not truncate formulae to fit a prompt."""
     result = {}
     used = 0
     for topic in topics:
-        pack = reference_pack(root, topic=topic, limit=12)
+        pack = reference_pack(
+            root, topic=topic, limit=12, verified_only=verified_only,
+            allowed_ids=allowed_ids,
+        )
         selected = []
         # Split the budget between topics. The full research CLI remains unrestricted.
         budget = max_chars // len(topics)

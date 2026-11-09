@@ -5,6 +5,7 @@ public-release/CONTRIBUTING.md -> CONTRIBUTING.md
 public-release/DATA.md -> docs/DATA.md
 public-release/database.json -> database.json
 public-release/gitignore -> .gitignore
+.gitattributes
 public-release/national-config.json -> national/config.json
 public-release/requirements.txt -> requirements.txt
 public-release/requirements-backup.txt -> requirements-backup.txt
@@ -26,6 +27,7 @@ scripts/student_feedback.py
 scripts/analysis_db.py
 scripts/security_scan.py
 scripts/national_db.py
+scripts/national_duplicates.py
 scripts/national_cli.py
 scripts/national_schema.py
 scripts/national_quality.py
@@ -40,6 +42,7 @@ scripts/mathgen/ai_spec.py
 scripts/mathgen/attestation.py
 scripts/mathgen/dynamic.py
 scripts/mathgen/editorial.py
+scripts/mathgen/evaluation.py
 scripts/mathgen/exam_workflow.py
 scripts/mathgen/export.py
 scripts/mathgen/generate.py
@@ -60,6 +63,7 @@ skills/henan-math/references/ai-protocol.md
 skills/henan-math/references/coverage.md
 skills/henan-math/references/national.md
 skills/henan-math/references/calibration.md
+skills/henan-math/references/evaluation.md
 skills/henan-math/references/student-feedback.md
 skills/henan-math/references/storage.md
 skills/henan-math/references/writing-protocol.md

@@ -1,0 +1,356 @@
+{
+  "pdf_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+  "student_review_sha256": "d2a7c878ce443bb54cd9e0ad56419afda5dfdcdd0ac823352820402f9332dd36",
+  "math_verification_sha256": "5f37cb2bb32db24c2150da084d31e26129d2f343e7ed2be5f85d7cf2edee6380",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "模长方程的根0、2，排除0，唯一B。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "完整像集为−1、0、3、8，交集3个，唯一C。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "正交给t²+t−1，两个实根平方和3，唯一A。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "角在第一象限，倍角正弦4√5/9，唯一D。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "相邻递推相加消去交替项，第五个相邻和80，唯一C。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 6,
+      "passed": true,
+      "evidence": "手工两层分类和程序格点枚举均得5，唯一B。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 7,
+      "passed": true,
+      "evidence": "短轴顶点处焦点三角形的半角是60度，离心率√3/2，唯一D。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 1,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "非退化椭圆的短轴端点。",
+        "necessity": "对称及椭圆定义给两焦距均为a。",
+        "sufficiency": "半角直角三角形给c/a=sin60°。",
+        "boundaries": "B不在焦点连线上，两焦点距离非零。",
+        "equality": "所得比值在(0,1)，对应存在的椭圆。",
+        "school_solution": "焦点定义与直角三角函数，独立核实选择唯一。"
+      }
+    },
+    {
+      "number": 8,
+      "passed": true,
+      "evidence": "端点等高给4ln4/3，导数先负后正证明端点确为最大，唯一A。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 1,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "闭区间[1,4]，两端点同为最大。",
+        "necessity": "必须等高，从线性方程唯一解出a。",
+        "sufficiency": "1<a<4时导数先负后正，两端确为并列最大。",
+        "boundaries": "端点可取，严格不等式排除临界点落在端点。",
+        "equality": "最大值恰在两个端点达到。",
+        "school_solution": "用导数证明对数上下界，避免近似值比较。"
+      }
+    },
+    {
+      "number": 9,
+      "passed": true,
+      "evidence": "两组方差须加组间偏差，合并方差9；平移后5，取3、5和5、11否定中位数，选AC。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 3,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 1,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "两个同规模群体，使用高中总体型方差定义。",
+        "necessity": "分解组内、组间平方差，均值变换必须一并考虑。",
+        "sufficiency": "精确计算三个矩；以满足全部条件的实数据否定中位数命题。",
+        "boundaries": "相同规模保证等权，允许数据并列。",
+        "equality": "A和C等式成立，B值误，D非普遍。",
+        "school_solution": "展开平方与反例，无统计推断前提。"
+      }
+    },
+    {
+      "number": 10,
+      "passed": true,
+      "evidence": "和式n(6−n)，最大9，n=6为零且n=1、5同值，选AB。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 3,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "正整数下标的等差数列。",
+        "necessity": "两个前缀和形成二元线性条件，唯一确定a₁,d。",
+        "sufficiency": "配方统一证明极值，再对两错误命题给反例。",
+        "boundaries": "n=6恰为零，不能纳入严格正值。",
+        "equality": "n=3唯一最大，n=1,5同和使D不成立。",
+        "school_solution": "等差和、配方和直接反例。"
+      }
+    },
+    {
+      "number": 11,
+      "passed": true,
+      "evidence": "内外切半径1、5，r²=13时公共弦过圆心，r=4否D，选ABC。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 2,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 2,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "r>0的两圆位置关系。",
+        "necessity": "外切、内切须分别用半径和差检验。",
+        "sufficiency": "相减求公共弦，r=√13时过圆心；r=4给反例。",
+        "boundaries": "分开两个相切端点和两点相交开范围。",
+        "equality": "两相切端半径为1、5，公共弦是直径时恰长4。",
+        "school_solution": "圆的位置关系及相减消元。"
+      }
+    },
+    {
+      "number": 12,
+      "passed": true,
+      "evidence": "2028项两两配成1014组，每组−3，总和−3042。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 13,
+      "passed": true,
+      "evidence": "取四次负一次幂，其余取平方，常数项15。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 14,
+      "passed": true,
+      "evidence": "归一化后柯西给4√13，正坐标满足取等比例。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 15,
+      "passed": true,
+      "evidence": "角60度，面积比化为(8−a)/(2√3)，逐值可达且仅上端取到。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 2,
+        "status": "independent_reasoning_only"
+      },
+      "argument_audit": {
+        "scope": "非退化三角形b,c>0且和为8。",
+        "necessity": "余弦定理定角60度，bc范围约束a。",
+        "sufficiency": "每个b∈(0,8)与c=8−b都能夹60度构成三角形。",
+        "boundaries": "bc趋0对应退化，所以下端0不可取。",
+        "equality": "b=c=4时比值最大，确实实现。",
+        "school_solution": "余弦定理、面积公式、配方，解释完整范围。"
+      }
+    },
+    {
+      "number": 16,
+      "passed": true,
+      "evidence": "平面−2hx+hy+8z=0，棱交比1:3，h=8/√5，距离√10。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 2,
+        "status": "independent_reasoning_only"
+      },
+      "argument_audit": {
+        "scope": "直四棱柱底边2且高h>0；锐角45度。",
+        "necessity": "法向量非零，交点在垂直棱的参数唯一。",
+        "sufficiency": "所解h为正，并回代角与距离。",
+        "boundaries": "z=h/4严格位于棱内，法向量夹角取绝对余弦。",
+        "equality": "正高条件只保留正根，D₁不在截面。",
+        "school_solution": "空间向量、法向量与点面距离，独立图形比对。"
+      }
+    },
+    {
+      "number": 17,
+      "passed": true,
+      "evidence": "P=3/20、E=21/2，条件交换各组计数1、3、1，概率5/27。",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 3,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 18,
+      "passed": true,
+      "evidence": "截距一正一负，绝对值倒数和1；面积8在t²=2时两点均取到。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 2,
+        "status": "independent_reasoning_only"
+      },
+      "argument_audit": {
+        "scope": "t²>1的两支；所有交点和截距都有定义。",
+        "necessity": "用参数推得所有合格M,N的纵坐标。",
+        "sufficiency": "算术几何均值给下界，t=±√2均在原域。",
+        "boundaries": "t=±1均排除；两支的截距符号相同。",
+        "equality": "面积等号仅t²=2，明确两个坐标。",
+        "school_solution": "截距和底高法，避免默认斜率或单支。"
+      }
+    },
+    {
+      "number": 19,
+      "passed": true,
+      "evidence": "临界r唯一且两端趋正无穷。两个倒数比较严格夹逼r²<αβ<1；盲解给乘积变元的第二条证明。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "正半轴上，水平高度m严格大于最小值。",
+        "necessity": "导数给唯一临界点，两端发散才确保两根。",
+        "sufficiency": "两次倒数比较都在增支，故分别推出根积的上下界。",
+        "boundaries": "x→0右端用u−ln u估计；m等于最小值不在两根条件。",
+        "equality": "u>1且α<r<1给两个严格比较，界都不能在本条件下取等。",
+        "school_solution": "导数、单调性和介值原理；独立盲解还用u=√(αβ)作交叉论证。"
+      }
+    }
+  ],
+  "official_or_human_review": false,
+  "solution_revisions": {
+    "7": {
+      "reason": "定义焦半距并保留角度依据",
+      "paragraphs": [
+        "由对称性与椭圆定义，\\(BF_1=BF_2=a\\)，其中 \\(a\\) 为半长轴长。设 \\(O\\) 为焦点中点，\\(c=OF_1\\)。",
+        "因为 \\(BO\\perp F_1F_2\\)，所以 \\(\\angle F_1BO=60^\\circ\\)。于是 \\(\\frac ca=\\frac{OF_1}{BF_1}=\\sin60^\\circ=\\frac{\\sqrt3}{2}\\)，选D。"
+      ]
+    },
+    "8": {
+      "reason": "展示对数比较的导数与端点",
+      "paragraphs": [
+        "必要条件是端点等高，即 \\(a=\\ln4+a/4\\)，解得 \\(a=\\frac43\\ln4\\)。",
+        "在 \\(x>1\\) 时，\\((\\ln x-1+1/x)'=(x-1)/x^2>0\\)，且 \\((x-1-\\ln x)'=1-1/x>0\\)。",
+        "这两个函数在 \\(x=1\\) 时均为 \\(0\\)。取 \\(x=4\\)，得 \\(\\frac34<\\ln4<3\\)，所以 \\(1<a<4\\)。",
+        "因 \\(f'(x)=(x-a)/x^2\\)，\\(f\\) 先减后增，等高端点确为最大值，选A。"
+      ]
+    },
+    "13": {
+      "reason": "拆分长句，避免行首标点",
+      "paragraphs": [
+        "若有 \\(k\\) 个因式取 \\(1/x\\)，则其余取 \\(x^2\\)。总指数为 \\(2(6-k)-k=12-3k\\)。",
+        "常数项对应 \\(k=4\\)，其系数为 \\(\\binom64=15\\)。"
+      ]
+    },
+    "16": {
+      "reason": "用数量积核查法向量，不需要叉积术语",
+      "paragraphs": [
+        "令 \\(AA_1=h>0\\)，以 \\(A\\) 为原点，分别沿 \\(AB,AD,AA_1\\) 建立空间直角坐标系。此时 \\(E=(2,0,h/2)\\)，\\(F=(1,2,0)\\)。",
+        "向量 \\(\\mathbf n=(-h,h/2,4)\\) 与 \\(\\overrightarrow{AE},\\overrightarrow{AF}\\) 的数量积均为0，故为平面 \\(AEF\\) 的法向量。",
+        "平面方程可写为 \\(-2hx+hy+8z=0\\)。在 \\(CC_1\\) 上 \\(x=y=2\\)，故 \\(z=h/4\\)，在 \\(0,h\\) 之间，所以 \\(CG:GC_1=1:3\\)。",
+        "底面法向量为 \\((0,0,1)\\)。由 \\(\\frac{4}{\\sqrt{5h^2/4+16}}=\\frac1{\\sqrt2}\\)，解得 \\(h=8/\\sqrt5\\)。",
+        "又 \\(D_1=(0,2,h)\\)，其到平面 \\(AEF\\) 的距离为 \\(\\frac{|2h+8h|}{\\sqrt{5h^2+64}}=\\sqrt{10}\\)。"
+      ]
+    },
+    "19": {
+      "reason": "补出正半轴左端发散的比较函数导数",
+      "paragraphs": [
+        "导数 \\(f'(x)=(x^2+x-1)/x^2\\)。分子在正半轴严格递增并有唯一正根 \\(r=(\\sqrt5-1)/2\\)，故 \\(f\\) 先严格减后严格增。",
+        "当 \\(x\\ge1\\) 时 \\(f(x)\\ge x\\)。令 \\(u=1/x\\)，则 \\(x\\) 趋于0的右侧时 \\(u\\) 趋于正无穷。",
+        "当 \\(u\\ge2\\)，函数 \\(u/2-\\ln u\\) 的导数 \\(1/2-1/u\\ge0\\)。它在 \\(u=2\\) 时取值 \\(1-\\ln2>0\\)。",
+        "因此 \\(u-\\ln u\\ge u/2\\)，所以 \\(f\\) 两端都趋于正无穷。连续性与严格单调性给出两根各在一侧。",
+        "由 \\(\\alpha<r<1\\)，\\(1/\\alpha>r\\)。且 \\(f(1/\\alpha)-f(\\alpha)=-2\\ln\\alpha>0\\)，在增支比较得 \\(\\beta<1/\\alpha\\)。",
+        "再令 \\(u=r/\\alpha>1\\)。由 \\(r^2+r=1\\) 得 \\(r-1/r=-1\\)，从而 \\(f(ru)-f(r/u)=2\\ln u-u+1/u\\)。",
+        "该差在 \\(u=1\\) 为0，导数为 \\(-(u-1)^2/u^2<0\\)，故 \\(f(ru)<f(\\alpha)\\)。因 \\(ru>r\\)，在增支比较得 \\(\\beta>ru=r^2/\\alpha\\)。两边都为严格不等式。"
+      ]
+    }
+  }
+}

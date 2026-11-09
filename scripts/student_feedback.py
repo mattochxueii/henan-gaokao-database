@@ -1,6 +1,7 @@
 """Collect pseudonymous observations bound to an immutable published practice paper."""
 
 import argparse
+import csv
 import math
 import re
 import sys
@@ -14,6 +15,16 @@ from mathgen.exam_workflow import verify_certificate
 ERRORS = ("concept", "model", "calculation", "logic", "reading", "time", "other")
 STATUSES = ("correct", "partial", "incorrect", "unfinished")
 CODE = re.compile(r"[a-zA-Z0-9_-]{4,32}\Z")
+REQUIRED = {
+    "participant_code", "paper_sha256", "question_id", "seconds", "score",
+    "status", "error_types", "reading_difficulty", "method_note",
+}
+OPTIONAL = {"ambiguity_reported", "explanation_clarity"}
+CSV_FIELDS = (
+    "paper_id", "paper_sha256", "number", "question_id", "participant_code",
+    "seconds", "score", "status", "error_types", "reading_difficulty",
+    "ambiguity_reported", "explanation_clarity", "method_note",
+)
 
 
 def checked_questions(paper_dir):
@@ -28,18 +39,7 @@ def checked_questions(paper_dir):
 
 def validate(row, paper_sha, questions):
     require(
-        set(row)
-        == {
-            "participant_code",
-            "paper_sha256",
-            "question_id",
-            "seconds",
-            "score",
-            "status",
-            "error_types",
-            "reading_difficulty",
-            "method_note",
-        },
+        REQUIRED <= set(row) <= REQUIRED | OPTIONAL,
         "反馈字段不符，请勿加入身份信息",
     )
     require(
@@ -80,7 +80,58 @@ def validate(row, paper_sha, questions):
         isinstance(row["method_note"], str) and len(row["method_note"]) <= 1000,
         "解题思路过长",
     )
+    if "ambiguity_reported" in row:
+        require(type(row["ambiguity_reported"]) is bool, "歧义字段须为布尔值")
+    if "explanation_clarity" in row:
+        value = row["explanation_clarity"]
+        require(type(value) is int and 0 <= value <= 3, "解析理解程度为0至3")
     return row
+
+
+def paper_layout(paper_dir):
+    document = read_json(paper_dir / "raw-ai-candidate.json")
+    return (
+        document["paper"].get("study_id", document["paper"]["title"]),
+        {str(q["order"]): q["id"] for q in document["questions"]},
+    )
+
+
+def make_csv(path, paper_id, paper_sha, numbers):
+    with path.open("x", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
+        writer.writeheader()
+        for number, qid in numbers.items():
+            writer.writerow({
+                "paper_id": paper_id, "paper_sha256": paper_sha,
+                "number": number, "question_id": qid,
+            })
+
+
+def csv_rows(path, paper_id, paper_sha, numbers):
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        require(reader.fieldnames == list(CSV_FIELDS), "请保留CSV列名")
+        for row in reader:
+            require(None not in row and all(v is not None for v in row.values()), "CSV列数不符")
+            require(
+                row["paper_id"] == paper_id and row["paper_sha256"] == paper_sha
+                and numbers.get(row["number"]) == row["question_id"],
+                "CSV题号或试卷版本不符",
+            )
+            entry = {k: row[k] for k in REQUIRED}
+            response_keys = REQUIRED - {"paper_sha256", "question_id"}
+            if not any(row[k] for k in response_keys | OPTIONAL):
+                continue
+            for k in ("seconds", "reading_difficulty"):
+                entry[k] = int(row[k])
+            entry["score"] = float(row["score"])
+            entry["error_types"] = [v.strip() for v in row["error_types"].split("|") if v.strip()]
+            if row["ambiguity_reported"]:
+                require(row["ambiguity_reported"] in ("0", "1"), "歧义字段填写0或1")
+                entry["ambiguity_reported"] = row["ambiguity_reported"] == "1"
+            if row["explanation_clarity"]:
+                entry["explanation_clarity"] = int(row["explanation_clarity"])
+            yield entry
 
 
 def summary(rows, points, min_sample=10):
@@ -96,6 +147,8 @@ def summary(rows, points, min_sample=10):
         correct = sum(r["status"] == "correct" for r in records)
         ratio = sum(r["score"] for r in records) / (n * points[qid])
         adjustment = None
+        ambiguity = [r["ambiguity_reported"] for r in records if "ambiguity_reported" in r]
+        clarity = [r["explanation_clarity"] for r in records if "explanation_clarity" in r]
         if n >= min_sample:
             adjustment = (
                 "复查是否过难"
@@ -117,9 +170,14 @@ def summary(rows, points, min_sample=10):
                 r["reading_difficulty"] for r in records
             ),
             "calibration_hint": adjustment,
+            "ambiguity_responses": len(ambiguity),
+            "ambiguity_reports": sum(ambiguity),
+            "explanation_clarity_responses": len(clarity),
+            "explanation_clarity_median": median(clarity) if clarity else None,
         }
     return {
         "records": len(rows),
+        "participants": len({r["participant_code"] for r in rows}),
         "questions": result,
         "scope": "仅反映录入样本；无真实数据时输出0条，无正式难度标定",
     }
@@ -135,11 +193,24 @@ def main():
     report = modes.add_parser("summary")
     report.add_argument("feedback", type=Path)
     report.add_argument("--min-sample", type=int, default=10)
+    form = modes.add_parser("blank-csv")
+    form.add_argument("output", type=Path)
     args = parser.parse_args()
     try:
         paper_sha, points = checked_questions(args.paper)
+        if args.mode == "blank-csv":
+            paper_id, numbers = paper_layout(args.paper)
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            make_csv(args.output, paper_id, paper_sha, numbers)
+            print(dumps({"paper_id": paper_id, "paper_sha256": paper_sha, "records": 0}))
+            return 0
         if args.mode == "prepare":
-            rows = [validate(row, paper_sha, points) for row in read_lines(args.input)]
+            if args.input.suffix.lower() == ".csv":
+                paper_id, numbers = paper_layout(args.paper)
+                source = csv_rows(args.input, paper_id, paper_sha, numbers)
+            else:
+                source = read_lines(args.input)
+            rows = [validate(row, paper_sha, points) for row in source]
         else:
             rows = [
                 validate(row, paper_sha, points) for row in read_json(args.feedback)

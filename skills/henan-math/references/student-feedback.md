@@ -1,14 +1,16 @@
-# 匿名作答反馈
+# 匿名试做与作答反馈
 
-反馈写入个人受控的 `.feedback/`，以同一份已审试卷的 PDF 哈希绑定。记录前由组织者分配随机代码。参与者代码之外，姓名、联系方式、学校等身份信息均省略。自由文本只写解题过程要点。
-
-输入为 UTF-8 JSONL，每行一人一题。字段为 `participant_code`、`paper_sha256`、`question_id`、`seconds`、`score`、`status`、`error_types`、`reading_difficulty`、`method_note`。题目 ID 和满分可从试卷的 `student-text.json` 读取，PDF 哈希见 `publication.json`。
-
-作答状态用 `correct`、`partial`、`incorrect` 或 `unfinished`，错误标签可选 `concept`、`model`、`calculation`、`logic`、`reading`、`time`、`other`。题意困难用 0 至 3 表示从无困难到严重。未完成可以给已做部分的分值，时间为已观察的作答秒数。
+试做材料由考生卷、答案解析和评分说明组成。先独立作答并记录各题用时、未完成项、题意困难或歧义，再看解析自评得分及解析理解。按同一卷号、版本、题号和 PDF 校验值汇总。
 
 ```sh
-python scripts/student_feedback.py <试卷目录> prepare <原始记录.jsonl> .feedback/round1.json
+python scripts/student_feedback.py <试卷目录> blank-csv .feedback/空表.csv
+python scripts/student_feedback.py <试卷目录> prepare .feedback/已填表.csv .feedback/round1.json
 python scripts/student_feedback.py <试卷目录> summary .feedback/round1.json --min-sample 10
 ```
 
-汇总给出满分人数、得分率、未完成人数、时间中位数、错误次数和题意困难中位数。至少10人时才提示是否复查难度。样本来源、参与者覆盖与实际条件需要记录。复查提示供人工决定是否调整难度，不会覆写编辑分值。空记录返回0条，不生成实测难度。
+- 保存空表副本，保留前四个绑定列。每位参与者自用一个随机代码。未记录的题保持反馈列空白，做了但未完成的题填写 `unfinished` 和观察到的秒数，可填已获部分分。
+- `status` 用 `correct`、`partial`、`incorrect` 或 `unfinished`。错误类型以 `|` 分隔，可选 `concept`、`model`、`calculation`、`logic`、`reading`、`time`、`other`。自由文本只写解题思路。
+- `reading_difficulty` 为0到3，从无困难到严重。可填 `ambiguity_reported` 的0或1。看过解析后，`explanation_clarity` 可填0到3，从看不懂到能独立复述。姓名、学校和联系方式均省略。
+- 输入兼容第六阶段 UTF-8 JSONL。原九字段照常读取，新增两字段可省略。填过的记录只保存在私有 `.feedback/`。
+
+汇总给出满分人数、得分比例、未完成人数、时间中位数、错误类型、题意困难、歧义与解析理解。至少10位有效作答者时才提示复查难度，低于10位只作个人或小样本记录。提示根据实际提交计算，不会覆写编辑分值，也不代表正式难度标定。

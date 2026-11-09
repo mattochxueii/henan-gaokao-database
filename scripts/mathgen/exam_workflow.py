@@ -330,11 +330,23 @@ def publish(output, review_path, comparison_path):
         "逐题数学质量不通过",
     )
     calculations = read_json(output / "math-verification.json")
+    if raw.get("evaluation_split_sha256"):
+        dimensions = {"scope", "necessity", "sufficiency", "boundaries", "equality", "school_solution"}
+        for index, (row, calculation) in enumerate(zip(comparison["questions"], calculations), 1):
+            require(row.get("number") == index, "数学对照题号错位")
+            if not calculation["all_tasks_program_complete"]:
+                audit = row.get("argument_audit", {})
+                require(
+                    set(audit) == dimensions
+                    and all(isinstance(v, str) and v.strip() for v in audit.values()),
+                    "不完整程序覆盖须检查必要性、充分性、边界、等号与高中解法",
+                )
     for row, calculation in zip(reviews, calculations):
         if student["questions"][row["number"] - 1]["kind"] == "multiple_choice":
             given = row.get("answer_key") or []
             require(
-                set(given) <= set("ABCD") and len(given) in (2, 3),
+                set(given) <= set("ABCD") and len(given) == len(set(given))
+                and len(given) in (2, 3),
                 "多选独立答案集合不规范",
             )
             for key, task in zip("ABCD", calculation["tasks"]):

@@ -19,10 +19,17 @@ class NationalPrivateTests(unittest.TestCase):
         self.assertEqual(result["new_occurrences"], 458)
 
     def test_I_is_continuous_and_full(self):
-        rows = db.query(ROOT, series="cn-new-gaokao-1", year_from=2020, year_to=2026)
+        filters = {"series": "cn-new-gaokao-1", "year_from": 2020, "year_to": 2026}
+        rows = db.query(ROOT, **filters, include_quarantined=True)
         self.assertEqual({r["year"] for r in rows}, set(range(2020, 2027)))
         self.assertEqual(len(rows), 145)
         self.assertTrue(all(r["stem"] and r["source_locator"] for r in rows))
+        strict = db.query(ROOT, **filters, verified_only=True)
+        self.assertEqual(len(strict), 136)
+        self.assertEqual(
+            {r["occurrence_id"] for r in rows} - {r["occurrence_id"] for r in strict},
+            {r["occurrence_id"] for r in rows if r.get("calibration", {}).get("body") == "pdf_conflict"},
+        )
 
     def test_II_has_seven_years(self):
         rows = db.query(ROOT, series="cn-new-gaokao-2")

@@ -744,10 +744,16 @@ def run_ai(
     solver_timeout=18,
     pilot_certificate=None,
     specialty_certificates=(),
+    evaluation_split=None,
 ):
     require(not output.exists(), "输出目录已存在")
+    if evaluation_split:
+        from .evaluation import verify_split
+
+        verify_split(root, evaluation_split)
     research_context = context(
-        root, include_local=not isinstance(provider, OpenAIProvider)
+        root, include_local=not isinstance(provider, OpenAIProvider),
+        evaluation_split=evaluation_split, strict=True,
     )
     document = provider.propose(
         research_context,
@@ -761,6 +767,12 @@ def run_ai(
     if document.get("schema_version") == 2:
         from .exam_workflow import prepare
 
+        if evaluation_split:
+            from .evaluation import verify_candidate_references
+            from .research_quality import uses_protocol
+
+            require(uses_protocol(document), "留出实验须逐题关联严格复核依据")
+            verify_candidate_references(document, evaluation_split)
         manifest = prepare(
             root, document, output, pilot_certificate, specialty_certificates
         )
@@ -775,6 +787,7 @@ def run_ai(
             "overall_status": "中文写作与程序支持通过；等待PDF-only独立考生审题",
             "review_manifest": manifest,
         }
+    require(evaluation_split is None, "留出实验须使用三层中文题面协议")
     output.mkdir(parents=True)
     atomic_json(output / "raw-ai-proposal.json", document)
     proposed = document["blueprint"]

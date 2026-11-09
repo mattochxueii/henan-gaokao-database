@@ -35,6 +35,13 @@ def main(argv=None):
     action.add_argument("--legacy-only", action="store_true")
     action.add_argument("--verified-only", action="store_true")
     actions.add_parser("rules")
+    action = actions.add_parser("study-split")
+    action.add_argument("--holdout-paper", action="append", required=True)
+    action.add_argument("--output", type=Path, required=True)
+    packet = actions.add_parser("study-packet")
+    packet.add_argument("--evaluation-split", type=Path, required=True)
+    packet.add_argument("--topic", action="append")
+    packet.add_argument("--output", type=Path, required=True)
     planning = actions.add_parser("plan")
     planning.add_argument(
         "--mode",
@@ -63,6 +70,7 @@ def main(argv=None):
     action.add_argument("--allow-template-fallback", action="store_true")
     action.add_argument("--pilot-certificate", type=Path)
     action.add_argument("--specialty-certificate", type=Path, action="append", default=[])
+    action.add_argument("--evaluation-split", type=Path)
     action = actions.add_parser("publish")
     action.add_argument("output", type=Path)
     action.add_argument("--student-review", type=Path, required=True)
@@ -159,11 +167,34 @@ def main(argv=None):
                 atomic_json(args.output, result)
         elif args.action == "rules":
             result = rules(root)
+        elif args.action == "study-split":
+            from mathgen.evaluation import archive_split
+            from storage import atomic_json
+
+            split = archive_split(root, args.holdout_paper)
+            atomic_json(args.output, split)
+            result = {
+                "sha256": split["sha256"], "reference": len(split["reference"]),
+                "holdout": len(split["holdout"]),
+            }
+        elif args.action == "study-packet":
+            from mathgen.evaluation import verify_split
+            from mathgen.planner import context
+            from storage import atomic_json
+
+            split = verify_split(root, read_json(args.evaluation_split))
+            packet = context(root, evaluation_split=split, strict=True, topics=args.topic)
+            atomic_json(args.output, packet)
+            result = {"output": str(args.output), "split_sha256": split["sha256"]}
         elif args.action == "generate":
             from mathgen.ai_provider import select_provider
 
             provider = select_provider(
                 args.engine, args.candidates, args.model, args.allow_template_fallback
+            )
+            require(
+                not args.evaluation_split or provider.name != "template",
+                "留出集实验不能使用模板",
             )
             if provider.name != "template":
                 from mathgen.dynamic import run_ai
@@ -175,6 +206,7 @@ def main(argv=None):
                     not args.no_export,
                     pilot_certificate=args.pilot_certificate,
                     specialty_certificates=args.specialty_certificate,
+                    evaluation_split=read_json(args.evaluation_split) if args.evaluation_split else None,
                 )
                 result = {
                     "output": str(args.output.resolve()),

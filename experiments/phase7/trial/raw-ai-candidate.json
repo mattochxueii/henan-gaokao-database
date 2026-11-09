@@ -1,0 +1,1023 @@
+{
+  "schema_version": 2,
+  "research_protocol": "calibrated-v1",
+  "evaluation_split_sha256": "9e02be92a0ae6b7a90c1ec6387b24f6cdaf66125976d21839df782625a831178",
+  "paper": {
+    "study_id": "HN7-T50-v2",
+    "mode": "pilot",
+    "title": "数学综合试做卷 · HN7-T50-v2",
+    "minutes": 50,
+    "total_points": 50
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "template_calls": 0,
+    "api_calls": 0,
+    "authorship": "当前宿主基于完整候选卷面与复核结论独立创作；编辑、求解、盲审分别执行",
+    "official_2027_structure_verified": false
+  },
+  "questions": [
+    {
+      "id": "orig:ai:phase7:trial:01:v1",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "复数",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "设复数 \\(z\\) 的实部为正，\\(z+2i\\) 为实数，且 \\(|z-1|\\le\\sqrt5\\)。则 \\(z^2\\) 的实部与虚部之和的取值范围为",
+          "asks": []
+        },
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "quadratic_range_claim",
+            "expression": "x**2-4*x-4",
+            "constraints": [
+              "x>0",
+              "(x-1)**2+4<=5"
+            ],
+            "bounds": [
+              "-8",
+              "-4"
+            ],
+            "open": [
+              false,
+              true
+            ]
+          },
+          "B": {
+            "op": "quadratic_range_claim",
+            "expression": "x**2-4*x-4",
+            "constraints": [
+              "x>0",
+              "(x-1)**2+4<=5"
+            ],
+            "bounds": [
+              "-8",
+              "-4"
+            ],
+            "open": [
+              true,
+              false
+            ]
+          },
+          "C": {
+            "op": "quadratic_range_claim",
+            "expression": "x**2-4*x-4",
+            "constraints": [
+              "x>0",
+              "(x-1)**2+4<=5"
+            ],
+            "bounds": [
+              "-8",
+              "-4"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          },
+          "D": {
+            "op": "quadratic_range_claim",
+            "expression": "x**2-4*x-4",
+            "constraints": [
+              "x>0",
+              "(x-1)**2+4<=5"
+            ],
+            "bounds": [
+              "-8",
+              "0"
+            ],
+            "open": [
+              false,
+              true
+            ]
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "cf8509fa1b7ccf7f8ff51a4b6db8eb07e83a17f952f46418c61206e1d435e027",
+        "stem": "设复数 {{f1}} 的实部为正，{{f2}} 为实数，且 {{f3}}。则 {{f4}} 的实部与虚部之和的取值范围为",
+        "parts": [],
+        "options": {
+          "A": "{{f5}}",
+          "B": "{{f6}}",
+          "C": "{{f7}}",
+          "D": "{{f8}}"
+        },
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "z"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "z+2i"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "|z-1|\\le\\sqrt5"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "z^2"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "[-8,-4)"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "(-8,-4]"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "[-8,-4]"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "[-8,0)"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "设复数 {{f1}} 的实部为正，{{f2}} 为实数，且 {{f3}}。则 {{f4}} 的实部与虚部之和的取值范围为"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "设 \\(z=x+yi\\)，则 \\(y=-2\\)。由 \\(|z-1|^2=(x-1)^2+4\\le5\\) 及实部为正，得 \\(0<x\\le2\\)。",
+          "所求为 \\(x^2-4-4x=(x-2)^2-8\\)。当 \\(0<x\\le2\\) 时，\\(0\\le(2-x)^2<4\\)，且区间内每个值都可达到。",
+          "因此值域为 \\([-8,-4)\\)，左端在 \\(x=2\\) 取得，右端对应被排除的 \\(x=0\\)。选A。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题给定复数后取虚部，新题从复数模与符号条件确定区间并检查端点"
+        },
+        "points_justification": "把复数约束转成二次函数值域，检查两个端点",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2025-cn-math-national-1:q001",
+            "version_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+            "transfer": "借鉴用共轭量区分实部和虚部",
+            "structural_difference": "原题给定复数后取虚部，新题从复数模与符号条件确定区间并检查端点"
+          }
+        ],
+        "novel_structure": "把复数约束转成二次函数值域，检查两个端点",
+        "reasoning_target": "把复数约束转成二次函数值域，检查两个端点"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:02:v1",
+      "order": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "概率",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "从标有 \\(1,2,3,4,5\\) 的五张卡片中随机取出两张。已知较小的号码是奇数，则两数之和能被 \\(3\\) 整除的概率为",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "probability",
+            "sample_space": {
+              "a": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "b": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "condition": "a<b and a%2==1",
+            "event": "(a+b)%3==0"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1/5"
+          },
+          "B": {
+            "semantic_value": "1/3"
+          },
+          "C": {
+            "semantic_value": "2/5"
+          },
+          "D": {
+            "semantic_value": "1/2"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "535382fc9db2f4b3a858cbfe02bda60be546226198799beb461bd706f92459a2",
+        "stem": "从标有 {{f1}} 的五张卡片中随机取出两张。已知较小的号码是奇数，则两数之和能被 {{f2}} 整除的概率为",
+        "parts": [],
+        "options": {
+          "A": "{{f3}}",
+          "B": "{{f4}}",
+          "C": "{{f5}}",
+          "D": "{{f6}}"
+        },
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "1,2,3,4,5"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "3"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\frac15"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "\\frac13"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "\\frac25"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\frac12"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "从标有 {{f1}} 的五张卡片中随机取出两张。已知较小的号码是奇数，则两数之和能被 {{f2}} 整除的概率为"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "按号码从小到大记为 \\((a,b)\\)。符合条件的对子有 \\((1,2),(1,3),(1,4),(1,5),(3,4),(3,5)\\)，各等可能。",
+          "其中只有 \\((1,2),(1,5)\\) 满足要求，故概率为 \\(2/6=1/3\\)，选B。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题删除固定点后算均值，本题在条件事件内重新计数"
+        },
+        "points_justification": "按较小号构造条件样本空间",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q008",
+            "version_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+            "transfer": "借鉴参考题用明确条件限制待求对象的组织方式",
+            "structural_difference": "原题删除固定点后算均值，本题在条件事件内重新计数"
+          }
+        ],
+        "novel_structure": "按较小号构造条件样本空间",
+        "reasoning_target": "按较小号构造条件样本空间"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:03:v1",
+      "order": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "已知 \\(\\{a_n\\}\\) 是公差为正的等差数列，\\(a_2,a_4,a_7\\) 依次成等比数列。若前 \\(5\\) 项的和为 \\(50\\)，则 \\(a_7=\\)",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "a",
+              "b"
+            ],
+            "equations": [
+              "(a+3*b)**2-(a+b)*(a+6*b)",
+              "5*a+10*b-50"
+            ],
+            "conditions": [
+              "b>0"
+            ],
+            "value": "a+6*b"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "10"
+          },
+          "B": {
+            "semantic_value": "14"
+          },
+          "C": {
+            "semantic_value": "18"
+          },
+          "D": {
+            "semantic_value": "22"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "dacf24a9f599728736aca0cc615cb99ea57839045feaf50ab4251029c3fae562",
+        "stem": "已知 {{f1}} 是公差为正的等差数列，{{f2}} 依次成等比数列。若前 {{f3}} 项的和为 {{f4}}，则 {{f5}}",
+        "parts": [],
+        "options": {
+          "A": "{{f6}}",
+          "B": "{{f7}}",
+          "C": "{{f8}}",
+          "D": "{{f9}}"
+        },
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "a_2,a_4,a_7"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "5"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "50"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "a_7="
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "10"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "14"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "18"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "22"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "已知 {{f1}} 是公差为正的等差数列，{{f2}} 依次成等比数列。若前 {{f3}} 项的和为 {{f4}}，则 {{f5}}"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "设公差为 \\(d\\)，令 \\(u=a_2\\)。等比中项关系给 \\((u+2d)^2=u(u+5d)\\)，化简为 \\(ud=4d^2\\)。因 \\(d>0\\)，得 \\(u=4d\\) 及 \\(a_1=3d\\)。",
+          "前五项的和为 \\(5a_3=25d=50\\)，故 \\(d=2\\)，\\(a_7=9d=18\\)，选C。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题从连续块和找极值，本题用稀疏下标与等比中项反求公差"
+        },
+        "points_justification": "用两种数列结构反求参数",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q014",
+            "version_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+            "transfer": "借鉴参考题用明确条件限制待求对象的组织方式",
+            "structural_difference": "原题从连续块和找极值，本题用稀疏下标与等比中项反求公差"
+          }
+        ],
+        "novel_structure": "用两种数列结构反求参数",
+        "reasoning_target": "用两种数列结构反求参数"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:04:v1",
+      "order": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "导数",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "曲线 \\(y=x+\\frac4x\\)（\\(x>0\\)）上有两点，它们处的切线都经过点 \\((1,4)\\)。这两个切点的横坐标之和为",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "root_statistic",
+            "expression": "3*x**2-8*x+4",
+            "domain": [
+              0,
+              "oo"
+            ],
+            "statistic": "sum"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "4/3"
+          },
+          "B": {
+            "semantic_value": "2"
+          },
+          "C": {
+            "semantic_value": "7/3"
+          },
+          "D": {
+            "semantic_value": "8/3"
+          }
+        }
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "4b67e7bfd275f33f228de252b10c09db9ce9a97db4940b7cb3a6bedce197b658",
+        "stem": "曲线 {{f1}}（{{f2}}）上有两点，它们处的切线都经过点 {{f3}}。这两个切点的横坐标之和为",
+        "parts": [],
+        "options": {
+          "A": "{{f4}}",
+          "B": "{{f5}}",
+          "C": "{{f6}}",
+          "D": "{{f7}}"
+        },
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "y=x+\\frac4x"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "x>0"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "(1,4)"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "\\frac43"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "2"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\frac73"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "\\frac83"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "曲线 {{f1}}（{{f2}}）上有两点，它们处的切线都经过点 {{f3}}。这两个切点的横坐标之和为"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "设切点横坐标为 \\(t>0\\)。切线斜率为 \\(1-4/t^2\\)，过 \\((1,4)\\) 当且仅当 \\(4=t+4/t+(1-4/t^2)(1-t)\\)。",
+          "整理得 \\(3t^2-8t+4=0\\)。两根 \\(2,2/3\\) 均为正，横坐标和为 \\(8/3\\)，选D。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题切点已给，本题求两个切点并验证定义域"
+        },
+        "points_justification": "由切线经过外点反推切点参数",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q004",
+            "version_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+            "transfer": "借鉴参考题用明确条件限制待求对象的组织方式",
+            "structural_difference": "原题切点已给，本题求两个切点并验证定义域"
+          }
+        ],
+        "novel_structure": "由切线经过外点反推切点参数",
+        "reasoning_target": "由切线经过外点反推切点参数"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:05:v1",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "过点 \\(P(3,1)\\) 的直线与抛物线 \\(y^2=4x\\) 交于不同的两点 \\(A,B\\)。记线段 \\(AB\\) 的中点为 \\(M\\)。",
+          "asks": [
+            "若 \\(M\\) 的纵坐标为 \\(2\\)，求直线 \\(AB\\) 的方程。",
+            "求 \\(M\\) 的横坐标的最小值，并求取到最小值时的直线方程。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "964da92e49c9e1f47418ec6fa200b54319b05c0ce05276f3a840d3f741c9d5aa",
+        "stem": "过点 {{f1}} 的直线与抛物线 {{f2}} 交于不同的两点 {{f3}}。记线段 {{f4}} 的中点为 {{f5}}。",
+        "parts": [
+          {
+            "text": "若 {{f6}} 的纵坐标为 {{f7}}，求直线 {{f8}} 的方程。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求 {{f9}} 的横坐标的最小值，并求取到最小值时的直线方程。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "P(3,1)"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "y^2=4x"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "AB"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "2"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "AB"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "M"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "若 {{f6}} 的纵坐标为 {{f7}}，求直线 {{f8}} 的方程。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "水平直线与抛物线至多有一个交点。其余过 \\(P\\) 的直线可设为 \\(x=ty+3-t\\)，其中 \\(t=0\\) 包含竖直直线。代入抛物线得 \\(y^2-4ty-12+4t=0\\)。判别式为 \\(16(t^2-t+3)>0\\)，所以每个实数 \\(t\\) 都可取。",
+          "由韦达定理，\\(M\\) 的纵坐标为 \\(2t\\)，横坐标为 \\(2t^2-t+3\\)。第一问 \\(t=1\\)，直线是 \\(x=y+2\\)。",
+          "第二问 \\(2t^2-t+3=2(t-\\frac14)^2+\\frac{23}8\\)。最小值 \\(\\frac{23}8\\) 在 \\(t=\\frac14\\) 处取到，对应 \\(4x=y+11\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 9,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "参考题用过点条件确定抛物线参数，本题抛物线已定并研究弦中点的极值"
+        },
+        "points_justification": "由中点坐标消去交点并检查所有弦方向",
+        "part_points": [
+          5,
+          5
+        ],
+        "linked_progression": "由中点坐标消去交点并检查所有弦方向",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q005",
+            "version_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+            "transfer": "将参考题中条件对推理的约束提炼为独立的新数学模型",
+            "structural_difference": "参考题用过点条件确定抛物线参数，本题抛物线已定并研究弦中点的极值"
+          }
+        ],
+        "novel_structure": "由中点坐标消去交点并检查所有弦方向",
+        "reasoning_target": "由中点坐标消去交点并检查所有弦方向"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:06:v1",
+      "order": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "概率",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "从标有 \\(1,2,3,4,5\\) 的五张卡片中随机取出三张。记 \\(X\\) 为三个号码的中位数，\\(Y\\) 为最大号码与最小号码之差。",
+          "asks": [
+            "求 \\(X\\) 的分布列。",
+            "求 \\(X=3\\) 时 \\(Y\\) 的条件期望，并判断 \\(X,Y\\) 是否独立，说明理由。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "distribution",
+            "sample_space": {
+              "a": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "b": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "c": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "condition": "a<b and b<c",
+            "value": "b"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "068194288da3a584aaf916f5d3654ab6914cced7a667f34f03ee7308a9a323be",
+        "stem": "从标有 {{f1}} 的五张卡片中随机取出三张。记 {{f2}} 为三个号码的中位数，{{f3}} 为最大号码与最小号码之差。",
+        "parts": [
+          {
+            "text": "求 {{f4}} 的分布列。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求 {{f5}} 时 {{f6}} 的条件期望，并判断 {{f7}} 是否独立，说明理由。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "1,2,3,4,5"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "X"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "Y"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "X"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "X=3"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "Y"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "X,Y"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "求 {{f4}} 的分布列。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "按从小到大记为 \\(a<b<c\\)，共 \\(\\binom53=10\\) 个等可能组合。固定 \\(b\\)，组合数为 \\((b-1)(5-b)\\)。当 \\(X=2,3,4\\) 时分别有 \\(3,4,3\\) 个，概率依次为 \\(\\frac3{10},\\frac25,\\frac3{10}\\)。",
+          "在 \\(X=3\\) 时，最小号在 \\(1,2\\) 中取，最大号在 \\(4,5\\) 中取。四个等可能的差为 \\(3,4,2,3\\)，所以条件期望是 \\(3\\)。",
+          "若 \\(X=2\\)，最小号只能为 \\(1\\)，三个等可能的最大号为 \\(3,4,5\\)。因此 \\(P(Y=4\\mid X=2)=\\frac13\\)，而 \\(P(Y=4\\mid X=3)=\\frac14\\)。若独立，两概率应相同，故不独立。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 9,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "由单组确定中位数改为抽样的次序统计量及其条件分布"
+        },
+        "points_justification": "通过条件分布区分期望相同与分布相同",
+        "part_points": [
+          5,
+          5
+        ],
+        "linked_progression": "通过条件分布区分期望相同与分布相同",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q001",
+            "version_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+            "transfer": "将参考题中条件对推理的约束提炼为独立的新数学模型",
+            "structural_difference": "由单组确定中位数改为抽样的次序统计量及其条件分布"
+          }
+        ],
+        "novel_structure": "通过条件分布区分期望相同与分布相同",
+        "reasoning_target": "通过条件分布区分期望相同与分布相同"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:phase7:trial:07:v1",
+      "order": 7,
+      "kind": "constructed_response",
+      "points": 10,
+      "module": "导数",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "设 \\(f(x)=x-\\ln(1+x)\\)，其中 \\(x>0\\)。",
+          "asks": [
+            "证明 \\(0<f(x)<\\frac{x^2}{2}\\)。",
+            "若 \\(f(x)\\ge c\\frac{x^2}{1+x}\\) 对一切 \\(x>0\\) 成立，求实数 \\(c\\) 的最大值。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning",
+            "expression": "x-log(1+x)"
+          },
+          {
+            "op": "reasoning",
+            "expression": "x-log(1+x)-x**2/(2*(1+x))"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "4f9b3b0877e2ef3b58b66c3cc2d5582a97d765fee3fcf17bb3f626e326be8550",
+        "stem": "设 {{f1}}，其中 {{f2}}。",
+        "parts": [
+          {
+            "text": "证明 {{f3}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "若 {{f4}} 对一切 {{f5}} 成立，求实数 {{f6}} 的最大值。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "f(x)=x-\\ln(1+x)"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "x>0"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "0<f(x)<\\frac{x^2}{2}"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "f(x)\\ge c\\frac{x^2}{1+x}"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "x>0"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "c"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "证明 {{f3}}。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "令 \\(f(0)=0\\) 以比较端点。因为 \\(f'(x)=\\frac{x}{1+x}>0\\)，所以 \\(f(x)>0\\)。又 \\((x^2/2-f(x))'=\\frac{x^2}{1+x}>0\\)，该差在 \\(0\\) 处为 \\(0\\)，故 \\(f(x)<x^2/2\\)。",
+          "记 \\(G(x)=f(x)-\\frac{x^2}{2(1+x)}\\)。有 \\(G(0)=0\\)，且 \\(G'(x)=\\frac{x^2}{2(1+x)^2}>0\\)。因此 \\(c=1/2\\) 满足题设。",
+          "若 \\(c>1/2\\)，取 \\(0<x<2c-1\\)。由第一问，\\(\\frac{(1+x)f(x)}{x^2}<\\frac{1+x}{2}<c\\)，矛盾。故最大值为 \\(\\frac12\\)，取最大参数时原不等式在 \\(x>0\\) 仍为严格。"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 9,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 4,
+          "modeling": 1,
+          "logical_reasoning": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 1,
+          "source_level_difference": "原题已知最大值反求参数，本题需要证明全域下界的锐性"
+        },
+        "points_justification": "由上界构造任意超阈值参数的反例",
+        "part_points": [
+          5,
+          5
+        ],
+        "linked_progression": "由上界构造任意超阈值参数的反例",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q006",
+            "version_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+            "transfer": "将参考题中条件对推理的约束提炼为独立的新数学模型",
+            "structural_difference": "原题已知最大值反求参数，本题需要证明全域下界的锐性"
+          }
+        ],
+        "novel_structure": "由上界构造任意超阈值参数的反例",
+        "reasoning_target": "由上界构造任意超阈值参数的反例"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    }
+  ],
+  "revision_record": [
+    "试做卷首题盲审推理量不足，改为带开闭端点的值域。"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "title": "数学综合试做卷 · HN7-T50-v2",
+  "minutes": 50,
+  "total_points": 50,
+  "questions": [
+    {
+      "id": "orig:ai:phase7:trial:01:v1",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "stem": "设复数 \\(z\\) 的实部为正，\\(z+2i\\) 为实数，且 \\(|z-1|\\le\\sqrt5\\)。则 \\(z^2\\) 的实部与虚部之和的取值范围为",
+      "parts": [],
+      "options": {
+        "A": "\\([-8,-4)\\)",
+        "B": "\\((-8,-4]\\)",
+        "C": "\\([-8,-4]\\)",
+        "D": "\\([-8,0)\\)"
+      },
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:02:v1",
+      "order": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "stem": "从标有 \\(1,2,3,4,5\\) 的五张卡片中随机取出两张。已知较小的号码是奇数，则两数之和能被 \\(3\\) 整除的概率为",
+      "parts": [],
+      "options": {
+        "A": "\\(\\frac15\\)",
+        "B": "\\(\\frac13\\)",
+        "C": "\\(\\frac25\\)",
+        "D": "\\(\\frac12\\)"
+      },
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:03:v1",
+      "order": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "stem": "已知 \\(\\{a_n\\}\\) 是公差为正的等差数列，\\(a_2,a_4,a_7\\) 依次成等比数列。若前 \\(5\\) 项的和为 \\(50\\)，则 \\(a_7=\\)",
+      "parts": [],
+      "options": {
+        "A": "\\(10\\)",
+        "B": "\\(14\\)",
+        "C": "\\(18\\)",
+        "D": "\\(22\\)"
+      },
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:04:v1",
+      "order": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "stem": "曲线 \\(y=x+\\frac4x\\)（\\(x>0\\)）上有两点，它们处的切线都经过点 \\((1,4)\\)。这两个切点的横坐标之和为",
+      "parts": [],
+      "options": {
+        "A": "\\(\\frac43\\)",
+        "B": "\\(2\\)",
+        "C": "\\(\\frac73\\)",
+        "D": "\\(\\frac83\\)"
+      },
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:05:v1",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 10,
+      "stem": "过点 \\(P(3,1)\\) 的直线与抛物线 \\(y^2=4x\\) 交于不同的两点 \\(A,B\\)。记线段 \\(AB\\) 的中点为 \\(M\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "若 \\(M\\) 的纵坐标为 \\(2\\)，求直线 \\(AB\\) 的方程。"
+        },
+        {
+          "label": "（2）",
+          "text": "求 \\(M\\) 的横坐标的最小值，并求取到最小值时的直线方程。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:06:v1",
+      "order": 6,
+      "kind": "constructed_response",
+      "points": 10,
+      "stem": "从标有 \\(1,2,3,4,5\\) 的五张卡片中随机取出三张。记 \\(X\\) 为三个号码的中位数，\\(Y\\) 为最大号码与最小号码之差。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求 \\(X\\) 的分布列。"
+        },
+        {
+          "label": "（2）",
+          "text": "求 \\(X=3\\) 时 \\(Y\\) 的条件期望，并判断 \\(X,Y\\) 是否独立，说明理由。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:phase7:trial:07:v1",
+      "order": 7,
+      "kind": "constructed_response",
+      "points": 10,
+      "stem": "设 \\(f(x)=x-\\ln(1+x)\\)，其中 \\(x>0\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "证明 \\(0<f(x)<\\frac{x^2}{2}\\)。"
+        },
+        {
+          "label": "（2）",
+          "text": "若 \\(f(x)\\ge c\\frac{x^2}{1+x}\\) 对一切 \\(x>0\\) 成立，求实数 \\(c\\) 的最大值。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    }
+  ]
+}

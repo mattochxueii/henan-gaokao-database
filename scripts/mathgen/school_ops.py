@@ -3,7 +3,7 @@
 import itertools, math
 from collections import defaultdict
 import sympy as s
-from .ai_spec import parse, extrema, clean, numeric_check
+from .ai_spec import parse, extrema, clean, numeric_check, SYMBOLS, check_domain_syntax
 
 
 class UnsupportedOperation(Exception):
@@ -17,6 +17,110 @@ def packed(result, complete=True, **facts):
         "facts": clean(facts),
         "formal_proof": False,
     }
+
+
+def first_sum_exceedance(task):
+    k = s.Symbol("k", real=True)
+    lo = task.get("lower", 1)
+    if type(lo) is not int or not 1 <= lo <= 100:
+        raise ValueError("求和起点须是1至100的整数")
+    source = task["expression"]
+    check_domain_syntax({"expression": source, "variable": "k", "domain": [lo, "oo"], "open": [False, True]})
+    term = parse(source, {"k": k})
+    target = parse(task["threshold"])
+    num, den = s.fraction(s.factor(term))
+    if (
+        term.free_symbols - {k} or target.is_real is not True
+        or not num.is_polynomial(k) or not den.is_polynomial(k)
+    ):
+        raise ValueError("只支持给定阈值的有理式求和")
+    # A coefficient certificate on k=lo+t, t>=0 also excludes poles and zeros.
+    for expr in (num * s.sign(num.subs(k, lo)), den * s.sign(den.subs(k, lo))):
+        cs = s.Poly(expr.subs(k, k + lo), k).all_coeffs()
+        if not all(c.is_nonnegative is True for c in cs) or cs[-1].is_positive is not True:
+            raise ValueError("未证明全域项严格同号")
+    if term.subs(k, lo).is_positive is not True:
+        raise ValueError("求和项并非严格正")
+    total = s.Integer(0)
+    for end in range(lo, lo + 10000):
+        previous, total = total, total + term.subs(k, end)
+        if (total >= target if task.get("inclusive", False) else total > target):
+            return packed(end, previous=previous, first_exceedance_sum=total,
+                          scope="正项证明及精确逐项累加至首次越过阈值")
+    raise ValueError("有界搜索内无结果，不能断言不存在")
+
+
+def two_class_stopping(task):
+    rates = [parse(v) for v in task["rates"]]
+    trials, hits, cap = (task[key] for key in ("trials", "hits", "cap"))
+    if (
+        len(rates) != 2 or any(not 0 < p < 1 for p in rates)
+        or any(type(n) is not int for n in (trials, hits, cap))
+        or not 1 <= cap <= 30 or not 0 <= hits <= trials <= 30
+    ):
+        raise ValueError("两类伯努利试验条件无效")
+    scores = [s.binomial(trials, hits) * p**hits * (1 - p)**(trials - hits) for p in rates]
+    if scores[0] == scores[1]:
+        raise ValueError("观测概率不能识别先验")
+    prior = s.simplify((parse(task["observed_probability"]) - scores[1]) / (scores[0] - scores[1]))
+    if not 0 <= prior <= 1:
+        raise ValueError("反推先验不在概率范围内")
+    weights = [prior * rates[0], (1 - prior) * rates[1]]
+    posterior = weights[0] / sum(weights)
+    probabilities = {}
+    for k in range(1, cap + 1):
+        probabilities[k] = sum(
+            weight * p**(k - 1) * (1 - p if k < cap else 1)
+            for weight, p in zip((posterior, 1 - posterior), rates)
+        )
+    mean = sum(k * v for k, v in probabilities.items())
+    variance = sum((k - mean)**2 * v for k, v in probabilities.items())
+    require_total = s.simplify(sum(probabilities.values()))
+    if require_total != 1:
+        raise ValueError("概率总和不是1")
+    result = {"prior": prior, "posterior": posterior, "distribution": probabilities,
+              "expectation": mean, "variance": variance}
+    return packed(result[task["ask"]], binomial_likelihoods=scores, normalisation=require_total)
+
+
+def endpoint_pair_claim(task):
+    n = task["n"]
+    statistic = task["statistic"]
+    if type(n) is not int or not 3 <= n <= 30:
+        raise ValueError("数据组规模须为3至30")
+    x = s.symbols(f"v:{n}", real=True)
+    middle = (x[0] + x[-1]) / 2
+    after = [middle, *x[1:-1], middle]
+
+    def moment(values):
+        mean = sum(values) / n
+        return mean if statistic == "mean" else sum(v**2 for v in values) / n - mean**2
+
+    if "counterexample" in task:
+        values = [parse(str(v)) for v in task["counterexample"]]
+        if len(values) != n or not all(a < b for a, b in zip(values, values[1:])):
+            raise ValueError("反例必须满足严格递增数据条件")
+        updated = [(values[0]+values[-1])/2, *values[1:-1], (values[0]+values[-1])/2]
+        if statistic == "median":
+            from statistics import median
+
+            old, new = median(values), median(updated)
+        elif statistic == "range":
+            old, new = values[-1] - values[0], max(updated) - min(updated)
+        else:
+            raise ValueError("不支持的反例统计量")
+        a = parse(task["scale"])
+        truth = new == a * old if task["comparison"] == "eq" else new <= a * old
+        if truth:
+            raise ValueError("提供的数据不能推翻命题")
+        return packed(False, old=old, new=new, counterexample=values)
+    if statistic not in ("mean", "variance") or task["comparison"] != "delta":
+        raise ValueError("仅计算均值或方差变化恒等式")
+    difference = s.factor(moment(after) - moment(x))
+    claim = parse(task["difference"], {"a": x[0], "b": x[-1]})
+    if s.simplify(difference - claim) != 0:
+        raise ValueError("变化式未证成，不能当作普遍真值")
+    return packed(True, difference=difference)
 
 
 def level_count(expr, x, domain, level):
@@ -56,6 +160,66 @@ def level_count(expr, x, domain, level):
 def solve_extra(t):
     op = t["op"]
     x = s.Symbol("x", real=True)
+    if op == "first_sum_exceedance":
+        return first_sum_exceedance(t)
+    if op == "two_class_stopping":
+        return two_class_stopping(t)
+    if op == "endpoint_pair_claim":
+        return endpoint_pair_claim(t)
+    if op == "finite_swap_probability":
+        return finite_swap_probability(t)
+    if op == "finite_image_intersection":
+        values = {parse(str(v)) for v in t["values"]}
+        image = {parse(t["map"]).subs(x, v) for v in values}
+        return packed(len(values & image), image=sorted(image), intersection=sorted(values & image))
+    if op == "antiperiod_value":
+        at, start, shift = (t[k] for k in ("at", "start", "shift"))
+        if any(type(n) is not int for n in (at, start, shift)) or shift <= 0:
+            raise ValueError("反周期任务须为整数自变量及正整数步长")
+        steps, residue = divmod(at - start, shift)
+        if residue:
+            raise ValueError("目标自变量无法由给定值反复平移取得")
+        return packed(parse(t["value"]) * (1 if steps % 2 == 0 else -1), shift_count=steps)
+    if op == "antiperiod_weighted_sum":
+        terms = t["terms"]
+        if type(terms) is not int or not 1 <= terms <= 10000:
+            raise ValueError("加权项数须为1至10000")
+        start, step, value = (parse(t[k]) for k in ("weight_start", "weight_step", "value"))
+        pairs, remainder = divmod(terms, 2)
+        answer = value * (-pairs*step + remainder*(start+2*pairs*step))
+        direct = value * sum((-1)**k * (start+k*step) for k in range(terms))
+        if answer != direct:
+            raise ValueError("相邻配对与直接累加不一致")
+        return packed(answer, pairs=pairs, unpaired=remainder)
+    if op == "quadratic_range_claim":
+        domain = s.S.Reals
+        for restriction in t["constraints"]:
+            domain = domain.intersect(
+                s.solve_univariate_inequality(parse(restriction), x, relational=False)
+            )
+        if not isinstance(domain, s.Interval):
+            raise ValueError("定义域不是单一非退化区间")
+        expression = parse(t["expression"])
+        if not expression.is_polynomial(x) or s.Poly(expression, x).degree() != 2:
+            raise ValueError("这里只判定二次函数值域")
+        bounds = extrema(expression, x, domain)
+        flags = [
+            any(v == bounds[key] and attained for _, v, attained in bounds["candidates"])
+            for key in ("minimum", "maximum")
+        ]
+        result = s.Interval(
+            bounds["minimum"], bounds["maximum"], left_open=not flags[0], right_open=not flags[1]
+        )
+        claimed = s.Interval(
+            *(parse(v) for v in t["bounds"]), left_open=t["open"][0], right_open=t["open"][1]
+        )
+        return packed(result == claimed, domain=domain, exact_range=result)
+    if op == "ellipse_rectangle_perimeter":
+        a, b = (parse(str(value)) for value in t["semiaxes"])
+        if not a > 0 or not b > 0:
+            raise ValueError("半轴须为正")
+        factor = s.sqrt(a*a + b*b)
+        return packed(4 * factor, maximising_vertex=[a*a/factor, b*b/factor])
     if op == "data_correction_variance":
         n = t["n"]
         m = parse(str(t["recorded_mean"]))
@@ -453,10 +617,20 @@ def solve_extra(t):
             A, B = map(vector, t["second_plane_fixed"])
             M = (B - A).cross(point - A)
             condition = s.simplify(N.dot(M))
-        solutions = s.solve(condition, a)
         domain = s.Interval(*map(lambda z: parse(str(z)), t["parameter_domain"]))
-        solutions = [v for v in solutions if v in domain]
-        return packed(solutions, orthogonality_equation=condition, normal=list(N))
+        solutions = s.solveset(condition, a, domain=domain)
+        if not isinstance(solutions, s.FiniteSet) and solutions is not s.S.EmptySet:
+            raise ValueError("参数解集尚未完全确定")
+        valid = []
+        for value in solutions:
+            if op == "parameter_plane_parallel":
+                A = vector(t["anchor"])
+                if point.subs(a, value) == A or s.simplify((A - vector(t["plane"][0])).dot(N)) == 0:
+                    continue
+            elif M.subs(a, value) == s.zeros(3, 1):
+                continue
+            valid.append(value)
+        return packed(valid, orthogonality_equation=condition, normal=list(N))
     if op == "simplex_inradius":
         vertices = [s.Matrix([parse(str(v)) for v in p]) for p in t["vertices"]]
         edges = [
@@ -575,3 +749,29 @@ def solve_extra(t):
             scope="消元和最值支持完成；轨迹范围、垂直弦等边界需独立PDF证明复核",
         )
     raise UnsupportedOperation(op)
+
+
+def finite_swap_probability(task):
+    labels = task["labels"]
+    team_size = task["team_size"]
+    if (
+        not all(type(v) is int for v in labels) or len(set(labels)) != len(labels)
+        or type(team_size) is not int or not 0 < team_size < len(labels) <= 14
+    ):
+        raise ValueError("抽样标签或组大小无效")
+    partitions = list(itertools.combinations(labels, team_size))
+    given = [team for team in partitions if sum(team) == task["given_total"]]
+    if not given:
+        raise ValueError("条件事件概率为0")
+    successful = [
+        sum(sum(team) - out + inc == task["target_total"]
+            for out in team for inc in labels if inc not in team)
+        for team in given
+    ]
+    ways = len(given) * team_size * (len(labels) - team_size)
+    answers = {
+        "initial_probability": s.Rational(len(given), len(partitions)),
+        "conditional_probability": s.Rational(sum(successful), ways),
+        "initial_expectation": s.Rational(team_size * sum(labels), len(labels)),
+    }
+    return packed(answers[task["ask"]], matching_partitions=given, swap_counts=successful)

@@ -72,10 +72,13 @@ def active_review(row, review, evidence_root, checked_sources):
     require(
         anchors.get(path) == expected and source["page"] > 0, "复核来源未绑定存档版本"
     )
-    if (path, expected) not in checked_sources:
-        file = relative_path(evidence_root, path)
-        require(file.is_file() and digest(file) == expected, "复核来源文件缺失或已改变")
-        checked_sources.add((path, expected))
+    def check_file(path, expected):
+        if (path, expected) not in checked_sources:
+            file = relative_path(evidence_root, path)
+            require(file.is_file() and digest(file) == expected, "复核来源文件缺失或已改变")
+            checked_sources.add((path, expected))
+
+    check_file(path, expected)
     require(
         review["body"] in ("pdf_matched", "pdf_repaired", "pdf_conflict"),
         "非法题面复核状态",
@@ -85,6 +88,22 @@ def active_review(row, review, evidence_root, checked_sources):
         "非法答案复核状态",
     )
     result = {**row, "calibration": review}
+    if review.get("resolves_legacy_transcription"):
+        other = review.get("corroborating_source") or {}
+        require(
+            row.get("legacy")
+            and row.get("curation", {}).get("body_state") == "存在版本冲突"
+            and review["body"] == "pdf_matched"
+            and review["answer"] == "independently_solved"
+            and other.get("page") == source["page"]
+            and other.get("path") != path
+            and other.get("sha256") != expected
+            and review.get("note"),
+            "二手转写裁决必须保留同页的两份不同卷面证据",
+        )
+        check_file(other["path"], other["sha256"])
+        result["historical_curation"] = row["curation"]
+        result["curation"] = {**row["curation"], "body_state": "两份候选原页一致"}
     if review["body"] == "pdf_conflict":
         return {
             **result,
@@ -92,14 +111,26 @@ def active_review(row, review, evidence_root, checked_sources):
         }
     if review["body"] == "pdf_repaired":
         stem = row["stem"]
-        for old, new in review["stem_edits"]:
+        for old, new in review.get("stem_edits", ()):
             require(old and stem.count(old) == 1, "题面更正未命中唯一版本")
             stem = stem.replace(old, new, 1)
-        require(stem != row["stem"], "题面未产生新版本")
         options = dict(row["options"])
         for key, old, new in review.get("option_edits", ()):
             require(options.get(key) == old, "选项更正未命中原文")
             options[key] = new
+        parts = [dict(part) if isinstance(part, dict) else part for part in row.get("parts", ())]
+        for number, old, new in review.get("part_edits", ()):
+            matches = [
+                part for part in parts if isinstance(part, dict) and part["number"] == number
+            ]
+            require(len(matches) == 1 and matches[0]["text"] == old, "子问更正未命中原文")
+            matches[0]["text"] = new
+        require(
+            stem != row["stem"] or options != row["options"]
+            or parts != row.get("parts", []) or
+            (review.get("remove_editorial_assets") and row.get("asset_refs")),
+            "题面未产生新版本",
+        )
         version_material = {
             "base": row["version_sha256"],
             "stem": stem,
@@ -107,9 +138,12 @@ def active_review(row, review, evidence_root, checked_sources):
         }
         if options != row["options"]:
             version_material["options"] = options
+        if parts != row.get("parts", []):
+            version_material["parts"] = parts
         result.update(
             stem=stem,
             options=options,
+            parts=parts,
             base_version_sha256=row["version_sha256"],
             version_sha256=fingerprint(version_material),
             source_locator={**locator, "calibrated_pdf_page": source["page"]},
@@ -127,7 +161,10 @@ def active_review(row, review, evidence_root, checked_sources):
             a or b
             for a, b in re.findall(
                 r"\\\((.*?)\\\)|\\\[(.*?)\\\]",
-                "\n".join((stem, *options.values())),
+                "\n".join((
+                    stem, *options.values(),
+                    *(part["text"] if isinstance(part, dict) else part for part in parts),
+                )),
                 re.S,
             )
         ]

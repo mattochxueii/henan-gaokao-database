@@ -22,6 +22,74 @@ from student_feedback import summary, validate
 
 
 class CalibrationTests(unittest.TestCase):
+    def test_split_transitively_holds_papers_and_validates_candidate_versions(self):
+        from mathgen.evaluation import build_split, verify_candidate_references
+
+        def row(paper, oid, master, equivalent=None):
+            review = {"body": "pdf_matched", "answer": "independently_solved"}
+            if equivalent:
+                review["equivalence_id"] = equivalent
+            return {
+                "paper_id": paper, "occurrence_id": oid, "question_id": master,
+                "version_sha256": oid + "-version", "calibration": review,
+            }
+
+        data = [
+            row("A", "a1", "shared"), row("B", "b1", "shared"),
+            row("B", "b2", "m2", "alias"), row("C", "c1", "m3", "alias"),
+            row("C", "c2", "m4"), row("D", "d1", "m5"), row("E", "e1", "m6"),
+        ]
+        split = build_split(data, ["A"], [("c2", "d1")])
+        self.assertEqual(set(split["holdout"]), {"a1", "b1", "b2", "c1", "c2", "d1"})
+        self.assertEqual(set(split["reference"]), {"e1"})
+        ref = {"occurrence_id": "e1", "version_sha256": "e1-version"}
+        doc = {"evaluation_split_sha256": split["sha256"],
+               "questions": [{"research_design": {"references": [ref]}}]}
+        verify_candidate_references(doc, split)
+        ref.update(occurrence_id="a1", version_sha256="a1-version")
+        with self.assertRaises(ValueError):
+            verify_candidate_references(doc, split)
+
+    def test_program_scope_and_exact_operations(self):
+        from mathgen.school_solver import coverage, extended_task
+
+        proof = extended_task({"op": "reasoning"})
+        support = extended_task({"op": "reasoning", "expression": "x**2"})
+        exact = extended_task({
+            "op": "first_sum_exceedance", "expression": "1/(k*(k+2))",
+            "threshold": "2/3", "inclusive": True,
+        })
+        self.assertEqual(exact["result"], 11)
+        self.assertEqual(coverage([proof])["status"], "independent_reasoning_only")
+        self.assertEqual(coverage([proof, support, exact])["partial_tasks"], 1)
+        self.assertEqual(coverage([exact])["status"], "complete_spec_checks")
+        with self.assertRaises(ValueError):
+            extended_task({"op": "first_sum_exceedance", "expression": "1/(k-1)", "threshold": "2"})
+        swap = extended_task({
+            "op": "finite_swap_probability", "labels": [1, 2, 3, 4, 5, 6],
+            "team_size": 3, "given_total": 12, "target_total": 11, "ask": "conditional_probability",
+        })
+        self.assertEqual(swap["result"], "5/27")
+
+    def test_flat_interval_is_not_strict_monotonicity(self):
+        from mathgen.school_solver import extended_task
+
+        result = extended_task({
+            "op": "monotonicity_boolean", "expression": "4",
+            "domain": ["0", "3"], "direction": "increasing",
+        })
+        self.assertIs(result["result"], False)
+
+    def test_blank_csv_binds_paper_and_accepts_no_observations(self):
+        from student_feedback import csv_rows, make_csv
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "blank.csv"
+            make_csv(path, "T1", "hash", {"1": "q1"})
+            self.assertEqual(list(csv_rows(path, "T1", "hash", {"1": "q1"})), [])
+            with self.assertRaises(ValueError):
+                list(csv_rows(path, "T2", "hash", {"1": "q1"}))
+
     def test_repair_and_answer_bind_to_the_archived_source(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

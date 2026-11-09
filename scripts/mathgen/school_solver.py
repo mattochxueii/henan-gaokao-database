@@ -5,7 +5,24 @@ import sympy as s
 from .ai_spec import parse, solve_task, FUNCTIONS, extrema, numeric_check, clean
 
 FUNCTIONS["indicator"] = lambda condition: s.Piecewise((1, condition), (0, True))
-VERSION = "school-solver-v1"
+VERSION = "school-solver-v2"
+
+
+def coverage(rows):
+    complete = sum(r.get("complete") is True for r in rows)
+    supported = sum(
+        r.get("complete") is not True and bool(set(r.get("facts", ())) - {"scope"})
+        for r in rows
+    )
+    total = len(rows)
+    return {
+        "total_tasks": total,
+        "complete_tasks": complete,
+        "partial_tasks": supported,
+        "independent_reasoning_tasks": total - complete - supported,
+        "status": "complete_spec_checks" if total and complete == total
+        else "partial_support" if complete or supported else "independent_reasoning_only",
+    }
 
 
 def extended_task(t):
@@ -26,13 +43,24 @@ def extended_task(t):
             right_open=True,
         )
         d = s.diff(expr, x)
+        from sympy.calculus.util import continuous_domain
+
+        if continuous_domain(expr, x, domain) != domain:
+            raise ValueError("题设区间不在连续定义域内")
+        if t["direction"] not in ("increasing", "decreasing"):
+            raise ValueError("单调方向无效")
         forbidden = s.solveset(
             d < 0 if t["direction"] == "increasing" else d > 0, x, domain=domain
         )
-        if isinstance(forbidden, s.ConditionSet):
+        if forbidden.is_empty is None:
             raise ValueError("单调性真值未确定")
+        # A derivative of one sign is insufficient on a flat interval.
+        zero = s.solveset(d, x, domain=domain)
+        if forbidden.is_empty and zero is not s.S.EmptySet and not isinstance(zero, s.FiniteSet):
+            if not isinstance(zero, s.Interval):
+                raise ValueError("不能判定是否存在常值子区间")
         return {
-            "result": forbidden is s.S.EmptySet,
+            "result": bool(forbidden.is_empty) and (zero is s.S.EmptySet or isinstance(zero, s.FiniteSet)),
             "complete": True,
             "facts": {"derivative": str(d), "violating_set": str(forbidden)},
         }
@@ -90,12 +118,15 @@ def extended_task(t):
 
 def _worker(spec, pipe):
     try:
-        tasks = (
-            list(spec["assertions"].values())
-            if spec.get("assertions")
-            else spec["tasks"]
-        )
+        if assertions := spec.get("assertions"):
+            if set(assertions) != set("ABCD"):
+                raise ValueError("选项验证必须对应A、B、C、D")
+            tasks = [assertions[key] for key in "ABCD"]
+        else:
+            tasks = spec["tasks"]
         rows = [extended_task(t) for t in tasks]
+        if not rows:
+            raise ValueError("数学任务不能为空")
 
         def serialise(value):
             if isinstance(value, dict):
@@ -110,6 +141,8 @@ def _worker(spec, pipe):
                     "program_checks_passed": True,
                     "tasks": rows,
                     "all_tasks_program_complete": all(r.get("complete") for r in rows),
+                    "program_coverage": coverage(rows),
+                    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
                     "version": VERSION,
                     "formal_proof": False,
                 }
