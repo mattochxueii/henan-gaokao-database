@@ -3,7 +3,7 @@
 import itertools, math
 from collections import defaultdict
 import sympy as s
-from .ai_spec import parse, extrema, clean, numeric_check, SYMBOLS, check_domain_syntax
+from .ai_spec import parse, extrema, clean, numeric_check, SYMBOLS, check_domain_syntax, interval
 
 
 class UnsupportedOperation(Exception):
@@ -168,6 +168,29 @@ def solve_extra(t):
         return endpoint_pair_claim(t)
     if op == "finite_swap_probability":
         return finite_swap_probability(t)
+    if op == "finite_joint_draw":
+        return finite_joint_draw(t)
+    if op == "finite_two_bag_draw":
+        return finite_two_bag_draw(t)
+    if op == "circles_geometry":
+        return circles_geometry(t)
+    if op == "univariate_set_relation":
+        def solution(expr):
+            predicate = parse(expr)
+            if predicate is s.true:
+                return s.S.Reals
+            if predicate is s.false:
+                return s.S.EmptySet
+            result = s.solve_univariate_inequality(predicate, x, relational=False)
+            if result.has(s.ConditionSet):
+                raise ValueError("条件解集未完全确定")
+            return result
+
+        premise, conclusion = map(solution, (t["premise"], t["conclusion"]))
+        a, b = premise.is_subset(conclusion), conclusion.is_subset(premise)
+        if a is None or b is None:
+            raise ValueError("条件关系无法完全判定")
+        return packed((a, b) == tuple(t["claim"]), premise=premise, conclusion=conclusion)
     if op == "finite_image_intersection":
         values = {parse(str(v)) for v in t["values"]}
         image = {parse(t["map"]).subs(x, v) for v in values}
@@ -226,6 +249,13 @@ def solve_extra(t):
         v = parse(str(t["recorded_variance"]))
         old = parse(str(t["recorded"]))
         new = parse(str(t["correct"]))
+        if type(n) is not int or n < 2 or v.is_nonnegative is not True:
+            raise ValueError("样本量或原方差无效")
+        remaining_sum = n*m-old
+        remaining_squared = n*(v+m**2)-old**2
+        slack = s.simplify((n-1)*remaining_squared-remaining_sum**2)
+        if slack.is_nonnegative is not True or (n == 2 and slack != 0):
+            raise ValueError("原均值、方差和错误观测值无法来自同一样本")
         mean = s.simplify((n * m - old + new) / n)
         variance = s.simplify((n * (v + m * m) - old * old + new * new) / n - mean**2)
         return packed(
@@ -358,12 +388,7 @@ def solve_extra(t):
             calculation=actual,
         )
     if op == "root_statistic":
-        domain = s.Interval(
-            parse(str(t["domain"][0])),
-            parse(str(t["domain"][1])),
-            left_open=True,
-            right_open=True,
-        )
+        domain = interval(t)
         roots = s.solveset(parse(t["expression"]), x, domain=domain)
         if not isinstance(roots, s.FiniteSet):
             raise ValueError("根集不完整")
@@ -751,6 +776,40 @@ def solve_extra(t):
     raise UnsupportedOperation(op)
 
 
+def finite_two_bag_draw(task):
+    """Convolve exact counts and condition the remaining success rates."""
+    from collections import Counter
+
+    bags = task["bags"]
+    if len(bags) != 2 or any(
+        len(bag) != 3 or any(type(n) is not int for n in bag)
+        or not 1 <= bag[2] < bag[0] + bag[1] <= 40 or min(bag[:2]) < 0
+        for bag in bags
+    ):
+        raise ValueError("袋中数量与无放回抽取数无效")
+    def weights(bag):
+        white, black, draws = bag
+        return {
+            k: s.binomial(white,k)*s.binomial(black,draws-k)/s.binomial(white+black,draws)
+            for k in range(max(0,draws-black), min(draws,white)+1)
+        }
+    frequencies = Counter()
+    after = [s.Integer(0), s.Integer(0)]
+    given = task["given_total"]
+    for a, pa in weights(bags[0]).items():
+        for b, pb in weights(bags[1]).items():
+            frequencies[a+b] += pa*pb
+            if a+b == given:
+                for i,k in enumerate((a,b)):
+                    w,v,n = bags[i]
+                    after[i] += pa*pb * s.Rational(w-k,w+v-n)
+    if not frequencies[given]:
+        raise ValueError("观察到的事件概率为0")
+    posterior = [v/frequencies[given] for v in after]
+    result = {"distribution":dict(sorted(frequencies.items())), "next_white":posterior}
+    return packed(result[task["ask"]], condition_probability=frequencies[given])
+
+
 def finite_swap_probability(task):
     labels = task["labels"]
     team_size = task["team_size"]
@@ -775,3 +834,64 @@ def finite_swap_probability(task):
         "initial_expectation": s.Rational(team_size * sum(labels), len(labels)),
     }
     return packed(answers[task["ask"]], matching_partitions=given, swap_counts=successful)
+
+
+def finite_joint_draw(task):
+    """Exact unordered sampling with named order statistics, independent of claims."""
+    from collections import Counter
+
+    labels, size = task["labels"], task["draw"]
+    if (
+        any(type(value) is not int for value in labels)
+        or len(set(labels)) != len(labels) or type(size) is not int
+        or not 2 <= size <= len(labels) <= 16
+    ):
+        raise ValueError("无放回抽样条件不合法")
+    if size % 2 == 0:
+        raise ValueError("此规格要求奇数个样本以定义中位数")
+    samples = list(itertools.combinations(sorted(labels), size))
+    counts = Counter((sample[size // 2], sample[-1] - sample[0]) for sample in samples)
+    left = Counter()
+    right = Counter()
+    for (a, b), count in counts.items():
+        left[a] += count
+        right[b] += count
+    total = len(samples)
+    given = task["given_median"]
+    if given not in left:
+        raise ValueError("给定中位数的条件概率为0")
+    witness = next(
+        ((a, b) for a in left for b in right if total * counts[a, b] != left[a] * right[b]),
+        None,
+    )
+    values = {
+        "median_distribution": {a: s.Rational(n, total) for a, n in left.items()},
+        "conditional_range_mean": s.Rational(sum(b * counts[given, b] for b in right), left[given]),
+        "independent": witness is None,
+    }
+    return packed(values[task["ask"]], sample_count=total, dependence_witness=witness)
+
+
+def circles_geometry(task):
+    """Handle all relative positions of nonconcentric circles and their chord."""
+    first, second, distance = (parse(str(task[k])) for k in ("first", "second", "distance"))
+    if any(v.is_positive is not True for v in (first, second, distance)):
+        raise ValueError("半径与圆心距必须严格为正")
+    outer, inner = first + second, s.Abs(first - second)
+    if distance > outer:
+        relation = "disjoint"
+    elif distance == outer:
+        relation = "external_tangent"
+    elif distance < inner:
+        relation = "contained"
+    elif distance == inner:
+        relation = "internal_tangent"
+    else:
+        relation = "secant"
+    ask = task["ask"]
+    if ask == "relation":
+        return packed(relation, outer=outer, inner=inner)
+    if ask != "chord" or relation != "secant":
+        raise ValueError("仅相交于两点时存在非退化公共弦")
+    projection = s.simplify((first**2 - second**2 + distance**2) / (2*distance))
+    return packed(s.simplify(2 * s.sqrt(first**2 - projection**2)), projection=projection)

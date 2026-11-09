@@ -80,6 +80,55 @@ class CalibrationTests(unittest.TestCase):
         })
         self.assertIs(result["result"], False)
 
+    def test_exact_sampling_and_circle_boundaries(self):
+        from mathgen.school_solver import extended_task
+
+        draw = {"op": "finite_joint_draw", "labels": [1, 2, 3, 4, 5], "draw": 3,
+                "given_median": 3}
+        mean = extended_task({**draw, "ask": "conditional_range_mean"})
+        self.assertEqual(mean["result"], "3")
+        self.assertFalse(extended_task({**draw, "ask": "independent"})["result"])
+        with self.assertRaises(ValueError):
+            extended_task({**draw, "given_median": 1, "ask": "conditional_range_mean"})
+        circle = {"op": "circles_geometry", "first": 2, "second": 5, "distance": 3}
+        self.assertEqual(extended_task({**circle, "ask": "relation"})["result"], "internal_tangent")
+        with self.assertRaises(ValueError):
+            extended_task({**circle, "ask": "chord"})
+
+    def test_scoring_rejects_an_equal_total_with_incorrect_part_marks(self):
+        from mathgen.scoring import scoring_by_number
+
+        document = {"paper": {"require_scoring": True}, "questions": [
+            {"order": 1, "points": 10, "kind": "constructed_response",
+             "writing": {"parts": ["part one", "part two"]},
+             "assessment": {"part_points": [4, 6]}}
+        ]}
+        steps = [{"part": part, "points": score, "criterion": f"Step {i}"}
+                 for i, (part, score) in enumerate([(1, 3), (1, 1), (2, 6)])]
+        guide = {"authority": "project", "questions": [{"number": 1, "steps": steps}]}
+        self.assertIn(1, scoring_by_number(document, guide))
+        steps[0]["points"], steps[2]["points"] = 4, 5
+        with self.assertRaisesRegex(ValueError, "各问分值"):
+            scoring_by_number(document, guide)
+
+    def test_personal_diagnosis_distinguishes_unfinished_and_unrecorded(self):
+        from student_feedback import diagnose
+        from storage import atomic_json
+
+        with tempfile.TemporaryDirectory() as tmp:
+            paper = Path(tmp)
+            atomic_json(paper / "raw-ai-candidate.json", {"questions": [
+                {"id": "q1", "order": 1, "assessment": {"level": 2, "estimated_minutes": 3}},
+                {"id": "q2", "order": 2},
+            ]})
+            data = [{"participant_code": "example1", "question_id": "q1", "score": 1,
+                     "seconds": 200, "status": "unfinished", "error_types": [],
+                     "reading_difficulty": 0}]
+            report = diagnose(data, paper, {"q1": 5, "q2": 5}, "example1")
+            self.assertEqual((report["observed_points"], report["unfinished"], report["unrecorded"]),
+                             (5, 1, 1))
+            self.assertEqual(report["items"][0]["seconds_over_editorial_estimate"], 20)
+
     def test_blank_csv_binds_paper_and_accepts_no_observations(self):
         from student_feedback import csv_rows, make_csv
 

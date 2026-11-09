@@ -75,6 +75,10 @@ def main(argv=None):
     action.add_argument("output", type=Path)
     action.add_argument("--student-review", type=Path, required=True)
     action.add_argument("--math-comparison", type=Path, required=True)
+    action = actions.add_parser("solution-edition")
+    action.add_argument("source", type=Path)
+    action.add_argument("--scoring", type=Path, required=True)
+    action.add_argument("--output", type=Path, required=True)
     action = actions.add_parser("writing-request")
     action.add_argument("candidates", type=Path)
     action.add_argument("--output", type=Path, required=True)
@@ -265,6 +269,10 @@ def main(argv=None):
             from mathgen.exam_workflow import publish
 
             result = publish(args.output, args.student_review, args.math_comparison)
+        elif args.action == "solution-edition":
+            from mathgen.scoring import render_edition
+
+            result = render_edition(args.source, read_json(args.scoring), args.output)
         elif args.action == "review":
             from mathgen.attestation import attest
 

@@ -1,0 +1,520 @@
+{
+  "scope": "未变化的17道题与最终候选一致；以下保存第12、17题的旧候选及修订理由。",
+  "attempts": [
+    {
+      "attempt": "planning",
+      "rejected": "初始蓝图没有说明跨三种题型的模块差异。补上函数与三角题的设计分工后重跑。",
+      "sha256": "0db8cd9e8b5907c5ad7024e42e979263779a0efc0d216dcede4cc797ec8455f4"
+    },
+    {
+      "attempt": "full-v1",
+      "manifest": {
+        "workflow_version": "exam-workflow-v1",
+        "kind": "full",
+        "question_count": 19,
+        "candidate_sha256": "50f70228beb52d4ce2666d0111a7d5892738cef1eff49f05cc160d1083f87563",
+        "writing_sha256": "23c5a999469e94875b9152af3e01d3c0fd6d9d99b4edecd904e70d768e632653",
+        "pdf_sha256": "83326f8eb1fba81719b69f481ad40b83784468d7b676c3e98f556302e1526b49",
+        "pages": [
+          {
+            "number": 1,
+            "sha256": "8bb46092155c49a662b381e4e4cf730cd8e21a60a57e78759e8811551ed95e13"
+          },
+          {
+            "number": 2,
+            "sha256": "26abd7072ecee2a4fa4d2076b25c92609d77780e748a74bbf40f3917eecb7e2b"
+          },
+          {
+            "number": 3,
+            "sha256": "704178780decdbd5106800e466c3e14654c3f3319cbfaa12d3c0b4240fabc6ac"
+          },
+          {
+            "number": 4,
+            "sha256": "4f20a48f9b35da98a510f030d449eb2c4be8f237fcc3321c96136723aa5570e0"
+          },
+          {
+            "number": 5,
+            "sha256": "2f7842b0fbaa783ebd178ae6bdcf8c4f3fb4e5d6d6df70d25a6f64ffc41cffc0"
+          },
+          {
+            "number": 6,
+            "sha256": "7a0853bcafb8944e2adab691c4198d0fee0cb9f85b2032287ae189b29c55117c"
+          },
+          {
+            "number": 7,
+            "sha256": "345ae94e5c4b650912456bd605045ba4cb39dc8311113c6766284d9bec170afa"
+          },
+          {
+            "number": 8,
+            "sha256": "54bc984b949416947a60b55dd68f33145042fb7deaa57f5ae0f97899f3d60c80"
+          }
+        ],
+        "status": "仅供盲审；尚未发布",
+        "solutions_available_to_student_reviewer": false
+      },
+      "rejected": "PDF盲评12/20，低于13门槛。对数变形加一次筛根，条件设计层次不足。",
+      "question": {
+        "id": "orig:ai:phase8:full:12:v1",
+        "order": 12,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "函数与导数",
+        "math_spec": {
+          "givens": {
+            "problem_statement": "设 \\(f(x)=\\log_2(x+1)\\)。若 \\(f(x)+f(x+2)=3\\)，则 \\(x=\\)________。",
+            "asks": []
+          },
+          "symbols": [],
+          "tasks": [
+            {
+              "op": "equation",
+              "expression": "(x+1)*(x+3)-8",
+              "domain": [
+                -1,
+                "oo"
+              ],
+              "unique": true
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "3d4a851a56a9d0dd805f7a3b4c28baac096313ff29a15a10a35e9c9bca86178d",
+          "stem": "设 {{f1}}。若 {{f2}}，则 {{f3}}________。",
+          "parts": [],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "f(x)=\\log_2(x+1)"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "f(x)+f(x+2)=3"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "x="
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "________"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "两对数都须有定义，所以 \\(x>-1\\)。和为3等价于 \\((x+1)(x+3)=8\\)。",
+            "解得 \\(x=1\\) 或 \\(x=-5\\)。只有 \\(1\\) 在定义域内，且代回满足等式。"
+          ]
+        },
+        "assessment": {
+          "level": 3,
+          "estimated_minutes": 5,
+          "points_justification": "定义域排除代数增根",
+          "linked_progression": "定义域排除代数增根",
+          "empirical": false,
+          "part_points": [],
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 3,
+            "modeling": 3,
+            "logical_reasoning": 3,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 2,
+            "source_level_difference": "参考题是分式不等式排除零分母，本题结合对数定义域与合并法则"
+          }
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2025-cn-math-new-gaokao-2:q004",
+              "version_sha256": "468a65051af681a434418a90c2115b604f8de932b54f0ca75ff71ae08ad500e4",
+              "transfer": "从参考题提取有效条件及边界意识",
+              "structural_difference": "参考题是分式不等式排除零分母，本题结合对数定义域与合并法则"
+            }
+          ],
+          "novel_structure": "定义域排除代数增根",
+          "reasoning_target": "定义域排除代数增根"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    },
+    {
+      "attempt": "full-v3",
+      "rejected": [
+        {
+          "id": "orig:ai:phase8:full:12:v1",
+          "reason": "数学计算失败：{'program_checks_passed': False, 'reason': '表达式含不允许的结构', 'version': 'school-solver-v2'}"
+        }
+      ],
+      "reason": "表达式误用了排版用的幂符号；改用受限规格的乘方语法后重新验算。",
+      "question": {
+        "id": "orig:ai:phase8:full:12:v1",
+        "order": 12,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "函数与导数",
+        "math_spec": {
+          "givens": {
+            "problem_statement": "设 \\(a\\) 为实数。若方程 \\(\\log_2(x-a)+\\log_2(4-x)=1\\) 恰有一个实数解，则 \\(a=\\)________。",
+            "asks": []
+          },
+          "symbols": [],
+          "tasks": [
+            {
+              "op": "equation",
+              "variable": "a",
+              "expression": "(4-a)^2-8",
+              "domain": [
+                "-oo",
+                4
+              ],
+              "open": [
+                true,
+                true
+              ],
+              "unique": true
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "01b5445cd2e9a7d44d39aac448deef1f14fbbea4287089e4b074574f8aaa7be3",
+          "stem": "设 {{f1}} 为实数。若方程 {{f2}} 恰有一个实数解，则 {{f3}}________。",
+          "parts": [],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "a"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "\\log_2(x-a)+\\log_2(4-x)=1"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "a="
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "________"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "两个对数要求 \\(a<x<4\\)，故 \\(a<4\\)。原方程等价于 \\((x-a)(4-x)=2\\)。",
+            "乘积在区间两端连续延拓为零，且在中点 \\(x=\\dfrac{a+4}{2}\\) 唯一达到最大值 \\(\\dfrac{(4-a)^2}{4}\\)。最大值大于2时，左右各有一解；小于2时无解。",
+            "恰有一解等价于 \\((4-a)^2=8\\)。结合 \\(a<4\\)，得 \\(a=4-2\\sqrt{2}\\)，此时中点满足原式。"
+          ]
+        },
+        "assessment": {
+          "level": 3,
+          "estimated_minutes": 5,
+          "points_justification": "把唯一解条件转化为定义域内的最大值与水平线相切",
+          "linked_progression": "把唯一解条件转化为定义域内的最大值与水平线相切",
+          "empirical": false,
+          "part_points": [],
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 3,
+            "modeling": 3,
+            "logical_reasoning": 3,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 2,
+            "source_level_difference": "参考题通过分式不等式排除零分母，本题由对数有效区间与二次函数对称性共同判定参数"
+          }
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2025-cn-math-new-gaokao-2:q004",
+              "version_sha256": "468a65051af681a434418a90c2115b604f8de932b54f0ca75ff71ae08ad500e4",
+              "transfer": "在作代数变形之前确定定义域，并把解的个数转化为有效区间内的交点数",
+              "structural_difference": "参考题通过分式不等式排除零分母，本题由对数有效区间与二次函数对称性共同判定参数"
+            }
+          ],
+          "novel_structure": "把唯一解条件转化为定义域内的最大值与水平线相切",
+          "reasoning_target": "把唯一解条件转化为定义域内的最大值与水平线相切"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    },
+    {
+      "attempt": "full-v4",
+      "manifest": {
+        "workflow_version": "exam-workflow-v1",
+        "kind": "full",
+        "question_count": 19,
+        "candidate_sha256": "2af7e7bd27f6ccff2bc4dfa66c022a1d6bc2814dcd0666b6ec6a46ff18ef1626",
+        "writing_sha256": "00a388c49ce606f793b44d7cfcf7d9ddae923953c89d48b3b4de23711d819838",
+        "pdf_sha256": "849ac2138d5fa1932b9ad1bae19d932542aa10dd8c22b91ccafea8983192f046",
+        "pages": [
+          {
+            "number": 1,
+            "sha256": "8bb46092155c49a662b381e4e4cf730cd8e21a60a57e78759e8811551ed95e13"
+          },
+          {
+            "number": 2,
+            "sha256": "26abd7072ecee2a4fa4d2076b25c92609d77780e748a74bbf40f3917eecb7e2b"
+          },
+          {
+            "number": 3,
+            "sha256": "128a5ddc64c94c9df7be5ca5d999a34ecb93a5406b1634e3569fca855aba87a3"
+          },
+          {
+            "number": 4,
+            "sha256": "4f20a48f9b35da98a510f030d449eb2c4be8f237fcc3321c96136723aa5570e0"
+          },
+          {
+            "number": 5,
+            "sha256": "2f7842b0fbaa783ebd178ae6bdcf8c4f3fb4e5d6d6df70d25a6f64ffc41cffc0"
+          },
+          {
+            "number": 6,
+            "sha256": "7a0853bcafb8944e2adab691c4198d0fee0cb9f85b2032287ae189b29c55117c"
+          },
+          {
+            "number": 7,
+            "sha256": "345ae94e5c4b650912456bd605045ba4cb39dc8311113c6766284d9bec170afa"
+          },
+          {
+            "number": 8,
+            "sha256": "54bc984b949416947a60b55dd68f33145042fb7deaa57f5ae0f97899f3d60c80"
+          }
+        ],
+        "status": "仅供盲审；尚未发布",
+        "solutions_available_to_student_reviewer": false
+      },
+      "outcome": "第12题从定义域内的乘积顶点判定唯一解，独立重解17/20；第3页重新盲审。",
+      "reason": "留出对照第1组发现第17题可以逐情形判断选袋，绕过第二问的权重和前问分布。",
+      "question": {
+        "id": "orig:ai:phase8:full:17:v1",
+        "order": 17,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "统计与概率",
+        "math_spec": {
+          "givens": {
+            "problem_statement": "甲袋有 \\(3\\) 个白球和 \\(1\\) 个黑球，乙袋有 \\(2\\) 个白球和 \\(2\\) 个黑球。分别从两袋中独立地随机取 \\(2\\) 球，袋内不放回。记取出的白球总数为 \\(X\\)。",
+            "asks": [
+              "求 \\(X\\) 的分布列。",
+              "已知 \\(X=3\\)，但不知道两袋各取出了几个白球。若要从某一袋剩余球中随机再取一球，为使取到白球的概率较大，应选择哪一袋？说明理由。"
+            ]
+          },
+          "symbols": [],
+          "tasks": [
+            {
+              "op": "finite_two_bag_draw",
+              "bags": [
+                [
+                  3,
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2,
+                  2
+                ]
+              ],
+              "given_total": 3,
+              "ask": "distribution"
+            },
+            {
+              "op": "finite_two_bag_draw",
+              "bags": [
+                [
+                  3,
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2,
+                  2
+                ]
+              ],
+              "given_total": 3,
+              "ask": "next_white"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "4d837ce5f01281a1754940ec2aaea1e0f21f9d9b240c963a949248b37e3bb32b",
+          "stem": "甲袋有 {{f1}} 个白球和 {{f2}} 个黑球，乙袋有 {{f3}} 个白球和 {{f4}} 个黑球。分别从两袋中独立地随机取 {{f5}} 球，袋内不放回。记取出的白球总数为 {{f6}}。",
+          "parts": [
+            {
+              "text": "求 {{f7}} 的分布列。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "已知 {{f8}}，但不知道两袋各取出了几个白球。若要从某一袋剩余球中随机再取一球，为使取到白球的概率较大，应选择哪一袋？说明理由。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "3"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "1"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "2"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "2"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "2"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "X"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "X"
+            },
+            "f8": {
+              "kind": "notation",
+              "latex": "X=3"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "已知 {{f8}}，但不知道两袋各取出了几个白球。若要从某一袋剩余球中随机再取一球，为使取到白球的概率较大，应选择哪一袋？说明理由。"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "设 \\(U,V\\) 为分别从甲、乙袋取到的白球数。甲袋有 \\(\\binom42=6\\) 种等可能取法。含一个白球或两个白球的取法各三种，故 \\(U=1,2\\) 各以 \\(1/2\\) 发生。",
+            "乙袋取到 \\(0,1,2\\) 个白球的取法数为 \\(1,4,1\\)，概率为 \\(\\frac16,\\frac23,\\frac16\\)。两袋独立。",
+            "按 \\(U+V=X\\) 分类加总，得到 \\(X=1,2,3,4\\) 的概率依次为 \\(\\frac1{12},\\frac5{12},\\frac5{12},\\frac1{12}\\)。例如 \\(X=3\\) 由 \\((1,2),(2,1)\\) 两种构成。",
+            "这两种情形原概率分别为 \\(1/12,1/3\\)，故给定 \\(X=3\\) 后权重为 \\(1/5,4/5\\)。在第一种情形中两袋剩球白率为 \\(1,0\\)，在第二种情形中均为 \\(1/2\\)。",
+            "再取一球的白率因此是甲袋 \\(\\frac15\\cdot1+\\frac45\\cdot\\frac12=\\frac35\\)，乙袋 \\(\\frac15\\cdot0+\\frac45\\cdot\\frac12=\\frac25\\)。选甲袋。"
+          ]
+        },
+        "assessment": {
+          "level": 4,
+          "estimated_minutes": 12,
+          "points_justification": "首问分布是第二问条件权重的分母，剩余样本不能视作原袋",
+          "linked_progression": "首问分布是第二问条件权重的分母，剩余样本不能视作原袋",
+          "empirical": false,
+          "part_points": [
+            7,
+            8
+          ],
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 3,
+            "logical_reasoning": 4,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "参考题用条件与策略选择，本题采用超几何计数和未知组成的后验加权"
+          }
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-2:q018",
+              "version_sha256": "a64fa857acf575701c79f3cfbf3e2b96a1e3735ff7a14befa2563cb19fb970c6",
+              "transfer": "将参考题中条件对推理的约束提炼为独立的新数学模型",
+              "structural_difference": "参考题用条件与策略选择，本题采用超几何计数和未知组成的后验加权"
+            }
+          ],
+          "novel_structure": "首问分布是第二问条件权重的分母，剩余样本不能视作原袋",
+          "reasoning_target": "首问分布是第二问条件权重的分母，剩余样本不能视作原袋"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    },
+    {
+      "attempt": "full-v5",
+      "manifest": {
+        "workflow_version": "exam-workflow-v1",
+        "kind": "full",
+        "question_count": 19,
+        "candidate_sha256": "d4d6780ba1b05fa1da2c9b2b6157184303756219c94306d96289a8d9746e18be",
+        "writing_sha256": "09bc52725c566d39892ab997dd9ae501214cf2839632688312c309dcbf51c019",
+        "pdf_sha256": "c4aa10330aad4780627ae6d5967637d0236b88e0a944d5b07b7ee908c9859063",
+        "pages": [
+          {
+            "number": 1,
+            "sha256": "8bb46092155c49a662b381e4e4cf730cd8e21a60a57e78759e8811551ed95e13"
+          },
+          {
+            "number": 2,
+            "sha256": "26abd7072ecee2a4fa4d2076b25c92609d77780e748a74bbf40f3917eecb7e2b"
+          },
+          {
+            "number": 3,
+            "sha256": "128a5ddc64c94c9df7be5ca5d999a34ecb93a5406b1634e3569fca855aba87a3"
+          },
+          {
+            "number": 4,
+            "sha256": "4f20a48f9b35da98a510f030d449eb2c4be8f237fcc3321c96136723aa5570e0"
+          },
+          {
+            "number": 5,
+            "sha256": "2f7842b0fbaa783ebd178ae6bdcf8c4f3fb4e5d6d6df70d25a6f64ffc41cffc0"
+          },
+          {
+            "number": 6,
+            "sha256": "be6d1c29bad6fac23dd4d307139277212f028ea85d357802d1b01c53ca8619d8"
+          },
+          {
+            "number": 7,
+            "sha256": "345ae94e5c4b650912456bd605045ba4cb39dc8311113c6766284d9bec170afa"
+          },
+          {
+            "number": 8,
+            "sha256": "54bc984b949416947a60b55dd68f33145042fb7deaa57f5ae0f97899f3d60c80"
+          }
+        ],
+        "status": "仅供盲审；尚未发布",
+        "solutions_available_to_student_reviewer": false
+      },
+      "outcome": "第17题两种组成偏向不同袋，求两个精确条件概率后选袋。第6页独立重审，其他页沿用像素相同的审查。"
+    }
+  ]
+}

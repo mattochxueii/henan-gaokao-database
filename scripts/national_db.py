@@ -567,9 +567,11 @@ def sqlite_query(root, year, series, number):
 def _calibration_revision(root):
     ledger = root / math_calibration.LEDGER
     if ledger.is_file():
+        resolutions = root / math_calibration.RESOLUTIONS
         return fingerprint(
             {
                 "calibration": digest(ledger),
+                "resolutions": digest(resolutions) if resolutions.is_file() else None,
                 "source": digest(private_folder(root) / "manifest.json"),
             }
         )
@@ -679,6 +681,8 @@ def planning_references(
                 )
             }
             item["source_locator"] = r["source_locator"]
+            if r.get("asset_refs"):
+                item["source_asset_refs"] = r["asset_refs"]
             item["reference_relevance"] = r["reference_relevance"]
             item["candidate_not_official"] = True
             item["confidence"] = r["confidence"]

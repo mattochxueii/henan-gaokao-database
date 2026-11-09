@@ -1,0 +1,541 @@
+{
+  "pdf_sha256": "c4aa10330aad4780627ae6d5967637d0236b88e0a944d5b07b7ee908c9859063",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "8bb46092155c49a662b381e4e4cf730cd8e21a60a57e78759e8811551ed95e13"
+    },
+    {
+      "number": 2,
+      "sha256": "26abd7072ecee2a4fa4d2076b25c92609d77780e748a74bbf40f3917eecb7e2b"
+    },
+    {
+      "number": 3,
+      "sha256": "128a5ddc64c94c9df7be5ca5d999a34ecb93a5406b1634e3569fca855aba87a3"
+    },
+    {
+      "number": 4,
+      "sha256": "4f20a48f9b35da98a510f030d449eb2c4be8f237fcc3321c96136723aa5570e0"
+    },
+    {
+      "number": 5,
+      "sha256": "2f7842b0fbaa783ebd178ae6bdcf8c4f3fb4e5d6d6df70d25a6f64ffc41cffc0"
+    },
+    {
+      "number": 6,
+      "sha256": "be6d1c29bad6fac23dd4d307139277212f028ea85d357802d1b01c53ca8619d8"
+    },
+    {
+      "number": 7,
+      "sha256": "345ae94e5c4b650912456bd605045ba4cb39dc8311113c6766284d9bec170afa"
+    },
+    {
+      "number": 8,
+      "sha256": "54bc984b949416947a60b55dd68f33145042fb7deaa57f5ae0f97899f3d60c80"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "A，充分不必要条件",
+      "answer_key": "A",
+      "independent_solution": "q等价于(x−1)(x−2)≥0，解集为(−∞,1]∪[2,+∞)。p的解集[2,+∞)是其真子集，所以p推出q。取x=1时q成立而p不成立，故q不能推出p。只有A正确。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 1,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "基础题通过两个根的因式分解把逻辑关系转成真包含，要求核查两个方向。也可在x≥2上直接验因式同号并给反例。四项互斥，5分适合作为卷首题。D项分成两行，首行高于A、B、C所在行，整项和标签仍清晰，没有误读或裁切。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−4",
+      "answer_key": "C",
+      "independent_solution": "将z̄=iz两边乘z，得|z|²=iz²=4，所以z²=−4i，虚部为−4。条件可实现，例如z=√2(1−i)符合两式。只有C的值相同。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "模和共轭条件可直接连成复数乘积，也可设实部、虚部后消元。由两种可能的z得到同一个平方，避免把求z当作必需。共轭线、i与模符号完整，选项区分平方模和相反号，5分适当。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "π/3",
+      "answer_key": "B",
+      "independent_solution": "设θ=2x+π/6，x∈[0,π/2]给θ∈[π/6,7π/6]。此区间内sinθ=1/2恰在θ=π/6、5π/6成立，故x=0、π/3。两解之和为π/3，只有B。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "相位换元后核查闭区间的左端解和区间内另一支，可用单位圆或一般解作完备判断。和与几个特殊角相区分。区间括号和三个分式均清晰，5分与两步求解相称。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "32/3",
+      "answer_key": "D",
+      "independent_solution": "令P=(u,v)，则AP=(u−1,v)，BP=(u−5,v−2)。条件给3u−7=0、3v−2=0，故OP=(7/3,2/3)。而AB=(4,2)，数量积为(7/3)·4+(2/3)·2=32/3，唯一选D。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "向量等式可用坐标分量求解，也可先识别P为A、B的加权平均点。点积是建模后的第二步。所求式另起一行，但与同题连接明确，向量箭头和分式完整，5分适合。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "2",
+      "answer_key": "B",
+      "independent_solution": "原记录的总和为4·5=20，平方和为4(5+5²)=120。把一项8换成4，总和变为16，平方和变为120−8²+4²=72。新均值为4，新方差为72/4−4²=2，选B。原数据存在，例如2、4、6、8。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "更正一项会同时影响均值和平方和，考查能否从旧汇总量恢复新汇总量。也可改用以4为中心的离差平方，直接换掉误记项。题意能区分原记录与更正后，正常断行未损文字。5分与两个统计量更新及最终换算相称。"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "4",
+      "answer_key": "C",
+      "independent_solution": "任取三个数字并从小到大记为a<b<c。百位小于个位且十位最大，唯一排法是acb。三位数能被3整除等价于a+b+c≡0 (mod 3)。数字按余数0、1、2分组为{3}、{1,4}、{2,5}。满足条件必须三类各取一个，因为没有任何一类可取三个不同数。共有1·2·2=4个，即132、153、243、354，选C。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "位置限制使每组三个数字只产生一个排列，整除条件再把枚举压缩为余数类组合。直接列出和可被3整除的三元组也能独立验证。数字、百位与个位关系、十位和整除条件均清楚，5分适合。"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "4/9",
+      "answer_key": "A",
+      "independent_solution": "由a₁=1和递推式知aₙ>0。取倒数得1/aₙ₊₁=1/aₙ+2，所以1/aₙ=2n−1，a₅=1/9。原递推还给aₙ−aₙ₊₁=2aₙaₙ₊₁。于是四项和为(a₁−a₅)/2=(1−1/9)/2=4/9，只有A。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "分式递推转成倒数等差，同时直接显出相邻乘积与差的关系。可用递推直接裂项，也可从通项分解每个乘积或逐项计算。四项求和与几个漏因子、截错末项的结果相区分。递推的分子、分母、下标和所有选项在放大检查中完整，5分合适。"
+    },
+    {
+      "number": 8,
+      "conditions_understood": "三次函数定义于实数轴。切线平行条件固定斜率 9，另要求其 y 轴截距严格为正。",
+      "request_understood": "从四个选项确定唯一的切点横坐标 t。",
+      "independent_solution": "f′(t)=3t²−3=9，故 t=±2。切线 y=f(t)+9(x−t) 的截距是 f(t)−9t。利用 9=3t²−3，可写成 −2t³。截距为正当且仅当 t<0，因此 t=−2。",
+      "answer": "D（−2）",
+      "answer_key": "D",
+      "quality_evidence": "斜率条件产生两个对称候选，截距符号负责最终筛选。可逐一代值，也可化成 −2t³。条件次序清楚，5 分适配两步。函数和切线设问属标准构造。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 0
+      }
+    },
+    {
+      "number": 9,
+      "conditions_understood": "三次抛掷独立且等可能。A 比较第一次与第三次，B、C 分别按正面次数定义。",
+      "request_understood": "判断事件概率、独立性、条件概率与对立关系四项，并选出全部正确项。",
+      "independent_solution": "八个等可能序列中，A 包含 HHH、HTH、THT、TTT，故 P(A)=1/2。B 有四个序列，A∩B={HHH,HTH}，所以 P(A∩B)=1/4=P(A)P(B)。C 有三个序列，A∩C={THT}，故 P(C|A)=1/4≠3/8=P(C)。全反面不在 B∪C 中，二者非对立事件。",
+      "answer": "AB",
+      "answer_key": "AB",
+      "quality_evidence": "同一小样本空间区分独立、条件概率相等和对立。也可用正反面全翻保持 A、互换 B 与其补集，直接看出 A 与 B 独立。第三次与第一次的比较清楚，四项所需工作与 6 分相称。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 10,
+      "conditions_understood": "给定余弦函数的振幅为 2，相位表达式为 2x−π/3。选项 C 为开区间，D 为闭区间。",
+      "request_understood": "判断最小正周期、对称轴、严格单调性和闭区间内根数。",
+      "independent_solution": "令 u=2x−π/3。最小正周期为 π，A 错。x=π/6 时 u=0，故为对称轴。x∈(π/6,π/2) 对应 u∈(0,2π/3)，余弦严格递减。x∈[0,π/2] 对应 u∈[−π/3,2π/3]，cos u=1/2 仅在 u=±π/3 取到，对应 x=0、π/3。",
+      "answer": "BCD",
+      "answer_key": "BCD",
+      "quality_evidence": "同一相位换元统一核验四项，根数项刻意包含左端点。也可由余弦图像逐项读取。题面紧凑，6 分覆盖四种性质。整体沿用常见三角函数判断形式。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 0
+      }
+    },
+    {
+      "number": 11,
+      "conditions_understood": "P 可取椭圆上的任意点，含长轴端点。F₁、F₂ 为两个焦点。最后一项另加等焦距条件。",
+      "request_understood": "判断焦距和、焦距积下界、焦距差最大值和特定三角形面积。",
+      "independent_solution": "a=2，b=1，c=√3。记 dᵢ=PFᵢ，椭圆定义给 d₁+d₂=4。反三角不等式给 |d₁−d₂|≤2√3，且长轴端点取等，故 C 给出的 √3 不是最大值。于是 d₁d₂=[16−(d₁−d₂)²]/4≥1。等焦距时 P 在垂直平分线 x=0 上，即 (0,±1)，焦点间距 2√3、三角形高 1，面积 √3。",
+      "answer": "ABD",
+      "answer_key": "ABD",
+      "quality_evidence": "焦距和与差的界可推导积的下界，长轴端点证成差的最大值。也可用焦半径的坐标表达。最后一项将等距转成垂直平分线。四项形成可复用的几何关系，6 分匹配。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 12,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "参数 a 为实数。两对数均有定义要求 a<x<4，因而存在实根时必有 a<4。",
+      "request_understood": "填出使给定对数方程恰有一个不同实根的全部参数值。",
+      "independent_solution": "在 a<x<4 上，合并对数得到 (x−a)(4−x)=2。若 a≥4 则定义域为空。若 a<4，左边是两端极限均为 0 的抛物线，在区间中点 x=(a+4)/2 取得唯一最大值 (4−a)²/4，两侧严格单调。最大值小于、等于、大于 2 时，实根数依次为 0、1、2。恰一实根故 4−a=2√2，得 a=4−2√2。此时唯一实根 x=4−√2 确在定义域内。",
+      "answer": "4−2√2",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "常规对数合并引出参数相关的开放定义域。解数需由乘积抛物线与水平线相交判定，或通过二次判别式并验证两根的定义域。定义域排除对称的另一参数候选，计算量短而有严格的唯一性判断，5 分与两层推导相配。PDF 上两个底数 2、括号、减号、实根限制和填空线均清晰。"
+    },
+    {
+      "number": 13,
+      "conditions_understood": "一列四格有确定顺序，每格一种颜色。相邻格异色，三种颜色每种至少出现一次。",
+      "request_understood": "填写满足全部着色约束的方案数。",
+      "independent_solution": "只考虑相邻异色时有 3·2³=24 种。缺色时只能使用两色并严格交替，有 C(3,2)·2=6 种，故有 18 种。也可按唯一出现两次的颜色选 3 种，选择两个非相邻位置有 3 种，其余两色排列有 2 种，共 18。",
+      "answer": "18",
+      "quality_evidence": "三色都用到使唯一重色成为有效分类点，也可从相邻异色总数扣除双色交替。两法都短且可交叉核验，5 分恰好。线性着色和异色约束是常见情境。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 0
+      }
+    },
+    {
+      "number": 14,
+      "conditions_understood": "x、y 均为正实数，总和固定为 4。",
+      "request_understood": "填写 1/x+4/y 的可达最小值。",
+      "independent_solution": "由柯西不等式，(x+y)(1/x+4/y)≥(1+2)²=9，所以最小值下界为 9/4。取等需 y=2x，与 x+y=4 联立得 x=4/3、y=8/3，均为正，故下界取到。也可将目标减 9/4 写成 (y−2x)²/(4xy)。",
+      "answer": "9/4",
+      "quality_evidence": "权重产生非对称取等点，考查如何使用总和及证明下界可达。可以用柯西、恒等式或一元最优化。题面短，5 分适配，构造属于标准定和倒数极值。",
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 0
+      }
+    },
+    {
+      "number": 15,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "在非退化三角形 ABC 中，a、b、c 分别为 A、B、C 的对边，且 b=5、c=8、sin B=3/5。第二问另给从 B 向 AC 所作的垂足 D 在线段 AC 内部。",
+      "request_understood": "（1）求所有可行边长 a。（2）用内部垂足条件筛选三角形，再求 BD。",
+      "independent_solution": "由余弦定理 b²=a²+c²−2ac cos B，故 a²+39=16a cos B>0，得 cos B=4/5。于是 5a²−64a+195=0，解得 a=5 或 39/5。分别以这两正数和 c=8 为两边，以已确定的锐角 B 为夹角构造三角形，余弦定理均给对边 b=5，故均可行。D 在线段 AC 内部等价于 A、C 均为锐角。两候选都满足 a²<b²+c²=89，所以 A 锐。C 锐等价于 c²<a²+b²，即 a²>39，只在 a=39/5 时成立。由面积等式 b·BD=ac sin B，得 BD=(39/5)·8·(3/5)/5=936/125。",
+      "answer": "（1）a=5 或 39/5。（2）BD=936/125。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "先由边角条件得到两个合法构型，再用垂足位置筛选，第二问实际使用了第一问的分支。也可用正弦定理配合 C 的锐钝或用向量投影解。数值有分数但步骤可控，13 分与工作量相称。"
+    },
+    {
+      "number": 16,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "非退化三棱锥 P–ABC 中，PA 垂直底面 ABC，AB⊥AC 且两者长度均为 2，E、F 分别为 AB、AC 的中点。第二问 PC 与平面 PEF 所成角的正弦为 1/√15。",
+      "request_understood": "（1）证明 BC 平行于平面 PEF。（2）求 P–AEF 体积的所有可能值。",
+      "independent_solution": "设 A=(0,0,0)、B=(2,0,0)、C=(0,2,0)、P=(0,0,h)，其中 h>0。E=(1,0,0)、F=(0,1,0)，平面 PEF 为 hx+hy+z=h，法向量 n=(h,h,1)。由 EF∥BC，且 B 不在平面 PEF（代入左端为 2h），得 BC∥平面 PEF。向量 PC=(0,2,−h)，故所求线面角正弦为 |PC·n|/(|PC|·|n|)=h/[√(4+h²)√(1+2h²)]。令其等于 1/√15 并平方，得 2(h²−1)(h²−2)=0。两正高 h=1、√2 都满足原线面角条件，可分别构造。AEF 的面积为 1/2，高为 h，故体积为 h/6，得到 1/6 或 √2/6。",
+      "answer": "（1）BC∥平面 PEF。（2）1/6 或 √2/6。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 1,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "从中位线建立线面平行，再引入法向量与角约束产生两个合法高度，必须回验两解。第 5 页图中的 E、F 实心点分别在 AB、AC 中部，文字和图足以识别。放大可见外轮廓 PA 使用虚线，且 F 标签靠近 PE，作为示意图可读。15 分合适。",
+      "suggested_repair": "可把外轮廓 PA 改为实线，并略移 F 标签远离 PE，同时保持 PF 与 PE 的线型区别。"
+    },
+    {
+      "number": 17,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "甲袋 3 白 1 黑，乙袋 2 白 2 黑。两袋各独立、等可能、不放回地取 2 球，X 为取出的白球总数。第二问给定 X=2，再分别考虑从甲、乙袋剩余的 2 球中随机取 1 球。",
+      "request_understood": "（1）求 X 的完整分布列。（2）在 X=2 条件下分别求甲、乙袋再抽到白球的概率，判断应选哪一袋以取得较大概率。",
+      "independent_solution": "令 U、V 分别为初次从甲、乙取出的白球数。每袋等可能的两球组合各有 6 种。甲取 1 白、2 白各有 3 种，故 P(U=1)=P(U=2)=1/2。乙取 0、1、2 白分别有 1、4、1 种，故 P(V=0,1,2) 依次为 1/6、2/3、1/6。用 U、V 独立且 X=U+V，得 P(X=1)=1/12，P(X=2)=1/3+1/12=5/12，P(X=3)=1/12+1/3=5/12，P(X=4)=1/12。给定 X=2，(U,V)=(1,1) 与 (2,0) 的条件权重为 (1/3)/(5/12)=4/5 与 (1/12)/(5/12)=1/5。前一种情况下甲袋余 2 白、乙袋余 1 白 1 黑，后一种情况下甲袋余 1 白 1 黑、乙袋余 2 白。因此从甲袋再取白的概率为 (4/5)·1+(1/5)·(1/2)=9/10，从乙袋为 (4/5)·(1/2)+(1/5)·1=3/5。因 9/10>3/5，选甲袋。",
+      "answer": "（1）X=1、2、3、4 的概率依次为 1/12、5/12、5/12、1/12。（2）甲袋 9/10，乙袋 3/5，选甲袋。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "第一问用组合概率和独立性建立总数分布，第二问复用 X=2 的分解并重新归一条件权重。两种隐藏状态分别偏向不同的袋，且题目要求两个精确概率，必须进行条件比较。也可在 X=2 的 15 种等可能初始配对中，直接数甲袋 27/30 与乙袋 18/30 的有利后续结果。递进清楚，15 分与完整分布、条件混合和结论的工作量相称。第 6 页题号、条件和两个小问清楚，独立重渲染与提供的 PNG 逐字节一致。首段有行首逗号，属于排版细节。",
+      "suggested_repair": "可调整首段换行，使“2 球，”保持在同一行。"
+    },
+    {
+      "number": 18,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "椭圆为 x²/4+y²=1，D=(√3,0) 在其内部，过 D 的所有动直线与椭圆交于 A、B，O 为原点，M 为弦 AB 的中点。动直线包括水平和竖直情形。",
+      "request_understood": "（1）求 M 的轨迹方程并证明全域可达。（2）求面积的最大值及所有达到最大值的动直线。",
+      "independent_solution": "作缩放 (u,v)=(x/2,y)，椭圆化为单位圆，D′=(√3/2,0)，面积缩为原来一半。M′ 是圆心 O 到弦所在直线的垂足，所以 M′·(M′−D′)=0，得 u²+v²=(√3/2)u，原坐标为 x²+4y²=√3x。反过来，对此轨迹上 M′≠O,D′ 的点，取直线 D′M′，关系式保证垂足就是 M′。M′=O 时取水平 OD′，M′=D′ 时取过 D′ 且垂直 OD′ 的直线。因 D′ 在圆内，所得都是真弦，全轨迹可达。令 d=|OM′|，原面积为 2d√(1−d²)，其平方为 1−(2d²−1)²≤1。等号要求 d²=1/2，此时轨迹式给 M′=(1/√3,±1/√6)，确在轨迹上。将弦方程 u_M′·u+v_M′·v=1/2 换回原坐标得 x+√2y=√3 或 x−√2y=√3，均过 D。水平弦给 O,A,B 共线，面积为 0，亦不影响最大值。",
+      "answer": "（1）x²+4y²=√3x，轨迹上每一点可达。（2）最大面积为 1，在直线 x±√2y=√3 时达到。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "用椭圆到圆的缩放统一处理中点轨迹和面积，逆构造必须覆盖 O 与 D 两端。也可用椭圆弦的点差关系和行列式完成。题意充分，17 分合适。第 7 页首段有行首逗号，内容与公式可辨。",
+      "suggested_repair": "可把“O 为原点，M 为弦 AB 的中点”整体移到下一行或拆成独立句，避免行首逗号。"
+    },
+    {
+      "number": 19,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "a>1，f(x)=x−a/x−(1+a)ln x，定义域 x>0，m∈ℝ。第二问要求有三个相异正根，按从小到大排列成等比数列。",
+      "request_understood": "（1）按 m 讨论 f(x)=m 的不同实根数。（2）找出且证明所有使三个相异根成等比数列的 m。",
+      "independent_solution": "f′(x)=(x−1)(x−a)/x²，故 f 在 (0,1) 增、(1,a) 减、(a,∞) 增。利用 ln t/t→0，f(x) 在 x→0+ 时趋于 −∞、在 x→∞ 时趋于 ∞。该对数极限可由 t≥1 时 ln t≤2√t 得出，后者由求导即可证明。令 L=f(a)=a−1−(1+a)ln a，U=f(1)=1−a，因 f 在 (1,a) 严格递减，L<U。由三段单调性，m<L 或 m>U 时一根，m=L 或 U 时两根，L<m<U 时三根。若三个相异根为 u/q、u、uq，其中 u>0、q>1，则 f(uq)+f(u/q)−2f(u)=(u−a/u)(q+q⁻¹−2)=0。第二因子严格为正，故 u=√a，从而 m=f(√a)=−(1+a)ln a/2。反过来，√a∈(1,a)，所以此 m 介于 L、U，恰有三个相异根。恒等式 f(a/x)=−f(x)−(1+a)ln a 表明此水平的根在 x↦a/x 下互相对应。中根是 √a，两外根乘积 a，故三根确成等比数列。",
+      "answer": "（1）设 L=a−1−(1+a)ln a、U=1−a。m∈(L,U) 有 3 个不同实根，m∈{L,U} 有 2 个，其余有 1 个。（2）唯一为 m=−(1+a)ln a/2。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "导数因式清楚地形成三段，计数必须处理两个极值高度与端点极限。第二问将等比三根对称参数化后，对数项自动消去，随后用互反恒等式证明充分性。也可令 x=√a·eᵗ 将平移后的函数化为 t 的奇函数。高中导数与基本代数足够，17 分符合末题难度。"
+    }
+  ],
+  "group_reports": [
+    {
+      "file": "full-v1-q1-7-blind.json",
+      "source_pdf_sha256": "83326f8eb1fba81719b69f481ad40b83784468d7b676c3e98f556302e1526b49",
+      "report_sha256": "554781251ae41c93fd33f53b7bbc6dd412edcd386e9c88e8dc4bc005656683fa"
+    },
+    {
+      "file": "full-v1-q8-14-blind.json",
+      "source_pdf_sha256": "83326f8eb1fba81719b69f481ad40b83784468d7b676c3e98f556302e1526b49",
+      "report_sha256": "d39d0515f2bff6c9500fb284a17c83641e1caf1ad1cca3af5c261dcae14b8931"
+    },
+    {
+      "file": "full-v1-q15-19-blind.json",
+      "source_pdf_sha256": "83326f8eb1fba81719b69f481ad40b83784468d7b676c3e98f556302e1526b49",
+      "report_sha256": "be019af79a5ed5154e5b4e7919e8f26045694605f0a144607cc955d127065ba1"
+    },
+    {
+      "file": "full-v4-q12-blind.json",
+      "source_pdf_sha256": "849ac2138d5fa1932b9ad1bae19d932542aa10dd8c22b91ccafea8983192f046",
+      "report_sha256": "67e63947783c9b1df4cfa0acd9d30c18a4cb1f8df7c1c9b64a7415625af8b4ab"
+    },
+    {
+      "file": "full-v5-q17-blind.json",
+      "source_pdf_sha256": "c4aa10330aad4780627ae6d5967637d0236b88e0a944d5b07b7ee908c9859063",
+      "report_sha256": "37e41e620ac4ca36620a0af7525962440950579c1fa86901397244ed86d4b892"
+    }
+  ]
+}

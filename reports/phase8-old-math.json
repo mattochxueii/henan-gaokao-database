@@ -1,0 +1,1122 @@
+{
+  "questions": [
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 1,
+      "id": "orig:ai:phase7:trial:01:v1",
+      "math_spec_sha256": "cf8509fa1b7ccf7f8ff51a4b6db8eb07e83a17f952f46418c61206e1d435e027",
+      "scope": "平方模长得到0<x≤2，(x−2)²−8的值域左闭右开，唯一A。",
+      "independent_pdf_proof": "令 z=x−2i，x>0。模长不等式等价于 (x−1)²+4≤5，即 0<x≤2。z²=x²−4−4xi，所以实部与虚部之和为 x²−4x−4=(x−2)²−8。因为 0≤2−x<2，其平方遍历 [0,4)，所求值域为 [−8,−4)。x=2 取到 −8，x=0 被排除，−4 不取到。也可由二次函数在 (0,2] 严格递减得到同一结论。A 唯一符合。",
+      "answer": "[−8,−4)",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [],
+      "edition_revised": false,
+      "scoring": {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 A，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 2,
+      "id": "orig:ai:phase7:trial:02:v1",
+      "math_spec_sha256": "535382fc9db2f4b3a858cbfe02bda60be546226198799beb461bd706f92459a2",
+      "scope": "较小号为奇数有6种等可能对子，其中2种和为3的倍数，唯一B。",
+      "independent_pdf_proof": "十个无序卡片对等可能。较小号码为 1 时有四种配对，为 3 时有两种，为 5 时无法配对。六种条件内配对中，只有 (1,2) 和 (1,5) 的和是 3 的倍数，所以概率为 2/6=1/3。若先按和分类，可从 (1,2)、(1,5)、(2,4) 中剔除较小号为偶数的最后一组。",
+      "answer": "1/3",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "probability",
+          "result": "1/3"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 B，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 3,
+      "id": "orig:ai:phase7:trial:03:v1",
+      "math_spec_sha256": "dacf24a9f599728736aca0cc615cb99ea57839045feaf50ab4251029c3fae562",
+      "scope": "等比中项给a₂=4d，前五项和定d=2，a₇=18，唯一C。",
+      "independent_pdf_proof": "由前五项和得 a₃=10。正公差为 d，故 a₂=10−d、a₄=10+d、a₇=10+4d。等比条件给 (10+d)²=(10−d)(10+4d)，即 5d(d−2)=0。d>0，故 d=2。验得 8、12、18 确为等比数列，唯一答案为 18。另可由两相邻差之比 3d/(2d)=3/2 直接求公比和 d。",
+      "answer": "18",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "constrained_value",
+          "result": "18"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 C，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 4,
+      "id": "orig:ai:phase7:trial:04:v1",
+      "math_spec_sha256": "4b67e7bfd275f33f228de252b10c09db9ce9a97db4940b7cb3a6bedce197b658",
+      "scope": "过外点的切线方程给两个正切点，和8/3，唯一D。",
+      "independent_pdf_proof": "设切点横坐标为 t>0，f(x)=x+4/x。其切线在 x=1 处给 f(t)+f′(t)(1−t)=1+8/t−4/t²。令其等于 4，得 3t²−8t+4=0。根 2、2/3 均符合定义域及过点条件，所以和为 8/3。也可令过定点直线斜率为 k，交点方程为 (1−k)x²+(k−4)x+4=0。k=1 不是切线斜率，其余情形判别式为零得 k=0 或 −8，对应同样两切点。",
+      "answer": "8/3",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "root_statistic",
+          "result": "8/3"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 D，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 5,
+      "id": "orig:ai:phase7:trial:05:v1",
+      "math_spec_sha256": "964da92e49c9e1f47418ec6fa200b54319b05c0ce05276f3a840d3f741c9d5aa",
+      "scope": "写x=ty+3−t覆盖所有合格弦，判别式恒正；t=1及t=1/4分别给直线、最小值23/8。",
+      "independent_pdf_proof": "水平线与抛物线至多一个交点，所以设割线为 x=k(y−1)+3，包含 k=0 的竖线。联立得 y²−4ky+4k−12=0，判别式 16(k²−k+3)>0，任意 k 都给出两个不同交点。韦达定理给 y_M=2k，进而 x_M=2k²−k+3。（1）y_M=2 给 k=1，故 y=x−2。（2）x_M=2(k−1/4)²+23/8，故在 k=1/4 唯一取最小值，直线为 y=4x−11。也可用两点坐标作差直接求 k=y_M/2。",
+      "answer": "（1）y=x−2。（2）最小值 23/8，唯一对应直线 y=4x−11。",
+      "boundary_proof": {
+        "scope": "全部过定点的非水平直线；水平线至多一交点。",
+        "necessity": "弦中点由韦达定理强制决定。",
+        "sufficiency": "二次判别式恒正，所以所有t都对应真弦。",
+        "boundaries": "t=0的竖直弦已包含，排除了水平线且无丢解。",
+        "equality": "配方的平方项在t=1/4唯一为零。",
+        "school_solution": "韦达定理、配方与直线方程，完整给两个结果。"
+      },
+      "previous_coverage": "independent_reasoning_only",
+      "phase8_coverage": "independent_reasoning_only",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 5,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "参数化所有非水平直线，含竖直线"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "用韦达求中点纵坐标并给第一问直线"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "判别式保证参数可行"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "配方证明横坐标最小"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "给出等号参数及对应直线"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 6,
+      "id": "orig:ai:phase7:trial:06:v1",
+      "math_spec_sha256": "068194288da3a584aaf916f5d3654ab6914cced7a667f34f03ee7308a9a323be",
+      "scope": "分布3/10、2/5、3/10；给定X=3时的期望为3；两个条件概率1/3与1/4不同。",
+      "independent_pdf_proof": "十个无序三张组合等可能。固定中位数 x，要在它两侧各选一张，故 X 为 2、3、4 的次数依次为 3、4、3。给定 X=3，四个等可能端点对为 (1,4)、(1,5)、(2,4)、(2,5)，极差为 3、4、2、3，平均为 3。也可分别求两端平均数，差为 4.5−1.5=3。条件概率 P(Y=4|X=3)=1/4，而无条件下端点 1、5 可配任一中间号码，P(Y=4)=3/10，所以不独立。",
+      "answer": "（1）P(X=2)=3/10，P(X=3)=2/5，P(X=4)=3/10。（2）E(Y|X=3)=3，X 与 Y 不独立。",
+      "boundary_proof": {
+        "scope": "无放回，按号码排序的10组三元组等可能。",
+        "necessity": "独立则在任意有正概率的给定X下同一Y事件概率相同。",
+        "sufficiency": "X=2与3给出反例即可判定不独立；条件期望逐项累加。",
+        "boundaries": "X只有2、3、4，均有正概率，条件定义合法。",
+        "equality": "无取等问题；条件期望恰为3不推出独立。",
+        "school_solution": "数数、条件概率与期望均为高中定义。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": "枚举全部10个等可能组合，核对中位数完整分布、给定中位数为3的极差期望以及联合分布的非独立见证。",
+      "rerun_extended_operations": [
+        {
+          "op": "distribution",
+          "result": "{'distribution': {'2': '3/10', '3': '2/5', '4': '3/10'}, 'expectation': '3', 'variance': '3/5'}"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 6,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "确定三元组等可能及三种中位数"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "求正确分布"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "列出给定中位数3的条件样本并求均值"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "用相同事件在不同条件下的概率否定独立"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-T50-v2",
+      "paper_sha256": "c860214e6d24dc2a380492b2e4c79c86aa386fd41558c251f130c9f0407b6f20",
+      "number": 7,
+      "id": "orig:ai:phase7:trial:07:v1",
+      "math_spec_sha256": "4f9b3b0877e2ef3b58b66c3cc2d5582a97d765fee3fcf17bb3f626e326be8550",
+      "scope": "三次导数比较分别证严格上界、候选下界；任取c>1/2选0<x<2c−1给反例。",
+      "independent_pdf_proof": "用同一公式延拓 f 到 0，有 f(0)=0。对 x>0，f′(x)=x/(1+x)>0，所以 f(x)>0。令 h=x²/2−f，则 h(0)=0、h′=x²/(1+x)>0，所以 f(x)<x²/2。再令 g=f−x²/[2(1+x)]，有 g(0)=0、g′=x²/[2(1+x)²]>0，故 c=1/2 可行且对 x>0 不取等号。反之，若 c 可行，则由第一问对所有 x>0 有 c≤(1+x)f(x)/x²<(1+x)/2。若 c>1/2，取 x=2c−1 矛盾。因此可行常数恰为 c≤1/2。",
+      "answer": "（1）对任意 x>0，0<f(x)<x²/2。（2）c 的最大值为 1/2。",
+      "boundary_proof": {
+        "scope": "x>0的严格不等式和对所有正x的参数界。",
+        "necessity": "任一c>1/2选0<x<2c−1，借严格上界产生反例。",
+        "sufficiency": "G从0起增，推出c=1/2对整个正半轴成立。",
+        "boundaries": "利用0处连续延拓，0不在要求取值域。",
+        "equality": "c=1/2可用，原不等式仅在排除的0能取等。",
+        "school_solution": "导数符号和反证，不依赖泰勒或积分。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 7,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "用一阶导数证明正下界"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "用比较函数证明严格上界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "构造差函数并求其严格导数符号"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "证明1/2对全域成立"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "给出超阈值反例并确定最大值"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 1,
+      "id": "orig:ai:phase7:full:01:v1",
+      "math_spec_sha256": "821203f221ef355844e77d4fc1a562f9f703bef2808f31b4b083f9152dce800b",
+      "scope": "模长方程的根0、2，排除0，唯一B。",
+      "independent_pdf_proof": "z+ki=2+(k−1)i。两侧模平方相等给 4+(k−1)²=|2−i|²=5，所以 (k−1)²=1，候选为 k=0、2。题设 k≠0，唯一留下 k=2，代入得到 z+2i=2+i，确与 z 等模。也可在复平面上看：实部固定为 2，等模的两点关于实轴对称，非零变化只能把 z 变为其共轭。A、C、D 都不是上述两根。",
+      "answer": "2",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "constrained_value",
+          "result": "2"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 B，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 2,
+      "id": "orig:ai:phase7:full:02:v1",
+      "math_spec_sha256": "9bc5f2f2ab512dde62d99652735288425bc2f421f0202ce0e592bcbda3cd47fc",
+      "scope": "完整像集为−1、0、3、8，交集3个，唯一C。",
+      "independent_pdf_proof": "把 −2、−1、0、2、3 分别代入 x²−1，得到 3、0、−1、3、8。去重后 B={−1,0,3,8}，故 A∩B={−1,0,3}，元素数为 3。也可从 A 的候选值反解 x²=b+1。只有 C 符合。",
+      "answer": "3",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "finite_image_intersection",
+          "result": "3"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 C，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 3,
+      "id": "orig:ai:phase7:full:03:v1",
+      "math_spec_sha256": "1826582dec5d0b8d8107a53ffee11cf33b680a67ad269c920171acdc414c3c42",
+      "scope": "正交给t²+t−1，两个实根平方和3，唯一A。",
+      "independent_pdf_proof": "由 (a−b)·b=(1,−1−t)·(1,t)=0 得 t²+t−1=0。判别式为 5，因此恰有两个不同实根。根和为 −1，根积为 −1，故平方和为 (−1)²−2(−1)=3。也可由 t²=1−t 对两根相加，或直接求两根再平方。A 唯一正确。",
+      "answer": "3",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "constrained_value",
+          "result": "3"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 A，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 4,
+      "id": "orig:ai:phase7:full:04:v1",
+      "math_spec_sha256": "4f92d9fb59bbdb7cab35064b60c4ea886c3a1250056b70285b4edc2b2b2a2555",
+      "scope": "角在第一象限，倍角正弦4√5/9，唯一D。",
+      "independent_pdf_proof": "令 β=α+π/6，则 β∈(π/6,π/2)，故 sinβ>0。由 cosβ=2/3 得 sinβ=√5/3。2α+π/3=2β，所以 sin(2α+π/3)=2sinβcosβ=4√5/9。余弦在该开区间的值域为 (0,√3/2)，含 2/3，条件可实现。只有 D 符合。",
+      "answer": "4√5/9",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "trig_reconstruct",
+          "result": "4*sqrt(5)/9"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 D，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 5,
+      "id": "orig:ai:phase7:full:05:v1",
+      "math_spec_sha256": "d7857cc9374d5538940099c265185786de358edc2310378c674867e3c501c2fb",
+      "scope": "相邻递推相加消去交替项，第五个相邻和80，唯一C。",
+      "independent_pdf_proof": "设 s_n=a_n+a_(n+1)。把相邻两条递推式相加，(−1)^n 与 (−1)^(n+1) 相消，得 s_(n+1)=2s_n。a₂=2a₁−1=3，所以 s₁=5，s₅=2⁴s₁=80。直接逐项核对得到 a₂ 至 a₆ 为 3、7、13、27、53，也给出 27+53=80。只有 C 符合。",
+      "answer": "80",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "recurrence_transform",
+          "result": "80"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 5,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 C，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 6,
+      "id": "orig:ai:phase7:full:06:v1",
+      "math_spec_sha256": "24d52385a4a4c49014b354335eef6ff35af05b464b52568406e99d88696104ba",
+      "scope": "手工两层分类和程序格点枚举均得5，唯一B。",
+      "independent_pdf_proof": "以 R 表示向右、U 表示向上，共各三步。条件等价于每个前缀的 U 数不超过 R 数。合法序列为 RRRUUU、RRURUU、RRUURU、RURRUU、RURURU，共 5 种。也可从 20 种排列减去非法路径：在首次 U 数比 R 数多 1 的位置反射前缀，非法路径与四个 R、两个 U 的序列一一对应，故减去 C(6,2)=15。只有 B 符合。",
+      "answer": "5",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "count",
+          "result": "5"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 6,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 B，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 7,
+      "id": "orig:ai:phase7:full:07:v1",
+      "math_spec_sha256": "58a04ebc9a49d2987ecabd2897b91fa4474d0e24ba4c2cf08eb52ee56a86ae35",
+      "scope": "短轴顶点处焦点三角形的半角是60度，离心率√3/2，唯一D。",
+      "independent_pdf_proof": "设椭圆中心为 O，长半轴为 a，半焦距为 c。短轴端点 B 到两焦点等距，椭圆定义给 BF₁=BF₂=a。BO 垂直且平分 F₁F₂，也平分 120° 顶角，所以直角三角形 BOF₁ 中 OF₁/BF₁=sin60°=√3/2。这就是离心率 c/a。也可对两条长为 a 的焦半径用余弦定理，得 (2c)²=3a²。只有 D 符合。",
+      "answer": "√3/2",
+      "boundary_proof": {
+        "scope": "非退化椭圆的短轴端点。",
+        "necessity": "对称及椭圆定义给两焦距均为a。",
+        "sufficiency": "半角直角三角形给c/a=sin60°。",
+        "boundaries": "B不在焦点连线上，两焦点距离非零。",
+        "equality": "所得比值在(0,1)，对应存在的椭圆。",
+        "school_solution": "焦点定义与直角三角函数，独立核实选择唯一。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "evaluate",
+          "result": "sqrt(3)/2"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 7,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 D，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 8,
+      "id": "orig:ai:phase7:full:08:v1",
+      "math_spec_sha256": "3983081cf59794c4e2c9bcb9e5a3769be70b8c7ff5b899318af5043c7e21e6b8",
+      "scope": "端点等高给4ln4/3，导数先负后正证明端点确为最大，唯一A。",
+      "independent_pdf_proof": "两个端点均为最大值点，先得f(1)=f(4)，即a=ln4+a/4，解得a=(4/3)ln4。为检验充分性，对这个a应用罗尔定理，存在c∈(1,4)使f′(c)=0。由f′(x)=(x−a)/x²可知c=a，因此函数先严格递减后严格递增。两端点的相等函数值确为区间最大值。只有A成立。",
+      "answer": "(4/3)ln4",
+      "boundary_proof": {
+        "scope": "闭区间[1,4]，两端点同为最大。",
+        "necessity": "必须等高，从线性方程唯一解出a。",
+        "sufficiency": "1<a<4时导数先负后正，两端确为并列最大。",
+        "boundaries": "端点可取，严格不等式排除临界点落在端点。",
+        "equality": "最大值恰在两个端点达到。",
+        "school_solution": "用导数证明对数上下界，避免近似值比较。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "constrained_value",
+          "result": "8*log(2)/3"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 8,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "正确选择 A，得满分；其余情况不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 9,
+      "id": "orig:ai:phase7:full:09:v1",
+      "math_spec_sha256": "aa9fae9930458b426a2a50561908fd7741f186ce30febe4d1ec3d88daddf0d7a",
+      "scope": "两组方差须加组间偏差，合并方差9；平移后5，取3、5和5、11否定中位数，选AC。",
+      "independent_pdf_proof": "两组样本数相同，故合并均值为(4+8)/2=6，A对。相对于合并均值6，甲、乙组平均平方偏差分别为1+(4−6)²=5与9+(8−6)²=13，所以合并方差为9，B错。乙组整体减4后均值变成4，方差仍为9，两组同均值时合并方差是(1+9)/2=5，C对。取甲组(3,5)、乙组(5,11)，两组满足已知均值和方差，合并中位数为5，D错。",
+      "answer": "A、C",
+      "boundary_proof": {
+        "scope": "两个同规模群体，使用高中总体型方差定义。",
+        "necessity": "分解组内、组间平方差，均值变换必须一并考虑。",
+        "sufficiency": "精确计算三个矩；以满足全部条件的实数据否定中位数命题。",
+        "boundaries": "相同规模保证等权，允许数据并列。",
+        "equality": "A和C等式成立，B值误，D非普遍。",
+        "school_solution": "展开平方与反例，无统计推断前提。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [],
+      "edition_revised": false,
+      "scoring": {
+        "number": 9,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "选全 AC 得满分；无错选时，每正确选一项得2分；有错选或未作答不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 10,
+      "id": "orig:ai:phase7:full:10:v1",
+      "math_spec_sha256": "8a8a8f2fb3c016c54e23af78089ebe45991d805bb7c7c143f262aa39164d5b00",
+      "scope": "和式n(6−n)，最大9，n=6为零且n=1、5同值，选AB。",
+      "independent_pdf_proof": "设首项为a₁，公差为d。S₃=9给a₁+d=3，S₆=0给2a₁+5d=0，故d=−2、a₁=5。于是a₃=1，A对。Sₙ=n(6−n)=9−(n−3)²，所以最大值为9，B对。正整数n下Sₙ>0等价于n<6，C错。S₂=S₄=8，D错。",
+      "answer": "A、B",
+      "boundary_proof": {
+        "scope": "正整数下标的等差数列。",
+        "necessity": "两个前缀和形成二元线性条件，唯一确定a₁,d。",
+        "sufficiency": "配方统一证明极值，再对两错误命题给反例。",
+        "boundaries": "n=6恰为零，不能纳入严格正值。",
+        "equality": "n=3唯一最大，n=1,5同和使D不成立。",
+        "school_solution": "等差和、配方和直接反例。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [],
+      "edition_revised": false,
+      "scoring": {
+        "number": 10,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "选全 AB 得满分；无错选时，每正确选一项得2分；有错选或未作答不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 11,
+      "id": "orig:ai:phase7:full:11:v1",
+      "math_spec_sha256": "94ed35bd6c708a36c1971542a7cdd66aafe27e388f311ffcb3c730ee62077eec",
+      "scope": "内外切半径1、5，r²=13时公共弦过圆心，r=4否D，选ABC。",
+      "independent_pdf_proof": "两圆圆心距为3，半径为2与r。r=1时半径和为3，故A对。r=5时半径差为3，故B对。r=√13时两圆方程相减得到x=0，再由第一圆得交点(0,2)、(0,−2)，弦长4，C对。两交点存在当且仅当|2−r|<3<2+r，即1<r<5，例如r=4也有两交点，D错。",
+      "answer": "A、B、C",
+      "boundary_proof": {
+        "scope": "r>0的两圆位置关系。",
+        "necessity": "外切、内切须分别用半径和差检验。",
+        "sufficiency": "相减求公共弦，r=√13时过圆心；r=4给反例。",
+        "boundaries": "分开两个相切端点和两点相交开范围。",
+        "equality": "两相切端半径为1、5，公共弦是直径时恰长4。",
+        "school_solution": "圆的位置关系及相减消元。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": "四个选项分别核查外切、内切、公共弦长和相交反例，得到ABC。",
+      "rerun_extended_operations": [],
+      "edition_revised": false,
+      "scoring": {
+        "number": 11,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "选全 ABC 得满分；无错选时，每正确选一项得2分；有错选或未作答不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 12,
+      "id": "orig:ai:phase7:full:12:v1",
+      "math_spec_sha256": "db7fde63e5e9c45adebb6f978825ce9c8487c45fe24ea2b5b4436e617354aa45",
+      "scope": "2028项两两配成1014组，每组−3，总和−3042。",
+      "independent_pdf_proof": "由f(x+2)=−f(x)与f(1)=3，逐次迭代得f(2k+1)=3(−1)^k。求和下限0、上限2027，共2028项。把k=2j与k=2j+1相邻配对，每组的两项之和为3(2j+1)−3(2j+2)=−3。j取0至1013，共1014组，所以总和为−3×1014=−3042。",
+      "answer": "−3042",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "antiperiod_weighted_sum",
+          "result": "-3042"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 12,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "填写与参考答案等价的结果得满分；漏填或错误不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 13,
+      "id": "orig:ai:phase7:full:13:v1",
+      "math_spec_sha256": "df8be60fd4f021e7e5f4395911f0087da655e9ef79c9201753c25f72cad9d3a8",
+      "scope": "取四次负一次幂，其余取平方，常数项15。",
+      "independent_pdf_proof": "在六个因子中取k个1/x，其余取x²。相应指数为2(6−k)−k=12−3k，只有k=4产生常数项，系数为C(6,4)=15。等价地，将表达式写成x⁻⁶(1+x³)⁶，取分子x⁶的系数。",
+      "answer": "15",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "coefficient",
+          "result": "15"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 13,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "填写与参考答案等价的结果得满分；漏填或错误不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 14,
+      "id": "orig:ai:phase7:full:14:v1",
+      "math_spec_sha256": "e144b8aa4fedacfe5c1814001e51eeb270d374c1403cd40f24a59cdf21166b23",
+      "scope": "归一化后柯西给4√13，正坐标满足取等比例。",
+      "independent_pdf_proof": "矩形边平行于坐标轴，同一水平边的两个端点具有相同y，故在椭圆上横坐标互为相反数。同一竖直边同理，故顶点可写为(±a,±b)，a,b>0且a²/9+b²/4=1。周长为4(a+b)。由柯西不等式，a+b=3(a/3)+2(b/2)≤√13。等号在a=9/√13、b=4/√13时取得，这两值给出非退化矩形。故最大周长为4√13。",
+      "answer": "4√13",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "ellipse_rectangle_perimeter",
+          "result": "4*sqrt(13)"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 14,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "填写与参考答案等价的结果得满分；漏填或错误不得分。"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 15,
+      "id": "orig:ai:phase7:full:15:v1",
+      "math_spec_sha256": "6b7ce529867888f821222122784244ea70f6dc4b1956ef5caf650eb26b4dfddd",
+      "scope": "角60度，面积比化为(8−a)/(2√3)，逐值可达且仅上端取到。",
+      "independent_pdf_proof": "由余弦定理，2bc cos A=bc。因 b,c>0 且 A∈(0,π)，得 A=π/3。令 t=bc，由 b+c=8 和均值不等式知 0<t≤16。条件化为 a²=64−3t，故 4≤a<8。又 S=bc sin A/2=√3t/4，故 2S/(a+b+c)=√3t/[2(a+8)]=(√3/6)(8−a)。对任意 t∈(0,16]，方程 z²−8z+t=0 有两个允许相等的正根 b,c，取它们为夹角 π/3 的两边，就能构造满足题设的三角形。因此范围为 (0,2√3/3]，上端在 b=c=4 时取得，下端只在一边趋近 0 时逼近。",
+      "answer": "（1）A=π/3。（2）(0,2√3/3]。",
+      "boundary_proof": {
+        "scope": "非退化三角形b,c>0且和为8。",
+        "necessity": "余弦定理定角60度，bc范围约束a。",
+        "sufficiency": "每个b∈(0,8)与c=8−b都能夹60度构成三角形。",
+        "boundaries": "bc趋0对应退化，所以下端0不可取。",
+        "equality": "b=c=4时比值最大，确实实现。",
+        "school_solution": "余弦定理、面积公式、配方，解释完整范围。"
+      },
+      "previous_coverage": "independent_reasoning_only",
+      "phase8_coverage": "independent_reasoning_only",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": false,
+      "scoring": {
+        "number": 15,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "余弦定理得到余弦"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "正确判定角为60度"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "以面积公式和边长条件化为边长函数"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "证明边长范围及每个值可实现"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "给出正确开闭区间及上端构型"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 16,
+      "id": "orig:ai:phase7:full:16:v1",
+      "math_spec_sha256": "a531336787a698218ab90f0013ce54b3a6cf4ae1b8bc6da6cca30566ffab3f90",
+      "scope": "平面−2hx+hy+8z=0，棱交比1:3，h=8/√5，距离√10。",
+      "independent_pdf_proof": "取 A=(0,0,0)、B=(2,0,0)、C=(2,2,0)、D=(0,2,0)，设侧棱长为 h>0。则 E=(2,0,h/2)、F=(1,2,0)，由 AE、AF 得平面 AEF 的法向量可取 (2h,−h,−8)，方程为 2hx−hy−8z=0。与 CC₁ 相交时 x=y=2，故 z=h/4，处于棱的内部，CG:GC₁=1:3。底面法向量为 (0,0,1)，两法向量所成锐角的余弦为 8/√(5h²+64)。由 45° 得 h=8/√5。D₁=(0,2,h)，故点面距离为 10h/√(5h²+64)=√10。",
+      "answer": "（1）CG:GC₁=1:3。（2）√10。",
+      "boundary_proof": {
+        "scope": "直四棱柱底边2且高h>0；锐角45度。",
+        "necessity": "法向量非零，交点在垂直棱的参数唯一。",
+        "sufficiency": "所解h为正，并回代角与距离。",
+        "boundaries": "z=h/4严格位于棱内，法向量夹角取绝对余弦。",
+        "equality": "正高条件只保留正根，D₁不在截面。",
+        "school_solution": "空间向量、法向量与点面距离，独立图形比对。"
+      },
+      "previous_coverage": "independent_reasoning_only",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": "符号核查两垂直关系、交点坐标、锐角得到的正高、点面距离；棱内性、坐标与题面的一致性另由独立解析证明。",
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": true,
+      "scoring": {
+        "number": 16,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "建立直角坐标系并写出中点坐标"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "由两个垂直条件确定法向量和平面方程"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "代入棱方程确认交点和比值"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "正确建立锐二面角的余弦方程"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "求出唯一正高"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "用点面距离公式代入正确坐标与法向量"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "化简得到距离"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 17,
+      "id": "orig:ai:phase7:full:17:v1",
+      "math_spec_sha256": "8951727778a0ea758150184d1a506ff63445d99762b3151664499ccfb4baf98f",
+      "scope": "P=3/20、E=21/2，条件交换各组计数1、3、1，概率5/27。",
+      "independent_pdf_proof": "甲的三张卡共有 C(6,3)=20 个等可能集合，和为 12 的集合为 {1,5,6}、{2,4,6}、{3,4,5}，所以 P(X=12)=3/20。每张卡给甲的概率为 1/2，由期望线性性得 E(X)=(1+2+3+4+5+6)/2=21/2。给定 X=12，三集合等可能，每个集合下交换的有序对有 3×3=9 个等可能结果。要使甲的和减少 1，甲交出的号码须比乙交出的大 1。三集合的合格交换分别为 (5,4)，(2,1)、(4,3)、(6,5)，以及 (3,2)，故所求概率为 (1+3+1)/27=5/27。",
+      "answer": "（1）P(X=12)=3/20，E(X)=21/2。（2）5/27。",
+      "boundary_proof": null,
+      "previous_coverage": "complete_spec_checks",
+      "phase8_coverage": "complete_spec_checks",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "finite_swap_probability",
+          "result": "3/20"
+        },
+        {
+          "op": "finite_swap_probability",
+          "result": "21/2"
+        },
+        {
+          "op": "finite_swap_probability",
+          "result": "5/27"
+        }
+      ],
+      "edition_revised": true,
+      "scoring": {
+        "number": 17,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "完整列出三个等可能的和为12的分组"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "求得概率3/20"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "用对称性求期望21/2"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "确定条件下三组等可能且每组有九个交换对"
+          },
+          {
+            "part": 2,
+            "points": 4,
+            "criterion": "分别算得三组的合格交换数"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "加权得到5/27"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 18,
+      "id": "orig:ai:phase7:full:18:v1",
+      "math_spec_sha256": "704313867dadd6e4e12f27e22769161e7afd6fe3fb50a2298e76e84fb83a26bb",
+      "scope": "截距一正一负，绝对值倒数和1；面积8在t²=2时两点均取到。",
+      "independent_pdf_proof": "设 P=(t²,2t)，则 |t|>1。由直线斜率得 M=(0,2t/(t+1))、N=(0,−2t/(t−1))。在 t>1 或 t<−1 时两分式 t/(t±1) 均为正，所以 M 在 O 上方、N 在 O 下方，且 1/|OM|+1/|ON|=(t+1)/(2t)+(t−1)/(2t)=1。又 |MN|=4t²/(t²−1)，P 到 y 轴的距离为 t²，所以面积为 2t⁴/(t²−1)。令 s=t²−1>0，面积等于 2(s+2+1/s)≥8，当且仅当 s=1。故 t=±√2，P=(2,±2√2)，均在题设范围内。",
+      "answer": "（1）倒数和为 1。（2）最小面积为 8，在 P=(2,2√2) 或 (2,−2√2) 时达到。",
+      "boundary_proof": {
+        "scope": "t²>1的两支；所有交点和截距都有定义。",
+        "necessity": "用参数推得所有合格M,N的纵坐标。",
+        "sufficiency": "算术几何均值给下界，t=±√2均在原域。",
+        "boundaries": "t=±1均排除；两支的截距符号相同。",
+        "equality": "面积等号仅t²=2，明确两个坐标。",
+        "school_solution": "截距和底高法，避免默认斜率或单支。"
+      },
+      "previous_coverage": "independent_reasoning_only",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": "验证两分支的截距互逆及面积恒等式，定义域和取等点的原题可达性仍由解析证明。",
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": true,
+      "scoring": {
+        "number": 18,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "参数化P并保留两支定义域"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "求两截距并核实符号"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证明距离倒数和为1"
+          },
+          {
+            "part": 2,
+            "points": 4,
+            "criterion": "写出底、高及面积函数"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "在正域内证明面积下界"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "给出全部取等点并确认可行"
+          }
+        ]
+      },
+      "teacher_review": false
+    },
+    {
+      "paper": "HN7-M150-v2",
+      "paper_sha256": "2bcf6d7f438da7a1b513a81e8a02ac6dc368399547ee9b3aa1e2bd77acbb58af",
+      "number": 19,
+      "id": "orig:ai:phase7:full:19:v1",
+      "math_spec_sha256": "b072c3ba53c5743f70fbe6b37f2ee6841134df358a40f51e4dfb1e4f5aa04187",
+      "scope": "临界r唯一且两端趋正无穷。两个倒数比较严格夹逼r²<αβ<1；盲解给乘积变元的第二条证明。",
+      "independent_pdf_proof": "f′(x)=(x²+x−1)/x²，唯一正驻点为 r=(√5−1)/2，且 f 在 (0,r) 严格递减、在 (r,∞) 严格递增。x→∞ 时 f(x)→∞。x→0+ 时令 w=1/x，f=1/w+w−ln w，而 w≥2 时 (w−ln w)′≥1/2，故也趋向 ∞。由连续性和严格单调性，对任意 m>f(r) 两侧各有且仅有一根。（2）令 u=√(αβ)>0、v=√(β/α)>1，则 α=u/v、β=uv。相减 f(β)−f(α)=0 得 1/u−u=2 ln v/(v−1/v)。函数 v−1/v−2 ln v 在 v=1 时为 0，而导数为 (v−1)²/v²>0（v>1），故该比值严格在 0 与 1 之间。函数 H(u)=1/u−u 在正数上严格递减，H(1)=0，且 r²+r=1 给出 H(r)=1，故 r<u<1，即 r²<αβ<1。",
+      "answer": "（1）r=(√5−1)/2，每个 m>f(r) 恰有两个正根。（2）r²<αβ<1。",
+      "boundary_proof": {
+        "scope": "正半轴上，水平高度m严格大于最小值。",
+        "necessity": "导数给唯一临界点，两端发散才确保两根。",
+        "sufficiency": "两次倒数比较都在增支，故分别推出根积的上下界。",
+        "boundaries": "x→0右端用u−ln u估计；m等于最小值不在两根条件。",
+        "equality": "u>1且α<r<1给两个严格比较，界都不能在本条件下取等。",
+        "school_solution": "导数、单调性和介值原理；独立盲解还用u=√(αβ)作交叉论证。"
+      },
+      "previous_coverage": "partial_support",
+      "phase8_coverage": "partial_support",
+      "phase8_program_evidence": null,
+      "rerun_extended_operations": [
+        {
+          "op": "reasoning",
+          "result": "None"
+        },
+        {
+          "op": "reasoning",
+          "result": "None"
+        }
+      ],
+      "edition_revised": true,
+      "scoring": {
+        "number": 19,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "正确求导并确定唯一正临界点"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "确定两支严格单调性"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证明两个尾部都趋向正无穷"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "用连续性和单调性证明两根各一"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "比较倒数点与小根函数值，推出乘积上界"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "构造以临界点为中心的反射并判定差的严格符号"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "在正确增支比较并推出严格下界"
+          }
+        ]
+      },
+      "teacher_review": false
+    }
+  ],
+  "previous": {
+    "complete_spec_checks": 14,
+    "independent_reasoning_only": 4,
+    "partial_support": 8
+  },
+  "phase8": {
+    "complete_spec_checks": 16,
+    "independent_reasoning_only": 2,
+    "partial_support": 8
+  },
+  "formal_proof_certificate": false
+}

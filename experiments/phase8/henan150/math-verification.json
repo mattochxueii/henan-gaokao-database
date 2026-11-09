@@ -1,0 +1,755 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "premise": "Interval(2, oo)",
+          "conclusion": "Union(Interval(-oo, 1), Interval(2, oo))"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "premise": "Interval(2, oo)",
+          "conclusion": "Union(Interval(-oo, 1), Interval(2, oo))"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "premise": "Interval(2, oo)",
+          "conclusion": "Union(Interval(-oo, 1), Interval(2, oo))"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "complete": true,
+        "facts": {
+          "premise": "Interval(2, oo)",
+          "conclusion": "Union(Interval(-oo, 1), Interval(2, oo))"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase8:full:01:v1",
+    "math_spec_sha256": "1a526e5dd62ea8c8b231a7ceb4b86f9f1be927b71708f232f6026bbf12cf56af",
+    "writing_sha256": "dad4af83f40648638a3d68ddf54fedf371bfb4e5bd85a5585d5f3cec7f9f09c6"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-4",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "-sqrt(2)",
+              "b": "sqrt(2)"
+            },
+            {
+              "a": "sqrt(2)",
+              "b": "-sqrt(2)"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase8:full:02:v1",
+    "math_spec_sha256": "f27c679a11cac6f6ff88c345ac23a0514f7197789c57078acc64bc4b871fca52",
+    "writing_sha256": "9208f2a335fca22bcfb06333c0f508baeeaf36da5438a7a5d839ef8b887d85ba"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "pi/3",
+        "complete": true,
+        "facts": {
+          "roots": "{0, pi/3}"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase8:full:03:v1",
+    "math_spec_sha256": "84978d8cc17388570463d47577b0e1aee6cbbdcce0f63931a4dda68c6f2732fa",
+    "writing_sha256": "8d422de4faa5c082fa7986d5f6dcc5b828ca6317f20107d850ff77fec483ac32"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "32/3",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "7/3",
+              "b": "2/3"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase8:full:04:v1",
+    "math_spec_sha256": "dbdf5c5976f3b00fb5d5a87d7efd7e5d9b9c21fdb621fe3c503b2233467f9396",
+    "writing_sha256": "cc9c9cf689deaaedf41def118da747859e561f3839b63b26f8210dcfd53515fd"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "complete": true,
+        "facts": {
+          "corrected_mean": "4",
+          "corrected_second_moment": "18"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:ai:phase8:full:05:v1",
+    "math_spec_sha256": "9aac63d09aa78261170aed700cdeb66a2cc1673736d27b2b09d17e071ecde1a4",
+    "writing_sha256": "b1aff3a691e313542280ccc9362f88ad8e9e8db7b796a62e7bd069c8c4131b12"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(4\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase8:full:06:v1",
+    "math_spec_sha256": "56aa085bfaff0a7d499ceb8494591af1a82a24bcaaf12892e3abf2feb22a872b",
+    "writing_sha256": "44c8301b52cd1a1478b3edacbac6a52807baaf8dca91108adb334b775d887241"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4/9",
+        "steps": [
+          "先分解通项 \\(\\frac{1}{\\left(2 k - 1\\right) \\left(2 k + 1\\right)}\\)，按有限和边界计算，保留末项，得到 \\(\\frac{4}{9}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:ai:phase8:full:07:v1",
+    "math_spec_sha256": "aa44cbf5a02ef76b35ba667150669fd9a0c38dbe869bc4dd0d4dbddb9447a037",
+    "writing_sha256": "db019967cb7fe72176efeb06ec64e04b2985a09bc98d89dfd4a8d04fae9318d0"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-2",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "-2"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:ai:phase8:full:08:v1",
+    "math_spec_sha256": "3d72ac81d39759319dcd4d094b77b249c96dc1aafb1d741c9c4f0281fcd89dfd",
+    "writing_sha256": "2502d4ba0fd8eb216ea534a2a84a70ae435e6bc248f6c0d826fb6e6d05e202eb"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共8个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{2}\\)。",
+          "与所给概率比较，该命题成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。",
+          "与所给概率比较，该命题成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共4个有序结果，其中1个满足目标事件，故概率为\\(\\frac{1}{4}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共8个有序结果，其中7个满足目标事件，故概率为\\(\\frac{7}{8}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "AB",
+    "id": "orig:ai:phase8:full:09:v1",
+    "math_spec_sha256": "7d878cd627d510b8776afa60b05b634f28e4fee22fba2b6d4efb2dac66ea3fea",
+    "writing_sha256": "2107ec6b7b3388dbc3f59e1844386a1c0e6f0bef6bab6d41665c53614cc0a622"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "derivative": "4*cos(2*x + pi/6)",
+          "violating_set": "EmptySet"
+        }
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 3,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase8:full:10:v1",
+    "math_spec_sha256": "b4783593dd1ddf6c1e8d3025a2389429ae0ad28b1db0c5fac641a64ea84b2c9c",
+    "writing_sha256": "2041b4ad9236a9321844ca82906480d986216c7e16c55f7a16409b83ce5f5673"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 0,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 4,
+      "status": "independent_reasoning_only"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase8:full:11:v1",
+    "math_spec_sha256": "b62aa795ec233ebfdacb536f4443fcb957385fc70dc7897e67fbaeb33046bc9b",
+    "writing_sha256": "83299c87aab521e3ea448212b4cd1ead06b3137ead5ac3237a99b908ff6b7d98"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4 - 2*sqrt(2)",
+        "steps": [
+          "将条件移项并因式分解为 \\(a^{2} - 8 a + 8\\)=0，限制在题设区间内，得到 \\(\\left\\{4 - 2 \\sqrt{2}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:12:v1",
+    "math_spec_sha256": "c7e47e280e897ea0ae7ba18ba4f0ecfb8f26290bcac1e544ab98d0ab9e8d4802",
+    "writing_sha256": "924e5214e20d1869b7b6e0d4a626fba220281da6c095a6fe7ac0cb3bbe5326b1"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "18",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(18\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:13:v1",
+    "math_spec_sha256": "6ca3211662746cc394b73f9ba9b39666f4837b6c65fea50e044cbbf918d4d3a0",
+    "writing_sha256": "61793f39bcdfd25d33b7fdc269c446f7bc77c038a2034c849fc2655bdf1ae977"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "4/(4 - x) + 1/x",
+          "derivative": "(x + 4)*(3*x - 4)/(x**2*(x - 4)**2)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 0,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:14:v1",
+    "math_spec_sha256": "053c796451a6ec0bba5bb5b3fa3cb5e39de5c2aef39417782b3ef6733f1c2c8a",
+    "writing_sha256": "832f2b5fe234abbabc3061bcf1c866b9077d3801b1eee6a5581124789288d08e"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": [
+          "5",
+          "39/5"
+        ],
+        "steps": [
+          "将条件移项并因式分解为 \\(\\left(x - 5\\right) \\left(5 x - 39\\right)\\)=0，限制在题设区间内，得到 \\(\\left\\{5, \\frac{39}{5}\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "936/125",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "a": "39/5"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 2,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:15:v1",
+    "math_spec_sha256": "22e88f6f2ce599ad6064896c9d8e88ee6243ca2368d56205c510b0ac536e8a70",
+    "writing_sha256": "ca9fd6e59480af8c5617f5791666f4aa6e5c631a36849e838d1fe8446edfe092"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 0,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 2,
+      "status": "independent_reasoning_only"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:16:v1",
+    "math_spec_sha256": "a79bd5f62de8c3bb1e5b1d174ddf75e85514af4dac8a7f1df1e0a68ea182ba11",
+    "writing_sha256": "4ab985587a3e05ac737bb888c0b52b3fbc3f970ef9472e193bb42575cab3cdb4"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "1": "1/12",
+          "2": "5/12",
+          "3": "5/12",
+          "4": "1/12"
+        },
+        "complete": true,
+        "facts": {
+          "condition_probability": "5/12"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": [
+          "9/10",
+          "3/5"
+        ],
+        "complete": true,
+        "facts": {
+          "condition_probability": "5/12"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 2,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:17:v1",
+    "math_spec_sha256": "2cd8230426ab6b0b3756cb54b914eef72662bc99ee392bd47056c667769281b0",
+    "writing_sha256": "4e087978b51b3e2e9b6bdb4ec404aeb3fbc7d2cf5d38ba6e27213383e1af199d"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x*(1 - x)",
+          "derivative": "1 - 2*x"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 0,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 1,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:18:v1",
+    "math_spec_sha256": "12588df65309e9879c1894a808fe0679368c5d8ac429c1f45e7c0f879cb1ffb8",
+    "writing_sha256": "36a6559be13afbe33595091ecc98ce293aad4f9dfca4ee22d983ed04c3394e61"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-a/x + x - (a + 1)*log(x)",
+          "derivative": "(-a + x)*(x - 1)/x**2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 0,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 1,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase8:full:19:v1",
+    "math_spec_sha256": "5880cffad765c7c22d8e78aa10f46795d6b84abed3004d142bc2ff5bc946c6fd",
+    "writing_sha256": "57c7632f2d90fce098b7eda38d570b69d14acd90b145384309fb8f08f72c6257"
+  }
+]

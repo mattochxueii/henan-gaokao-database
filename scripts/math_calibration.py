@@ -6,6 +6,7 @@ from analysis_db import fingerprint
 from gaokao import digest, read_lines, relative_path, require
 
 LEDGER = "national/research/calibration.jsonl"
+RESOLUTIONS = "national/research/calibration-resolutions.jsonl"
 ANALYSIS_FIELDS = (
     "knowledge",
     "methods",
@@ -31,6 +32,20 @@ def load(root):
         for row in read_lines(path):
             key = row["occurrence_id"]
             require(key not in result, "重复的真题复核记录：" + key)
+            result[key] = row
+    resolutions = root / RESOLUTIONS
+    if resolutions.is_file():
+        seen = set()
+        for row in read_lines(resolutions):
+            key = row["occurrence_id"]
+            prior = result.get(key)
+            require(
+                prior and key not in seen
+                and row["supersedes_sha256"] == fingerprint(prior)
+                and row["base_version_sha256"] == prior["base_version_sha256"],
+                "复核裁决与存档记录版本不符：" + key,
+            )
+            seen.add(key)
             result[key] = row
     return result
 
@@ -90,20 +105,37 @@ def active_review(row, review, evidence_root, checked_sources):
     result = {**row, "calibration": review}
     if review.get("resolves_legacy_transcription"):
         other = review.get("corroborating_source") or {}
+        published = review.get("published_comparison") or {}
         require(
             row.get("legacy")
             and row.get("curation", {}).get("body_state") == "存在版本冲突"
             and review["body"] == "pdf_matched"
             and review["answer"] == "independently_solved"
-            and other.get("page") == source["page"]
-            and other.get("path") != path
-            and other.get("sha256") != expected
             and review.get("note"),
-            "二手转写裁决必须保留同页的两份不同卷面证据",
+            "二手转写裁决只适用于已独立重解的完整候选",
         )
-        check_file(other["path"], other["sha256"])
+        if other:
+            require(
+                other.get("page") == source["page"] and other.get("path") != path
+                and other.get("sha256") != expected,
+                "复核必须保留同页的两份不同卷面证据",
+            )
+            check_file(other["path"], other["sha256"])
+        else:
+            require(
+                published.get("url", "").startswith("https://")
+                and type(published.get("page")) is int and published["page"] > 0
+                and published.get("finding") and review.get("supersedes_sha256")
+                and published.get("relationship") in {
+                    "same_question", "choice_variant", "symbol_renaming"
+                },
+                "公开候选裁决缺少来源、页码与等价性说明",
+            )
         result["historical_curation"] = row["curation"]
-        result["curation"] = {**row["curation"], "body_state": "两份候选原页一致"}
+        result["curation"] = {
+            **row["curation"],
+            "body_state": "两份候选原页一致" if other else "候选题意已交叉核验",
+        }
     if review["body"] == "pdf_conflict":
         return {
             **result,
@@ -125,8 +157,24 @@ def active_review(row, review, evidence_root, checked_sources):
             ]
             require(len(matches) == 1 and matches[0]["text"] == old, "子问更正未命中原文")
             matches[0]["text"] = new
+        if replacement := review.get("parts_replacement"):
+            require(replacement["before"] == row.get("parts", []), "子问层级更正未命中原文")
+            parts = replacement["after"]
+        asset_regions = []
+        for region in review.get("pdf_regions", ()):
+            width, height = region["page_size"]
+            x1, y1, x2, y2 = region["box"]
+            require(
+                path.lower().endswith(".pdf") and 0 <= x1 < x2 <= width
+                and 0 <= y1 < y2 <= height and region.get("label"),
+                "题图框越界或缺少PDF来源",
+            )
+            asset_regions.append({
+                **region, "path": path, "sha256": expected, "page": source["page"],
+                "kind": "pdf_region", "coordinate_system": "points_top_left",
+            })
         require(
-            stem != row["stem"] or options != row["options"]
+            asset_regions or stem != row["stem"] or options != row["options"]
             or parts != row.get("parts", []) or
             (review.get("remove_editorial_assets") and row.get("asset_refs")),
             "题面未产生新版本",
@@ -140,6 +188,8 @@ def active_review(row, review, evidence_root, checked_sources):
             version_material["options"] = options
         if parts != row.get("parts", []):
             version_material["parts"] = parts
+        if asset_regions:
+            version_material["asset_refs"] = asset_regions
         result.update(
             stem=stem,
             options=options,
@@ -168,7 +218,9 @@ def active_review(row, review, evidence_root, checked_sources):
                 re.S,
             )
         ]
-        if review.get("remove_editorial_assets"):
+        if asset_regions:
+            result["asset_refs"] = asset_regions
+        elif review.get("remove_editorial_assets"):
             result["asset_refs"] = []
     if review["answer"] == "independently_solved":
         require(

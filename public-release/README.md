@@ -37,4 +37,6 @@ PDF 盲审需要 Poppler 的 `pdftoppm`。如系统未找到合适的中文字�
 
 使用 [校准与专项协议](skills/henan-math/references/calibration.md) 绑定本地来源与独立审题。程序覆盖级别区分完整规格检查、部分支持和独立论证。具备已复核的参考题时可运行 [按卷留出评测](skills/henan-math/references/evaluation.md)。已发布的原创练习可填写版本绑定的空白试做 CSV，见 [匿名作答反馈](skills/henan-math/references/student-feedback.md)。
 
+整卷可配置逐步评分，旧卷可用 `solution-edition` 单独生成项目自拟评分解析。匿名反馈的 `diagnose` 子命令对比个人实际得分、耗时及编辑估时，并区分未做完与未录入。
+
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。

@@ -1,0 +1,195 @@
+{
+  "pdf_sha256": "83326f8eb1fba81719b69f481ad40b83784468d7b676c3e98f556302e1526b49",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "8bb46092155c49a662b381e4e4cf730cd8e21a60a57e78759e8811551ed95e13"
+    },
+    {
+      "number": 2,
+      "sha256": "26abd7072ecee2a4fa4d2076b25c92609d77780e748a74bbf40f3917eecb7e2b"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "A，充分不必要条件",
+      "answer_key": "A",
+      "independent_solution": "q等价于(x−1)(x−2)≥0，解集为(−∞,1]∪[2,+∞)。p的解集[2,+∞)是其真子集，所以p推出q。取x=1时q成立而p不成立，故q不能推出p。只有A正确。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 1,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "基础题通过两个根的因式分解把逻辑关系转成真包含，要求核查两个方向。也可在x≥2上直接验因式同号并给反例。四项互斥，5分适合作为卷首题。D项分成两行，首行高于A、B、C所在行，整项和标签仍清晰，没有误读或裁切。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−4",
+      "answer_key": "C",
+      "independent_solution": "将z̄=iz两边乘z，得|z|²=iz²=4，所以z²=−4i，虚部为−4。条件可实现，例如z=√2(1−i)符合两式。只有C的值相同。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "模和共轭条件可直接连成复数乘积，也可设实部、虚部后消元。由两种可能的z得到同一个平方，避免把求z当作必需。共轭线、i与模符号完整，选项区分平方模和相反号，5分适当。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "π/3",
+      "answer_key": "B",
+      "independent_solution": "设θ=2x+π/6，x∈[0,π/2]给θ∈[π/6,7π/6]。此区间内sinθ=1/2恰在θ=π/6、5π/6成立，故x=0、π/3。两解之和为π/3，只有B。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "相位换元后核查闭区间的左端解和区间内另一支，可用单位圆或一般解作完备判断。和与几个特殊角相区分。区间括号和三个分式均清晰，5分与两步求解相称。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "32/3",
+      "answer_key": "D",
+      "independent_solution": "令P=(u,v)，则AP=(u−1,v)，BP=(u−5,v−2)。条件给3u−7=0、3v−2=0，故OP=(7/3,2/3)。而AB=(4,2)，数量积为(7/3)·4+(2/3)·2=32/3，唯一选D。",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "向量等式可用坐标分量求解，也可先识别P为A、B的加权平均点。点积是建模后的第二步。所求式另起一行，但与同题连接明确，向量箭头和分式完整，5分适合。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "2",
+      "answer_key": "B",
+      "independent_solution": "原记录的总和为4·5=20，平方和为4(5+5²)=120。把一项8换成4，总和变为16，平方和变为120−8²+4²=72。新均值为4，新方差为72/4−4²=2，选B。原数据存在，例如2、4、6、8。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "更正一项会同时影响均值和平方和，考查能否从旧汇总量恢复新汇总量。也可改用以4为中心的离差平方，直接换掉误记项。题意能区分原记录与更正后，正常断行未损文字。5分与两个统计量更新及最终换算相称。"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "4",
+      "answer_key": "C",
+      "independent_solution": "任取三个数字并从小到大记为a<b<c。百位小于个位且十位最大，唯一排法是acb。三位数能被3整除等价于a+b+c≡0 (mod 3)。数字按余数0、1、2分组为{3}、{1,4}、{2,5}。满足条件必须三类各取一个，因为没有任何一类可取三个不同数。共有1·2·2=4个，即132、153、243、354，选C。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "位置限制使每组三个数字只产生一个排列，整除条件再把枚举压缩为余数类组合。直接列出和可被3整除的三元组也能独立验证。数字、百位与个位关系、十位和整除条件均清楚，5分适合。"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "4/9",
+      "answer_key": "A",
+      "independent_solution": "由a₁=1和递推式知aₙ>0。取倒数得1/aₙ₊₁=1/aₙ+2，所以1/aₙ=2n−1，a₅=1/9。原递推还给aₙ−aₙ₊₁=2aₙaₙ₊₁。于是四项和为(a₁−a₅)/2=(1−1/9)/2=4/9，只有A。",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "分式递推转成倒数等差，同时直接显出相邻乘积与差的关系。可用递推直接裂项，也可从通项分解每个乘积或逐项计算。四项求和与几个漏因子、截错末项的结果相区分。递推的分子、分母、下标和所有选项在放大检查中完整，5分合适。"
+    }
+  ]
+}

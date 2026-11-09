@@ -10,6 +10,7 @@ from .student_pdf import render
 from .school_solver import solve_spec
 from .research_quality import (
     PROTOCOL,
+    coverage_report,
     require_specialty_certificates,
     uses_protocol,
     verify_blind_quality,
@@ -31,6 +32,9 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
     )
     mode = document["paper"]["mode"]
     verify_design(root, document)
+    coverage = None
+    if mode == "full" and document["paper"].get("require_scoring"):
+        coverage = coverage_report(document)
     if mode == "full" and uses_protocol(document):
         require_specialty_certificates(specialty_certificates)
     elif mode == "full":
@@ -155,6 +159,8 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         )
     atomic_json(output / "student-text.json", presentation)
     atomic_json(output / "math-verification.json", verification)
+    if coverage is not None:
+        atomic_json(output / "coverage-review.json", coverage)
     return render_preview(output)
 
 
@@ -363,9 +369,14 @@ def publish(output, review_path, comparison_path):
                 else "".join(sorted(given or ""))
             )
             require(actual == calculation["answer_key"], "PDF独立求解与选项答案不符")
-    shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
-    atomic_json(output / "student-review.json", review)
-    atomic_json(output / "mathematical-comparison.json", comparison)
+    from .scoring import solution_book
+
+    guide = comparison.get("scoring")
+    if raw.get("paper", {}).get("require_scoring"):
+        require(guide is not None, "此卷需要逐步评分细则")
+    if guide is not None:
+        require(guide.get("paper_sha256") == manifest["pdf_sha256"], "评分细则对应其他卷面")
+    solutions = solution_book(student, raw, comparison.get("solution_revisions", {}), guide)
     cert = {
         **manifest,
         "published": True,
@@ -375,20 +386,10 @@ def publish(output, review_path, comparison_path):
         "formal_proof": False,
         "human_reviewed": False,
     }
-    document = read_json(output / "raw-ai-candidate.json")
-    solutions = {
-        **student,
-        "questions": [{k: v for k, v in q.items()} for q in student["questions"]],
-    }
-    byid = {q["id"]: q for q in document["questions"]}
-    for q, reviewed in zip(solutions["questions"], reviews):
-        revision = comparison.get("solution_revisions", {}).get(str(q["order"]))
-        q["solution_paragraphs"] = (
-            revision["paragraphs"]
-            if revision
-            else byid[q["id"]]["solution"]["paragraphs"]
-        )
     render(solutions, output / "solutions.pdf", solutions=True)
+    shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
+    atomic_json(output / "student-review.json", review)
+    atomic_json(output / "mathematical-comparison.json", comparison)
     cert["solutions_sha256"] = digest(output / "solutions.pdf")
     atomic_json(output / "publication.json", cert)
     return cert

@@ -1,0 +1,54 @@
+{
+  "pdf_sha256": "849ac2138d5fa1932b9ad1bae19d932542aa10dd8c22b91ccafea8983192f046",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 3,
+      "sha256": "128a5ddc64c94c9df7be5ca5d999a34ecb93a5406b1634e3569fca855aba87a3"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "参数 a 为实数。两对数均有定义要求 a<x<4，因而存在实根时必有 a<4。",
+      "request_understood": "填出使给定对数方程恰有一个不同实根的全部参数值。",
+      "independent_solution": "在 a<x<4 上，合并对数得到 (x−a)(4−x)=2。若 a≥4 则定义域为空。若 a<4，左边是两端极限均为 0 的抛物线，在区间中点 x=(a+4)/2 取得唯一最大值 (4−a)²/4，两侧严格单调。最大值小于、等于、大于 2 时，实根数依次为 0、1、2。恰一实根故 4−a=2√2，得 a=4−2√2。此时唯一实根 x=4−√2 确在定义域内。",
+      "answer": "4−2√2",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1,
+        "total": 17,
+        "pass": true
+      },
+      "quality_evidence": "常规对数合并引出参数相关的开放定义域。解数需由乘积抛物线与水平线相交判定，或通过二次判别式并验证两根的定义域。定义域排除对称的另一参数候选，计算量短而有严格的唯一性判断，5 分与两层推导相配。PDF 上两个底数 2、括号、减号、实根限制和填空线均清晰。"
+    }
+  ],
+  "reflow_checks": [
+    {
+      "number": 13,
+      "readability_pass": true,
+      "evidence": "题号、5 分标记、三色均用且相邻异色的完整条件以及答案空白均可辨识，分行自然。"
+    },
+    {
+      "number": 14,
+      "readability_pass": true,
+      "evidence": "题号、5 分标记、正实数条件、和约束、两个分数与答案空白均完整，题目与页脚留距充足。"
+    }
+  ]
+}

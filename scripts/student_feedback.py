@@ -170,6 +170,7 @@ def summary(rows, points, min_sample=10):
                 r["reading_difficulty"] for r in records
             ),
             "calibration_hint": adjustment,
+            "interpretation": "group_observation" if n >= min_sample else "small_sample_only",
             "ambiguity_responses": len(ambiguity),
             "ambiguity_reports": sum(ambiguity),
             "explanation_clarity_responses": len(clarity),
@@ -183,6 +184,36 @@ def summary(rows, points, min_sample=10):
     }
 
 
+def diagnose(rows, paper_dir, points, participant):
+    require(CODE.fullmatch(participant), "请填写本次试做的匿名代码")
+    document = read_json(paper_dir / "raw-ai-candidate.json")
+    questions = {q["id"]: q for q in document["questions"]}
+    selected = [row for row in rows if row["participant_code"] == participant]
+    items = []
+    for row in selected:
+        qid = row["question_id"]
+        assessment = questions[qid].get("assessment", {})
+        minutes = assessment.get("estimated_minutes")
+        items.append({
+            "number": questions[qid]["order"], "score": row["score"], "points": points[qid],
+            "seconds": row["seconds"], "status": row["status"],
+            "design_level": assessment.get("level"), "design_minutes": minutes,
+            "seconds_over_editorial_estimate": row["seconds"] - 60 * minutes if minutes else None,
+            "error_types": row["error_types"], "reading_difficulty": row["reading_difficulty"],
+            "ambiguity_reported": row.get("ambiguity_reported"),
+            "explanation_clarity": row.get("explanation_clarity"),
+        })
+    return {
+        "records": len(items),
+        "observed_points": sum(row["points"] for row in items),
+        "score": sum(row["score"] for row in items),
+        "unrecorded": len(points) - len(items),
+        "unfinished": sum(row["status"] == "unfinished" for row in items),
+        "items": sorted(items, key=lambda row: row["number"]),
+        "scope": "个人作答与编辑估时比较；未录题不计零分，不推断群体难度。",
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paper", type=Path)
@@ -193,6 +224,9 @@ def main():
     report = modes.add_parser("summary")
     report.add_argument("feedback", type=Path)
     report.add_argument("--min-sample", type=int, default=10)
+    personal = modes.add_parser("diagnose")
+    personal.add_argument("feedback", type=Path)
+    personal.add_argument("participant_code")
     form = modes.add_parser("blank-csv")
     form.add_argument("output", type=Path)
     args = parser.parse_args()
@@ -221,7 +255,11 @@ def main():
             args.output.parent.mkdir(parents=True, exist_ok=True)
             with args.output.open("x", encoding="utf8") as target:
                 target.write(dumps(rows) + "\n")
-        result = summary(rows, points, getattr(args, "min_sample", 10))
+        result = (
+            diagnose(rows, args.paper, points, args.participant_code)
+            if args.mode == "diagnose"
+            else summary(rows, points, getattr(args, "min_sample", 10))
+        )
         print(dumps(result))
         return 0
     except (ValueError, KeyError, OSError, TypeError) as error:
