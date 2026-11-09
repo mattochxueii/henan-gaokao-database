@@ -1,0 +1,643 @@
+{
+  "schema_version": 2,
+  "research_protocol": "calibrated-v1",
+  "paper": {
+    "mode": "pilot",
+    "title": "数列专项研究",
+    "minutes": 60,
+    "total_points": 47
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "template_calls": 0,
+    "api_calls": 0,
+    "authorship": "当前宿主基于完整候选卷面与复核结论独立创作；编辑、求解、盲审分别执行",
+    "official_2027_structure_verified": false
+  },
+  "questions": [
+    {
+      "id": "orig:ai:calibration:sequence:01:v2",
+      "order": 1,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "设数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)。对每个正整数 \\(n\\)，都有 \\(S_n+2a_n=3^n\\)。则 \\(a_5-3a_4=\\)________。",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "recurrence_transform",
+            "relation": "3*u(n+1)-2*u(n)-2*3**n",
+            "initial": {
+              "1": "1"
+            },
+            "transformation": "u(5)-3*u(4)"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "573bdbc421b252227f4ef3384597e43ba8a14ae076f5a5b64bf1b90a34ac18c2",
+        "stem": "设数列 {{f1}} 的前 {{f2}} 项和为 {{f3}}。对每个正整数 {{f4}}，都有 {{f5}}。则 {{f6}}________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "S_n"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "S_n+2a_n=3^n"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "a_5-3a_4="
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "________"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "令 \\(n=1\\)，得 \\(a_1=1\\)。相邻两式相减得 \\(3a_{n+1}-2a_n=2\\cdot3^n\\)，所以 \\(a_2=\\frac83\\)。",
+          "设 \\(b_n=a_{n+1}-3a_n\\)。将前述递推向后平移一项，再减去原式的3倍，可得 \\(3b_{n+1}=2b_n\\)。由 \\(b_1=-\\frac13\\)，所求 \\(b_4=-\\frac13(\\frac23)^3=-\\frac8{81}\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "原题由商序列恢复通项并裂项，本题相邻差分后还须消去指数驱动，再从新等比量读取目标"
+        },
+        "points_justification": "用第二次线性消元选择性消去指数增长项",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2022-cn-math-new-gaokao-1:q017",
+            "version_sha256": "5b877d24c95cb25f089be4c46c5fd28a1a1d3ac114633528760d118f5420f476",
+            "transfer": "对相邻前缀约束作差",
+            "structural_difference": "原题由商序列恢复通项并裂项，本题相邻差分后还须消去指数驱动，再从新等比量读取目标"
+          }
+        ],
+        "novel_structure": "用第二次线性消元选择性消去指数增长项",
+        "reasoning_target": "用第二次线性消元选择性消去指数增长项"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:sequence:02:v2",
+      "order": 2,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "对每个正整数 \\(n\\)，设 \\(a_n\\) 为不超过 \\(\\frac{2n+1}{5}\\) 的最大整数。则 \\(a_1+a_2+\\cdots+a_{30}=\\)________。",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "sum",
+            "expression": "floor((2*k+1)/5)",
+            "index": "k",
+            "lower": "1",
+            "upper": "30"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "b008231dbe5c9258f560b03e3ddaf28103f6bc39212cd17d26cc2c60e14f0893",
+        "stem": "对每个正整数 {{f1}}，设 {{f2}} 为不超过 {{f3}} 的最大整数。则 {{f4}}________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "a_n"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\frac{2n+1}{5}"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "a_1+a_2+\\cdots+a_{30}="
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "________"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "前五项为 \\(0,1,1,1,2\\)，其和为5。对每个 \\(n\\)，\\(a_{n+5}=a_n+2\\)，所以第 \\(j+1\\) 个五项块的和为 \\(5+10j\\)。六块之和为 \\(30+10(0+1+2+3+4+5)=180\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题按两列公共项选数，本题逐项取整后由平移等式确定分块变化"
+        },
+        "points_justification": "固定余数类下的平移结构",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2020-cn-math-new-gaokao-1:q014",
+            "version_sha256": "89585339e4a1d12705fb3cdb385281d3746ddb3e8a49d012e95461781d0802f3",
+            "transfer": "用整数索引的周期性组织求和",
+            "structural_difference": "原题按两列公共项选数，本题逐项取整后由平移等式确定分块变化"
+          }
+        ],
+        "novel_structure": "固定余数类下的平移结构",
+        "reasoning_target": "固定余数类下的平移结构"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:sequence:03:v2",
+      "order": 3,
+      "kind": "constructed_response",
+      "points": 12,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "设 \\(\\{a_n\\}\\) 是各项为正的数列，\\(a_1=1\\)，且对每个正整数 \\(n\\) 都有 \\(a_1^2+a_2^2+\\cdots+a_n^2=a_na_{n+1}\\)。",
+          "asks": [
+            "求 \\(a_2\\)，并证明当 \\(n\\ge2\\) 时，\\(a_{n+1}=a_n+a_{n-1}\\)。",
+            "证明：对每个 \\(n\\ge2\\)，\\(a_{n+1}a_{n-1}-a_n^2=(-1)^n\\)。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "48ee63f043ba3bdf7331f826e4ff9d6640481367c77410eededbad96f2cd4014",
+        "stem": "设 {{f1}} 是各项为正的数列，{{f2}}，且对每个正整数 {{f3}} 都有 {{f4}}。",
+        "parts": [
+          {
+            "text": "求 {{f5}}，并证明当 {{f6}} 时，{{f7}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "证明：对每个 {{f8}}，{{f9}}。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "a_1=1"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "n"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "a_1^2+a_2^2+\\cdots+a_n^2=a_na_{n+1}"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "a_2"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "n\\ge2"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "a_{n+1}=a_n+a_{n-1}"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "n\\ge2"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "a_{n+1}a_{n-1}-a_n^2=(-1)^n"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "求 {{f5}}，并证明当 {{f6}} 时，{{f7}}。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "令 \\(n=1\\)，得 \\(a_2=1\\)。相邻两式作差，得 \\(a_n^2=a_n(a_{n+1}-a_{n-1})\\)。因 \\(a_n>0\\)，可约去 \\(a_n\\)。",
+          "记 \\(D_n=a_{n+1}a_{n-1}-a_n^2\\)。由递推式，\\(D_{n+1}=(a_{n+1}+a_n)a_n-a_{n+1}^2=-D_n\\)。又 \\(D_2=2-1=1\\)，故 \\(D_n=(-1)^n\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 10,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "原题用一次差分还原等差通项，本题从平方和得到二阶递推，再寻找二次交替不变量"
+        },
+        "points_justification": "局部状态反演和符号不变量",
+        "part_points": [
+          6,
+          6
+        ],
+        "linked_progression": "局部状态反演和符号不变量",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2023-cn-math-new-gaokao-1:q007",
+            "version_sha256": "f0b335ffd37e0ced23d2eed93e2145edfa21c5ab5ccdb97a6e789719343b75f7",
+            "transfer": "由前缀信息反推局部结构",
+            "structural_difference": "原题用一次差分还原等差通项，本题从平方和得到二阶递推，再寻找二次交替不变量"
+          }
+        ],
+        "novel_structure": "局部状态反演和符号不变量",
+        "reasoning_target": "局部状态反演和符号不变量"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:sequence:04:v2",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 12,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "对每个正整数 \\(m\\)，将不小于 \\(m\\) 的最小的2的非负整数次幂与 \\(m\\) 的差记为 \\(b_m\\)。例如，\\(b_5=8-5=3\\)。",
+          "asks": [
+            "设 \\(k\\) 为正整数，求 \\(b_1+b_2+\\cdots+b_{2^k}\\)。",
+            "当 \\(k\\ge2\\) 时，在 \\(1\\le m\\le2^k\\) 的整数中，有多少个满足 \\(b_m\\ge2^{k-2}\\)？"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "76949d2b30185d622b63efac70a577dce6bab8e72052fdda98dc63745670ad3b",
+        "stem": "对每个正整数 {{f1}}，将不小于 {{f2}} 的最小的2的非负整数次幂与 {{f3}} 的差记为 {{f4}}。例如，{{f5}}。",
+        "parts": [
+          {
+            "text": "设 {{f6}} 为正整数，求 {{f7}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "当 {{f8}} 时，在 {{f9}} 的整数中，有多少个满足 {{f10}}？",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "m"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "m"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "m"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "b_m"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "b_5=8-5=3"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "k"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "b_1+b_2+\\cdots+b_{2^k}"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "k\\ge2"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "1\\le m\\le2^k"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "b_m\\ge2^{k-2}"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "设 {{f6}} 为正整数，求 {{f7}}。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "在 \\(2^{j-1}<m\\le2^j\\) 内，差值依次为 \\(2^{j-1}-1,\\ldots,0\\)，而 \\(b_1=0\\)。设 \\(L_j=2^{j-1}\\)，则总和为 \\(\\frac12\\sum_{j=1}^k(L_j^2-L_j)=\\frac{4^k-3\\cdot2^k+2}{6}\\)。",
+          "前 \\(k-1\\) 块的最大差至多 \\(2^{k-2}-1\\)。最后一块的差值从 \\(2^{k-1}-1\\) 至0各出现一次，其中不少于 \\(2^{k-2}\\) 的共有 \\(2^{k-2}\\) 个。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 10,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "原题统计前缀中的项数，本题统计到下一门槛的等待差并比较尾部计数"
+        },
+        "points_justification": "阶梯阈值产生等差差值块",
+        "part_points": [
+          6,
+          6
+        ],
+        "linked_progression": "阶梯阈值产生等差差值块",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2020-cn-math-new-gaokao-1:q018",
+            "version_sha256": "508414297cc21a02ca48bb4f9fb940fd4bc6416768ef21637bfddf92ef90160e",
+            "transfer": "从逐点计数改按指数断点分块",
+            "structural_difference": "原题统计前缀中的项数，本题统计到下一门槛的等待差并比较尾部计数"
+          }
+        ],
+        "novel_structure": "阶梯阈值产生等差差值块",
+        "reasoning_target": "阶梯阈值产生等差差值块"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:sequence:05:v2",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "数列",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "设 \\(m\\ge2\\) 为整数，等差数列 \\(\\{a_n\\}\\) 的公差为 \\(d>0\\)，前 \\(2m\\) 项均为正，且这 \\(2m\\) 项的和为 \\(2m\\)。记 \\(T(d)=\\sum_{k=1}^m\\frac{1}{a_ka_{2m+1-k}}\\)。",
+          "asks": [
+            "求 \\(d\\) 的取值范围，并用 \\(m,d,k\\) 表示乘积 \\(a_ka_{2m+1-k}\\)。",
+            "证明：恰有一个 \\(d\\) 使得 \\(T(d)=2m\\)。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "338b117a66c96853728958123799d7ce09c5216ed029924d01d77c887efd1b3b",
+        "stem": "设 {{f1}} 为整数，等差数列 {{f2}} 的公差为 {{f3}}，前 {{f4}} 项均为正，且这 {{f5}} 项的和为 {{f6}}。记 {{f7}}。",
+        "parts": [
+          {
+            "text": "求 {{f8}} 的取值范围，并用 {{f9}} 表示乘积 {{f10}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "证明：恰有一个 {{f11}} 使得 {{f12}}。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "m\\ge2"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "d>0"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "2m"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "2m"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "2m"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "T(d)=\\sum_{k=1}^m\\frac{1}{a_ka_{2m+1-k}}"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "d"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "m,d,k"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "a_ka_{2m+1-k}"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "d"
+          },
+          "f12": {
+            "kind": "notation",
+            "latex": "T(d)=2m"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "求 {{f8}} 的取值范围，并用 {{f9}} 表示乘积 {{f10}}。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "配对两项的平均数为1。故 \\(a_1=1-\\frac{2m-1}{2}d\\)，正性等价于 \\(0<d<\\frac2{2m-1}\\)。令 \\(c_k=\\frac{2m+1}{2}-k\\)，则配对积为 \\(1-c_k^2d^2\\)。",
+          "每个 \\(c_k>0\\)，所以各倒数在该开区间上连续且严格递增。\\(d\\) 从右侧趋于0时，\\(T(d)\\) 趋于 \\(m\\)；从左侧趋于上界时，第1项倒数趋于正无穷，故 \\(T(d)\\) 也趋于正无穷。由连续性和严格单调性，恰有一个 \\(d\\) 使 \\(T(d)=2m\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 11,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 4,
+          "modeling": 1,
+          "logical_reasoning": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 1,
+          "source_level_difference": "原题由配对和的偶性锁住公差，本题原列已经等差，以成对乘积及极限定位唯一参数"
+        },
+        "points_justification": "对称配对把序列唯一性转成严格连续单调",
+        "part_points": [
+          6,
+          7
+        ],
+        "linked_progression": "对称配对把序列唯一性转成严格连续单调",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2026-cn-math-national-1:q007",
+            "version_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+            "transfer": "固定总和后利用配对中心",
+            "structural_difference": "原题由配对和的偶性锁住公差，本题原列已经等差，以成对乘积及极限定位唯一参数"
+          }
+        ],
+        "novel_structure": "对称配对把序列唯一性转成严格连续单调",
+        "reasoning_target": "对称配对把序列唯一性转成严格连续单调"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    }
+  ],
+  "revision_record": [
+    "学生盲审发现右侧字形裁切，改用按实际墨迹计算的光栅边界。",
+    "第1题由单步相减升级为识别驱动项并作第二次消元。"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "pdf_sha256": "52671b123f2d69e9f0b38d9dd91f6bcf336a82132f7a6f1e8d420093c4d82269",
+  "student_review_sha256": "b1a94f48c11f9c55a80348b45d155abc95d9aa084609c23a48a179bae57c6ca8",
+  "math_verification_sha256": "f900267c26bf574cc89196d379875fe302ec201328ffb464acd920614f0b1b8b",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "程序在合法判别式范围内得c=3/4，盲解用韦达和切线交点算出相同面积式。"
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "正交单位方向互换平方分量，盲解与原解同为13/36。"
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "分支由两根之积和之和保证，轨迹通过由中点回构k补足充分性。"
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "独立盲解以圆的切线或重根求切线，截距面积由平方和不等式给唯一等号点。"
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "两法线乘积推出uv=−1/4。独立解得弦定点和全抛物线，并证明任意实横坐标可实现。"
+    }
+  ]
+}

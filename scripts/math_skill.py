@@ -33,6 +33,7 @@ def main(argv=None):
     action.add_argument("--target-year", type=int, default=2027)
     action.add_argument("--limit", type=int)
     action.add_argument("--legacy-only", action="store_true")
+    action.add_argument("--verified-only", action="store_true")
     actions.add_parser("rules")
     planning = actions.add_parser("plan")
     planning.add_argument(
@@ -61,6 +62,7 @@ def main(argv=None):
     action.add_argument("--model")
     action.add_argument("--allow-template-fallback", action="store_true")
     action.add_argument("--pilot-certificate", type=Path)
+    action.add_argument("--specialty-certificate", type=Path, action="append", default=[])
     action = actions.add_parser("publish")
     action.add_argument("output", type=Path)
     action.add_argument("--student-review", type=Path, required=True)
@@ -88,7 +90,7 @@ def main(argv=None):
             from local_archive import public_edition
 
             require(
-                not (public_edition(root) and args.legacy_only),
+                not (args.legacy_only and (public_edition(root) or args.verified_only)),
                 "公开版使用标准数据包，请省略 --legacy-only",
             )
 
@@ -122,6 +124,7 @@ def main(argv=None):
                     target_region=args.target_region,
                     target_year=args.target_year,
                     limit=args.limit,
+                    verified_only=args.verified_only,
                 )
             elif extended and not args.legacy_only:
                 raise ValueError(
@@ -171,6 +174,7 @@ def main(argv=None):
                     args.output.resolve(),
                     not args.no_export,
                     pilot_certificate=args.pilot_certificate,
+                    specialty_certificates=args.specialty_certificate,
                 )
                 result = {
                     "output": str(args.output.resolve()),

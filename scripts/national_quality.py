@@ -30,5 +30,6 @@ def research_eligible(row):
         for x in (
             "quarantined_source_content_conflict",
             "upstream_version_note_requires_review",
+            "calibration_source_conflict",
         )
     )

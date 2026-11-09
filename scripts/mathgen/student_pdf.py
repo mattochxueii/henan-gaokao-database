@@ -15,17 +15,29 @@ from reportlab.platypus import (
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import A4
-from matplotlib.mathtext import math_to_image
+from matplotlib.mathtext import MathTextParser
 from matplotlib.font_manager import FontProperties
 from matplotlib import rc_context
-from PIL import Image as PILImage
+from PIL import Image as PILImage, ImageOps
+import numpy as np
 from matplotlib.figure import Figure
 from mpl_toolkits.mplot3d import proj3d
 from analysis_db import fingerprint
 from gaokao import require, atomic_write
 from .export import chinese_font, MathParagraph, formatted_plain
 
-VERSION = "student-layout-v2"
+VERSION = "student-layout-v3"
+MATH_RASTER = MathTextParser("agg")
+
+
+def formula_image(formula, filename):
+    """Use the raster backend's ink bounds so italic glyphs are not clipped."""
+    with rc_context({"mathtext.fontset": "stix"}):
+        parsed = MATH_RASTER.parse(
+            "$" + formula + "$", dpi=240, prop=FontProperties(size=12)
+        )
+    ink = PILImage.fromarray(np.asarray(parsed.image))
+    ImageOps.invert(ink).save(filename)
 
 
 def normalise_tex(text):
@@ -152,18 +164,11 @@ def render(paper, path, solutions=False):
                 "不合格公式禁止排版",
             )
             filename = assets / (
-                fingerprint({"math": formula, "font": 12, "fontset": "stix"})[:20]
+                fingerprint({"math": formula, "font": 12, "layout": VERSION})[:20]
                 + ".png"
             )
             if not filename.exists():
-                with rc_context({"mathtext.fontset": "stix"}):
-                    math_to_image(
-                        "$" + formula + "$",
-                        filename,
-                        prop=FontProperties(size=12),
-                        dpi=240,
-                        format="png",
-                    )
+                formula_image(formula, filename)
             with PILImage.open(filename) as im:
                 w, h = im.size
             scale = 72 / 240
@@ -186,19 +191,18 @@ def render(paper, path, solutions=False):
                 f"满分{paper['total_points']}分　　考试时间{paper['minutes']}分钟", note
             )
         )
-        story.append(
-            para(
-                "请按题目要求作答。解答题须写出必要的文字说明、证明过程或演算步骤。",
-                note,
-            )
-        )
+        instruction = "请按题目要求作答。"
+        if any(q["kind"] == "constructed_response" for q in paper["questions"]):
+            instruction += "解答题须写出必要的文字说明、证明过程或演算步骤。"
+        story.append(para(instruction, note))
     previous = None
     section_titles = {
-        "single_choice": "一、单项选择题",
-        "multiple_choice": "二、多项选择题（全部选对得满分，部分选对得部分分，有选错得0分）",
-        "fill_in": "三、填空题",
-        "constructed_response": "四、解答题",
+        "single_choice": "单项选择题",
+        "multiple_choice": "多项选择题（全部选对得满分，部分选对得部分分，有选错得0分）",
+        "fill_in": "填空题",
+        "constructed_response": "解答题",
     }
+    section_number = 0
     md = ["# " + paper["title"], ""]
     for q in paper["questions"]:
         require(
@@ -213,7 +217,11 @@ def render(paper, path, solutions=False):
             story.append(PageBreak())
         section = None
         if q["kind"] != previous and not solutions:
-            section = para(section_titles[q["kind"]], heading)
+            section_number += 1
+            prefix = (
+                "一二三四"[section_number - 1] + "、" if section_number <= 4 else ""
+            )
+            section = para(prefix + section_titles[q["kind"]], heading)
             previous = q["kind"]
         block = ([section] if section else []) + [
             para(f"{q['order']}.（{q['points']}分）", heading)
@@ -241,6 +249,8 @@ def render(paper, path, solutions=False):
                     ax.set_axis_off()
                     for name, point in data["vertices"].items():
                         px, py, _ = proj3d.proj_transform(*point, ax.get_proj())
+                        if name in data.get("marked_points", ()):
+                            ax.plot(*([value] for value in point), "ko", markersize=2.5)
                         display = re.sub(r"([A-Za-z])([0-9]+)", r"\1_{\2}", name)
                         ax.annotate(
                             "$" + display + "$",

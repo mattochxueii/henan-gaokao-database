@@ -24,6 +24,7 @@ FUNCTIONS = {
     "abs": s.Abs,
     "factorial": s.factorial,
     "binomial": s.binomial,
+    "floor": s.floor,
     "conjugate": s.conjugate,
     "re": s.re,
     "im": s.im,

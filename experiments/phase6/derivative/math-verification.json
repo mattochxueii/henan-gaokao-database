@@ -1,0 +1,142 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": [
+          "3/2",
+          "3"
+        ],
+        "steps": [
+          "将条件移项并因式分解为 \\(- \\frac{\\left(x - 3\\right) \\left(2 x - 3\\right)}{9 x^{2}}\\)=0，限制在题设区间内，得到 \\(\\left\\{\\frac{3}{2}, 3\\right\\}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:derivative:01:v2",
+    "math_spec_sha256": "a07a254a346eb9c5fbbc29126c02845ed6d794f8502bf81d0adb4c02efc7610a",
+    "writing_sha256": "5eca3aef7e4f2e7a7abcffcf89c1a345cbbf3541d055894a2d92fd6fc9726e0b"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "a + x**3 - 3*x",
+          "derivative": "3*(x - 1)*(x + 1)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:derivative:02:v2",
+    "math_spec_sha256": "6446b54b70bc08a64869b3ef66dc6db03088881b01a485e0837b4276b2e9c394",
+    "writing_sha256": "327228d6bcfd5a9d5070a3aa83ca39452e4e344d2d785995e757655cf800efb5"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-a*(x - 1) + log(x)",
+          "derivative": "-(a*x - 1)/x"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "log(x) - (2*x - 2)/(x + 1)",
+          "derivative": "(x - 1)**2/(x*(x + 1)**2)",
+          "second_margin": "sqrt(x) - log(x) - 1/sqrt(x)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:derivative:03:v2",
+    "math_spec_sha256": "5e45f8ac73eaa4a444e2a2b8bfcbba6e4593324fa230011787fe9e6352f28cf4",
+    "writing_sha256": "c67e42a3f71089b4b4c19ea2cf91b97b90480bb3722a171ce202e4f389fb33e6"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x**4 - 4*x**3 + 4*x**2",
+          "derivative": "4*x*(x - 2)*(x - 1)"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:derivative:04:v2",
+    "math_spec_sha256": "ecfda58bfd54d63ef47d445202180c9a53055e515c5623face5abce71d9bdeda",
+    "writing_sha256": "e4f3733efab7bb24c5c24b4574c56e95e9ed1f28229f56737de6f637d09c615d"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-x + exp(x) - 1",
+          "derivative": "exp(x) - 1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-2*x + exp(x) - exp(-x)",
+          "derivative": "(exp(x) - 1)**2*exp(-x)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:derivative:05:v2",
+    "math_spec_sha256": "4f27f82654d18f0511072474707c3e5608b19424e8260ba6f980f915e6ea9cda",
+    "writing_sha256": "8e52aef26d54c893c8c595fdb43a1eaa7bc2092a605890f529640cbaf4c0738b"
+  }
+]

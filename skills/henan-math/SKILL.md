@@ -13,6 +13,8 @@ description: 按省份、年份、全国或地方试卷系列检索历史数学�
 
 研究必须关联题目ID、版本、来源页及证据。公开版的历史来源目录只提供线索，研究结论以实际查询到的完整题面为依据。私有存档版的38份分析基于2025/2026第三方候选，如存在 analysis/review-overrides.json 则读取哈希绑定更正层。官方要求、候选事实、有限样本观察与模拟设定分开。2027卷型尚未确认。
 
+要求基于已校准真题、专项试验或整卷质量对照时，先读 [校准与专项协议](references/calibration.md)。严格模式绑定经原页复核及独立重解的版本，并记录可借鉴的推理机制、原创结构差别和独立质量审核。
+
 ## 三层命题
 
 必须阅读 [writing-protocol.md](references/writing-protocol.md) 和数据库 analysis/language-rules.json。依次完成：
@@ -29,7 +31,7 @@ description: 按省份、年份、全国或地方试卷系列检索历史数学�
 
 执行 publish 需同时提供匹配PDF的 --student-review 与 --math-comparison。所有题及整卷均须通过；数学比对含程序结果和独立PDF解答。发布复制同一PDF字节，修订后旧审核作废。未审题稿只称审阅草稿。
 
-full 必须传 --pilot-certificate <已发布5题目录>/publication.json。历史结构8单选、3多选、3填空、5解答及150分只是目标模拟依据，不能据此认定已达到高考难度。
+通用 full 传 --pilot-certificate <已发布5题目录>/publication.json。已校准研究模式使用三个专项的发布证书。目标配置的8单选、3多选、3填空、5解答及150分是模拟依据，难度另行评估。
 
 ## 独立数学验证
 

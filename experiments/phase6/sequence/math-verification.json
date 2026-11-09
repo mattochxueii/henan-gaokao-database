@@ -1,0 +1,127 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-8/81",
+        "complete": true,
+        "facts": {
+          "recurrence_solution": "3*(2/3)**n/14 + 2*3**n/7",
+          "residual": 0
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:sequence:01:v2",
+    "math_spec_sha256": "573bdbc421b252227f4ef3384597e43ba8a14ae076f5a5b64bf1b90a34ac18c2",
+    "writing_sha256": "98c7637241def1137c9f4733b2eb7cec255957465aadc20d5d140874e9ee7bcd"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "180",
+        "steps": [
+          "先分解通项 \\(\\left\\lfloor{\\frac{2 k}{5} + \\frac{1}{5}}\\right\\rfloor\\)，按有限和边界计算，保留末项，得到 \\(180\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:sequence:02:v2",
+    "math_spec_sha256": "b008231dbe5c9258f560b03e3ddaf28103f6bc39212cd17d26cc2c60e14f0893",
+    "writing_sha256": "735c685b6817e4a8f528a72855ef2d19434a94b6600bba35a13c035ebb24c5a7"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:sequence:03:v2",
+    "math_spec_sha256": "48ee63f043ba3bdf7331f826e4ff9d6640481367c77410eededbad96f2cd4014",
+    "writing_sha256": "4ab941a1ffc101f19868568a409ebb1a61d2258747891ac29bc78419dd9be8c1"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:sequence:04:v2",
+    "math_spec_sha256": "76949d2b30185d622b63efac70a577dce6bab8e72052fdda98dc63745670ad3b",
+    "writing_sha256": "dae885e94a5c5b1bcb786c4700dea905001fa3b1447038536d849e2e6bf6a8f2"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "version": "school-solver-v1",
+    "formal_proof": false,
+    "id": "orig:ai:calibration:sequence:05:v2",
+    "math_spec_sha256": "338b117a66c96853728958123799d7ce09c5216ed029924d01d77c887efd1b3b",
+    "writing_sha256": "d69ffafb0df330c71b1f7f5070c285c3a63ba7a7bc49896bccd9296bcca42f9d"
+  }
+]

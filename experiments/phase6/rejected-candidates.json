@@ -1,0 +1,1523 @@
+[
+  {
+    "version": "sequence-v1",
+    "reason": "8/20，求分差直接代入，重设计为从累加到递推后消去",
+    "candidate_file_sha256": "856d0212661120ebec0c6eea14f9437d003a3a076a94797cec7a6effa0f8b81f",
+    "independent_record_sha256": "8d96b50e1a436f293ac1b1af6c947a0f5afee342a25ddf2379054038a3fd73e5",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:sequence:01:v1",
+        "order": 1,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "数列",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "设数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和为 \\(S_n\\)。对每个正整数 \\(n\\)，都有 \\(S_n+2a_n=3^n\\)。则 \\(a_4-\\frac23a_3=\\)________。",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "reasoning"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "dc19c9743c54fcdf1f79097f3ce651f10b6ce5bf86c35ee7bf236046f70e33b7",
+          "stem": "设数列 {{f1}} 的前 {{f2}} 项和为 {{f3}}。对每个正整数 {{f4}}，都有 {{f5}}。则 {{f6}}________。",
+          "parts": [],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "\\{a_n\\}"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "n"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "S_n"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "n"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "S_n+2a_n=3^n"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "a_4-\\frac23a_3="
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "________"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "将 \\(n=4\\) 与 \\(n=3\\) 对应的等式相减，得 \\(a_4+2(a_4-a_3)=81-27=54\\)，所以 \\(a_4-\\frac23a_3=18\\)。"
+          ]
+        },
+        "assessment": {
+          "level": 2,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 2,
+            "condition_comprehension": 2,
+            "modeling": 1,
+            "logical_reasoning": 2,
+            "calculation": 2,
+            "integration": 2,
+            "breakthrough_visibility": 3,
+            "source_level_difference": "原题由商序列恢复通项并裂项，本题要求一个线性组合，差分后可直接取得，通项不参与"
+          },
+          "points_justification": "从冗余状态求出最小必要信息",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2022-cn-math-new-gaokao-1:q017",
+              "version_sha256": "5b877d24c95cb25f089be4c46c5fd28a1a1d3ac114633528760d118f5420f476",
+              "transfer": "对相邻前缀约束作差",
+              "structural_difference": "原题由商序列恢复通项并裂项，本题要求一个线性组合，差分后可直接取得，通项不参与"
+            }
+          ],
+          "novel_structure": "从冗余状态求出最小必要信息",
+          "reasoning_target": "从冗余状态求出最小必要信息"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "derivative-v1",
+    "reason": "题面数学字形超出紧边界，渲染器修复后重新盲审",
+    "candidate_file_sha256": "d664c4dfe6b3498da1d5e44194fd8e6e90edf6bd26108ae4361e787ab2815e2d",
+    "independent_record_sha256": "4d3ef09a5e33f62975a9f472f609b50e9b8d780c30b194ba8269b51d8c2e2510",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:derivative:03:v1",
+        "order": 3,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "导数",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "设 \\(a>0\\)，函数 \\(f_a(x)=\\ln x-a(x-1)\\) 的定义域为 \\((0,+\\infty)\\)。",
+            "asks": [
+              "讨论 \\(f_a(x)\\) 的零点个数，并说明当它有两个零点时，除1之外的零点在1的哪一侧。",
+              "若 \\(r>1\\) 且 \\(f_a(r)=0\\)，证明 \\(\\frac{2}{r+1}<a<\\frac1{\\sqrt{r}}\\)。"
+            ]
+          },
+          "tasks": [
+            {
+              "op": "reasoning",
+              "expression": "log(x)-a*(x-1)"
+            },
+            {
+              "op": "reasoning",
+              "positive_x": true,
+              "expression": "log(x)-2*(x-1)/(x+1)",
+              "algebra_checks": {
+                "second_margin": "sqrt(x)-1/sqrt(x)-log(x)"
+              }
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "5e45f8ac73eaa4a444e2a2b8bfcbba6e4593324fa230011787fe9e6352f28cf4",
+          "stem": "设 {{f1}}，函数 {{f2}} 的定义域为 {{f3}}。",
+          "parts": [
+            {
+              "text": "讨论 {{f4}} 的零点个数，并说明当它有两个零点时，除1之外的零点在1的哪一侧。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "若 {{f5}} 且 {{f6}}，证明 {{f7}}。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "a>0"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "f_a(x)=\\ln x-a(x-1)"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "(0,+\\infty)"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "f_a(x)"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "r>1"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "f_a(r)=0"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "\\frac{2}{r+1}<a<\\frac1{\\sqrt{r}}"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "讨论 {{f4}} 的零点个数，并说明当它有两个零点时，除1之外的零点在1的哪一侧。"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "\\(f_a'(x)=1/x-a\\)，函数在 \\(1/a\\) 处取唯一最大值，两端均趋于负无穷。又 \\(f_a(1)=0\\)。当 \\(a=1\\) 时只有1这一个零点。当 \\(0<a<1\\) 时，1在增支，另一根大于 \\(1/a>1\\)。当 \\(a>1\\) 时，1在减支，另一根小于 \\(1/a<1\\)。",
+            "由零点条件，\\(a=\\frac{\\ln r}{r-1}\\)。设 \\(U(r)=\\ln r-\\frac{2(r-1)}{r+1}\\)，则 \\(U(1)=0\\)，\\(U'(r)=\\frac{(r-1)^2}{r(r+1)^2}>0\\)。再设 \\(V(r)=\\sqrt r-\\frac1{\\sqrt r}-\\ln r\\)，则 \\(V(1)=0\\)，\\(V'(r)=\\frac{(\\sqrt r-1)^2}{2r^{3/2}}>0\\)。两式即给出所需严格界。"
+          ]
+        },
+        "assessment": {
+          "level": 4,
+          "estimated_minutes": 13,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 1,
+            "logical_reasoning": 4,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "原题最小值证全域下界，本题以已知公共零点和另一根反演割线斜率"
+          },
+          "points_justification": "根的位置确定参数分支，再建立不对称双界",
+          "part_points": [
+            7,
+            8
+          ],
+          "linked_progression": "根的位置确定参数分支，再建立不对称双界",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2023-cn-math-new-gaokao-1:q019",
+              "version_sha256": "a082c7a3d1d94c29c6f88fe5140e8e3625d11777bfdeb4aa2e3e6cce735e3086",
+              "transfer": "首问分类为后问设置参数分支",
+              "structural_difference": "原题最小值证全域下界，本题以已知公共零点和另一根反演割线斜率"
+            }
+          ],
+          "novel_structure": "根的位置确定参数分支，再建立不对称双界",
+          "reasoning_target": "根的位置确定参数分支，再建立不对称双界"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      },
+      {
+        "id": "orig:ai:calibration:derivative:05:v1",
+        "order": 5,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "导数",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "设 \\(f(x)=e^x-1-x\\)，\\(t>0\\)。",
+            "asks": [
+              "证明方程 \\(f(x)=t\\) 恰有两个实数根，分别记为 \\(u<0<v\\)。",
+              "证明：\\(v<-u<v+t\\)。"
+            ]
+          },
+          "tasks": [
+            {
+              "op": "reasoning",
+              "expression": "exp(x)-1-x"
+            },
+            {
+              "op": "reasoning",
+              "expression": "exp(x)-exp(-x)-2*x"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "4f27f82654d18f0511072474707c3e5608b19424e8260ba6f980f915e6ea9cda",
+          "stem": "设 {{f1}}，{{f2}}。",
+          "parts": [
+            {
+              "text": "证明方程 {{f3}} 恰有两个实数根，分别记为 {{f4}}。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "证明：{{f5}}。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "f(x)=e^x-1-x"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "t>0"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "f(x)=t"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "u<0<v"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "v<-u<v+t"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "证明方程 {{f3}} 恰有两个实数根，分别记为 {{f4}}。"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "\\(f'(x)=e^x-1\\)。函数在0左侧严格递减、右侧严格递增，\\(f(0)=0\\)，且两端均趋于正无穷，故两支各有一根。",
+            "对 \\(x>0\\)，\\(f(x)-f(-x)=e^x-e^{-x}-2x\\)，该差在0为0，导数为 \\(e^x+e^{-x}-2>0\\)。于是 \\(f(-v)<f(v)=t\\)，由负半轴单调性得 \\(v<-u\\)。",
+            "又 \\(v+t=e^v-1\\)。若 \\(v\\ge1\\)，则 \\(e^{-(v+t)}>1-v\\)。若 \\(0<v<1\\)，\\(-\\ln(1-v)>v\\) 给出 \\(1/(1-v)>e^v\\)，故 \\(1-e^v-\\ln(1-v)\\) 从0起严格增加，仍有 \\(e^{1-e^v}>1-v\\)。所以 \\(f(-(v+t))-t=e^{-(v+t)}-1+v>0\\)，由负半轴单调性得 \\(-u<v+t\\)。"
+          ]
+        },
+        "assessment": {
+          "level": 5,
+          "estimated_minutes": 13,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 1,
+            "logical_reasoning": 5,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "原题对参数统一下界，本题比较同一水平线的两个反解，第二界使用由正根生成的平移"
+          },
+          "points_justification": "指数两侧非对称性的定量夹逼",
+          "part_points": [
+            7,
+            8
+          ],
+          "linked_progression": "指数两侧非对称性的定量夹逼",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2020-cn-math-new-gaokao-1:q021",
+              "version_sha256": "b0a9a040c5fb8583a7bf9a67e6bb78f48a86565d4739cd3332ccdbd8a0d6d5a2",
+              "transfer": "利用同一函数单调分支处理严格比较",
+              "structural_difference": "原题对参数统一下界，本题比较同一水平线的两个反解，第二界使用由正根生成的平移"
+            }
+          ],
+          "novel_structure": "指数两侧非对称性的定量夹逼",
+          "reasoning_target": "指数两侧非对称性的定量夹逼"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "derivative-v2",
+    "reason": "与第五阶段D卷第8题切点重根结构相似，退回重做",
+    "candidate_file_sha256": "c0b249a862641091064c058a4cf10f8f271ccbf62ff6f911fa5107924b21066e",
+    "independent_record_sha256": "bd1c92251f94b4972ed0f1400573ca662468cec1a37b9f1a52fd3640607fefbb",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:derivative:01:v2",
+        "order": 1,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "导数",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "过点 \\((1,1)\\) 作曲线 \\(y=x^3\\) 的所有切线，则这些切线的斜率之和为________。",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "tangent_through",
+              "expression": "x**3",
+              "point": [
+                "1",
+                "1"
+              ],
+              "ask": "all"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "5c07804ce7e3e6657e24bbb4dd1a29eee61a191ed5c97156b28e6d62e0132d0f",
+          "stem": "过点 {{f1}} 作曲线 {{f2}} 的所有切线，则这些切线的斜率之和为________。",
+          "parts": [],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "(1,1)"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "y=x^3"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "________"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "切点横坐标设为 \\(t\\)，切线在 \\(x=1\\) 处的值为 \\(3t^2-2t^3\\)。令它等于1，整理为 \\((t-1)^2(2t+1)=0\\)。两个不同切点的斜率分别为 \\(3\\) 与 \\(\\frac34\\)，故所求为 \\(\\frac{15}{4}\\)。"
+          ]
+        },
+        "assessment": {
+          "level": 2,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 2,
+            "condition_comprehension": 2,
+            "modeling": 1,
+            "logical_reasoning": 2,
+            "calculation": 2,
+            "integration": 2,
+            "breakthrough_visibility": 3,
+            "source_level_difference": "原题解参数范围，本题外点本身也在曲线上，切点重根只代表一条切线"
+          },
+          "points_justification": "区分切点代数重数和直线对象数",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2022-cn-math-new-gaokao-1:q015",
+              "version_sha256": "002755a628597a481e8be227aa129602bdc5a045ed7883a9cfef96d4eb06ccac",
+              "transfer": "把切线经过某点转成切点方程",
+              "structural_difference": "原题解参数范围，本题外点本身也在曲线上，切点重根只代表一条切线"
+            }
+          ],
+          "novel_structure": "区分切点代数重数和直线对象数",
+          "reasoning_target": "区分切点代数重数和直线对象数"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "geometry-v1",
+    "reason": "12/20，代入弦方程后推理层次偏浅，改为根积与面积限制",
+    "candidate_file_sha256": "a6df4128829f03c8ec29d264cbdf3365e75a98ac9e04f56de680802243e748c3",
+    "independent_record_sha256": "7af2f2fbc4f1701929699d360d1c84999700f710b7fa92c3018f7c02c2dafaef",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:geometry:01:v1",
+        "order": 1,
+        "kind": "fill_in",
+        "points": 5,
+        "module": "解析几何",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "过点 \\((1,-3)\\) 作抛物线 \\(y=x^2\\) 的两条切线，记两个切点为 \\(A,B\\)。则直线 \\(AB\\) 的方程为________。",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "equation",
+              "expression": "2*x-x**2+3"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "21cfb1685561c347d84c792062e4f6f7c7c3a8f9ae9122701b9676b46d61a289",
+          "stem": "过点 {{f1}} 作抛物线 {{f2}} 的两条切线，记两个切点为 {{f3}}。则直线 {{f4}} 的方程为________。",
+          "parts": [],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "(1,-3)"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "y=x^2"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "A,B"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "AB"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "________"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "切点横坐标 \\(t\\) 满足 \\(2t-t^2=-3\\)，所以 \\(t^2=2t+3\\)。因此两个切点都在 \\(y=2x+3\\) 上；两根 \\(-1,3\\) 不同，直线唯一。"
+          ]
+        },
+        "assessment": {
+          "level": 2,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 2,
+            "condition_comprehension": 2,
+            "modeling": 1,
+            "logical_reasoning": 2,
+            "calculation": 2,
+            "integration": 2,
+            "breakthrough_visibility": 3,
+            "source_level_difference": "原题混合距离积与切线临界，本题将外点条件直接视作切点的线性约束"
+          },
+          "points_justification": "将切点方程回读成同一条弦的方程",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2022-cn-math-new-gaokao-1:q011",
+              "version_sha256": "b63e30ed3fef8c8a3a30dc2ff17a0db3b7e0734be37076774887dc2c68416196",
+              "transfer": "由外点生成切点与割线约束",
+              "structural_difference": "原题混合距离积与切线临界，本题将外点条件直接视作切点的线性约束"
+            }
+          ],
+          "novel_structure": "将切点方程回读成同一条弦的方程",
+          "reasoning_target": "将切点方程回读成同一条弦的方程"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "full-v1",
+    "reason": "第5题11/20，条件概率一步；第16题点位和线型应明确",
+    "candidate_file_sha256": "98b5001be38ef5563aaaa55b8ee94ad30ab4187acf9f9f670a084ae6034abfe1",
+    "independent_record_sha256": "7772adba623d299ceb8c1975f33b7e0dcbe0a10738a25b26c2c5608528267169",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:full:05:v2",
+        "order": 5,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "概率统计",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "一个袋中有3个红球和2个白球，从中不放回地随机取2个球。已知至少取到1个红球，则恰有1个红球的概率为",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "probability",
+              "sample_space": {
+                "x": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "y": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              "condition": "(x<y) and (x<=3)",
+              "event": "y>3"
+            }
+          ],
+          "options": {
+            "A": {
+              "semantic_value": "3/5"
+            },
+            "B": {
+              "semantic_value": "2/3"
+            },
+            "C": {
+              "semantic_value": "3/4"
+            },
+            "D": {
+              "semantic_value": "5/6"
+            }
+          }
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "ef292e3ad975e6da7f715f807613b1a70947c7f0e7c9ee440f83e75bdb61af63",
+          "stem": "一个袋中有3个红球和2个白球，从中不放回地随机取2个球。已知至少取到1个红球，则恰有1个红球的概率为",
+          "parts": [],
+          "options": {
+            "A": "{{f1}}",
+            "B": "{{f2}}",
+            "C": "{{f3}}",
+            "D": "{{f4}}"
+          },
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "\\frac35"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "\\frac23"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "\\frac34"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "\\frac56"
+            }
+          },
+          "condition_anchors": [
+            "一个袋中有3个红球和2个白球，从中不放回地随机取2个球。已知至少取到1个红球，则恰有1个红球的概率为"
+          ],
+          "request_anchors": [
+            "一个袋中有3个红球和2个白球，从中不放回地随机取2个球。已知至少取到1个红球，则恰有1个红球的概率为"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "所有无序取法有 \\(\\binom52=10\\) 种，去掉唯一的两白球取法。恰一红一白有 \\(3\\cdot2=6\\) 种，所求为 \\(6/9=2/3\\)，选B。"
+          ]
+        },
+        "assessment": {
+          "level": 2,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 2,
+            "condition_comprehension": 2,
+            "modeling": 2,
+            "logical_reasoning": 2,
+            "calculation": 2,
+            "integration": 2,
+            "breakthrough_visibility": 3,
+            "source_level_difference": "原题是两个排列的联合匹配；本题是条件事件缩小同一次抽样的分母"
+          },
+          "points_justification": "对照无条件概率与条件样本空间",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-1:q014",
+              "version_sha256": "96638baf69bcf66d2b0b0b612088b1c157a9ad422275ef6f189d4c921c985ea7",
+              "transfer": "按无放回规则构造等可能空间",
+              "structural_difference": "原题是两个排列的联合匹配；本题是条件事件缩小同一次抽样的分母"
+            }
+          ],
+          "novel_structure": "对照无条件概率与条件样本空间",
+          "reasoning_target": "对照无条件概率与条件样本空间"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      },
+      {
+        "id": "orig:ai:calibration:full:16:v2",
+        "order": 16,
+        "kind": "constructed_response",
+        "points": 15,
+        "module": "立体几何",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "在四棱锥 \\(P-ABCD\\) 中，底面 \\(ABCD\\) 是边长为2的正方形，\\(PA\\) 垂直于底面，\\(PA=h>0\\)。\\(E,F\\) 分别为 \\(BC,PD\\) 的中点。",
+            "asks": [
+              "证明：\\(EF\\) 平行于平面 \\(PAB\\)。",
+              "若平面 \\(AEF\\) 与平面 \\(PAB\\) 所成锐二面角的余弦为 \\(\\frac12\\)，求 \\(h\\) 以及 \\(P\\) 到平面 \\(AEF\\) 的距离。"
+            ]
+          },
+          "tasks": [
+            {
+              "op": "reasoning"
+            },
+            {
+              "op": "reasoning",
+              "algebra_checks": {
+                "height_check": "16/11",
+                "distance_factor": "2/2"
+              }
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "45c6e5b51d64a81d56574aa815a48c58a6d8de2f2e77b43ec5f3e8f1676704d8",
+          "stem": "在四棱锥 {{f1}} 中，底面 {{f2}} 是边长为2的正方形，{{f3}} 垂直于底面，{{f4}}。{{f5}} 分别为 {{f6}} 的中点。",
+          "parts": [
+            {
+              "text": "证明：{{f7}} 平行于平面 {{f8}}。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "若平面 {{f9}} 与平面 {{f10}} 所成锐二面角的余弦为 {{f11}}，求 {{f12}} 以及 {{f13}} 到平面 {{f14}} 的距离。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "P-ABCD"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "ABCD"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "PA"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "PA=h>0"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "E,F"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "BC,PD"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "EF"
+            },
+            "f8": {
+              "kind": "notation",
+              "latex": "PAB"
+            },
+            "f9": {
+              "kind": "notation",
+              "latex": "AEF"
+            },
+            "f10": {
+              "kind": "notation",
+              "latex": "PAB"
+            },
+            "f11": {
+              "kind": "notation",
+              "latex": "\\frac12"
+            },
+            "f12": {
+              "kind": "notation",
+              "latex": "h"
+            },
+            "f13": {
+              "kind": "notation",
+              "latex": "P"
+            },
+            "f14": {
+              "kind": "notation",
+              "latex": "AEF"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "证明：{{f7}} 平行于平面 {{f8}}。"
+          ],
+          "definitions": [],
+          "used_symbols": [],
+          "figure": {
+            "type": "wireframe",
+            "vertices": {
+              "A": [
+                0,
+                0,
+                0
+              ],
+              "B": [
+                2,
+                0,
+                0
+              ],
+              "C": [
+                2,
+                2,
+                0
+              ],
+              "D": [
+                0,
+                2,
+                0
+              ],
+              "P": [
+                0,
+                0,
+                2.3
+              ],
+              "E": [
+                2,
+                1,
+                0
+              ],
+              "F": [
+                0,
+                1,
+                1.15
+              ]
+            },
+            "edges": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "C"
+              ],
+              [
+                "C",
+                "D"
+              ],
+              [
+                "D",
+                "A"
+              ],
+              [
+                "P",
+                "A"
+              ],
+              [
+                "P",
+                "B"
+              ],
+              [
+                "P",
+                "C"
+              ],
+              [
+                "P",
+                "D"
+              ],
+              [
+                "E",
+                "F"
+              ],
+              [
+                "A",
+                "E"
+              ],
+              [
+                "A",
+                "F"
+              ]
+            ],
+            "hidden_edges": [
+              [
+                "D",
+                "A"
+              ],
+              [
+                "P",
+                "A"
+              ],
+              [
+                "A",
+                "E"
+              ],
+              [
+                "A",
+                "F"
+              ],
+              [
+                "E",
+                "F"
+              ]
+            ],
+            "label_offsets": {
+              "A": [
+                -8,
+                -8
+              ],
+              "B": [
+                3,
+                -8
+              ],
+              "C": [
+                4,
+                0
+              ],
+              "D": [
+                -10,
+                -2
+              ],
+              "P": [
+                0,
+                5
+              ],
+              "E": [
+                3,
+                -8
+              ],
+              "F": [
+                -12,
+                0
+              ]
+            }
+          }
+        },
+        "solution": {
+          "paragraphs": [
+            "以 \\(A\\) 为原点，分别沿 \\(AB,AD,AP\\) 建立直角坐标系。\\(P=(0,0,h)\\)，\\(E=(2,1,0)\\)，\\(F=(0,1,h/2)\\)。\\(EF\\) 位于 \\(y=1\\) 内，平面 \\(PAB\\) 为 \\(y=0\\)，故平行。",
+            "平面 \\(AEF\\) 的一个法向量为 \\((h/2,-h,2)\\)，平面 \\(PAB\\) 的法向量可取 \\((0,1,0)\\)。故 \\(\\frac{h}{\\sqrt{5h^2/4+4}}=\\frac12\\)，解得 \\(h=\\frac4{\\sqrt{11}}\\)。",
+            "点 \\(P\\) 到平面 \\(AEF\\) 的距离为 \\(\\frac{2h}{\\sqrt{5h^2/4+4}}=1\\)。"
+          ]
+        },
+        "assessment": {
+          "level": 4,
+          "estimated_minutes": 13,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 2,
+            "logical_reasoning": 4,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "原题用垂直与二面角反求底边，本题以同一法向量将角条件转成点面距离的恒定比"
+          },
+          "points_justification": "两个中点制造平行截线，角和距离共享法向量长度",
+          "part_points": [
+            7,
+            8
+          ],
+          "linked_progression": "两个中点制造平行截线，角和距离共享法向量长度",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-1:q017",
+              "version_sha256": "394f2ab517329c6d3a1ae02180167e0ae9cdbbc73ad34d84026f6bb8bf83132e",
+              "transfer": "首问的平行结构帮助组织后续坐标",
+              "structural_difference": "原题用垂直与二面角反求底边，本题以同一法向量将角条件转成点面距离的恒定比"
+            }
+          ],
+          "novel_structure": "两个中点制造平行截线，角和距离共享法向量长度",
+          "reasoning_target": "两个中点制造平行截线，角和距离共享法向量长度"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "full-v2",
+    "reason": "部分中文标点落在行首，重组段落和行宽",
+    "candidate_file_sha256": "4b7f581445a1fb787d6d150012b20678b771c48610e434f6bc99ce267e36c0d7",
+    "independent_record_sha256": "834b42ab424209770431045c0dd5b1c59b708831dea3634a6f152d66a2aae739",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:full:05:v2",
+        "order": 5,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "概率统计",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "袋中有3个红球和2个白球。从中不放回地随机取2个球。设 \\(p_1\\) 为已知这2个球中至少有1个红球时，恰有1个红球的概率。若改为从已取出的2个球中随机展示1个，设 \\(p_2\\) 为已知展示的是红球时，已取出的2个球中恰有1个红球的概率。则 \\(p_1-p_2=\\)",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "evaluate",
+              "expression": "(3*2)/(binomial(3,2)+3*2)-(3*2)/(2*binomial(3,2)+3*2)"
+            }
+          ],
+          "options": {
+            "A": {
+              "semantic_value": "1/15"
+            },
+            "B": {
+              "semantic_value": "1/10"
+            },
+            "C": {
+              "semantic_value": "1/6"
+            },
+            "D": {
+              "semantic_value": "1/3"
+            }
+          }
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "0d59f9d1c33da7d3bdc1b07e82cbf6df3e6db8e106a5186cc8975261414aa582",
+          "stem": "袋中有3个红球和2个白球。从中不放回地随机取2个球。设 {{f1}} 为已知这2个球中至少有1个红球时，恰有1个红球的概率。若改为从已取出的2个球中随机展示1个，设 {{f2}} 为已知展示的是红球时，已取出的2个球中恰有1个红球的概率。则 {{f3}}",
+          "parts": [],
+          "options": {
+            "A": "{{f4}}",
+            "B": "{{f5}}",
+            "C": "{{f6}}",
+            "D": "{{f7}}"
+          },
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "p_1"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "p_2"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "p_1-p_2="
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "\\frac1{15}"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "\\frac1{10}"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "\\frac16"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "\\frac13"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "袋中有3个红球和2个白球。从中不放回地随机取2个球。设 {{f1}} 为已知这2个球中至少有1个红球时，恰有1个红球的概率。若改为从已取出的2个球中随机展示1个，设 {{f2}} 为已知展示的是红球时，已取出的2个球中恰有1个红球的概率。则 {{f3}}"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "两红、一红一白、两白分别有3、6、1个等可能的无序球对。只知道至少一红时，\\(p_1=\\frac6{3+6}=\\frac23\\)。",
+            "改为随机展示一个球时，两红球对各有2种展示红球的方式，一红一白球对各有1种，故 \\(p_2=\\frac{6}{3\\cdot2+6}=\\frac12\\)。所求为 \\(\\frac16\\)，选C。"
+          ]
+        },
+        "assessment": {
+          "level": 3,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 3,
+            "modeling": 2,
+            "logical_reasoning": 3,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 2,
+            "source_level_difference": "原题按两侧随机排列确定联合样本空间，本题比较事件告知与随机展示造成的不同条件权重"
+          },
+          "points_justification": "同一抽样因观测机制变化而发生条件空间重加权",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-1:q014",
+              "version_sha256": "96638baf69bcf66d2b0b0b612088b1c157a9ad422275ef6f189d4c921c985ea7",
+              "transfer": "按无放回规则构造等可能空间",
+              "structural_difference": "原题按两侧随机排列确定联合样本空间，本题比较事件告知与随机展示造成的不同条件权重"
+            }
+          ],
+          "novel_structure": "同一抽样因观测机制变化而发生条件空间重加权",
+          "reasoning_target": "同一抽样因观测机制变化而发生条件空间重加权"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "full-v3",
+    "reason": "独立对照发现水平弦两切线平行，明确排除",
+    "candidate_file_sha256": "90437f5f5a34d0486a4cd75a8dd8ebdbf3d814535d61dd5729084911048a5e90",
+    "independent_record_sha256": "672e70eb9c8bf644af2fc63956b954a5f9671e6802786cd0abacb6e5ee368962",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:full:18:v2",
+        "order": 18,
+        "kind": "constructed_response",
+        "points": 17,
+        "module": "解析几何",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "已知椭圆 \\(C:\\frac{x^2}{4}+y^2=1\\)。过点 \\(D(1,0)\\) 的直线与 \\(C\\) 相交于 \\(A,B\\) 两点。椭圆在 \\(A,B\\) 两点处的切线相交于点 \\(T\\)。",
+            "asks": [
+              "证明：点 \\(T\\) 的横坐标为4。",
+              "求 \\(\\triangle TAB\\) 面积的最小值，并求此时直线 \\(AB\\) 的方程。"
+            ]
+          },
+          "tasks": [
+            {
+              "op": "reasoning"
+            },
+            {
+              "op": "reasoning",
+              "algebra_checks": {
+                "min_area": "2*(4-1)**(3/2)/4"
+              }
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "f17eb54c81fbf4ec867c10a3a50f8bef9d96907745ec9e7c562d8215058cc4d6",
+          "stem": "已知椭圆 {{f1}}。过点 {{f2}} 的直线与 {{f3}} 相交于 {{f4}} 两点。椭圆在 {{f5}} 两点处的切线相交于点 {{f6}}。",
+          "parts": [
+            {
+              "text": "证明：点 {{f7}} 的横坐标为4。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "求 {{f8}} 面积的最小值，并求此时直线 {{f9}} 的方程。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "C:\\frac{x^2}{4}+y^2=1"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "D(1,0)"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "C"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "A,B"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "A,B"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "T"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "T"
+            },
+            "f8": {
+              "kind": "notation",
+              "latex": "\\triangle TAB"
+            },
+            "f9": {
+              "kind": "notation",
+              "latex": "AB"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "证明：点 {{f7}} 的横坐标为4。"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "作变换 \\(X=x/2,Y=y\\)，椭圆变为单位圆，\\(D\\) 变为 \\((\\frac12,0)\\)。设变换后的点为 \\(A',B',T'\\)。由于弦不经过圆心，两个切点不对径，切线不平行。",
+            "切点的半径垂直于切线，所以 \\(\\overrightarrow{OT'}\\cdot\\overrightarrow{OA'}=\\overrightarrow{OT'}\\cdot\\overrightarrow{OB'}=1\\)。若 \\(T'=(s,t)\\)，则弦 \\(A'B'\\) 的方程为 \\(sX+tY=1\\)。代入 \\((\\frac12,0)\\) 得 \\(s=2\\)，故 \\(T\\) 横坐标为4。",
+            "令 \\(|T'|^2=u\\ge4\\)，则弦到圆心的距离为 \\(1/\\sqrt u\\)，弦长为 \\(2\\sqrt{1-1/u}\\)，\\(T'\\) 到弦的距离为 \\(\\sqrt u-1/\\sqrt u\\)。原三角形面积为变换后面积的2倍，即 \\(2(u-1)^{3/2}/u\\)。",
+            "该式在 \\(u\\ge4\\) 严格递增，其导数为 \\(\\sqrt{u-1}(u+2)/u^2>0\\)。取 \\(T'=(2,0)\\) 时达到下界，对应 \\(x=1\\) 的弦确实存在。最小面积为 \\(\\frac{3\\sqrt3}{2}\\)。"
+          ]
+        },
+        "assessment": {
+          "level": 5,
+          "estimated_minutes": 15,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 2,
+            "logical_reasoning": 5,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "原题逆向恢复半圆点，整卷题对任意方向割线建立切点弦关系，并比较变换前后面积"
+          },
+          "points_justification": "横坐标定值转成长度下界，且需检查竖直弦的等号情形",
+          "part_points": [
+            8,
+            9
+          ],
+          "linked_progression": "横坐标定值转成长度下界，且需检查竖直弦的等号情形",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-2:q005",
+              "version_sha256": "1734bf3bdc6ee965e943f9487db76abf19f032659f3f9bb8bacff6b41339ceda",
+              "transfer": "对椭圆作坐标伸缩以得到圆上的直观关系",
+              "structural_difference": "原题逆向恢复半圆点，整卷题对任意方向割线建立切点弦关系，并比较变换前后面积"
+            }
+          ],
+          "novel_structure": "横坐标定值转成长度下界，且需检查竖直弦的等号情形",
+          "reasoning_target": "横坐标定值转成长度下界，且需检查竖直弦的等号情形"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  },
+  {
+    "version": "full-v4",
+    "reason": "旧卷对照发现排列约束近似及指数余项商重复，整体替换",
+    "candidate_file_sha256": "2e781a34afd6f199f6e6867f4cc94cc14a37c48dc8970d6167c7a79982d6c14f",
+    "independent_record_sha256": "bbced6038c9b79718dbb1ded7a5074519330152cc0296ad7a2dcc782a6c30ad4",
+    "affected_candidates": [
+      {
+        "id": "orig:ai:calibration:full:06:v2",
+        "order": 6,
+        "kind": "single_choice",
+        "points": 5,
+        "module": "排列组合",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "甲、乙、丙、丁、戊五名学生排成一列。若甲、乙不相邻，且丙排在丁之前，则不同排法的种数为",
+            "asks": []
+          },
+          "tasks": [
+            {
+              "op": "evaluate",
+              "expression": "(factorial(5)-2*factorial(4))/2"
+            }
+          ],
+          "options": {
+            "A": {
+              "semantic_value": "24"
+            },
+            "B": {
+              "semantic_value": "30"
+            },
+            "C": {
+              "semantic_value": "48"
+            },
+            "D": {
+              "semantic_value": "36"
+            }
+          }
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "a17b69fb8e634717123c9f97e8b2d3ebf5328fabded83ddebbc27f0872f4fe2f",
+          "stem": "甲、乙、丙、丁、戊五名学生排成一列。若甲、乙不相邻，且丙排在丁之前，则不同排法的种数为",
+          "parts": [],
+          "options": {
+            "A": "24",
+            "B": "30",
+            "C": "48",
+            "D": "36"
+          },
+          "formulae": {},
+          "condition_anchors": [
+            "甲、乙、丙、丁、戊五名学生排成一列。若甲、乙不相邻，且丙排在丁之前，则不同排法的种数为"
+          ],
+          "request_anchors": [
+            "甲、乙、丙、丁、戊五名学生排成一列。若甲、乙不相邻，且丙排在丁之前，则不同排法的种数为"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "去掉甲、乙相邻的排法后有 \\(5!-2\\cdot4!=72\\) 种。交换丙、丁的位置保持甲、乙不相邻，并一一交换丙、丁的先后顺序，故取一半得36种，选D。"
+          ]
+        },
+        "assessment": {
+          "level": 2,
+          "estimated_minutes": 3,
+          "dimensions": {
+            "knowledge": 2,
+            "condition_comprehension": 2,
+            "modeling": 2,
+            "logical_reasoning": 2,
+            "calculation": 2,
+            "integration": 2,
+            "breakthrough_visibility": 3,
+            "source_level_difference": "原题的对称来自随机配对，本题交换两人给出组合计数等分"
+          },
+          "points_justification": "容斥与不动点为空的交换配对",
+          "part_points": [],
+          "linked_progression": "",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-1:q014",
+              "version_sha256": "96638baf69bcf66d2b0b0b612088b1c157a9ad422275ef6f189d4c921c985ea7",
+              "transfer": "固定条件后利用保持该条件的对称配对",
+              "structural_difference": "原题的对称来自随机配对，本题交换两人给出组合计数等分"
+            }
+          ],
+          "novel_structure": "容斥与不动点为空的交换配对",
+          "reasoning_target": "容斥与不动点为空的交换配对"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      },
+      {
+        "id": "orig:ai:calibration:full:19:v2",
+        "order": 19,
+        "kind": "constructed_response",
+        "points": 17,
+        "module": "导数",
+        "math_spec": {
+          "symbols": [],
+          "givens": {
+            "problem_statement": "对 \\(x>0\\)，定义 \\(g(x)=\\frac{e^x-1-x}{x^2}\\)。",
+            "asks": [
+              "证明：\\(\\frac12+\\frac x6<g(x)<\\frac{e^x}{2}\\)。",
+              "求使 \\(e^x\\ge 1+x+ax^2\\) 对所有 \\(x>0\\) 成立的实数 \\(a\\) 的取值范围。若 \\(a>\\frac12\\)，证明方程 \\(g(x)=a\\) 有唯一解 \\(x_a\\)，且 \\(\\ln(2a)<x_a<6(a-\\frac12)\\)。"
+            ]
+          },
+          "tasks": [
+            {
+              "op": "reasoning",
+              "expression": "exp(x)-1-x-x**2/2-x**3/6"
+            },
+            {
+              "op": "reasoning",
+              "expression": "(exp(x)-1-x)/x**2"
+            }
+          ]
+        },
+        "writing": {
+          "version": 1,
+          "spec_sha256": "66fed5a63d7c382b7c48e1fcf2d748fa0586c55f8a38210c9cb0159edf4b7d91",
+          "stem": "对 {{f1}}，定义 {{f2}}。",
+          "parts": [
+            {
+              "text": "证明：{{f3}}。",
+              "task_refs": [
+                0
+              ]
+            },
+            {
+              "text": "求使 {{f4}} 对所有 {{f5}} 成立的实数 {{f6}} 的取值范围。若 {{f7}}，证明方程 {{f8}} 有唯一解 {{f9}}，且 {{f10}}。",
+              "task_refs": [
+                1
+              ]
+            }
+          ],
+          "options": {},
+          "formulae": {
+            "f1": {
+              "kind": "notation",
+              "latex": "x>0"
+            },
+            "f2": {
+              "kind": "notation",
+              "latex": "g(x)=\\frac{e^x-1-x}{x^2}"
+            },
+            "f3": {
+              "kind": "notation",
+              "latex": "\\frac12+\\frac x6<g(x)<\\frac{e^x}{2}"
+            },
+            "f4": {
+              "kind": "notation",
+              "latex": "e^x\\ge 1+x+ax^2"
+            },
+            "f5": {
+              "kind": "notation",
+              "latex": "x>0"
+            },
+            "f6": {
+              "kind": "notation",
+              "latex": "a"
+            },
+            "f7": {
+              "kind": "notation",
+              "latex": "a>\\frac12"
+            },
+            "f8": {
+              "kind": "notation",
+              "latex": "g(x)=a"
+            },
+            "f9": {
+              "kind": "notation",
+              "latex": "x_a"
+            },
+            "f10": {
+              "kind": "notation",
+              "latex": "\\ln(2a)<x_a<6(a-\\frac12)"
+            }
+          },
+          "condition_anchors": [
+            "{{f1}}"
+          ],
+          "request_anchors": [
+            "证明：{{f3}}。"
+          ],
+          "definitions": [],
+          "used_symbols": []
+        },
+        "solution": {
+          "paragraphs": [
+            "令 \\(H(x)=e^x-1-x-\\frac{x^2}2-\\frac{x^3}6\\)。\\(H(0)=H'(0)=H''(0)=0\\)，而 \\(H'''(x)=e^x-1>0\\)，逐次应用单调性可知 \\(H(x)>0\\)。",
+            "令 \\(K(x)=\\frac{x^2e^x}2-e^x+1+x\\)。\\(K(0)=K'(0)=0\\)，且 \\(K''(x)=e^x(\\frac{x^2}2+2x)>0\\)，故 \\(K(x)>0\\)。两式除以 \\(x^2\\) 即得第一问。",
+            "第一问的上下界在 \\(x\\) 从右趋于0时均趋于 \\(\\frac12\\)，故 \\(g\\) 的下确界为 \\(\\frac12\\)。全域条件等价于 \\(a\\le\\frac12\\)。又 \\(x^3g'(x)=e^x(x-2)+x+2\\)。右式与其一阶导数在0均为0，二阶导数 \\(xe^x>0\\)，故 \\(g\\) 严格递增。",
+            "由第一问下界，\\(g\\) 在正半轴无上界。因此 \\(a>\\frac12\\) 时有唯一解。将 \\(x=x_a\\) 代入第一问两个严格界并取对数或移项，即得所需结论。"
+          ]
+        },
+        "assessment": {
+          "level": 5,
+          "estimated_minutes": 15,
+          "dimensions": {
+            "knowledge": 3,
+            "condition_comprehension": 4,
+            "modeling": 2,
+            "logical_reasoning": 5,
+            "calculation": 3,
+            "integration": 3,
+            "breakthrough_visibility": 1,
+            "source_level_difference": "原题靠奇对称处理全域阈值，本题围绕指数余量建立两边严格界，再据此定位唯一正根"
+          },
+          "points_justification": "首问同时给极限、无界性和定位；次问另证严格单调完成唯一性",
+          "part_points": [
+            8,
+            9
+          ],
+          "linked_progression": "首问同时给极限、无界性和定位；次问另证严格单调完成唯一性",
+          "empirical": false
+        },
+        "research_design": {
+          "references": [
+            {
+              "occurrence_id": "2024-cn-math-new-gaokao-1:q018",
+              "version_sha256": "234ec8f731ab4d4ee5ea8f1647e19d7696a6166be52ce6d2b2f4a6739fcccb06",
+              "transfer": "用局部必要性和全域充分性衔接参数题",
+              "structural_difference": "原题靠奇对称处理全域阈值，本题围绕指数余量建立两边严格界，再据此定位唯一正根"
+            }
+          ],
+          "novel_structure": "首问同时给极限、无界性和定位；次问另证严格单调完成唯一性",
+          "reasoning_target": "首问同时给极限、无界性和定位；次问另证严格单调完成唯一性"
+        },
+        "generation": {
+          "provider": "host_ai",
+          "template_calls": 0
+        }
+      }
+    ]
+  }
+]

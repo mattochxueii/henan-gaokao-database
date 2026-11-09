@@ -1,0 +1,144 @@
+{
+  "pdf_sha256": "52671b123f2d69e9f0b38d9dd91f6bcf336a82132f7a6f1e8d420093c4d82269",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "8a814a656b48672b8fa1940d518371066c87c5846ba3b0e0737b3013322222f2"
+    },
+    {
+      "number": 2,
+      "sha256": "ae1e0a1f69c817ae846159a94491b70957b57b30614a9fb17583068f4fad897c"
+    },
+    {
+      "number": 3,
+      "sha256": "72bb6ade795d2314f2ecb3dc57667b4e99963c26b8002e77c92eefc45b7ae7c2"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "直线 y=x+c 与抛物线 y=x² 交于两个相异点 A、B。两点的切线交于 P，且 △PAB 面积为 2。",
+      "request_understood": "求实数 c 的值。",
+      "independent_solution": "设交点横坐标为 u、v。二者为 t²−t−c=0 的两相异实根，故 u+v=1，uv=−c，且 D=1+4c>0。两切线 y=2ux−u² 与 y=2vx−v² 相交于 P=((u+v)/2,uv)=(1/2,−c)。弦长 |AB|=√2|u−v|=√(2D)。P 到弦 y=x+c 的距离为 |1/2+2c|/√2=D/(2√2)，因此面积为 D^(3/2)/4。令其为 2 得 D=4，故 c=3/4。该值满足 D>0，且面积式在 D>0 上严格递增，因而解唯一。",
+      "answer": "c=3/4",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "由弦的方程建立交点参数，再用韦达定理、两切线交点与点到直线距离将面积归结为判别式的 3/2 次幂。也可用保面积的坐标变换 X=x−1/2、Y=y−x+1/4，将弦化为水平线 Y=c+1/4，再借对称性直接求面积。单空设问紧凑，推理和运算与 5 分相称。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "中心在 O 的椭圆 x²/9+y²/4=1 被两条互相垂直的过 O 直线所截。A、C 分别取自两条直线的交点。",
+      "request_understood": "求两条径向距离的倒数平方之和 1/|OA|²+1/|OC|²。",
+      "independent_solution": "设第一条直线的单位方向为 (c,s)，其中 c²+s²=1。其垂直方向可取 (−s,c)。将 OA、OC 的长度乘各自单位方向代入椭圆式，分别得倒数平方 c²/9+s²/4 与 s²/9+c²/4，相加为 1/9+1/4。取方向的正负以及水平或竖直的情形均已包含。",
+      "answer": "13/36",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "倒数平方将径向距离变成方向上的二次式，垂直性使方向分量交换，两个长度的和式因此成为不变量。单位方向、三角或斜率均可建模，斜率法需单独照顾坐标轴。单空且运算精简，5 分合适。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "给出的有限斜率直线 y=k(x−3) 过 (3,0)，且与双曲线 x²/4−y²=1 的右支交于两相异点。",
+      "request_understood": "先求 k 的范围，再求弦 AB 的中点轨迹并确定实际取值范围。",
+      "independent_solution": "令 s=4k²，代入得 (1−s)x²+6sx−9s−4=0。s=1 时方程退化为一次。s<1 时两根乘积为负，不能同在右支。s>1 时判别式 20s+16>0，根和 6s/(s−1)>0、根积 (9s+4)/(s−1)>0，故两根都为正，因交点在双曲线上而都属于右支。设中点为 (X,Y)，则 X=3s/(s−1)>3，Y=k(X−3)，消去 k 得 4Y²=X(X−3)。反过来，对满足该式且 X>3 的点取 k=Y/(X−3)，得到 4k²=X/(X−3)>1，韦达中点正是 (X,Y)。",
+      "answer": "（1）|k|>1/2。（2）4y²=x(x−3)，x>3。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "右支条件要求判别式之外判断同号并处理一次退化，随后中点坐标将范围转移到轨迹的精确限制，还可用点差法或几何分支分析处理相关步骤。两问连贯，13 分与工作量相称。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "P(u,v) 在椭圆 x²+4y²=4 的第一象限部分，切线与 x、y 轴交于 A、B，O 为原点。",
+      "request_understood": "求切线方程、截距三角形面积的最小值及其取到时的 P 坐标。",
+      "independent_solution": "由椭圆在 P 的梯度 (2u,8v) 或隐式求导，切线为 ux+4vy=4。其两个正截距为 4/u、1/v，所以面积为 2/(uv)。由 u²+4v²=4 得 (u−2v)²=4−4uv≥0，故 uv≤1。等号在 u=2v 时达到，由 u,v>0 得 P=(√2,1/√2)，面积为 2。",
+      "answer": "（1）ux+4vy=4。（2）最小面积 2，P=(√2,1/√2)。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 1,
+        "originality": 0
+      },
+      "quality_evidence": "切线方程、截距和固定平方和下的积最大值相互衔接，求导、判别式、参数或均值不等式均可发挥作用。题型传统，推理较直接，12 分处于可接受范围的上端。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "抛物线 y=x² 上 A(u,u²)、B(v,v²) 相异且 u,v 非零，两点的法线互相垂直并交于 P。",
+      "request_understood": "证明弦 AB 与 y 轴交于固定点并求坐标，再求两法线交点 P 的完整可达轨迹。",
+      "independent_solution": "法线斜率为 −1/(2u) 和 −1/(2v)，垂直给出 uv=−1/4。弦方程为 y=(u+v)x−uv，故 y 轴截点恒为 (0,1/4)。两条法线方程分别为 y=u²+1/2−x/(2u) 与 y=v²+1/2−x/(2v)。设交点为 (X,Y)，相减并用 u≠v 得 X=−2uv(u+v)=(u+v)/2。代回并用 uv=−1/4 得 Y=u²+v²+1/4=(u+v)²+3/4=4X²+3/4。对任意实数 X，令 u,v 为 t²−2Xt−1/4=0 的两根，判别式 4X²+1>0 且积为 −1/4，因而是相异非零实根，所得两条法线满足题设并交于 (X,4X²+3/4)。",
+      "answer": "（1）(0,1/4)。（2）y=4x²+3/4，x∈ℝ，整条轨迹可达。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "正交条件引出对称参数乘积，支撑定点与法线交点两个结论。第二问明确要求逆向构造，二次方程给出全域可达性。可用两法线联立或用各法线斜率互为负倒数进行构造，14 分合适。"
+    }
+  ]
+}

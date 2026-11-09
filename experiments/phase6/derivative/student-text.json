@@ -1,0 +1,84 @@
+{
+  "title": "导数专项研究",
+  "minutes": 60,
+  "total_points": 52,
+  "questions": [
+    {
+      "id": "orig:ai:calibration:derivative:01:v2",
+      "order": 1,
+      "kind": "fill_in",
+      "points": 5,
+      "stem": "曲线 \\(y=\\ln x+\\frac1x\\) 有两条斜率为 \\(\\frac29\\) 的切线。这两条切线在 \\(y\\) 轴上截距之差的绝对值为________。",
+      "parts": [],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:derivative:02:v2",
+      "order": 2,
+      "kind": "fill_in",
+      "points": 5,
+      "stem": "若方程 \\(x^3-3x+a=0\\) 有三个不同的实数根，且其中一个根在区间 \\((0,1)\\) 内，则实数 \\(a\\) 的取值范围为________。",
+      "parts": [],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:derivative:03:v2",
+      "order": 3,
+      "kind": "constructed_response",
+      "points": 15,
+      "stem": "设 \\(a>0\\)，函数 \\(f_a(x)=\\ln x-a(x-1)\\) 的定义域为 \\((0,+\\infty)\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "讨论 \\(f_a(x)\\) 的零点个数，并说明当它有两个零点时，除1之外的零点在1的哪一侧。"
+        },
+        {
+          "label": "（2）",
+          "text": "若 \\(r>1\\) 且 \\(f_a(r)=0\\)，证明 \\(\\frac{2}{r+1}<a<\\frac1{\\sqrt{r}}\\)。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:derivative:04:v2",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 12,
+      "stem": "已知函数 \\(f(x)=x^4-4x^3+4x^2\\)，水平直线 \\(y=h\\) 与它的图像相交。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "若共有四个不同的交点，求 \\(h\\) 的取值范围。"
+        },
+        {
+          "label": "（2）",
+          "text": "若四个交点从左到右的横坐标成等差数列，求 \\(h\\)。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:derivative:05:v2",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 15,
+      "stem": "设 \\(f(x)=e^x-1-x\\)，\\(t>0\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "证明方程 \\(f(x)=t\\) 恰有两个实数根，分别记为 \\(u<0<v\\)。"
+        },
+        {
+          "label": "（2）",
+          "text": "证明：\\(v<-u<v+t\\)。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    }
+  ]
+}

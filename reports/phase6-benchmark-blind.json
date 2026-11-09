@@ -1,0 +1,53 @@
+{
+  "input_file": "blind-pairs-final-student-only.json",
+  "input_sha256": "a8451795a94622267ef377c7b587fd28417a18563f289108a5000c7065f5c609",
+  "blind_scope": "Source identity and authorship were not supplied. The only question-content input was the final anonymous student-facing packet, including visible point totals.",
+  "assessment_basis": "Mathematical claims below are independently derived from the prompts. Comparative depth, style, originality, readability, and point fit are subjective editorial AI estimates without student data or a marking rubric.",
+  "pairs": {
+    "A": {
+      "mathematical_evidence": {
+        "left": "At n=1, a₂=1. Subtracting consecutive square-sum identities yields the additive recurrence. The target determinant has value 1 at n=2 and reverses sign at each step by substitution of the recurrence.",
+        "right": "The quotient is (n+2)/3. Consecutive partial-sum identities give aₙ/aₙ₋₁=(n+1)/(n−1), hence aₙ=n(n+1)/2. The reciprocal sum telescopes to 2n/(n+1)."
+      },
+      "editorial_estimates": {
+        "style_and_progression": "Both use compact sequence prompts with a genuine handoff between parts. Left moves directly from differencing to an invariant proof. Right adds a progression-to-ratio conversion before differencing, then changes representation twice to reach a telescoping sum.",
+        "depth_and_flexibility": "Left has a less signposted proof step and rewards recognizing the sign-reversing determinant or arranging an induction. Right has more routine symbolic work and permits deriving the explicit term by products or induction. Left is stronger for proof invention and right for chaining representations.",
+        "readability_and_points": "Both are readable with low notation overhead. The 12 versus 10 allocation is plausible for the less signposted proof on the left, but the right can take comparable time because it has more algebraic transitions.",
+        "structural_originality": "Left's combination of a square-sum identity and a determinant proof is more distinctive within the pair. Each uses recognizable sequence techniques.",
+        "comparator_fit": "Close. Both assess extracting a local recurrence from cumulative information and exploiting it in a second part."
+      }
+    },
+    "B": {
+      "mathematical_evidence": {
+        "left": "The numerator of K′ over x³sin²x is N=x²+x sin x cos x−2sin²x. It satisfies N(0)=N′(0)=0 and N″=4 sin x(sin x−x cos x)>0. For H(x)=sin x/x−b cos x, H′=sin x(b−K). A strictly increasing K allows at most one sign change of H′, from positive to negative. Every interior H value is strictly above the smaller endpoint limit, so the exact conditions are a≤2/π and a+b≤1. Interior equality is impossible.",
+        "right": "With b=0 the derivative's variable contribution has minimum 2, giving a≥−2. Recenter at t=x−1 to show symmetry about (1,a). Continuity at x=1 in the last part forces a=−2. The shifted expression is odd and its derivative is t²[2/(1−t²)+3b], so the sharp condition is b≥−2/3."
+      },
+      "editorial_estimates": {
+        "style_and_progression": "Left uses an economical two-part structure. The first proof is already substantial, and the second gives it a precise purpose without stating the link. Right uses three shorter directives, with accessible derivative and symmetry steps leading to a markedly harder final equivalence.",
+        "depth_and_flexibility": "Left is stronger for constructing a global two-parameter feasible region. A one-turn argument or strict concavity after c=cos x explains why endpoint constraints suffice, including strictness. Right is stronger for coordinating symmetry, continuity at a sign boundary, and a sharp cubic threshold. Its final step can use a derivative factorization or cubic comparison.",
+        "readability_and_points": "The notation is moderate on both sides. Left's first derivative proof carries more trigonometric algebra and its second part demands a hidden substitution. Right's first derivative condition would be clearer with an explicit universal quantifier over the domain. Equal 17-point totals are plausible, with left likely more time-intensive under a standard derivative route. Time and mark equivalence are unmeasured.",
+        "structural_originality": "Left's use of a derivative ratio to turn a trigonometric inequality into two linear parameter bounds is more distinctive within this pair. Right's combination of an odd-centered function and a one-sided threshold is also substantive.",
+        "comparator_fit": "Useful for global derivative-based inequalities and sharp parameters. Weaker for exact matching because left characterizes a region in two parameters and right identifies a single sharp threshold after forcing one parameter."
+      }
+    },
+    "C": {
+      "mathematical_evidence": {
+        "left": "The given points imply a²=12, b²=9 and eccentricity 1/2. The area condition gives x+2y=−6 or x+2y=18 for B. The latter misses the ellipse because its maximum x+2y is 4√3. The former yields B=(0,−3) or B=(−3,−3/2), giving y=3x/2−3 and y=x/2.",
+        "right": "Every allowed chord is x+qy=1. Its tangent equations imply T=(4,q). Scaling x by 1/2 gives a unit-circle chord at distance p=1/√(4+q²) from the origin. The original area is 2(1−p²)^(3/2)/p, strictly decreasing on 0<p≤1/2. The minimum is 3√3/2, attained on x=1. The explicit nonhorizontal condition excludes exactly the parallel-tangent chord and includes the minimizer."
+      },
+      "editorial_estimates": {
+        "style_and_progression": "Both are short, conventional two-part conic prompts. Left's first part finds the ellipse and the second converts fixed area into a locus for B. Right's first part establishes a tangent-intersection locus that directly supports a global area extremum.",
+        "depth_and_flexibility": "Left is stronger for geometric translation and exhaustive elimination of a signed branch. Determinants and point-to-line distances both work. Right is stronger for integrating tangent geometry with optimization and offers coordinate and affine-circle routes. Its higher modeling demand need not require more algebra on the affine route.",
+        "readability_and_points": "Left has simple setup and moderate algebra. Right introduces more geometric objects but explicitly states the chord restriction. The 15 versus 17 totals are plausible given the global proof and optimization on the right.",
+        "structural_originality": "Right's fixed tangent locus coupled to an extremum is more distinctive within the pair. Left uses the familiar fixed-area locus idea and adds a meaningful feasibility check.",
+        "comparator_fit": "Useful for conic and area reasoning, with limited exact matching because the geometric models and outcomes differ."
+      }
+    }
+  },
+  "residual_assessment_risks": [
+    "Three pairs support only local item comparisons. They do not establish overall quality or score equivalence.",
+    "Visible totals may anchor judgment. Student times, responses, scoring rubrics, and permitted methods were unavailable.",
+    "The comparative estimates come from one editorial AI assessment. They do not establish empirical difficulty, discrimination, reliability, or fairness.",
+    "Originality judgments concern only the visible constructions and their differences within each pair. No inference about global novelty, provenance, or publication overlap is possible."
+  ]
+}

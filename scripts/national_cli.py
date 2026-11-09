@@ -38,6 +38,7 @@ def main():
         q.add_argument("--subject", default="math")
         q.add_argument("--include-candidate-usage", action="store_true")
         q.add_argument("--include-quarantined", action="store_true")
+        q.add_argument("--verified-only", action="store_true")
         q.add_argument("--output", type=__import__("pathlib").Path)
     q = a.add_parser("reference-pack")
     q.add_argument("--topic")
@@ -46,6 +47,7 @@ def main():
     q.add_argument("--target-region", default="河南")
     q.add_argument("--target-year", type=int, default=2027)
     q.add_argument("--output", type=__import__("pathlib").Path)
+    q.add_argument("--verified-only", action="store_true")
     for name in ("stats", "validate", "build-index"):
         a.add_parser(name)
     q = a.add_parser("sqlite-query")
@@ -77,6 +79,7 @@ def main():
                 topic=args.topic,
                 kind=args.kind,
                 limit=args.limit,
+                verified_only=args.verified_only,
                 target_region=args.target_region,
                 target_year=args.target_year,
             )
@@ -97,7 +100,9 @@ def main():
             result = db.sqlite_query(args.root, args.year, args.series, args.number)
         else:
             if db.local_archive.public_edition(args.root):
-                raise ValueError("公开版请使用 local_data.py import 或可选的个人备份恢复")
+                raise ValueError(
+                    "公开版请使用 local_data.py import 或可选的个人备份恢复"
+                )
             from national_backup import restore_national
 
             result = restore_national(args.root, args.key, args.destination)

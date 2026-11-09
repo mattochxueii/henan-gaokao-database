@@ -8,21 +8,32 @@ from storage import atomic_json
 from .editorial import compile_writing
 from .student_pdf import render
 from .school_solver import solve_spec
+from .research_quality import (
+    PROTOCOL,
+    require_specialty_certificates,
+    uses_protocol,
+    verify_blind_quality,
+    verify_design,
+)
 
 VERSION = "exam-workflow-v1"
 
 
-def prepare(root, document, output, pilot_certificate=None):
+def prepare(root, document, output, pilot_certificate=None, specialty_certificates=()):
     output = Path(output)
     require(not output.exists(), "使用新目录保留旧候选和失败记录")
     require(document.get("schema_version") == 2, "须提供带中文写作层的v2候选")
+    require(document.get("research_protocol") in (None, PROTOCOL), "未知的研究命题协议")
     require(
         document["provenance"]["mode"] == "ai"
         and document["provenance"]["template_calls"] == 0,
         "不是AI动态创作候选",
     )
     mode = document["paper"]["mode"]
-    if mode == "full":
+    verify_design(root, document)
+    if mode == "full" and uses_protocol(document):
+        require_specialty_certificates(specialty_certificates)
+    elif mode == "full":
         require(pilot_certificate is not None, "整卷生成前须通过5题样卷")
         cert = read_json(pilot_certificate)
         require(
@@ -49,7 +60,15 @@ def prepare(root, document, output, pilot_certificate=None):
             student = compile_writing(q)
             result = solve_spec(q["math_spec"])
             require(result["program_checks_passed"], "数学计算失败：" + str(result))
-            if q["kind"] == "single_choice":
+            if q["kind"] == "single_choice" and q["math_spec"].get("assertions"):
+                truth = [r.get("result") for r in result["tasks"]]
+                require(
+                    len(truth) == 4 and all(type(v) is bool for v in truth),
+                    "单选真值须可独立求出",
+                )
+                require(truth.count(True) == 1, "单选正确答案不唯一")
+                result["answer_key"] = "ABCD"[truth.index(True)]
+            elif q["kind"] == "single_choice":
                 values = {
                     k: v["semantic_value"] for k, v in q["math_spec"]["options"].items()
                 }
@@ -105,17 +124,33 @@ def prepare(root, document, output, pilot_certificate=None):
     )
     if mode == "full":
         kinds = [q["kind"] for q in presentation["questions"]]
+        if uses_protocol(document):
+            from national_db import target
+
+            configuration = read_json(root / target(root)["structure_source"])
+            sections = configuration["blueprint"]["sections"]
+            expected_kinds = [s["kind"] for s in sections for _ in range(s["count"])]
+            expected_points = [
+                p
+                for s in sections
+                for p in (
+                    s["points"] if "points" in s else [s["points_each"]] * s["count"]
+                )
+            ]
+        else:
+            expected_kinds = (
+                ["single_choice"] * 8
+                + ["multiple_choice"] * 3
+                + ["fill_in"] * 3
+                + ["constructed_response"] * 5
+            )
+            expected_points = [5] * 8 + [6] * 3 + [5] * 3 + [13, 15, 15, 17, 17]
         require(
-            kinds
-            == ["single_choice"] * 8
-            + ["multiple_choice"] * 3
-            + ["fill_in"] * 3
-            + ["constructed_response"] * 5,
+            kinds == expected_kinds,
             "完整卷型结构不符",
         )
         require(
-            [q["points"] for q in presentation["questions"]]
-            == [5] * 8 + [6] * 3 + [5] * 3 + [13, 15, 15, 17, 17],
+            [q["points"] for q in presentation["questions"]] == expected_points,
             "完整卷分值结构不符",
         )
     atomic_json(output / "student-text.json", presentation)
@@ -250,6 +285,7 @@ def publish(output, review_path, comparison_path):
         "不满足考生视角独立盲审",
     )
     require(review.get("overall_pass") is True, "整卷考生视角/风格审查未通过，禁止发布")
+    verify_blind_quality(raw, review)
     reviewed_pages = [
         {"number": p["number"], "sha256": p["sha256"]} for p in review["pages"]
     ]

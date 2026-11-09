@@ -10,7 +10,9 @@ def context(root, include_local=True):
     from local_archive import public_edition, read_bundle
 
     public = public_edition(root)
-    records = list(read_lines(root / "analysis/questions.jsonl"))
+    records = (
+        list(read_lines(root / "analysis/questions.jsonl")) if include_local else []
+    )
     applied = []
     override_path = root / "analysis/review-overrides.json"
     if override_path.is_file():
@@ -50,12 +52,12 @@ def context(root, include_local=True):
             "question_registry_is_not_full_text": True,
             "retrieval_entry": "national_cli.py research --target-region 河南 --target-year 2027",
         }
-    if (public and include_local) or national_summary.get("full_history_available"):
+    if include_local and (public or national_summary.get("full_history_available")):
         national_summary["bounded_reference_packs"] = planning_references(root)
         if public:
             national_summary["dataset_scope"] = "原创样本与用户本地导入资料"
-    elif public:
-        national_summary["dataset_scope"] = "外部模型不接收本地导入资料"
+    elif not include_local:
+        national_summary["dataset_scope"] = "外部模型不接收本地历史题面或逐题分析"
     return {
         "rules": read_json(root / "analysis/rules.json"),
         "analyses": [

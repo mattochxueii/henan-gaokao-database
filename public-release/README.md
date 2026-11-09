@@ -35,4 +35,6 @@ PDF 盲审需要 Poppler 的 `pdftoppm`。如系统未找到合适的中文字�
 
 ## 数据与贡献
 
+使用 [校准与专项协议](skills/henan-math/references/calibration.md) 绑定已复核的本地题目版本和独立审题。已发布的原创练习可记录匿名作答、时间、得分和常见误区，见 [作答反馈](skills/henan-math/references/student-feedback.md)。
+
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。

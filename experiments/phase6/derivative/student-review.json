@@ -1,0 +1,144 @@
+{
+  "pdf_sha256": "2726953682f2434f4dedadf9f93232fdb8379fa125783f88c1081a9337e9c610",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "65d502befa46dc71e08d2450816dd75f90951ad35d010e21e75ae77f365c5727"
+    },
+    {
+      "number": 2,
+      "sha256": "f6f8f6a3e7d26ec77977ad4ced9f2af2cfe8a397474aed94f842c71bba945502"
+    },
+    {
+      "number": 3,
+      "sha256": "4397e7abd1224ccd3afcb2aff1dbf291445b2b93b436639e885d118bd1cf6995"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "Let f(x)=ln x+1/x for x>0. A tangent with slope 2/9 touches at an abscissa s satisfying f′(s)=(s−1)/s²=2/9. This is equivalent to (2s−3)(s−3)=0, so the two tangencies occur at s=3/2 and s=3. The y-intercept is b(s)=f(s)−2s/9. Thus b(3/2)=ln(3/2)+1/3 and b(3)=ln 3−1/3. Since b′(s)=−(2s−3)(s−3)/(9s²)>0 for 3/2<s<3, b(3)>b(3/2), so the absolute difference is ln 2−2/3.",
+      "answer": "ln 2−2/3",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "The fixed slope determines both contact points and makes the tangent intercepts values of a single shifted function. Its derivative gives the exact order of the intercepts. A student can also compute the tangent equations and retain absolute-value notation or prove the sign with a separate logarithmic inequality. The contact abscissae give clean arithmetic and a nontrivial exact difference. The fractions, absolute difference, and y-axis are clear at page scale and in the enlarged crop. Five points fit the compact derivative and intercept computation. The comparison of parallel tangent intercepts gives this short item a distinctive structure."
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "P(x)=x³−3x+a decreases strictly on (0,1). It has an interior zero there exactly when P(0)=a>0 and P(1)=a−2<0. For 0<a<2, P(−1)=a+2>0 and P(1)<0. The limits at −∞ and +∞ yield two further roots in (−∞,−1) and (1,∞). The three disjoint intervals guarantee distinct roots, and a cubic has at most three.",
+      "answer": "a∈(0,2)",
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "The familiar cubic model links a local root condition with a global count. The local condition suffices, as seen from the endpoint signs. Another route inverts the equation on (0,1) and uses the cubic discriminant or factors out the guaranteed root. The strict endpoints and distinctness are clear in the current rendering. Five points fit the concise necessity and sufficiency check."
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "f_a′(x)=1/x−a. The function strictly increases up to x=1/a and strictly decreases afterward, tends to −∞ at both ends of its domain, and vanishes at 1. If a=1 its maximum is at 1 and this is its sole zero. Otherwise the maximum is strictly positive, and there is one zero on each side of 1/a. For 0<a<1 the additional zero exceeds 1/a>1. For a>1 it is less than 1/a<1. For (2), a=ln(r)/(r−1). Let H(r)=ln(r)−2(r−1)/(r+1) and K(r)=(r−1)/√r−ln(r), both zero at 1. For r>1, their respective derivatives (r−1)²/[r(r+1)²] and (√r−1)²/(2r^(3/2)) are positive. Thus H(r),K(r)>0. Dividing by r−1 gives the claimed bounds.",
+      "answer": "a=1 gives one zero at 1. For 0<a<1 the extra zero lies to the right of 1, and for a>1 it lies to the left. If r>1 is a zero, 2/(r+1)<a<1/√r.",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "The fixed zero and changing critical point organize the parameter cases, then the root equation expresses a as a logarithmic divided difference. Two auxiliary functions with factored derivatives prove the strict bounds. One can also pair terms when integrating 1/x or substitute r=e^(2s). The connected parts merit 15 points. The closing parenthesis in a(x−1), the zero in f_a(r)=0, and both bounds are fully legible in the current full-page PNG and enlarged PDF crop."
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "Write f(x)=((x−1)²−1)². For h>0, the equations (x−1)²=1+√h and (x−1)²=1−√h produce four distinct roots exactly when 1−√h>0. At h=0 the two equations coincide, and h<0 gives no roots. With A=√(1+√h) and B=√(1−√h), the sorted roots are 1−A, 1−B, 1+B, 1+A. They form an arithmetic progression exactly when A−B=2B. Then 1+√h=9(1−√h), so √h=4/5. This value is in the required range and yields the progression.",
+      "answer": "(1) 0<h<1. (2) h=16/25.",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "The composition of squares exposes the four-root structure and symmetry about x=1. The ordered arithmetic progression then compares an outer gap with the central gap. A critical-point analysis followed by symmetry, direct factorization, or comparison of coefficients provides alternatives. The first part establishes the setting for the parameter constraint. Symbols and outputs are clear. Twelve points fit the classification and gap calculation."
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "independent_solution": "With f(x)=e^x−1−x, the derivative e^x−1 makes f strictly decreasing on (−∞,0) and increasing on (0,∞). Its minimum is f(0)=0, and it tends to +∞ at both ends. Therefore f(x)=t for t>0 has exactly one root u<0 and one v>0. Put w=−u and F(s)=f(−s), which strictly increases for s>0. The function e^v−e^(−v)−2v vanishes at 0 and has positive derivative for v>0, so F(v)<f(v)=F(w), yielding v<w. Since v+t=e^v−1, F(v+t)−t=e^(1−e^v)−1+v. The latter expression vanishes at v=0 and has derivative 1−e^(1+v−e^v)>0 for v>0 because e^v>1+v. Hence F(v+t)>t=F(w) and w<v+t.",
+      "answer": "For every t>0, exactly two real roots u<0<v exist and v<−u<v+t.",
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "The first part establishes inverse branches on either side of the minimum. The second compares the negative-branch function at two selected positive inputs. For the upper bound, eliminating t turns a nested exponential inequality into one derivative sign. A separate route takes logarithms for 0<v<1 and handles v≥1 directly. The displacement v+t gives the paired comparison distinctive structure. Fifteen points fit the existence argument and two strict bounds. The current page renders a complete and unambiguous f(x)=t."
+    }
+  ]
+}

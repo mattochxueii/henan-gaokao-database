@@ -1,0 +1,84 @@
+{
+  "title": "解析几何专项研究",
+  "minutes": 60,
+  "total_points": 49,
+  "questions": [
+    {
+      "id": "orig:ai:calibration:geometry:01:v2",
+      "order": 1,
+      "kind": "fill_in",
+      "points": 5,
+      "stem": "直线 \\(y=x+c\\) 与抛物线 \\(y=x^2\\) 交于两个不同的点 \\(A,B\\)。过 \\(A,B\\) 分别作抛物线的切线，两条切线交于 \\(P\\)。若 \\(\\triangle PAB\\) 的面积为2，则 \\(c=\\)________。",
+      "parts": [],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:geometry:02:v2",
+      "order": 2,
+      "kind": "fill_in",
+      "points": 5,
+      "stem": "椭圆 \\(\\frac{x^2}{9}+\\frac{y^2}{4}=1\\) 的中心为 \\(O\\)。两条互相垂直的直线过 \\(O\\)，分别与椭圆交于 \\(A,B\\) 和 \\(C,D\\)。则 \\(\\frac1{|OA|^2}+\\frac1{|OC|^2}=\\)________。",
+      "parts": [],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:geometry:03:v2",
+      "order": 3,
+      "kind": "constructed_response",
+      "points": 13,
+      "stem": "过点 \\((3,0)\\) 的直线 \\(l:y=k(x-3)\\) 与双曲线 \\(\\frac{x^2}{4}-y^2=1\\) 的右支交于两个不同的点 \\(A,B\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求 \\(k\\) 的取值范围。"
+        },
+        {
+          "label": "（2）",
+          "text": "当 \\(k\\) 在该范围内变化时，求线段 \\(AB\\) 的中点轨迹。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:geometry:04:v2",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 12,
+      "stem": "点 \\(P(u,v)\\) 在椭圆 \\(x^2+4y^2=4\\) 的第一象限部分。过 \\(P\\) 作椭圆的切线，与 \\(x\\) 轴、\\(y\\) 轴分别交于 \\(A,B\\)，\\(O\\) 是坐标原点。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "用 \\(u,v\\) 表示这条切线的方程。"
+        },
+        {
+          "label": "（2）",
+          "text": "求 \\(\\triangle OAB\\) 面积的最小值，并求取得最小值时点 \\(P\\) 的坐标。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    },
+    {
+      "id": "orig:ai:calibration:geometry:05:v2",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 14,
+      "stem": "抛物线 \\(C:y=x^2\\) 上有两个不同的点 \\(A(u,u^2),B(v,v^2)\\)，其中 \\(u,v\\) 均不为0。过 \\(A,B\\) 分别作 \\(C\\) 在该点切线的垂线，两条垂线互相垂直，相交于 \\(P\\)。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "证明直线 \\(AB\\) 与 \\(y\\) 轴的交点为定点，并求该点的坐标。"
+        },
+        {
+          "label": "（2）",
+          "text": "求点 \\(P\\) 的轨迹，并说明轨迹上的点都能够取到。"
+        }
+      ],
+      "options": {},
+      "figure": null
+    }
+  ]
+}

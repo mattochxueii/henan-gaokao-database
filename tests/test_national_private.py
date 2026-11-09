@@ -39,7 +39,7 @@ class NationalPrivateTests(unittest.TestCase):
         self.assertTrue(all(r["track"] == "liberal" for r in safe))
 
     def test_source_answers_all_bound_without_authority_upgrade(self):
-        rs = [r for r in db.rows(ROOT) if not r["legacy"]]
+        rs = [r for r in db.rows(ROOT, calibrated=False) if not r["legacy"]]
         for r in rs:
             self.assertEqual(
                 r["answer"]["question_version_sha256"], r["version_sha256"]
@@ -50,7 +50,7 @@ class NationalPrivateTests(unittest.TestCase):
             )
 
     def test_annotations_are_bound(self):
-        rs = db.rows(ROOT)
+        rs = db.rows(ROOT, calibrated=False)
         bound = [r for r in rs if r.get("national_analysis")]
         self.assertEqual(len(bound), 29)
         for r in bound:

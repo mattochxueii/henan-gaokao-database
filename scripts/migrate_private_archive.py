@@ -31,7 +31,7 @@ def migrate(root, output):
             info = read_json(root / config_path)
             expected = info["files"] if isinstance(info, dict) else info
             require(inventory(folder) == expected, "源文件与独立备份库存不一致")
-    records = national.rows(root)
+    records = national.rows(root, calibrated=False)
     counts = Counter(row["paper_id"] for row in records)
     papers = []
     for paper in [

@@ -2,6 +2,8 @@
 
 先看 database.json。公开版可直接读取原创样例和已导入的本地数据，来源目录仅用于定位历史资料。私有存档版可恢复旧库与全国扩容库。source-conflict隔离题默认从研究与命题中排除。调查冲突用 national_cli.py query --include-quarantined 并保留警示。
 
+命题参考优先使用完成原页对照和独立重解的题目。查询和参考包均支持 `--verified-only`。这一级别的证据来自 AI 复核与第三方存档，官方原卷和教师核验另计。见 [校准协议](calibration.md)。
+
 ## 检索
 
 在数据库根目录执行（安装技能scripts/run.py转发research的相同选项）：

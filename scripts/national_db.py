@@ -9,6 +9,7 @@ from gaokao import read_json, read_lines, require, digest
 from analysis_db import fingerprint
 from national_quality import research_eligible
 import local_archive
+import math_calibration
 
 ALIASES = {
     "新高考Ⅰ卷": "cn-new-gaokao-1",
@@ -106,7 +107,7 @@ def legacy_rows(root):
     return result
 
 
-def rows(root, include_legacy=True):
+def rows(root, include_legacy=True, calibrated=True):
     if local_archive.public_edition(root):
         return local_archive.load(root)["rows"]
     require(
@@ -156,7 +157,7 @@ def rows(root, include_legacy=True):
         a = annotations.get(r["occurrence_id"])
         if a and a["version_sha256"] == r["version_sha256"]:
             r["national_analysis"] = a
-    return result
+    return math_calibration.apply(root, result) if calibrated else result
 
 
 def target(root, region="河南", year=2027, subject="math"):
@@ -224,6 +225,7 @@ def query(
     limit=None,
     include_candidate_usage=False,
     include_quarantined=False,
+    verified_only=False,
 ):
     require(limit is None or limit > 0, "limit须为正整数")
     require(
@@ -245,6 +247,9 @@ def query(
     )
     found = []
     for r in rows(root):
+        grade = math_calibration.grade(r)
+        if verified_only and grade != "source_and_solution_reviewed":
+            continue
         if not include_quarantined and not research_eligible(r):
             continue
         if subject and r["subject"] != subject:
@@ -275,6 +280,8 @@ def query(
                 feature_flags,
                 r.get("searchable_analysis"),
                 analysis.get("knowledge"),
+                r.get("deep_analysis", {}).get("knowledge"),
+                r.get("calibration", {}).get("topic"),
             ],
             ensure_ascii=False,
         ):
@@ -284,20 +291,25 @@ def query(
             and analysis.get("difficulty", {}).get("level") != difficulty
         ):
             continue
+        deep = r.get("deep_analysis", {})
         if method and method not in json.dumps(
-            analysis.get("methods", []), ensure_ascii=False
+            [analysis.get("methods"), deep.get("methods")], ensure_ascii=False
         ):
             continue
         if capability and capability not in json.dumps(
-            analysis.get("competencies", []), ensure_ascii=False
+            [analysis.get("competencies"), deep.get("competencies")], ensure_ascii=False
         ):
             continue
+        r = {**r, "confidence": grade}
         if policy:
             r = {**r, "reference_relevance": relevance(r, policy, kind, topic)}
         found.append(r)
     if policy:
         found.sort(
             key=lambda r: (
+                -{"source_and_solution_reviewed": 2, "source_reviewed": 1}.get(
+                    r["confidence"], 0
+                ),
                 -r["reference_relevance"]["score"],
                 -r["year"],
                 r["paper_id"],
@@ -454,10 +466,13 @@ def rebuild_index(root, snapshot=None):
         CREATE INDEX occurrence_number ON occurrence(paper_id,number);
         CREATE TABLE index_state(version TEXT);
         """)
-        if snapshot is not None:
-            connection.execute(
-                "INSERT INTO index_state VALUES (?)", (snapshot["revision"],)
-            )
+        revision = (
+            snapshot["revision"]
+            if snapshot is not None
+            else _calibration_revision(root)
+        )
+        if revision is not None:
+            connection.execute("INSERT INTO index_state VALUES (?)", (revision,))
         papers = (
             snapshot["papers"]
             if snapshot is not None
@@ -524,8 +539,11 @@ def sqlite_query(root, year, series, number):
     path = root / settings(root)["index"]
     if local_archive.public_edition(root):
         snapshot = local_archive.load(root)
-        if not _current_public_index(path, snapshot["revision"]):
+        if not _index_has_revision(path, snapshot["revision"]):
             rebuild_index(root, snapshot)
+    elif (revision := _calibration_revision(root)) is not None:
+        if not _index_has_revision(path, revision):
+            rebuild_index(root)
     require(path.is_file(), "请先build-index")
     with closing(sqlite3.connect(path)) as db:
         db.row_factory = sqlite3.Row
@@ -546,7 +564,19 @@ def sqlite_query(root, year, series, number):
         ]
 
 
-def _current_public_index(path, revision):
+def _calibration_revision(root):
+    ledger = root / math_calibration.LEDGER
+    if ledger.is_file():
+        return fingerprint(
+            {
+                "calibration": digest(ledger),
+                "source": digest(private_folder(root) / "manifest.json"),
+            }
+        )
+    return None
+
+
+def _index_has_revision(path, revision):
     if not path.is_file():
         return False
     try:
@@ -559,7 +589,13 @@ def _current_public_index(path, revision):
 
 
 def reference_pack(
-    root, topic=None, kind=None, target_region="河南", target_year=2027, limit=12
+    root,
+    topic=None,
+    kind=None,
+    target_region="河南",
+    target_year=2027,
+    limit=12,
+    verified_only=False,
 ):
     """Bound actual full-text retrieval by paper, not manifest or popularity."""
     require(limit > 0, "limit须为正整数")
@@ -570,6 +606,7 @@ def reference_pack(
         kind=kind,
         target_region=target_region,
         target_year=target_year,
+        verified_only=verified_only,
     )
     counts = Counter()
     selected = []
@@ -579,7 +616,9 @@ def reference_pack(
             continue
         if counts[row["paper_id"]] >= policy["per_paper_reference_cap"]:
             continue
-        question_id = row.get("question_id", row["occurrence_id"])
+        question_id = row.get("calibration", {}).get("equivalence_id") or row.get(
+            "question_id", row["occurrence_id"]
+        )
         if question_id in seen_questions:
             continue
         seen_questions.add(question_id)
@@ -594,6 +633,7 @@ def reference_pack(
         "per_paper_cap": policy["per_paper_reference_cap"],
         "quarantined_excluded": True,
         "known_disputed_versions_excluded": True,
+        "verified_only": verified_only,
         "one_reference_per_question_master": True,
         "limits": "第三方候选与AI分析；不等于命题机构认证。课标待核样本降权。",
         "version_sha256": fingerprint(
@@ -602,7 +642,7 @@ def reference_pack(
     }
 
 
-def planning_references(root, topics=("数列", "导数"), max_chars=9000):
+def planning_references(root, topics=("数列", "导数", "解析几何"), max_chars=12000):
     """Whole student-facing questions only; do not truncate formulae to fit a prompt."""
     result = {}
     used = 0
@@ -632,6 +672,17 @@ def planning_references(root, topics=("数列", "导数"), max_chars=9000):
             item["source_locator"] = r["source_locator"]
             item["reference_relevance"] = r["reference_relevance"]
             item["candidate_not_official"] = True
+            item["confidence"] = r["confidence"]
+            if r.get("deep_analysis"):
+                item["design_evidence"] = {
+                    field: r["deep_analysis"][field]
+                    for field in (
+                        "condition_design",
+                        "breakthrough",
+                        "progression",
+                        "design_value",
+                    )
+                }
             item["version_notice"] = {
                 "body_state": r.get("curation", {}).get(
                     "body_state", r.get("data_status")

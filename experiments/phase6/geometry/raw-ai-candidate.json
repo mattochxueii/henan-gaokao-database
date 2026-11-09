@@ -1,0 +1,632 @@
+{
+  "schema_version": 2,
+  "research_protocol": "calibrated-v1",
+  "paper": {
+    "mode": "pilot",
+    "title": "解析几何专项研究",
+    "minutes": 60,
+    "total_points": 49
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "not_exposed_by_host",
+    "template_calls": 0,
+    "api_calls": 0,
+    "authorship": "当前宿主基于完整候选卷面与复核结论独立创作；编辑、求解、盲审分别执行",
+    "official_2027_structure_verified": false
+  },
+  "questions": [
+    {
+      "id": "orig:ai:calibration:geometry:01:v2",
+      "order": 1,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "直线 \\(y=x+c\\) 与抛物线 \\(y=x^2\\) 交于两个不同的点 \\(A,B\\)。过 \\(A,B\\) 分别作抛物线的切线，两条切线交于 \\(P\\)。若 \\(\\triangle PAB\\) 的面积为2，则 \\(c=\\)________。",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "equation",
+            "expression": "(1+4*x)**3-64",
+            "domain": [
+              "-1/4",
+              "oo"
+            ]
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "095b47765d6c9025c724d8bce0a61df548d9511e9aefb9d7c73a28c9c7b8ce35",
+        "stem": "直线 {{f1}} 与抛物线 {{f2}} 交于两个不同的点 {{f3}}。过 {{f4}} 分别作抛物线的切线，两条切线交于 {{f5}}。若 {{f6}} 的面积为2，则 {{f7}}________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "y=x+c"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "y=x^2"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\triangle PAB"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "c="
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "________"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "设 \\(A,B\\) 的横坐标为 \\(u,v\\)，则 \\(u+v=1\\)、\\(uv=-c\\)，且 \\(|u-v|=\\sqrt{1+4c}\\)。两切线为 \\(y=2ux-u^2\\) 与 \\(y=2vx-v^2\\)，故 \\(P=(\\frac12,-c)\\)。",
+          "以横坐标差计算底边投影，同时以 \\(P\\) 到弦在同一横坐标处的纵差计算面积，得 \\(S_{\\triangle PAB}=\\frac12|u-v|(\\frac12+2c)=\\frac14(1+4c)^{3/2}\\)。令其为2，得到 \\(c=\\frac34\\)，此时确有两个交点。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "原题从给定外点的割线考判别式和距离积；本题切点已在割线上，切线交点及面积反过来确定割线平移量"
+        },
+        "points_justification": "将切线交点转成弦根的对称量，再用面积还原判别式",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2022-cn-math-new-gaokao-1:q011",
+            "version_sha256": "b63e30ed3fef8c8a3a30dc2ff17a0db3b7e0734be37076774887dc2c68416196",
+            "transfer": "由外点生成切点与割线约束",
+            "structural_difference": "原题从给定外点的割线考判别式和距离积；本题切点已在割线上，切线交点及面积反过来确定割线平移量"
+          }
+        ],
+        "novel_structure": "将切线交点转成弦根的对称量，再用面积还原判别式",
+        "reasoning_target": "将切线交点转成弦根的对称量，再用面积还原判别式"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:geometry:02:v2",
+      "order": 2,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "椭圆 \\(\\frac{x^2}{9}+\\frac{y^2}{4}=1\\) 的中心为 \\(O\\)。两条互相垂直的直线过 \\(O\\)，分别与椭圆交于 \\(A,B\\) 和 \\(C,D\\)。则 \\(\\frac1{|OA|^2}+\\frac1{|OC|^2}=\\)________。",
+          "asks": []
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "e6728caa333f5c4a13460f58ae65fc67e274e5af8de857ddc275a690791891ec",
+        "stem": "椭圆 {{f1}} 的中心为 {{f2}}。两条互相垂直的直线过 {{f3}}，分别与椭圆交于 {{f4}} 和 {{f5}}。则 {{f6}}________。",
+        "parts": [],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\frac{x^2}{9}+\\frac{y^2}{4}=1"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "O"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "O"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "C,D"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\frac1{|OA|^2}+\\frac1{|OC|^2}="
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "________"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "若 \\(OA\\) 方向的单位向量为 \\((s,t)\\)，则 \\(OC\\) 方向可取 \\((-t,s)\\)。代入椭圆方程，\\(\\frac1{|OA|^2}=\\frac{s^2}9+\\frac{t^2}4\\)，另一个倒数将 \\(s,t\\) 的平方互换，故和为 \\(\\frac19+\\frac14=\\frac{13}{36}\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "dimensions": {
+          "knowledge": 2,
+          "condition_comprehension": 2,
+          "modeling": 1,
+          "logical_reasoning": 2,
+          "calculation": 2,
+          "integration": 2,
+          "breakthrough_visibility": 3,
+          "source_level_difference": "原题用焦距和不变量求最大积，本题用正交方向的二次型互补得到恒定和"
+        },
+        "points_justification": "正交方向使二次型的两个权重交换",
+        "part_points": [],
+        "linked_progression": "",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2021-cn-math-new-gaokao-1:q005",
+            "version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+            "transfer": "将几何问题化为消去动点的不变量",
+            "structural_difference": "原题用焦距和不变量求最大积，本题用正交方向的二次型互补得到恒定和"
+          }
+        ],
+        "novel_structure": "正交方向使二次型的两个权重交换",
+        "reasoning_target": "正交方向使二次型的两个权重交换"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:geometry:03:v2",
+      "order": 3,
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "过点 \\((3,0)\\) 的直线 \\(l:y=k(x-3)\\) 与双曲线 \\(\\frac{x^2}{4}-y^2=1\\) 的右支交于两个不同的点 \\(A,B\\)。",
+          "asks": [
+            "求 \\(k\\) 的取值范围。",
+            "当 \\(k\\) 在该范围内变化时，求线段 \\(AB\\) 的中点轨迹。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "ca34cc128224a210345ce48f27959fc5fb22dec080942c2a5902dbdd3907d33c",
+        "stem": "过点 {{f1}} 的直线 {{f2}} 与双曲线 {{f3}} 的右支交于两个不同的点 {{f4}}。",
+        "parts": [
+          {
+            "text": "求 {{f5}} 的取值范围。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "当 {{f6}} 在该范围内变化时，求线段 {{f7}} 的中点轨迹。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "(3,0)"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "l:y=k(x-3)"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\frac{x^2}{4}-y^2=1"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "k"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "k"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "AB"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "求 {{f5}} 的取值范围。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "联立得 \\((1-4k^2)x^2+24k^2x-36k^2-4=0\\)。当 \\(1-4k^2=0\\) 时至多一个交点；二次式的判别式为 \\(16(1+5k^2)>0\\)。两根都正恰要求乘积为正且和为正，即 \\(|k|>\\frac12\\)。正根对应双曲线右支。",
+          "记中点为 \\((X,Y)\\)，韦达定理给 \\(X=\\frac{12k^2}{4k^2-1}>3\\)，又 \\(Y=k(X-3)\\)，得 \\(X(X-3)=4Y^2\\)。反之，若 \\(X>3\\) 且该式成立，取 \\(k=Y/(X-3)\\)，则 \\(k^2=X/[4(X-3)]>\\frac14\\)，按同一公式得到此中点。故轨迹为 \\(x(x-3)=4y^2\\) 中 \\(x>3\\) 的部分。"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 11,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 4,
+          "modeling": 1,
+          "logical_reasoning": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 1,
+          "source_level_difference": "原题是抛物线距离积选项，本题双曲线单支须看根符号，并要求中点轨迹反向构造"
+        },
+        "points_justification": "判别式不够，分支限制和轨迹充分性都需证明",
+        "part_points": [
+          6,
+          7
+        ],
+        "linked_progression": "判别式不够，分支限制和轨迹充分性都需证明",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2022-cn-math-new-gaokao-1:q011",
+            "version_sha256": "b63e30ed3fef8c8a3a30dc2ff17a0db3b7e0734be37076774887dc2c68416196",
+            "transfer": "用判别式结合韦达处理割线",
+            "structural_difference": "原题是抛物线距离积选项，本题双曲线单支须看根符号，并要求中点轨迹反向构造"
+          }
+        ],
+        "novel_structure": "判别式不够，分支限制和轨迹充分性都需证明",
+        "reasoning_target": "判别式不够，分支限制和轨迹充分性都需证明"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:geometry:04:v2",
+      "order": 4,
+      "kind": "constructed_response",
+      "points": 12,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "点 \\(P(u,v)\\) 在椭圆 \\(x^2+4y^2=4\\) 的第一象限部分。过 \\(P\\) 作椭圆的切线，与 \\(x\\) 轴、\\(y\\) 轴分别交于 \\(A,B\\)，\\(O\\) 是坐标原点。",
+          "asks": [
+            "用 \\(u,v\\) 表示这条切线的方程。",
+            "求 \\(\\triangle OAB\\) 面积的最小值，并求取得最小值时点 \\(P\\) 的坐标。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "6fb23e20f922573772a5bdc8e2ce7524498e66cb4134dfa3650ba14ba78a689c",
+        "stem": "点 {{f1}} 在椭圆 {{f2}} 的第一象限部分。过 {{f3}} 作椭圆的切线，与 {{f4}} 轴、{{f5}} 轴分别交于 {{f6}}，{{f7}} 是坐标原点。",
+        "parts": [
+          {
+            "text": "用 {{f8}} 表示这条切线的方程。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求 {{f9}} 面积的最小值，并求取得最小值时点 {{f10}} 的坐标。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "P(u,v)"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "x^2+4y^2=4"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "x"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "y"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "O"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "u,v"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "\\triangle OAB"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "P"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "用 {{f8}} 表示这条切线的方程。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "作变换 \\((x,y)\\mapsto(x,2y)\\)，椭圆变为半径2的圆，切点变为 \\((u,2v)\\)。圆的切线垂直于该半径，变换回去得 \\(ux+4vy=4\\)。",
+          "两截距分别为 \\(4/u,1/v\\)，面积为 \\(2/(uv)\\)。由 \\(u^2+4v^2=4\\) 得 \\(4uv\\le4\\)，等号当且仅当 \\(u=2v\\)。因 \\(u,v>0\\)，最小面积为2，此时 \\(P=(\\sqrt2,\\frac1{\\sqrt2})\\)。"
+        ]
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 10,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 3,
+          "modeling": 1,
+          "logical_reasoning": 3,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 2,
+          "source_level_difference": "原题求半椭圆轨迹，本题将切线关系在圆上处理，再把截距面积作为变换后的优化目标"
+        },
+        "points_justification": "圆半径正交给直线，椭圆二次条件给面积极值",
+        "part_points": [
+          6,
+          6
+        ],
+        "linked_progression": "圆半径正交给直线，椭圆二次条件给面积极值",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2024-cn-math-new-gaokao-2:q005",
+            "version_sha256": "1734bf3bdc6ee965e943f9487db76abf19f032659f3f9bb8bacff6b41339ceda",
+            "transfer": "用可逆坐标缩放转换曲线",
+            "structural_difference": "原题求半椭圆轨迹，本题将切线关系在圆上处理，再把截距面积作为变换后的优化目标"
+          }
+        ],
+        "novel_structure": "圆半径正交给直线，椭圆二次条件给面积极值",
+        "reasoning_target": "圆半径正交给直线，椭圆二次条件给面积极值"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    },
+    {
+      "id": "orig:ai:calibration:geometry:05:v2",
+      "order": 5,
+      "kind": "constructed_response",
+      "points": 14,
+      "module": "解析几何",
+      "math_spec": {
+        "symbols": [],
+        "givens": {
+          "problem_statement": "抛物线 \\(C:y=x^2\\) 上有两个不同的点 \\(A(u,u^2),B(v,v^2)\\)，其中 \\(u,v\\) 均不为0。过 \\(A,B\\) 分别作 \\(C\\) 在该点切线的垂线，两条垂线互相垂直，相交于 \\(P\\)。",
+          "asks": [
+            "证明直线 \\(AB\\) 与 \\(y\\) 轴的交点为定点，并求该点的坐标。",
+            "求点 \\(P\\) 的轨迹，并说明轨迹上的点都能够取到。"
+          ]
+        },
+        "tasks": [
+          {
+            "op": "reasoning"
+          },
+          {
+            "op": "reasoning"
+          }
+        ]
+      },
+      "writing": {
+        "version": 1,
+        "spec_sha256": "752e8b26da6abdb5b4289acce82203816a8161ad6b77dca254bfac42aacdda9d",
+        "stem": "抛物线 {{f1}} 上有两个不同的点 {{f2}}，其中 {{f3}} 均不为0。过 {{f4}} 分别作 {{f5}} 在该点切线的垂线，两条垂线互相垂直，相交于 {{f6}}。",
+        "parts": [
+          {
+            "text": "证明直线 {{f7}} 与 {{f8}} 轴的交点为定点，并求该点的坐标。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求点 {{f9}} 的轨迹，并说明轨迹上的点都能够取到。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "options": {},
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "C:y=x^2"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "A(u,u^2),B(v,v^2)"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "u,v"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "C"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "AB"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "y"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "P"
+          }
+        },
+        "condition_anchors": [
+          "{{f1}}"
+        ],
+        "request_anchors": [
+          "证明直线 {{f7}} 与 {{f8}} 轴的交点为定点，并求该点的坐标。"
+        ],
+        "definitions": [],
+        "used_symbols": []
+      },
+      "solution": {
+        "paragraphs": [
+          "两条垂线斜率分别为 \\(-1/(2u),-1/(2v)\\)，故 \\(uv=-\\frac14\\)。令 \\(s=u+v\\)，弦方程为 \\(y=sx-uv\\)，所以交点为 \\((0,\\frac14)\\)。",
+          "设 \\(P=(X,Y)\\)。垂线方程分别为 \\(X+2uY=u+2u^3\\) 和 \\(X+2vY=v+2v^3\\)。相减得 \\(Y=\\frac12+u^2+uv+v^2=s^2+\\frac34\\)，代回并用 \\(u^2=su+\\frac14\\) 得 \\(X=s/2\\)。",
+          "因此 \\(Y=4X^2+\\frac34\\)。反之，任取实数 \\(X\\)，令 \\(s=2X\\)，二次方程 \\(z^2-sz-\\frac14=0\\) 有两个不同的非零实根，用作 \\(u,v\\) 即可实现该点。"
+        ]
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 12,
+        "dimensions": {
+          "knowledge": 3,
+          "condition_comprehension": 4,
+          "modeling": 1,
+          "logical_reasoning": 4,
+          "calculation": 3,
+          "integration": 3,
+          "breakthrough_visibility": 1,
+          "source_level_difference": "原题由面积给两条固定直线，本题由两条法线正交给根积，剩余自由度形成法线交点轨迹"
+        },
+        "points_justification": "用弦定点承接根积，再通过对称和消去两个切点",
+        "part_points": [
+          7,
+          7
+        ],
+        "linked_progression": "用弦定点承接根积，再通过对称和消去两个切点",
+        "empirical": false
+      },
+      "research_design": {
+        "references": [
+          {
+            "occurrence_id": "2024-cn-math-new-gaokao-1:q016",
+            "version_sha256": "d39d98ba9d7de6cc166caceeee3be5b292245cb43ff401eb05f93d8c28246f8f",
+            "transfer": "先转换几何条件再从新轨迹恢复原对象",
+            "structural_difference": "原题由面积给两条固定直线，本题由两条法线正交给根积，剩余自由度形成法线交点轨迹"
+          }
+        ],
+        "novel_structure": "用弦定点承接根积，再通过对称和消去两个切点",
+        "reasoning_target": "用弦定点承接根积，再通过对称和消去两个切点"
+      },
+      "generation": {
+        "provider": "host_ai",
+        "template_calls": 0
+      }
+    }
+  ],
+  "revision_record": [
+    "学生盲审发现右侧字形裁切，改用按实际墨迹计算的光栅边界。",
+    "第1题改为面积反推割线平移量，增加韦达与切线交点的不变量。"
+  ]
+}

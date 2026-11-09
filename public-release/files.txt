@@ -11,6 +11,7 @@ public-release/requirements-backup.txt -> requirements-backup.txt
 public-release/empty-analysis.jsonl -> analysis/questions.jsonl
 public-release/ci.yml -> .github/workflows/ci.yml
 public-release/release-tests.py -> tests/test_release.py
+tests/test_calibration.py
 national/schema.json
 national/targets/cn-ha-2027-math.json
 national/catalog/series.jsonl
@@ -21,12 +22,14 @@ scripts/bootstrap.py
 scripts/gaokao.py
 scripts/reference.py
 scripts/storage.py
+scripts/student_feedback.py
 scripts/analysis_db.py
 scripts/security_scan.py
 scripts/national_db.py
 scripts/national_cli.py
 scripts/national_schema.py
 scripts/national_quality.py
+scripts/math_calibration.py
 scripts/local_archive.py
 scripts/local_data.py
 scripts/math_skill.py
@@ -47,6 +50,7 @@ scripts/mathgen/planner.py
 scripts/mathgen/providers.py
 scripts/mathgen/quality.py
 scripts/mathgen/review.py
+scripts/mathgen/research_quality.py
 scripts/mathgen/school_ops.py
 scripts/mathgen/school_solver.py
 scripts/mathgen/solve.py
@@ -55,6 +59,8 @@ scripts/mathgen/writing_packet.py
 skills/henan-math/references/ai-protocol.md
 skills/henan-math/references/coverage.md
 skills/henan-math/references/national.md
+skills/henan-math/references/calibration.md
+skills/henan-math/references/student-feedback.md
 skills/henan-math/references/storage.md
 skills/henan-math/references/writing-protocol.md
 skills/henan-math/scripts/run.py
