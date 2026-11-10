@@ -16,6 +16,7 @@ tests/test_calibration.py
 tests/test_paper_quality.py
 tests/test_forecast.py
 tests/test_forecast_validation.py
+tests/test_feature_benchmark.py
 forecast/targets.json
 forecast/README.md
 forecast/evidence.jsonl
@@ -23,6 +24,8 @@ forecast/contemporaneous.jsonl
 forecast/validation/protocol.json
 forecast/validation/paper-dates.json
 forecast/validation/README.md
+forecast/benchmark/rubric.json
+forecast/benchmark/README.md
 national/schema.json
 national/targets/cn-ha-2027-math.json
 national/catalog/series.jsonl
@@ -34,6 +37,7 @@ scripts/gaokao.py
 scripts/reference.py
 scripts/storage.py
 scripts/student_feedback.py
+scripts/trial_kit.py
 scripts/analysis_db.py
 scripts/forecast_features.py
 scripts/forecast_model.py
@@ -42,6 +46,7 @@ scripts/forecast_research.py
 scripts/forecast_modes.py
 scripts/forecast_validation.py
 scripts/forecast_labels.py
+scripts/feature_benchmark.py
 scripts/security_scan.py
 scripts/national_db.py
 scripts/national_duplicates.py

@@ -1,0 +1,101 @@
+{
+  "archived_question_states": {
+    "source_and_solution_reviewed": 294,
+    "unreviewed": 174,
+    "source_conflict": 28
+  },
+  "old_replay_reproduced": true,
+  "frozen_v3_payload_sha256": "aa298619c150044ebcf4b39eca62ceb0bb3883176a15ae57a690f6288ec95922",
+  "frozen_v3_file_sha256": "33c20281a81ddc747189bc251564b90fc725ad86f540ad068c767ea0ee185931",
+  "independent_time_proof": false,
+  "submitted_hash_to_third_party": false,
+  "benchmark": {
+    "questions": 46,
+    "random": 28,
+    "targeted": 20,
+    "holdout": 13,
+    "adjudicated": 10,
+    "unknown_after_adjudication": 1,
+    "auto_output_unchanged": true,
+    "new_formal_targets": 0
+  },
+  "tests": {
+    "private": "Ran 225 tests in 32.503s",
+    "public": "Ran 49 tests in 0.984s"
+  },
+  "modes": {
+    "standard": {
+      "passed": true,
+      "questions": 7,
+      "points": 50,
+      "kind_counts": {
+        "single_choice": 5,
+        "constructed_response": 2
+      },
+      "module_counts": {
+        "集合与复数": 2,
+        "三角与向量": 1,
+        "概率统计": 1,
+        "排列组合": 1,
+        "立体几何": 1,
+        "函数与导数": 1
+      },
+      "difficulty_counts": {
+        "1": 2,
+        "2": 3,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "targeted": {
+      "passed": true,
+      "questions": 5,
+      "points": 50,
+      "kind_counts": {
+        "constructed_response": 5
+      },
+      "module_counts": {
+        "数列": 5
+      },
+      "difficulty_counts": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "forecast_research": {
+      "questions": 5,
+      "pdf_pages": 2,
+      "preview_only": true
+    }
+  },
+  "trial": {
+    "paper_id": "HN9-M150-v1",
+    "paper_sha256": "356dfa46516ebf1b08a1f69efb507469fb72f4526ff72b17782459a5df725600",
+    "solutions_sha256": "769c4f051e38367d20b8135948fd2eeb5e3d8f73681c55429ea8cd6e595fc908",
+    "minutes": 120,
+    "questions": 19,
+    "points": 150,
+    "teacher_reviews": 0,
+    "real_student_trials": 0,
+    "artifacts": {
+      "scoring-after.zip": "26eb0de842fc8cc403670ca1b8d71dfab657fb104777cf8d8e72fe072d535bb0",
+      "student-before.zip": "3263d97d5623585a4fa50e723ec37a42ab40026ec35c9193310a8cc92e430877"
+    }
+  },
+  "visual_pages": {
+    "student": 8,
+    "answers": 9,
+    "record_sheet": 1
+  },
+  "intake": {
+    "actual_records": 0,
+    "blank_import_and_diagnosis_passed": true,
+    "fixture_only_smoke_passed": true
+  },
+  "public_head": "c8a306912df092bcd6076022fb37a9d3313e6e76",
+  "public_candidate_sha256": "4629ec17af0165a2ec81825e01ca544ce3f51a445bf3bd68e27c0bd22ff7e266",
+  "private_package_sha256": "65c84890712001c8af1a1e22f62e1bc6fa89f8e049dd8cd6803ab6346852d406"
+}

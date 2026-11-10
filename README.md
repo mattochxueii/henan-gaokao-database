@@ -6,6 +6,8 @@
 
 第十一阶段固定了年份块基线比较、历史卷面日期与回溯标签分离、独立复标及外部变量消融。见 [验收报告](reports/phase11.md) 和 [复现协议](forecast/validation/README.md)。
 
+第十二阶段加入 [命题特征盲标基准](forecast/benchmark/README.md) 与匿名试做包，结果见 [阶段验收](reports/phase12.md)。
+
 第九阶段加入整卷题位、数学结构重合及独立发布门槛，修订 150 分模拟卷。见 [第九阶段报告](reports/phase9.md) 和 [试卷目录](experiments/phase9)。
 
 第八阶段严格复核新高考Ⅰ卷 140/145、Ⅱ卷 145/145。版本争议、旧卷复验、分步评分、新模拟卷和试做说明见 [第八阶段报告](reports/phase8.md) 与 [试卷目录](experiments/phase8)。

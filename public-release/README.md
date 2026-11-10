@@ -46,3 +46,5 @@ AI 整卷另经 [题位与结构复核](skills/henan-math/references/paper-posit
 运行 `python scripts/forecast_validation.py --output work/baseline-comparison.json` 可比较固定 50%、历史频率、上年延续等基线。公开候选保留规则、日期登记与验证程序。回溯逐题复标及聚合需要许可档案和独立复核记录。参见 [验证与时间证据](forecast/validation/README.md)。
 
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。
+
+可信特征研究可使用 [盲标基准协议与评测命令](forecast/benchmark/README.md)。匿名作答支持评分疑点、推理与计算负担记录，并比较实际用时和编辑估时。相关工具可在无密钥环境运行。

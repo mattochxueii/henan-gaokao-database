@@ -19,12 +19,16 @@ REQUIRED = {
     "participant_code", "paper_sha256", "question_id", "seconds", "score",
     "status", "error_types", "reading_difficulty", "method_note",
 }
-OPTIONAL = {"ambiguity_reported", "explanation_clarity"}
+OPTIONAL = {
+    "ambiguity_reported", "explanation_clarity", "scoring_issue",
+    "reasoning_load", "calculation_load",
+}
 CSV_FIELDS = (
     "paper_id", "paper_sha256", "number", "question_id", "participant_code",
     "seconds", "score", "status", "error_types", "reading_difficulty",
     "ambiguity_reported", "explanation_clarity", "method_note",
 )
+TRIAL_FIELDS = CSV_FIELDS + ("scoring_issue", "reasoning_load", "calculation_load")
 
 
 def checked_questions(paper_dir):
@@ -80,11 +84,12 @@ def validate(row, paper_sha, questions):
         isinstance(row["method_note"], str) and len(row["method_note"]) <= 1000,
         "解题思路过长",
     )
-    if "ambiguity_reported" in row:
-        require(type(row["ambiguity_reported"]) is bool, "歧义字段须为布尔值")
-    if "explanation_clarity" in row:
-        value = row["explanation_clarity"]
-        require(type(value) is int and 0 <= value <= 3, "解析理解程度为0至3")
+    for key in ("ambiguity_reported", "scoring_issue"):
+        if key in row:
+            require(type(row[key]) is bool, f"{key} 须为布尔值")
+    for key in ("explanation_clarity", "reasoning_load", "calculation_load"):
+        if key in row:
+            require(type(row[key]) is int and 0 <= row[key] <= 3, f"{key} 程度为0至3")
     return row
 
 
@@ -96,9 +101,9 @@ def paper_layout(paper_dir):
     )
 
 
-def make_csv(path, paper_id, paper_sha, numbers):
+def make_csv(path, paper_id, paper_sha, numbers, *, extended=False):
     with path.open("x", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=TRIAL_FIELDS if extended else CSV_FIELDS)
         writer.writeheader()
         for number, qid in numbers.items():
             writer.writerow({
@@ -110,7 +115,7 @@ def make_csv(path, paper_id, paper_sha, numbers):
 def csv_rows(path, paper_id, paper_sha, numbers):
     with path.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
-        require(reader.fieldnames == list(CSV_FIELDS), "请保留CSV列名")
+        require(reader.fieldnames in (list(CSV_FIELDS), list(TRIAL_FIELDS)), "请保留CSV列名")
         for row in reader:
             require(None not in row and all(v is not None for v in row.values()), "CSV列数不符")
             require(
@@ -120,21 +125,23 @@ def csv_rows(path, paper_id, paper_sha, numbers):
             )
             entry = {k: row[k] for k in REQUIRED}
             response_keys = REQUIRED - {"paper_sha256", "question_id"}
-            if not any(row[k] for k in response_keys | OPTIONAL):
+            if not any(row.get(k) for k in response_keys | OPTIONAL):
                 continue
             for k in ("seconds", "reading_difficulty"):
                 entry[k] = int(row[k])
             entry["score"] = float(row["score"])
             entry["error_types"] = [v.strip() for v in row["error_types"].split("|") if v.strip()]
-            if row["ambiguity_reported"]:
-                require(row["ambiguity_reported"] in ("0", "1"), "歧义字段填写0或1")
-                entry["ambiguity_reported"] = row["ambiguity_reported"] == "1"
-            if row["explanation_clarity"]:
-                entry["explanation_clarity"] = int(row["explanation_clarity"])
+            for key in ("ambiguity_reported", "scoring_issue"):
+                if row.get(key):
+                    require(row[key] in ("0", "1"), f"{key} 填写0或1")
+                    entry[key] = row[key] == "1"
+            for key in ("explanation_clarity", "reasoning_load", "calculation_load"):
+                if row.get(key):
+                    entry[key] = int(row[key])
             yield entry
 
 
-def summary(rows, points, min_sample=10):
+def summary(rows, points, min_sample=10, *, design=None):
     from statistics import median
 
     require(min_sample >= 10, "小于10人的样本只可报告原始记录")
@@ -149,6 +156,12 @@ def summary(rows, points, min_sample=10):
         adjustment = None
         ambiguity = [r["ambiguity_reported"] for r in records if "ambiguity_reported" in r]
         clarity = [r["explanation_clarity"] for r in records if "explanation_clarity" in r]
+        scoring = [r["scoring_issue"] for r in records if "scoring_issue" in r]
+        reasoning = [r["reasoning_load"] for r in records if "reasoning_load" in r]
+        calculation = [r["calculation_load"] for r in records if "calculation_load" in r]
+        metadata = (design or {}).get(qid, {})
+        minutes = metadata.get("assessment", {}).get("estimated_minutes")
+        time = median(r["seconds"] for r in records)
         if n >= min_sample:
             adjustment = (
                 "复查是否过难"
@@ -162,7 +175,11 @@ def summary(rows, points, min_sample=10):
             "full_score_count": correct,
             "unfinished_count": sum(r["status"] == "unfinished" for r in records),
             "observed_score_ratio": ratio,
-            "median_seconds": median(r["seconds"] for r in records),
+            "median_seconds": time,
+            "design_minutes": minutes,
+            "median_seconds_over_editorial_estimate": time - 60 * minutes if minutes else None,
+            "design_level": metadata.get("assessment", {}).get("level"),
+            "module": metadata.get("module"),
             "error_counts": {
                 e: sum(e in r["error_types"] for r in records) for e in ERRORS
             },
@@ -175,6 +192,10 @@ def summary(rows, points, min_sample=10):
             "ambiguity_reports": sum(ambiguity),
             "explanation_clarity_responses": len(clarity),
             "explanation_clarity_median": median(clarity) if clarity else None,
+            "scoring_issue_responses": len(scoring),
+            "scoring_issue_reports": sum(scoring),
+            "reasoning_load_median": median(reasoning) if reasoning else None,
+            "calculation_load_median": median(calculation) if calculation else None,
         }
     return {
         "records": len(rows),
@@ -198,11 +219,26 @@ def diagnose(rows, paper_dir, points, participant):
             "number": questions[qid]["order"], "score": row["score"], "points": points[qid],
             "seconds": row["seconds"], "status": row["status"],
             "design_level": assessment.get("level"), "design_minutes": minutes,
+            "module": questions[qid].get("module"),
+            "observed_score_ratio": row["score"] / points[qid],
             "seconds_over_editorial_estimate": row["seconds"] - 60 * minutes if minutes else None,
             "error_types": row["error_types"], "reading_difficulty": row["reading_difficulty"],
             "ambiguity_reported": row.get("ambiguity_reported"),
             "explanation_clarity": row.get("explanation_clarity"),
+            "scoring_issue": row.get("scoring_issue"),
+            "reasoning_load": row.get("reasoning_load"),
+            "calculation_load": row.get("calculation_load"),
         })
+    modules = defaultdict(lambda: {"score":0,"recorded_points":0,"seconds":0,"items":0,"error_types":defaultdict(int)})
+    for item in items:
+        if item["module"]:
+            module = modules[item["module"]]
+            module["score"] += item["score"]
+            module["recorded_points"] += item["points"]
+            module["seconds"] += item["seconds"]
+            module["items"] += 1
+            for error in item["error_types"]:
+                module["error_types"][error] += 1
     return {
         "records": len(items),
         "observed_points": sum(row["points"] for row in items),
@@ -210,6 +246,7 @@ def diagnose(rows, paper_dir, points, participant):
         "unrecorded": len(points) - len(items),
         "unfinished": sum(row["status"] == "unfinished" for row in items),
         "items": sorted(items, key=lambda row: row["number"]),
+        "observed_module_profile": dict(modules),
         "scope": "个人作答与编辑估时比较；未录题不计零分，不推断群体难度。",
     }
 
@@ -229,13 +266,14 @@ def main():
     personal.add_argument("participant_code")
     form = modes.add_parser("blank-csv")
     form.add_argument("output", type=Path)
+    form.add_argument("--extended", action="store_true")
     args = parser.parse_args()
     try:
         paper_sha, points = checked_questions(args.paper)
         if args.mode == "blank-csv":
             paper_id, numbers = paper_layout(args.paper)
             args.output.parent.mkdir(parents=True, exist_ok=True)
-            make_csv(args.output, paper_id, paper_sha, numbers)
+            make_csv(args.output, paper_id, paper_sha, numbers, extended=args.extended)
             print(dumps({"paper_id": paper_id, "paper_sha256": paper_sha, "records": 0}))
             return 0
         if args.mode == "prepare":
@@ -258,7 +296,8 @@ def main():
         result = (
             diagnose(rows, args.paper, points, args.participant_code)
             if args.mode == "diagnose"
-            else summary(rows, points, getattr(args, "min_sample", 10))
+            else summary(rows, points, getattr(args, "min_sample", 10),
+                         design={q["id"]:q for q in read_json(args.paper/"raw-ai-candidate.json")["questions"]})
         )
         print(dumps(result))
         return 0

@@ -1,0 +1,228 @@
+{
+  "legacy_targets": {
+    "module.foundations": {
+      "positive": 13,
+      "negative": 0,
+      "unknown": 1,
+      "classification": "可靠作描述但历史缺少变化，原分布含宽模块或代理，逐题证据另行校核。"
+    },
+    "module.functions": {
+      "positive": 14,
+      "negative": 0,
+      "unknown": 0,
+      "classification": "可靠作描述但历史缺少变化，原分布含宽模块或代理，逐题证据另行校核。"
+    },
+    "module.geometry": {
+      "positive": 14,
+      "negative": 0,
+      "unknown": 0,
+      "classification": "可靠作描述但历史缺少变化，原分布含宽模块或代理，逐题证据另行校核。"
+    },
+    "module.probability": {
+      "positive": 13,
+      "negative": 0,
+      "unknown": 1,
+      "classification": "可靠作描述但历史缺少变化，原分布含宽模块或代理，逐题证据另行校核。"
+    },
+    "method.proof": {
+      "positive": 14,
+      "negative": 0,
+      "unknown": 0,
+      "classification": "可靠作描述但历史缺少变化，原分布含宽模块或代理，逐题证据另行校核。"
+    },
+    "method.linked": {
+      "positive": 1,
+      "negative": 11,
+      "unknown": 2,
+      "classification": "标签尚不可靠，存在边界或未知，暂不进入新增正式预测。"
+    },
+    "method.context": {
+      "positive": 8,
+      "negative": 0,
+      "unknown": 6,
+      "classification": "标签尚不可靠，存在边界或未知，暂不进入新增正式预测。"
+    },
+    "structure.conditional": {
+      "positive": 4,
+      "negative": 1,
+      "unknown": 9,
+      "classification": "标签尚不可靠，存在边界或未知，暂不进入新增正式预测。"
+    },
+    "structure.midpoint": {
+      "positive": 0,
+      "negative": 12,
+      "unknown": 2,
+      "classification": "样本不足，保留探索。"
+    },
+    "paper.compact": {
+      "positive": 6,
+      "negative": 8,
+      "unknown": 0,
+      "classification": "可靠且有研究价值，作为客观卷型和断点对照，题量无事前固定数值要求证据。"
+    }
+  },
+  "v2_trial_targets": {
+    "module.functions_anchor": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "structure.sequence_recurrence": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "recall_with_abstentions",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.explicit_proof": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.explicit_dependence": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "structure.derivative_parameter": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "structure.conic_dynamic": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "recall_with_abstentions",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "structure.conditional_decision": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "structure.solid_existence": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "独立一致性不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.necessity_sufficiency": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.choice_cases": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "独立一致性不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.real_model": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.substantive_context": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    },
+    "method.transfer_prompt": {
+      "benchmark_passed": false,
+      "holdout_papers": 4,
+      "official_forecast_admitted": false,
+      "reasons": [
+        "评测正负例不足",
+        "precision",
+        "recall_with_abstentions",
+        "coverage_of_reference",
+        "尚缺完整年度变化和独立前瞻检验"
+      ],
+      "classification": "样本不足"
+    }
+  },
+  "classification_scope": "14卷历史代理的描述分布与v2题级证据分开。统计一致与未来预测能力分开。",
+  "newly_admitted": 0
+}
