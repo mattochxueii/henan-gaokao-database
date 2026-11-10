@@ -16,19 +16,26 @@ MODULE_NAMES = {
 def research_context(path):
     record = frozen(path)
     payload = record["payload"]
+    def tier(row):
+        if row["support"] != "estimated" or row["probabilities"].get("frequency") is None:
+            return "abstained"
+        return "exploratory"
+
     eligible = {
         row["target"]: {"title":row["title"],"layer":row["layer"],
                        "frequency":row["probabilities"]["frequency"],
                        "recent":row["probabilities"]["recent"],
-                       "support":row["support"]}
+                       "support":row["support"],"evidence_tier":tier(row)}
         for row in payload["predictions"]
-        if row["support"]=="estimated" and row["probabilities"]["frequency"] is not None
+        if tier(row) != "abstained"
         and not row["target"].startswith("paper.")
     }
     require(eligible, "此冻结版本没有可供命题研究使用的方向")
     return {"forecast_run_id":payload["run_id"],"snapshot_sha256":record["payload_sha256"],
             "as_of":payload["as_of"],"target_year":payload["target_year"],"series":payload["series"],
             "status":RESEARCH_MARKER,"eligible_targets":eligible,
+            "target_evidence_tiers": {row["target"]:tier(row) for row in payload["predictions"]},
+            "prospective_calibration": "unavailable",
             "guard":"仅作研究选题信号，不改变正式卷型、评分或质量门槛，不推导原题或复习取舍"}
 
 

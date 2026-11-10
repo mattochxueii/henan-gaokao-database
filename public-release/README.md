@@ -43,4 +43,6 @@ AI 整卷另经 [题位与结构复核](skills/henan-math/references/paper-posit
 
 概率研究公开提供官方来源事实、目标规范和同期回测代码。运行 `python scripts/forecast_research.py backtest`，可在无密钥环境复现卷面题量基线。逐题私有标签和河南 2027 冻结候选与公开版分开。三种模式见 [研究协议](skills/henan-math/references/forecast.md)。
 
+运行 `python scripts/forecast_validation.py --output work/baseline-comparison.json` 可比较固定 50%、历史频率、上年延续等基线。公开候选保留规则、日期登记与验证程序。回溯逐题复标及聚合需要许可档案和独立复核记录。参见 [验证与时间证据](forecast/validation/README.md)。
+
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。

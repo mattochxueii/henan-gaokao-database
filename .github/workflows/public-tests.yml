@@ -31,7 +31,7 @@ jobs:
       - name: Whole-paper placement and structural regressions
         run: python -m unittest discover -s tests -p test_paper_quality.py -v
       - name: Forecast temporal, freeze and mode regressions
-        run: python -m unittest discover -s tests -p test_forecast.py -v
+        run: python -m unittest discover -s tests -p 'test_forecast*.py' -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"

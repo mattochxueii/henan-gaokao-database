@@ -1,0 +1,120 @@
+{
+  "version": "math-validation-v1",
+  "locked_on": "2026-11-10",
+  "purpose": "在接触本轮模型得分前固定规则。已知第十阶段结果和2024年结构断点，因此仍是探索性历史研究。",
+  "years": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "archive_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "series": [
+    "I",
+    "II"
+  ],
+  "minimum_history_years": 2,
+  "minimum_replay_years": 4,
+  "half_life_years": 3,
+  "epsilon": 0.01,
+  "prior": [
+    1,
+    1
+  ],
+  "course_reference_slots": 6,
+  "course_pseudo_years": 1,
+  "evidence_rule": "原卷存在日期取同卷、实质内容可访问的带日期公开材料上界。档案题面核对、版本哈希和本轮编码时间另记。日期不明或卷别无法确认不可进训练；仅当原资料为具体题给出正例时才可在缺页时确认正例。0 必须核对该标签适用题型全部题目。隔离题保持未知。",
+  "evaluation_rule": "固定50%、历史原始年均率、Beta(1,1)历史、上一年同卷系、近期Beta平滑、课程参照、近期加课程、再加政策及原政策规则使用同一目标同一评分集合。上一年同卷系未知时回到50%。历史频率用epsilon界定极端对数损失。课程或政策无法映射时继承父模型并报告无变量增量。主评分同年先平均，年份等权；卷级样本和独立年份分别计数。只在相同集合比较。报告去掉某个评估年份（不改训练）、断点切片和所有弃权。",
+  "course_mapping": "只为广义函数主任务提供课时参考。2020数学课标的建议课时比重转为6次有效机会下至少一次的教学先验，非发布概率。加权为一个伪年度。细分方向与卷面题量未发布相应比例，不从宽主题课时硬推。",
+  "policy_mapping": "按截止可用的文件没有声明题量、适用研究标签的定量方向或幅度。课程后加政策这一严格对照继承父概率。旧政策规则单列为考后结构断点模型，保留其全部评分。教学饱和无符合要求的有时间戳采用率。",
+  "sample": "系统样本每卷固定四题，单选取1+(年份序号+卷序号) mod 8，多选取该分段内循环位，填空同理，解答按偶数序号轮换。另纳入规则定义前确定的争议正例和相似负例定向层，分层报告。审题包只含题面、题型、问题位置及标签规则。",
+  "quality_gate": "评价前锁定样本和标签。系统复标题至少有两种取值且kappa>=0.60才具备探索性标签可重复性，单一取值、定向样本或小样本不能证明总体可靠。负例需要完整范围。回放可展示失败目标和缺失。真实校准在独立评估前不可宣称。",
+  "targets": [
+    {
+      "id": "paper.compact",
+      "scope": "paper",
+      "definition": "卷面实有题数少于22。仍使用第十阶段同期目标样本，保留原结果。",
+      "disposition": "format_compatibility"
+    },
+    {
+      "id": "module.functions_anchor",
+      "scope": "all",
+      "definition": "存在以函数、三角函数或数列为直接主任务的题。以求值、求范围、研究性质、方程零点、通项/和或递推等明确任务为准。几何、概率题中仅有可用函数法或一个函数符号不算。",
+      "disposition": "replay"
+    },
+    {
+      "id": "structure.sequence_recurrence",
+      "scope": "all",
+      "definition": "题面给出或要求建立数列不同下标项之间的递推方程，且递推是求解对象。仅说明等差/等比、通项、或只给Sn和an的同下标关系不算。求前项和本身不算。",
+      "disposition": "replay"
+    },
+    {
+      "id": "method.explicit_proof",
+      "scope": "constructed",
+      "definition": "至少一题解答题明确以证明、求证或证为指令。要求判断、说明理由、求值及选项中的命题本身不算。",
+      "disposition": "replay"
+    },
+    {
+      "id": "method.explicit_dependence",
+      "scope": "constructed",
+      "definition": "后问显式调用某个前问的条件、结论或结果。复用同一公共题干或数学上可利用前问但题面未说明不算。",
+      "disposition": "replay"
+    },
+    {
+      "id": "structure.derivative_parameter",
+      "scope": "constructed",
+      "definition": "含实参数的函数任务，要求全定义域或指定连续区间上性质的参数集合，或对不同参数进行分类，且求导是命题的中心方法。只做单个固定参数例不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "structure.conic_dynamic",
+      "scope": "all",
+      "definition": "给定圆锥曲线，活动直线、动点或弦同时受独立约束，并要求轨迹或对整族对象成立的性质。单条固定弦、单求定点坐标不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "structure.conditional_decision",
+      "scope": "all",
+      "definition": "要求在已经观察到某随机事件后评价条件概率、风险或比较决策。仅给定固定参数、顺序规则或等可能样本空间不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "structure.solid_existence",
+      "scope": "constructed",
+      "definition": "空间几何题显式问是否存在满足位置关系的点或参数，或等价地要求构造并证明存在。已知点直接计算角或距离不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "method.necessity_sufficiency",
+      "scope": "all",
+      "definition": "显式要求同时建立同一命题的必要性与充分性。单向证法、在多选项中判断、只写“当且仅当”作为已知条件不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "method.choice_cases",
+      "scope": "objective",
+      "definition": "选择或填空题依题意需枚举至少两种有实质差别的互斥参数/对象情况才能完整确定答案。仅检验各选项或可选用分情况的解法不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "method.real_model",
+      "scope": "all",
+      "definition": "现实情境的约束或数据需要转成模型，改变该条件会改变模型结构或答案。纯故事换皮或题面已完整给出模型后只代值不算。",
+      "disposition": "label_trial"
+    },
+    {
+      "id": "method.transfer_prompt",
+      "scope": "all",
+      "definition": "用自定义操作或关系设置一个常规知识不能直接套用的任务，必须先建立新表达与熟悉对象间的映射。仅有陌生名词不算。",
+      "disposition": "label_trial"
+    }
+  ]
+}
