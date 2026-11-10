@@ -135,12 +135,13 @@ def query(root, subject, *, year=None, region=None, topic=None, limit=10, verifi
 
 def rebuild(root, output):
     """Materialize a disposable relational index without mutating the source archive."""
-    from national_db import rows as math_archive
+    from national_db import available as math_available, rows as math_archive
     require(not output.exists(), "索引路径已存在")
     output.parent.mkdir(parents=True,exist_ok=True)
     science = all_science_rows(root)
     from math_calibration import grade
-    math = [x for x in math_archive(root) if x["subject"]=="math"]
+    math_ready = math_available(root)
+    math = [x for x in math_archive(root) if x["subject"]=="math"] if math_ready else []
     source_data = catalog(root)
     schema = """
 CREATE TABLE subject(id TEXT PRIMARY KEY,label TEXT NOT NULL);
@@ -218,7 +219,9 @@ CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
                     db.execute("INSERT OR REPLACE INTO entity VALUES (?,?,?)",
                                (kind,identity,dumps({"subject":q["subject"],"version":version,"record":q[key]})))
         report = {"subjects":len(SUBJECTS),"math":len(math),"science":len(science),
-                  "math_version_binding":fingerprint(sorted((q["occurrence_id"],q["version_sha256"]) for q in math)),
+                  "math_archive_available":math_ready,
+                  "math_version_binding":fingerprint(sorted((q["occurrence_id"],q["version_sha256"]) for q in math))
+                                         if math_ready else None,
                   "foreign_keys_valid":not list(db.execute("PRAGMA foreign_key_check"))}
         require(report["foreign_keys_valid"], "关系索引校验失败")
     return report

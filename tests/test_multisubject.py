@@ -18,6 +18,7 @@ from core.science_forecast import forecast, score
 from core.science_workflow import adjudicate, plan, prepare, publish, same_answer
 from gaokao import digest, read_json
 from local_archive import public_edition, write_bundle
+from national_db import available as math_available
 from subjects import SCIENCES, science_verifier
 
 
@@ -156,7 +157,10 @@ class MultisubjectTests(unittest.TestCase):
                 self.assertEqual(report["science"],0)
             else:
                 self.assertEqual(report["science"],9)
-                self.assertEqual(report["math"],496)
+                expected = math_available(ROOT)
+                self.assertEqual(report["math_archive_available"],expected)
+                self.assertEqual(report["math"],496 if expected else 0)
+                self.assertEqual(report["math_version_binding"] is not None,expected)
             with closing(sqlite3.connect(target)) as db:
                 n = db.execute("SELECT count(*) FROM answer a JOIN question q ON a.question_id=q.id AND a.version=q.version").fetchone()[0]
                 self.assertGreater(n,0)
