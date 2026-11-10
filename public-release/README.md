@@ -41,4 +41,6 @@ PDF 盲审需要 Poppler 的 `pdftoppm`。如系统未找到合适的中文字�
 
 AI 整卷另经 [题位与结构复核](skills/henan-math/references/paper-position.md)。模板练习可继续无密钥生成，实际考生数据与编辑判断分别记录。
 
+概率研究公开提供官方来源事实、目标规范和同期回测代码。运行 `python scripts/forecast_research.py backtest`，可在无密钥环境复现卷面题量基线。逐题私有标签和河南 2027 冻结候选与公开版分开。三种模式见 [研究协议](skills/henan-math/references/forecast.md)。
+
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。

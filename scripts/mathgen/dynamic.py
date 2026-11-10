@@ -745,6 +745,8 @@ def run_ai(
     pilot_certificate=None,
     specialty_certificates=(),
     evaluation_split=None,
+    study_mode=None,
+    forecast_context=None,
 ):
     require(not output.exists(), "输出目录已存在")
     if evaluation_split:
@@ -755,6 +757,8 @@ def run_ai(
         root, include_local=not isinstance(provider, OpenAIProvider),
         evaluation_split=evaluation_split, strict=True,
     )
+    if forecast_context is not None:
+        research_context["forecast_research"] = forecast_context
     document = provider.propose(
         research_context,
         "依据研究上下文动态设计新数学结构，输出schema_version=2的JSON。数学规格、AI中文写作、排版必须分层，协议见writing-protocol.md。不给考生看AST、内部任务名或解题方法。禁止family。"
@@ -762,8 +766,13 @@ def run_ai(
             "已提供5题样卷证书，可以按目标蓝图构造整卷。"
             if pilot_certificate or specialty_certificates
             else "本次只能先设计5题pilot，未完成PDF-only样卷审题前禁止生成整卷。"
-        ),
+        )
+        + (" 预测研究候选须回传 forecast_snapshot_sha256，每题添加 forecast_targets 的 id 与 why，继续通过全部质量门槛。"
+           if forecast_context is not None else ""),
     )
+    from forecast_modes import attach_mode
+
+    document = attach_mode(document, study_mode, forecast_context)
     if document.get("schema_version") == 2:
         from .exam_workflow import prepare
 

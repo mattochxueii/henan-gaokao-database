@@ -1,0 +1,74 @@
+{
+  "A_course_weight": {
+    "exposure": "数学必修和选择性必修中四个主模块建议课时，去掉建模活动和机动",
+    "response": "已复核题按主模块的原始满分比重，未确认分保留区间",
+    "design": "跨卷描述性比较；每卷每主题为一个观察，年份和主题相关",
+    "baseline": "四类等权作为可比较零模型",
+    "success_rule": "课时模型的平均绝对误差上界低于等权基线的下界才支持稳健改进",
+    "source": "curriculum-2020",
+    "models": {
+      "course_hours": {
+        "n_paper_topics": 56,
+        "mean_absolute_error_bounds": [
+          0.0008764367816091953,
+          0.19362068965517243
+        ]
+      },
+      "equal_four_modules": {
+        "n_paper_topics": 56,
+        "mean_absolute_error_bounds": [
+          0.0319047619047619,
+          0.24583333333333335
+        ]
+      }
+    },
+    "status": "insufficient_to_distinguish"
+  },
+  "B_reform_transmission": {
+    "exposure": "按同期可用文件记录的卷型分界、河南3+1+2、全国评价要求",
+    "response": "实际不足22题的试卷，能力考查改变需另有同期标签",
+    "control": "历史频率与近期加权；同年I/II作相关观察",
+    "time_order": "2024年卷型先变，2025年建设纲要后发；河南2025实行改革，不能据此解释全国2024变化",
+    "success_rule": "政策模型在足够独立年份重复降低同期滚动损失，并对能力标签有稳定证据",
+    "observed_scored_years": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "annual_brier_deltas": [
+      {
+        "year": 2023,
+        "n": 2,
+        "brier_delta": 0.011101813629973575
+      },
+      {
+        "year": 2024,
+        "n": 2,
+        "brier_delta": -0.059396271861391736
+      },
+      {
+        "year": 2025,
+        "n": 1,
+        "brier_delta": -0.3154047884825476
+      },
+      {
+        "year": 2026,
+        "n": 2,
+        "brier_delta": -0.2727703270555416
+      }
+    ],
+    "status": "observable_format_break_causal_and_capability_effect_not_identified"
+  },
+  "C_teaching_saturation": {
+    "exposure": "考前教辅和联考中预注册套路的采用率，需要可归档发布时间和稳定抽样框",
+    "response": "后续同类套路在独立编码真题中的占比，检验分卷型和跨年滞后",
+    "control": "无饱和变量的近期模型，按教辅来源聚类",
+    "success_rule": "滞后外部变量在分组回测中稳定改善损失；无覆盖或不能改善即不支持",
+    "qualitative_evidence": [
+      "teaching-direction-2021"
+    ],
+    "quantitative_exposures": 0,
+    "status": "not_testable_without_dated_teaching_corpus"
+  }
+}

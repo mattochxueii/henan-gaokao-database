@@ -71,6 +71,11 @@ def main(argv=None):
     action.add_argument("--pilot-certificate", type=Path)
     action.add_argument("--specialty-certificate", type=Path, action="append", default=[])
     action.add_argument("--evaluation-split", type=Path)
+    action.add_argument("--study-mode", choices=("standard", "targeted", "forecast-research"))
+    action.add_argument("--forecast-snapshot", type=Path)
+    action = actions.add_parser("forecast-context")
+    action.add_argument("snapshot", type=Path)
+    action.add_argument("--output", type=Path)
     action = actions.add_parser("publish")
     action.add_argument("output", type=Path)
     action.add_argument("--student-review", type=Path, required=True)
@@ -97,7 +102,14 @@ def main(argv=None):
     root = args.root.resolve()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     try:
-        if args.action == "research":
+        if args.action == "forecast-context":
+            from forecast_modes import research_context
+            from forecast_store import write_new
+
+            result = research_context(args.snapshot)
+            if args.output:
+                write_new(args.output, result)
+        elif args.action == "research":
             import national_db
             from local_archive import public_edition
 
@@ -191,6 +203,15 @@ def main(argv=None):
             atomic_json(args.output, packet)
             result = {"output": str(args.output), "split_sha256": split["sha256"]}
         elif args.action == "generate":
+            require((args.forecast_snapshot is not None) == (args.study_mode=="forecast-research"),
+                    "预测研究须显式指定 --study-mode forecast-research 和 --forecast-snapshot")
+            forecast_context = None
+            if args.forecast_snapshot:
+                require(args.engine=="ai" and not args.allow_template_fallback,
+                        "预测研究必须使用AI三层流程，不能改用模板")
+                from forecast_modes import research_context
+
+                forecast_context = research_context(args.forecast_snapshot)
             from mathgen.ai_provider import select_provider
 
             provider = select_provider(
@@ -211,6 +232,8 @@ def main(argv=None):
                     pilot_certificate=args.pilot_certificate,
                     specialty_certificates=args.specialty_certificate,
                     evaluation_split=read_json(args.evaluation_split) if args.evaluation_split else None,
+                    study_mode=args.study_mode,
+                    forecast_context=forecast_context,
                 )
                 result = {
                     "output": str(args.output.resolve()),
@@ -222,6 +245,7 @@ def main(argv=None):
                 print(dumps(result))
                 return 0
             require(bool(args.mode) != bool(args.topic), "请选择--mode或--topic之一")
+            require(args.study_mode!="targeted" or args.mode!="full", "专项模式不能使用整卷模板")
             plan = (
                 custom_blueprint(
                     root, args.topic, args.count, args.kind, args.difficulty

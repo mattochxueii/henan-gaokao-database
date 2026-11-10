@@ -2,6 +2,8 @@
 
 第六阶段新增逐题来源与答案校准、绑定真题版本的原创设计、考生盲审、专项到整卷的质量门及匿名作答工具。阶段结论与复现入口见 [校准报告](reports/phase6-calibration.md) 和 [命题研究](reports/phase6-research.md)。
 
+第十阶段加入命题关联数据、按可用日期的滚动回测、私有冻结预测及第三种研究命题模式。见 [预测研究报告](reports/phase10.md) 和 [数据复现说明](forecast/README.md)。
+
 第九阶段加入整卷题位、数学结构重合及独立发布门槛，修订 150 分模拟卷。见 [第九阶段报告](reports/phase9.md) 和 [试卷目录](experiments/phase9)。
 
 第八阶段严格复核新高考Ⅰ卷 140/145、Ⅱ卷 145/145。版本争议、旧卷复验、分步评分、新模拟卷和试做说明见 [第八阶段报告](reports/phase8.md) 与 [试卷目录](experiments/phase8)。

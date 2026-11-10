@@ -14,6 +14,11 @@ public-release/ci.yml -> .github/workflows/ci.yml
 public-release/release-tests.py -> tests/test_release.py
 tests/test_calibration.py
 tests/test_paper_quality.py
+tests/test_forecast.py
+forecast/targets.json
+forecast/README.md
+forecast/evidence.jsonl
+forecast/contemporaneous.jsonl
 national/schema.json
 national/targets/cn-ha-2027-math.json
 national/catalog/series.jsonl
@@ -26,6 +31,11 @@ scripts/reference.py
 scripts/storage.py
 scripts/student_feedback.py
 scripts/analysis_db.py
+scripts/forecast_features.py
+scripts/forecast_model.py
+scripts/forecast_store.py
+scripts/forecast_research.py
+scripts/forecast_modes.py
 scripts/security_scan.py
 scripts/national_db.py
 scripts/national_duplicates.py
@@ -68,6 +78,7 @@ skills/henan-math/references/national.md
 skills/henan-math/references/calibration.md
 skills/henan-math/references/evaluation.md
 skills/henan-math/references/paper-position.md
+skills/henan-math/references/forecast.md
 skills/henan-math/references/student-feedback.md
 skills/henan-math/references/storage.md
 skills/henan-math/references/writing-protocol.md
