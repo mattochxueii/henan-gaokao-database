@@ -1,0 +1,113 @@
+{
+  "version": "paper-quality-v1",
+  "items": [
+    {
+      "number": 1,
+      "role": "challenge",
+      "band": 1,
+      "minutes": [
+        4,
+        7
+      ],
+      "planned": {
+        "band": 1,
+        "linked_depth": 0,
+        "distinct_demanding_moves": 0
+      },
+      "linked_depth": 0,
+      "distinct_demanding_moves": 0
+    },
+    {
+      "number": 2,
+      "role": "challenge",
+      "band": 1,
+      "minutes": [
+        4,
+        7
+      ],
+      "planned": {
+        "band": 1,
+        "linked_depth": 0,
+        "distinct_demanding_moves": 0
+      },
+      "linked_depth": 0,
+      "distinct_demanding_moves": 0
+    },
+    {
+      "number": 3,
+      "role": "challenge",
+      "band": 4,
+      "minutes": [
+        4,
+        7
+      ],
+      "planned": {
+        "band": 4,
+        "linked_depth": 4,
+        "distinct_demanding_moves": 3
+      },
+      "linked_depth": 4,
+      "distinct_demanding_moves": 3
+    },
+    {
+      "number": 4,
+      "role": "challenge",
+      "band": 1,
+      "minutes": [
+        4,
+        7
+      ],
+      "planned": {
+        "band": 1,
+        "linked_depth": 0,
+        "distinct_demanding_moves": 0
+      },
+      "linked_depth": 0,
+      "distinct_demanding_moves": 0
+    },
+    {
+      "number": 5,
+      "role": "challenge",
+      "band": 4,
+      "minutes": [
+        12,
+        18
+      ],
+      "planned": {
+        "band": 4,
+        "linked_depth": 4,
+        "distinct_demanding_moves": 3
+      },
+      "linked_depth": 4,
+      "distinct_demanding_moves": 3
+    }
+  ],
+  "conflicts": [],
+  "failures": [
+    {
+      "reason": "position_role_mismatch",
+      "numbers": [
+        1
+      ]
+    },
+    {
+      "reason": "position_role_mismatch",
+      "numbers": [
+        2
+      ]
+    },
+    {
+      "reason": "position_role_mismatch",
+      "numbers": [
+        4
+      ]
+    }
+  ],
+  "candidate_sha256": "e84d64ba63d0ab08d77dfc34d9e41b546720a1c1f74b3ce0abd09c29ab96b2b5",
+  "estimated_minutes": [
+    28,
+    46
+  ],
+  "time_basis": "editorial_range_without_student_data",
+  "scope": "题位推理与计划对照；编辑估时与层级不代表真实得分、区分度或作答时间。"
+}

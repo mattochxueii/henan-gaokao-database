@@ -39,4 +39,6 @@ PDF 盲审需要 Poppler 的 `pdftoppm`。如系统未找到合适的中文字�
 
 整卷可配置逐步评分，旧卷可用 `solution-edition` 单独生成项目自拟评分解析。匿名反馈的 `diagnose` 子命令对比个人实际得分、耗时及编辑估时，并区分未做完与未录入。
 
+AI 整卷另经 [题位与结构复核](skills/henan-math/references/paper-position.md)。模板练习可继续无密钥生成，实际考生数据与编辑判断分别记录。
+
 [数据结构、历史来源与合法导入](docs/DATA.md)说明了六学科的资料接口、校验范围、可选个人备份及迁移方法。当前命题器面向数学。代码与项目自有内容的候选授权见 [LICENSE](LICENSE)。历史试题及上游资料的权利另行适用。提交改动前请读 [贡献指南](CONTRIBUTING.md)。

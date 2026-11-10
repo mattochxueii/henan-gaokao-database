@@ -8,6 +8,7 @@ from storage import atomic_json
 from .editorial import compile_writing
 from .student_pdf import render
 from .school_solver import solve_spec
+from .paper_quality import placement_report, verify_position_review
 from .research_quality import (
     PROTOCOL,
     coverage_report,
@@ -17,7 +18,7 @@ from .research_quality import (
     verify_design,
 )
 
-VERSION = "exam-workflow-v1"
+VERSION = "exam-workflow-v2"
 
 
 def prepare(root, document, output, pilot_certificate=None, specialty_certificates=()):
@@ -32,11 +33,16 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
     )
     mode = document["paper"]["mode"]
     verify_design(root, document)
-    coverage = None
-    if mode == "full" and document["paper"].get("require_scoring"):
-        coverage = coverage_report(document)
     if mode == "full" and uses_protocol(document):
         require_specialty_certificates(specialty_certificates)
+        require(pilot_certificate is not None, "整卷须先通过五题题位样卷")
+        cert = read_json(pilot_certificate)
+        require(
+            cert.get("published") and cert.get("kind") == "pilot"
+            and cert.get("question_count") == 5 and cert.get("position_review_sha256"),
+            "五题题位样卷未完成独立审核",
+        )
+        verify_certificate(Path(pilot_certificate).parent, cert)
     elif mode == "full":
         require(pilot_certificate is not None, "整卷生成前须通过5题样卷")
         cert = read_json(pilot_certificate)
@@ -48,7 +54,17 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         )
         # Certificates remain bound to their reviewed PDF and pages, not a bare boolean.
         verify_certificate(Path(pilot_certificate).parent, cert)
-    output.mkdir(parents=True)
+    coverage = None
+    if mode == "full" or document.get("position_pilot"):
+        output.mkdir(parents=True)
+        atomic_json(output / "raw-ai-candidate.json", document)
+        position = placement_report(document, None)
+        atomic_json(output / "position-plan.json", position)
+        require(not position["failures"], "整卷题位计划未通过，详见position-plan.json")
+    if mode == "full":
+        require(document["paper"].get("require_scoring") is True, "整卷需要逐步评分细则")
+        coverage = coverage_report(document)
+    output.mkdir(parents=True, exist_ok=True)
     atomic_json(output / "raw-ai-candidate.json", document)
     presentation = {
         "title": document["paper"]["title"],
@@ -225,9 +241,9 @@ def render_preview(output):
 
 
 def verify_certificate(folder, cert):
+    document = read_json(folder / "raw-ai-candidate.json")
     require(
-        fingerprint(read_json(folder / "raw-ai-candidate.json"))
-        == cert["candidate_sha256"],
+        fingerprint(document) == cert["candidate_sha256"],
         "已审数学候选被修改",
     )
     require(digest(folder / "paper.pdf") == cert["pdf_sha256"], "已审PDF被修改")
@@ -254,6 +270,19 @@ def verify_certificate(folder, cert):
         and comparison["all_consistent"],
         "数学对照证书无效",
     )
+    if document.get("position_pilot") or cert.get("position_review_sha256") or (
+        cert["workflow_version"] == VERSION and cert["kind"] == "full"
+    ):
+        position = read_json(folder / "position-review.json")
+        rechecked = verify_position_review(
+            document, review["position_review"], cert,
+            read_json(folder / "position-plan.json"),
+        )
+        require(
+            fingerprint(position) == cert.get("position_review_sha256")
+            and position == {**rechecked, "pdf_sha256": cert["pdf_sha256"]},
+            "整卷题位证书无效",
+        )
     require(
         all(
             all(
@@ -292,6 +321,11 @@ def publish(output, review_path, comparison_path):
     )
     require(review.get("overall_pass") is True, "整卷考生视角/风格审查未通过，禁止发布")
     verify_blind_quality(raw, review)
+    position = None
+    if raw["paper"]["mode"] == "full" or raw.get("position_pilot"):
+        plan = read_json(output / "position-plan.json")
+        position = verify_position_review(raw, review["position_review"], manifest, plan)
+        position["pdf_sha256"] = manifest["pdf_sha256"]
     reviewed_pages = [
         {"number": p["number"], "sha256": p["sha256"]} for p in review["pages"]
     ]
@@ -372,7 +406,7 @@ def publish(output, review_path, comparison_path):
     from .scoring import solution_book
 
     guide = comparison.get("scoring")
-    if raw.get("paper", {}).get("require_scoring"):
+    if raw["paper"]["mode"] == "full" or raw["paper"].get("require_scoring"):
         require(guide is not None, "此卷需要逐步评分细则")
     if guide is not None:
         require(guide.get("paper_sha256") == manifest["pdf_sha256"], "评分细则对应其他卷面")
@@ -390,6 +424,9 @@ def publish(output, review_path, comparison_path):
     shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
     atomic_json(output / "student-review.json", review)
     atomic_json(output / "mathematical-comparison.json", comparison)
+    if position is not None:
+        atomic_json(output / "position-review.json", position)
+        cert["position_review_sha256"] = fingerprint(position)
     cert["solutions_sha256"] = digest(output / "solutions.pdf")
     atomic_json(output / "publication.json", cert)
     return cert

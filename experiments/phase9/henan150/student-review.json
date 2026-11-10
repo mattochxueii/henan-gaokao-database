@@ -1,0 +1,2292 @@
+{
+  "pdf_sha256": "356dfa46516ebf1b08a1f69efb507469fb72f4526ff72b17782459a5df725600",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "c208930d46de1c49d85cedb90ac3c99068261c9714b0e26b0d224db5967d3a85"
+    },
+    {
+      "number": 2,
+      "sha256": "94c4ab76aee034c807c876acc888ded96a027f936263e8fad06bf5a1048e2125"
+    },
+    {
+      "number": 3,
+      "sha256": "0fb71d7a5c70f767f48f32a263db807b7e4b5546814c637f4f4f7246a43ae032"
+    },
+    {
+      "number": 4,
+      "sha256": "4f20a48f9b35da98a510f030d449eb2c4be8f237fcc3321c96136723aa5570e0"
+    },
+    {
+      "number": 5,
+      "sha256": "ce51f5d7b469166f865d1943f87ab0579444ab74b8c83e71ce782f28a46e046f"
+    },
+    {
+      "number": 6,
+      "sha256": "9831a9bb7bbc8f2b1eb4640f7cc9b8193b9b02b2fe196880915ad7ee4e2f8033"
+    },
+    {
+      "number": 7,
+      "sha256": "f50e881c9f64286d7baa2683bb4cefabe79835679e91873dcc46ef8bb1af6913"
+    },
+    {
+      "number": 8,
+      "sha256": "54bc984b949416947a60b55dd68f33145042fb7deaa57f5ae0f97899f3d60c80"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "A，充分不必要条件",
+      "answer_key": "A",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "q等价于(x−1)(x−2)≥0，解集为(−∞,1]∪[2,+∞)。p的解集[2,+∞)包含于其中，所以p推出q。x=1时q成立而p不成立，故q不能推出p，只有A正确。",
+      "moves": [
+        {
+          "kind": "routine_algebra",
+          "evidence": "分解q的二次式并求闭端点解集。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "由解集包含得p推出q。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "取x=1验证q真而p假。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "结合两个方向，匹配唯一选项A。",
+          "after": [
+            2,
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "基础逻辑题用二次不等式构造真包含，要求分别判两个方向。也可直接验因式同号，再给一个反例。PDF采用两列两行选项，A至D均单行，标签对齐且字形完整。5分适合作为起始题。",
+      "minutes": [
+        1,
+        2
+      ]
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−4",
+      "answer_key": "C",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "将z̄=iz两边乘z，得4=|z|²=iz²，故z²=−4i，其虚部为−4，只有C。条件可实现，例如z=√2(1−i)。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "利用z z̄=|z|²。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "把已知共轭等式乘z并代入模长，求z²。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "从−4i读取虚部−4并匹配选项C。",
+          "after": [
+            2
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "模和共轭关系直接给平方，也可设实虚部求z再平方。两种可能的z得到同一个虚部。共轭线、i与模符号完整，选项区分平方模和符号，5分适当。",
+      "minutes": [
+        1,
+        2
+      ]
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "π/3",
+      "answer_key": "B",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "设θ=2x+π/6，则θ∈[π/6,7π/6]。在这个区间，sinθ=1/2恰在θ=π/6与5π/6成立。还原得x=0、π/3，和为π/3，只有B。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "将x的闭区间映射到相位θ的闭区间。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "branch",
+          "evidence": "在相位区间中筛选正弦等于1/2的两支，含左端点。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "substitute",
+          "evidence": "还原两个x并求和。",
+          "after": [
+            2
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "π/3对应B。",
+          "after": [
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "相位换元后核查闭区间的左端解和内部另一支，可用单位圆或一般解验证无遗漏。区间括号、相位和分式均清楚，5分与两步求解相称。",
+      "minutes": [
+        1,
+        2
+      ]
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "32/3",
+      "answer_key": "D",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "令P=(u,v)。由2(P−A)+(P−B)=0得P=(2A+B)/3=(7/3,2/3)。又AB=(4,2)，故OP与AB的数量积为(7/3)·4+(2/3)·2=32/3，只有D。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "把有向线段改写为终点与起点的坐标差。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "由向量方程得3P=2A+B，求OP的分量。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "substitute",
+          "evidence": "独立计算AB的分量为(4,2)。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "对两个向量作数量积，得到D的32/3。",
+          "after": [
+            2,
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "向量式可按分量求解，也可识别加权平均点。解出P后再做点积，所求表达式与题干处在同一行且箭头均完整。5分合适。",
+      "minutes": [
+        1,
+        2
+      ]
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "2",
+      "answer_key": "B",
+      "estimated_minutes": [
+        2,
+        3
+      ],
+      "independent_solution": "原记录总和为4·5=20，平方和为4(5+5²)=120。把一项8换成4，总和变为16，平方和变为120−8²+4²=72。新均值为4，新方差为72/4−4²=2，只有B。原记录可以是2、4、6、8，数据条件可实现。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "用方差等于平方均值减均值平方的恒等式。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "representation",
+          "evidence": "把原均值、方差换成总和20与平方和120。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "model",
+          "evidence": "用4替换8，更新两种总和为16和72。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "以新均值4和新平方均值18重算方差。",
+          "after": [
+            1,
+            3
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "新方差2仅匹配B。",
+          "after": [
+            4
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "数据更正改变均值与平方和，需从汇总量重建更正后的方差。另一条路是用新均值4作中心，先换中心再替换误记项。前后数据和四选项清楚，5分与计算量相称。",
+      "minutes": [
+        2,
+        3
+      ]
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−6",
+      "answer_key": "B",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "(1−2x)²=1−4x+4x²。总次数为2的组合只有(2,0)、(1,1)、(0,2)。利用(1+x)⁴的前三级系数1、4、6，所求为6−16+4=−6，唯一选B。也可先写成[(1+x)²(1−2x)]²=(1−3x²−2x³)²，直接得到−6。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "按两因子的次数和为2列出三个贡献来源。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "recall",
+          "evidence": "用二项式系数或平方公式求各因子的低次系数。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "按三个配对相乘后求和，得到−6。",
+          "after": [
+            1,
+            2
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "只有B等于−6。",
+          "after": [
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "可直接做三项系数卷积，也可把乘积配成平方，利用一次项抵消后快速取二次项。两法均可核对负号及交叉贡献。幂、负号和四个选项可辨，5分适当。",
+      "minutes": [
+        1,
+        2
+      ]
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "52",
+      "answer_key": "C",
+      "estimated_minutes": [
+        3,
+        5
+      ],
+      "independent_solution": "a₁=0∈[0,1]，且当aₙ∈[0,1]时，aₙ₊₁=1−aₙ/2∈[1/2,1]，故这个区间正向不变。令dₙ=aₙ−2/3，则dₙ₊₁=−dₙ/2，d₁=−2/3。因此dₙ=(−1)ⁿ(4/3)2⁻ⁿ，只有偶数n为正。正偏差随偶数n递增而减小。n=50时为(4/3)2⁻⁵⁰，超过上界，n=52时为(1/3)2⁻⁵⁰，严格低于上界，故最小n为52，只有C。",
+      "moves": [
+        {
+          "kind": "invariant",
+          "evidence": "从a₁=0出发，证明[0,1]映回自身，固定绝对值的分支。",
+          "after": []
+        },
+        {
+          "kind": "model",
+          "evidence": "以不动点2/3为中心，得到偏差按公比−1/2变化。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "用初值写出偏差的符号与大小，仅保留偶数指标。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "用同一尺度比较n=50、52的正偏差与严格上界。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "较早偶数的偏差更大且奇数不合正号，故52最小。",
+          "after": [
+            3,
+            4
+          ]
+        }
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "不变区间消去绝对值后，用中心化偏差处理交替符号和指数阈值。也可先分奇偶，建立两步递推后比较相邻偶数。选择最小指标要同时排除奇数和较早偶数，构成连贯推理。240 dpi裁图确认严格不等号、指数−50及A到D四个数字完整且齐整。5分适合作为后段单选。",
+      "minutes": [
+        3,
+        5
+      ]
+    },
+    {
+      "number": 8,
+      "conditions_understood": "a、x 均为实数。要求四个互异实根，重根按一个根计。",
+      "request_understood": "由乘积方程的实根数确定参数平方 a²。",
+      "independent_solution": "令 g(x)=x³−3x，则乘积为 a²−g(x)²。a=0 时仅有 g=0 的三个不同根。a≠0 时 g=±|a| 的根集互斥且因奇性根数相同。g′=3(x²−1)，极大值 g(−1)=2，极小值 g(1)=−2。由三个单调区间及两端极限，正水平 |a| 小于、等于、大于 2 时，分别得到 3、2、1 个不同交点。共四根当且仅当 |a|=2，故 a²=4。",
+      "answer": "C（4）",
+      "answer_key": "C",
+      "quality_evidence": "末道单选要求先处理两因子的奇对称关系，再分类计数，并辨别重根和两解集重叠。公式与选项清晰，5 分足以覆盖紧凑推导。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "用奇函数 g 把乘积写成 a²−g(x)²。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "a=0 两解集重合，a≠0 两水平线解集互斥且因奇性等势。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_calculus",
+          "evidence": "求导数、单调区间、临界高度 ±2 和远端趋势。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "按 |a| 与 2 的相对位置数正水平线交点。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "necessity",
+          "evidence": "恰有四根强制每条水平线各两根，且在 |a|=2 确实达到。",
+          "after": [
+            4
+          ]
+        }
+      ],
+      "minutes": [
+        4,
+        6
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 9,
+      "conditions_understood": "三次独立等可能抛掷，A 比较首末，B、C 按正面总数定义。",
+      "request_understood": "核验概率、独立性、条件概率、对立事件四项，选出所有正确项。",
+      "independent_solution": "记 H 为正面、T 为反面。八个等可能序列中，A={HHH,HTH,THT,TTT}，故 P(A)=1/2。B 有四个结果，A∩B={HHH,HTH}，所以 P(A∩B)=1/4=P(A)P(B)，B 项成立。C 有三个结果，A∩C={THT}，P(C|A)=1/4≠3/8=P(C)。TTT 不在 B∪C，故 B 与 C 非对立。",
+      "answer": "AB",
+      "answer_key": "AB",
+      "quality_evidence": "同一小样本空间区分独立、条件概率和对立。全翻正反面还可证明 A 与 B 独立，提供独立于枚举的视角。选项分行明确，6 分适配。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "按时间顺序构造八个等可能序列。",
+          "after": []
+        },
+        {
+          "kind": "substitute",
+          "evidence": "枚举首末相同的四个序列，得 P(A)=1/2。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "计算 P(B) 和 P(A∩B)，以乘积判定独立。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "计算 P(C) 和 P(C|A) 并比较。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "全反面既非 B 又非 C，反驳对立。",
+          "after": [
+            1
+          ]
+        }
+      ],
+      "minutes": [
+        3,
+        5
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 10,
+      "conditions_understood": "两个同频正弦相加。A 项对任意长度为 2π 的闭区间作全称断言。",
+      "request_understood": "核验闭区间根数、对称轴、最小值和 π 平移性质。",
+      "independent_solution": "合成得 f(x)=√3sin(x+π/6)。取 θ=arcsin(1/√3)∈(0,π/2)、x₀=θ−π/6，则 [x₀,x₀+2π] 的两端及内部 x=π−θ−π/6 均满足 f(x)=1，A 错。x=π/3 对应相位 π/2，是对称轴，B 对。最小值为 −√3，C 对。平移 π 令正弦反号，故 f(x+π)+f(x)=0，D 对。",
+      "answer": "BCD",
+      "answer_key": "BCD",
+      "quality_evidence": "合成后 B、C、D 可并行核验。A 需构造闭区间端点同时为根的反例。公式、选项顺序和闭区间表述均清楚。与第 3 题只共享三角主题，无法借用答案。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "用和差化积把函数合成为 √3sin(x+π/6)。",
+          "after": []
+        },
+        {
+          "kind": "substitute",
+          "evidence": "由正弦最小值判 C。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "用相位 π/2 对应的竖直对称轴判 B。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "平移 π 改变正弦符号，判 D。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "以上升支根作左端点，两端均为根且下降支有内部根，反驳 A。",
+          "after": [
+            1
+          ]
+        }
+      ],
+      "minutes": [
+        4,
+        6
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 11,
+      "conditions_understood": "直线过抛物线焦点且有两个不同交点。B 项另给两横坐标之和为 6。",
+      "request_understood": "核验弦长、条件面积、直径圆和向量点积。",
+      "independent_solution": "F=(1,0)，准线 x=−1。排除只有一个交点的水平线，以 x=1+my 表示全部允许直线。联立得 y²−4my−4=0，故 y₁y₂=−4、x₁x₂=1，F 在两交点间。焦准定义给 |AB|=x₁+x₂+2≥4，A 对。由 x₁+x₂=2+4m²，知 m²=1 时 B 的前提可达，此时 (y₁−y₂)²=32，且 x₁y₂−x₂y₁=y₂−y₁，面积为 2√2，B 错。中点到准线距离 (x₁+x₂)/2+1=|AB|/2，故直径圆相切，C 对。点积 1−4=−3，D 对。",
+      "answer": "ACD",
+      "answer_key": "ACD",
+      "quality_evidence": "弦长与直径圆相切有依赖，点积和面积由统一焦弦模型分支求出。新顺序、向量箭头、相切用语与条件面积均清晰。6 分适配，和第 18 题只共享通用圆锥曲线方法。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "辨认焦点与准线，准备使用焦准等距定义。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "排除水平线，并以 x=1+my 同时覆盖竖线和斜线。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "invariant",
+          "evidence": "联立取根的积，得 y₁y₂=−4、x₁x₂=1，F 位于两点间。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "由焦准定义求弦长并用积给下界，判 A。",
+          "after": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "中点到准线距离等于直径圆半径，判 C。",
+          "after": [
+            4
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "由坐标积得数量积，判 D。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "核实横坐标和 6 可达且面积为 2√2，反驳 B。",
+          "after": [
+            2,
+            3
+          ]
+        }
+      ],
+      "minutes": [
+        6,
+        9
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 12,
+      "conditions_understood": "a 为实数。两对数同时要求 a<x<4；有实根必有 a<4。",
+      "request_understood": "求使给定对数方程恰有一个不同实根的参数。",
+      "independent_solution": "在 a<x<4 上，方程等价于 (x−a)(4−x)=2。该乘积的两端极限为 0，在 x=(a+4)/2 有唯一最大值 (4−a)²/4，两侧各严格单调。故恰有一根当且仅当最大值为 2。由 a<4 得 4−a=2√2，故 a=4−2√2，唯一实根 x=4−√2 落在定义域内。",
+      "answer": "4−2√2",
+      "quality_evidence": "参数改变定义域，也改变乘积的唯一峰值。判别式法也可使用，但仍需证明根的合法性。上下标和空格清晰，5 分适配。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "确定共同定义域 a<x<4，空区间无解。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "合并两对数，改写为乘积等于 2。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "比较唯一最大值和 2，利用两侧单调及端点极限确定根数。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "necessity",
+          "evidence": "只有最大值等于 2 才恰有一根，结合 a<4 求出参数。",
+          "after": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "核对该参数的唯一顶点在原定义域并满足方程。",
+          "after": [
+            4
+          ]
+        }
+      ],
+      "minutes": [
+        3,
+        5
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 13,
+      "conditions_understood": "四个方格有线性次序，相邻格异色，三种颜色均至少出现一次。",
+      "request_understood": "求满足全部约束的不同着色数。",
+      "independent_solution": "仅要求相邻异色时有 3·2³=24 种。漏色时只能恰用两种颜色，并且严格交替，有 C(3,2)·2=6 种，故得 18。另可先选唯一重色，选择三个可能的非相邻位置对之一，再排列其余两色，共 3·3·2=18。",
+      "answer": "18",
+      "quality_evidence": "可按唯一重色分类，也可扣除双色交替，两个短解提供互核。题干换行自然，限制完整，5 分适配。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "只设相邻异色，按格次序用乘法原理得到 24。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "不满足三色用尽时恰用两色，只有两种交替次序，得到 6。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "从所有邻接合法着色中扣掉漏色方案。",
+          "after": [
+            1,
+            2
+          ]
+        }
+      ],
+      "minutes": [
+        2,
+        4
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 0
+      }
+    },
+    {
+      "number": 14,
+      "conditions_understood": "a 为实数，二次不等式须对闭区间 [0,1] 上的每个 x 成立。",
+      "request_understood": "写出 a 的全部取值并确认区间端点。",
+      "independent_solution": "设 q(x)=x²−2ax+a/2。由 q(0)≥0 得 a≥0；由 q(1/2)=1/4−a/2≥0 得 a≤1/2。反之在 0≤a≤1/2 时，q(x)=(x−a)²+a(1/2−a)≥0，对全区间成立。故范围为 [0,1/2]。",
+      "answer": "[0,1/2]",
+      "quality_evidence": "内部测试点与端点分别给必要约束，之后还须验证整个候选区间都可行。可以用顶点位置分类作为另一解法。末道填空有短解，但要求构造测试点并证充分性。",
+      "moves": [
+        {
+          "kind": "endpoint",
+          "evidence": "以 x=0 提取下界 a≥0。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "以 x=1/2 提取上界 a≤1/2。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "将 q 配方成平方项与 a(1/2−a)。",
+          "after": []
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "在候选闭区间内两个加项均非负，证全区间成立。",
+          "after": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "minutes": [
+        3,
+        5
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 15,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "三角形 ABC 的角 A、B、C 对边依次为 a、b、c，且 b=5、c=8、sin B=3/5。第二问另给 B 到直线 AC 的垂足 D 在线段 AC 内部。",
+      "request_understood": "（1）求 a 的所有可能值。（2）结合内部垂足条件求 BD。",
+      "independent_solution": "余弦定理给 a²+39=16a cos B。因 a>0，cos B>0，故 cos B=4/5。于是 5a²−64a+195=0，解得 a=5 或 a=39/5。以任一这样的 a 和 c=8 为夹角 B 的两边，都可构造非退化三角形，余弦定理给第三边 b=5。D 在 AC 内部当且仅当 A、C 均为锐角。两候选均有 a²<89=b²+c²，故 A 为锐角。C 锐要求 c²<a²+b²，即 a²>39，只有 a=39/5 可行。由三角形面积等式 b·BD=ac sin B，得 BD=936/125。",
+      "answer": "（1）a=5 或 39/5。（2）BD=936/125。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "边角条件先生成两个合法三角形，内部垂足再筛选其中一个。也可用坐标投影直接检验垂足位置。分数计算略多，13 分合适，版面清楚。",
+      "estimated_minutes": [
+        6,
+        9
+      ],
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "用余弦定理把已知边与 sin B 转成含 cos B 的方程 a²+39=16a cos B。",
+          "after": []
+        },
+        {
+          "kind": "restrict_domain",
+          "evidence": "从 a>0 和方程左端为正排除钝角 B，定 cos B=4/5。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "求解 5a²−64a+195=0，得两个正值。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "以各候选 a 和 c 为夹角 B 的两边构造三角形，核实第三边 b=5。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "把垂足在线段内部翻译成 A、C 均为锐角。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "按余弦定理检查两构型的 A、C，只有 a=39/5 通过。",
+          "after": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "由面积的两种表示求 BD。",
+          "after": [
+            6
+          ]
+        }
+      ],
+      "minutes": [
+        6,
+        9
+      ]
+    },
+    {
+      "number": 16,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "三棱锥 P–ABC 中，PA 垂直底面，AB⊥AC 且 AB=AC=2，E、F 分别为 AB、AC 的中点。第二问 PC 与平面 PEF 所成角的正弦为 1/√15。",
+      "request_understood": "（1）证明 BC∥平面 PEF。（2）求三棱锥 P–AEF 体积的所有可能值。",
+      "independent_solution": "由中位线 EF∥BC。平面 PEF 与底面交于 EF，且 BC 不与 EF 相交，故 BC∥平面 PEF。取 A 为原点，AB、AC、AP 沿坐标正轴，设 PA=h>0。B=(2,0,0)、C=(0,2,0)、P=(0,0,h)，E=(1,0,0)、F=(0,1,0)。平面 PEF 的方程为 hx+hy+z=h，法向量 n=(h,h,1)。由 PC=(0,2,−h)，线面角正弦为 h/[√(4+h²)√(1+2h²)]。令其等于 1/√15，平方化为 2(h²−1)(h²−2)=0。两正解 h=1、√2 均满足原式，且都可构造。底面 AEF 面积为 1/2，体积为 h/6，故所有可能值为 1/6、√2/6。",
+      "answer": "（1）BC∥平面 PEF。（2）1/6 或 √2/6。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "中位线支持综合几何证明，线面角可用空间向量，且两个高度都须验证。15 分合适。第 5 页重绘图中，F 在 PA 与 PF 之间，C 在 PB 上方，E 在 AB 下方。逐个标签放大检查均与线段分开，E、F 实心点分别准确标出 AB、AC 的中点。文字条件和设问完整，独立重渲染与审查 PNG 逐字节一致。",
+      "estimated_minutes": [
+        8,
+        12
+      ],
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "三角形中位线 EF 平行 BC。",
+          "after": []
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "用平面交线 EF 确认 BC 不在 PEF 内，再由线线平行推出线面平行。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "用三条两两垂直的棱建系，设置正高 h。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "从 P、E、F 坐标确定平面方程与法向量。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "把已知线面角正弦写成方向向量与法向量点积的绝对值除以模长乘积。",
+          "after": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "平方并解 h² 方程，得到 1 与 2 两分支。",
+          "after": [
+            5
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "两正高满足未平方等式，且各可构造实际三棱锥。",
+          "after": [
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "以 AEF 面积和 PA 求两个体积。",
+          "after": [
+            3,
+            7
+          ]
+        }
+      ],
+      "minutes": [
+        8,
+        12
+      ]
+    },
+    {
+      "number": 17,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "甲袋 3 白 1 黑，乙袋 2 白 2 黑。两袋各随机取 2 球，每袋内不放回，两袋的抽取相互独立，X 是所抽白球总数。第二问已知 X=2，分别考虑从某袋的剩余球中随机取 1 球。",
+      "request_understood": "（1）求 X 的分布列。（2）分别求从甲、乙袋再取白球的条件概率，并判断应选哪一袋。",
+      "independent_solution": "设 U、V 分别为初次从甲、乙抽出的白球数。每袋各有 6 种等可能两球组合，甲取 1 白、2 白的概率均为 1/2，乙取 0、1、2 白的概率依次为 1/6、2/3、1/6。U、V 独立，卷积得 X=1、2、3、4 的概率依次为 1/12、5/12、5/12、1/12。给定 X=2，只可能为 (U,V)=(1,1) 或 (2,0)，原概率为 1/3、1/12，条件概率为 4/5、1/5。第一种情况甲余 2 白，乙余 1 白 1 黑。第二种情况甲余 1 白 1 黑，乙余 2 白。故甲袋再取白为 (4/5)·1+(1/5)·(1/2)=9/10，乙袋为 (4/5)·(1/2)+(1/5)·1=3/5。应选甲袋。",
+      "answer": "（1）X=1、2、3、4 的概率依次为 1/12、5/12、5/12、1/12。（2）甲袋 9/10，乙袋 3/5，选甲袋。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "第二问复用总数分解，须给两种隐藏情形重新赋权，且情形改变时较优袋也改变。可用条件概率，或对 15 种初始组合和两种后续取法直接计数。新版明确写出每袋取 2 球、袋内不放回和袋间独立，首段续行以汉字起行，15 分合适。独立重渲染与审查 PNG 逐字节一致。",
+      "estimated_minutes": [
+        7,
+        10
+      ],
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "分别计数两袋不放回抽样的白球数分布。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "用分袋独立性计算四个可能总数的概率。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "总数为 2 时列尽两种分袋白球数，并保留各自概率。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "除以 P(X=2) 得两个条件权重。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "从两种情形各袋的剩余球色得到再抽白球的条件概率。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "按条件权重分别加总两袋概率并比较。",
+          "after": [
+            4,
+            5
+          ]
+        }
+      ],
+      "minutes": [
+        7,
+        10
+      ]
+    },
+    {
+      "number": 18,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "双曲线 C:xy=1 取第一象限分支，P=(p,p) 且 p>0，直线过 P 并与该分支相交于相异 A、B。第二问 O 为原点，固定 p 后面积为 1 的直线恰有一条。",
+      "request_understood": "（1）证明割线斜率为负，并以 −k 表示斜率给出两交点充要条件。（2）求唯一性条件下的 p 与该直线。",
+      "independent_solution": "在第一象限 y=1/x 严格递减，两个相异交点横坐标必不同，故割线斜率 −k<0。写直线为 y=−kx+b，其中 b=p(1+k)>0。交点横坐标满足 kx²−bx+1=0。对 k>0，两相异正根当且仅当 b²>4k，因为根积 1/k>0、根和 b/k>0。令根为 x₁<x₂。由 yᵢ=b−kxᵢ，面积 S=b(x₂−x₁)/2=b√(b²−4k)/(2k)。令 t=b/√k=p(√k+1/√k)>2，则 S=t√(t²−4)/2。令 S=1 得 t²(t²−4)=4，故唯一可行 t₀=√(2+2√2)>2。对固定 p，令 s=√k>0。方程 s+1/s=t₀/p 当右端小于 2 时无正解，等于 2 时恰一解 s=1，大于 2 时有两个相异的正根。由 t₀>2，所得根全部符合割线条件。因此恰一条时 p=t₀/2=√((1+√2)/2)，k=1，直线为 x+y=t₀。",
+      "answer": "（1）k>0 且 p²(1+k)²>4k。（2）p=√((1+√2)/2)，唯一的直线是 x+y=√(2+2√2)。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "负斜率、两正根、面积与固定 p 后的直线条数层层衔接。核心是以 b/√k 归一化，读出互为倒数的两种斜率何时合并。也可用坐标轴的互反伸缩将割线化成斜率 −1。17 分合适，题面与版面完整。",
+      "estimated_minutes": [
+        10,
+        15
+      ],
+      "moves": [
+        {
+          "kind": "compare",
+          "evidence": "用 y=1/x 在 x>0 严格递减排除水平、竖直和正斜率。",
+          "after": []
+        },
+        {
+          "kind": "model",
+          "evidence": "用过 P 写出截距 b=p(1+k)，与双曲线联立得到交点横坐标二次式。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "restrict_domain",
+          "evidence": "结合判别式和韦达，给出两个相异正根的充要条件。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "由面积行列式消去斜率交叉项，并将横坐标差化为判别式。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "以 t=b/√k 归一化面积，同时写成 p(√k+1/√k)。",
+          "after": [
+            2,
+            4
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "在 t>2 上由面积 1 求唯一 t₀。",
+          "after": [
+            3,
+            5
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "固定 p，把 k 的个数化成 s+1/s=t₀/p 的正解个数，分阈值 2 的三种情况。",
+          "after": [
+            5,
+            6
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "由唯一正解 s=1 求出 p 和直线，并核对 t₀>2，确保相异正交点。",
+          "after": [
+            3,
+            6,
+            7
+          ]
+        }
+      ],
+      "minutes": [
+        10,
+        15
+      ]
+    },
+    {
+      "number": 19,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "a>1，函数 f(x)=x−a/x−(1+a)ln x 的定义域为 x>0，m 为实数。第二问要求三个不同的实根由小到大成等比数列。",
+      "request_understood": "（1）按 m 分类给出不同实根的个数。（2）求且证明使三个不同根成等比数列的所有 m。",
+      "independent_solution": "f′(x)=(x−1)(x−a)/x²，故 f 在 (0,1) 严格增、在 (1,a) 严格减、在 (a,+∞) 严格增。因对数项的增长慢于一次项，f 在 x→0+ 时趋于 −∞，在 x→∞ 时趋于 ∞。可用 ln t≤2√t（t≥1，由求导）证明这一点，左端令 t=1/x。记 L=f(a)=a−1−(1+a)ln a，U=f(1)=1−a，由中间段递减得 L<U。每段至多一个根，故 L<m<U 时三根，m=L 或 U 时两根，其余一根。若等比三根为 u/q、u、uq（q>1），则对数项在 f(uq)+f(u/q)−2f(u) 中抵消，得到 (u−a/u)(q+q⁻¹−2)=0。后因子严格为正，故 u=√a，m₀=f(√a)=−(1+a)ln a/2。反过来，1<√a<a，故 L<m₀<U，确有三相异根。又 f(a/x)=−f(x)−(1+a)ln a，所以 m=m₀ 时映射 x↦a/x 交换两外根并固定中根 √a，两外根乘积为 a，中根平方也为 a，故按升序成等比数列。",
+      "answer": "（1）L=a−1−(1+a)ln a，U=1−a。L<m<U 有 3 根，m=L 或 U 有 2 根，其余有 1 根。（2）唯一 m=−(1+a)ln a/2。",
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 2
+      },
+      "quality_evidence": "第一问须正确合并临界点和相邻区间，第二问借对称三根消去对数，再由互反恒等式验证充分性。可用 x=√a·eᵗ 转成关于 t 的奇函数来理解对称，亦可全用高中导数和代数。17 分适合。",
+      "estimated_minutes": [
+        12,
+        17
+      ],
+      "moves": [
+        {
+          "kind": "routine_calculus",
+          "evidence": "求导并因式分解，识别两个正临界点。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "由导数符号划分三段，比较极值 L、U。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "以对数相对于一次项的增长界处理两个定义域端点。",
+          "after": []
+        },
+        {
+          "kind": "compare",
+          "evidence": "按水平线相对两极值的高度逐段计数，并在相等时只计一次临界点。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "将升序等比三根写成 u/q、u、uq，q>1。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "取首尾函数值之和减两倍中值，消去对数。",
+          "after": [
+            5
+          ]
+        },
+        {
+          "kind": "necessity",
+          "evidence": "由 q+q⁻¹−2>0 定 u=√a，锁定唯一可能水平 m₀。",
+          "after": [
+            5,
+            6
+          ]
+        },
+        {
+          "kind": "invariant",
+          "evidence": "直接验证 x↦a/x 使函数值关于 m₀ 成反对称关系。",
+          "after": [
+            7
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "用 1<√a<a 与根数分类确保三根存在，再以互反关系配对两外根，证明等比。",
+          "after": [
+            2,
+            4,
+            7,
+            8
+          ]
+        }
+      ],
+      "minutes": [
+        12,
+        17
+      ]
+    }
+  ],
+  "group_reports": [
+    {
+      "file": "full-blind-1-7-routine.json",
+      "report_sha256": "e21a3bbc599194a62986b26b84b210a67957da5437f2db59ec868f2a6c83ff69",
+      "source_pdf_sha256": "ce161d7d8355ca70dc2dae6f82fd8421f2a21298d7647ad5a1915caba7dca521"
+    },
+    {
+      "file": "full-v2-blind-8-14.json",
+      "report_sha256": "7ef1c69d96d4c6202aaa6d559d5ecd69ada27bde82728c85222ec00d63f56eb9",
+      "source_pdf_sha256": "d9a4bfcd3f3d325e589bfd5740cad45724f09995c7a46ed7c31fb2760ddccea6"
+    },
+    {
+      "file": "full-v3-blind-15-19.json",
+      "report_sha256": "9313cbc9626e4a80a7b7d5f86bba309080b918c6acbbc35532c03646c65943c2",
+      "source_pdf_sha256": "d8ff668e423169e6ad538e7f4b7c689b8101e1497b6f2cacec6981bf08a505a8"
+    }
+  ],
+  "position_review": {
+    "pdf_sha256": "356dfa46516ebf1b08a1f69efb507469fb72f4526ff72b17782459a5df725600",
+    "student_review_independent": true,
+    "empirical": false,
+    "questions": [
+      {
+        "number": 1,
+        "moves": [
+          {
+            "kind": "routine_algebra",
+            "evidence": "分解q的二次式并求闭端点解集。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "由解集包含得p推出q。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "取x=1验证q真而p假。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "compare",
+            "evidence": "结合两个方向，匹配唯一选项A。",
+            "after": [
+              2,
+              3
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 2,
+        "moves": [
+          {
+            "kind": "recall",
+            "evidence": "利用z z̄=|z|²。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "把已知共轭等式乘z并代入模长，求z²。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "compare",
+            "evidence": "从−4i读取虚部−4并匹配选项C。",
+            "after": [
+              2
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 3,
+        "moves": [
+          {
+            "kind": "restrict_domain",
+            "evidence": "将x的闭区间映射到相位θ的闭区间。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "branch",
+            "evidence": "在相位区间中筛选正弦等于1/2的两支，含左端点。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "substitute",
+            "evidence": "还原两个x并求和。",
+            "after": [
+              2
+            ],
+            "routine": true
+          },
+          {
+            "kind": "compare",
+            "evidence": "π/3对应B。",
+            "after": [
+              3
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 4,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "把有向线段改写为终点与起点的坐标差。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "由向量方程得3P=2A+B，求OP的分量。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "substitute",
+            "evidence": "独立计算AB的分量为(4,2)。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "对两个向量作数量积，得到D的32/3。",
+            "after": [
+              2,
+              3
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 5,
+        "moves": [
+          {
+            "kind": "recall",
+            "evidence": "用方差等于平方均值减均值平方的恒等式。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "representation",
+            "evidence": "把原均值、方差换成总和20与平方和120。",
+            "after": [
+              1
+            ],
+            "routine": true
+          },
+          {
+            "kind": "model",
+            "evidence": "用4替换8，更新两种总和为16和72。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "以新均值4和新平方均值18重算方差。",
+            "after": [
+              1,
+              3
+            ],
+            "routine": true
+          },
+          {
+            "kind": "compare",
+            "evidence": "新方差2仅匹配B。",
+            "after": [
+              4
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          2,
+          3
+        ]
+      },
+      {
+        "number": 6,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "按两因子的次数和为2列出三个贡献来源。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "recall",
+            "evidence": "用二项式系数或平方公式求各因子的低次系数。",
+            "after": [],
+            "routine": true
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "按三个配对相乘后求和，得到−6。",
+            "after": [
+              1,
+              2
+            ],
+            "routine": true
+          },
+          {
+            "kind": "compare",
+            "evidence": "只有B等于−6。",
+            "after": [
+              3
+            ],
+            "routine": true
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 7,
+        "moves": [
+          {
+            "kind": "invariant",
+            "evidence": "从a₁=0出发，证明[0,1]映回自身，固定绝对值的分支。",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "以不动点2/3为中心，得到偏差按公比−1/2变化。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "用初值写出偏差的符号与大小，仅保留偶数指标。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "用同一尺度比较n=50、52的正偏差与严格上界。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "较早偶数的偏差更大且奇数不合正号，故52最小。",
+            "after": [
+              3,
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 8,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用奇函数 g 把乘积写成 a²−g(x)²。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "a=0 两解集重合，a≠0 两水平线解集互斥且因奇性等势。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_calculus",
+            "evidence": "求导数、单调区间、临界高度 ±2 和远端趋势。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "按 |a| 与 2 的相对位置数正水平线交点。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "恰有四根强制每条水平线各两根，且在 |a|=2 确实达到。",
+            "after": [
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          6
+        ]
+      },
+      {
+        "number": 9,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "按时间顺序构造八个等可能序列。",
+            "after": []
+          },
+          {
+            "kind": "substitute",
+            "evidence": "枚举首末相同的四个序列，得 P(A)=1/2。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "计算 P(B) 和 P(A∩B)，以乘积判定独立。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "计算 P(C) 和 P(C|A) 并比较。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "全反面既非 B 又非 C，反驳对立。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 10,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用和差化积把函数合成为 √3sin(x+π/6)。",
+            "after": []
+          },
+          {
+            "kind": "substitute",
+            "evidence": "由正弦最小值判 C。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "用相位 π/2 对应的竖直对称轴判 B。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "平移 π 改变正弦符号，判 D。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "以上升支根作左端点，两端均为根且下降支有内部根，反驳 A。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          6
+        ]
+      },
+      {
+        "number": 11,
+        "moves": [
+          {
+            "kind": "recall",
+            "evidence": "辨认焦点与准线，准备使用焦准等距定义。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "排除水平线，并以 x=1+my 同时覆盖竖线和斜线。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "联立取根的积，得 y₁y₂=−4、x₁x₂=1，F 位于两点间。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "由焦准定义求弦长并用积给下界，判 A。",
+            "after": [
+              1,
+              3
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "中点到准线距离等于直径圆半径，判 C。",
+            "after": [
+              4
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "由坐标积得数量积，判 D。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "核实横坐标和 6 可达且面积为 2√2，反驳 B。",
+            "after": [
+              2,
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          6,
+          9
+        ]
+      },
+      {
+        "number": 12,
+        "moves": [
+          {
+            "kind": "restrict_domain",
+            "evidence": "确定共同定义域 a<x<4，空区间无解。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "合并两对数，改写为乘积等于 2。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "比较唯一最大值和 2，利用两侧单调及端点极限确定根数。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "只有最大值等于 2 才恰有一根，结合 a<4 求出参数。",
+            "after": [
+              1,
+              3
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "核对该参数的唯一顶点在原定义域并满足方程。",
+            "after": [
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 13,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "只设相邻异色，按格次序用乘法原理得到 24。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "不满足三色用尽时恰用两色，只有两种交替次序，得到 6。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "从所有邻接合法着色中扣掉漏色方案。",
+            "after": [
+              1,
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          2,
+          4
+        ]
+      },
+      {
+        "number": 14,
+        "moves": [
+          {
+            "kind": "endpoint",
+            "evidence": "以 x=0 提取下界 a≥0。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "以 x=1/2 提取上界 a≤1/2。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "将 q 配方成平方项与 a(1/2−a)。",
+            "after": []
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "在候选闭区间内两个加项均非负，证全区间成立。",
+            "after": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 15,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "用余弦定理把已知边与 sin B 转成含 cos B 的方程 a²+39=16a cos B。",
+            "after": []
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "从 a>0 和方程左端为正排除钝角 B，定 cos B=4/5。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "求解 5a²−64a+195=0，得两个正值。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "以各候选 a 和 c 为夹角 B 的两边构造三角形，核实第三边 b=5。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "把垂足在线段内部翻译成 A、C 均为锐角。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "按余弦定理检查两构型的 A、C，只有 a=39/5 通过。",
+            "after": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "由面积的两种表示求 BD。",
+            "after": [
+              6
+            ]
+          }
+        ],
+        "minutes": [
+          6,
+          9
+        ]
+      },
+      {
+        "number": 16,
+        "moves": [
+          {
+            "kind": "recall",
+            "evidence": "三角形中位线 EF 平行 BC。",
+            "after": []
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "用平面交线 EF 确认 BC 不在 PEF 内，再由线线平行推出线面平行。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "用三条两两垂直的棱建系，设置正高 h。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "从 P、E、F 坐标确定平面方程与法向量。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "把已知线面角正弦写成方向向量与法向量点积的绝对值除以模长乘积。",
+            "after": [
+              3,
+              4
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "平方并解 h² 方程，得到 1 与 2 两分支。",
+            "after": [
+              5
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "两正高满足未平方等式，且各可构造实际三棱锥。",
+            "after": [
+              3,
+              5,
+              6
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "以 AEF 面积和 PA 求两个体积。",
+            "after": [
+              3,
+              7
+            ]
+          }
+        ],
+        "minutes": [
+          8,
+          12
+        ]
+      },
+      {
+        "number": 17,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "分别计数两袋不放回抽样的白球数分布。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "用分袋独立性计算四个可能总数的概率。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "总数为 2 时列尽两种分袋白球数，并保留各自概率。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "除以 P(X=2) 得两个条件权重。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "从两种情形各袋的剩余球色得到再抽白球的条件概率。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "按条件权重分别加总两袋概率并比较。",
+            "after": [
+              4,
+              5
+            ]
+          }
+        ],
+        "minutes": [
+          7,
+          10
+        ]
+      },
+      {
+        "number": 18,
+        "moves": [
+          {
+            "kind": "compare",
+            "evidence": "用 y=1/x 在 x>0 严格递减排除水平、竖直和正斜率。",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "用过 P 写出截距 b=p(1+k)，与双曲线联立得到交点横坐标二次式。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "结合判别式和韦达，给出两个相异正根的充要条件。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "由面积行列式消去斜率交叉项，并将横坐标差化为判别式。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "以 t=b/√k 归一化面积，同时写成 p(√k+1/√k)。",
+            "after": [
+              2,
+              4
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "在 t>2 上由面积 1 求唯一 t₀。",
+            "after": [
+              3,
+              5
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "固定 p，把 k 的个数化成 s+1/s=t₀/p 的正解个数，分阈值 2 的三种情况。",
+            "after": [
+              5,
+              6
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "由唯一正解 s=1 求出 p 和直线，并核对 t₀>2，确保相异正交点。",
+            "after": [
+              3,
+              6,
+              7
+            ]
+          }
+        ],
+        "minutes": [
+          10,
+          15
+        ]
+      },
+      {
+        "number": 19,
+        "moves": [
+          {
+            "kind": "routine_calculus",
+            "evidence": "求导并因式分解，识别两个正临界点。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "由导数符号划分三段，比较极值 L、U。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "以对数相对于一次项的增长界处理两个定义域端点。",
+            "after": []
+          },
+          {
+            "kind": "compare",
+            "evidence": "按水平线相对两极值的高度逐段计数，并在相等时只计一次临界点。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "将升序等比三根写成 u/q、u、uq，q>1。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "取首尾函数值之和减两倍中值，消去对数。",
+            "after": [
+              5
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "由 q+q⁻¹−2>0 定 u=√a，锁定唯一可能水平 m₀。",
+            "after": [
+              5,
+              6
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "直接验证 x↦a/x 使函数值关于 m₀ 成反对称关系。",
+            "after": [
+              7
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "用 1<√a<a 与根数分类确保三根存在，再以互反关系配对两外根，证明等比。",
+            "after": [
+              2,
+              4,
+              7,
+              8
+            ]
+          }
+        ],
+        "minutes": [
+          12,
+          17
+        ]
+      }
+    ]
+  }
+}

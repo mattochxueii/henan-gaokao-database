@@ -1,0 +1,183 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": 52,
+        "complete": true,
+        "facts": {
+          "witness": "750599937895083/1125899906842624"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase9:position-pilot:01:v1",
+    "math_spec_sha256": "cce4b328df56e551237eb7309af2d89080b923dfc9821e355a4185ff7837b2b8",
+    "writing_sha256": "5730da487f0d2a18a59cd4fbf144b8d3ccb21bc3b1d62be6a958afcb19210071"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "4",
+        "complete": true,
+        "facts": {
+          "critical_height": "2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:ai:phase9:position-pilot:02:v1",
+    "math_spec_sha256": "fb9dd2a4192c5ce82da86ded7442979243554727b467dcb82286bdde845a5e3b",
+    "writing_sha256": "cc01edaa3c3516627ff8194aaec999b3564befd459aa5820ec53749e627818dd"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x**2 + 2 + x**(-2)",
+          "derivative": "2*(x - 1)*(x + 1)*(x**2 + 1)/x**3"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "dot": "-3"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "area_square": "2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 0,
+      "partial_tasks": 3,
+      "independent_reasoning_tasks": 1,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase9:position-pilot:03:v1",
+    "math_spec_sha256": "798ea907f1d8aa1e1ad309198ad22370cba051cec2fed92041546f38a771b7da",
+    "writing_sha256": "3f06e07cf41b34580d4e984d5fe60b7ea80d28487c7885cb0452d3011a437775"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-2*a*x + a/2 + x**2",
+          "derivative": "2*(-a + x)",
+          "upper_witness": "1/4 - a/2",
+          "upper_identity": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 0,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase9:position-pilot:04:v1",
+    "math_spec_sha256": "1cc02ea60d7ee968bbc9359d72f89da9f28dc8e9de11340f033ee408d71e3a0f",
+    "writing_sha256": "27e7a828eafc4fc1d7f2abfd9042d5079337cb4e6c9bc21f80494a95e739d00e"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "discriminant": "-4*k + p**2*(k + 1)**2",
+          "reduced_discriminant": "-4 + p**2*(k + 1)**2/k"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "area_square": "p**2*(-4*k + p**2*(k*(k + 2) + 1))*(k*(k + 2) + 1)/(4*k**2)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 0,
+      "partial_tasks": 2,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase9:position-pilot:05:v1",
+    "math_spec_sha256": "76dc42b88d782f2bce73f8c48875304c3b531b1eed94ec29cbd6f82e9f061351",
+    "writing_sha256": "96d2c9f233348941cff44c55096ac80cde4777dcd9ab138b7330468ea139e1ad"
+  }
+]

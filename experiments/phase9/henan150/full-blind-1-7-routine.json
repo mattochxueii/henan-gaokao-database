@@ -1,0 +1,452 @@
+{
+  "pdf_sha256": "ce161d7d8355ca70dc2dae6f82fd8421f2a21298d7647ad5a1915caba7dca521",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "c208930d46de1c49d85cedb90ac3c99068261c9714b0e26b0d224db5967d3a85"
+    },
+    {
+      "number": 2,
+      "sha256": "94c4ab76aee034c807c876acc888ded96a027f936263e8fad06bf5a1048e2125"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "A，充分不必要条件",
+      "answer_key": "A",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "q等价于(x−1)(x−2)≥0，解集为(−∞,1]∪[2,+∞)。p的解集[2,+∞)包含于其中，所以p推出q。x=1时q成立而p不成立，故q不能推出p，只有A正确。",
+      "moves": [
+        {
+          "kind": "routine_algebra",
+          "evidence": "分解q的二次式并求闭端点解集。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "由解集包含得p推出q。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "取x=1验证q真而p假。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "结合两个方向，匹配唯一选项A。",
+          "after": [
+            2,
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "基础逻辑题用二次不等式构造真包含，要求分别判两个方向。也可直接验因式同号，再给一个反例。PDF采用两列两行选项，A至D均单行，标签对齐且字形完整。5分适合作为起始题。"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−4",
+      "answer_key": "C",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "将z̄=iz两边乘z，得4=|z|²=iz²，故z²=−4i，其虚部为−4，只有C。条件可实现，例如z=√2(1−i)。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "利用z z̄=|z|²。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "把已知共轭等式乘z并代入模长，求z²。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "从−4i读取虚部−4并匹配选项C。",
+          "after": [
+            2
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 1,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "模和共轭关系直接给平方，也可设实虚部求z再平方。两种可能的z得到同一个虚部。共轭线、i与模符号完整，选项区分平方模和符号，5分适当。"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "π/3",
+      "answer_key": "B",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "设θ=2x+π/6，则θ∈[π/6,7π/6]。在这个区间，sinθ=1/2恰在θ=π/6与5π/6成立。还原得x=0、π/3，和为π/3，只有B。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "将x的闭区间映射到相位θ的闭区间。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "branch",
+          "evidence": "在相位区间中筛选正弦等于1/2的两支，含左端点。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "substitute",
+          "evidence": "还原两个x并求和。",
+          "after": [
+            2
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "π/3对应B。",
+          "after": [
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 1,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "相位换元后核查闭区间的左端解和内部另一支，可用单位圆或一般解验证无遗漏。区间括号、相位和分式均清楚，5分与两步求解相称。"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "32/3",
+      "answer_key": "D",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "令P=(u,v)。由2(P−A)+(P−B)=0得P=(2A+B)/3=(7/3,2/3)。又AB=(4,2)，故OP与AB的数量积为(7/3)·4+(2/3)·2=32/3，只有D。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "把有向线段改写为终点与起点的坐标差。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "由向量方程得3P=2A+B，求OP的分量。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "substitute",
+          "evidence": "独立计算AB的分量为(4,2)。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "对两个向量作数量积，得到D的32/3。",
+          "after": [
+            2,
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 1,
+        "model": 1,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "向量式可按分量求解，也可识别加权平均点。解出P后再做点积，所求表达式与题干处在同一行且箭头均完整。5分合适。"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "2",
+      "answer_key": "B",
+      "estimated_minutes": [
+        2,
+        3
+      ],
+      "independent_solution": "原记录总和为4·5=20，平方和为4(5+5²)=120。把一项8换成4，总和变为16，平方和变为120−8²+4²=72。新均值为4，新方差为72/4−4²=2，只有B。原记录可以是2、4、6、8，数据条件可实现。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "用方差等于平方均值减均值平方的恒等式。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "representation",
+          "evidence": "把原均值、方差换成总和20与平方和120。",
+          "after": [
+            1
+          ],
+          "routine": true
+        },
+        {
+          "kind": "model",
+          "evidence": "用4替换8，更新两种总和为16和72。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "以新均值4和新平方均值18重算方差。",
+          "after": [
+            1,
+            3
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "新方差2仅匹配B。",
+          "after": [
+            4
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 1,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "数据更正改变均值与平方和，需从汇总量重建更正后的方差。另一条路是用新均值4作中心，先换中心再替换误记项。前后数据和四选项清楚，5分与计算量相称。"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "−6",
+      "answer_key": "B",
+      "estimated_minutes": [
+        1,
+        2
+      ],
+      "independent_solution": "(1−2x)²=1−4x+4x²。总次数为2的组合只有(2,0)、(1,1)、(0,2)。利用(1+x)⁴的前三级系数1、4、6，所求为6−16+4=−6，唯一选B。也可先写成[(1+x)²(1−2x)]²=(1−3x²−2x³)²，直接得到−6。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "按两因子的次数和为2列出三个贡献来源。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "recall",
+          "evidence": "用二项式系数或平方公式求各因子的低次系数。",
+          "after": [],
+          "routine": true
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "按三个配对相乘后求和，得到−6。",
+          "after": [
+            1,
+            2
+          ],
+          "routine": true
+        },
+        {
+          "kind": "compare",
+          "evidence": "只有B等于−6。",
+          "after": [
+            3
+          ],
+          "routine": true
+        }
+      ],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "可直接做三项系数卷积，也可把乘积配成平方，利用一次项抵消后快速取二次项。两法均可核对负号及交叉贡献。幂、负号和四个选项可辨，5分适当。"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": true,
+      "request_understood": true,
+      "blocking_issues": [],
+      "answer": "52",
+      "answer_key": "C",
+      "estimated_minutes": [
+        3,
+        5
+      ],
+      "independent_solution": "a₁=0∈[0,1]，且当aₙ∈[0,1]时，aₙ₊₁=1−aₙ/2∈[1/2,1]，故这个区间正向不变。令dₙ=aₙ−2/3，则dₙ₊₁=−dₙ/2，d₁=−2/3。因此dₙ=(−1)ⁿ(4/3)2⁻ⁿ，只有偶数n为正。正偏差随偶数n递增而减小。n=50时为(4/3)2⁻⁵⁰，超过上界，n=52时为(1/3)2⁻⁵⁰，严格低于上界，故最小n为52，只有C。",
+      "moves": [
+        {
+          "kind": "invariant",
+          "evidence": "从a₁=0出发，证明[0,1]映回自身，固定绝对值的分支。",
+          "after": []
+        },
+        {
+          "kind": "model",
+          "evidence": "以不动点2/3为中心，得到偏差按公比−1/2变化。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "用初值写出偏差的符号与大小，仅保留偶数指标。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "用同一尺度比较n=50、52的正偏差与严格上界。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "较早偶数的偏差更大且奇数不合正号，故52最小。",
+          "after": [
+            3,
+            4
+          ]
+        }
+      ],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      },
+      "quality_evidence": "不变区间消去绝对值后，用中心化偏差处理交替符号和指数阈值。也可先分奇偶，建立两步递推后比较相邻偶数。选择最小指标要同时排除奇数和较早偶数，构成连贯推理。240 dpi裁图确认严格不等号、指数−50及A到D四个数字完整且齐整。5分适合作为后段单选。"
+    }
+  ]
+}

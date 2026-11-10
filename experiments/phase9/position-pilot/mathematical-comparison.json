@@ -1,0 +1,93 @@
+{
+  "pdf_sha256": "8425352e25f1a227988850464b42f4eafab283cb5f402011ada7675f29b42738",
+  "student_review_sha256": "df95b259f156ab5fd6f888e16c410c4a453cddbb94757ff65e2ed7d8b3b46a56",
+  "math_verification_sha256": "d9dff53616d39ba9092fc5ee53d40b0e41cdbe435c925257a8a847206d20f98c",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "a₁∈[0,1]。若 aₙ∈[0,1]，递推为 aₙ₊₁=1−aₙ/2∈[1/2,1]，所以可一直使用这一分支。令 dₙ=aₙ−2/3，则 dₙ₊₁=−dₙ/2，故 dₙ=(−1)ⁿ·2^(2−n)/3。正误差只在偶数下标出现，并沿偶数严格减小。n=50 时 d₅₀=(4/3)·2⁻⁵⁰ 大于上界，n=52 时 d₅₂=2⁻⁵⁰/3 小于上界，故最小为 52。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "令 g=x³−3x，则 fₐ(x)fₐ(−x)=a²−g(x)²。a=0 时仅有 g=0 的三个不同根。a≠0 时 g=±|a| 的解集互斥，由奇性两边根数相同。g′=3(x²−1)，极大值 g(−1)=2，极小值 g(1)=−2，且两端分别趋于正负无穷。因此水平线高度 |a| 在 (0,2)、等于 2、超过 2 时，分别有 3、2、1 个不同交点。合计四个根当且仅当 |a|=2，故 a²=4。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "F=(1,0)，准线 x=−1。过 F 的水平线只交曲线于一点，可将允许的直线统一写成 x=1+my，含竖直线。交点纵坐标是 y²−4my−4=0 的两根，故 y₁y₂=−4，x₁x₂=(y₁y₂)²/16=1。F 在 A、B 之间。由焦准定义得 |AB|=x₁+x₂+2≥4，故 A 对。弦中点到准线的距离为 (x₁+x₂)/2+1=|AB|/2，故 B 对。点积为 1−4=−3，故 C 对。D 的条件可由 m²=1 实现，因为 x₁+x₂=2+4m²。此时 (y₁−y₂)²=4(x₁+x₂)+8=32，行列式 x₁y₂−x₂y₁=y₂−y₁，面积为 2√2，故 D 错。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 0,
+        "partial_tasks": 3,
+        "independent_reasoning_tasks": 1,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "右开口抛物线的两不同交点，含竖直焦点弦。",
+        "necessity": "焦点在弦线上迫使参数积为负一。",
+        "sufficiency": "反代参数式可逐项验证准线相切和向量数量积。",
+        "boundaries": "竖直弦给t=1,u=−1或反序，仍符合公式。",
+        "equality": "t²+u²≥2，等号在竖直弦实现；D条件的横坐标和6可实现。",
+        "school_solution": "焦点准线定义、二次关系、向量数量积和面积。"
+      }
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "令 q(x)=x²−2ax+a/2。代 x=0 得 a≥0，代 x=1/2 得 1/4−a/2≥0，即 a≤1/2。反之，若 a∈[0,1/2]，则 q(x)=(x−a)²+a(1/2−a)≥0，故整个闭区间恒成立。答案为 [0,1/2]。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 0,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "任意x∈[0,1]，求实参数。",
+        "necessity": "x=0和x=1/2得到必要上下界。",
+        "sufficiency": "凸组合的两个平方对全域非负。",
+        "boundaries": "闭区间包含两个见证点，且两个参数端点均允许。",
+        "equality": "a=0或1/2时各有一个取等点。",
+        "school_solution": "代入见证与配方恒等式，不依赖高阶方法。"
+      }
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "y=1/x 在 x>0 上严格递减，竖线不能给两点，故割线斜率为 −k，k>0。记 b=p(1+k)，直线 y=−kx+b。交点横坐标满足 kx²−bx+1=0。因两根和、积都为正，互异实根必均正，故充要条件为 b²>4k，即 p>2√k/(1+k)。设交点横坐标 x₁、x₂，面积为 b|x₁−x₂|/2=b√(b²−4k)/(2k)。置 w=b²/k=p²(k+2+1/k)>4，面积等于 √[w(w−4)]/2。面积为 1 等价于 w=2+2√2。函数 k+2+1/k 的最小值为 4，等号仅在 k=1。任意 k≠1 的解同时给出不同的 1/k，故唯一时必有 k=1，而令 4p²=2+2√2 确能且只能给 k=1。于是 p=√[(1+√2)/2]，所求直线 y=−x+√(2+2√2)。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "argument_audit": {
+        "scope": "p>0，双曲线第一象限支，两个不同交点。",
+        "necessity": "斜率严格为负且判别式严格大于零。",
+        "sufficiency": "根和积为正确保两根在同一所需支；面积是参数u的严格增函数。",
+        "boundaries": "u=4仅在k=1时发生；p≤1时该直线无两个有效交点。",
+        "equality": "面积1唯一只能在u=4；所得p>1回代有效。",
+        "school_solution": "韦达、面积行列式、配方及互为倒数参数分类。"
+      }
+    }
+  ],
+  "official_or_human_review": false
+}

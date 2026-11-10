@@ -28,6 +28,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_national.py -v
       - name: Source calibration and review regressions
         run: python -m unittest discover -s tests -p test_calibration.py -v
+      - name: Whole-paper placement and structural regressions
+        run: python -m unittest discover -s tests -p test_paper_quality.py -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"

@@ -26,8 +26,23 @@ from analysis_db import fingerprint
 from gaokao import require, atomic_write
 from .export import chinese_font, MathParagraph, formatted_plain
 
-VERSION = "student-layout-v3"
+VERSION = "student-layout-v4"
 MATH_RASTER = MathTextParser("agg")
+
+
+def option_grid(options, width):
+    """Use the widest fitting row while keeping each label and answer together."""
+    for columns in (4, 2, 1):
+        usable = width / columns - 12
+        if columns == 1 or all(
+            item.wrap(usable, 1000)[1] <= item.style.leading * 1.05 for item in options
+        ):
+            return Table(
+                [options[i:i + columns] for i in range(0, len(options), columns)],
+                colWidths=[width / columns] * columns,
+                hAlign="LEFT",
+                style=[("VALIGN", (0, 0), (-1, -1), "TOP")],
+            )
 
 
 def formula_image(formula, filename):
@@ -245,7 +260,7 @@ def render(paper, path, solutions=False):
                             linewidth=0.9,
                             linestyle="--" if frozenset((a, b)) in hidden else "-",
                         )
-                    ax.view_init(20, -55)
+                    ax.view_init(*data.get("view_angles", (20, -55)))
                     ax.set_axis_off()
                     for name, point in data["vertices"].items():
                         px, py, _ = proj3d.proj_transform(*point, ax.get_proj())
@@ -267,18 +282,10 @@ def render(paper, path, solutions=False):
                     Image(str(figure), width=250, height=155, kind="proportional")
                 )
             if q["kind"] == "single_choice":
-                block.append(
-                    Table(
-                        [
-                            [
-                                para(key + "．" + text)
-                                for key, text in q["options"].items()
-                            ]
-                        ],
-                        colWidths=[122] * 4,
-                        hAlign="LEFT",
-                    )
-                )
+                block.append(option_grid(
+                    [para(key + "．" + text) for key, text in q["options"].items()],
+                    A4[0] - 2 * 44 - 12,
+                ))
             else:
                 for key, text in q["options"].items():
                     block.append(para(key + "．" + text))

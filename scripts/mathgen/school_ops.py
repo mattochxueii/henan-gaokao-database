@@ -160,6 +160,30 @@ def level_count(expr, x, domain, level):
 def solve_extra(t):
     op = t["op"]
     x = s.Symbol("x", real=True)
+    if op == "recurrence_first_window":
+        current, pivot, tolerance = (
+            parse(str(t[key])) for key in ("initial", "pivot", "tolerance")
+        )
+        if tolerance.is_positive is not True:
+            raise ValueError("递推阈值必须为正")
+        recurrence = parse(t["expression"])
+        for n in range(1, 101):
+            delta = s.simplify(current - pivot)
+            if delta.is_positive is True and (tolerance - delta).is_positive is True:
+                return packed(n, witness=current)
+            current = s.simplify(recurrence.subs(x, current))
+            if current.is_real is not True or current.is_finite is not True:
+                raise ValueError("递推项不是有限实数")
+        raise ValueError("迭代预算内未找到首次命中项")
+    if op == "odd_cubic_level_parameter_square":
+        p = parse(str(t["linear_coefficient"]))
+        if p.is_positive is not True or t.get("distinct_roots") != 4:
+            raise ValueError("要求正系数的奇三次函数及四个不同的并集根")
+        # Nonzero opposite levels are disjoint. Each has two distinct roots
+        # exactly at the magnitude of a critical height.
+        critical = s.sqrt(p / 3)
+        value = (x**3 - p*x).subs(x, critical)
+        return packed(s.simplify(value**2), critical_height=s.Abs(value))
     if op == "first_sum_exceedance":
         return first_sum_exceedance(t)
     if op == "two_class_stopping":

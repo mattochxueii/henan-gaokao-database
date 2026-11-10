@@ -1,0 +1,647 @@
+{
+  "pdf_sha256": "8425352e25f1a227988850464b42f4eafab283cb5f402011ada7675f29b42738",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "3034802a36f1a82bd988f5cde1f42f2c04c6e4cfe43a9c7c1e68ce850a3fd6bc"
+    },
+    {
+      "number": 2,
+      "sha256": "8a29dcb03802ea641ede4186e9e743d04411efca0e36261074c7dd134116bf6f"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "conditions_understood": "初项 a₁=0，绝对值递推对每个 n≥1 有效，所给上下界均严格。",
+      "request_understood": "从四项选出使正误差小于 2⁻⁵⁰ 的最小正整数 n。",
+      "independent_solution": "a₁∈[0,1]。若 aₙ∈[0,1]，递推为 aₙ₊₁=1−aₙ/2∈[1/2,1]，所以可一直使用这一分支。令 dₙ=aₙ−2/3，则 dₙ₊₁=−dₙ/2，故 dₙ=(−1)ⁿ·2^(2−n)/3。正误差只在偶数下标出现，并沿偶数严格减小。n=50 时 d₅₀=(4/3)·2⁻⁵⁰ 大于上界，n=52 时 d₅₂=2⁻⁵⁰/3 小于上界，故最小为 52。",
+      "answer": "C（52）",
+      "answer_key": "C",
+      "quality_evidence": "必须先证绝对值分支可保持，再把递推改写成正负交替的误差。大的指数使逐项试算失去优势。5 分适配分支、奇偶和严格端点。PDF 有单独换行的「为」字，但句意和数学符号均清楚。",
+      "moves": [
+        {
+          "kind": "invariant",
+          "evidence": "a₁∈[0,1]，且该区间经当前递推映入 [1/2,1]，可始终去掉绝对值。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "减去不动点 2/3，令 dₙ=aₙ−2/3。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "误差为公比 −1/2 的等比数列，得到 dₙ=(−1)ⁿ·2^(2−n)/3。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "restrict_domain",
+          "evidence": "dₙ>0 要求 n 为偶数。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "偶数支严格递减，对照 50、52 证明第一个合格值为 52。",
+          "after": [
+            3,
+            4
+          ]
+        }
+      ],
+      "minutes": [
+        3,
+        5
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 1,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 2,
+      "conditions_understood": "a、x 均按实数，乘积方程要求四个互异实根，重根只按一个解计。",
+      "request_understood": "确定能产生四个不同解的参数平方 a²。",
+      "independent_solution": "令 g=x³−3x，则 fₐ(x)fₐ(−x)=a²−g(x)²。a=0 时仅有 g=0 的三个不同根。a≠0 时 g=±|a| 的解集互斥，由奇性两边根数相同。g′=3(x²−1)，极大值 g(−1)=2，极小值 g(1)=−2，且两端分别趋于正负无穷。因此水平线高度 |a| 在 (0,2)、等于 2、超过 2 时，分别有 3、2、1 个不同交点。合计四个根当且仅当 |a|=2，故 a²=4。",
+      "answer": "C（4）",
+      "answer_key": "C",
+      "quality_evidence": "两个因子通过奇函数化成对称水平线，要求处理 a=0 的解集重叠和极值处重根。题面短，5 分对应明确但实质性的根数分类。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "利用 g 的奇性，把乘积改写为 a²−g(x)²。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "a=0 时两解集相同且有三个根，a≠0 时两个水平线的根集互斥且等势。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_calculus",
+          "evidence": "由导数确定三个单调区间和临界高度 ±2。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "按 |a| 与 2 的关系，将水平线交点数分为 3、2、1。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "necessity",
+          "evidence": "总数 4 强制每个水平线各 2 根，得到且验证 a²=4。",
+          "after": [
+            4
+          ]
+        }
+      ],
+      "minutes": [
+        4,
+        6
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 3,
+      "conditions_understood": "直线过抛物线焦点，与曲线有两个不同交点。D 项另给横坐标之和 6。",
+      "request_understood": "核验弦长界、圆与准线相切、向量点积和条件面积四项。",
+      "independent_solution": "F=(1,0)，准线 x=−1。过 F 的水平线只交曲线于一点，可将允许的直线统一写成 x=1+my，含竖直线。交点纵坐标是 y²−4my−4=0 的两根，故 y₁y₂=−4，x₁x₂=(y₁y₂)²/16=1。F 在 A、B 之间。由焦准定义得 |AB|=x₁+x₂+2≥4，故 A 对。弦中点到准线的距离为 (x₁+x₂)/2+1=|AB|/2，故 B 对。点积为 1−4=−3，故 C 对。D 的条件可由 m²=1 实现，因为 x₁+x₂=2+4m²。此时 (y₁−y₂)²=4(x₁+x₂)+8=32，行列式 x₁y₂−x₂y₁=y₂−y₁，面积为 2√2，故 D 错。",
+      "answer": "ABC",
+      "answer_key": "ABC",
+      "quality_evidence": "一组焦弦不变量为四项提供共同起点，选项后段主要并行。可用斜率形式或抛物线参数。D 的横坐标和确可实现，面积真假可核。选项布局清楚，6 分覆盖所需核验。",
+      "moves": [
+        {
+          "kind": "recall",
+          "evidence": "从标准式辨认焦点、准线与等距定义。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "排除无两个交点的水平线，用 x=1+my 同时覆盖斜线和竖线。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "invariant",
+          "evidence": "联立和韦达给 y₁y₂=−4、x₁x₂=1，且 F 在两交点间。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "焦准定义与 x₁x₂=1 给弦长公式和下界，判 A。",
+          "after": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "直径圆半径恰等于圆心到准线的距离，判 B。",
+          "after": [
+            4
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "由两个坐标乘积求数量积，判 C。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "核实 m=±1 时条件可实现，行列式给面积 2√2，反驳 D。",
+          "after": [
+            2,
+            3
+          ]
+        }
+      ],
+      "minutes": [
+        6,
+        9
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 1,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 4,
+      "conditions_understood": "参数 a 为实数。不等式须对闭区间 [0,1] 上的每个 x 成立。",
+      "request_understood": "给出 a 的完整取值范围，需保留可取得的端点。",
+      "independent_solution": "令 q(x)=x²−2ax+a/2。代 x=0 得 a≥0，代 x=1/2 得 1/4−a/2≥0，即 a≤1/2。反之，若 a∈[0,1/2]，则 q(x)=(x−a)²+a(1/2−a)≥0，故整个闭区间恒成立。答案为 [0,1/2]。",
+      "answer": "[0,1/2]",
+      "quality_evidence": "x=0 与 x=1/2 的并行必要条件给出候选闭区间，配方证明充分性。也可先用区间端点限制顶点位置，再求区间最小值。5 分适配，短解来自识别关键测试点。",
+      "moves": [
+        {
+          "kind": "endpoint",
+          "evidence": "区间端点 x=0 必须使 q(x)≥0，推出 a≥0。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "在内部取 x=1/2，推出 a≤1/2。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "配方得 q(x)=(x−a)²+a(1/2−a)。",
+          "after": []
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "在必要范围内两个加项都非负，完成对全区间的反向验证。",
+          "after": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "minutes": [
+        3,
+        5
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 1,
+        "reasoning": 2,
+        "model": 1,
+        "breakthrough": 2,
+        "flexibility": 2,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    },
+    {
+      "number": 5,
+      "conditions_understood": "曲线只取 xy=1 的第一象限分支，P=(p,p) 且 p>0。交点须互异并在这一支上。第二问按不同直线计数。",
+      "request_understood": "证明斜率负，写出由 p、k 表达的两交点充要条件，再由面积为 1 的割线唯一确定 p 和直线。",
+      "independent_solution": "y=1/x 在 x>0 上严格递减，竖线不能给两点，故割线斜率为 −k，k>0。记 b=p(1+k)，直线 y=−kx+b。交点横坐标满足 kx²−bx+1=0。因两根和、积都为正，互异实根必均正，故充要条件为 b²>4k，即 p>2√k/(1+k)。设交点横坐标 x₁、x₂，面积为 b|x₁−x₂|/2=b√(b²−4k)/(2k)。置 w=b²/k=p²(k+2+1/k)>4，面积等于 √[w(w−4)]/2。面积为 1 等价于 w=2+2√2。函数 k+2+1/k 的最小值为 4，等号仅在 k=1。任意 k≠1 的解同时给出不同的 1/k，故唯一时必有 k=1，而令 4p²=2+2√2 确能且只能给 k=1。于是 p=√[(1+√2)/2]，所求直线 y=−x+√(2+2√2)。",
+      "answer": "（1）k>0 且 p>2√k/(1+k)；（2）p=√[(1+√2)/2]，y=−x+√(2+2√2)",
+      "quality_evidence": "第一问需要证明交点正性和充要条件。第二问把行列式面积规约成无量纲的 w，再利用 k 与 1/k 配对和等号判断唯一性。两问条件复用，关键构造与若干可独立评分步骤足以支撑 17 分。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "在第一象限分支，任意两点的割线斜率严格负，且竖线不可能。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "用 k>0 写过 P 的直线 y=−kx+b，b=p(1+k)。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "联立曲线得到关于交点横坐标的二次方程。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "判别式严格为正且韦达的和、积均正，证出两个不同正根的充要条件。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "行列式面积化为 b|x₁−x₂|/2，再将根差写成判别式。",
+          "after": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "置 w=b²/k，面积规约为 √[w(w−4)]/2。",
+          "after": [
+            5
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "由面积 1 和 w>4 筛出唯一合法的 w=2+2√2。",
+          "after": [
+            4,
+            6
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "k 与 1/k 配对表明唯一解只能 k=1，且不等式等号说明该解确唯一。",
+          "after": [
+            6,
+            7
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "反求 p 与直线，并以 w>4 验证两个交点互异且在第一象限。",
+          "after": [
+            4,
+            7,
+            8
+          ]
+        }
+      ],
+      "minutes": [
+        10,
+        15
+      ],
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "blocking_issues": [],
+      "quality": {
+        "concept_depth": 2,
+        "reasoning": 2,
+        "model": 2,
+        "breakthrough": 2,
+        "flexibility": 1,
+        "progression": 2,
+        "computation": 2,
+        "reading": 2,
+        "points": 2,
+        "originality": 1
+      }
+    }
+  ],
+  "group_reports": [
+    {
+      "file": "pilot-blind.json",
+      "report_sha256": "df019ff1f1bf8a32d14d0b874e681ba5f3ed01bc7bd237e267e48eb5cd659fc8"
+    }
+  ],
+  "position_review": {
+    "pdf_sha256": "8425352e25f1a227988850464b42f4eafab283cb5f402011ada7675f29b42738",
+    "student_review_independent": true,
+    "empirical": false,
+    "questions": [
+      {
+        "number": 1,
+        "moves": [
+          {
+            "kind": "invariant",
+            "evidence": "a₁∈[0,1]，且该区间经当前递推映入 [1/2,1]，可始终去掉绝对值。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "减去不动点 2/3，令 dₙ=aₙ−2/3。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "误差为公比 −1/2 的等比数列，得到 dₙ=(−1)ⁿ·2^(2−n)/3。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "dₙ>0 要求 n 为偶数。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "偶数支严格递减，对照 50、52 证明第一个合格值为 52。",
+            "after": [
+              3,
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 2,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "利用 g 的奇性，把乘积改写为 a²−g(x)²。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "a=0 时两解集相同且有三个根，a≠0 时两个水平线的根集互斥且等势。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_calculus",
+            "evidence": "由导数确定三个单调区间和临界高度 ±2。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "按 |a| 与 2 的关系，将水平线交点数分为 3、2、1。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "总数 4 强制每个水平线各 2 根，得到且验证 a²=4。",
+            "after": [
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          6
+        ]
+      },
+      {
+        "number": 3,
+        "moves": [
+          {
+            "kind": "recall",
+            "evidence": "从标准式辨认焦点、准线与等距定义。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "排除无两个交点的水平线，用 x=1+my 同时覆盖斜线和竖线。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "联立和韦达给 y₁y₂=−4、x₁x₂=1，且 F 在两交点间。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "焦准定义与 x₁x₂=1 给弦长公式和下界，判 A。",
+            "after": [
+              1,
+              3
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "直径圆半径恰等于圆心到准线的距离，判 B。",
+            "after": [
+              4
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "由两个坐标乘积求数量积，判 C。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "核实 m=±1 时条件可实现，行列式给面积 2√2，反驳 D。",
+            "after": [
+              2,
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          6,
+          9
+        ]
+      },
+      {
+        "number": 4,
+        "moves": [
+          {
+            "kind": "endpoint",
+            "evidence": "区间端点 x=0 必须使 q(x)≥0，推出 a≥0。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "在内部取 x=1/2，推出 a≤1/2。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "配方得 q(x)=(x−a)²+a(1/2−a)。",
+            "after": []
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "在必要范围内两个加项都非负，完成对全区间的反向验证。",
+            "after": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 5,
+        "moves": [
+          {
+            "kind": "restrict_domain",
+            "evidence": "在第一象限分支，任意两点的割线斜率严格负，且竖线不可能。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "用 k>0 写过 P 的直线 y=−kx+b，b=p(1+k)。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "联立曲线得到关于交点横坐标的二次方程。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "判别式严格为正且韦达的和、积均正，证出两个不同正根的充要条件。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "行列式面积化为 b|x₁−x₂|/2，再将根差写成判别式。",
+            "after": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "置 w=b²/k，面积规约为 √[w(w−4)]/2。",
+            "after": [
+              5
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "由面积 1 和 w>4 筛出唯一合法的 w=2+2√2。",
+            "after": [
+              4,
+              6
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "k 与 1/k 配对表明唯一解只能 k=1，且不等式等号说明该解确唯一。",
+            "after": [
+              6,
+              7
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "反求 p 与直线，并以 w>4 验证两个交点互异且在第一象限。",
+            "after": [
+              4,
+              7,
+              8
+            ]
+          }
+        ],
+        "minutes": [
+          10,
+          15
+        ]
+      }
+    ]
+  }
+}
