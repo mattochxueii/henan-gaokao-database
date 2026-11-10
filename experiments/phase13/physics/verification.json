@@ -1,0 +1,222 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "physics",
+    "region": "河南",
+    "year": 2026,
+    "mode": "targeted",
+    "mapping": {
+      "subject": "physics",
+      "year": 2026,
+      "paper_id": "2026-cn-ha-physics-selective",
+      "series_id": "cn-ha-physics-selective",
+      "curriculum_id": "physics-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "first_choice",
+      "authoring_body": "河南省统一命题",
+      "status": "historical_selective",
+      "points": 100,
+      "minutes": 75,
+      "evidence": [
+        "hn-2026",
+        "hn-reform"
+      ],
+      "structure": {
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 7,
+            "points": 28
+          },
+          {
+            "kind": "multiple_choice",
+            "count": 3,
+            "points": 18
+          },
+          {
+            "kind": "constructed_response",
+            "count": 5,
+            "points": 54
+          }
+        ],
+        "source_urls": [
+          "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+          "https://www.shijuan123.com/tiku/papers/ha-2026.html",
+          "https://www.yeyulingfeng.com/wendang/91324497.html",
+          "https://www.zzwb.cn/news/382763.html"
+        ],
+        "status": "observed_third_party_paper",
+        "source_details": [
+          {
+            "kind": "single_choice",
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "points_each": 4,
+            "total_points": 28
+          },
+          {
+            "kind": "multiple_choice",
+            "numbers": [
+              8,
+              9,
+              10
+            ],
+            "points_each": 6,
+            "partial_correct_points": 3,
+            "total_points": 18
+          },
+          {
+            "kind": "experiment",
+            "numbers": [
+              11,
+              12
+            ],
+            "individual_points": [
+              6,
+              9
+            ],
+            "total_points": 15
+          },
+          {
+            "kind": "calculation",
+            "numbers": [
+              13,
+              14,
+              15
+            ],
+            "individual_points": [
+              10,
+              12,
+              17
+            ],
+            "total_points": 39
+          }
+        ]
+      }
+    },
+    "curriculum_topics": [
+      "力与运动",
+      "牛顿运动定律",
+      "功和能",
+      "动量与能量",
+      "直流电路",
+      "电场",
+      "磁场",
+      "电磁感应",
+      "机械振动与波",
+      "热学",
+      "光学",
+      "物理实验"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-physics-selective:q004",
+        "topic": "交变电流与理想变压器",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary"
+      }
+    ],
+    "structure": null,
+    "scope": "专项分数和时长由练习设定"
+  },
+  "questions": [
+    {
+      "id": "orig:physics:p13:01",
+      "topic": "力与运动",
+      "version_sha256": "09c20450ed0cfe7baa3c1a2f1309ca945a4a495d1c9daa6d0e739ceccb2f30ee",
+      "verification": {
+        "answer": {
+          "velocity_m_s": -4,
+          "direction": "西",
+          "displacement_m": 5,
+          "distance_m": 13
+        },
+        "checks": [
+          "质量、力、速度、时间统一到 SI 单位，力除以质量得到加速度",
+          "东向为正，合力与加速度同向，末速度符号与方向一致",
+          "用有符号速度积分得位移，遇区间内反向点分段求路程"
+        ],
+        "unverified": [
+          "仅在净力恒定、轨道足够长且可按质点建模时成立。"
+        ],
+        "explanation": "由牛顿第二定律得加速度为 -2 米每二次方秒。时段末速度大小为 4 米每秒，方向向西。速度图像的有符号面积为 5 米，绝对面积为 13 米。"
+      }
+    },
+    {
+      "id": "orig:physics:p13:02",
+      "topic": "直流电路",
+      "version_sha256": "f67819cd4f39606b5c39204c315ab7772ac917bc529f18a69d962e7fd7075735",
+      "verification": {
+        "answer": {
+          "closed_source_current_A": 3,
+          "closed_first_power_W": 9,
+          "open_source_current_A": 2,
+          "open_first_power_W": 16
+        },
+        "checks": [
+          "电压和电阻单位一致，正电阻保证电路稳态解唯一",
+          "开关仅隔离第二支路，闭合时验证节点电流守恒",
+          "开关前后验证源功率、内阻损耗和外电路功率平衡"
+        ],
+        "unverified": [
+          "忽略开关暂态、导线阻抗和电阻随温度变化，结论仅适用于给出的欧姆模型。"
+        ],
+        "explanation": "闭合时外电路等效电阻为 2 欧姆。全电路电流为 3 安培，路端电压为 6 伏，第一支路功率为 9 瓦。断开后只剩第一支路，源电流为 2 安培，路端电压为 8 伏，第一支路功率为 16 瓦。"
+      }
+    },
+    {
+      "id": "orig:physics:p13:03",
+      "topic": "动量与能量",
+      "version_sha256": "3e04bc565b81d694572093f2839514cbaf7c79be8c3aef937d2bd46e18459b81",
+      "verification": {
+        "answer": {
+          "collision_time_s": "3/10",
+          "common_velocity_m_s": "4/5",
+          "direction": "东",
+          "kinetic_loss_J": "27/25"
+        },
+        "checks": [
+          "两个物体质量及初始间距均为正",
+          "后车速度大于前车速度，存在唯一正的碰撞时刻",
+          "有向动量守恒，独立用约化质量公式复核动能减少量"
+        ],
+        "unverified": [
+          "粘连由题设指定，模型不判断真实材料的形变和粘连概率。"
+        ],
+        "explanation": "碰前间距以 3 米每秒缩小，因此 3/10 秒后发生碰撞。碰前总动量为 4/5 千克米每秒，粘连后两车共同的速度大小为 4/5 米每秒，方向向东。分别计算碰前和碰后总动能，两者之差为 27/25 焦耳。"
+      }
+    }
+  ],
+  "answers": [
+    {
+      "velocity_m_s": -4,
+      "direction": "西",
+      "displacement_m": 5,
+      "distance_m": 13
+    },
+    {
+      "closed_source_current_A": 3,
+      "closed_first_power_W": 9,
+      "open_source_current_A": 2,
+      "open_first_power_W": 16
+    },
+    {
+      "collision_time_s": "3/10",
+      "common_velocity_m_s": "4/5",
+      "direction": "东",
+      "kinetic_loss_J": "27/25"
+    }
+  ],
+  "candidate_sha256": "a09aac1ff3c420845ba239efd6b5ce8d100801040c4869f613286cc6f4c0ea63",
+  "paper_version": "818e4fbc78dd9952c13e8600ba6628ee3eb9e02596fd3d543fe1f08ef45a5565",
+  "paper_pdf_sha256": "c84a0659fa1c572cd827aff661f68378791102f09f622b3b87267d7266eddbc9"
+}

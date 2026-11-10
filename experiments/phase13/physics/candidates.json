@@ -1,0 +1,156 @@
+{
+  "subject": "physics",
+  "questions": [
+    {
+      "id": "orig:physics:p13:01",
+      "stem": "一台巡检小车沿足够长的水平直轨道以 6 m/s 的速度向东行驶。小车的质量为 2.5 kg。自某时刻起，小车在轨道方向上所受的合力恒为 5 N，方向向西。取向东为正方向，将小车视为质点。",
+      "topic": "力与运动",
+      "points": 8,
+      "parts": [
+        {
+          "label": "(1)",
+          "text": "求 5 s 末小车的速度大小和方向。"
+        },
+        {
+          "label": "(2)",
+          "text": "求这 5 s 内小车的位移和路程。"
+        }
+      ],
+      "problem": {
+        "op": "signed_motion",
+        "positive_direction": "east",
+        "one_dimensional": true,
+        "constant_net_force": true,
+        "mass": {
+          "value": 2.5,
+          "unit": "kg"
+        },
+        "initial_velocity": {
+          "value": 6,
+          "unit": "m/s"
+        },
+        "net_force": {
+          "value": -5,
+          "unit": "N"
+        },
+        "duration": {
+          "value": 5,
+          "unit": "s"
+        }
+      },
+      "proposed_answer": {
+        "velocity_m_s": -4,
+        "direction": "西",
+        "displacement_m": 5,
+        "distance_m": 13
+      },
+      "metadata": {
+        "origin": "host_ai",
+        "model_scope": "单轴恒合力。速度过零后反向，路程分段计算。"
+      }
+    },
+    {
+      "id": "orig:physics:p13:02",
+      "stem": "检修直流供电装置时，技术员将两个阻值均为 4 Ω 的定值电阻 R₁、R₂ 并联后接在电源两端。电源的电动势为 12 V，内阻为 2 Ω。开关串联在 R₂ 所在的支路中，闭合开关时两条支路均接通。忽略导线和闭合开关的电阻。",
+      "topic": "直流电路",
+      "points": 8,
+      "parts": [
+        {
+          "label": "(1)",
+          "text": "开关闭合，电路达到稳态时，求流过电源的电流和 R₁ 消耗的电功率。"
+        },
+        {
+          "label": "(2)",
+          "text": "断开开关，待电路达到新的稳态，求此时流过电源的电流和 R₁ 消耗的电功率。"
+        }
+      ],
+      "problem": {
+        "op": "parallel_circuit",
+        "steady_dc": true,
+        "switch_opens_only_second_branch": true,
+        "ideal_wires": true,
+        "ohmic_resistors": true,
+        "emf": {
+          "value": 12,
+          "unit": "V"
+        },
+        "internal_resistance": {
+          "value": 2,
+          "unit": "Ω"
+        },
+        "first_resistance": {
+          "value": 4,
+          "unit": "Ω"
+        },
+        "second_resistance": {
+          "value": 4,
+          "unit": "Ω"
+        }
+      },
+      "proposed_answer": {
+        "closed_source_current_A": 3,
+        "closed_first_power_W": 9,
+        "open_source_current_A": 2,
+        "open_first_power_W": 16
+      },
+      "metadata": {
+        "origin": "host_ai",
+        "model_scope": "两种稳态，保留内阻与路端电压，忽略开关瞬间。"
+      }
+    },
+    {
+      "id": "orig:physics:p13:03",
+      "stem": "两辆滑车 A、B 在同一水平直气垫导轨上相向滑行，A 在 B 的西侧，初始时两车相向的端面相距 0.90 m。A 的质量为 0.60 kg，速度大小为 2.0 m/s；B 的质量为 0.40 kg，速度大小为 1.0 m/s。两车碰撞后粘在一起，忽略导轨方向上的外力。",
+      "topic": "动量与能量",
+      "points": 8,
+      "parts": [
+        {
+          "label": "(1)",
+          "text": "从上述初始时刻起，经过多长时间两车发生碰撞？"
+        },
+        {
+          "label": "(2)",
+          "text": "求碰撞后两车共同速度的大小和方向，以及碰撞过程中两车总动能的减少量。"
+        }
+      ],
+      "problem": {
+        "op": "inelastic_collision",
+        "positive_direction": "east",
+        "stick": true,
+        "negligible_external_impulse": true,
+        "one_dimensional": true,
+        "uniform_motion_until_collision": true,
+        "left_mass": {
+          "value": 0.6,
+          "unit": "kg"
+        },
+        "right_mass": {
+          "value": 0.4,
+          "unit": "kg"
+        },
+        "left_velocity": {
+          "value": 2,
+          "unit": "m/s"
+        },
+        "right_velocity": {
+          "value": -1,
+          "unit": "m/s"
+        },
+        "gap": {
+          "value": 90,
+          "unit": "cm"
+        }
+      },
+      "proposed_answer": {
+        "collision_time_s": "3/10",
+        "common_velocity_m_s": "4/5",
+        "direction": "东",
+        "kinetic_loss_J": "27/25"
+      },
+      "metadata": {
+        "origin": "host_ai",
+        "model_scope": "碰撞前匀速，碰撞为完全非弹性，水平方向外力可忽略。"
+      }
+    }
+  ]
+}

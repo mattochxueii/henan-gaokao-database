@@ -34,12 +34,16 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_forecast*.py' -v
       - name: Blind benchmark and trial intake regressions
         run: python -m unittest discover -s tests -p test_feature_benchmark.py -v
+      - name: Multisubject separation, import and science review gates
+        run: python -m unittest discover -s tests -p test_multisubject.py -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"
           cd "$RUNNER_TEMP/gaokao-public"
           python scripts/local_data.py init
           python scripts/install_math_skill.py
+          python scripts/install_math_skill.py --skill gaokao-platform
+          python .agents/skills/gaokao-platform/scripts/run.py subjects
           python .agents/skills/henan-math/scripts/run.py research --series project-original --limit 1
           python -m unittest discover -s tests -v
       - name: Ensure private material is absent

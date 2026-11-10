@@ -99,3 +99,38 @@ experiments/phase5/pilotC-v3/paper.pdf -> examples/pilot/paper.pdf
 experiments/phase5/pilotC-v3/solutions.pdf -> examples/pilot/solutions.pdf
 experiments/phase5/pilotC-v3/solutions.md -> examples/pilot/solutions.md
 experiments/phase5/pilotC-v3/raw-ai-candidate.json -> examples/pilot/candidate-format.json
+
+# Multisubject platform and project-authored exercises
+scripts/gaokao_platform.py
+scripts/core/__init__.py
+scripts/core/catalog.py
+scripts/core/science_forecast.py
+scripts/core/science_workflow.py
+scripts/subjects/__init__.py
+scripts/subjects/biology.py
+scripts/subjects/chemistry.py
+scripts/subjects/math.py
+scripts/subjects/physics.py
+skills/gaokao-platform/SKILL.md
+skills/gaokao-platform/scripts/run.py
+national/multisubject/catalog.json
+national/multisubject/README.md
+tests/test_multisubject.py
+experiments/phase13/biology/candidates.json
+experiments/phase13/biology/paper.pdf
+experiments/phase13/biology/publication.json
+experiments/phase13/biology/review.json
+experiments/phase13/biology/solutions.pdf
+experiments/phase13/biology/verification.json
+experiments/phase13/chemistry/candidates.json
+experiments/phase13/chemistry/paper.pdf
+experiments/phase13/chemistry/publication.json
+experiments/phase13/chemistry/review.json
+experiments/phase13/chemistry/solutions.pdf
+experiments/phase13/chemistry/verification.json
+experiments/phase13/physics/candidates.json
+experiments/phase13/physics/paper.pdf
+experiments/phase13/physics/publication.json
+experiments/phase13/physics/review.json
+experiments/phase13/physics/solutions.pdf
+experiments/phase13/physics/verification.json

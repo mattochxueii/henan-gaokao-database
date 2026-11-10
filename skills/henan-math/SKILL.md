@@ -70,3 +70,5 @@ python <技能目录>/scripts/run.py generate --engine template --mode full --ou
 ```
 
 26族模板只称参数化练习。不得假称动态AI。安装及完整命令见仓库README和写作协议。
+
+如需按地区、年份和多学科切换，安装项目的统一入口 `gaokao-platform`。数学命题、验证及预测仍由本数学流程处理。

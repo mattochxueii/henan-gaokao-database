@@ -1,0 +1,126 @@
+{
+  "subject": "chemistry",
+  "questions": [
+    {
+      "id": "orig:chemistry:p13:01",
+      "stem": "某工艺用高锰酸钾处理含草酸根的溶液。在加热的稀硫酸酸化体系中，参与净反应的粒子依次为 MnO₄⁻、C₂O₄²⁻、H⁺，生成物依次为 Mn²⁺、CO₂、H₂O。",
+      "topic": "氧化还原反应",
+      "points": 5,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "按给出的顺序分别写出反应物和生成物的最简正整数系数。"
+        },
+        {
+          "label": "（2）",
+          "text": "按配平后的方程式，当反应消耗 2 mol MnO₄⁻ 时，转移电子的物质的量是多少？"
+        }
+      ],
+      "problem": {
+        "op": "ionic_balance",
+        "medium": "warm_dilute_sulfuric_acid_oxalate",
+        "reactants": [
+          "MnO4^-",
+          "C2O4^2-",
+          "H^+"
+        ],
+        "products": [
+          "Mn^2+",
+          "CO2",
+          "H2O"
+        ]
+      },
+      "proposed_answer": {
+        "reactant_coefficients": [
+          2,
+          5,
+          16
+        ],
+        "product_coefficients": [
+          2,
+          10,
+          8
+        ],
+        "electrons_transferred": 10
+      },
+      "source_notes": "反应场景为原创设问；实验可行性查威斯康星大学麦迪逊分校化学演示实验室。程序只复算原子、总电荷、电子及指定条件，不从系数推断反应速率。"
+    },
+    {
+      "id": "orig:chemistry:p13:02",
+      "stem": "25 ℃下，将 20.00 mL 0.0800 mol/L 的稀盐酸与 30.00 mL 0.0700 mol/L 的氢氧化钠溶液混合。按稀溶液模型计算，混合后体积等于两种溶液体积之和。",
+      "topic": "水溶液中的离子平衡",
+      "points": 5,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "判断反应后过量的是 H⁺ 还是 OH⁻，求该离子的浓度。"
+        },
+        {
+          "label": "（2）",
+          "text": "求所得溶液的 pH，保留两位小数。"
+        }
+      ],
+      "problem": {
+        "op": "neutralization_mix",
+        "acid": "HCl",
+        "base": "NaOH",
+        "temperature_c": 25,
+        "additive_volumes": true,
+        "acid_ml": 20,
+        "acid_mol_l": "0.0800",
+        "base_ml": 30,
+        "base_mol_l": "0.0700"
+      },
+      "proposed_answer": {
+        "excess_ion": "OH⁻",
+        "excess_mol_l": 0.01,
+        "pH": 12
+      },
+      "source_notes": "混合数据与设问为原创。OpenStax 化学公开教材支持强酸强碱计量模型；给出25 ℃、体积相加与稀溶液近似。"
+    },
+    {
+      "id": "orig:chemistry:p13:03",
+      "stem": "实验小组用同一套装置分别考查三组物质：甲为待测固体与稀盐酸，乙用同量稀盐酸但不加固体，丙把甲中的固体换为纯碳酸氢钠。分别将气体导入等量新配制的澄清石灰水。仅比较刚开始通气时的现象：甲变浑浊，乙无变化，丙变浑浊。已用同样方法除去酸雾、悬浮粉末，并排除在该条件下其他能使石灰水浑浊的物质。",
+      "topic": "化学实验与对照证据",
+      "points": 8,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "说明甲中气体是否含 CO₂ 能得到何种证据，以及这个实验能否确定气体的纯度。结合乙、丙解释。"
+        },
+        {
+          "label": "（2）",
+          "text": "写出少量 CO₂ 通入石灰水的净离子方程式。"
+        }
+      ],
+      "problem": {
+        "op": "carbon_dioxide_controls",
+        "observations": {
+          "sample_cloudy": true,
+          "blank_cloudy": false,
+          "positive_cloudy": true
+        },
+        "evidence_conditions": {
+          "same_apparatus": true,
+          "equal_reagents_except_sample": true,
+          "aerosol_excluded": true,
+          "other_turbidity_causes_excluded": true,
+          "initial_observation_only": true
+        }
+      },
+      "proposed_answer": {
+        "inference": "支持含有二氧化碳，不能认定气体纯度",
+        "reactant_coefficients": [
+          1,
+          2,
+          1
+        ],
+        "product_coefficients": [
+          1,
+          1
+        ]
+      },
+      "source_notes": "对照设计为原创，石灰水与CO₂反应有印第安纳大学、耶鲁教学资料。假定样品可含非干扰共存气体；题面给定干扰排除，不能凭程序认证实物。"
+    }
+  ]
+}

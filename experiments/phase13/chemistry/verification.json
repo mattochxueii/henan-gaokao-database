@@ -1,0 +1,215 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "chemistry",
+    "region": "河南",
+    "year": 2026,
+    "mode": "targeted",
+    "mapping": {
+      "subject": "chemistry",
+      "year": 2026,
+      "paper_id": "2026-cn-ha-chemistry-selective",
+      "series_id": "cn-ha-chemistry-selective",
+      "curriculum_id": "chemistry-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "historical_selective",
+      "points": 100,
+      "minutes": 75,
+      "evidence": [
+        "hn-2026",
+        "hn-reform"
+      ],
+      "structure": {
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 14,
+            "points": 42
+          },
+          {
+            "kind": "constructed_response",
+            "count": 4,
+            "points": 58
+          }
+        ],
+        "source_urls": [
+          "https://www.51jiaoxi.com/doc-18504525.html",
+          "https://zy.21cnjy.com/25976018"
+        ],
+        "status": "observed_third_party_paper",
+        "source_details": [
+          {
+            "kind": "single_choice",
+            "count": 14,
+            "points": 42
+          },
+          {
+            "kind": "constructed_response",
+            "count": 4,
+            "points": 58
+          }
+        ]
+      }
+    },
+    "curriculum_topics": [
+      "物质结构与性质",
+      "离子反应",
+      "氧化还原",
+      "化学反应原理",
+      "化学平衡",
+      "电化学",
+      "水溶液离子平衡",
+      "化学实验",
+      "无机物推断",
+      "有机化学",
+      "工业流程"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-chemistry-selective:q001",
+        "topic": "物质变化的分类",
+        "source_url": "https://zy.21cnjy.com/25976018",
+        "review_status": "independently_solved_summary"
+      }
+    ],
+    "structure": null,
+    "scope": "专项分数和时长由练习设定"
+  },
+  "questions": [
+    {
+      "id": "orig:chemistry:p13:01",
+      "topic": "氧化还原反应",
+      "version_sha256": "3ddc79cc5b6b4ceb07ab1f1b3dfc25f47522a69f3f8ed7abb3e58ad29f22749c",
+      "verification": {
+        "answer": {
+          "reactant_coefficients": [
+            2,
+            5,
+            16
+          ],
+          "product_coefficients": [
+            2,
+            10,
+            8
+          ],
+          "electrons_transferred": 10
+        },
+        "checks": [
+          "按元素列原子守恒方程",
+          "总电荷守恒",
+          "正整数最简系数比例唯一",
+          "反应物与生成物符合指定模型条件",
+          "按氧化数变化分别核算失、得电子"
+        ],
+        "unverified": [
+          "反应动力学及实测转化率不在程序验证范围"
+        ],
+        "explanation": "草酸根中每个碳的氧化数由＋3升至＋4，每个草酸根失2个电子。高锰酸根中锰由＋7降至＋2，每个高锰酸根得5个电子。以2个高锰酸根对应5个草酸根，电子转移数为10。碳、锰守恒给10个CO₂和2个Mn²⁺，再由氧、氢和电荷守恒得16个H⁺及8个H₂O。消耗2 mol MnO₄⁻时，对应转移10 mol电子。",
+        "science_sources": [
+          "https://demolab.chem.wisc.edu/titrations-the-reaction-between-oxalate-ion-with-permanganate/"
+        ]
+      }
+    },
+    {
+      "id": "orig:chemistry:p13:02",
+      "topic": "水溶液中的离子平衡",
+      "version_sha256": "5b586af8d28e059c24d57767a1f5f7b874f6ad76a8edfcc7a232c63988592f59",
+      "verification": {
+        "answer": {
+          "excess_ion": "OH⁻",
+          "excess_mol_l": 0.01,
+          "pH": 12.0
+        },
+        "checks": [
+          "mL换算为L",
+          "根据H⁺与OH⁻的1∶1计量判定过量组分",
+          "使用混合体积",
+          "25 ℃下按稀溶液近似换算pH"
+        ],
+        "unverified": [
+          "非理想活度及仪器误差未计入"
+        ],
+        "explanation": "酸、碱物质的量分别为0.0016 mol和0.0021 mol。OH⁻过量，浓度为0.01 mol/L。计算pH约为12.00。",
+        "science_sources": [
+          "https://openstax.org/books/chemistry-2e/pages/14-7-acid-base-titrations"
+        ]
+      }
+    },
+    {
+      "id": "orig:chemistry:p13:03",
+      "topic": "化学实验与对照证据",
+      "version_sha256": "f305d35833a7f4edb28c10b5f59d4c6a35e3c4cfcfa6d8a06eb2b6694fb2fb2d",
+      "verification": {
+        "answer": {
+          "inference": "支持含有二氧化碳，不能认定气体纯度",
+          "reactant_coefficients": [
+            1,
+            2,
+            1
+          ],
+          "product_coefficients": [
+            1,
+            1
+          ]
+        },
+        "checks": [
+          "按元素列原子守恒方程",
+          "总电荷守恒",
+          "正整数最简系数比例唯一",
+          "反应物与生成物符合指定模型条件",
+          "正对照、空白对照与待测组结果相符",
+          "核对干扰排除条件",
+          "区分检出和纯度判定"
+        ],
+        "unverified": [
+          "真实实验中排除干扰的有效性需要独立审阅",
+          "未测定气体纯度和浓度"
+        ],
+        "explanation": "阳性对照变浑浊说明检测条件能响应CO₂，空白澄清支持浑浊并非装置或试剂造成。结合排除干扰的已知条件，待测组浑浊支持气体含CO₂，但不排除共存气体。少量CO₂通入石灰水时，Ca²⁺＋2OH⁻＋CO₂生成CaCO₃↓＋H₂O。",
+        "science_sources": [
+          "https://www.chem.indiana.edu/faculty-research/faculty-resources/chemistry-demos/demo/limewater-as-indicator-of-carbon-dioxide-gas/",
+          "https://teachersinstitute.yale.edu/curriculum/units/2000/6/00.06.04/3"
+        ]
+      }
+    }
+  ],
+  "answers": [
+    {
+      "reactant_coefficients": [
+        2,
+        5,
+        16
+      ],
+      "product_coefficients": [
+        2,
+        10,
+        8
+      ],
+      "electrons_transferred": 10
+    },
+    {
+      "excess_ion": "OH⁻",
+      "excess_mol_l": 0.01,
+      "pH": 12.0
+    },
+    {
+      "inference": "支持含有二氧化碳，不能认定气体纯度",
+      "reactant_coefficients": [
+        1,
+        2,
+        1
+      ],
+      "product_coefficients": [
+        1,
+        1
+      ]
+    }
+  ],
+  "candidate_sha256": "bc08645a7166681bef4efeffc1bec54453b285f89b5c891a455c794e5c0eb28c",
+  "paper_version": "207c445416eceb17562ebbfe8de8d965408235c854371b157f5943c0d78e9c43",
+  "paper_pdf_sha256": "1fd51b4f4e329942fb7f89f3953983d6c9787a44c771b46424bfe1d7b4fdfb4d"
+}

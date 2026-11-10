@@ -1,0 +1,63 @@
+{
+  "reviewer": "root-model-independent-physics",
+  "input_scope": "student_packet_only",
+  "items": [
+    {
+      "id": "orig:physics:p13:01",
+      "answer": {
+        "velocity_m_s": -4,
+        "direction": "西",
+        "displacement_m": 5,
+        "distance_m": 13
+      },
+      "reasoning": "以向东为正。合力为负，故加速度为 −2 m/s²。5 s 末 v = 6 − 2×5 = −4 m/s，即向西 4 m/s。前 3 s 行进至转折点，向东走 9 m。接下来 2 s 向西走 4 m，所以位移向东 5 m，路程 13 m。",
+      "science_review": "合力恒定且轨道足够长，反向后合力方向仍按题设向西。位移和路程分开核对。",
+      "approved": true,
+      "original_answer": [
+        4,
+        "西",
+        5,
+        "东",
+        13
+      ]
+    },
+    {
+      "id": "orig:physics:p13:02",
+      "answer": {
+        "closed_source_current_A": 3,
+        "closed_first_power_W": 9,
+        "open_source_current_A": 2,
+        "open_first_power_W": 16
+      },
+      "reasoning": "闭合时外阻为 2 Ω，电源总电流为 12/(2+2) = 3 A，端电压 6 V，R₁ 的功率为 36/4 = 9 W。断开时仅 R₁ 接入，总电流为 12/(2+4) = 2 A，端电压为 8 V，R₁ 的功率为 64/4 = 16 W。",
+      "science_review": "分别按稳态电阻网络分析，内阻与外部电路串联，电源总电流和支路电流有区别。",
+      "approved": true,
+      "original_answer": [
+        3,
+        9,
+        2,
+        16
+      ]
+    },
+    {
+      "id": "orig:physics:p13:03",
+      "answer": {
+        "collision_time_s": "3/10",
+        "common_velocity_m_s": "4/5",
+        "direction": "东",
+        "kinetic_loss_J": "27/25"
+      },
+      "reasoning": "两车相对接近速度为 3.0 m/s，经 0.30 s 碰撞。取向东为正，碰撞前总动量为 0.60×2.0 − 0.40×1.0 = 0.80 kg·m/s，粘连后的共同速度向东 0.80 m/s。碰前动能为 1.40 J，碰后为 0.32 J，减少 1.08 J。",
+      "science_review": "端面距离可直接用于接近时间。冲量模型忽略导轨方向外力，粘连碰撞守恒动量，动能转入内能等形式。",
+      "approved": true,
+      "original_answer": [
+        "3/10",
+        "4/5",
+        "东",
+        "27/25"
+      ]
+    }
+  ],
+  "paper_version": "818e4fbc78dd9952c13e8600ba6628ee3eb9e02596fd3d543fe1f08ef45a5565",
+  "source_review_sha256": "6995bb52847c9a5c8dc0467a55ef04d03b10ba62a5ed827c09cea013bdf666ac"
+}
