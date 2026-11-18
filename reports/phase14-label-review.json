@@ -1,0 +1,188 @@
+{
+  "rules": "physics-labels-v1",
+  "cases": [
+    {
+      "id": "2025-cn-ha-physics-selective:q004",
+      "version_sha256": "1323bf7e96e66689f9da2d2091ad0d20f5bd854d46da6d6dd54b927b3f881640",
+      "source_crop_sha256": "74f416adbd5ea8b9fe93f823a8ce5ef94c7877bbe67cb766e6db570f2e778d65",
+      "editor_initial": [
+        "M",
+        "G"
+      ],
+      "independent": {
+        "id": "h1",
+        "answer": "C，a 点电场沿 a→c。",
+        "reasoning": "设等边三角形边长为 d，则 E⃗·û_ab=2 V/d，E⃗·û_ac=4 V/d。两边夹角 60°，取 E⃗=(4 V/d)û_ac 可同时满足两条投影关系，且两方向不共线，二维解唯一。图中 C 表示 a→c。",
+        "units_range_model": "电场仅在纸面内，方向由独立的两条方向分量确定。边长未知不妨碍判断方向。",
+        "alternatives": "找出 ac 的中点，其电势为 4 V，与 b 同势；等边三角形中 b 到 ac 中点的线垂直于 ac。由电势沿 a→c 降低判定方向。",
+        "labels": {
+          "M": {
+            "value": true,
+            "reason": "利用匀强场的有向投影关系或线性等势模型来求方向。"
+          },
+          "P": {
+            "value": false,
+            "reason": "求同一个静电场，两个投影属于同时成立的几何约束。"
+          },
+          "G": {
+            "value": false,
+            "reason": "数值和顶点关系已在题干给出，图用于将独立求得的 a→c 对应到选项 C。"
+          },
+          "L": {
+            "value": false,
+            "reason": "无需检验运动可达性、量程或模型成立边界。"
+          },
+          "X": {
+            "value": false,
+            "reason": "三点电势为已知条件，未提供测量操作或原始仪表示数。"
+          }
+        },
+        "perceived_difficulty": "中偏低"
+      },
+      "adjudicated": [
+        "M"
+      ],
+      "reason": "G 只计未由文字提供的物理信息；选项图定位或示意不计入。"
+    },
+    {
+      "id": "2025-cn-ha-physics-selective:q013",
+      "version_sha256": "970c59104729af607eccce3d0999c3b944acee593e408ff5ada2b87579239e7b",
+      "source_crop_sha256": "e924a73687ea5eebed97e5e451c7109124afa41fc334edfdd7a2862910e256ba",
+      "editor_initial": [
+        "M",
+        "P"
+      ],
+      "independent": {
+        "id": "h2",
+        "answer": [
+          "离场时横向偏转 5.0×10⁻³ m。",
+          "A、B 两收集管间距 0.11 m。"
+        ],
+        "reasoning": "A 滴带正电向右加速，B 滴等幅向左。|aₓ|=qE/m=100 m/s²。无竖直力，vᵧ 大小恒为 2.0 m/s。场内历时 l/v=0.010 s，横向偏转 ½|aₓ|t₁²=0.0050 m，出场横速大小为 1.0 m/s。无场飞行 h/v=0.050 s，继续偏转 0.050 m。两边总偏各为 0.055 m，间距 0.11 m。",
+        "units_range_model": "依据题设忽略重力、空气阻力和滴间作用。收集发生是题设，板间距未给，无须另行核验碰板。横向偏转由中线起算。",
+        "alternatives": "用出场斜率 |vₓ/vᵧ|=0.50 求无场区偏转，再利用正负滴轨迹的对称性。",
+        "labels": {
+          "M": {
+            "value": true,
+            "reason": "用电场力与惯性运动为横、竖分量分别建立运动模型。"
+          },
+          "P": {
+            "value": true,
+            "reason": "板内横向加速，板外匀速，需要传递离场时的位置与速度。"
+          },
+          "G": {
+            "value": false,
+            "reason": "入射、场向、场区长度和到收集管的距离均由文字给定。"
+          },
+          "L": {
+            "value": false,
+            "reason": "收集直接给定，未要求检验碰板或其他可达边界。"
+          },
+          "X": {
+            "value": false,
+            "reason": "装置作为情境，答案由给定物理参数计算，无需处理测量证据。"
+          }
+        },
+        "perceived_difficulty": "中"
+      },
+      "adjudicated": [
+        "M",
+        "P"
+      ],
+      "reason": "独立标签与初标一致。"
+    },
+    {
+      "id": "2026-cn-ha-physics-selective:q007",
+      "version_sha256": "d9d38c382b1858b169998a3cbeaac96047356bcb6cb5833d5c64ba154c5907a6",
+      "source_crop_sha256": "4e705da7e048fc11de77cfcf09171154ea8138112c69b89efac4846af2044aee",
+      "editor_initial": [
+        "M",
+        "G"
+      ],
+      "independent": {
+        "id": "h3",
+        "answer": "A，4 m。",
+        "reasoning": "以竖直球网面为投影面，水平初速度在网面内与沿网面法线的分量分别为 v₀cos45° 与 v₀sin45°。平抛的竖直速率 gt 不因该投影而改变。因此在 P 点有 tanφ=gt/(v₀cos45°)，到网面的法向距离为 v₀sin45°·t=v₀²sin45°cos45°tanφ/g=4 m。",
+        "units_range_model": "网面为竖直平面，所求点到面的最短距离在水平方向上。投影切线角使用投影后的水平速度分量，不能直接使用原水平速度作分母。",
+        "alternatives": "把球网面内的投影视为水平初速度为 v₀cos45° 的平抛，用轨迹斜率得到到达 P 时在网面内的水平位移。因平面夹角 45°，该位移等于法向位移。",
+        "labels": {
+          "M": {
+            "value": true,
+            "reason": "需建立平抛及速度正投影模型，使用投影后的水平速度分量。"
+          },
+          "P": {
+            "value": false,
+            "reason": "从击出到擦过 P 只经历一段平抛，几何投影不增加一个动力学阶段。"
+          },
+          "G": {
+            "value": false,
+            "reason": "投影面、切线角的定义、夹角 45° 和 tanφ 均已文字给出。通常网面竖直且上沿水平，图起示意作用，无须从曲线网格读数。"
+          },
+          "L": {
+            "value": false,
+            "reason": "到达 P 已给定，无需排除根或另查可达范围。"
+          },
+          "X": {
+            "value": false,
+            "reason": "投影角的数值为题设条件，无需从测量或实验装置中推断。"
+          }
+        },
+        "perceived_difficulty": "中偏上"
+      },
+      "adjudicated": [
+        "M"
+      ],
+      "reason": "G 只计未由文字提供的物理信息；选项图定位或示意不计入。"
+    },
+    {
+      "id": "2026-cn-ha-physics-selective:q011",
+      "version_sha256": "9d6f149d05721060fcd9698a02f769b2ab36b76024f9cabc0600c463a9b1b62b",
+      "source_crop_sha256": "5f5cf8fa86a28880a276baba2028c005c606b0c7ced38d50efd8411fe05e6c55",
+      "editor_initial": [
+        "M",
+        "G",
+        "X"
+      ],
+      "independent": {
+        "id": "h4",
+        "answer": [
+          "Δx=5.10 mm。",
+          "v₁=0.50 m/s。",
+          "a=(v₂²−v₁²)/(2s)，理论值 a=gh/L。"
+        ],
+        "reasoning": "20 分度游标的最小读数是 0.05 mm。零刻线越过主尺 5 mm 后，游标第 2 个小刻线与主尺刻线对齐，得 5+2×0.05=5.10 mm。遮光条通过第一道光电门的速度近似 Δx/Δt=(5.10×10⁻³)/(10.20×10⁻³)=0.50 m/s。由匀加速关系用两门的速度和间距求实验加速度。理想气垫导轨斜下方向合力为 mg sinθ，由图中沿轨的支脚间距 L 和支脚高度差 h 得 sinθ=h/L，故预测 a=gh/L。",
+        "units_range_model": "v₁ 保留两位有效数字。遮光区间的平均速度作为通过光电门的局部速度；理想模型要求气垫减摩且导轨为固定倾角。加速度在误差内相等支持该条件下的模型预言。",
+        "alternatives": "由两门间平均速度 (v₁+v₂)/2 与 s 得飞行时间，再用速度差除以时间。理论式也可借理想机械能关系得到等效的 gh/L。游标 5.10 mm 的末位零保留。",
+        "labels": {
+          "M": {
+            "value": true,
+            "reason": "需把气垫导轨建模为近似无摩擦斜面，并采用匀加速运动模型处理光电门。"
+          },
+          "P": {
+            "value": false,
+            "reason": "两光电门观测同一匀加速过程，动力学条件没有改变。"
+          },
+          "G": {
+            "value": true,
+            "reason": "必须从图 2 读取游标零线和对齐刻线。图 1 也交代 L 及 h 的几何位置。"
+          },
+          "L": {
+            "value": false,
+            "reason": "题干提示对照实验误差，只要求给出表达式，没有数据和容差供实际判定边界。"
+          },
+          "X": {
+            "value": true,
+            "reason": "读仪器、用遮光时间和两门速度推算实验加速度，并与模型预测比较。"
+          }
+        },
+        "perceived_difficulty": "中"
+      },
+      "adjudicated": [
+        "M",
+        "G",
+        "X"
+      ],
+      "reason": "独立标签与初标一致。"
+    }
+  ]
+}

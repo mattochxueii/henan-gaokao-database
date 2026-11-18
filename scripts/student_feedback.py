@@ -33,6 +33,11 @@ TRIAL_FIELDS = CSV_FIELDS + ("scoring_issue", "reasoning_load", "calculation_loa
 
 def checked_questions(paper_dir):
     certificate = read_json(paper_dir / "publication.json")
+    if certificate.get("status")=="project_practice_independently_reviewed":
+        from core.science_workflow import check_publication
+
+        paper = check_publication(paper_dir,certificate)
+        return certificate["visual"]["paper_sha256"], {q["id"]:q["points"] for q in paper["questions"]}
     require(certificate.get("published") is True, "反馈须对应已审核题卷")
     verify_certificate(paper_dir, certificate)
     return certificate["pdf_sha256"], {
@@ -93,8 +98,21 @@ def validate(row, paper_sha, questions):
     return row
 
 
+def feedback_document(paper_dir):
+    packet = paper_dir / "blind-packet.json"
+    if packet.is_file() and read_json(paper_dir/"publication.json").get("status")=="project_practice_independently_reviewed":
+        paper = read_json(packet)["paper"]
+        checks = read_json(paper_dir/"verification.json")["questions"]
+        review = {q["id"]:q for q in read_json(paper_dir/"independent-review.json")["items"]}
+        return {"paper":paper,"questions":[
+            {**q,"module":check["topic"],"assessment":review[q["id"]].get("assessment",{})}
+            for q,check in zip(paper["questions"],checks,strict=True)
+        ]}
+    return read_json(paper_dir / "raw-ai-candidate.json")
+
+
 def paper_layout(paper_dir):
-    document = read_json(paper_dir / "raw-ai-candidate.json")
+    document = feedback_document(paper_dir)
     return (
         document["paper"].get("study_id", document["paper"]["title"]),
         {str(q["order"]): q["id"] for q in document["questions"]},
@@ -207,7 +225,7 @@ def summary(rows, points, min_sample=10, *, design=None):
 
 def diagnose(rows, paper_dir, points, participant):
     require(CODE.fullmatch(participant), "请填写本次试做的匿名代码")
-    document = read_json(paper_dir / "raw-ai-candidate.json")
+    document = feedback_document(paper_dir)
     questions = {q["id"]: q for q in document["questions"]}
     selected = [row for row in rows if row["participant_code"] == participant]
     items = []
@@ -297,7 +315,7 @@ def main():
             diagnose(rows, args.paper, points, args.participant_code)
             if args.mode == "diagnose"
             else summary(rows, points, getattr(args, "min_sample", 10),
-                         design={q["id"]:q for q in read_json(args.paper/"raw-ai-candidate.json")["questions"]})
+                         design={q["id"]:q for q in feedback_document(args.paper)["questions"]})
         )
         print(dumps(result))
         return 0

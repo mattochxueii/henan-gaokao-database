@@ -511,5 +511,189 @@
       "scope": "independent_reasoning_on_source_summary",
       "source_issuer_verified": false
     }
+  },
+  {
+    "id": "2025-cn-ha-physics-selective:q004",
+    "year": 2025,
+    "subject": "physics",
+    "region": "河南",
+    "paper_id": "2025-cn-ha-physics-selective",
+    "number": 4,
+    "topic": "等势线",
+    "points": 4,
+    "kind": "single_choice",
+    "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2025/2025%E6%B2%B3%E5%8D%97.pdf",
+    "source_locator": {
+      "page": 2,
+      "end_page": 2,
+      "source_sha256": "70b0b8feabb32fe3cc7bb101e382d07007c069e58eb08f94ff8be935500e8a42"
+    },
+    "record_type": "semantic_summary",
+    "content_complete": false,
+    "stem": null,
+    "semantic_summary": "三点电势与场强方向题，考查等势线。考生需确定等势中点、由图判断垂直方向。",
+    "version_sha256": "1323bf7e96e66689f9da2d2091ad0d20f5bd854d46da6d6dd54b927b3f881640",
+    "answer_version_sha256": "1323bf7e96e66689f9da2d2091ad0d20f5bd854d46da6d6dd54b927b3f881640",
+    "answer": {
+      "result": "C",
+      "independent_reasoning": "比较三角形顶点电势。取最高和最低电势顶点的中点，均匀场中它与第三顶点等势；场方向垂直该等势线，由最高沿边指向最低，选 C。",
+      "blind_confirmation": "C，a 点电场沿 a→c。",
+      "independent_alternative": "找出 ac 的中点，其电势为 4 V，与 b 同势；等边三角形中 b 到 ac 中点的线垂直于 ac。由电势沿 a→c 降低判定方向。"
+    },
+    "rights": "summary_only",
+    "review_status": "independently_solved_summary",
+    "physics_tags": {
+      "rules_version": "physics-labels-v1",
+      "tags": [
+        "M"
+      ],
+      "actions": [
+        "确定等势中点",
+        "由图判断垂直方向"
+      ],
+      "load": "图形与电势插值",
+      "conditions": "匀强电场；顶点几何确定"
+    }
+  },
+  {
+    "id": "2025-cn-ha-physics-selective:q013",
+    "year": 2025,
+    "subject": "physics",
+    "region": "河南",
+    "paper_id": "2025-cn-ha-physics-selective",
+    "number": 13,
+    "topic": "带电体分段运动",
+    "points": 10,
+    "kind": "constructed_response",
+    "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2025/2025%E6%B2%B3%E5%8D%97.pdf",
+    "source_locator": {
+      "page": 8,
+      "end_page": 8,
+      "source_sha256": "70b0b8feabb32fe3cc7bb101e382d07007c069e58eb08f94ff8be935500e8a42"
+    },
+    "record_type": "semantic_summary",
+    "content_complete": false,
+    "stem": null,
+    "semantic_summary": "电场偏转及漂移题，考查带电体分段运动。考生需选择液滴为研究对象、衔接出口速度、利用对称性。",
+    "version_sha256": "970c59104729af607eccce3d0999c3b944acee593e408ff5ada2b87579239e7b",
+    "answer_version_sha256": "970c59104729af607eccce3d0999c3b944acee593e408ff5ada2b87579239e7b",
+    "answer": {
+      "result": "5×10⁻³ m；0.11 m",
+      "independent_reasoning": "板内竖直分速度维持 2 m/s，历时 0.010 s；横向加速度 100 m/s²，故偏转 0.0050 m 并获得 1.0 m/s 横向速度。无场段 0.050 s，另偏转 0.050 m；两个符号关于中线对称，总间距 0.11 m。",
+      "blind_confirmation": [
+        "离场时横向偏转 5.0×10⁻³ m。",
+        "A、B 两收集管间距 0.11 m。"
+      ],
+      "independent_alternative": "用出场斜率 |vₓ/vᵧ|=0.50 求无场区偏转，再利用正负滴轨迹的对称性。"
+    },
+    "rights": "summary_only",
+    "review_status": "independently_solved_summary",
+    "physics_tags": {
+      "rules_version": "physics-labels-v1",
+      "tags": [
+        "M",
+        "P"
+      ],
+      "actions": [
+        "选择液滴为研究对象",
+        "衔接出口速度",
+        "利用对称性"
+      ],
+      "load": "识别板内场和出板漂移，短计算",
+      "conditions": "板内匀强场；忽略重力和阻力；板外无场"
+    }
+  },
+  {
+    "id": "2026-cn-ha-physics-selective:q007",
+    "year": 2026,
+    "subject": "physics",
+    "region": "河南",
+    "paper_id": "2026-cn-ha-physics-selective",
+    "number": 7,
+    "topic": "平抛与图形投影",
+    "points": 4,
+    "kind": "single_choice",
+    "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+    "source_locator": {
+      "page": 4,
+      "end_page": 4,
+      "source_sha256": "6440765e88b4db917c479dd3c29a9560389e40c3d7abe859c4e07172d0c4794e"
+    },
+    "record_type": "semantic_summary",
+    "content_complete": false,
+    "stem": null,
+    "semantic_summary": "平抛投影题，考查平抛与图形投影。考生需由切线读取速度分量关系、把水平运动按球网方向分解。",
+    "version_sha256": "d9d38c382b1858b169998a3cbeaac96047356bcb6cb5833d5c64ba154c5907a6",
+    "answer_version_sha256": "d9d38c382b1858b169998a3cbeaac96047356bcb6cb5833d5c64ba154c5907a6",
+    "answer": {
+      "result": "A",
+      "independent_reasoning": "球网平面中的水平分速度为 20cos45°，法向速度为 20sin45°，竖直速度大小为 gt。投影切线给 gt/(20cos45°)=0.2，乘以法向速度得到击球点到球网面的距离 4 m，选 A。",
+      "blind_confirmation": "A，4 m。",
+      "independent_alternative": "把球网面内的投影视为水平初速度为 v₀cos45° 的平抛，用轨迹斜率得到到达 P 时在网面内的水平位移。因平面夹角 45°，该位移等于法向位移。"
+    },
+    "rights": "summary_only",
+    "review_status": "independently_solved_summary",
+    "physics_tags": {
+      "rules_version": "physics-labels-v1",
+      "tags": [
+        "M"
+      ],
+      "actions": [
+        "由切线读取速度分量关系",
+        "把水平运动按球网方向分解"
+      ],
+      "load": "图像解释与方向分解",
+      "conditions": "水平发射；忽略阻力；投影和球网同一平面"
+    }
+  },
+  {
+    "id": "2026-cn-ha-physics-selective:q011",
+    "year": 2026,
+    "subject": "physics",
+    "region": "河南",
+    "paper_id": "2026-cn-ha-physics-selective",
+    "number": 11,
+    "topic": "游标与导轨实验",
+    "points": 6,
+    "kind": "constructed_response",
+    "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+    "source_locator": {
+      "page": 7,
+      "end_page": 7,
+      "source_sha256": "6440765e88b4db917c479dd3c29a9560389e40c3d7abe859c4e07172d0c4794e"
+    },
+    "record_type": "semantic_summary",
+    "content_complete": false,
+    "stem": null,
+    "semantic_summary": "导轨实验与牛顿第二定律题，考查游标与导轨实验。考生需读计量器、统一单位、对比运动学值与受力预测。",
+    "version_sha256": "9d6f149d05721060fcd9698a02f769b2ab36b76024f9cabc0600c463a9b1b62b",
+    "answer_version_sha256": "9d6f149d05721060fcd9698a02f769b2ab36b76024f9cabc0600c463a9b1b62b",
+    "answer": {
+      "result": "5.10 mm；0.50 m/s；(v₂²−v₁²)/(2s)；gh/L",
+      "independent_reasoning": "20 分度游标，主尺 5 mm 加两格各 0.05 mm，读 5.10 mm。遮光宽除以 10.20 ms 得 0.50 m/s。匀加速运动给 (v₂²−v₁²)/(2s)，忽略阻力时理论值为 g sinθ=gh/L。相符仅支持本装置和误差条件下的模型。",
+      "blind_confirmation": [
+        "Δx=5.10 mm。",
+        "v₁=0.50 m/s。",
+        "a=(v₂²−v₁²)/(2s)，理论值 a=gh/L。"
+      ],
+      "independent_alternative": "由两门间平均速度 (v₁+v₂)/2 与 s 得飞行时间，再用速度差除以时间。理论式也可借理想机械能关系得到等效的 gh/L。游标 5.10 mm 的末位零保留。"
+    },
+    "rights": "summary_only",
+    "review_status": "independently_solved_summary",
+    "physics_tags": {
+      "rules_version": "physics-labels-v1",
+      "tags": [
+        "M",
+        "G",
+        "X"
+      ],
+      "actions": [
+        "读计量器",
+        "统一单位",
+        "对比运动学值与受力预测"
+      ],
+      "load": "读游标刻线及两套物理估计",
+      "conditions": "20 分度；遮光时间短；轨道阻力可忽略"
+    }
   }
 ]

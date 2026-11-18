@@ -3,6 +3,8 @@
 from fractions import Fraction
 import re
 
+from subjects.physics_models import SOLVERS as ADDITIONAL_SOLVERS
+
 
 _QUANTITY_LITERAL = re.compile(
     r"[+-]?(?:[0-9]{1,16}(?:\.[0-9]{0,16})?|\.[0-9]{1,16})(?:[eE][+-]?[0-9]{1,2})?"
@@ -167,6 +169,7 @@ def _inelastic_collision(problem):
 
 
 _SOLVERS = {
+    **ADDITIONAL_SOLVERS,
     "signed_motion": _signed_motion,
     "parallel_circuit": _parallel_circuit,
     "inelastic_collision": _inelastic_collision,

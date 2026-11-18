@@ -1,0 +1,182 @@
+{
+  "paper_version": "e7797e6f62f99670e79197259d2b0c85a31e81794ea193fabfc1d1774c178912",
+  "reviewer": "独立 AI 物理解题与题面审查",
+  "input_scope": "student_packet_only",
+  "source_review_sha256": "034d8f85a3ef7e70513c827db35af3619c42f4498e572bd3a604abcd72b8bd7f",
+  "items": [
+    {
+      "id": "orig:physics:p14:01",
+      "approved": true,
+      "answer": "A",
+      "reasoning": "匀强电场中，沿某轴的电势变化等于该轴的场强分量乘位移并加负号。沿 x 轴有 \\(1-5=-0.20E_x\\)，得 \\(E_x=20\\;\\mathrm{V/m}\\)。沿 y 轴有 \\(5-5=-0.10E_y\\)，得 \\(E_y=0\\)。\n参考答案　A，沿 x 轴正方向，20 V/m。\n等效解法可得分　用 OB 等势排除 y 分量，再由沿 OA 电势降低确定正 x 方向及大小。",
+      "science_review": "V/m 与 N/C 等价；电势差符号决定方向。O、B 同势，在已知场位于纸面内且为匀强电场时可判断场垂直于 OB。",
+      "assessment": {
+        "estimated_minutes": 3,
+        "level": "低",
+        "student_sample_size": 0
+      },
+      "references": "2025 Q4",
+      "originality_rationale": "历史题用非正交几何求方向，本题从两条正交电势差确定方向和大小，保留电势梯度这一共同概念。",
+      "rubric": [
+        {
+          "step": "选 A",
+          "points": 4
+        }
+      ]
+    },
+    {
+      "id": "orig:physics:p14:02",
+      "approved": true,
+      "answer": "B",
+      "reasoning": "读图得 0～2 s 为 +3 m/s，2～3 s 匀减至 0，3～5 s 降至 −2 m/s。三段有向面积分别为 6、1.5、−2 m，合计 +5.5 m。路程为各段面积绝对值之和 9.5 m。\n参考答案　B，向右 5.5 m，路程 9.5 m。\n等效解法可得分　每段使用平均速度乘持续时间，再分别对各段位移作代数和与绝对值和。",
+      "science_review": "速度—时间图面积的单位为 m。3 s 时速度过零，路程须在此处按运动方向分段。",
+      "assessment": {
+        "estimated_minutes": 4,
+        "level": "低",
+        "student_sample_size": 0
+      },
+      "references": "2025 Q7；2026 Q10",
+      "originality_rationale": "历史题由碰撞前后或间距表读相对变化，本题由连续折线有向面积区分路程与位移。",
+      "rubric": [
+        {
+          "step": "选 B",
+          "points": 4
+        }
+      ]
+    },
+    {
+      "id": "orig:physics:p14:03",
+      "approved": true,
+      "answer": {
+        "emf_V": "479/150",
+        "resistance_ohm": "59/30",
+        "middle_error_V": "1/40",
+        "within_tolerance": true,
+        "open_in_range": false,
+        "evidence": "sample_only"
+      },
+      "reasoning": "电压表跨在电池两端且为理想表，所以支路断开时电压表不引入负载电流。以 U=E−Ir 分析闭合后的数据，r=(2.80−2.21)/(0.50−0.20)=1.9666… Ω，E=2.80+0.20r=3.1933… V。\n图示开关只切断外负载支路，开路电流为零且电压表仍跨接电池；开路端电压是模型纵截距 E。\n0.35 A 为首末电流中点，线性预测为 (2.80+2.21)/2=2.505 V。残差绝对值 |2.48−2.505|=0.025 V≤0.03 V。证据只来自给定条件下有限的三个点。\n参考答案　E=3.19 V，r=1.97 Ω。 不能。开路 I=0，此时路端电压约为 3.19 V，超过 3.0 V 量程。 中间点相容。三组数据不能证明关系对任意电流成立。\n等效解法可得分　联立首末两组闭合电路方程，或用首末连线的截距和斜率；用线性插值或带入未舍入参数求中点预测。",
+      "science_review": "E 和 r 各保留两位小数。判断残差时保留中间计算精度。相容依据题设容差，电源参数恒定是本题的建模前提。",
+      "assessment": {
+        "estimated_minutes": 7,
+        "level": "中",
+        "student_sample_size": 0
+      },
+      "references": "2025 Q11；2026 Q11",
+      "originality_rationale": "历史题用热敏元件图或游标读数建立模型；本题用内阻模型从有限数据外推并核查量程与残差。",
+      "rubric": [
+        {
+          "step": "由首末两组列 U=E−Ir 或等效图法",
+          "points": 1
+        },
+        {
+          "step": "得 r＝1.97 Ω",
+          "points": 2
+        },
+        {
+          "step": "得 E＝3.19 V",
+          "points": 2
+        },
+        {
+          "step": "正确比较开路模型估值与电压表量程",
+          "points": 2
+        },
+        {
+          "step": "求残差 0.025 V 并判断相容",
+          "points": 2
+        },
+        {
+          "step": "将推论限定于题设测点",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "orig:physics:p14:04",
+      "approved": true,
+      "answer": {
+        "switch_speed": 5,
+        "switch_distance": 6,
+        "target_time_after_switch": "10/3 - 2*sqrt(13)/3",
+        "total_stop_time": "16/3"
+      },
+      "reasoning": "取向右为正，v=1.0+2.0×2.0=5.0 m/s，x=1.0×2.0+½×2.0×(2.0)²=6.0 m。\n制动段还需前进 4.0 m，方程 5.0t−0.75t²=4.0 得 t=(10±2√13)/3 s，约为 0.93 s 和 5.74 s。制动仅在 0≤t≤5.0/1.5=10/3 s 内有效，之后静止。留 0.93 s，舍去 5.74 s。制动段最大前进 25/3 m，大于 4.0 m。\n前段 2.0 s 加有效制动 10/3 s，得 16/3 s。\n参考答案　5.0 m/s，向右；离 A 点 6.0 m。 从开始制动到 B 点约 0.93 s。 从 A 点到停下约 5.33 s，即 16/3 s。\n等效解法可得分　也可用 \\(v_B^2=5.0^2-2\\times1.5\\times4.0=13\\)。制动期间未反向，取 \\(v_B=\\sqrt{13}\\;\\mathrm{m/s}\\)，再用速度与时间的关系求解。",
+      "science_review": "方程里的 t 从制动开始计时。制动后的运动模型为静止，超出有效时间的根对应错误延长的模型。总时长若按两位有效数字写成 5.3 s 也合理。",
+      "assessment": {
+        "estimated_minutes": 8,
+        "level": "中",
+        "student_sample_size": 0
+      },
+      "references": "2026 Q10；2025 Q14",
+      "originality_rationale": "历史题从相对距离表反推转换或穿越相间介质，本题先确定连续转换，再判断二次方程根的适用时间。",
+      "rubric": [
+        {
+          "step": "求得制动初速度",
+          "points": 1
+        },
+        {
+          "step": "求得制动起点位置",
+          "points": 2
+        },
+        {
+          "step": "建立制动段位移式",
+          "points": 2
+        },
+        {
+          "step": "判断有效根并舍去另一根，或用正速度等效筛根",
+          "points": 3
+        },
+        {
+          "step": "求出制动时长与全程时长",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "orig:physics:p14:05",
+      "approved": true,
+      "answer": {
+        "field_time_s": "1/20",
+        "drift_time_s": "3/40",
+        "field_N_C": 8,
+        "spots_m": {
+          "positive": "1/50",
+          "negative": "-1/50"
+        },
+        "exit_abs_m": "1/200",
+        "clears_plate": true
+      },
+      "reasoning": "两区域水平速度均为 4.0 m/s。两段时间依次为 0.20/4.0=0.050 s 和 0.30/4.0=0.075 s。\n取竖直向上为正，板内的有向加速度为 \\(a_y\\)，出板后竖直速度保持 \\(a_yt_1\\)。屏上坐标为 \\(y=a_y(t_1^2/2+t_1t_2)\\)。由 \\(|y|=0.020\\;\\mathrm{m}\\)，得 \\(|a_y|=4.0\\;\\mathrm{m/s^2}\\)，故 \\(E=|a_y|/(q/m)=8.0\\;\\mathrm{N/C}\\)。电荷的正负决定落点方向，绝对距离无法区分两种情况。\n板内偏移绝对值 \\(|y(t)|=|a_y|t^2/2\\) 随时间单调增加，出口处为 \\(0.0050\\;\\mathrm{m}\\)，小于板间半距。\n参考答案　有场 0.050 s，无场 0.075 s。 E=8.0 N/C，带正电时屏上坐标为 +0.020 m，带负电时为 −0.020 m。 不会碰板。离开平行板时离中线 0.0050 m，小于板间半距 0.010 m。\n等效解法可得分　用出板速度与初始方向的夹角，\\(\\tan\\theta=v_y/v_x\\)。板外偏移为 \\(0.30\\tan\\theta\\)，再加板内位移。也可按水平坐标写分段运动方程。",
+      "science_review": "固定水平速度只受无水平力和忽略边缘场等理想化支持。用全长推断场强后须回查轨迹确能通过板间。场强 16 N/C 时板端处刚达到半间距，当前场强低于该接触边界。",
+      "assessment": {
+        "estimated_minutes": 10,
+        "level": "中偏上",
+        "student_sample_size": 0
+      },
+      "references": "2025 Q13",
+      "originality_rationale": "历史题正向给定场强求两路间距，本题由带符号不明的观测反演场强，穷尽电荷分支并检验碰板。",
+      "rubric": [
+        {
+          "step": "列出板内与无场区水平运动，求出两段时间",
+          "points": 2
+        },
+        {
+          "step": "连接两段竖直运动，写出屏上偏移关系",
+          "points": 3
+        },
+        {
+          "step": "反算场强",
+          "points": 2
+        },
+        {
+          "step": "写出正、负两种有向落点",
+          "points": 2
+        },
+        {
+          "step": "核对板内最大偏移与半间距",
+          "points": 3
+        }
+      ]
+    }
+  ]
+}

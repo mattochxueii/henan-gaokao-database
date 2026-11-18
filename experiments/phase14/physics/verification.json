@@ -1,0 +1,287 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "physics",
+    "region": "河南",
+    "year": 2026,
+    "mode": "targeted",
+    "mapping": {
+      "subject": "physics",
+      "year": 2026,
+      "paper_id": "2026-cn-ha-physics-selective",
+      "series_id": "cn-ha-physics-selective",
+      "curriculum_id": "physics-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "first_choice",
+      "authoring_body": "河南省统一命题",
+      "status": "historical_selective",
+      "points": 100,
+      "minutes": 75,
+      "evidence": [
+        "hn-2026",
+        "hn-reform"
+      ],
+      "structure": {
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 7,
+            "points": 28
+          },
+          {
+            "kind": "multiple_choice",
+            "count": 3,
+            "points": 18
+          },
+          {
+            "kind": "constructed_response",
+            "count": 5,
+            "points": 54
+          }
+        ],
+        "source_urls": [
+          "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+          "https://www.shijuan123.com/tiku/papers/ha-2026.html",
+          "https://www.yeyulingfeng.com/wendang/91324497.html",
+          "https://www.zzwb.cn/news/382763.html"
+        ],
+        "status": "observed_third_party_paper",
+        "source_details": [
+          {
+            "kind": "single_choice",
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "points_each": 4,
+            "total_points": 28
+          },
+          {
+            "kind": "multiple_choice",
+            "numbers": [
+              8,
+              9,
+              10
+            ],
+            "points_each": 6,
+            "partial_correct_points": 3,
+            "total_points": 18
+          },
+          {
+            "kind": "experiment",
+            "numbers": [
+              11,
+              12
+            ],
+            "individual_points": [
+              6,
+              9
+            ],
+            "total_points": 15
+          },
+          {
+            "kind": "calculation",
+            "numbers": [
+              13,
+              14,
+              15
+            ],
+            "individual_points": [
+              10,
+              12,
+              17
+            ],
+            "total_points": 39
+          }
+        ]
+      }
+    },
+    "curriculum_topics": [
+      "力与运动",
+      "牛顿运动定律",
+      "功和能",
+      "动量与能量",
+      "直流电路",
+      "电场",
+      "磁场",
+      "电磁感应",
+      "机械振动与波",
+      "热学",
+      "光学",
+      "物理实验"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-physics-selective:q004",
+        "topic": "交变电流与理想变压器",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary"
+      },
+      {
+        "id": "2026-cn-ha-physics-selective:q007",
+        "topic": "平抛与图形投影",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary"
+      },
+      {
+        "id": "2026-cn-ha-physics-selective:q011",
+        "topic": "游标与导轨实验",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary"
+      }
+    ],
+    "structure": null,
+    "scope": "专项分数和时长由练习设定"
+  },
+  "questions": [
+    {
+      "id": "orig:physics:p14:01",
+      "topic": "匀强电场",
+      "version_sha256": "6c951a2f7c8a4e2051e6c4d6255711f4d64f834153d8c9b0f4f4acd2a6b52d47",
+      "verification": {
+        "answer": "A",
+        "checks": [
+          "电势差和长度量纲",
+          "两个正交电势梯度",
+          "选项真值唯一"
+        ],
+        "explanation": "匀强场两个正交分量分别为对应电势降除以距离。",
+        "unverified": [
+          "独立审查须核对题图、题面与程序规格一致。"
+        ]
+      }
+    },
+    {
+      "id": "orig:physics:p14:02",
+      "topic": "运动图像",
+      "version_sha256": "8c0f920da5a732b740a06a77c554e5e9e9839a9a1e533e4f40604fbac8c504bf",
+      "verification": {
+        "answer": "B",
+        "checks": [
+          "轴单位",
+          "有向面积",
+          "过零拆分",
+          "选项唯一"
+        ],
+        "explanation": "速度曲线与时间轴间有向面积给位移，正负分段的面积绝对值之和给路程。",
+        "unverified": [
+          "独立审查须核对题图、题面与程序规格一致。"
+        ]
+      }
+    },
+    {
+      "id": "orig:physics:p14:03",
+      "topic": "电路与实验",
+      "version_sha256": "e7aba24c68e2cd01649fd06bfff527216d392f46e54a7ae849c3e262204f9c02",
+      "verification": {
+        "answer": {
+          "emf_V": "479/150",
+          "resistance_ohm": "59/30",
+          "middle_error_V": "1/40",
+          "within_tolerance": true,
+          "open_in_range": false,
+          "evidence": "sample_only"
+        },
+        "checks": [
+          "带单位量程并核查全部读数",
+          "校验非负内阻",
+          "以给定容差检查残差",
+          "有限观测不支持全范围结论"
+        ],
+        "explanation": "首末两点给直线。开路估值与量程比较，中间读数与直线预测比较。",
+        "unverified": [
+          "独立审查须核对题图、题面与程序规格一致。"
+        ]
+      }
+    },
+    {
+      "id": "orig:physics:p14:04",
+      "topic": "分段运动",
+      "version_sha256": "c912eb598614076f47c8aac94c9f6bb8f39425b5d27fee9bd4182551faa9e304",
+      "verification": {
+        "answer": {
+          "switch_speed": 5,
+          "switch_distance": 6,
+          "target_time_after_switch": "10/3 - 2*sqrt(13)/3",
+          "total_stop_time": "16/3"
+        },
+        "checks": [
+          "统一量纲",
+          "根据制动时间窗排根",
+          "速度平方与功关系交叉核对"
+        ],
+        "explanation": "制动只持续到速度降为零。超过这段时间的方程根不属于题设运动。",
+        "unverified": [
+          "独立审查须核对题图、题面与程序规格一致。"
+        ]
+      }
+    },
+    {
+      "id": "orig:physics:p14:05",
+      "topic": "电场与分段运动",
+      "version_sha256": "5b2a4d1a0191d94e5ccb0f0651c1562ebdb418650084e27ce09c00cfcfa28ca2",
+      "verification": {
+        "answer": {
+          "field_time_s": "1/20",
+          "drift_time_s": "3/40",
+          "field_N_C": 8,
+          "spots_m": {
+            "positive": "1/50",
+            "negative": "-1/50"
+          },
+          "exit_abs_m": "1/200",
+          "clears_plate": true
+        },
+        "checks": [
+          "电荷质量比与量纲",
+          "连接加速和漂移",
+          "遍历两种电荷符号",
+          "检查板内最大偏移"
+        ],
+        "explanation": "两种电荷符号产生镜像轨迹。板内偏移绝对值单调增加，应比较出口偏移与半间距。",
+        "unverified": [
+          "独立审查须核对题图、题面与程序规格一致。"
+        ]
+      }
+    }
+  ],
+  "answers": [
+    "A",
+    "B",
+    {
+      "emf_V": "479/150",
+      "resistance_ohm": "59/30",
+      "middle_error_V": "1/40",
+      "within_tolerance": true,
+      "open_in_range": false,
+      "evidence": "sample_only"
+    },
+    {
+      "switch_speed": 5,
+      "switch_distance": 6,
+      "target_time_after_switch": "10/3 - 2*sqrt(13)/3",
+      "total_stop_time": "16/3"
+    },
+    {
+      "field_time_s": "1/20",
+      "drift_time_s": "3/40",
+      "field_N_C": 8,
+      "spots_m": {
+        "positive": "1/50",
+        "negative": "-1/50"
+      },
+      "exit_abs_m": "1/200",
+      "clears_plate": true
+    }
+  ],
+  "candidate_sha256": "d87637bebb363ec96bbf6114f6990dafcbfca2ed2a1f1d73fbc72e6a2cb7174c",
+  "paper_version": "e7797e6f62f99670e79197259d2b0c85a31e81794ea193fabfc1d1774c178912",
+  "paper_pdf_sha256": "1b60372b913500e42af184f14cfefb60ee4c53dd774925515804831d93b31425"
+}

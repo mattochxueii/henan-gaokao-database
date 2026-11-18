@@ -36,6 +36,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_feature_benchmark.py -v
       - name: Multisubject separation, import and science review gates
         run: python -m unittest discover -s tests -p test_multisubject.py -v
+      - name: Physics evidence, prediction boundaries and trial
+        run: python -m unittest discover -s tests -p test_physics_quality.py -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"

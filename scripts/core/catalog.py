@@ -43,6 +43,27 @@ def use(root, subject, region, year):
     return items
 
 
+def physics_evidence(root, year, number=None, *, region="河南"):
+    use(root, "physics", region, year)
+    path = root / DATA / "physics-evidence.json"
+    require(path.is_file(), "物理逐题证据目录尚未安装")
+    document = read_json(path)
+    papers = [p for p in document["papers"] if (p["year"],p["region"])==(year,region)]
+    require(len(papers)==1, "该地区和年度暂无逐题证据")
+    items = [q for q in document["items"] if (q["year"],q["region"])==(year,region)
+             and (number is None or q["number"]==number)]
+    require(items, "未登记该题号")
+    return {"paper":papers[0],"items":items}
+
+
+def physics_record(root, row):
+    path = root / DATA / "physics-evidence.json"
+    if row["subject"]!="physics" or not path.is_file():
+        return None
+    return next((item for item in read_json(path)["items"] if item["paper_id"]==row["paper_id"]
+                 and item["number"]==row["number"]),None)
+
+
 def import_science(root, bundle):
     """Admit locally owned copies with exact source, province and version bindings."""
     manifest, tables, rows = read_bundle(bundle, check_files=True)
@@ -70,6 +91,10 @@ def import_science(root, bundle):
                 "需记录该原文副本的合法取得与本地处理依据")
         require(type(q.get("content_complete")) is bool and q["content_complete"],
                 "完整题面包缺少完整性证明")
+        evidence = physics_record(root,q)
+        if evidence and q.get("review_status")!="quarantined":
+            require(evidence["verification"]["figure"]=="not_required" or q["asset_refs"],
+                    "本题在来源记录中包含必要图表，请随全文提供")
         require(q["answer"] is not None and q["answer"] != "" and q["answer"] != {},
                 "缺少已绑定的答案")
     dst = root / LOCAL / manifest["dataset_id"]
@@ -102,7 +127,9 @@ def all_science_rows(root):
                 **q, "region":regions[q["paper_id"]], "source_url":source.get("url"),
                 "rights":source["rights"], "record_type":"full_text",
                 "answer_version_sha256":q["version_sha256"],
-                "review_status":"quarantined" if q.get("review_status")=="quarantined" else "local_unreviewed",
+                "review_status":"quarantined" if (
+                    q.get("review_status")=="quarantined" or (physics_record(root,q) or {}).get("state")=="quarantined"
+                ) else "local_unreviewed",
             })
     for row in rows:
         require(row["subject"] in SCIENCES and HASH.fullmatch(row["version_sha256"]), "题面版本或学科无效")
@@ -155,18 +182,24 @@ CREATE TABLE answer(question_id TEXT, version TEXT, payload TEXT NOT NULL, PRIMA
 CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
 """
     entities = source_data["entities"]
-    for folder in sorted((root / "experiments/phase13").glob("*")):
+    evidence = root / DATA / "physics-evidence.json"
+    if evidence.is_file():
+        entities["PhysicsSourceIndex"] = [
+            {**q,"id":f'{q["paper_id"]}:evidence:{q["number"]:02}'} for q in read_json(evidence)["items"]
+        ]
+    for folder in sorted((root / "experiments").glob("phase1[34]/*")):
         candidate = folder / "candidates.json"
         receipt = folder / "publication.json"
         if not (candidate.is_file() and receipt.is_file()):
             continue
         doc, release = read_json(candidate), read_json(receipt)
         subject = doc["subject"]
-        entities["GeneratedPaper"].append({"id":"phase13:"+subject,"subject":subject,**release})
+        paper_id = folder.parent.name + ":" + subject
+        entities["GeneratedPaper"].append({"id":paper_id,"subject":subject,**release})
         for q in doc["questions"]:
             entities["GeneratedQuestion"].append({
                 "id":q["id"], "subject":subject, "version":fingerprint(q),
-                "generated_paper_id":"phase13:"+subject, "topic":q["topic"],
+                "generated_paper_id":paper_id, "topic":q["topic"],
             })
     math_targets = root/"forecast/targets.json"
     if math_targets.is_file():

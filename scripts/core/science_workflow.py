@@ -4,6 +4,7 @@ from collections import Counter
 import math
 from pathlib import Path
 import re
+import shutil
 
 from analysis_db import fingerprint
 from core.catalog import catalog, query, use
@@ -68,7 +69,8 @@ def normalize_subject_item(item, order, folder):
         actual = relative_path(folder,figure["path"])
         require(actual.is_file() and not actual.is_symlink() and digest(actual)==figure["sha256"]
                 and actual.suffix.lower() in (".png",".jpg",".jpeg"), "题图缺失或版本不符")
-        figure = str(actual.resolve())
+        figure = {"path":"figures/"+figure["sha256"]+actual.suffix.lower(),
+                  "sha256":figure["sha256"]}
     return {"id":item["id"],"order":order,"kind":kind,"points":points,"stem":stem,
             "options":options,"parts":parts,"figure":figure}
 
@@ -88,6 +90,8 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     solver = science_verifier(subject)
     for order,q in enumerate(questions,1):
         public = normalize_subject_item(q,order,figure_root or root)
+        if subject=="physics" and q["problem"].get("op") in ("velocity_graph","terminal_data"):
+            require(public["figure"], "物理规格需要学生版题图")
         normalized = re.sub(r"\W","",public["stem"])
         require(normalized and normalized not in known_text and normalized not in seen, "题干与现存真题或同卷题完全重复")
         seen.add(normalized)
@@ -133,13 +137,22 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     else:
         minutes = candidate.get("minutes", max(5,len(visible)*6))
         require(type(minutes) is int and 0<minutes<=180, "专项练习时长无效")
-    paper = {"title":SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
+    paper = {"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
              "minutes":minutes,"total_points":points,"questions":visible}
     output.mkdir(parents=True,exist_ok=False)
+    for q, view in zip(questions,visible,strict=True):
+        if view["figure"]:
+            asset = relative_path(output,view["figure"]["path"])
+            asset.parent.mkdir(exist_ok=True)
+            shutil.copyfile(relative_path(figure_root or root,q["figure"]["path"]),asset)
     packet = {"subject":subject,"paper":paper,"paper_version":fingerprint(paper)}
     write_new(output/"blind-packet.json",packet)
     from mathgen.student_pdf import render
-    render(paper,output/"paper.pdf")
+    rendered = {**paper,"questions":[
+        {**q,"figure":str(relative_path(output,q["figure"]["path"]).resolve()) if q["figure"] else None}
+        for q in visible
+    ]}
+    render(rendered,output/"paper.pdf")
     write_new(output/"verification.json",{"blueprint":blueprint,"questions":checks,"answers":answers,
               "candidate_sha256":fingerprint(candidate),"paper_version":packet["paper_version"],
               "paper_pdf_sha256":digest(output/"paper.pdf")})
@@ -168,7 +181,13 @@ def adjudicate(folder, review):
         if check["verification"]["unverified"]:
             require(isinstance(j.get("science_review"),str) and j["science_review"].strip(),
                     "程序覆盖外的科学判断须由审查者说明")
-        verified.append({**q, "solution_paragraphs":[j["reasoning"]]})
+        paragraphs = [j["reasoning"]]
+        if rubric := j.get("rubric"):
+            require(isinstance(rubric,list) and all(type(k["points"]) is int and k["points"]>0
+                    and isinstance(k["step"],str) and k["step"].strip() for k in rubric)
+                    and sum(k["points"] for k in rubric)==q["points"], "分步评分与本题分值不符")
+            paragraphs.append("项目参考评分　"+"；".join(f'{k["step"]}（{k["points"]}分）' for k in rubric)+"。")
+        verified.append({**q, "solution_paragraphs":paragraphs})
     from mathgen.student_pdf import render
     render({**packet["paper"],"questions":verified},folder/"solutions.pdf",solutions=True)
     write_new(folder/"independent-review.json",review)
@@ -180,7 +199,7 @@ def adjudicate(folder, review):
             "solutions_sha256":digest(folder/"solutions.pdf"),"questions":len(questions)}
 
 
-def publish(folder, visual):
+def publication_record(folder, visual):
     packet = read_json(folder/"blind-packet.json")
     review = read_json(folder/"independent-review.json")
     pending = read_json(folder/"visual-pending.json")
@@ -189,6 +208,9 @@ def publish(folder, visual):
     require(pending["review_sha256"]==fingerprint(review)
             and pending["verification_sha256"]==fingerprint(read_json(folder/"verification.json")),
             "审查或程序验证已改变")
+    for q in packet["paper"]["questions"]:
+        if fig := q.get("figure"):
+            require(digest(relative_path(folder,fig["path"]))==fig["sha256"],"题图与审核版本不符")
     from pypdf import PdfReader
     for label in ("paper","solutions"):
         path = folder/(label+".pdf")
@@ -201,5 +223,15 @@ def publish(folder, visual):
         "review_sha256":fingerprint(review),"verification_sha256":pending["verification_sha256"],"visual":visual,
         "scope":"学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。",
     }
+    return record
+
+
+def publish(folder, visual):
+    record = publication_record(folder, visual)
     write_new(folder/"publication.json",record)
     return record
+
+
+def check_publication(folder, certificate):
+    require(publication_record(folder,certificate["visual"])==certificate,"理科试卷发布记录不匹配")
+    return read_json(folder/"blind-packet.json")["paper"]
