@@ -161,6 +161,28 @@
         "note": "当年理科综合包含物理、化学和生物。卷号仍按来源分别核查。",
         "authority": "official_or_official_reprint",
         "verified_on": "2026-11-10"
+      },
+      {
+        "id": "chemistry-standard-2020",
+        "url": "https://www.pep.com.cn/xw/zt/rjwy/gzkb2020/202205/P020220517517668288401.pdf",
+        "kind": "national_curriculum",
+        "locator": "课程结构 8–12；课程内容 13–43",
+        "title": "chemistry-standard-2020",
+        "authority": "official_or_publisher"
+      },
+      {
+        "id": "chemistry-pep-modules",
+        "url": "https://www.pep.com.cn/xw/zt/px/2019/huaxue/",
+        "kind": "textbook_publisher_module_material",
+        "title": "chemistry-pep-modules",
+        "authority": "official_or_publisher"
+      },
+      {
+        "id": "moe-textbook-catalogue",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202305/t20230506_1058493.html",
+        "kind": "textbook_catalogue",
+        "title": "moe-textbook-catalogue",
+        "authority": "official_or_publisher"
       }
     ],
     "Paper": [
@@ -746,7 +768,12 @@
         "subject": "chemistry",
         "label": "普通高中化学课程标准（2017年版2020年修订）",
         "source_id": "moe-curriculum-2020",
-        "role": "knowledge_mapping_reference"
+        "role": "knowledge_mapping_reference",
+        "evidence": [
+          "chemistry-standard-2020",
+          "chemistry-pep-modules",
+          "moe-textbook-catalogue"
+        ]
       },
       {
         "id": "biology-2017-2020",
@@ -948,6 +975,94 @@
         "subject": "biology",
         "title": "实验设计与结果分析",
         "curriculum_id": "biology-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-concepts",
+        "title": "基本概念与物质性质",
+        "series": "必修",
+        "knowledge": [
+          "物质分类",
+          "离子反应",
+          "氧化还原",
+          "元素及化合物",
+          "化学计量"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-structure",
+        "title": "物质结构与性质",
+        "series": "选择性必修2",
+        "knowledge": [
+          "原子结构",
+          "周期规律",
+          "成键",
+          "分子构型",
+          "杂化",
+          "极性与分子间作用",
+          "晶体"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-principles",
+        "title": "化学反应原理",
+        "series": "选择性必修1",
+        "knowledge": [
+          "反应热",
+          "速率",
+          "平衡",
+          "水溶液离子",
+          "沉淀",
+          "电化学"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-experiment",
+        "title": "实验与探究",
+        "series": "必修及各选择性必修主题",
+        "knowledge": [
+          "仪器及分离",
+          "现象检验",
+          "对照",
+          "定量数据",
+          "误差",
+          "证据边界"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-organic",
+        "title": "有机化学",
+        "series": "选择性必修3",
+        "knowledge": [
+          "官能团",
+          "结构性质",
+          "反应类型",
+          "同分异构",
+          "转化路线"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
+      },
+      {
+        "id": "chemistry-phase15-application",
+        "title": "化学综合应用",
+        "series": "跨主题",
+        "knowledge": [
+          "工业流程",
+          "物质循环",
+          "绿色化学",
+          "能源材料",
+          "生产情境"
+        ],
+        "subject": "chemistry",
+        "curriculum_id": "chemistry-2017-2020"
       }
     ],
     "ForecastTarget": [],
@@ -1299,7 +1414,8 @@
           {
             "kind": "single_choice",
             "count": 14,
-            "points": 42
+            "points": 42,
+            "points_each": 3
           },
           {
             "kind": "constructed_response",
@@ -1341,19 +1457,27 @@
         ],
         "source_urls": [
           "https://www.51jiaoxi.com/doc-18504525.html",
-          "https://zy.21cnjy.com/25976018"
+          "https://zy.21cnjy.com/25976018",
+          "https://zy.21cnjy.com/25959272"
         ],
         "status": "observed_third_party_paper",
         "source_details": [
           {
             "kind": "single_choice",
             "count": 14,
-            "points": 42
+            "points": 42,
+            "points_each": 3
           },
           {
             "kind": "constructed_response",
             "count": 4,
-            "points": 58
+            "points": 58,
+            "individual_points": [
+              14,
+              14,
+              15,
+              15
+            ]
           }
         ]
       }

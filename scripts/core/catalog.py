@@ -43,10 +43,11 @@ def use(root, subject, region, year):
     return items
 
 
-def physics_evidence(root, year, number=None, *, region="河南"):
-    use(root, "physics", region, year)
-    path = root / DATA / "physics-evidence.json"
-    require(path.is_file(), "物理逐题证据目录尚未安装")
+def science_evidence(root, subject, year, number=None, *, region="河南"):
+    require(subject in SCIENCES, "该入口仅查询理科逐题证据")
+    use(root, subject, region, year)
+    path = root / DATA / f"{subject}-evidence.json"
+    require(path.is_file(), "该学科逐题证据目录尚未安装")
     document = read_json(path)
     papers = [p for p in document["papers"] if (p["year"],p["region"])==(year,region)]
     require(len(papers)==1, "该地区和年度暂无逐题证据")
@@ -56,9 +57,16 @@ def physics_evidence(root, year, number=None, *, region="河南"):
     return {"paper":papers[0],"items":items}
 
 
-def physics_record(root, row):
-    path = root / DATA / "physics-evidence.json"
-    if row["subject"]!="physics" or not path.is_file():
+def physics_evidence(root, year, number=None, *, region="河南"):
+    return science_evidence(root,"physics",year,number,region=region)
+
+
+def science_record(root, row):
+    subject = row["subject"]
+    if subject not in SCIENCES:
+        return None
+    path = root / DATA / f"{subject}-evidence.json"
+    if not path.is_file():
         return None
     return next((item for item in read_json(path)["items"] if item["paper_id"]==row["paper_id"]
                  and item["number"]==row["number"]),None)
@@ -85,14 +93,17 @@ def import_science(root, bundle):
                       if e.get("paper_id")==p["id"] and e["series_id"]==p["series_id"]
                       and e["status"]=="historical_selective"), None)
         require(match and m.get("evidence"), "地区、年份与省级卷型不能从考试制度推断")
+    quarantined = 0
     for q in rows:
         source = sources[q["source_locator"]["source_id"]]
         require(source.get("rights") == "local_copy_authorized" and source.get("rights_basis"),
                 "需记录该原文副本的合法取得与本地处理依据")
         require(type(q.get("content_complete")) is bool and q["content_complete"],
                 "完整题面包缺少完整性证明")
-        evidence = physics_record(root,q)
-        if evidence and q.get("review_status")!="quarantined":
+        evidence = science_record(root,q)
+        blocked = q.get("review_status")=="quarantined" or (evidence or {}).get("state")=="quarantined"
+        quarantined += int(blocked)
+        if evidence and not blocked:
             require(evidence["verification"]["figure"]=="not_required" or q["asset_refs"],
                     "本题在来源记录中包含必要图表，请随全文提供")
         require(q["answer"] is not None and q["answer"] != "" and q["answer"] != {},
@@ -109,7 +120,7 @@ def import_science(root, bundle):
         shutil.copytree(bundle,staging)
         read_bundle(staging,check_files=True)
         staging.rename(dst)
-    return {"installed":len(rows),"quarantined":sum(r.get("review_status")=="quarantined" for r in rows)}
+    return {"installed":len(rows),"quarantined":quarantined}
 
 
 def all_science_rows(root):
@@ -128,7 +139,7 @@ def all_science_rows(root):
                 "rights":source["rights"], "record_type":"full_text",
                 "answer_version_sha256":q["version_sha256"],
                 "review_status":"quarantined" if (
-                    q.get("review_status")=="quarantined" or (physics_record(root,q) or {}).get("state")=="quarantined"
+                    q.get("review_status")=="quarantined" or (science_record(root,q) or {}).get("state")=="quarantined"
                 ) else "local_unreviewed",
             })
     for row in rows:
@@ -138,8 +149,9 @@ def all_science_rows(root):
     return rows
 
 
-def query(root, subject, *, year=None, region=None, topic=None, limit=10, verified_only=False):
+def query(root, subject, *, year=None, region=None, topic=None, limit=10, verified_only=False, strict=False):
     require(subject in SUBJECTS and type(limit) is int and limit>0, "学科或数量无效")
+    require(not strict or subject=="chemistry", "严格逐题证据模式当前支持化学")
     if subject == "math":
         from subjects.math import research
         return research(root, year=year, region=region, topic=topic, limit=limit, verified_only=verified_only)
@@ -151,6 +163,11 @@ def query(root, subject, *, year=None, region=None, topic=None, limit=10, verifi
             "source_and_solution_reviewed", "independently_solved_summary",
         ):
             continue
+        if strict:
+            evidence = science_record(root,q) or {}
+            if (q["record_type"]!="semantic_summary" or evidence.get("state")!="candidate_strict_reviewed"
+                    or evidence.get("summary_version_sha256")!=q["version_sha256"]):
+                continue
         if topic and topic not in str(q.get("topic")):
             continue
         result.append(q)
@@ -182,12 +199,13 @@ CREATE TABLE answer(question_id TEXT, version TEXT, payload TEXT NOT NULL, PRIMA
 CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
 """
     entities = source_data["entities"]
-    evidence = root / DATA / "physics-evidence.json"
-    if evidence.is_file():
-        entities["PhysicsSourceIndex"] = [
-            {**q,"id":f'{q["paper_id"]}:evidence:{q["number"]:02}'} for q in read_json(evidence)["items"]
-        ]
-    for folder in sorted((root / "experiments").glob("phase1[34]/*")):
+    for subject in SCIENCES:
+        evidence = root / DATA / f"{subject}-evidence.json"
+        if evidence.is_file():
+            entities[subject.title()+"SourceIndex"] = [
+                {**q,"id":f'{q["paper_id"]}:evidence:{q["number"]:02}'} for q in read_json(evidence)["items"]
+            ]
+    for folder in sorted((root / "experiments").glob("phase1[345]/*")):
         candidate = folder / "candidates.json"
         receipt = folder / "publication.json"
         if not (candidate.is_file() and receipt.is_file()):

@@ -31,3 +31,7 @@ python scripts/gaokao_platform.py forecast physics 2027 --cutoff 2026-11-10
 ## 河南物理题证与试做
 
 用 `python scripts/gaokao_platform.py physics-index 2026 --number 12` 查询卷面页码、图表状态与隔离原因。正文资料可合法本地导入；隔离版本不会进入默认命题参考。试做入口与说明见 [HN14-P40-v1](../../experiments/phase14/physics/README.md)。
+
+## 河南化学题证与试做
+
+运行 `python scripts/gaokao_platform.py chemistry-index 2026 --number 17` 查看候选版本和隔离原因。可运行 `research chemistry --year 2026 --strict` 查询经版本双复核的本地研究摘要。安装化学入口用 `python scripts/install_math_skill.py --skill chemistry-gaokao`。试做见 [HN15-C40-v1](../../experiments/phase15/chemistry/README.md)。

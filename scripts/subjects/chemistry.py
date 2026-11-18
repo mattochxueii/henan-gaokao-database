@@ -6,6 +6,8 @@ import re
 
 from sympy import Matrix
 
+from subjects.chemistry_models import SOLVERS as ADDITIONAL_SOLVERS
+
 
 SOURCES = {
     "oxalate": "https://demolab.chem.wisc.edu/titrations-the-reaction-between-oxalate-ion-with-permanganate/",
@@ -285,6 +287,7 @@ def _carbon_dioxide_controls(problem):
 def verify(problem):
     """Recompute the answer from structured conditions without reading a supplied key."""
     operations = {
+        **ADDITIONAL_SOLVERS,
         "ionic_balance": _ionic_balance,
         "ionic_choice": _ionic_choice,
         "phenomenon_choice": _phenomenon_choice,

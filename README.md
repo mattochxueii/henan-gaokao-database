@@ -1,5 +1,7 @@
 # 全国高考真题研究与多学科 AI 命题平台
 
+第十五阶段新增河南化学逐题来源核验、化学验证器和原创专题练习。[阶段验收](reports/phase15.md) · [化学试做](experiments/phase15/chemistry/README.md)
+
 第十四阶段新增河南 2025、2026 物理逐题证据、分段与实验验证，以及独立审阅的原创专题卷。[物理验收报告](reports/phase14.md) · [物理专题试做](experiments/phase14/physics/README.md)
 
 第十三阶段接入物理、化学和生物学。统一入口保留原数学工作流。参见[多学科使用说明](national/multisubject/README.md)和[第十三阶段验收](reports/phase13.md)。

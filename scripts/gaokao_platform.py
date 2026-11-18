@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 import bootstrap  # noqa: F401
-from core.catalog import import_science, physics_evidence, query, rebuild, use
+from core.catalog import import_science, query, rebuild, science_evidence, use
 from core.science_forecast import forecast, score
 from core.science_workflow import adjudicate, plan, prepare, publish
 from forecast_store import write_new
@@ -28,10 +28,12 @@ def main(argv=None):
     research.add_argument("--topic")
     research.add_argument("--limit",type=int,default=10)
     research.add_argument("--verified-only",action="store_true")
-    physics_index = sub.add_parser("physics-index", help="河南物理逐题来源与隔离记录")
-    physics_index.add_argument("year",type=int)
-    physics_index.add_argument("--number",type=int)
-    physics_index.add_argument("--region",default="河南")
+    research.add_argument("--strict",action="store_true",help="化学题的跨来源与解答双复核子集")
+    for subject in ("physics", "chemistry"):
+        evidence = sub.add_parser(f"{subject}-index", help=f"河南{SUBJECTS[subject]}逐题证据")
+        evidence.add_argument("year",type=int)
+        evidence.add_argument("--number",type=int)
+        evidence.add_argument("--region",default="河南")
     mapping = sub.add_parser("exam")
     mapping.add_argument("subject",choices=SUBJECTS)
     mapping.add_argument("year",type=int)
@@ -67,9 +69,9 @@ def main(argv=None):
                       for k,v in SUBJECTS.items()]
         elif command=="research":
             result = query(root,args.subject,year=args.year,region=args.region,topic=args.topic,
-                           limit=args.limit,verified_only=args.verified_only)
-        elif command=="physics-index":
-            result = physics_evidence(root,args.year,args.number,region=args.region)
+                           limit=args.limit,verified_only=args.verified_only,strict=args.strict)
+        elif command in ("physics-index", "chemistry-index"):
+            result = science_evidence(root,command.removesuffix("-index"),args.year,args.number,region=args.region)
         elif command=="exam":
             result = use(root,args.subject,args.region,args.year)
         elif command=="index":

@@ -44,8 +44,8 @@ def plan(root, subject, region, year, mode="targeted", topics=()):
     return {
         "workflow":VERSION,"subject":subject,"region":region,"year":year,"mode":mode,
         "mapping":mapping,"curriculum_topics":knowledge,"requested_topics":list(topics),
-        "reference_candidates": [{k:q.get(k) for k in ("id","topic","source_url","review_status")}
-                                 for q in query(root,subject,year=year,region=region,verified_only=True)],
+        "reference_candidates": [{k:q.get(k) for k in ("id","topic","source_url","review_status","version_sha256")}
+                                 for q in query(root,subject,year=year,region=region,verified_only=True,strict=subject=="chemistry")],
         "structure":layout if mode=="standard" else None,
         "scope":"专项分数和时长由练习设定" if mode=="targeted" else "同年同省已见卷面结构，非官方原创卷",
     }
@@ -90,8 +90,10 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     solver = science_verifier(subject)
     for order,q in enumerate(questions,1):
         public = normalize_subject_item(q,order,figure_root or root)
-        if subject=="physics" and q["problem"].get("op") in ("velocity_graph","terminal_data"):
-            require(public["figure"], "物理规格需要学生版题图")
+        figure_models = {"physics": {"velocity_graph", "terminal_data"},
+                         "chemistry": {"iodine_evidence"}}
+        if q["problem"].get("op") in figure_models.get(subject, ()):
+            require(public["figure"], "学科规格需要学生版题图")
         normalized = re.sub(r"\W","",public["stem"])
         require(normalized and normalized not in known_text and normalized not in seen, "题干与现存真题或同卷题完全重复")
         seen.add(normalized)

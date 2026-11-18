@@ -156,7 +156,7 @@ class MultisubjectTests(unittest.TestCase):
             if public_edition(ROOT):
                 self.assertEqual(report["science"],0)
             else:
-                self.assertEqual(report["science"],13)
+                self.assertEqual(report["science"],19)
                 expected = math_available(ROOT)
                 self.assertEqual(report["math_archive_available"],expected)
                 self.assertEqual(report["math"],496 if expected else 0)
@@ -165,7 +165,7 @@ class MultisubjectTests(unittest.TestCase):
                 n = db.execute("SELECT count(*) FROM answer a JOIN question q ON a.question_id=q.id AND a.version=q.version").fetchone()[0]
                 self.assertGreater(n,0)
                 generated = db.execute("SELECT count(*) FROM entity WHERE kind='GeneratedQuestion'").fetchone()[0]
-                self.assertEqual(generated,14)
+                self.assertEqual(generated,19)
 
 
 if __name__ == "__main__":

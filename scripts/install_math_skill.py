@@ -7,7 +7,7 @@ from pathlib import Path
 import shutil
 from gaokao import ROOT, require
 
-SKILLS = ("henan-math", "gaokao-platform")
+SKILLS = ("henan-math", "gaokao-platform", "chemistry-gaokao")
 
 
 def install(root, destination, skill_name="henan-math"):
