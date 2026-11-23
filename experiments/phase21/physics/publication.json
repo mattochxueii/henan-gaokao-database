@@ -1,7 +1,7 @@
 {
   "status": "project_practice_independently_reviewed",
   "subject": "physics",
-  "paper_version": "1a8717fcc43a82f91bf70f6f2c949d458ed1c3658f994ca2a77f96f74435cc55",
+  "paper_version": "79687f2c968b1bc74b79d70ee65951ac52cda3b07b00f0d7be79cab04db3c24d",
   "question_ids": [
     "orig:physics:phase21-q01",
     "orig:physics:phase21-q02",
@@ -19,19 +19,33 @@
     "orig:physics:phase21-q14",
     "orig:physics:phase21-q15"
   ],
-  "review_sha256": "bb57a98eb135ef3f60c51f8cc812a99aa381d817dbdf464c220e506afed94090",
-  "verification_sha256": "781b4f42dfd9a2d9e5eeb5065f09ff4cdfdfa788389a373c00d4907d07f6b89f",
+  "review_sha256": "b6e637cf1c5e3789cf46e76438719198aa8a4523e9ea09c753cc79e2a199c411",
+  "verification_sha256": "a476afa053baba1d674bd7d0f2df0f4fea33f777115b4a7b70382296ec203bab",
   "visual": {
-    "paper_version": "1a8717fcc43a82f91bf70f6f2c949d458ed1c3658f994ca2a77f96f74435cc55",
+    "paper_version": "79687f2c968b1bc74b79d70ee65951ac52cda3b07b00f0d7be79cab04db3c24d",
     "reviewer": "Work 宿主逐页目视",
     "passed": true,
-    "paper_sha256": "e5c6fa9093264feb3fae14d3876317aaae99c4ba7fd0f23beda52490ed41dd4d",
-    "solutions_sha256": "ed0fd60aaf2ab1453275e4bc502cfd77025c86b12fa3fbdfeb51f051e0dd52b3",
-    "paper_pages": 9,
-    "solutions_pages": 5,
-    "paper_note": "第 1–4 页检查单、多选题组、选项与 3 分规则。第 5–9 页逐页核对遮光时间表、A/V 支路及 mA 坐标、挡块、弹簧粗糙区、场区边界与探测片端点。第 6、9 页校对移动后的末点标注与 L 标注，其他页逐像素比对。",
-    "solutions_note": "第 1–2 页检查选项判定和振幅、能量公式。第 3–5 页检查实验单位、正负号、根式首达时间以及分步评分换行。",
-    "method": "最终 PDF 用 Poppler 以 140 dpi 逐页栅格化，人工式目视检查整页与关键图件裁切。"
+    "paper_sha256": "e5e2f88404724f4621c04d1f527731f752d34e467df84e01b948fbc743e72303",
+    "solutions_sha256": "898a77ad95f88bf8e0444766a9fce479b0462609ad61700fb30f394745916397",
+    "paper_pages": 5,
+    "solutions_pages": 2,
+    "paper_note": "5 页顺读。核对圆轨与椭圆切点、光路法线、两种电路、波幅刻度、实验单位及场区边界。多选计分说明随栏目只出现一次。第 15 题在末页完整呈现。",
+    "solutions_note": "2 页顺读。核对 ①–⑤ 与 ①–⑥、各实验单位和第 15 题的根式及分步赋分。",
+    "method": "Poppler 175 dpi 栅格逐页目视。查验 PDF 矢量笔画与圈号逐空计数。",
+    "choice_figure_numbers": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10
+    ],
+    "blank_counts_by_question": {
+      "11": 5,
+      "12": 6
+    },
+    "measured_continuous_rules": 11
   },
   "scope": "学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。"
 }

@@ -5,10 +5,10 @@
     "source_id": null,
     "limit": 50
   },
-  "context_sha256": "4bf0ff4e593812fd04faca9db867cd013525a079b65f51ff3009c8ec9004be5c",
-  "dna_sha256": "83eeb8ae401166fd49019341b9627d97309a1be540b2654fbb51b60ae4657e7a",
+  "context_sha256": "81e8766b161720822a9a4d017e820bfdb5f96cb16f8e5daaaa7353421430a784",
+  "dna_sha256": "791c052e2e84b36d1380559438342ad65a59d16de44002c1ddb5768ae09e77df",
   "official_context_rows": 29,
-  "candidate_sha256": "e44375bc9f37825a0ebd095779e958286a978016c8dfd134c420e37506e77297",
+  "candidate_sha256": "02ffd235a8c3c0b1093f42082b4a5e04fad7e6605ecf4a7e0f137eadd1597e77",
   "selected_evidence": [
     {
       "id": "2025-cn-ha-chemistry-selective:q005",
@@ -206,5 +206,58 @@
       "usage": "仅使用 DNA 题位观察"
     }
   ],
-  "model": "Codex Work 宿主编写原创结构；生成接口 simulate"
+  "model": "Codex Work 宿主编写原创结构；生成接口 simulate",
+  "paper_layout": {
+    "observations": [
+      {
+        "year": 2025,
+        "paper_id": "2025-cn-ha-chemistry-selective",
+        "choice_count": 14,
+        "figured_choice_numbers": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "year": 2026,
+        "paper_id": "2026-cn-ha-chemistry-selective",
+        "choice_count": 14,
+        "figured_choice_numbers": [
+          1,
+          3,
+          4,
+          7,
+          9,
+          11,
+          12,
+          13,
+          14
+        ]
+      }
+    ],
+    "standard_mock": {
+      "choice_figures_minimum": 7,
+      "choice_figures_target": [
+        8,
+        10
+      ],
+      "embedded_blanks": [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "guidance": "选择题同行起排，组别与评分说明随栏目印一次。题图承担可用于作答的条件或证据。指定非选择题采用嵌入式填空，配套解析按圈号逐空对应。"
+  }
 }

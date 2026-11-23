@@ -1,7 +1,7 @@
 {
   "status": "project_practice_independently_reviewed",
   "subject": "biology",
-  "paper_version": "97d2536e9b3d5f8d815be67782ea70ad8648f42d8b154ea1716137bbe6271a51",
+  "paper_version": "969a2623eeaf6cbfdd8f985a7626f5c5c898044b18cdbe2fc7c1c5ced5d4201d",
   "question_ids": [
     "orig:biology:phase21-q01",
     "orig:biology:phase21-q02",
@@ -25,19 +25,34 @@
     "orig:biology:phase21-q20",
     "orig:biology:phase21-q21"
   ],
-  "review_sha256": "a1128cdfafb49b5fa94fb1cc154e4c901c895ec233d87d998b8ce052c9d31981",
-  "verification_sha256": "d4fd7d0374662f9b8e7653ee2340822f0bc9e9e94fc1087e4128cf5a444318fa",
+  "review_sha256": "777179c2aa5a0037e95c4918a40e06a9159693213091be5c11407af22bb239e6",
+  "verification_sha256": "57d65263836589c09dc591248de349d6aa936069b61c8f541beb4e64f9f57465",
   "visual": {
-    "paper_version": "97d2536e9b3d5f8d815be67782ea70ad8648f42d8b154ea1716137bbe6271a51",
+    "paper_version": "969a2623eeaf6cbfdd8f985a7626f5c5c898044b18cdbe2fc7c1c5ced5d4201d",
     "reviewer": "Work 宿主逐页目视",
     "passed": true,
-    "paper_sha256": "7102b943bc8136812317a910096118202ee44335a3c860904a500e65379ca482",
-    "solutions_sha256": "176861071f5d56bb6995bf23d9d5ccda5dccfb99e1a255a2f2363c72403d3241",
-    "paper_pages": 11,
-    "solutions_pages": 7,
-    "paper_note": "第 1–6 页检查选项、密码子、基因符号的可读性。第 7–11 页检查光响应零点、单位、四组柱形标号、分层权重、败育柱、固定化装置和未测空值。",
-    "solutions_note": "第 1–4 页检查选项顺序和光合作用的净量、总量区分。第 5–7 页核对因果对照、加权分母、遗传分型和酶活性增量的相应评分。",
-    "method": "最终 PDF 用 Poppler 以 140 dpi 逐页栅格化，人工式目视检查整页与关键图件裁切。"
+    "paper_sha256": "37052dca21839b905710e4bb17733374326f4597bf2735a50189ef1841135d77",
+    "solutions_sha256": "b145517f900ffcd8bdaa360cdb4f2167b70097a00eed9dc04d548d001d992ce4",
+    "paper_pages": 6,
+    "solutions_pages": 3,
+    "paper_note": "6 页顺读。核对 DNA 双峰、突触位置、逻辑斯谛截点、能量方向和低氧对照。第 18 题图紧随题干，子问自然续页。",
+    "solutions_note": "3 页顺读。核对长句空位、物种统计、基因型与比例，以及分步给分对应关系。",
+    "method": "Poppler 175 dpi 栅格逐页目视。查验 PDF 矢量笔画与圈号逐空计数。",
+    "choice_figure_numbers": [
+      3,
+      8,
+      11,
+      12,
+      16
+    ],
+    "blank_counts_by_question": {
+      "17": 7,
+      "18": 8,
+      "19": 4,
+      "20": 7,
+      "21": 7
+    },
+    "measured_continuous_rules": 33
   },
   "scope": "学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。"
 }

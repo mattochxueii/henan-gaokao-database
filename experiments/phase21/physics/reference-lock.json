@@ -5,10 +5,10 @@
     "source_id": null,
     "limit": 50
   },
-  "context_sha256": "2462a3b9e1f47f18953d49d3edd42459deaa6599f1974c01bb176d86673e138e",
-  "dna_sha256": "b2168b15e3517f0da110b84073a31fdec1fcf92abc7114cfdd768dbe7e761150",
+  "context_sha256": "645d6a519e5bcb0423b10012e7d60d21d5c2b6c71b21abf5fd19763e919764b4",
+  "dna_sha256": "955f6858b00cf3706661459a0209734b27dc2ea52a9529a50cf8b205cb29b23f",
   "official_context_rows": 29,
-  "candidate_sha256": "a4924b3b757dfe2340e7e6b3f847d6a6ca0bf0492fd501652a42a797050e7422",
+  "candidate_sha256": "5253e029593d28d9278b836e8f5673eafde96c073577160987fcfe1670638ad5",
   "selected_evidence": [
     {
       "id": "2025-cn-ha-physics-selective:q011",
@@ -148,5 +148,55 @@
       "usage": "题面与答案样本"
     }
   ],
-  "model": "Codex Work 宿主编写原创结构；生成接口 simulate"
+  "model": "Codex Work 宿主编写原创结构；生成接口 simulate",
+  "paper_layout": {
+    "observations": [
+      {
+        "year": 2025,
+        "paper_id": "2025-cn-ha-physics-selective",
+        "choice_count": 10,
+        "figured_choice_numbers": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          9,
+          10
+        ]
+      },
+      {
+        "year": 2026,
+        "paper_id": "2026-cn-ha-physics-selective",
+        "choice_count": 10,
+        "figured_choice_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ]
+      }
+    ],
+    "standard_mock": {
+      "choice_figures_minimum": 6,
+      "choice_figures_target": [
+        6,
+        8
+      ],
+      "embedded_blanks": [
+        11,
+        12
+      ],
+      "extended_calculations": [
+        13,
+        14,
+        15
+      ]
+    },
+    "guidance": "选择题同行起排，组别与评分说明随栏目印一次。题图承担可用于作答的条件或证据。指定非选择题采用嵌入式填空，配套解析按圈号逐空对应。"
+  }
 }

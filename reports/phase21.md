@@ -4,9 +4,9 @@
 
 ## 卷面与验证
 
-- 物理 15 题。1–7 各 4 分，8–10 各 6 分，11–12 为实验题 6、9 分，13–15 为计算题 10、12、17 分。分别留出选择题、两道实验、三道计算的练习梯度。学生卷 9 页，解析卷 5 页，原创新图 5 张。 [学生 PDF](../experiments/phase21/physics/paper.pdf) · [解析 PDF](../experiments/phase21/physics/solutions.pdf) · [学生 Markdown](../experiments/phase21/physics/paper.md) · [解析 Markdown](../experiments/phase21/physics/solutions.md)
-- 化学 18 题。1–14 各 3 分，15–18 依次为工艺流程、实验探究、反应原理、有机合成，分值为 14、14、15、15。学生卷与解析卷分别为 9、7 页，原创新图 4 张。 [学生 PDF](../experiments/phase21/chemistry/paper.pdf) · [解析 PDF](../experiments/phase21/chemistry/solutions.pdf) · [学生 Markdown](../experiments/phase21/chemistry/paper.md) · [解析 Markdown](../experiments/phase21/chemistry/solutions.md)
-- 生物学 21 题。1–16 各 3 分，17–21 依次为光合、调节、生态、遗传、生物技术，分值为 10、11、10、10、11。学生卷与解析卷分别为 11、7 页，原创新图 5 张。 [学生 PDF](../experiments/phase21/biology/paper.pdf) · [解析 PDF](../experiments/phase21/biology/solutions.pdf) · [学生 Markdown](../experiments/phase21/biology/paper.md) · [解析 Markdown](../experiments/phase21/biology/solutions.md)
+- 物理 15 题。1–7 各 4 分，8–10 各 6 分，11–12 为实验题 6、9 分，13–15 为计算题 10、12、17 分。学生卷从 9 页减至 5 页，解析卷从 5 页减至 2 页。配图选择题为 3、4、5、6、8、9、10。第 11、12 题分别有 5、6 空，13–15 保留演算问法。 [学生 PDF](../experiments/phase21/physics/paper.pdf) · [解析 PDF](../experiments/phase21/physics/solutions.pdf) · [学生 Markdown](../experiments/phase21/physics/paper.md) · [解析 Markdown](../experiments/phase21/physics/solutions.md)
+- 化学 18 题。1–14 各 3 分，15–18 依次为工艺流程、实验探究、反应原理、有机合成，分值为 14、14、15、15。学生卷从 9 页减至 5 页，解析卷从 7 页减至 3 页。配图选择题为 3、5、6、7、9、11、12、13。第 15–18 题分别有 9、7、8、8 空。 [学生 PDF](../experiments/phase21/chemistry/paper.pdf) · [解析 PDF](../experiments/phase21/chemistry/solutions.pdf) · [学生 Markdown](../experiments/phase21/chemistry/paper.md) · [解析 Markdown](../experiments/phase21/chemistry/solutions.md)
+- 生物学 21 题。1–16 各 3 分，17–21 依次为光合、调节、生态、遗传、生物技术，分值为 10、11、10、10、11。学生卷从 11 页减至 6 页，解析卷从 7 页减至 3 页。配图选择题为 3、8、11、12、16。第 17–21 题分别有 7、8、4、7、7 空。 [学生 PDF](../experiments/phase21/biology/paper.pdf) · [解析 PDF](../experiments/phase21/biology/solutions.pdf) · [学生 Markdown](../experiments/phase21/biology/paper.md) · [解析 Markdown](../experiments/phase21/biology/solutions.md)
 
 ## 试题是怎样对照真题的
 
@@ -17,14 +17,20 @@
 - **化学第 18 题**对照两年有机合成题位，保留其结构转化、反应顺序和异构计数的要求。阶段 16 从脂肪族酯的水解和支链醇推断结构。本卷把羰基保护、成醚、皂化与脱保护串联，用苯环对称性去重，再为间位乙酯选择能保留目标官能团的路线。两年参考题答解存在缺项，只使用题位与设问观察。 [阶段 16 学生卷](../experiments/phase16/henan-chem-100/paper.md) · [参考版本和题号](../experiments/phase21/chemistry/reference-lock.json) · [化学 DNA](../data/dna/chemistry.json)
 - **生物学第 17–21 题**。第 17 题对照 2025 光补偿点读图与 2026 的物质、能量分开说明，增加暗呼吸校正后的总光合速率和提高二氧化碳浓度的反事实对照。第 18 题沿用从体外差异走向整体因果验证的结构，学生须先区分四组对比，再说明如何用保持激素升高、改变受体响应来检验作用环节。第 19 题把种群调查扩展到面积加权和独立处理小区的重复。第 20 题把两年表型比例反推的要求转为色素互作与败育识别，在筛过表型的亲本池重算配子比例，并用杂交鉴别白株。第 21 题用固定化乳糖酶考查技术读图、控制初始酶量、传质假说与滤液验证。2026 第 17–21 题的对照仅使用题位观察，逐题分值沿用 2025。 [参考版本和题号](../experiments/phase21/biology/reference-lock.json) · [生物学 DNA](../data/dna/biology.json)
 
-## 复核与实际修订
+## 第 21.5 阶段复核
+
+- 河南正式卷归档图件按题号计量，2025、2026 年分别为物理 7/10、8/10，化学 12/14、9/14，生物学 4/16、4/16。更新的三科 DNA 和统一出题入口均列明卷面规范与分科准入规则。
+- 新增 20 张承担解题条件的选择题图，将折射率、波形相位、压力和吸光度数据等转移到图中。学生卷采用同行题号、自然分页、一次性的题组说明和不可拆分的实线空位。公式与后接标点按同一组换行，圈号、答线和贴邻单位共同保留。解析按题内圈号列答。物理计分说明只在多选栏目出现一次。
+- 同一 Work 宿主依据新版学生 PDF 重新求解 54 题。选择题键和主观题结论与原版一致，图示条件及 76 个空位均另行登记。26 道题另有从版面数值复算的记录。最终目视检查 24 页，并逐项核对 34 张题图。检查 PDF 绘图指令，三科各有 11、32、33 条连续横线。 [物理发布记录](../experiments/phase21/physics/publication.json) · [化学发布记录](../experiments/phase21/chemistry/publication.json) · [生物学发布记录](../experiments/phase21/biology/publication.json)
+- 全套 264 项自动化测试通过。新增的回归用例覆盖配图和填空门槛、公式后的标点与连续横线、题组说明及紧凑分页。 [PR #1 检查](https://github.com/mattochxueii/henan-gaokao-database/pull/1/checks)
+
+## 第 21 阶段初版修订
 
 - 三科通过 `authoring-context` 取得 29、29、34 道可用于命题的同系列样本，再用 `simulate`、`review`、`publish` 核对 54 道原创题。重解与候选键分别保留，四个选项分别判断，14 道主观题逐问推导并给出项目分步评分。重解由同一 Work 宿主按学生 PDF 另行完成，程序复算只取学生 PDF 和另行读出的可见数值。物理、化学、生物学分别有 10、8、8 道得到部分程序数值或枚举支持。 [物理判定](../experiments/phase21/physics/independent-review.json) · [化学判定](../experiments/phase21/chemistry/independent-review.json) · [生物学判定](../experiments/phase21/biology/independent-review.json)
 - 物理第 13 题重排题干以避免括号断行。第 12 题末点标注抬离曲线，第 15 题把边界 L 移离虚线并标明从 O 点发射，压缩了评分末尾的悬行。重渲染后复看第 6、9 页，其余学生页与通过目视的栅格一致。
 - 化学第 4 题明确要求完整离子方程式，第 9 题锁定终体积。第 15 题独立排除备选 pH 时发现初版缺总铁浓度，导致 pH 3.0 对某些起始条件也可能合格，补入 0.0100 mol/L 后重新核算。第 16 题明确镁定量分离的计算条件与滴定结果有效数字。第 17 题增加两温度的选择性曲线以区分压力与温度效应。两个溶度积公式已改用排版器能正常处理的括号。
 - 生物学第 18 题将处理标签与激素符号分开，并给出本题的相近阈值。第 20 题明确颜色由胚的基因决定。第 21 题把判断限制在第 1、3 轮已测结果，评分要求比较新生成产物，扣除滤液原有葡萄糖。
-- 最终 6 份 PDF 共 48 页均逐页渲染并目视检查。14 张题图核对坐标、刻度、单位、电路、箭头与分子结构。学生 PDF 逐题核对题号分值与题图，解析 PDF 另行核对符号与评分。 [物理发布记录](../experiments/phase21/physics/publication.json) · [化学发布记录](../experiments/phase21/chemistry/publication.json) · [生物学发布记录](../experiments/phase21/biology/publication.json)
-- 三科另实测了错误答案与篡改 PDF 校验值，审题或发布步骤均按预期拒绝。全套本地自动测试通过 261 项。 [PR #1 检查](https://github.com/mattochxueii/henan-gaokao-database/pull/1/checks)
+- 初版 6 份 PDF 共 48 页。三科实测了错误答案与篡改 PDF 校验值，审题或发布步骤均按预期拒绝。初版 261 项自动化测试通过。 [初版提交](https://github.com/mattochxueii/henan-gaokao-database/commit/e8b023400e72d987496e4d85da392f58c56afa9a)
 
 ## 复算入口
 

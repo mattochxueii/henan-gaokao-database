@@ -87,8 +87,6 @@ def build(subject, context_file, output):
     ):
         if number != expected:
             raise ValueError(f"题号错位：{number}，应为 {expected}")
-        if subject == "physics" and number == 8:
-            stem = "本组每题 6 分。全选对得 6 分，少选且无错得 3 分，有选错选项得 0 分。\n\n" + stem
         proffered = dict(zip((p["label"] for p in parts), key, strict=True)) if parts else key
         questions.append({
             "id": f"orig:{subject}:phase21-q{number:02d}",

@@ -1,6 +1,6 @@
 {
   "subject": "physics",
-  "version": "henan-science-v1",
+  "version": "henan-science-v2",
   "henan_selective_profile": {
     "by_year": [
       {
@@ -1252,7 +1252,57 @@
             }
           ]
         }
-      ]
+      ],
+      "paper_layout": {
+        "observations": [
+          {
+            "year": 2025,
+            "paper_id": "2025-cn-ha-physics-selective",
+            "choice_count": 10,
+            "figured_choice_numbers": [
+              1,
+              2,
+              4,
+              5,
+              7,
+              9,
+              10
+            ]
+          },
+          {
+            "year": 2026,
+            "paper_id": "2026-cn-ha-physics-selective",
+            "choice_count": 10,
+            "figured_choice_numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ]
+          }
+        ],
+        "standard_mock": {
+          "choice_figures_minimum": 6,
+          "choice_figures_target": [
+            6,
+            8
+          ],
+          "embedded_blanks": [
+            11,
+            12
+          ],
+          "extended_calculations": [
+            13,
+            14,
+            15
+          ]
+        },
+        "guidance": "选择题同行起排，组别与评分说明随栏目印一次。题图承担可用于作答的条件或证据。指定非选择题采用嵌入式填空，配套解析按圈号逐空对应。"
+      }
     }
   },
   "supplement": {

@@ -11,9 +11,8 @@ import hashlib
 from itertools import product
 import json
 from pathlib import Path
-import re
 
-from pypdf import PdfReader
+from record_review import printed_questions, student_pages
 import sympy as S
 
 
@@ -219,8 +218,8 @@ if __name__ == "__main__":
     parser.add_argument("student_pdf", type=Path)
     args = parser.parse_args()
     number_counts = {"physics": 15, "chemistry": 18, "biology": 21}
-    pages = [p.extract_text() for p in PdfReader(args.student_pdf).pages]
-    printed = [int(n) for page in pages for n in re.findall(r"(?m)^\s*(\d+)\.\s*（\d+分）", page)]
+    pages = student_pages(args.student_pdf)
+    printed = [n for n, _ in printed_questions(pages)]
     assert printed == list(range(1, number_counts[args.subject]+1))
     assert not any("参考答案与解析" in page for page in pages)
     result = checks[args.subject]()

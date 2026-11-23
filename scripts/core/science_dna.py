@@ -2,6 +2,16 @@
 from collections import Counter
 
 
+STANDARD_LAYOUT = {
+    "physics": {"choice_figures_minimum": 6, "choice_figures_target": [6, 8],
+                "embedded_blanks": [11, 12], "extended_calculations": [13, 14, 15]},
+    "chemistry": {"choice_figures_minimum": 7, "choice_figures_target": [8, 10],
+                  "embedded_blanks": [15, 16, 17, 18]},
+    "biology": {"choice_figures_minimum": 4, "choice_figures_target": [4, 5],
+                "embedded_blanks": [17, 18, 19, 20, 21]},
+}
+
+
 DESIGN = {
     "physics": {
         "single_choice":"以一道完整的受力、运动、场或波动模型组织判断，干扰项分别对应一个物理量或模型条件的混淆。",
@@ -60,7 +70,21 @@ def science_profile(subject,papers):
                            for paper in formal for q in paper["items"]
                            if q["kind"]==kind and q["practice_eligible"] and q["features"]]}
               for kind,guidance in DESIGN[subject].items()]
-    return {"subject":subject,"version":"henan-science-v1",
-            "henan_selective_profile":{"by_year":formal,"aggregate":{"positions":by_position,"authoring":design}},
+    observed_layout = [
+        {"year": paper["year"], "paper_id": paper["paper_id"],
+         "choice_count": sum(q["kind"] in ("single_choice","multiple_choice") for q in paper["items"]),
+         "figured_choice_numbers": [q["number"] for q in paper["items"]
+                                    if q["kind"] in ("single_choice","multiple_choice") and q["figures"]]}
+        for paper in formal
+    ]
+    layout = {
+        "observations": observed_layout,
+        "standard_mock": STANDARD_LAYOUT[subject],
+        "guidance": "选择题同行起排，组别与评分说明随栏目印一次。题图承担可用于作答的条件或证据。"
+                    "指定非选择题采用嵌入式填空，配套解析按圈号逐空对应。",
+    }
+    return {"subject":subject,"version":"henan-science-v2",
+            "henan_selective_profile":{"by_year":formal,"aggregate":{
+                "positions":by_position,"authoring":design,"paper_layout":layout}},
             "supplement":{"adaptation":adaptations,"other_regions":other},
             "scope":"题号与分值为卷面观察。题材与考查动作来自编辑标签。演练及外省卷不进入河南正式统计，缺项不推断为从未考查。"}

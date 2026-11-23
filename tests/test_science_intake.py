@@ -139,5 +139,84 @@ class SciencePublicationTests(unittest.TestCase):
         self.assertTrue(all(q["verification_mode"] == "independent_review" for q in receipt["questions"]))
 
 
+class ScienceLayoutTests(unittest.TestCase):
+    def test_layout_gate_rejects_missing_figures_blanks_and_detached_guidance(self):
+        from core.science_dna import STANDARD_LAYOUT
+        from core.science_workflow import blank_numbers, check_standard_layout, standard_presentation
+
+        questions = [
+            {"kind": "single_choice" if i <= 7 else "multiple_choice" if i <= 10 else "constructed_response",
+             "figure": {"path": "drawn.png"} if i <= 6 else None,
+             "stem": "如图判断。" if i <= 6 else "阅读题干\n完成任务。",
+             "options": {}, "parts": [{"label": "（1）", "text": r"取____\(\mathrm{m/s}\)，再求____。"}]
+             if i in (11, 12) else []} for i in range(1, 16)
+        ]
+        questions = [standard_presentation(q) for q in questions]
+        rules = STANDARD_LAYOUT["physics"]
+        self.assertEqual(blank_numbers(questions[10]), ["①","②"])
+        self.assertNotIn("\n", questions[10]["stem"])
+        check_standard_layout(questions,rules)
+        for index, changes, message in (
+            (5, {"figure": None}, "至少有 6"),
+            (0, {"stem": "由已知条件作答"}, "题干须指向"),
+            (7, {"stem": "全选对得 6 分。然后作答。"}, "栏目统一"),
+            (10, {"parts":[]}, "填空横线"),
+        ):
+            broken = questions[:]
+            broken[index] = {**broken[index], **changes}
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError,message):
+                check_standard_layout(broken,rules)
+
+    def test_formula_punctuation_and_blank_stay_in_one_fragment_group(self):
+        from reportlab.lib.styles import ParagraphStyle
+        from reportlab.pdfbase import pdfmetrics
+        from mathgen.cjk_layout import ExamParagraph, plain_markup
+        from mathgen.export import chinese_font
+
+        font = chinese_font()
+        style = ParagraphStyle("narrow-exam",fontName=font,fontSize=11,wordWrap="CJK",leading=16)
+        with TemporaryDirectory() as temp:
+            image = Path(temp) / "expression.png"
+            Image.new("L",(150,52),"white").save(image)
+            formula = f'<img src="{image.as_posix()}" width="27" height="9" valign="middle"/>'
+            p = ExamParagraph("甲甲甲" + formula + "，可知。",style)
+            p.wrap(pdfmetrics.stringWidth("甲甲甲",font,11)+28,100)
+            self.assertFalse(any(f.text.startswith("，") and w.words[0] is f
+                                 for w in p.blPara.lines for f in w.words))
+            self.assertTrue(any(any(getattr(f,"cbDefn",None) for f in w.words)
+                                and "".join(f.text for f in w.words).startswith("，")
+                                for w in p.blPara.lines))
+            q = ExamParagraph(plain_markup("实测速度为①________") + formula + "。",style)
+            q.wrap(93,150)
+            runs = [w.words for w in q.blPara.lines if any(f.us_lines for f in w.words)]
+            self.assertEqual(len(runs),1)
+            self.assertEqual("".join(f.text for f in runs[0] if f.us_lines),"\xa0"*8)
+            self.assertTrue(any(getattr(f,"cbDefn",None) for f in runs[0]))
+
+    def test_compact_exam_keeps_heading_with_question_and_counts_once(self):
+        from pypdf import PdfReader
+        from mathgen.student_pdf import render
+
+        options = dict(zip("ABCD", "甲乙丙丁"))
+        questions = [
+            {"order":i,"kind":kind,"points":points,"stem":"以压强变化判断反应。",
+             "options": options if i<=2 else {},
+             "parts":[{"label":"（1）","text":"测得值为①________。"}] if i>2 else []}
+            for i, (kind,points) in enumerate(
+                [("single_choice",4),("multiple_choice",6),*([("constructed_response",10)]*5)],1)
+        ]
+        with TemporaryDirectory() as temp:
+            path = Path(temp) / "paper.pdf"
+            render({"layout":"science","title":"理科排版测试","total_points":60,"minutes":75,
+                    "partial_credit":3,"questions":questions},path)
+            pdf = PdfReader(path)
+            self.assertEqual(len(pdf.pages),1)
+            text = pdf.pages[0].extract_text()
+            self.assertIn("三、非选择题",text)
+            self.assertRegex(text,r"(?m)^1\.[ \t]*以")
+            self.assertIn("3.（10分）",text)
+            self.assertEqual("".join(text.split()).count("选对但不全得3分"),1)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -9,17 +9,26 @@ import re
 from pypdf import PdfReader
 
 
+QUESTION_START = re.compile(r"(?m)^[ \t]*(\d+)\.[ \t]*(?:（(\d+)分）|(?=[^\d.\s]))")
+
+
 def student_pages(pdf):
     return [page.extract_text() for page in PdfReader(pdf).pages]
+
+
+def printed_questions(pages):
+    return [(int(number), int(points) if points else None)
+            for page in pages for number, points in QUESTION_START.findall(page)]
 
 
 def build_review(directory, transcript):
     pdf = directory / "paper.pdf"
     packet = json.loads((directory / "blind-packet.json").read_text(encoding="utf-8"))
     visible = packet["paper"]["questions"]
-    printed = [match for page in student_pages(pdf)
-               for match in re.findall(r"(?m)^\s*(\d+)\.\s*（(\d+)分）", page)]
-    if [(q["order"], q["points"]) for q in visible] != [(int(n), int(v)) for n, v in printed]:
+    printed = printed_questions(student_pages(pdf))
+    expected = [(q["order"], None if q["options"] and packet["paper"].get("layout_rules") else q["points"])
+                for q in visible]
+    if expected != printed:
         raise ValueError(f"学生 PDF 题号、分值与可见包不符：{printed}")
 
     blocks = re.split(r"(?m)^## (\d+)(?: ([A-D]+))?$", transcript.strip())[1:]
@@ -28,7 +37,8 @@ def build_review(directory, transcript):
         number, choices, body = blocks[i:i+3]
         if int(number) != q["order"]:
             raise ValueError(f"解答题号错位：{number}")
-        answers, explanations, rubric, checks = [], [], [], {}
+        answers, explanations, rubric, checks, blanks = [], [], [], {}, {}
+        figure_reading = ""
         for line in body.splitlines():
             if line.startswith("= "):
                 answers.append(line[2:])
@@ -38,6 +48,12 @@ def build_review(directory, transcript):
             elif line.startswith("@ "):
                 points, step = line[2:].split(" ", 1)
                 rubric.append({"points": int(points), "step": step})
+            elif line.startswith("图 "):
+                figure_reading = line[2:]
+            elif re.match(r"^[①-⑳] ", line):
+                if line[0] in blanks:
+                    raise ValueError(f"同一空位反复登记：{number}.{line[0]}")
+                blanks[line[0]] = line[2:]
             elif line.strip():
                 explanations.append(line)
         reasoning = "\n".join(explanations)
@@ -63,6 +79,10 @@ def build_review(directory, transcript):
         }
         if rubric:
             item["rubric"] = rubric
+        if figure_reading:
+            item["figure_reading"] = figure_reading
+        if blanks:
+            item["blank_answers"] = blanks
         items.append(item)
     return {
         "paper_version": packet["paper_version"],

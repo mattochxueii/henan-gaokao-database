@@ -1,7 +1,7 @@
 {
   "status": "project_practice_independently_reviewed",
   "subject": "chemistry",
-  "paper_version": "b7f5c9156bf2eed83f450b6f7113474085461bb8c87d33df985ec76b48d2ff7f",
+  "paper_version": "d01c1b6b4a95f6d912b6efd18ae297807649e6c22808d0c8b7e07558253b6ede",
   "question_ids": [
     "orig:chemistry:phase21-q01",
     "orig:chemistry:phase21-q02",
@@ -22,19 +22,36 @@
     "orig:chemistry:phase21-q17",
     "orig:chemistry:phase21-q18"
   ],
-  "review_sha256": "5718f8505d1018fb43a2343da559153c405e5e4dfcae9af6bcf2746e125cdad9",
-  "verification_sha256": "539f6fa3383ba151c5e15c7f863c320933ad63adc488e761f977dc4a2f5b7a82",
+  "review_sha256": "e75ef4e9867e68b5ed0bc4c7123d0254b13a9d239ef0a1e60ce1104a31248a09",
+  "verification_sha256": "d2e6f4e1072d20b54d4718011d21e037e0311c64043174f0eb997d072311d51f",
   "visual": {
-    "paper_version": "b7f5c9156bf2eed83f450b6f7113474085461bb8c87d33df985ec76b48d2ff7f",
+    "paper_version": "d01c1b6b4a95f6d912b6efd18ae297807649e6c22808d0c8b7e07558253b6ede",
     "reviewer": "Work 宿主逐页目视",
     "passed": true,
-    "paper_sha256": "cc6090d13624b7fd85b3411891065382912beb34c6732a649c207673e624c949",
-    "solutions_sha256": "163b8e22a27c854adaf28b7eb3459deb9bf3299bd1eb797704e50bfd0abc2ec1",
-    "paper_pages": 9,
-    "solutions_pages": 7,
-    "paper_note": "第 1–5 页检查同位素、化学式上下标、电荷、方程式及四项题序。第 6–9 页逐页核对流程回路、两个空白体积、转化率与选择性两图的轴刻度，以及芳环、环缩醛和试剂标注。",
-    "solutions_note": "第 1–3 页检查 14 道选项解析及反应方程式。第 4–7 页检查除铁与析锌电子数、各自空白扣除、分压归一化、异构体计数和各步评分。复查反应箭头与上下标。",
-    "method": "最终 PDF 用 Poppler 以 140 dpi 逐页栅格化，人工式目视检查整页与关键图件裁切。"
+    "paper_sha256": "86358a5f161bda79289f198a3e443c8235862a1e410faa23ee620d0c3861e1c7",
+    "solutions_sha256": "66bf4448d0df36074c01e4cc1641cbbe15e2d37c4532d0bdd567259b46b5e7ad",
+    "paper_pages": 5,
+    "solutions_pages": 3,
+    "paper_note": "5 页顺读。核对键线式、晶胞占位、分液、压力曲线、膜、柱状图与焓图。第 15–16 题同页，第 17–18 题同页；逐空检查方程和单位标签。",
+    "solutions_note": "3 页顺读。逐空复核第 15–18 题的反应式、数值、路径与评分。",
+    "method": "Poppler 175 dpi 栅格逐页目视。查验 PDF 矢量笔画与圈号逐空计数。",
+    "choice_figure_numbers": [
+      3,
+      5,
+      6,
+      7,
+      9,
+      11,
+      12,
+      13
+    ],
+    "blank_counts_by_question": {
+      "15": 9,
+      "16": 7,
+      "17": 8,
+      "18": 8
+    },
+    "measured_continuous_rules": 32
   },
   "scope": "学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。"
 }

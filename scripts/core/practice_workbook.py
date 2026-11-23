@@ -42,12 +42,15 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
         references = [group[i] for i in range(max(map(len,strata),default=0))
                       for group in strata if i<len(group)][:limit]
     require(references,"找不到该考点的可用正文")
-    return {"subject":subject,"dna_sha256":digest(profile),
+    result = {"subject":subject,"dna_sha256":digest(profile),
             "query":{"topic":topic,"source_id":source_id,"limit":limit},
             "guidance":evidence["aggregate"]["authoring"],
             "references":[{k:v for k,v in q.items() if k not in
                             ("answer","reviewed_answer","curation","explanation","analysis","candidate","rubric")}
                           for q in references]}
+    if subject in SCIENCES:
+        result["paper_layout"] = evidence["aggregate"]["paper_layout"]
+    return result
 
 
 def selection(root, subject, *, year=None, region=None, kind=None, topic=None, question_ids=(), limit=6, adaptation=False):

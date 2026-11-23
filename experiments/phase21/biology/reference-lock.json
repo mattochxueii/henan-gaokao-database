@@ -5,10 +5,10 @@
     "source_id": null,
     "limit": 50
   },
-  "context_sha256": "79d14923ae8cc09e77bfe577143d5e636ee32107ad50dbb628ba32460b9edc93",
-  "dna_sha256": "975164e72fd2a63cbc6513ff48acd9106a92cbcec697eaa08baed0468db53ed7",
+  "context_sha256": "3da99c7a34bcc9bd4dbed4436e4b028e7abb097b52b1e0ffa2c4d43e8a958321",
+  "dna_sha256": "c46b043af69f4276ef9c46f384d7927c13c253cc714cec9710a1f1517c7e4c92",
   "official_context_rows": 34,
-  "candidate_sha256": "249e9f7d3c60a329f869eb1e164da00d2197422cafa6e0c7d452a4c7b729614c",
+  "candidate_sha256": "dd3e10eeaabc37cea61ee8c5aff4a519de715ee60cf6ecfddc0693b035c42341",
   "selected_evidence": [
     {
       "id": "2025-cn-ha-biology-selective:q007",
@@ -187,5 +187,46 @@
       "usage": "仅使用 DNA 题位观察"
     }
   ],
-  "model": "Codex Work 宿主编写原创结构；生成接口 simulate"
+  "model": "Codex Work 宿主编写原创结构；生成接口 simulate",
+  "paper_layout": {
+    "observations": [
+      {
+        "year": 2025,
+        "paper_id": "2025-cn-ha-biology-selective",
+        "choice_count": 16,
+        "figured_choice_numbers": [
+          7,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "year": 2026,
+        "paper_id": "2026-cn-ha-biology-selective",
+        "choice_count": 16,
+        "figured_choice_numbers": [
+          4,
+          5,
+          10,
+          14
+        ]
+      }
+    ],
+    "standard_mock": {
+      "choice_figures_minimum": 4,
+      "choice_figures_target": [
+        4,
+        5
+      ],
+      "embedded_blanks": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "guidance": "选择题同行起排，组别与评分说明随栏目印一次。题图承担可用于作答的条件或证据。指定非选择题采用嵌入式填空，配套解析按圈号逐空对应。"
+  }
 }

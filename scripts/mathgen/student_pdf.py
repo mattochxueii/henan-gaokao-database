@@ -1,5 +1,6 @@
 """Layer 3: render reviewed school-language text; internal specifications are forbidden here."""
 
+from itertools import groupby
 from pathlib import Path
 import re
 from xml.sax.saxutils import escape
@@ -24,25 +25,55 @@ from matplotlib.figure import Figure
 from mpl_toolkits.mplot3d import proj3d
 from analysis_db import fingerprint
 from gaokao import require, atomic_write
+from .cjk_layout import ExamParagraph, plain_markup
 from .export import chinese_font, MathParagraph, formatted_plain
 
 VERSION = "student-layout-v4"
 MATH_RASTER = MathTextParser("agg")
 
 
-def option_grid(options, width):
+def option_grid(options, width, compact=False):
     """Use the widest fitting row while keeping each label and answer together."""
     for columns in (4, 2, 1):
         usable = width / columns - 12
-        if columns == 1 or all(
-            item.wrap(usable, 1000)[1] <= item.style.leading * 1.05 for item in options
-        ):
+        if compact:
+            for option in options:
+                option.wrap(usable, 1000)
+            lengths = [len(option.blPara.lines) for option in options]
+            row_lines = sum(max(lengths[i:i + columns]) for i in range(0, len(lengths), columns))
+            fits = row_lines <= (1 if columns == 4 else 3) and all(
+                line.extraSpace >= -1e-6 for option in options for line in option.blPara.lines
+            )
+        else:
+            fits = all(
+                item.wrap(usable, 1000)[1] <= item.style.leading * 1.05 for item in options
+            )
+        if columns == 1 or fits:
+            style = [("VALIGN", (0, 0), (-1, -1), "TOP")]
+            if compact:
+                style += [
+                    ("TOPPADDING", (0, 0), (-1, -1), 1.5),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 1.5),
+                ]
             return Table(
                 [options[i:i + columns] for i in range(0, len(options), columns)],
                 colWidths=[width / columns] * columns,
                 hAlign="LEFT",
-                style=[("VALIGN", (0, 0), (-1, -1), "TOP")],
+                style=style,
             )
+
+
+def science_section_note(kind, group, partial_credit):
+    total = sum(q["points"] for q in group)
+    scores = {q["points"] for q in group}
+    each = f"每小题{next(iter(scores))}分，" if len(scores) == 1 and kind.endswith("choice") else ""
+    text = f"本大题共{len(group)}小题，{each}共{total}分。"
+    if kind == "single_choice":
+        return text + "在每小题给出的四个选项中，只有一项是符合题目要求的。"
+    if kind == "multiple_choice":
+        scoring = "部分选对得部分分" if partial_credit is None else f"选对但不全得{partial_credit}分"
+        return text + f"在每小题给出的四个选项中，有多项符合题目要求。全部选对得满分，{scoring}，有选错的得0分。"
+    return text + "按题意填写或作答。计算题须写出必要的文字说明、方程式和演算步骤。"
 
 
 def formula_image(formula, filename):
@@ -123,21 +154,23 @@ def render(paper, path, solutions=False):
     assets = path.parent / "assets"
     assets.mkdir(exist_ok=True)
     font = chinese_font()
+    science_layout = paper.get("layout") == "science"
     body = ParagraphStyle(
         "student-body",
         fontName=font,
-        fontSize=11.5,
-        leading=23,
-        spaceAfter=9,
+        fontSize=11 if science_layout else 11.5,
+        leading=16 if science_layout else 23,
+        spaceAfter=3.5 if science_layout else 9,
         wordWrap="CJK",
+        autoLeading="max" if science_layout else "",
     )
     heading = ParagraphStyle(
         "student-heading",
         parent=body,
         fontSize=12,
         leading=22,
-        spaceBefore=12,
-        spaceAfter=8,
+        spaceBefore=8 if science_layout else 12,
+        spaceAfter=3 if science_layout else 8,
         keepWithNext=True,
     )
     title = ParagraphStyle(
@@ -146,17 +179,19 @@ def render(paper, path, solutions=False):
         fontSize=19,
         leading=29,
         alignment=TA_CENTER,
-        spaceAfter=14,
+        spaceAfter=7 if science_layout else 14,
     )
     note = ParagraphStyle(
-        "student-note", parent=body, fontSize=10, leading=18, spaceAfter=8
+        "student-note", parent=body, fontSize=10, leading=15 if science_layout else 18,
+        spaceAfter=5 if science_layout else 8,
     )
 
     def para(text, style=body):
         chunks = []
         at = 0
+        plain = plain_markup if science_layout else formatted_plain
         for m in re.finditer(r"\\\((.*?)\\\)", text, re.S):
-            chunks.append(formatted_plain(text[at : m.start()]))
+            chunks.append(plain(text[at : m.start()]))
             formula = normalise_tex(m.group(1).replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
             formula = re.sub(
                 r"\\(mathbb|mathbf|mathcal|boldsymbol|mathrm|overline)\s+([A-Za-z])",
@@ -189,11 +224,12 @@ def render(paper, path, solutions=False):
             scale = 72 / 240
             require(w * scale <= 480, "公式太长，应在中文写作层拆分后重新审查")
             chunks.append(
-                f'<img src="{filename.as_posix()}" width="{w * scale:.2f}" height="{h * scale:.2f}" valign="middle"/>'
+                f'<img src="{escape(filename.as_posix())}" width="{w * scale:.2f}" height="{h * scale:.2f}" valign="middle"/>'
             )
             at = m.end()
-        chunks.append(formatted_plain(text[at:]))
-        return MathParagraph("".join(chunks).replace("\n", "<br/>"), style)
+        chunks.append(plain(text[at:]))
+        paragraph = ExamParagraph if science_layout else MathParagraph
+        return paragraph("".join(chunks).replace("\n", "<br/>"), style)
 
     def footer(canvas, doc):
         canvas.setFont(font, 9)
@@ -207,10 +243,10 @@ def render(paper, path, solutions=False):
             )
         )
         instruction = "请按题目要求作答。"
-        if any(q["kind"] == "constructed_response" for q in paper["questions"]):
+        if not science_layout and any(q["kind"] == "constructed_response" for q in paper["questions"]):
             instruction += "解答题须写出必要的文字说明、证明过程或演算步骤。"
-        story.append(para(instruction, note))
-    science_layout = paper.get("layout") == "science"
+        if not science_layout:
+            story.append(para(instruction, note))
     previous = None
     section_titles = {
         "single_choice": "单项选择题",
@@ -218,8 +254,13 @@ def render(paper, path, solutions=False):
         "fill_in": "填空题",
         "constructed_response": "解答题",
     }
+    if science_layout:
+        section_titles.update(multiple_choice="多项选择题", constructed_response="非选择题")
+    groups = {kind: list(items) for kind, items in groupby(paper["questions"], key=lambda q: q["kind"])}
     section_number = 0
     md = ["# " + paper["title"], ""]
+    if science_layout and not solutions:
+        md += [f'满分{paper["total_points"]}分，考试时间{paper["minutes"]}分钟。', ""]
     for index, q in enumerate(paper["questions"]):
         require(
             not any(k in q for k in ("math_spec", "tasks", "design", "solver_record")),
@@ -227,26 +268,41 @@ def render(paper, path, solutions=False):
         )
         if (
             q["kind"] == "constructed_response"
-            and (previous == q["kind"] or science_layout)
-            and previous is not None
+            and previous == q["kind"]
+            and not science_layout
             and not solutions
         ):
             story.append(PageBreak())
-        section = None
+        section = []
         if q["kind"] != previous and not solutions:
             section_number += 1
             prefix = (
                 "一二三四"[section_number - 1] + "、" if section_number <= 4 else ""
             )
-            section = para(prefix + section_titles[q["kind"]], heading)
+            label = prefix + section_titles[q["kind"]]
+            section.append(para(label, heading))
+            if science_layout:
+                instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"))
+                section.append(para(instructions, note))
+                md.extend([f"## {label}", "", instructions, ""])
             previous = q["kind"]
-        block = ([section] if section else []) + [
-            para(f"{q['order']}.（{q['points']}分）", heading)
-        ]
+        choice = q["kind"] in ("single_choice", "multiple_choice")
+        number = f"{q['order']}."
+        if not science_layout or not choice:
+            number += f"（{q['points']}分）"
+        block = section
+        if not science_layout:
+            block.append(para(number, heading))
+        figures_in_md = []
         if solutions:
-            block.extend(para(p) for p in q["solution_paragraphs"])
+            solution = q["solution_paragraphs"]
+            if science_layout:
+                first = solution[0].replace("\n", " ", 1) if choice else solution[0]
+                block.append(para(number + " " + first))
+                solution = solution[1:]
+            block.extend(para(p) for p in solution)
         else:
-            block.append(para(q["stem"]))
+            block.append(para(number + " " + q["stem"] if science_layout else q["stem"]))
             if q.get("figure"):
                 if isinstance(q["figure"], dict):
                     data = q["figure"]
@@ -280,8 +336,13 @@ def render(paper, path, solutions=False):
                 else:
                     figure = Path(q["figure"])
                 require(figure.is_file(), "图形资源缺失")
+                if science_layout:
+                    figures_in_md.append(figure.resolve().relative_to(path.parent.resolve()).as_posix())
                 block.append(
-                    Image(str(figure), width=435 if science_layout else 250, height=155, kind="proportional")
+                    Image(
+                        str(figure), width=430 if science_layout else 250,
+                        height=(94 if choice else 116) if science_layout else 155, kind="proportional"
+                    )
                 )
             figures = q.get("archive_figures",[])
             captions = q.get("archive_figure_captions",[])
@@ -302,26 +363,37 @@ def render(paper, path, solutions=False):
                 block.append(Table([cells[i:i+2] for i in range(0,len(cells),2)],
                                    colWidths=[(A4[0]-100)/2]*2,hAlign="LEFT",
                                    style=[("VALIGN",(0,0),(-1,-1),"TOP")]))
-            elif q["kind"] == "single_choice":
+            elif q["kind"] == "single_choice" or (science_layout and choice):
                 block.append(option_grid(
                     [para(key + "．" + text) for key, text in q["options"].items()],
                     A4[0] - 2 * 44 - 12,
+                    compact=science_layout,
                 ))
             else:
                 for key, text in q["options"].items():
                     block.append(para(key + "．" + text))
-            for part in q["parts"]:
-                block.append(para(part["label"] + " " + part["text"]))
+            if science_layout and not choice:
+                # The opening and its figure follow each other; labeled subquestions can flow.
+                story.append(KeepTogether(block))
+                block = []
+            block.extend(para(part["label"] + " " + part["text"]) for part in q["parts"])
             if q["kind"] == "fill_in" and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
-        if solutions:
+        if science_layout:
+            if solutions or not choice:
+                story.extend(block)
+            else:
+                story.append(KeepTogether(block))
+            if index + 1 < len(paper["questions"]):
+                story.append(Spacer(1, 5 if solutions else 4))
+        elif solutions:
             # Keep each solution together when it fits a page; long solutions may split.
             story.append(KeepTogether(block))
             if index + 1 < len(paper["questions"]):
                 story.append(Spacer(1, 12))
         else:
             story.append(KeepTogether(block))
-            if index + 1 < len(paper["questions"]) and (not science_layout or q["kind"] != "constructed_response"):
+            if index + 1 < len(paper["questions"]):
                 story.append(Spacer(1, 190 if q["kind"] == "constructed_response" else 8))
         md.extend([f"## {q['order']}.（{q['points']}分）", ""])
         md.extend(
@@ -329,6 +401,7 @@ def render(paper, path, solutions=False):
             if solutions
             else [
                 q["stem"],
+                *[f"![题图]({image})" for image in figures_in_md],
                 *[f"![题图]({image.relative_to(path.parent).as_posix()})" for image in q.get("archive_figures",[])],
                 *["%s．%s" % p for p in q["options"].items()],
                 *[p["label"] + " " + p["text"] for p in q["parts"]],
@@ -340,8 +413,8 @@ def render(paper, path, solutions=False):
         pagesize=A4,
         leftMargin=44,
         rightMargin=44,
-        topMargin=38,
-        bottomMargin=42,
+        topMargin=33 if science_layout else 38,
+        bottomMargin=34 if science_layout else 42,
         title=paper["title"],
         author="理科模拟试卷" if science_layout else "数学模拟试卷",
     ).build(story, onFirstPage=footer, onLaterPages=footer)

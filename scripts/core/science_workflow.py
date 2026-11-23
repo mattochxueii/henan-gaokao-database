@@ -8,12 +8,14 @@ import shutil
 
 from analysis_db import fingerprint
 from core.catalog import catalog, query, use
+from core.science_dna import STANDARD_LAYOUT
 from forecast_store import write_new
 from gaokao import digest, read_json, relative_path, require
 from subjects import SCIENCES, SUBJECTS, science_verifier
 
 KINDS = ("single_choice","multiple_choice","fill_in","constructed_response")
 VERSION = "science-workflow-v1"
+BLANKS = re.compile(r"\\\(.*?\\\)|([①-⑳])?(_{3,})", re.S)
 
 
 def same_answer(first, second):
@@ -91,6 +93,50 @@ def normalize_subject_item(item, order, folder):
             "options":options,"parts":parts,"figure":figure}
 
 
+def normalize_prose(text):
+    paragraphs = re.split(r"\n[ \t]*\n+", text.strip().replace("\r\n", "\n"))
+    return "\n".join(re.sub(r"[ \t]*\n[ \t]*", " ", paragraph) for paragraph in paragraphs)
+
+
+def blank_numbers(question):
+    fields = [question["stem"], *(part["text"] for part in question["parts"])]
+    return [match[1] for text in fields for match in BLANKS.finditer(text) if match[2]]
+
+
+def standard_presentation(question):
+    """Fold transcription line breaks and assign blank markers in reading order."""
+    index = 0
+
+    def mark(match):
+        nonlocal index
+        if match[2] is None:
+            return match[0]
+        require(index < 20, "单题空位超过圈号范围")
+        number = chr(ord("①")+index)
+        require(match[1] in (None, number), "填空圈号须按题内顺序连续")
+        index += 1
+        return number+match[2]
+
+    stem = BLANKS.sub(mark, normalize_prose(question["stem"]))
+    parts = [{**part,"text":BLANKS.sub(mark, normalize_prose(part["text"]))}
+             for part in question["parts"]]
+    options = {key: normalize_prose(value) for key, value in question["options"].items()}
+    return {**question,"stem":stem,"parts":parts,"options":options}
+
+
+def check_standard_layout(questions, rules):
+    figured_choices = [q for q in questions if q["kind"] in KINDS[:2] and q["figure"]]
+    require(len(figured_choices) >= rules["choice_figures_minimum"],
+            f'选择题须至少有 {rules["choice_figures_minimum"]} 道使用题图')
+    require(all("图" in q["stem"] for q in figured_choices), "选择题题干须指向参与解题的图件")
+    require(all(blank_numbers(questions[n-1]) for n in rules["embedded_blanks"]),
+            "指定非选择题须提供嵌入式填空横线")
+    require(all(not blank_numbers(questions[n-1]) for n in rules.get("extended_calculations", ())),
+            "物理计算题须保留完整演算要求")
+    require(not any(re.search(r"全(?:部)?选对得|选对但不全得|少选且无错得", q["stem"]) for q in questions),
+            "选择题组的评分说明由栏目统一排版")
+
+
 INDEPENDENT_CATEGORIES = {"conservation", "dimensions", "reaction_conditions", "experimental_controls",
                           "derivation", "assumptions"}
 
@@ -118,8 +164,11 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     known_text = {re.sub(r"\W","", q.get("stem") or q.get("semantic_summary") or "") for q in source_rows}
     seen = set()
     solver = science_verifier(subject)
+    standard = blueprint["mode"] == "standard"
     for order,q in enumerate(questions,1):
         public = normalize_subject_item(q,order,figure_root or root)
+        if standard:
+            public = standard_presentation(public)
         figure_models = {"physics": {"velocity_graph", "terminal_data"},
                          "chemistry": {"iodine_evidence"}}
         normalized = re.sub(r"\W","",public["stem"])
@@ -159,7 +208,7 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     types = Counter(q["kind"] for q in visible)
     points = sum(q["points"] for q in visible)
     require(len({q["topic"] for q in questions})>1 or blueprint["mode"]!="standard", "整卷主题覆盖不足")
-    if blueprint["mode"]=="standard":
+    if standard:
         sections = blueprint["structure"]["sections"]
         by_kind = Counter()
         for q in visible:
@@ -180,14 +229,20 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
             if detail := section.get("individual_points",section.get("individual")):
                 require([q["points"] for q in group]==detail, "已核逐题分值不符")
             offset += count
+        rules = STANDARD_LAYOUT[subject]
+        check_standard_layout(visible, rules)
         minutes = blueprint["structure_minutes"]
     else:
         minutes = candidate.get("minutes", max(5,len(visible)*6))
         require(type(minutes) is int and 0<minutes<=180, "专项练习时长无效")
     paper = {"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
              "minutes":minutes,"total_points":points,"questions":visible}
-    if blueprint["mode"] == "standard":
+    if standard:
         paper["layout"] = "science"
+        paper["layout_rules"] = rules
+        paper["partial_credit"] = next(
+            (s.get("partial_correct_points") for s in blueprint["structure"]["source_details"]
+             if s["kind"] == "multiple_choice"), None)
     output.mkdir(parents=True,exist_ok=False)
     for q, view in zip(questions,visible,strict=True):
         if view["figure"]:
@@ -218,6 +273,8 @@ def adjudicate(folder, review):
     require(not (folder/"independent-review.json").exists(), "本版本已审查")
     require(review.get("input_scope")=="student_packet_only" and
             isinstance(review.get("reviewer"),str) and review["reviewer"].strip(), "须提供只看题面的独立审查记录")
+    if packet["paper"].get("layout_rules"):
+        require(review.get("paper_pdf_sha256")==checks["paper_pdf_sha256"], "重解须绑定最终学生 PDF")
     questions = packet["paper"]["questions"]
     judgments = {j["id"]:j for j in review["items"]}
     require(set(judgments)=={q["id"] for q in questions} and len(judgments)==len(review["items"]),
@@ -238,6 +295,15 @@ def adjudicate(folder, review):
             require(isinstance(j.get("science_review"),str) and j["science_review"].strip(),
                     "程序覆盖外的科学判断须由审查者说明")
         paragraphs = [j["reasoning"]]
+        if packet["paper"].get("layout_rules"):
+            if q["kind"] in KINDS[:2] and q["figure"]:
+                require(isinstance(j.get("figure_reading"),str) and j["figure_reading"].strip(),
+                        "配图选择题须记录独立解题所用图示条件")
+            if labels := blank_numbers(q):
+                slots = j.get("blank_answers")
+                require(isinstance(slots,dict) and list(slots)==labels
+                        and all(isinstance(v,str) and v.strip() for v in slots.values()), "解析须按圈号逐空登记")
+                paragraphs.insert(0, "填空答案　"+"；".join(f"{n} {slots[n]}" for n in labels)+"。")
         if rubric := j.get("rubric"):
             require(isinstance(rubric,list) and all(type(k["points"]) is int and k["points"]>0
                     and isinstance(k["step"],str) and k["step"].strip() for k in rubric)
