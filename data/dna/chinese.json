@@ -2180,6 +2180,124 @@
             ]
           },
           {
+            "group": "语言文字运用",
+            "position_range": [
+              18,
+              22
+            ],
+            "typical_prompt": "依据上下文改正、重排、补写或解释。图文题指明视觉细节到寓意的联系。",
+            "distractor_patterns": [
+              "只看单句顺畅度而忽略全段衔接",
+              "将熟悉义项代入不匹配的语境"
+            ],
+            "scoring_components": [
+              "指出具体语义或表达问题",
+              "给出保持原意的改写",
+              "根据要求说明语境依据或给出可检验例句"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 18,
+                    "id": "2024-cn-chinese-national-1:q018",
+                    "sha256": "c84d1f06083d0d1436f569ce7c50e53834647122c410cfa86c9bc9e899d50315",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2024-cn-chinese-national-1:q019",
+                    "sha256": "56c1d420abe639d6210c7cf3c1aaa2b09fb604244bc3edcb39e495bbb1a7bb2e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2024-cn-chinese-national-1:q020",
+                    "sha256": "4dad6e3e36551ddb839488b0a540f917c267a36317daf786c34943cb20664c76",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 21,
+                    "id": "2024-cn-chinese-national-1:q021",
+                    "sha256": "8a6e5081cf9756ff0666e163c1ddcc3c7cafd2069e32640ec361460a714251e4",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 22,
+                    "id": "2024-cn-chinese-national-1:q022",
+                    "sha256": "86d737f83b555fe5fcf3a17a599df4000eca5315e4b1e5e349ffe65e28169478",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 18,
+                    "id": "2025-cn-chinese-national-1:q018",
+                    "sha256": "742f618730d225ea87a0173f78ea00946f85c54adc5ef469ecf57cd9605740f3",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2025-cn-chinese-national-1:q019",
+                    "sha256": "b6f610942ab80eb40e3d511530ea220528544ce8506a34912b761e298bc78484",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2025-cn-chinese-national-1:q020",
+                    "sha256": "94ff35068fcd90bf9042d4f5d665c4f60960af5021144b49dc7dd2e11ae25142",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 21,
+                    "id": "2025-cn-chinese-national-1:q021",
+                    "sha256": "029a7d4c297b5bd68248e961b387ffd99b1953184d86887ab5723d1aa5733f57",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 22,
+                    "id": "2025-cn-chinese-national-1:q022",
+                    "sha256": "9af3f75868b5267e930bbb665d03497626a203a05838317f971df9c583ee3799",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 18,
+                    "id": "2026-cn-chinese-national-1:q018",
+                    "sha256": "d30c787a0f0d4d7ffd2fc2ecaf67d57ca0eba26ab45d4a1690fec28c6f31cc59",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2026-cn-chinese-national-1:q019",
+                    "sha256": "a3d03db789ab7b39e3e2463e467f98875cdc370d616a68237f41aedd8b0c9f76",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2026-cn-chinese-national-1:q020",
+                    "sha256": "4246c44df08995c7cd76df58347bff274fccc338c9f42b3b3fd01e4f6a542757",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 21,
+                    "id": "2026-cn-chinese-national-1:q021",
+                    "sha256": "07d2bb43ed4583bfd80621cc2e39c5c77d6b3274ed3072df7d2a66db1d768b9a",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "group": "写作",
             "typical_prompt": "明确材料中的论题，形成可用论据检验的立场",
             "scoring_components": [

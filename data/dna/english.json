@@ -4160,6 +4160,433 @@
         "scope": "近三年真实正文的编辑归纳；干扰项方法和评分颗粒供原创设计，缺少官方评分时仅为项目建议。",
         "groups": [
           {
+            "group": "听力短对话",
+            "position_range": [
+              1,
+              5
+            ],
+            "typical_prompt": "结合问答判断关系、场景、意图、下一行动或时间",
+            "distractor_patterns": [
+              "选背景中出现的地点或动作",
+              "把建议当成已经发生的行动",
+              "把旧时间误作更新后的时间"
+            ],
+            "scoring_components": [
+              "定位改口、答复和能区分场景的措辞"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2024-cn-english-national-1:q001",
+                    "sha256": "02b4da33cb99249b391246bf3cab78aa4896b111d031e3ed99d56b652f253ac3",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2024-cn-english-national-1:q002",
+                    "sha256": "aa8b4501738b794fc356c9890da7907db91d70e8d5e5640034bd9bde0dc89a1d",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2024-cn-english-national-1:q003",
+                    "sha256": "505863bba894cfa0429527dab613994268c6fc91c0531ad855d22bfd22b803d1",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2024-cn-english-national-1:q004",
+                    "sha256": "6e9855b7d0e9c0fe7ab695b09c7067a00654ca8f387e4db96950e888ce7f8bce",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2024-cn-english-national-1:q005",
+                    "sha256": "b31dc237a0160641a0ea10c135e6d294474c31341cb8d96e3b8d0c3cdaec4fdb",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2025-cn-english-national-1:q001",
+                    "sha256": "5c17b31c51b082ee9815e9df28be1b876af4e730975b3b0af6cf1ba940613b56",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2025-cn-english-national-1:q002",
+                    "sha256": "77166d827e3a6d15ed384a844711ecaccea76ad7ef170f68585b4d6134a688dc",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2025-cn-english-national-1:q003",
+                    "sha256": "b02ae57fc707eebf8ddc3bd54bd69a0d7f3c71f702421a6dbeba49f0cc4a9c9c",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2025-cn-english-national-1:q004",
+                    "sha256": "1675657ea9037d8f0e4f08b6b49561fc3d167e2ac269f656e417a05277bb2de1",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2025-cn-english-national-1:q005",
+                    "sha256": "961dda4d8ee9a04c3a6c207cb7f740cbdfd17188a91c190e265e9c0a29a912df",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2026-cn-english-national-1:q001",
+                    "sha256": "39eb6edbf77d4b9f6de4511930f9fcbe995d10db439bee7f6e738b4d59112d5f",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2026-cn-english-national-1:q002",
+                    "sha256": "0cafc87004e33712a21bb144ebf806629ea9fa2390ec92939dc6a07c65e3cffa",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2026-cn-english-national-1:q003",
+                    "sha256": "7ba2ac9565b051929454461e62909f508fed7731a592290b1607702294cd4d12",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2026-cn-english-national-1:q004",
+                    "sha256": "2ef6c1ec21552c931110639ca13637d84474f45a799b41d5334956de37d36bcd",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2026-cn-english-national-1:q005",
+                    "sha256": "f81745e792ddaf2209606bb7d30a8808702b26066702fee956dc42ad3d5cbb83",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "听力长对话与独白",
+            "position_range": [
+              6,
+              20
+            ],
+            "typical_prompt": "跟踪角色、计划与执行顺序，在较长语篇中归纳态度、理由或规则",
+            "distractor_patterns": [
+              "把最初计划当成最后决定",
+              "将某人意见归给另一人",
+              "把装置或规则的细节误作目的"
+            ],
+            "scoring_components": [
+              "按各场景及说话人分别核对",
+              "数值与程序题须回到条件以及先后顺序"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2024-cn-english-national-1:q006",
+                    "sha256": "a1c52a4ececf94c2aa04fa76283037dc07209a402c9e3f7c69ad606706f32010",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2024-cn-english-national-1:q007",
+                    "sha256": "4a270f0501e1226930425c98a81bacf339a7e293dd6bdef28563ad26347b553e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2024-cn-english-national-1:q008",
+                    "sha256": "86f4f384ba0f71c11c453715857d6f7abb0e18b292d02850954cdafc0a55f727",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2024-cn-english-national-1:q009",
+                    "sha256": "0796da71e35556a357f9ee0656330a88852950cd77c9b0667c3433602b6a4ef8",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 10,
+                    "id": "2024-cn-english-national-1:q010",
+                    "sha256": "48016e7a84b343a998d1c4948f897b7b1173517d63557cbe52447851ee67615b",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2024-cn-english-national-1:q011",
+                    "sha256": "db85b2a4aef08d61439b1a9f13ec091b555833421fa463a4c0cf7857759e768e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2024-cn-english-national-1:q012",
+                    "sha256": "af212bbe5e6bd82de00e3766094d11f13965a72e6a0f5f6c31ba55c556d6106f",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2024-cn-english-national-1:q013",
+                    "sha256": "b3518c9664c40e60efa4bc02f6ae90ddddbdb3928d112a30433802ea03e150a8",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2024-cn-english-national-1:q014",
+                    "sha256": "61e696d126db9ae0313abc365abd81e5f32ccb0f8c2bd610484e05bd7f3cebc6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 15,
+                    "id": "2024-cn-english-national-1:q015",
+                    "sha256": "36d6cc6600df612c0d13e8ba15d8bd8f43d84c28d972b08878198919ea190459",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2024-cn-english-national-1:q016",
+                    "sha256": "d315f4f309687df7e70721ec2c2024d58935546f57113db349dbf7f12a9c6817",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 17,
+                    "id": "2024-cn-english-national-1:q017",
+                    "sha256": "4973f8b35b46e57e4ec96dc2a311315d43d658c1554478882e46e017fbb22139",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 18,
+                    "id": "2024-cn-english-national-1:q018",
+                    "sha256": "3cd2ebb2cd94121e29b13d2b70c8f1829ce0bde0db3119fe328fbfd554c57911",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2024-cn-english-national-1:q019",
+                    "sha256": "f80169acebb193059cb7394f3e0cd9d76150e468f326b7e3d4fef5b9e850cf02",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2024-cn-english-national-1:q020",
+                    "sha256": "142fe57f2b5ec3cd2a0f49426c9df560fa5a7afb704d6838d9a78628b5094d38",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2025-cn-english-national-1:q006",
+                    "sha256": "2755c9ae3403299d56ba33b122b04bd99dfcb63e58f4a187cd716b61b3bc9e9a",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2025-cn-english-national-1:q007",
+                    "sha256": "4e7289cd2bb331a7d2b1d1c3c3bd9c1c76accd03d190789ae4390e52190ca85a",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2025-cn-english-national-1:q008",
+                    "sha256": "8c66e08abda10fd6d69597f222659dbe22af0a287805880442c93ccaf2e4e226",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2025-cn-english-national-1:q009",
+                    "sha256": "e3c092315b9dd10e15b5e4b27a6e0bbe7416e1cd2e4c0703153bf21107257032",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 10,
+                    "id": "2025-cn-english-national-1:q010",
+                    "sha256": "a12dfdd7b86ecadafcfa36cd87f69adcf052d76232e5aee6ce30def6d91f2bc6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2025-cn-english-national-1:q011",
+                    "sha256": "d4d498064834fbb3881479bc324d0eb37017f6d18ffc424d6a24e265b3685adc",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2025-cn-english-national-1:q012",
+                    "sha256": "af32330a8da5bbd3cbfdb52440659b0b1e229985542da6ba8b89a2149b790e31",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2025-cn-english-national-1:q013",
+                    "sha256": "f1c02eab2011566c4be5c7c0570db19f4f435806153e505db8628cac7b5ae734",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2025-cn-english-national-1:q014",
+                    "sha256": "50b1d78b630fc6744cedfc9927cb9456191c9205cc88b2d5508dac6aae61ecab",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 15,
+                    "id": "2025-cn-english-national-1:q015",
+                    "sha256": "1568d286a5fcddd78addd221071dde594d3ab4716fb2c74fc25d467951cafe6d",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2025-cn-english-national-1:q016",
+                    "sha256": "5a94c4720d30d668aa72e8e85a5488f7daa2ecc00b82c67e21107ac2458f8641",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 17,
+                    "id": "2025-cn-english-national-1:q017",
+                    "sha256": "20c8505390cd8e14967a7dfac1956b85705432e691f7ff9e74dbad917c0c358e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 18,
+                    "id": "2025-cn-english-national-1:q018",
+                    "sha256": "30abe5bac42181cd98eefb50fcceb4b398ee2edaf50641a894485c5e75b4963e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2025-cn-english-national-1:q019",
+                    "sha256": "151dd5c405a749b249324bb9f9a1c857ad61af358cdad5a6817c09f25449b305",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2025-cn-english-national-1:q020",
+                    "sha256": "0e165cbef1779bb9560f538e80202ea6e01df5e4eebac1cf07de33faa11f8e1f",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2026-cn-english-national-1:q006",
+                    "sha256": "228d24711a6f29d01c0657f3ad93ede1190493b7c5ce239dd511d6c78115aec1",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2026-cn-english-national-1:q007",
+                    "sha256": "33248b3f23be57735c587a07a60d9c55c5942f3c49b8f71836be06921a88f945",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2026-cn-english-national-1:q008",
+                    "sha256": "db95f91ed47ddc56a44c3b8e25488a25ed61afe0b554b09a807b06c1a71320c1",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2026-cn-english-national-1:q009",
+                    "sha256": "38fbdeaa13abf9380a08a3cea5381b043a3a57ec0e1752b84f1d2e17a06662fc",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 10,
+                    "id": "2026-cn-english-national-1:q010",
+                    "sha256": "d0f087a3a10ff939490b46627b94e20c60b2d82b9122cb377d7d981ef8cff7a6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2026-cn-english-national-1:q011",
+                    "sha256": "4a6d9c1e1588e024b1f735ee8266d642c5b5f1b433262d50b49246d33ea2eba5",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2026-cn-english-national-1:q012",
+                    "sha256": "ad944ef6c44285c9782e9723403649515ad6be033f609a935381871336ce99a2",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2026-cn-english-national-1:q013",
+                    "sha256": "e890974ceb14224b56dd7cad6e1333f86f3163d1bd8e65ecc74129ceb7603935",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2026-cn-english-national-1:q014",
+                    "sha256": "dcf36a91c0e5883409424277882d9b1ee1298e0eca9ab4f0ca16bfd3167dae1e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 15,
+                    "id": "2026-cn-english-national-1:q015",
+                    "sha256": "f87f6f2ecd294966ffad45df3c8f06d8dfb59b437d3f8270c61bf903a1d905b1",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2026-cn-english-national-1:q016",
+                    "sha256": "72618e152dc21aa296c8abdb0a46d89bef96de28fae1ed53aadf64754fae3d0f",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 17,
+                    "id": "2026-cn-english-national-1:q017",
+                    "sha256": "39613c39797b8d0ed9eaf10b221060ba06eeacb7c6e73cb3295c8ecc0f7245c9",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 18,
+                    "id": "2026-cn-english-national-1:q018",
+                    "sha256": "8afd23157d238b0ee9f18171543749a8b4ed1ec2eb4b684208aee00ab60431c4",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 19,
+                    "id": "2026-cn-english-national-1:q019",
+                    "sha256": "f6541cc0e1ae12ef951cc0d22581c97c6a6fae537563b51314f747e903111467",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 20,
+                    "id": "2026-cn-english-national-1:q020",
+                    "sha256": "02df4234420952b0bf0f3ea465a109c368f2d7940391b5ea5b8188409f5cd9de",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "group": "阅读A",
             "position_range": [
               21,

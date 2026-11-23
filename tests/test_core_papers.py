@@ -93,16 +93,28 @@ class CorePapersTest(unittest.TestCase):
         self.assertFalse(research_eligible({**row,"issues":["quarantined_source_content_conflict"]}))
 
     def test_priority_english_listening_has_bound_written_layer(self):
-        for path,paper in store.documents(ROOT,"english"):
-            if paper["id"] not in ("2024-cn-english-national-1","2025-cn-english-national-1",
-                                   "2026-cn-english-national-1","2025-ha-english-adaptation"):
-                continue
+        expected = {"2024-cn-english-national-1","2025-cn-english-national-1",
+                    "2026-cn-english-national-1","2025-ha-english-adaptation"}
+        papers = {paper["id"]: paper for _, paper in store.documents(ROOT,"english")}
+        self.assertLessEqual(expected,papers.keys())
+        for identifier in expected:
+            paper=papers[identifier]
             self.assertFalse(paper["written_only"])
             self.assertEqual(paper["points"],150)
             first=paper["questions"][:20]
             self.assertEqual([q["number"] for q in first],list(range(1,21)))
             self.assertEqual(paper["written_sha256"],fingerprint(paper["questions"][20:]))
             self.assertEqual(len({q["listen_group"] for q in first}),10)
+            self.assertEqual(paper["listening_sha256"],store.listening_fingerprint(paper))
+
+    def test_authoring_context_spans_sections_in_each_year(self):
+        from core.practice_workbook import authoring_context
+        context=authoring_context(ROOT,"english")
+        for year in (2024,2025,2026):
+            numbers=[q["number"] for q in context["references"] if q["year"]==year]
+            self.assertEqual(len(numbers),4)
+            self.assertEqual((numbers[0],numbers[-1]),(1,67))
+            self.assertTrue(any(21<=n<=40 for n in numbers))
 
     def test_archive_practice_variant_stays_outside_strict_reference(self):
         from national_db import query

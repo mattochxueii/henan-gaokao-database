@@ -11,6 +11,7 @@ from storage import atomic_json
 
 
 def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
+    require(type(limit) is int and limit > 0, "对照样本数须为正整数")
     profile = root / "data/dna" / f"{subject}.json"
     current = dna(root,subject,tracked_only=True)
     require(profile.is_file() and fingerprint(read_json(profile)) == fingerprint(json.loads(json.dumps(current))),
@@ -23,6 +24,17 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
         recent = [row for row in current["national_first_profile"]["by_year"] if row["year"] >= 2024]
         require(recent,"没有近年Ⅰ卷正文")
         strata = [[q for q in pool if q["paper_id"] == row["paper_id"]] for row in recent]
+        strata = [group for group in strata if group]
+        if strata and limit < sum(map(len, strata)):
+            slots, remaining = divmod(limit, len(strata))
+            representative = []
+            for i, group in enumerate(strata):
+                count = min(len(group), slots + (i < remaining))
+                if count == 1:
+                    representative.append(group[:1])
+                elif count > 1:
+                    representative.append([group[j * (len(group) - 1) // (count - 1)] for j in range(count)])
+            strata = representative
         references = [group[i] for i in range(max(map(len,strata),default=0))
                       for group in strata if i<len(group)][:limit]
     require(references,"找不到该考点的可用正文")

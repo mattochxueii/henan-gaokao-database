@@ -67,6 +67,12 @@ CHINESE_ACTION = {
     2026:{18:"找出并改正错字",19:"语句排序",20:"病句与逻辑",21:"热词释义及例句"},
 }
 ENGLISH_GROUPS = (
+    ("听力短对话",1,5,"结合问答判断关系、场景、意图、下一行动或时间",
+     ("选背景中出现的地点或动作","把建议当成已经发生的行动","把旧时间误作更新后的时间"),
+     ("定位改口、答复和能区分场景的措辞",)),
+    ("听力长对话与独白",6,20,"跟踪角色、计划与执行顺序，在较长语篇中归纳态度、理由或规则",
+     ("把最初计划当成最后决定","将某人意见归给另一人","把装置或规则的细节误作目的"),
+     ("按各场景及说话人分别核对","数值与程序题须回到条件以及先后顺序")),
     ("阅读A",21,23,"信息检索、数值比较、限制条件合取",
      ("使用一项正确数字但漏掉加总","忽略日期或对象限制","将另一个条目的特点移用"),
      ("要求把答案定位到条目、表格或一组条件",)),
@@ -129,6 +135,14 @@ def authoring_guidance(subject, papers):
         groups.append({"group":group,"position_range":[start,end],"typical_prompt":ask,
                        "distractor_patterns":list(errors),"scoring_components":list(rubric),"evidence":examples})
     if subject=="chinese":
+        language_examples=[{"year":year,"items":[question_ref(p,n) for n in range(18,len(p["questions"]))]}
+                           for year,p in sorted(years.items())]
+        groups.append({"group":"语言文字运用","position_range":[18,22],
+                       "typical_prompt":"依据上下文改正、重排、补写或解释。图文题指明视觉细节到寓意的联系。",
+                       "distractor_patterns":["只看单句顺畅度而忽略全段衔接","将熟悉义项代入不匹配的语境"],
+                       "scoring_components":["指出具体语义或表达问题","给出保持原意的改写",
+                                             "根据要求说明语境依据或给出可检验例句"],
+                       "evidence":language_examples})
         groups.append({"group":"写作","typical_prompt":"明确材料中的论题，形成可用论据检验的立场",
                        "scoring_components":["回应材料的问题","提出并论证立场","例证与论点有实质联系","表达与结构完整"],
                        "evidence":[{"year":year,"items":[question_ref(p,len(p["questions"]))]} for year,p in sorted(years.items())]})
