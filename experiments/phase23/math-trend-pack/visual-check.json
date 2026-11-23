@@ -1,31 +1,19 @@
 {
-  "method": "Poppler 逐页图像核查",
-  "review_scope": "终版学生及答案PDF",
-  "artifacts": {
-    "paper": {
-      "sha256": "d28cb4181620f415d625f0cd39af70a2ecf1450c396a3ca4a6fe37bfbc2f5310",
-      "pages": [
-        {
-          "number": 1,
-          "render_sha256": "54af6fe0db22c8eb841c5ac8c0ae0181cccdd3d1cbd035d234269d9553f0af53",
-          "observed": "四题同页，闭环操作说明、曲线两切点和交点标注、填空和最后子问均可读。"
-        }
-      ]
-    },
-    "solutions": {
-      "sha256": "b88df13fbc20cafc722d8087ce52380684c0be2f6b1892d9080ef77cc1886598",
-      "pages": [
-        {
-          "number": 1,
-          "render_sha256": "4de790c3cf9838b466d50c9133ffdd18d6644ea63848a17635327993542c0ed9",
-          "observed": "选择键与反例、角度关系、两切线重叠面积，三张命题依据卡完整。"
-        },
-        {
-          "number": 2,
-          "render_sha256": "20c9d59328cd55afe1b5a41fbdf98a3b48dd667b634b52a6cb37b004080d9cce",
-          "observed": "第3题评分续页，第4题迭代等号、不等式、评分和第4张依据卡完整。"
-        }
-      ]
-    }
+  "edition": "phase24",
+  "status": "host_visual_review",
+  "reviewer": "宿主逐页查看打印渲染",
+  "student_solutions_strictly_separate": true,
+  "teacher_reviewed": 0,
+  "student_attempts": 0,
+  "scope": "同一宿主依据终稿学生页另行重解，另运行程序复算。",
+  "paper_sha256": "e19fa74a7f38f2ed4e88286155c937d32e56804d321aed82a7129e7ba1a6ac53",
+  "paper_pages": 2,
+  "paper_note": "第1页核对多选部分分规则、填空横线和曲线方程标注。第2页核对第3题续答区及第4题长答区，四个题号顺序正确。",
+  "solutions_sha256": "d3c2305e4a4452d066cd3c950b805415835bc728a74206c946b536106c9b84da",
+  "solutions_pages": 2,
+  "solutions_note": "两页核对四题各自依据卡、数学解析与项目分步评分。趋势专题独立装订。",
+  "answer_area_cm": {
+    "3": 10.4,
+    "4": 10.4
   }
 }

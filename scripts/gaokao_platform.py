@@ -49,10 +49,12 @@ def main(argv=None):
     simulate.add_argument("candidate",type=Path)
     simulate.add_argument("output",type=Path)
     simulate.add_argument("--context",required=True,type=Path)
+    simulate.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
     trend = sub.add_parser("trend-pack", help="按冻结研判制作独立的数学专题审阅稿")
     trend.add_argument("candidate", type=Path)
     trend.add_argument("output", type=Path)
     trend.add_argument("--context", required=True, type=Path)
+    trend.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
     audit=sub.add_parser("quality-audit", help="审查当前学生 PDF 的逐题命题质量")
     audit.add_argument("input",type=Path)
     audit.add_argument("evidence",type=Path)
@@ -112,6 +114,7 @@ def main(argv=None):
                 p.add_argument("candidates",type=Path)
                 p.add_argument("output",type=Path)
                 p.add_argument("--context",type=Path)
+                p.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
     for command in ("review","publish","score"):
         p = sub.add_parser(command)
         p.add_argument("input",type=Path)
@@ -164,7 +167,7 @@ def main(argv=None):
             candidate = read_json(args.candidate)
             reference = validate_authoring_context(root, "math", args.context, candidate)
             candidate["quality_benchmarks"] = bind_pack_positions(reference, candidate)
-            result = prepare_math(root, candidate, args.output)
+            result = prepare_math(root, candidate, args.output, layout_mode=args.layout_mode)
         elif command=="simulate":
             from core.practice_workbook import validate_authoring_context
 
@@ -175,16 +178,17 @@ def main(argv=None):
                 from math_skill import main as math_main
                 return math_main(["--root",str(root),"generate","--engine","ai","--study-mode","standard",
                                   "--mode","full","--skip-pilot","--candidates",str(args.candidate),
-                                  "--output",str(args.output)], quality_reference=quality_reference)
+                                  "--output",str(args.output),"--layout-mode",args.layout_mode],
+                                 quality_reference=quality_reference)
             if args.subject in SCIENCES:
                 blueprint=plan(root,args.subject,"河南",args.year,"standard")
-                result=prepare(root,blueprint,candidate,args.output,args.candidate.parent)
+                result=prepare(root,blueprint,candidate,args.output,args.candidate.parent,layout_mode=args.layout_mode)
             else:
                 from core.quality_audit import language_edition
 
                 blueprint=language_workflow.plan(root,args.subject,"河南",args.year)
                 candidate["quality_benchmarks"] = language_edition(quality_reference, blueprint["basis_year"])
-                result=language_workflow.prepare(root,blueprint,candidate,args.output)
+                result=language_workflow.prepare(root,blueprint,candidate,args.output,layout_mode=args.layout_mode)
         elif command=="dna":
             result=paper_intake.dna(root,args.subject)
         elif command=="docx":
@@ -231,13 +235,15 @@ def main(argv=None):
                 if args.context is None or args.region != "河南":
                     raise ValueError("河南标准卷须先读取 authoring-context，使用 simulate --context")
                 return main(["--root",str(root),"simulate",args.subject,str(args.year),
-                             str(args.candidates),str(args.output),"--context",str(args.context)])
+                             str(args.candidates),str(args.output),"--context",str(args.context),
+                             "--layout-mode",args.layout_mode])
             if args.subject in language_workflow.LANGUAGES:
                 result=language_workflow.plan(root,args.subject,args.region,args.year)
             else:
                 result = plan(root,args.subject,args.region,args.year,args.mode,args.topic)
                 if command=="generate":
-                    result = prepare(root,result,read_json(args.candidates),args.output,args.candidates.parent)
+                    result = prepare(root,result,read_json(args.candidates),args.output,args.candidates.parent,
+                                     layout_mode=args.layout_mode)
         elif command=="forecast":
             result = forecast(root,args.subject,args.region,args.year,args.cutoff,
                               read_json(args.evidence) if args.evidence else None)

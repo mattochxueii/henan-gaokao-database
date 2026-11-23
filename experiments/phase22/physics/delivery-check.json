@@ -1,16 +1,102 @@
 {
-  "gate_without_audit": {
-    "exit_code": 1,
-    "message": "ERROR 缺 quality-audit.json 或审稿结果，禁止发布"
+  "subject": "physics",
+  "edition": "phase24",
+  "points": 100,
+  "minutes": 75,
+  "questions": 15,
+  "visual": {
+    "paper_version": "d78b54ec41b54509e014d85c5e7fe335567a8d97e5de6c967eee148a2b661bdc",
+    "passed": true,
+    "reviewer": "宿主逐页视觉核对",
+    "paper_pages": 7,
+    "solutions_pages": 2,
+    "paper_note": "1 核查频率指数、同射线起点和变压器双回路。2 核查四图电流正负号、归一化光强、过顶水平基线。3 核查驻波轴标签和并联支路的 d、2d 及虚线。4 核查光电门测距、图像单位、可调直流源及插口 a、b。5 核查第12题答位、第13题两段 L。6 核查第14题磁场方向、吸收屏和草图边界。7 核查第15题粗糙区标记和长答区。",
+    "solutions_note": "1 各选项重解顺序与圈号相符。2 核查第12题倒数轴量纲、第14题严格边界、第15题两次跨段能量和评分。",
+    "paper_sha256": "634c4da7fbeaa4416654185ccb9f436b103a6ab58b5ad5c83f6160dacff94c06",
+    "solutions_sha256": "58ddf98c9e83d3acbe589a6072d6ac1835b1b184eaed167c9a9ade74f98c6613"
   },
-  "actual_draft_rejection": [
+  "page_counts": {
+    "paper": 7,
+    "solutions": 2
+  },
+  "answer_area_cm": {
+    "11": 2.0,
+    "12": 2.0,
+    "13": 7.0,
+    "14": 7.0,
+    "15": 10.4
+  },
+  "choice_figure_numbers": [
+    2,
+    3,
     4,
     5,
+    6,
     7,
-    9,
-    15
+    8,
+    10
   ],
-  "new_paper_editorial_acceptance": "accepted",
-  "teacher_reviews_received": 0,
-  "student_attempts_received": 0
+  "numbered_blank_questions": [
+    11,
+    12
+  ],
+  "coverage": {
+    "coverage": {
+      "力学": [
+        7,
+        11,
+        15
+      ],
+      "天体与引力": [
+        2
+      ],
+      "静电与电路": [
+        4,
+        5,
+        10,
+        12
+      ],
+      "磁场与洛伦兹力": [
+        14
+      ],
+      "电磁感应与交变": [
+        4,
+        5
+      ],
+      "热学": [
+        9
+      ],
+      "光学与机械波": [
+        8
+      ],
+      "原子物理": [
+        1
+      ]
+    },
+    "missing": [],
+    "overused_devices": {}
+  },
+  "factual_review": {
+    "pdf_only_solutions": 15,
+    "additional_calculated_items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "review_context": "同一宿主从渲染学生页另行推导；算式复算不读取候选答案。",
+    "teacher_reviewed": 0,
+    "student_attempts": 0
+  }
 }

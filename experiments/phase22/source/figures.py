@@ -217,8 +217,15 @@ def physics(output):
         label(ax,x0,y0,txt,zorder=4)
     ax.add_patch(Rectangle((5.24,.25),1.68,.38,fc=LIGHT,ec=INK,zorder=3))
     label(ax,6.06,.17,"电阻丝",11,va="top")
-    ax.add_patch(Rectangle((3.12,.2),.90,.50,fc="white",ec=INK,zorder=3))
-    label(ax,3.57,.45,"电源",10,zorder=4)
+    ax.add_patch(Rectangle((2.92,.19),1.14,.65,fc="white",ec="none",zorder=3))
+    line(ax,3.18,.44,3.18,.85,zorder=4)
+    line(ax,3.18,.44,3.18,.06,zorder=4)
+    line(ax,3.49,.22,3.49,.66,zorder=4)
+    line(ax,2.94,.44,3.18,.44,zorder=4)
+    line(ax,3.49,.44,4.10,.44,zorder=4)
+    ax.annotate("",(3.78,.91),(2.97,.12),
+                arrowprops={"arrowstyle":"->","lw":1.0,"color":INK},zorder=5)
+    label(ax,2.55,1.02,"可调直流电源",10)
     label(ax,4.35,3.62,"图 1")
     bx.plot([0,25,50,75,100], [10,9.5,9,8.5,8], "-", color=INK)
     bx.scatter([25, 50, 75, 100], [9.5, 9, 8.5, 8], color=INK, s=17)
@@ -330,7 +337,8 @@ def chemistry(output):
             line(ax,xx-.09,.95,xx+.09,1.12,lw=1.0)
         label(ax,x,3.69,title+" / mL",13)
         tip = x - 1.75
-        label(ax,tip,.25,"尖嘴",11)
+        label(ax,tip+.48,.55,"尖嘴",11,ha="left")
+        label(ax,x,3.36,f"{read:.2f}",11)
         line(ax,tip-.22,.75,tip-.09,.57)
         line(ax,tip+.22,.75,tip+.09,.57)
         line(ax,tip-.09,.57,tip-.09,.39)
@@ -372,11 +380,15 @@ def chemistry(output):
         x = np.arange(5)
         ax.plot(x,energies,"o"+style,color=color,lw=1.35,ms=3.3)
         for index in (1,2,3):
-            label(ax,index + .065,energies[index] + (5 if color == ACCENT else -5),
-                  str(energies[index]),11,ha="left")
+            if color == ACCENT:
+                x_offset, y_offset = .07, 5
+            else:
+                x_offset, y_offset = -.17, -7
+            label(ax,index+x_offset,energies[index]+y_offset,str(energies[index]),11,
+                  ha="left" if color == ACCENT else "right")
     label(ax,.04,6,"0",11,ha="left")
     label(ax,4.05,-23,"−18",11,ha="left")
-    label(ax,3.08,40,"实线甲　虚线乙",12,ha="left")
+    label(ax,.05,40,"实线甲　虚线乙",11,ha="left")
     end(fig, 8)
 
     fig, ax = drawing((8.8,2.4),(12,4.6))
@@ -460,8 +472,8 @@ def chemistry(output):
     ax.plot(x,5-2*x,"--",color=ACCENT,lw=1.55)
     ax.axhline(2,color=MUTED,lw=.9,ls=":")
     ax.set(xlim=(0,9),ylim=(-1,11),xticks=range(0,10),yticks=range(0,11,2))
-    label(ax,4.73,6.13,"AgCl")
-    label(ax,1.63,3.46,r"$PbCl_2$")
+    label(ax,5.98,6.76,r"$pAg=10-pCl$",12)
+    label(ax,1.97,3.27,r"$pPb=5-2pCl$",12)
     label(ax,6.35,1.29,"初始值 $pX=2$",11)
     end(fig, 14)
 

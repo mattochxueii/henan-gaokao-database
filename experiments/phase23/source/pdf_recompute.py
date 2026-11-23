@@ -27,11 +27,11 @@ def standard():
     a, b = sp.Matrix([1, 2]), sp.Matrix([3, -1])
     t = sp.solve((a + x*b).dot(b), x)[0]
     key["3"] = "ABCD"[[Fraction(-1,10), Fraction(1,10), Fraction(-1,3), 2].index(t)]
-    records = [8]*6 + [11]*4
-    records[0] -= 3
-    records[1] -= 3
-    mean = Fraction(sum(records), len(records))
-    key["4"] = "ABCD"[[Fraction("8.9"),Fraction("9.2"),Fraction("9.0"),Fraction("8.6")].index(mean)]
+    groups=[(6,8,1),(4,11,4)]
+    mean = Fraction(sum(n*m for n,m,_ in groups),10)
+    variance = sum(Fraction(n,10)*(var+(m-mean)**2) for n,m,var in groups)
+    key["4"]="ABCD"[[Fraction("2.20"),Fraction("2.16"),Fraction("4.75"),Fraction("4.36")].index(variance)]
+    supporting["4"]={"combined_mean":str(mean),"pooled_variance":str(variance)}
     phase = sp.solve(v * sp.pi/12 - sp.pi/6, v)[0]
     height = 2*sp.sin(phase*sp.pi/3 - sp.pi/6)
     key["5"] = "ABCD"[[sp.sqrt(3),2,1,0].index(height)]
@@ -80,10 +80,13 @@ def standard():
     key["11"] = selected([pq.subs(v,0)==9, height2==9,
                           cos_range==sp.Interval.Lopen(sp.Rational(1,9),1),ray==sp.Rational(5,2)])
     supporting["11"] = {"cosine_range":str(cos_range), "ray_length":str(ray)}
-    f = x**3-3*x
-    intercepts = [f.subs(x,p) - 9*p for p in sp.solve(sp.diff(f,x)-9,x)]
-    key["12"] = str(abs(intercepts[1]-intercepts[0]))
-    key["13"] = str(sp.Poly((1+2*x)**5*(1-x)**2, x).coeff_monomial(x**2))
+    f = x-sp.log(x)
+    slopes = (0,sp.S.Half)
+    intercepts = [f.subs(x,p)-m*p for m in slopes for p in sp.solve(sp.diff(f,x)-m,x) if p>0]
+    key["12"] = str(sp.simplify(abs(intercepts[1]-intercepts[0])))
+    height=sp.solve(8+v*v-(2+(3-v)**2),v)[0]
+    key["13"]=str(sp.sqrt(8+height*height))
+    supporting["13"]={"center_elevation":str(height),"radius_squared":str(8+height*height)}
     condition = sp.expand((x**2-(6-v)*x+((6-v)**2-(14-v**2))/2).subs(x,v))
     interval = sp.solve_univariate_inequality(condition<=0,v,relational=False)
     supporting["14"] = {"middle_condition":str(condition), "range":str(interval)}
@@ -127,7 +130,7 @@ def standard():
     supporting["19"] = {"crit_and_endpoints":[str(cubic.subs(x,r)) for r in crit],
                         "max_a":str(sp.solve(bound_eq,coeff)[0])}
     assert key == dict(zip(map(str,range(1,14)),
-                           ["C","D","A","D","B","A","B","C","AB","BC","AD","32","21"],strict=True))
+                           ["C","D","A","D","B","A","B","C","AB","BC","AD","log(2)","sqrt(33)/2"],strict=True))
     assert interval == sp.Interval(2-1/sp.sqrt(3),2+1/sp.sqrt(3))
     assert len(allowed)==18 and supporting["15"]["endpoints"]==["12","20"]
     assert foot_interval==sp.Interval(sp.Rational(4,3),sp.Rational(8,3))

@@ -64,6 +64,7 @@ def main(argv=None, *, quality_reference=None):
     action.add_argument("--seed", type=int, default=20261107)
     action.add_argument("--output", type=Path, required=True)
     action.add_argument("--no-export", action="store_true")
+    action.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
     action.add_argument("--engine", choices=("template", "ai"), default="template")
     action.add_argument("--candidates", type=Path)
     action.add_argument("--context", type=Path)
@@ -246,6 +247,7 @@ def main(argv=None, *, quality_reference=None):
                     study_mode=args.study_mode,
                     forecast_context=forecast_context,
                     quality_reference=quality_reference,
+                    layout_mode=args.layout_mode,
                 )
                 result = {
                     "output": str(args.output.resolve()),

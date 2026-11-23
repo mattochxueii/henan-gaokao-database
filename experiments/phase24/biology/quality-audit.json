@@ -1,0 +1,1424 @@
+{
+  "protocol": "gaokao-editorial-audit-v1",
+  "reviewer": "宿主对终稿与两年题位的逐项复核",
+  "paper_version": "7cd3c36b395cd014bfdd95ebd68cffb1660551ffe975a5593f8c456e43b0688c",
+  "paper_pdf_sha256": "79f25cace616a716fb7a54148917de8792bdcb7b628d0c46630bf4678218a1a3",
+  "reference_sha256": "cfd490ea036a403d516c75dd105bd8257346e414ee657285f355d403392167cf",
+  "items": [
+    {
+      "number": 1,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "93dc52f62f147916257c8fbd209d3569daf8730b14cf6b35f59f8cad186035f8",
+          "id": "2025-cn-ha-biology-selective:q001",
+          "comparison": "实际该题位主题为细胞结构，比对任务的约束层数和信息处理。项目题先分开胞内外pH并辨别梯度方向，再通透性改变使已建梯度减小。"
+        },
+        "2026": {
+          "version_sha256": "d0e69a97907160946c254897f398cfcc5a79654e4709d3244e1805784aad26cb",
+          "id": "2026-cn-ha-biology-selective:q001",
+          "comparison": "实际该题位主题为分子与营养，比对任务的约束层数和信息处理。项目题先分开胞内外pH并辨别梯度方向，再通透性改变使已建梯度减小。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "分开胞内外pH并辨别梯度方向 → 通透性改变使已建梯度减小"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "分开胞内外pH并辨别梯度方向",
+          "通透性改变使已建梯度减小"
+        ],
+        "linked_concepts": [
+          "离子梯度",
+          "通透性改变使已建梯度减小"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "把ATP的加入当作ATP已进入囊腔",
+          "mechanism": "把ATP的加入当作ATP已进入囊腔"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "从一个离子外推到所有阳离子",
+          "mechanism": "从一个离子外推到所有阳离子"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把漏出的质子等同于水解停止",
+          "mechanism": "把漏出的质子等同于水解停止"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "66613e6de7e8836f9dac489bce375410cd4b9cc8c6f151e11002c74afe385fcd",
+          "id": "2025-cn-ha-biology-selective:q002",
+          "comparison": "实际该题位主题为遗传物质，比对任务的约束层数和信息处理。项目题先定干预开始时已有示踪物，再排除大量降解后解释滞留。"
+        },
+        "2026": {
+          "version_sha256": "0b358bee4e584c31269182919e5d33be060f70d3646701837bdd28aaa001dc14",
+          "id": "2026-cn-ha-biology-selective:q002",
+          "comparison": "实际该题位主题为细胞工程，比对任务的约束层数和信息处理。项目题先定干预开始时已有示踪物，再排除大量降解后解释滞留。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "定干预开始时已有示踪物 → 排除大量降解后解释滞留"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "定干预开始时已有示踪物",
+          "排除大量降解后解释滞留"
+        ],
+        "linked_concepts": [
+          "定位",
+          "排除大量降解后解释滞留"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "把标记出现时间错读为局部合成量",
+          "mechanism": "把标记出现时间错读为局部合成量"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "把对既有X的影响推回到标记摄入时",
+          "mechanism": "把对既有X的影响推回到标记摄入时"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把运输受限误作合成原料不足",
+          "mechanism": "把运输受限误作合成原料不足"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "36cba918e5b4557a6f69a1ff8ea8707af9c850867c8e45a64c7f423e98245b8c",
+          "id": "2025-cn-ha-biology-selective:q003",
+          "comparison": "实际该题位主题为跨膜运输，比对任务的约束层数和信息处理。项目题先读两段初速增量，再用零初始内浓度和ATP数据限定推断。"
+        },
+        "2026": {
+          "version_sha256": "1022cc5187a475e1c025c41cbfd4f9eab87a4dbb83600ab2d1980e0a1e561f7d",
+          "id": "2026-cn-ha-biology-selective:q003",
+          "comparison": "实际该题位主题为跨膜运输，比对任务的约束层数和信息处理。项目题先读两段初速增量，再用零初始内浓度和ATP数据限定推断。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "读两段初速增量 → 用零初始内浓度和ATP数据限定推断"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "读两段初速增量",
+          "用零初始内浓度和ATP数据限定推断"
+        ],
+        "linked_concepts": [
+          "膜转运与动力学",
+          "用零初始内浓度和ATP数据限定推断"
+        ]
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把线性与无通道等同",
+          "mechanism": "把线性与无通道等同"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "跨细胞类型把初速直接换算成ATP消耗",
+          "mechanism": "跨细胞类型把初速直接换算成ATP消耗"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "用甲自身前一测点作分母，得到6/5",
+          "mechanism": "用甲自身前一测点作分母，得到6/5"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "2,5,6",
+            "label": "甲实线三测点",
+            "meaning": "甲的转运初速"
+          },
+          {
+            "anchor": "1,4,16",
+            "label": "乙虚线三测点",
+            "meaning": "乙的浓度—速率关系"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 4,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1decdf978a5ea8d0a1daf0e7df9d02c25a81f2f1c7b4e8d264f84bb14186393b",
+          "id": "2025-cn-ha-biology-selective:q004",
+          "comparison": "实际该题位主题为细胞呼吸，比对任务的约束层数和信息处理。项目题先用氧定有氧途径，再余下二氧化碳单独按化学计量换算底物。"
+        },
+        "2026": {
+          "version_sha256": "2eeba3176b341c9deddae6ab24a4935bae2bcc9151d73502983e9e4f2f7c229f",
+          "id": "2026-cn-ha-biology-selective:q004",
+          "comparison": "实际该题位主题为细胞呼吸，比对任务的约束层数和信息处理。项目题先用氧定有氧途径，再余下二氧化碳单独按化学计量换算底物。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用氧定有氧途径 → 余下二氧化碳单独按化学计量换算底物"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用氧定有氧途径",
+          "余下二氧化碳单独按化学计量换算底物"
+        ],
+        "linked_concepts": [
+          "细胞呼吸",
+          "余下二氧化碳单独按化学计量换算底物"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "用无氧二氧化碳份额作葡萄糖份额",
+          "mechanism": "用无氧二氧化碳份额作葡萄糖份额"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "把无氧的二氧化碳计量数写作3",
+          "mechanism": "把无氧的二氧化碳计量数写作3"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "将全部8个二氧化碳单位计给无氧反应",
+          "mechanism": "将全部8个二氧化碳单位计给无氧反应"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5c8a93021652ec3a353948382031f71bbc44492cb10be06d1ca4378eb95d6f3d",
+          "id": "2025-cn-ha-biology-selective:q005",
+          "comparison": "实际该题位主题为细胞分化，比对任务的约束层数和信息处理。项目题先用4C判断完成复制，再由赤道板位置及未分离收束阶段。"
+        },
+        "2026": {
+          "version_sha256": "f375468231ed183daafe2abd96d656cadcd0cc1a58914aef8667dcdd77bebe6d",
+          "id": "2026-cn-ha-biology-selective:q005",
+          "comparison": "实际该题位主题为细胞周期，比对任务的约束层数和信息处理。项目题先用4C判断完成复制，再由赤道板位置及未分离收束阶段。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用4C判断完成复制 → 由赤道板位置及未分离收束阶段"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用4C判断完成复制",
+          "由赤道板位置及未分离收束阶段"
+        ],
+        "linked_concepts": [
+          "有丝分裂行为与含量",
+          "由赤道板位置及未分离收束阶段"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "误把4C积累定位为复制前",
+          "mechanism": "误把4C积累定位为复制前"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "混淆DNA加倍与染色体数加倍",
+          "mechanism": "混淆DNA加倍与染色体数加倍"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "认为S期比例下降即代表分裂完成",
+          "mechanism": "认为S期比例下降即代表分裂完成"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "23%、12%、65%",
+            "label": "三条斜纹柱",
+            "meaning": "介入后DNA状态分布"
+          },
+          {
+            "anchor": "55%、25%、20%",
+            "label": "三条实色柱",
+            "meaning": "对照DNA分布"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 6,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5e03c73f7263fac06583900eeed84c5baeaebb99778ef9c715a1195c8b7744dd",
+          "id": "2025-cn-ha-biology-selective:q006",
+          "comparison": "实际该题位主题为发酵，比对任务的约束层数和信息处理。项目题先分开特有连接位点与共同片段，再并行测前体，限定丰度能说明什么。"
+        },
+        "2026": {
+          "version_sha256": "bee38a9c36db1d3280680e46010b10ac778d8e656b16e4760d5ec23ec3e6daa5",
+          "id": "2026-cn-ha-biology-selective:q006",
+          "comparison": "实际该题位主题为DNA复制，比对任务的约束层数和信息处理。项目题先分开特有连接位点与共同片段，再并行测前体，限定丰度能说明什么。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "分开特有连接位点与共同片段 → 并行测前体，限定丰度能说明什么"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "分开特有连接位点与共同片段",
+          "并行测前体，限定丰度能说明什么"
+        ],
+        "linked_concepts": [
+          "转录",
+          "并行测前体，限定丰度能说明什么"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "目标基因信号被总RNA所掩盖",
+          "mechanism": "目标基因信号被总RNA所掩盖"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "不同成熟型相消后只看总量",
+          "mechanism": "不同成熟型相消后只看总量"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "以只识别b的探针量两型",
+          "mechanism": "以只识别b的探针量两型"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9914f3bbecd9205d1f3aa0c82e1fc295e49e8251f884e97e68051c70e6ad2bef",
+          "id": "2025-cn-ha-biology-selective:q007",
+          "comparison": "实际该题位主题为进化，比对任务的约束层数和信息处理。项目题先用成株数更新配子库，再两配子随机组合求合子。"
+        },
+        "2026": {
+          "version_sha256": "b251c3094652c2c8d0431f0f4c328d8fa79cc2e416ccd3e9ffe1fe0480859365",
+          "id": "2026-cn-ha-biology-selective:q007",
+          "comparison": "实际该题位主题为进化，比对任务的约束层数和信息处理。项目题先用成株数更新配子库，再两配子随机组合求合子。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用成株数更新配子库 → 两配子随机组合求合子"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用成株数更新配子库",
+          "两配子随机组合求合子"
+        ],
+        "linked_concepts": [
+          "基因频率",
+          "两配子随机组合求合子"
+        ]
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "沿用存活选择之前的频率",
+          "mechanism": "沿用存活选择之前的频率"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "照搬单配子比例，漏第二配子",
+          "mechanism": "照搬单配子比例，漏第二配子"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "将亲本中无杂合作为受精子代也无杂合",
+          "mechanism": "将亲本中无杂合作为受精子代也无杂合"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7aedce7ad9e436ac6aa024e77ad40eb28a4f7af7d01c102ab828ded4d5a022a8",
+          "id": "2025-cn-ha-biology-selective:q008",
+          "comparison": "实际该题位主题为免疫，比对任务的约束层数和信息处理。项目题先识别静息参照和各曲线幅度，再区分达到阈值和只发生去极化。"
+        },
+        "2026": {
+          "version_sha256": "35c60bc0ee5cf5c9037651256f065559c5e1d205f6e536cf06f0d65bfebf88d7",
+          "id": "2026-cn-ha-biology-selective:q008",
+          "comparison": "实际该题位主题为稳态，比对任务的约束层数和信息处理。项目题先识别静息参照和各曲线幅度，再区分达到阈值和只发生去极化。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "识别静息参照和各曲线幅度 → 区分达到阈值和只发生去极化"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "识别静息参照和各曲线幅度",
+          "区分达到阈值和只发生去极化"
+        ],
+        "linked_concepts": [
+          "膜电位",
+          "区分达到阈值和只发生去极化"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "膜电位升高就判越过阈值",
+          "mechanism": "膜电位升高就判越过阈值"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "从电位趋势倒推唯一离子通路",
+          "mechanism": "从电位趋势倒推唯一离子通路"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "相加绝对电位而非相对静息的变化",
+          "mechanism": "相加绝对电位而非相对静息的变化"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "-50",
+            "label": "水平阈值线−50",
+            "meaning": "是否触发动作电位"
+          },
+          {
+            "anchor": "-63",
+            "label": "同步曲线−63峰值",
+            "meaning": "同步刺激的响应"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 9,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "19566b69e40a73ff9a4d6adc980190200fc40fd804637472a48d2a7f2a1d93fb",
+          "id": "2025-cn-ha-biology-selective:q009",
+          "comparison": "实际该题位主题为稳态，比对任务的约束层数和信息处理。项目题先区分受体响应与激素分泌，再同摄入比较丢水与渗透压。"
+        },
+        "2026": {
+          "version_sha256": "a04abf715209b3297bd8e5a26d2b5e69bdde25d75ec3f030753364bda51eff33",
+          "id": "2026-cn-ha-biology-selective:q009",
+          "comparison": "实际该题位主题为神经调节，比对任务的约束层数和信息处理。项目题先区分受体响应与激素分泌，再同摄入比较丢水与渗透压。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "区分受体响应与激素分泌 → 同摄入比较丢水与渗透压"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "区分受体响应与激素分泌",
+          "同摄入比较丢水与渗透压"
+        ],
+        "linked_concepts": [
+          "反馈与水平衡",
+          "同摄入比较丢水与渗透压"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "将排水变化的作用全归在滤过",
+          "mechanism": "将排水变化的作用全归在滤过"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把靶器官响应误作垂体分泌量的直接测量",
+          "mechanism": "把靶器官响应误作垂体分泌量的直接测量"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "将补偿性调节推成完全恢复",
+          "mechanism": "将补偿性调节推成完全恢复"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bc3f557032f38f25afbca7ead93076a5d3094d0f2e2cfad2a81c440ef4dda72d",
+          "id": "2025-cn-ha-biology-selective:q010",
+          "comparison": "实际该题位主题为植物调节，比对任务的约束层数和信息处理。项目题先同一M水平做成对对照，再比较ABA效应的差值而非比两根任意柱。"
+        },
+        "2026": {
+          "version_sha256": "f06a135fc6d57d9a0a3e19234167ce3f09a0b490d3d61949a73791bc0c40acb2",
+          "id": "2026-cn-ha-biology-selective:q010",
+          "comparison": "实际该题位主题为植物调节，比对任务的约束层数和信息处理。项目题先同一M水平做成对对照，再比较ABA效应的差值而非比两根任意柱。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "同一M水平做成对对照 → 比较ABA效应的差值而非比两根任意柱"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "同一M水平做成对对照",
+          "比较ABA效应的差值而非比两根任意柱"
+        ],
+        "linked_concepts": [
+          "激素调节和双因素对照",
+          "比较ABA效应的差值而非比两根任意柱"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "比较了两个不同M条件而漏同组反事实",
+          "mechanism": "比较了两个不同M条件而漏同组反事实"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "从单浓度外推全部浓度",
+          "mechanism": "从单浓度外推全部浓度"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把表型反应等同于读出靶点",
+          "mechanism": "把表型反应等同于读出靶点"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "72%、36%",
+            "label": "第一组72、36",
+            "meaning": "无M时ABA效应"
+          },
+          {
+            "anchor": "76%、70%",
+            "label": "第二组76、70",
+            "meaning": "有M时ABA效应"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 11,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e2108a31431d6e3cc5838a1ed907a3f8bce119090a7b04d31c0d533efbe18897",
+          "id": "2025-cn-ha-biology-selective:q011",
+          "comparison": "实际该题位主题为群落，比对任务的约束层数和信息处理。项目题先定位被破坏的再捕假设，再推标记样本比例变化及对估计分母的作用。"
+        },
+        "2026": {
+          "version_sha256": "d708bde3a53a6b711d7640ef1b8e26aa8b2d2b441af4a465f4445409c14feac1",
+          "id": "2026-cn-ha-biology-selective:q011",
+          "comparison": "实际该题位主题为群落，比对任务的约束层数和信息处理。项目题先定位被破坏的再捕假设，再推标记样本比例变化及对估计分母的作用。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "定位被破坏的再捕假设 → 推标记样本比例变化及对估计分母的作用"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "定位被破坏的再捕假设",
+          "推标记样本比例变化及对估计分母的作用"
+        ],
+        "linked_concepts": [
+          "标记重捕",
+          "推标记样本比例变化及对估计分母的作用"
+        ]
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把总体再捕数换成未标记数",
+          "mechanism": "把总体再捕数换成未标记数"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把难捕理解为标记占比升高",
+          "mechanism": "把难捕理解为标记占比升高"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "认为增样能消除系统误差",
+          "mechanism": "认为增样能消除系统误差"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9954823dfaf7c025d0f70239df35af2ed6db4633e33beedf35e51a76f62f8009",
+          "id": "2025-cn-ha-biology-selective:q012",
+          "comparison": "实际该题位主题为种群，比对任务的约束层数和信息处理。项目题先顺能量支路区分摄入与同化，再用同化量比较两个营养级。"
+        },
+        "2026": {
+          "version_sha256": "216a69fc32611be3d9bed358365b0c8b60d27a9e0070f732370a70d36d6aad70",
+          "id": "2026-cn-ha-biology-selective:q012",
+          "comparison": "实际该题位主题为生态，比对任务的约束层数和信息处理。项目题先顺能量支路区分摄入与同化，再用同化量比较两个营养级。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "顺能量支路区分摄入与同化 → 用同化量比较两个营养级"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "顺能量支路区分摄入与同化",
+          "用同化量比较两个营养级"
+        ],
+        "linked_concepts": [
+          "能量路径",
+          "用同化量比较两个营养级"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "摄入量当同化分母",
+          "mechanism": "摄入量当同化分母"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "用摄入扣呼吸却不扣粪便",
+          "mechanism": "用摄入扣呼吸却不扣粪便"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把同化前排出算作同化后的流向",
+          "mechanism": "把同化前排出算作同化后的流向"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "900、300、400",
+            "label": "摄入900、粪便300、呼吸400",
+            "meaning": "同化前后不同能量流向"
+          },
+          {
+            "anchor": "120",
+            "label": "食虫鸟同化120",
+            "meaning": "高营养级同化量"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 13,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "f3ccd60592dfd9ab6c70fc37b5f378a0d3356cc6aed2efb96465f6b380c66aef",
+          "id": "2025-cn-ha-biology-selective:q013",
+          "comparison": "实际该题位主题为遗传，比对任务的约束层数和信息处理。项目题先确认测得的是恢复25度的初速，再以各自初速为分母比较保留率。"
+        },
+        "2026": {
+          "version_sha256": "a9717ec50ffbc530de7cce2a80f2386b4441c25611689834d3330fa85c2d0202",
+          "id": "2026-cn-ha-biology-selective:q013",
+          "comparison": "实际该题位主题为蛋白质工程，比对任务的约束层数和信息处理。项目题先确认测得的是恢复25度的初速，再以各自初速为分母比较保留率。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "确认测得的是恢复25度的初速 → 以各自初速为分母比较保留率"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "确认测得的是恢复25度的初速",
+          "以各自初速为分母比较保留率"
+        ],
+        "linked_concepts": [
+          "酶活",
+          "以各自初速为分母比较保留率"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "将预热温度当最适反应温度",
+          "mechanism": "将预热温度当最适反应温度"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "拿单条件上的保留优势外推所有条件",
+          "mechanism": "拿单条件上的保留优势外推所有条件"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把残余活性比例当逐分子变性计数",
+          "mechanism": "把残余活性比例当逐分子变性计数"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a4d2f230c2098ef36739ea508afc1457ce88277fe3f00fc4965884c027e5c8a9",
+          "id": "2025-cn-ha-biology-selective:q014",
+          "comparison": "实际该题位主题为基因表达，比对任务的约束层数和信息处理。项目题先区分整段与两个切段，再用完整酶切控制识别混合条带的等位基因来源。"
+        },
+        "2026": {
+          "version_sha256": "c712b35deac340d5d7cf25c4781e2e43d3c7e09d49ff75d26ad96ee3a927a1b2",
+          "id": "2026-cn-ha-biology-selective:q014",
+          "comparison": "实际该题位主题为细胞工程，比对任务的约束层数和信息处理。项目题先区分整段与两个切段，再用完整酶切控制识别混合条带的等位基因来源。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "区分整段与两个切段 → 用完整酶切控制识别混合条带的等位基因来源"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "区分整段与两个切段",
+          "用完整酶切控制识别混合条带的等位基因来源"
+        ],
+        "linked_concepts": [
+          "基因分型和酶切电泳",
+          "用完整酶切控制识别混合条带的等位基因来源"
+        ]
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把已切开的两段认作无切点型",
+          "mechanism": "把已切开的两段认作无切点型"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把完整目标条带认作未扩增",
+          "mechanism": "把完整目标条带认作未扩增"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把一条等位基因切出的两个片段算成两个等位型",
+          "mechanism": "把一条等位基因切出的两个片段算成两个等位型"
+        }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "300 bp 和 180 bp",
+            "label": "300、180标记",
+            "meaning": "完整酶切段长"
+          },
+          {
+            "anchor": "480 bp",
+            "label": "480标记、甲样本一条带",
+            "meaning": "无切点等位基因的全长"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 15,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "01834606d0a1063ff5c8a2301349ba7175e1b8e8277cd8912da1b2df20425165",
+          "id": "2025-cn-ha-biology-selective:q015",
+          "comparison": "实际该题位主题为遗传，比对任务的约束层数和信息处理。项目题先由测交子代反推配子，再识别高频亲本型、合并低频交换型。"
+        },
+        "2026": {
+          "version_sha256": "b48e659018f727ad64f719750f8a4a473b154139ceffb87c3cc77c1614489536",
+          "id": "2026-cn-ha-biology-selective:q015",
+          "comparison": "实际该题位主题为遗传，比对任务的约束层数和信息处理。项目题先由测交子代反推配子，再识别高频亲本型、合并低频交换型。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由测交子代反推配子 → 识别高频亲本型、合并低频交换型"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由测交子代反推配子",
+          "识别高频亲本型、合并低频交换型"
+        ],
+        "linked_concepts": [
+          "连锁",
+          "识别高频亲本型、合并低频交换型"
+        ]
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "以为有四种后代就是自由组合",
+          "mechanism": "以为有四种后代就是自由组合"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "把低频重组型当连锁相位",
+          "mechanism": "把低频重组型当连锁相位"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把合计40个重复计两遍",
+          "mechanism": "把合计40个重复计两遍"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7e4d73bc66b9664a0fa46f3e4515043342daa857ada94f2f580eccb4a231b3cc",
+          "id": "2025-cn-ha-biology-selective:q016",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为实验设计，比对任务的约束层数和信息处理。项目题先锁定光谱为改变项，再拒绝由总体效应定位受体。"
+        },
+        "2026": {
+          "version_sha256": "533476cf2072f4f566aa66b10916e22f647d402e26aa29cf4d8ff86cac2c95e1",
+          "id": "2026-cn-ha-biology-selective:q016",
+          "comparison": "实际该题位主题为微生物，比对任务的约束层数和信息处理。项目题先锁定光谱为改变项，再拒绝由总体效应定位受体。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "锁定光谱为改变项 → 拒绝由总体效应定位受体"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "锁定光谱为改变项",
+          "拒绝由总体效应定位受体"
+        ],
+        "linked_concepts": [
+          "变量控制及因果范围",
+          "拒绝由总体效应定位受体"
+        ]
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把总光子数等同于有效吸收",
+          "mechanism": "把总光子数等同于有效吸收"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "从整体伸长直接定位细胞受体",
+          "mechanism": "从整体伸长直接定位细胞受体"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "去掉恒温使另一个变量混入",
+          "mechanism": "去掉恒温使另一个变量混入"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "21a79f54cf72e45165a973b898e23f33ce821a35394d1309bcfd13e4825c0cc2",
+          "id": "2025-cn-ha-biology-selective:q017",
+          "comparison": "实际该题位主题为光合作用，比对任务的约束层数和信息处理。项目题先用净光合和呼吸恢复总光合，再对照两种CO2条件与气孔指标，再提出酶活检验。"
+        },
+        "2026": {
+          "version_sha256": "6250aeb5878d0be87529aaa52e9b8a77e31c64becd550c4c94d85428f25f8d8c",
+          "id": "2026-cn-ha-biology-selective:q017",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为光合作用，比对任务的约束层数和信息处理。项目题先用净光合和呼吸恢复总光合，再对照两种CO2条件与气孔指标，再提出酶活检验。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用净光合和呼吸恢复总光合 → 对照两种CO2条件与气孔指标，再提出酶活检验"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用净光合和呼吸恢复总光合",
+          "对照两种CO2条件与气孔指标，再提出酶活检验"
+        ],
+        "linked_concepts": [
+          "光合限速",
+          "对照两种CO2条件与气孔指标，再提出酶活检验"
+        ]
+      },
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "12,17",
+            "label": "图1常规组12、17",
+            "meaning": "净光合前后"
+          },
+          {
+            "anchor": "6,13",
+            "label": "图1盐处理组6、13",
+            "meaning": "同等光下盐组曲线比较"
+          },
+          {
+            "anchor": "1.0,0.5",
+            "label": "图2两根柱的标值",
+            "meaning": "气孔导度差异"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 18,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "91078249cbd600f35a2ac15f1007c330b64639976ff0eb67157579e7d5f5ce12",
+          "id": "2025-cn-ha-biology-selective:q018",
+          "comparison": "实际该题位主题为神经调节，比对任务的约束层数和信息处理。项目题先用阻断定位神经环节，再补回激素比较增殖，设计等量离体直接作用对照。"
+        },
+        "2026": {
+          "version_sha256": "ecefbe34d81355f98e1b93f048ecca193c5b06074351389740264960a29cb9d0",
+          "id": "2026-cn-ha-biology-selective:q018",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为稳态，比对任务的约束层数和信息处理。项目题先用阻断定位神经环节，再补回激素比较增殖，设计等量离体直接作用对照。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用阻断定位神经环节 → 补回激素比较增殖，设计等量离体直接作用对照"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用阻断定位神经环节",
+          "补回激素比较增殖，设计等量离体直接作用对照"
+        ],
+        "linked_concepts": [
+          "神经",
+          "补回激素比较增殖，设计等量离体直接作用对照"
+        ]
+      },
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "2.0,67",
+            "label": "B行2.0、67",
+            "meaning": "有噪声"
+          },
+          {
+            "anchor": "1.0,98",
+            "label": "C行1.0、98",
+            "meaning": "阻断"
+          },
+          {
+            "anchor": "2.0,71",
+            "label": "D行2.0、71",
+            "meaning": "回补"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 19,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "95cba4b1b3edd6a3372dccb27a0a80cf6da0d302b953dfefbe77ce5e79d0278a",
+          "id": "2025-cn-ha-biology-selective:q019",
+          "comparison": "实际该题位主题为生态，比对任务的约束层数和信息处理。项目题先两带面积加权核对盖度，再结合保留的土壤识别演替，再区分对照因素。"
+        },
+        "2026": {
+          "version_sha256": "4c562c989c254a6fe90bae7bfe7dfc2b8714f523076a8a6cf670dbaeb271ba39",
+          "id": "2026-cn-ha-biology-selective:q019",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为生态，比对任务的约束层数和信息处理。项目题先两带面积加权核对盖度，再结合保留的土壤识别演替，再区分对照因素。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "两带面积加权核对盖度 → 结合保留的土壤识别演替，再区分对照因素"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "两带面积加权核对盖度",
+          "结合保留的土壤识别演替，再区分对照因素"
+        ],
+        "linked_concepts": [
+          "群落替代",
+          "结合保留的土壤识别演替，再区分对照因素"
+        ]
+      },
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "40%",
+            "label": "近水带（占40%）",
+            "meaning": "面积权重"
+          },
+          {
+            "anchor": "50%、20%",
+            "label": "恢复前柱50、20",
+            "meaning": "初始盖度"
+          },
+          {
+            "anchor": "20%、15%",
+            "label": "三年后柱20、15",
+            "meaning": "恢复后盖度"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    },
+    {
+      "number": 20,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "67ba0edbb974c029ca7bf622e6f3a6d2a8c97d1e97cbbac71e0640f9ceea8454",
+          "id": "2025-cn-ha-biology-selective:q020",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为遗传，比对任务的约束层数和信息处理。项目题先由存活比例和分型还原受精分类，再筛紫群基因型与配子，再改配对并扣致死。"
+        },
+        "2026": {
+          "version_sha256": "fe6c31c7131dbd272002b96b780120e5f62a93f19453756edf85488648c29c9e",
+          "id": "2026-cn-ha-biology-selective:q020",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为遗传，比对任务的约束层数和信息处理。项目题先由存活比例和分型还原受精分类，再筛紫群基因型与配子，再改配对并扣致死。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由存活比例和分型还原受精分类 → 筛紫群基因型与配子，再改配对并扣致死"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "文字题。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由存活比例和分型还原受精分类",
+          "筛紫群基因型与配子，再改配对并扣致死"
+        ],
+        "linked_concepts": [
+          "独立遗传",
+          "筛紫群基因型与配子，再改配对并扣致死"
+        ]
+      },
+      "distractors": {}
+    },
+    {
+      "number": 21,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a3324248a595ed30e49fd9fdc7c1658c6500bc9633bc98ab90896d9871c6e0ce",
+          "id": "2025-cn-ha-biology-selective:q021",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为基因工程，比对任务的约束层数和信息处理。项目题先验证引物延伸朝向，再用不同方向的片段长度和总长鉴定，再以空载体控制表达。"
+        },
+        "2026": {
+          "version_sha256": "51c88ef41195eb5956bf7f098fd1289029b66e91836a7985104472353882dd6f",
+          "id": "2026-cn-ha-biology-selective:q021",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。实际该题位主题为基因工程，比对任务的约束层数和信息处理。项目题先验证引物延伸朝向，再用不同方向的片段长度和总长鉴定，再以空载体控制表达。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "验证引物延伸朝向 → 用不同方向的片段长度和总长鉴定，再以空载体控制表达"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "终稿定义、范围与求解要求对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "验证引物延伸朝向",
+          "用不同方向的片段长度和总长鉴定，再以空载体控制表达"
+        ],
+        "linked_concepts": [
+          "片段图",
+          "用不同方向的片段长度和总长鉴定，再以空载体控制表达"
+        ]
+      },
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "0.8 kb",
+            "label": "0.8 kb",
+            "meaning": "骨架上X到插入起点的尺度"
+          },
+          {
+            "anchor": "0.3 kb",
+            "label": "0.3 kb",
+            "meaning": "F正向插入的切点尺度"
+          },
+          {
+            "anchor": "4.1、1.1 kb",
+            "label": "甲泳道4.1、1.1",
+            "meaning": "双酶切结果"
+          },
+          {
+            "anchor": "P 在左端下链上",
+            "label": "P →、R ←",
+            "meaning": "方向由两条模板链决定"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
+    }
+  ],
+  "revisions": {
+    "1": {
+      "language": "加上 ATP 不透膜及腔内无产酸反应，使H+跨膜的推断有明确边界。"
+    },
+    "3": {
+      "depth": "把从一个柱点抄数字改为比较浓度—初速曲线及判断的证据边界。",
+      "distractors": "给出正常转运误判或取错分母的具体路径。"
+    },
+    "10": {
+      "depth": "把读单柱改为 M 与 ABA 的两次同条件对照。",
+      "distractors": "用错配对照、剂量外推、把表型当分子靶点三个真实误区。"
+    },
+    "17": {
+      "figure": "增加图1和图2编号，把正常与升高CO₂的图例移进可印区域。"
+    },
+    "20": {
+      "depth": "从直接套9:3:4改为从存活表型和分型找缺失合子，再求条件配子和杂交比例。"
+    }
+  }
+}

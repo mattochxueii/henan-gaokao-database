@@ -54,10 +54,22 @@ def prism():
             "edges":[list(name) for name in ("AB","BC","CA","AM","PQ")]+[
                 ["A1","B1"],["B1","C1"],["C1","A1"],["A","A1"],["B","B1"],["C","C1"],["A1","B"],["A1","C"]],
             "hidden_edges":[["C","A"],["A","M"],["P","Q"],["A1","C"]],
-            "marked_points":["M","P","Q"],"view_angles":[24,-37],
+            "marked_points":["M","P","Q"],"view_angles":[24,-38],
             "label_offsets":{"A":[-12,-4],"B":[8,-6],"C":[6,0],"A1":[-19,5],
-                             "B1":[7,2],"C1":[7,4],"M":[6,-10],"P":[-4,8],"Q":[-7,4]},
-            "labels":[{"math":"4","at":[2,0,0],"offset":[-2,-12]}]}
+                             "B1":[10,3],"C1":[7,5],"M":[-10,-11],"P":[-5,8],"Q":[-5,7]},
+            "caption_math":"AB=AC=AA_1=4"}
+
+
+def frustum():
+    base = {"A":[-2,-2,0],"B":[2,-2,0],"C":[2,2,0],"D":[-2,2,0]}
+    top = {key+"1":[x/2,y/2,3] for key,(x,y,_) in base.items()}
+    ring = ["AB","BC","CD","DA"]
+    edges = [list(side) for side in ring] + [[a+"1",b+"1"] for a,b in ring]
+    return {"type":"wireframe","vertices":{**base,**top},"edges":edges+[[k,k+"1"] for k in base],
+            "hidden_edges":[["C","D"],["D","A"],["D","D1"]],"view_angles":[22,-67],"show_vertex_labels":False,
+            "labels":[{"math":"4","at":[0,-2,0],"offset":[0,-13]},
+                      {"math":"2","at":[0,-1,3],"offset":[-3,4]},
+                      {"math":"h=3","at":[2,0,1.55],"offset":[16,0]}]}
 
 
 def parabola():
@@ -76,7 +88,7 @@ def tangent_model():
                   [[(u/100,100/u) for u in range(24,450)],
                    [(0,4),(1,0)],[(0,1),(4,0)]],
                   [("O",(0,0),[-11,-10],False),("Q",(.8,.8),[5,4],True),
-                   ("H",(2.6,1/2.6),[5,5],False),
+                   (r"H:xy=1",(2.7,1/2.7),[5,7],False),
                    ("P_1",(.5,2),[4,4],True),("P_2",(2,.5),[0,7],True)])
 
 
@@ -130,7 +142,7 @@ def make_item(n, edition, record, archive, slot, *, kind, points, basis=None):
         rec["trend_basis"]=basis
     rubric=[{"part":i,"points":p,"criterion":desc} for i,group in enumerate(marks,1) for p,desc in group]
     if not rubric:
-        criterion=("全对6分。所选均对但未选全得3分。含错误项得0分。" if kind=="multiple_choice" else "答案正确。")
+        criterion=("全部选对的得6分，部分选对的得部分分，有选错的得0分。" if kind=="multiple_choice" else "答案正确。")
         rubric=[{"points":points,"criterion":criterion}]
     return rec,{"number":n,"steps":rubric}
 
@@ -167,7 +179,7 @@ def document(context_path, mode, destination, draft=False):
     questions,rubric=map(list,zip(*compiled,strict=True))
     doc={"schema_version":2,"research_protocol":"calibrated-v1",
          "paper":{"mode":"full" if mode=="standard" else "mixed","title":title,
-                  "study_id":"HN23-M150-v2" if mode=="standard" else "HN23-T45-v1",
+                  "study_id":"HN23-M150-v3" if mode=="standard" else "HN23-T45-v2",
                   "minutes":duration,"total_points":sum(points),"require_scoring":True,**pack},
          "provenance":{"mode":"ai","provider":"host_ai","model_version":"Codex host",
                         "template_calls":0,"api_calls":0,"dna_sha256":ctx["dna_sha256"],

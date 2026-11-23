@@ -1,67 +1,68 @@
 {
   "protocol": "gaokao-editorial-audit-v1",
-  "reviewer": "Work 宿主题位与命题质量审稿",
-  "paper_version": "c0ed1a71d07293c425c960b1996849937d2f1d26422da96e665cf0dbf8fb4c5e",
-  "paper_pdf_sha256": "149f80156336f0ccab10d10dcc5619ec6671b3ab9e28114c1f6e5be0c0607b72",
+  "reviewer": "宿主对终稿与两年题位的逐项复核",
+  "paper_version": "d78b54ec41b54509e014d85c5e7fe335567a8d97e5de6c967eee148a2b661bdc",
+  "paper_pdf_sha256": "634c4da7fbeaa4416654185ccb9f436b103a6ab58b5ad5c83f6160dacff94c06",
   "reference_sha256": "e22c02a5eece9ff4062d4767a247566a50b940187290c6739b1e0abf1bd5f201",
   "items": [
     {
       "number": 1,
-      "answer_key": "B",
+      "answer_key": "A",
       "benchmarks": {
         "2025": {
           "version_sha256": "2a5754cefca6ad9db45c0d7d5c6055d3c8844e4af648cf4851cb34c9f21dbadc",
-          "comparison": "真题以斜绳运送零件判断动力学，首题建立简洁场景模型。本题只需识别双程光路。"
+          "id": "2025-cn-ha-physics-selective:q001",
+          "comparison": "实际该题位主题为动力学，比对任务的约束层数和信息处理。项目题先以遏止电压和光频差定斜率，再向零电压回推。"
         },
         "2026": {
           "version_sha256": "2b2a0e90654a908cf3223c8fb723619836191554ab5615beb83879954c23cc06",
-          "comparison": "真题需分开判断摆的振幅和周期。本题分清往返时间和两次发射间隔，均作前段热身。"
+          "id": "2026-cn-ha-physics-selective:q001",
+          "comparison": "实际该题位主题为振动，比对任务的约束层数和信息处理。项目题先以遏止电压和光频差定斜率，再向零电压回推。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：把光路差折半后又将同一距离差除以2。；C：把第一次的18 m距离当作两读数所得速率。；D：以6 m为车位移，除以0.20 s。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
-          "evidence": "由往返时间差求相邻距离差 → 由两次发射间隔求平均速率"
+          "evidence": "以遏止电压和光频差定斜率 → 向零电压回推"
         },
         "figure": {
           "verdict": "not_applicable",
-          "evidence": "本题为文字条件。"
+          "evidence": "文字题。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "同一句给两个回波时长，另给忽略车位移条件。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "由往返时间差求相邻距离差",
-          "由两次发射间隔求平均速率"
+          "以遏止电压和光频差定斜率",
+          "向零电压回推"
         ],
         "linked_concepts": [
-          "匀速光传播",
-          "平均速率"
+          "光电效应、两点斜率",
+          "向零电压回推"
         ]
       },
-      "required_figure_information": null,
       "distractors": {
-        "A": {
+        "B": {
           "plausible": true,
-          "misconception": "重复折半",
-          "mechanism": "把光路差折半后又将同一距离差除以2。"
+          "misconception": "把1.70直接代替电压差1.20",
+          "mechanism": "把1.70直接代替电压差1.20"
         },
         "C": {
           "plausible": true,
-          "misconception": "速率与一次测距读数混淆",
-          "mechanism": "把第一次的18 m距离当作两读数所得速率。"
+          "misconception": "把第一个能出光电子的点当极限",
+          "mechanism": "把第一个能出光电子的点当极限"
         },
         "D": {
           "plausible": true,
-          "misconception": "往返路程当单程",
-          "mechanism": "以6 m为车位移，除以0.20 s。"
+          "misconception": "按正号外推到7.25",
+          "mechanism": "按正号外推到7.25"
         }
       }
     },
@@ -71,59 +72,72 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "2c6c3dc31a215b549eb66ba596527f9adde7e5c694f89158e9a6140e4330155b",
-          "comparison": "真题从柱面图找法线后计算折射。本题同样要求先从光学图取几何量，计算更短。"
+          "id": "2025-cn-ha-physics-selective:q002",
+          "comparison": "实际该题位主题为光学，比对任务的约束层数和信息处理。项目题先万有引力定两周期，再比较相对角位移。"
         },
         "2026": {
           "version_sha256": "94c8539114aedbae1af5834291ab0703298b521849de262881443e98f32700a5",
-          "comparison": "真题由力—位置图逆推两个电荷的符号。本题由两行共尺纹样反推波长，不需逐区判号。"
+          "id": "2026-cn-ha-physics-selective:q002",
+          "comparison": "实际该题位主题为电场，比对任务的约束层数和信息处理。项目题先万有引力定两周期，再比较相对角位移。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：把 −6 至0当甲的一个间距，用600×2/6。；C：把 −2 至2当乙相邻间距，用600×4/3。；D：对同一装置误用波长与间距反比，求600×3/2。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
-          "evidence": "读两组亮纹的相邻间距 → 消去同一装置的比例系数"
+          "evidence": "万有引力定两周期 → 比较相对角位移"
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "图给甲3格、乙2格的相邻亮纹间距；题面没有给二者比值。"
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "只给共用装置及粗线含义，设问落到唯一物理量。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "读两组亮纹的相邻间距",
-          "消去同一装置的比例系数"
+          "万有引力定两周期",
+          "比较相对角位移"
         ],
         "linked_concepts": [
-          "双缝相邻亮纹间距",
-          "同条件比例标定"
+          "圆周轨道、追及",
+          "比较相对角位移"
         ]
       },
-      "required_figure_information": "图给甲3格、乙2格的相邻亮纹间距；题面没有给二者比值。",
       "distractors": {
         "A": {
           "plausible": true,
-          "misconception": "跨条纹数错",
-          "mechanism": "把 −6 至0当甲的一个间距，用600×2/6。"
+          "misconception": "把同向角速率相加",
+          "mechanism": "把同向角速率相加"
         },
         "C": {
           "plausible": true,
-          "misconception": "跨过中央纹",
-          "mechanism": "把 −2 至2当乙相邻间距，用600×4/3。"
+          "misconception": "认为周期与半径成正比",
+          "mechanism": "认为周期与半径成正比"
         },
         "D": {
           "plausible": true,
-          "misconception": "比值方向颠倒",
-          "mechanism": "对同一装置误用波长与间距反比，求600×3/2。"
+          "misconception": "只取远星整周期",
+          "mechanism": "只取远星整周期"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "4R",
+            "label": "距地心分别为 R、4R",
+            "meaning": "两同心轨道的半径及起始方向"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
     },
     {
       "number": 3,
@@ -131,17 +145,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "23d96d9553a3343f2218b3943a1f7c31ef577d1c4af0cf80f8711fb0b6d518df",
+          "id": "2025-cn-ha-physics-selective:q003",
           "comparison": "真题由轨道尺度与母星质量比较公转量；这里由两次运行读数消去共同阻力。"
         },
         "2026": {
           "version_sha256": "81168b70b605880063699b1a92e8e6fc7a26ea24158c3229b983623a5329d277",
+          "id": "2026-cn-ha-physics-selective:q003",
           "comparison": "真题把棱镜组合几何转成折射条件；这里把图线的斜率和面积分别转成动力学与功。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：用192 J除以乙全部损失的640 J。；B：按192/320得60%后把未回收的40%填作效率。；D：用无制动甲的10 m计算应扣除的阻力功，得192/(640−400)。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -153,7 +169,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "甲乙用关闭/开启区分，明确分母是制动力的功。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -168,7 +184,6 @@
           "功与能量转化效率"
         ]
       },
-      "required_figure_information": "两条斜线的起点和2 s末速只在图上给出，决定阻力差和位移。",
       "distractors": {
         "A": {
           "plausible": true,
@@ -185,7 +200,24 @@
           "misconception": "对照实验位移错用",
           "mechanism": "用无制动甲的10 m计算应扣除的阻力功，得192/(640−400)。"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "6.0 m/s",
+            "label": "v=6 刻度",
+            "meaning": "相同初速"
+          },
+          {
+            "anchor": "4.0、2.0 m/s",
+            "label": "t=2 时的上下交点",
+            "meaning": "两组末速"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "两条斜线的起点和2 s末速只在图上给出，决定阻力差和位移。"
     },
     {
       "number": 4,
@@ -193,61 +225,82 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "d30032d8f07166822c4e40ea973c5000200aa9bc94e8c5eeb7fbf694973a7914",
-          "comparison": "真题由三点电势和方向图反推电场方向；新题同样先恢复图中的方向关系再求量。"
+          "id": "2025-cn-ha-physics-selective:q004",
+          "comparison": "实际该题位主题为电场，比对任务的约束层数和信息处理。项目题先沿原副两回路读阻抗，经电流比联立串联分压，再交流变压关系与有效值的条件适用性独立核算。"
         },
         "2026": {
           "version_sha256": "0ba3aaddde60810f748e40b7c4e9cd674a167fb3e3a15df84795cb04d6c6da1e",
-          "comparison": "真题比较副线圈和串接绕组电压反推匝数；新题把两个界面关系联立反推液体折射率。"
+          "id": "2026-cn-ha-physics-selective:q004",
+          "comparison": "实际该题位主题为变压器，比对任务的约束层数和信息处理。项目题先沿原副两回路读阻抗，经电流比联立串联分压，再交流变压关系与有效值的条件适用性独立核算。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：将 sin r=3/5 直接代入玻璃到待测液体的临界关系。；B：仅对第二界面的 sin j=4/5 取倒数，把5/4当折射率。；D：认为临界射线不离开界面等同于两介质折射率相同。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
-          "evidence": "按图读入射角并求玻璃内折射角 → 用互相垂直的两法线求第二界面入射角 → 在临界状态用折射率比反推待测介质"
+          "evidence": "沿原副两回路读阻抗，经电流比联立串联分压 → 交流变压关系与有效值的条件适用性独立核算"
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "入射面的法线和 sin i=3/4 由图给出，第二界面临界的参照方向靠图识别。"
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "用两个光学面标明场所，保留临界条件但无解题口令。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "按图读入射角并求玻璃内折射角",
-          "用互相垂直的两法线求第二界面入射角",
-          "在临界状态用折射率比反推待测介质"
+          "沿原副两回路读阻抗，经电流比联立串联分压",
+          "交流变压关系与有效值的条件适用性独立核算"
         ],
         "linked_concepts": [
-          "两界面折射",
-          "互补角转换",
-          "全反射临界条件"
+          "交流变压关系与有效值",
+          "交流变压关系与有效值的条件适用性独立核算"
         ]
       },
-      "required_figure_information": "入射面的法线和 sin i=3/4 由图给出，第二界面临界的参照方向靠图识别。",
       "distractors": {
         "A": {
           "plausible": true,
-          "misconception": "第二面错用第一面折射角",
-          "mechanism": "将 sin r=3/5 直接代入玻璃到待测液体的临界关系。"
+          "misconception": "用匝数平方反向折算负载",
+          "mechanism": "用匝数平方反向折算负载"
         },
         "B": {
           "plausible": true,
-          "misconception": "误用临界正弦的倒数",
-          "mechanism": "仅对第二界面的 sin j=4/5 取倒数，把5/4当折射率。"
+          "misconception": "不按匝比反映负载，原边误分一半",
+          "mechanism": "不按匝比反映负载，原边误分一半"
         },
         "D": {
           "plausible": true,
-          "misconception": "误把临界当同折射率",
-          "mechanism": "认为临界射线不离开界面等同于两介质折射率相同。"
+          "misconception": "忽略串联限流电阻",
+          "mechanism": "忽略串联限流电阻"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "120",
+            "label": "120 V",
+            "meaning": "原边供电"
+          },
+          {
+            "anchor": "2:1",
+            "label": "匝数比2∶1",
+            "meaning": "原线圈与副线圈"
+          },
+          {
+            "anchor": "5.0",
+            "label": "两只5.0 Ω",
+            "meaning": "限流与负载电阻"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
     },
     {
       "number": 5,
@@ -255,17 +308,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "57da1f19fc72a1940f97d57fc17b556d5343d1f01b91305783f4f2eafb4dc9a5",
+          "id": "2025-cn-ha-physics-selective:q005",
           "comparison": "真题在金属薄片中辨析涡流旋向；本题保持图选形式，改成三时段磁通量率。"
         },
         "2026": {
           "version_sha256": "cfa441bdcca04a0c8ea6a64e20d3fe52ea3c37a92a13e43a2e48f8619c3ac09a",
+          "id": "2026-cn-ha-physics-selective:q005",
           "comparison": "真题从土星环图读半径并结合密度求运动量；本题从分区图跟踪两个边界并映射电流图。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：直接把磁通变化率的三个符号作电流符号。；B：只计中段进第二磁区，漏第一磁区退出贡献。；C：把前沿离开第二磁区的瞬间当作整个线框离开，漏最后一段。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -277,7 +332,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "起始时刻、电流正方向和 I₀ 统一给定，隐去计算提示。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -292,7 +347,6 @@
           "电阻定律与阶梯图"
         ]
       },
-      "required_figure_information": "图给磁区朝向、初始相对位置，以及四种随时间的符号轨迹。",
       "distractors": {
         "A": {
           "plausible": true,
@@ -309,7 +363,19 @@
           "misconception": "误判最后已离开两区",
           "mechanism": "把前沿离开第二磁区的瞬间当作整个线框离开，漏最后一段。"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "垂直纸面向外、向内",
+            "label": "⊙、⊗",
+            "meaning": "磁场相反及线框的运动方向"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图给磁区朝向、初始相对位置，以及四种随时间的符号轨迹。"
     },
     {
       "number": 6,
@@ -317,17 +383,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "bc2ebff198119ce3cddc021bb53e4a78bde363339724c60c93551937a5b8b6dd",
+          "id": "2025-cn-ha-physics-selective:q006",
           "comparison": "真题比较两种放射性同位素随时间的变化；本题由混合读数反推两种衰减组分。"
         },
         "2026": {
           "version_sha256": "0c1a19e0f773a2c286a0411d41615951aa8073415535ac17fc2787d733ee7904",
+          "id": "2026-cn-ha-physics-selective:q006",
           "comparison": "真题从两磁区轨迹及回到 O 的条件反推场强比例；本题换为两响应分量和总信号闭合。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：甲乙衰减比例对调，初始两组分解成40和60。；B：把叠加的未知权重都设为一半，混淆归一化初值和实际初值。；D：由求出的30与10直接给比值，忘记题问初始。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -339,7 +407,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "定义归一化，区分单材曲线和混合片的原始光强。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -353,7 +421,6 @@
           "线性叠加及反推"
         ]
       },
-      "required_figure_information": "在2.0秒读出甲1/2和乙1/4。两种比例在题干未给出。",
       "distractors": {
         "A": {
           "plausible": true,
@@ -370,7 +437,19 @@
           "misconception": "混淆初比和2秒时比",
           "mechanism": "由求出的30与10直接给比值，忘记题问初始。"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "0.50、0.25",
+            "label": "t=2 的 0.50、0.25 点",
+            "meaning": "两材料的归一化光强"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "在2.0秒读出甲1/2和乙1/4。两种比例在题干未给出。"
     },
     {
       "number": 7,
@@ -378,61 +457,82 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "0ed352781a00ec91a9bc6f9550765abd26775b856b946f71d1098bf466db73eb",
-          "comparison": "真题先读两次碰撞的速度图再用动量关系反推；本题把末点载荷先译成末速，再倒推起点能量。"
+          "id": "2025-cn-ha-physics-selective:q007",
+          "comparison": "实际该题位主题为动量，比对任务的约束层数和信息处理。项目题先确定最高点合力方向，再沿高度基线及粗糙区回推初动能。"
         },
         "2026": {
           "version_sha256": "cbf8267169b674afda20e7ee3210ec03430771f17d258e6f72be7651aed0f528",
-          "comparison": "真题由网球轨迹投影恢复实际速度分量；本题由过顶支持力恢复速率，再利用路径判功。"
+          "id": "2026-cn-ha-physics-selective:q007",
+          "comparison": "实际该题位主题为平抛，比对任务的约束层数和信息处理。项目题先确定最高点合力方向，再沿高度基线及粗糙区回推初动能。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：只加mgR和mgR/4得到5mgR/4。；B：只计算抬升和阻力功，漏点P处动能。；D：误写mg+N=mv²/R，使末动能成为3mgR/4。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
-          "evidence": "由最高点受力方程求速度平方 → 读粗糙段长度和高度差求耗散、重力势能增量 → 反推出发时弹簧的储能"
+          "evidence": "确定最高点合力方向 → 沿高度基线及粗糙区回推初动能"
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "粗糙段长2R、上升高度R及P点曲率半径R同时决定结果。"
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "将粗糙段、过程损失和在P点仅受两力的条件分别落在一句。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "由最高点受力方程求速度平方",
-          "读粗糙段长度和高度差求耗散、重力势能增量",
-          "反推出发时弹簧的储能"
+          "确定最高点合力方向",
+          "沿高度基线及粗糙区回推初动能"
         ],
         "linked_concepts": [
-          "曲线运动向心加速度",
-          "机械能与阻力功",
-          "弹簧释放能量"
+          "动力学以及功和能",
+          "沿高度基线及粗糙区回推初动能"
         ]
       },
-      "required_figure_information": "粗糙段长2R、上升高度R及P点曲率半径R同时决定结果。",
       "distractors": {
         "A": {
           "plausible": true,
-          "misconception": "漏去耗散",
-          "mechanism": "只加mgR和mgR/4得到5mgR/4。"
+          "misconception": "漏粗糙段损耗",
+          "mechanism": "漏粗糙段损耗"
         },
         "B": {
           "plausible": true,
-          "misconception": "把通过P当作到达即停",
-          "mechanism": "只计算抬升和阻力功，漏点P处动能。"
+          "misconception": "漏P点非零动能",
+          "mechanism": "漏P点非零动能"
         },
         "D": {
           "plausible": true,
-          "misconception": "把支持力加入向心合力",
-          "mechanism": "误写mg+N=mv²/R，使末动能成为3mgR/4。"
+          "misconception": "把向上支持力加进向下合力",
+          "mechanism": "把向上支持力加进向下合力"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "水平基线",
+            "label": "水平基线",
+            "meaning": "进入点与高度测量的共同参照"
+          },
+          {
+            "anchor": "高 \\(R\\)",
+            "label": "R",
+            "meaning": "P点高度"
+          },
+          {
+            "anchor": "长 \\(2R\\)",
+            "label": "2R",
+            "meaning": "粗糙段长度"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
     },
     {
       "number": 8,
@@ -440,17 +540,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "3485792aedce70c5eb7d9f6e2675f494026924e7c54cea83e3a548f267cafb2d",
+          "id": "2025-cn-ha-physics-selective:q008",
           "comparison": "真题骨笛声学比较频率与波长。本题同属波，但加上驻波的空间节点及时间频闪判断。"
         },
         "2026": {
           "version_sha256": "da01c74361b9bed08304d77da2e4a546824d6ba537a34b9d02946c8e7b7dc31c",
+          "id": "2026-cn-ha-physics-selective:q008",
           "comparison": "真题用两波长和两材料判光电子阈值、比较动能。本题用两时刻波形处理双量约束，不复用光电模型。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "A：把相邻节点间的0.40 m直接作行波波长。；C：忽略同一时刻0.20和0.60 m的位移在零线上下两侧。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -462,7 +564,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "只写连续两极端及间隔，不在题干说明半周期。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -477,7 +579,6 @@
           "波速关系"
         ]
       },
-      "required_figure_information": "节点出现在0、0.40、0.80、1.20 m，0.20和0.60 m在相邻反相波腹。",
       "distractors": {
         "A": {
           "plausible": true,
@@ -489,7 +590,19 @@
           "misconception": "把两波腹都当同相",
           "mechanism": "忽略同一时刻0.20和0.60 m的位移在零线上下两侧。"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "相邻节点间距为 0.40 m",
+            "label": "0.00、0.40、0.80、1.20 节点",
+            "meaning": "邻间距与反相区域"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "节点出现在0、0.40、0.80、1.20 m，0.20和0.60 m在相邻反相波腹。"
     },
     {
       "number": 9,
@@ -497,17 +610,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "aa2bd39b14aff8c8c5fc784ccef98921eb4199a336123fdc8a8cea8056afe441",
+          "id": "2025-cn-ha-physics-selective:q009",
           "comparison": "真题由防抖装置中两个线圈方向与力的要求筛选选项；本题以两个气室、阀门前后和终态双约束实现相当的推理组织。"
         },
         "2026": {
           "version_sha256": "6f19536f9a0348eeb2b2139872e5023a102caed3c45659fa942a75f10eeafbf9",
+          "id": "2026-cn-ha-physics-selective:q009",
           "comparison": "真题由呼吸装置图和电压符号区分吸呼气径与运动方向；本题取气动采样情境，从阈值推到不同的末态。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "B：用初始B压力p₀加上压差，漏去接收气体后B增压。；D：把转移量0.2n以A初始n相除而非B初始2n。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -515,11 +630,11 @@
         },
         "figure": {
           "verdict": "not_applicable",
-          "evidence": "本题为文字条件。"
+          "evidence": "文字题。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "给清阀门只送单向、开阀压力差和保持条件。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -534,7 +649,6 @@
           "物质的量守恒"
         ]
       },
-      "required_figure_information": null,
       "distractors": {
         "B": {
           "plausible": true,
@@ -554,17 +668,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "275d1f8245ede8c4a8f9829fd06829ef3ca8ccf584f8eaba942c33614c722478",
+          "id": "2025-cn-ha-physics-selective:q010",
           "comparison": "真题两气腔中用活塞条件处理几种操作的体积、压强变化；本题对并联电容改变间距后的局部和整体量做差异判断。"
         },
         "2026": {
           "version_sha256": "533e5edf6a31504e9baebf5fbff65e8023ac7f0351d2da31d4ab4c4c1357bd30",
+          "id": "2026-cn-ha-physics-selective:q010",
           "comparison": "真题分阶段处理相对运动；本题以闭合、断开、移板三阶段区分守恒对象。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "pass",
-          "evidence": "B：用总电荷按电容变化重分后把两支路等量反向变化相加，得CU₀/2。；C：用U比3/2替换E=U/d，忽略间距变2d。"
+          "evidence": "各错误项与独立键分离，错误路径逐项登记。"
         },
         "depth": {
           "verdict": "pass",
@@ -576,7 +692,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "仅规定开关顺序、理想电压表和忽略漏电。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -591,7 +707,6 @@
           "静电能与准静态外力功"
         ]
       },
-      "required_figure_information": "图决定并联状态、哪一块板移动以及两电容器初末间距和 a 位置。",
       "distractors": {
         "B": {
           "plausible": true,
@@ -603,7 +718,19 @@
           "misconception": "只算电压比漏掉距离",
           "mechanism": "用U比3/2替换E=U/d，忽略间距变2d。"
         }
-      }
+      },
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "间距从 \\(d\\) 变为 \\(2d\\)",
+            "label": "d、2d、移动板虚线",
+            "meaning": "可动支路由d到虚线，终态与右支路同距"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图决定并联状态、哪一块板移动以及两电容器初末间距和 a 位置。"
     },
     {
       "number": 11,
@@ -611,17 +738,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "4d41116840f28382414f805d4a4cffd3d131e198cbf2ab92b6ea927e0df3fb2e",
+          "id": "2025-cn-ha-physics-selective:q011",
           "comparison": "真题由热敏特性图和保温箱原理判断阈值；本题同为实验读图，重点改作斜率截距各对应哪个物理量。"
         },
         "2026": {
           "version_sha256": "94770bd7fb9a13a7273b7e3ed8bb233effd089a3a73f971a245e0e3663f717d4",
+          "id": "2026-cn-ha-physics-selective:q011",
           "comparison": "真题用光电门比较理论与实测速率；本题还由平方关系区分两种效应，改变门位做归因。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "not_applicable",
-          "evidence": "分步作答题。"
+          "evidence": "分步作答。"
         },
         "depth": {
           "verdict": "pass",
@@ -633,7 +762,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "空位按读门→算量→改变量次序组织。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -648,8 +777,29 @@
           "线性拟合"
         ]
       },
-      "required_figure_information": "图1给粗糙路段长度0.40 m，图2给拟合点；没有两图不能同时测出k和f。",
-      "distractors": {}
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "P、Q 相距 0.40 m",
+            "label": "0.40 m",
+            "meaning": "粗糙板测距"
+          },
+          {
+            "anchor": "0.50",
+            "label": "横2时纵0.50",
+            "meaning": "平方图第一标定点"
+          },
+          {
+            "anchor": "3.50",
+            "label": "横8时纵3.50",
+            "meaning": "平方图第二标定点"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图1给粗糙路段长度0.40 m，图2给拟合点；没有两图不能同时测出k和f。"
     },
     {
       "number": 12,
@@ -657,17 +807,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "1d5a4d81c6835bdad78db071dc53b38401617dd7ff93c4be9c4fd86e0a922144",
+          "id": "2025-cn-ha-physics-selective:q012",
           "comparison": "真题由纸带数据和速度平方图诊断系统偏差；本题用外推避免自热测量偏差。"
         },
         "2026": {
           "version_sha256": "5e42665fe8699e0c9291d860212a8396f8679eb69fe2b6eaf705cf5b70b79ba5",
-          "comparison": "题库同位电学实验文本可见 RC 接线及斜率截距，完整读图记录有限；这里只比较接线、数据变换和参数分离。"
+          "id": "2026-cn-ha-physics-selective:q012",
+          "comparison": "候选卷证据范围有限，只参考已知题位和主题。题库同位电学实验文本可见 RC 接线及斜率截距，完整读图记录有限；这里只比较接线、数据变换和参数分离。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "not_applicable",
-          "evidence": "分步作答题。"
+          "evidence": "分步作答。"
         },
         "depth": {
           "verdict": "pass",
@@ -679,7 +831,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "在测量前定义热平衡、轴的单位与表的理想化。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -694,8 +846,29 @@
           "倒数拟合及量程单位"
         ]
       },
-      "required_figure_information": "电路图给 a/b 跨接与串接；倒数图给截距10及相应斜率和10 mA点。",
-      "distractors": {}
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "可调直流电源",
+            "label": "可调直流电源加箭头",
+            "meaning": "图1调节电流的可调器具"
+          },
+          {
+            "anchor": "纵截距为 \\(10.0",
+            "label": "轴截距10",
+            "meaning": "倒数图截距"
+          },
+          {
+            "anchor": "时纵坐标为 \\(8.0",
+            "label": "(100,8)",
+            "meaning": "倒数图斜率"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "电路图给 a/b 跨接与串接；倒数图给截距10及相应斜率和10 mA点。"
     },
     {
       "number": 13,
@@ -703,17 +876,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "269052bdcfd887ace82f84c7ab0a898ad70f41fc2fe2352b3edcddd26cfc0744",
+          "id": "2025-cn-ha-physics-selective:q013",
           "comparison": "真题由荷电液滴在细胞仪中经过电场的类平抛分段求量；本题在板外增设漂移长度并要求不撞板。"
         },
         "2026": {
           "version_sha256": "c2885245d64524e9128914d92b5e039c7b560129056a51013a202bd6651ac702",
+          "id": "2026-cn-ha-physics-selective:q013",
           "comparison": "真题同位以皮囊压强和温度求状态；本题使用仪器标定，同样先建立运动区段再使用运行边界。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "not_applicable",
-          "evidence": "分步作答题。"
+          "evidence": "分步作答。"
         },
         "depth": {
           "verdict": "pass",
@@ -725,7 +900,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "界定碰板含边缘，排除等号争议。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -740,8 +915,24 @@
           "速度连续与外场边界"
         ]
       },
-      "required_figure_information": "板内和漂移区的水平长度均为L，中线及极板间距h由图定位。",
-      "distractors": {}
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "板间距为 \\(h\\)",
+            "label": "h",
+            "meaning": "上下极板间距"
+          },
+          {
+            "anchor": "水平距离也为 \\(L\\)",
+            "label": "两个 L",
+            "meaning": "场区与出场段水平尺度"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "板内和漂移区的水平长度均为L，中线及极板间距h由图定位。"
     },
     {
       "number": 14,
@@ -749,45 +940,61 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "1326f7e9e2d45ef0909d4649e02ad8007055cf5962753f7a3b5ad34a9251ac23",
-          "comparison": "真题由碰撞后跨防滑段的摩擦判定多阶段状态；本题以弹簧接触为状态切换，仍需分段记账。"
+          "id": "2025-cn-ha-physics-selective:q014",
+          "comparison": "实际该题位主题为多阶段动力学，比对任务的约束层数和信息处理。项目题先先判能否穿越，再换曲率找圆心与大弧，加入吸收屏判可返回域。"
         },
         "2026": {
           "version_sha256": "a671794f710376790231e72b068b9314f6686c899cf944ceaecbc31779215eb0",
-          "comparison": "真题质谱由加速、漂移、反射求量；本题将结构边界译为两条压力路径，并让后一问复用前面状态关系。"
+          "id": "2026-cn-ha-physics-selective:q014",
+          "comparison": "实际该题位主题为电场，比对任务的约束层数和信息处理。项目题先先判能否穿越，再换曲率找圆心与大弧，加入吸收屏判可返回域。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "not_applicable",
-          "evidence": "分步作答题。"
+          "evidence": "分步作答。"
         },
         "depth": {
           "verdict": "pass",
-          "evidence": "用图示空隙将升温分为等压和弹簧加载两阶段 → 求压力—体积关系下的对外功及内能变化 → 比较同末温时两种弹簧加载曲线"
+          "evidence": "先判能否穿越 → 换曲率找圆心与大弧，加入吸收屏判可返回域"
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "初态与弹簧之间的距离V₀/S仅在图上给出，决定何时由等压转为变压。"
+          "evidence": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
         },
         "language": {
           "verdict": "pass",
-          "evidence": "交代活塞受重和给定内能公式，省去超纲热容假设。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "用图示空隙将升温分为等压和弹簧加载两阶段",
-          "求压力—体积关系下的对外功及内能变化",
-          "比较同末温时两种弹簧加载曲线"
+          "先判能否穿越",
+          "换曲率找圆心与大弧，加入吸收屏判可返回域"
         ],
         "linked_concepts": [
-          "气体状态方程和活塞受力",
-          "分段pV功",
-          "热力学第一定律"
+          "洛伦兹力及圆弧、边界",
+          "换曲率找圆心与大弧，加入吸收屏判可返回域"
         ]
       },
-      "required_figure_information": "初态与弹簧之间的距离V₀/S仅在图上给出，决定何时由等压转为变压。",
-      "distractors": {}
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "放置吸收屏",
+            "label": "第（3）问的吸收屏",
+            "meaning": "可选右边界的位置"
+          },
+          {
+            "anchor": "\\(x=L\\)",
+            "label": "L 刻度与磁区边界竖线",
+            "meaning": "两磁区的公共边界"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "图示承载条件间的关系、实测序列或装置连接。文字明示关键值，两种读法互相校核。"
     },
     {
       "number": 15,
@@ -795,17 +1002,19 @@
       "benchmarks": {
         "2025": {
           "version_sha256": "e51113347a936287275cbd89750af2c6b4ada480e16ca96fc9a9d7e478553ab0",
+          "id": "2025-cn-ha-physics-selective:q015",
           "comparison": "真题用电磁分区、入射速度方向改变后的跨区及周期漂移形成后问。本题改用移动支承、有限耗散带和参考系转换，保留以分区状态决定末结果的考查。"
         },
         "2026": {
           "version_sha256": "9c40b944d264d901fdd803ed9c9fd48d53877320ed706a51a742696115183312",
+          "id": "2026-cn-ha-physics-selective:q015",
           "comparison": "真题球壳与球连续碰撞的阶段间传递速度；本题让首次进入P与返程能否越O各有独立临界，并区分相对运动和实验室反向。"
         }
       },
       "findings": {
         "distractors": {
           "verdict": "not_applicable",
-          "evidence": "分步作答题。"
+          "evidence": "分步作答。"
         },
         "depth": {
           "verdict": "pass",
@@ -817,7 +1026,7 @@
         },
         "language": {
           "verdict": "pass",
-          "evidence": "用三问分别限定向右到P、返程段内停住、滑离并向左，等号由条件自然给定。"
+          "evidence": "终稿定义、范围与求解要求对应。"
         }
       },
       "depth": {
@@ -833,8 +1042,19 @@
           "分段边界严格性"
         ]
       },
-      "required_figure_information": "粗糙区起止及长度d以 O—P 间的斜线与尺寸标出；弹簧固定在同一自由车上。",
-      "distractors": {}
+      "distractors": {},
+      "figure_conditions": {
+        "records": [
+          {
+            "anchor": "长度为 \\(d\\)",
+            "label": "d",
+            "meaning": "O到P的单程粗糙段"
+          }
+        ],
+        "observation": "图中的标注、相对位置、线型与学生页文字逐项对照。",
+        "qualitative_only": false
+      },
+      "required_figure_information": "粗糙区起止及长度d以 O—P 间的斜线与尺寸标出；弹簧固定在同一自由车上。"
     }
   ],
   "revisions": {

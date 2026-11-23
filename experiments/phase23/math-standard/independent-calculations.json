@@ -1,7 +1,7 @@
 {
   "edition": "standard",
-  "pdf_sha256": "47d3d67e1cc731893da4d187b857c1d566f5da6c53ba2af63608d207397c484b",
-  "pages": 3,
+  "pdf_sha256": "9b232fed2470cbe96dff4d3b2b07dfefa3d02db9f94a73bf6d36ff104ebcf430",
+  "pages": 5,
   "scope": "图文由终版PDF独立抄读。采用枚举、线性代数及符号表达式比对。全域论证与可达性见另行重解。",
   "keys": {
     "1": "C",
@@ -15,10 +15,14 @@
     "9": "AB",
     "10": "BC",
     "11": "AD",
-    "12": "32",
-    "13": "21"
+    "12": "log(2)",
+    "13": "sqrt(33)/2"
   },
   "checks": {
+    "4": {
+      "combined_mean": "46/5",
+      "pooled_variance": "109/25"
+    },
     "8": {
       "m": [
         1,
@@ -38,6 +42,10 @@
     "11": {
       "cosine_range": "Interval.Ropen(1/9, 1)",
       "ray_length": "5/2"
+    },
+    "13": {
+      "center_elevation": "1/2",
+      "radius_squared": "33/4"
     },
     "14": {
       "middle_condition": "3*v**2 - 12*v + 11",

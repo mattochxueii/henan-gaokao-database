@@ -208,7 +208,7 @@ class ScienceLayoutTests(unittest.TestCase):
         with TemporaryDirectory() as temp:
             path = Path(temp) / "paper.pdf"
             render({"layout":"science","title":"理科排版测试","total_points":60,"minutes":75,
-                    "partial_credit":3,"questions":questions},path)
+                    "partial_credit":3,"questions":questions},path,layout_mode="exam")
             pdf = PdfReader(path)
             self.assertEqual(len(pdf.pages),1)
             text = pdf.pages[0].extract_text()

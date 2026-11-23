@@ -58,7 +58,7 @@ def henan_english_score(written):
     return int((Decimal(str(written)) * Decimal("1.25")).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
 
 
-def prepare(root, blueprint, candidate, output):
+def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
     from core.language_render import render
     subject = blueprint["subject"]
     require(candidate["subject"] == subject and candidate.get("blueprint_sha256") == fingerprint(blueprint),
@@ -106,7 +106,7 @@ def prepare(root, blueprint, candidate, output):
                 and list(dict.fromkeys(group_ids)) == list(scripts) and all(v.strip() for v in scripts.values()),
                 "缺听力文本或听力次序错配")
     public = {"subject":subject,"title":candidate["title"],"minutes":blueprint["minutes"],
-              "points":150,"sections":blueprint["sections"],"materials":materials,
+              "points":150,"sections":blueprint["sections"],"materials":materials,"layout_mode":layout_mode,
               "questions":[{k:v for k,v in q.items() if k in {"number","id","points","kind","section","stem","material","options"}}
                            for q in questions]}
     reference=candidate.get("quality_benchmarks")

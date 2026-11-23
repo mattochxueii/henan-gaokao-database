@@ -1,8 +1,8 @@
 {
   "protocol": "gaokao-editorial-audit-v2",
   "reviewer": "宿主编辑审稿",
-  "paper_version": "4606d3984ddb2798f5201f881a070e1d8a8bb692fa4712fbba570fec09740150",
-  "paper_pdf_sha256": "d28cb4181620f415d625f0cd39af70a2ecf1450c396a3ca4a6fe37bfbc2f5310",
+  "paper_version": "6dda4c4ff9446f3eaab46b80215877820cba89f76b8715dbf34d728a3ca5a901",
+  "paper_pdf_sha256": "e19fa74a7f38f2ed4e88286155c937d32e56804d321aed82a7129e7ba1a6ac53",
   "reference_sha256": "595d19802fd98fee11291614cfc020c5d7eb4eeadaa695866e2f284bfe8d8c4e",
   "items": [
     {
@@ -187,6 +187,17 @@
         "routine_shortcut_rejected": "切线的两截距给面积不变量，两切线的正根条件用于公共多边形及全区间可达性。"
       },
       "required_figure_information": "图显示两个三角形覆盖时的两条边界和交点Q，可核对取公共区域的边界切换。",
+      "figure_conditions": {
+        "observation": "图显示两个三角形覆盖时的两条边界和交点Q，可核对取公共区域的边界切换。",
+        "records": [
+          {
+            "anchor": "\\(H:xy=1\\ (x>0)\\)",
+            "label": "H:xy=1",
+            "meaning": "曲线H的方程与第一象限分支"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {}
     },
     {

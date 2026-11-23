@@ -5,6 +5,7 @@ import json, shutil, subprocess
 from analysis_db import fingerprint
 from gaokao import require, read_json, digest
 from storage import atomic_json
+from core.editorial_rules import LAYOUT_MODES, REVISION
 from .editorial import compile_writing
 from .student_pdf import render
 from .school_solver import solve_spec
@@ -21,8 +22,10 @@ from .research_quality import (
 VERSION = "exam-workflow-v2"
 
 
-def prepare(root, document, output, pilot_certificate=None, specialty_certificates=(), *, skip_pilot=False):
+def prepare(root, document, output, pilot_certificate=None, specialty_certificates=(), *,
+            skip_pilot=False, layout_mode="practice"):
     output = Path(output)
+    require(layout_mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
     require(not output.exists(), "使用新目录保留旧候选和失败记录")
     require(document.get("schema_version") == 2, "须提供带中文写作层的v2候选")
     require(document.get("research_protocol") in (None, PROTOCOL), "未知的研究命题协议")
@@ -80,12 +83,13 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         "title": document["paper"]["title"],
         "minutes": document["paper"]["minutes"],
         "total_points": document["paper"]["total_points"],
+        "layout_mode": layout_mode,
         "questions": [],
     }
     reference = document.get("quality_benchmarks") or {}
     from core.quality_audit import MAIN_VERSION
     if reference.get("protocol") == MAIN_VERSION:
-        presentation.update(layout="math_compact", partial_credit=3)
+        presentation.update(layout="math_compact", subject="math", standard=mode=="full", edition_rules=REVISION)
         if trend:
             presentation["benchmark_slots"] = reference["benchmark_slots"]
     verification = []
@@ -453,6 +457,9 @@ def publish(output, review_path, comparison_path):
     shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
     if student.get("layout") == "math_compact":
         shutil.copyfile(source.with_suffix(".md"), output / "paper.md")
+        layout_receipt = source.with_suffix(".layout.json")
+        if layout_receipt.is_file():
+            shutil.copyfile(layout_receipt, output / "paper.layout.json")
         figures = source.parent / "figures"
         if figures.is_dir():
             shutil.copytree(figures, output / "figures", dirs_exist_ok=True)

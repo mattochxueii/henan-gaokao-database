@@ -1,8 +1,8 @@
 {
   "protocol": "gaokao-editorial-audit-v2",
   "reviewer": "宿主编辑审稿",
-  "paper_version": "075a474680882b957017c5487b37303f03b8440cf9f8b7dd6d854a6519383a78",
-  "paper_pdf_sha256": "47d3d67e1cc731893da4d187b857c1d566f5da6c53ba2af63608d207397c484b",
+  "paper_version": "87395f512b9aa250c8c182d36a4681c3221ae5328d194acc8565c577b3646d90",
+  "paper_pdf_sha256": "9b232fed2470cbe96dff4d3b2b07dfefa3d02db9f94a73bf6d36ff104ebcf430",
   "reference_sha256": "94191cc1d109ba56325fe6751258682c11fb242e1026602c6530ec0f8aa27837",
   "items": [
     {
@@ -215,18 +215,18 @@
         "2025": {
           "version_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
           "id": "2025-cn-math-national-1:q004",
-          "comparison": "真题动作是正切中心的最小正位置。本题将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+          "comparison": "真题动作是正切中心的最小正位置。本题由组内方差与均值合并二阶矩，再扣除总均值平方。"
         },
         "2026": {
           "version_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
           "id": "2026-cn-math-national-1:q004",
-          "comparison": "真题动作是切线。本题将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+          "comparison": "真题动作是切线。本题由组内方差与均值合并二阶矩，再扣除总均值平方。"
         }
       },
       "findings": {
         "depth": {
           "verdict": "pass",
-          "evidence": "将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+          "evidence": "由组内方差与均值合并二阶矩，再扣除总均值平方。"
         },
         "distractors": {
           "verdict": "pass",
@@ -243,8 +243,8 @@
       },
       "depth": {
         "reasoning_steps": [
-          "均值还原总和",
-          "扣除同偏差的两项总量"
+          "均值及方差还原平方和",
+          "合并二阶矩并扣除总均值平方"
         ],
         "linked_concepts": [
           "统计与概率",
@@ -253,26 +253,26 @@
       },
       "math_depth": {
         "linked_turns": [
-          "均值还原总和",
-          "扣除同偏差的两项总量"
+          "均值及方差还原平方和",
+          "合并二阶矩并扣除总均值平方"
         ],
-        "routine_shortcut_rejected": "将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+        "routine_shortcut_rejected": "由组内方差与均值合并二阶矩，再扣除总均值平方。"
       },
       "required_figure_information": null,
       "distractors": {
         "A": {
-          "misconception": "遗漏更正次数",
-          "mechanism": "两组总量仅减去一次3。",
+          "misconception": "遗漏组间方差",
+          "mechanism": "只将1与4按组大小加权。",
           "plausible": true
         },
         "B": {
-          "misconception": "保留修正前总量",
-          "mechanism": "算(48+44)/10。",
+          "misconception": "遗漏组内方差",
+          "mechanism": "只看两组均值相对总体均值的偏差。",
           "plausible": true
         },
         "C": {
-          "misconception": "组权重误读",
-          "mechanism": "更正后两组均值为7和11，直接平均得9。",
+          "misconception": "错给两组相同权重",
+          "mechanism": "把组内贡献算成(1+4)/2，组间贡献算成(11−8)²/4。",
           "plausible": true
         }
       }
@@ -721,7 +721,7 @@
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "图注明焦点之间的距离4，决定余弦边界和最大高度。"
+          "evidence": "题文与图同写焦距4，图同时呈现上半平面取点与三角形构型。"
         }
       },
       "depth": {
@@ -745,7 +745,18 @@
         ],
         "routine_shortcut_rejected": "用可行三角形和积研究上半轨迹，逐项分离最值、开边界和射线条件。"
       },
-      "required_figure_information": "图注明焦点之间的距离4，决定余弦边界和最大高度。",
+      "required_figure_information": "题文与图同写焦距4，图同时呈现上半平面取点与三角形构型。",
+      "figure_conditions": {
+        "observation": "题文与图同写焦距4，图同时呈现上半平面取点与三角形构型。",
+        "records": [
+          {
+            "anchor": "\\(|AB|=4\\)",
+            "label": "4",
+            "meaning": "焦点间距"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {
         "B": {
           "misconception": "忘记两焦点有间隔",
@@ -766,18 +777,18 @@
         "2025": {
           "version_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
           "id": "2025-cn-math-national-1:q012",
-          "comparison": "真题动作是由给定切线反求常数。本题由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+          "comparison": "真题动作是由给定切线反求常数。本题在对数定义域中找两种斜率的切点，再比较纵截距。2026候选只用题位类别。"
         },
         "2026": {
           "version_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
           "id": "2026-cn-math-national-1:q012",
-          "comparison": "真题动作是离心率题位、式面版本待核。候选范围受限，仅据题位及可见主题。本题由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+          "comparison": "真题动作是离心率题位、式面版本待核。候选范围受限，仅据题位及可见主题。本题在对数定义域中找两种斜率的切点，再比较纵截距。2026候选只用题位类别。"
         }
       },
       "findings": {
         "depth": {
           "verdict": "pass",
-          "evidence": "由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+          "evidence": "在对数定义域中找两种斜率的切点，再比较纵截距。2026候选只用题位类别。"
         },
         "distractors": {
           "verdict": "not_applicable",
@@ -794,8 +805,8 @@
       },
       "depth": {
         "reasoning_steps": [
-          "将平行写为相同导数值",
-          "比较正负两点的纵截距"
+          "对数函数在正定义域内由斜率定位切点",
+          "两切点的纵截距分别由各自的斜率得到"
         ],
         "linked_concepts": [
           "函数与导数",
@@ -804,10 +815,10 @@
       },
       "math_depth": {
         "linked_turns": [
-          "将平行写为相同导数值",
-          "比较正负两点的纵截距"
+          "对数函数在正定义域内由斜率定位切点",
+          "两切点的纵截距分别由各自的斜率得到"
         ],
-        "routine_shortcut_rejected": "由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+        "routine_shortcut_rejected": "在对数定义域中找两种斜率的切点，再比较纵截距。2026候选只用题位类别。"
       },
       "required_figure_information": null,
       "distractors": {}
@@ -819,18 +830,18 @@
         "2025": {
           "version_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
           "id": "2025-cn-math-national-1:q013",
-          "comparison": "真题动作是等比分段求和。本题按总次数约束配平两因式，收集三组系数及符号。"
+          "comparison": "真题动作是等比分段求和。本题用底面等距条件确定球心轴线，再用两种半径表达式确定球心。"
         },
         "2026": {
           "version_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
           "id": "2026-cn-math-national-1:q013",
-          "comparison": "真题动作是偶性、整数频率与单调区间。本题按总次数约束配平两因式，收集三组系数及符号。"
+          "comparison": "真题动作是偶性、整数频率与单调区间。本题用底面等距条件确定球心轴线，再用两种半径表达式确定球心。"
         }
       },
       "findings": {
         "depth": {
           "verdict": "pass",
-          "evidence": "按总次数约束配平两因式，收集三组系数及符号。"
+          "evidence": "用底面等距条件确定球心轴线，再用两种半径表达式确定球心。"
         },
         "distractors": {
           "verdict": "not_applicable",
@@ -841,28 +852,49 @@
           "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
         },
         "figure": {
-          "verdict": "not_applicable",
-          "evidence": "本题条件都由文字或代数式确定。"
+          "verdict": "pass",
+          "evidence": "两底棱长与高度在文字和图中一致。图示呈现两底同轴及侧棱关系。"
         }
       },
       "depth": {
         "reasoning_steps": [
-          "按指数配对",
-          "核对负交叉项"
+          "每个底面等距限制球心位置",
+          "用两个距离平方相等解球心高度"
         ],
         "linked_concepts": [
-          "排列组合与计数",
-          "routine_algebra"
+          "立体几何",
+          "compare"
         ]
       },
       "math_depth": {
         "linked_turns": [
-          "按指数配对",
-          "核对负交叉项"
+          "每个底面等距限制球心位置",
+          "用两个距离平方相等解球心高度"
         ],
-        "routine_shortcut_rejected": "按总次数约束配平两因式，收集三组系数及符号。"
+        "routine_shortcut_rejected": "用底面等距条件确定球心轴线，再用两种半径表达式确定球心。"
       },
-      "required_figure_information": null,
+      "required_figure_information": "两底棱长与高度在文字和图中一致。图示呈现两底同轴及侧棱关系。",
+      "figure_conditions": {
+        "observation": "两底棱长与高度在文字和图中一致。图示呈现两底同轴及侧棱关系。",
+        "records": [
+          {
+            "anchor": "分别为 \\(2,4\\)",
+            "label": "2",
+            "meaning": "上底边长"
+          },
+          {
+            "anchor": "分别为 \\(2,4\\)",
+            "label": "4",
+            "meaning": "下底边长"
+          },
+          {
+            "anchor": "高为 \\(3\\)",
+            "label": "h=3",
+            "meaning": "两底面间的高度"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {}
     },
     {
@@ -952,7 +984,7 @@
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "标签D在BC线段上，确定面积可作相加分割。"
+          "evidence": "题文与图均显示D在边BC，便于核对两块面积的相加分割。"
         }
       },
       "depth": {
@@ -976,7 +1008,18 @@
         ],
         "routine_shortcut_rejected": "先分割面积求共用工具，再把等角约束折为边积的可行区间。"
       },
-      "required_figure_information": "标签D在BC线段上，确定面积可作相加分割。",
+      "required_figure_information": "题文与图均显示D在边BC，便于核对两块面积的相加分割。",
+      "figure_conditions": {
+        "observation": "题文与图均显示D在边BC，便于核对两块面积的相加分割。",
+        "records": [
+          {
+            "anchor": "交边 \\(BC\\) 于 \\(D\\)",
+            "label": "D",
+            "meaning": "角平分线与边BC的交点"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {}
     },
     {
@@ -1034,6 +1077,17 @@
         "routine_shortcut_rejected": "从棱柱图到投影模型，第二问的点域改变第三问的最值范围。"
       },
       "required_figure_information": "三维图给出棱长4及运动点、斜平面和投影的对应。",
+      "figure_conditions": {
+        "observation": "三维图给出棱长4及运动点、斜平面和投影的对应。",
+        "records": [
+          {
+            "anchor": "\\(AB=AC=AA_1=4\\)",
+            "label": "AB=AC=AA_1=4",
+            "meaning": "三条给定相等棱的共同长度"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {}
     },
     {
@@ -1123,7 +1177,7 @@
         },
         "figure": {
           "verdict": "pass",
-          "evidence": "图中标明移动直线方程x−y=−2，决定弦所过定点和第二问极值。"
+          "evidence": "题图与题文对齐直线方程，图展示两切点、切线交点与弦的关系。"
         }
       },
       "depth": {
@@ -1149,7 +1203,18 @@
         ],
         "routine_shortcut_rejected": "从切点参数得到弦的方程及长度，再通过顶点是否进入非负区间判断等号点数。2026候选只用题位与焦点弦层次。"
       },
-      "required_figure_information": "图中标明移动直线方程x−y=−2，决定弦所过定点和第二问极值。",
+      "required_figure_information": "题图与题文对齐直线方程，图展示两切点、切线交点与弦的关系。",
+      "figure_conditions": {
+        "observation": "题图与题文对齐直线方程，图展示两切点、切线交点与弦的关系。",
+        "records": [
+          {
+            "anchor": "\\(\\ell:x-y=-2\\)",
+            "label": "\\ell:\\ x-y=-2",
+            "meaning": "点P的初始运动直线"
+          }
+        ],
+        "qualitative_only": false
+      },
       "distractors": {}
     },
     {
@@ -1217,7 +1282,7 @@
       "distractors": "原稿1/2缺少明确单步误解。用2专门检验把垂直错作纵分量为零。"
     },
     "4": {
-      "distractors": "将不合并数据的8.0改为9.0，精确对应错给两组相同权重。"
+      "distractors": "改为合并方差，三个干扰项分别对应遗漏组间差异、遗漏组内差异与组权重错误。"
     },
     "6": {
       "distractors": "原稿10需跳两项。换成15/2，针对把第5到8项平均数充当第7项。"

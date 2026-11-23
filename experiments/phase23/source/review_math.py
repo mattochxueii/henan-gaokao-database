@@ -11,14 +11,14 @@ from gaokao import digest, read_json, require
 from mathgen.research_quality import DIMENSIONS
 from storage import atomic_json
 
-from editorial_notes import DRAFT, FIGURES, REVISION, STANDARD, TREND
+from editorial_notes import DRAFT, FIGURES, FIGURE_CONDITIONS, REVISION, STANDARD, TREND
 
 ROUTES = {
     "standard": [
         [("representation","先找因数集合"),("routine_algebra","并集去重")],
         [("routine_algebra","复除和平移后求模")],
         [("representation","将垂直关系写成数量积方程")],
-        [("representation","均值还原总和"),("routine_algebra","扣除同偏差的两项总量")],
+        [("representation","均值及方差还原平方和"),("routine_algebra","合并二阶矩并扣除总均值平方")],
         [("representation","将最小正零点折成首个正弦角"),("routine_algebra","求频率、再代入")],
         [("representation","两段和相减得到公差"),("routine_algebra","回求首项")],
         [("representation","相邻对和方向一起编码"),("branch","区分合规基数和首位被排除的子空间"),
@@ -31,8 +31,8 @@ ROUTES = {
          ("counterexample","用精确后验排除错误方向")],
         [("representation","图示焦距和两个边长重写选项"),("construct","反向用合法边长构造上半平面点"),
          ("endpoint","一端趋近共线不能取到"),("counterexample","余弦下端实际可取")],
-        [("representation","将平行写为相同导数值"),("compare","比较正负两点的纵截距")],
-        [("representation","按指数配对"),("routine_algebra","核对负交叉项")],
+        [("representation","对数函数在正定义域内由斜率定位切点"),("compare","两切点的纵截距分别由各自的斜率得到")],
+        [("representation","每个底面等距限制球心位置"),("compare","用两个距离平方相等解球心高度")],
         [("representation","由和与平方和写出关于另外两数的二次式"),
          ("necessity","中位数夹在根间需函数值非正"),("sufficiency","用符号条件得到合法的两根"),
          ("endpoint","相等边界仍满足条件")],
@@ -184,6 +184,10 @@ def compile_audit(mode, folder, path, review=None, draft=False):
             "depth":{"reasoning_steps":chain,"linked_concepts":[q["module"],step[-1]["kind"]]},
             "math_depth":{"linked_turns":chain,"routine_shortcut_rejected":editorial},
             "required_figure_information":picture,
+            **({"figure_conditions":{"observation":picture,"records":[
+                {"anchor":anchor,"label":label,"meaning":meaning}
+                for anchor,label,meaning in FIGURE_CONDITIONS.get((mode,n),())],
+                "qualitative_only": False}} if picture and not draft else {}),
             "distractors":{letter:{"misconception":pair[0],"mechanism":pair[1],
                                   "plausible":not (draft and ((n==10) or (letter=="D" and n in (3,6,7))
                                                               or (letter=="C" and n==4)))}

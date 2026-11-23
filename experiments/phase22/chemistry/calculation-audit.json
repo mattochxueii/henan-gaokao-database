@@ -1,8 +1,9 @@
 {
   "subject": "chemistry",
-  "paper_sha256": "84bcd939069dcc252849d3f3b0d312225a262196cd2fdaf9bdefe70dcddf4620",
-  "method": "从学生版读输入，使用独立有理数验算、分段函数和枚举。未读取候选答案。",
-  "scope": "只记录可计算子结论；完整推理及选项审查见独立重解。",
+  "paper_sha256": "e87f98d02e50019c2b2f23be8e6afa67058360554934ab5736c36741da9aa73e",
+  "pages": 7,
+  "scope": "只独立复算可量化的子结论。定性推理与评分需查重解记录。",
+  "input": "从终版学生页转录，不读取候选答案。",
   "checked_items": {
     "5": [
       [
@@ -22,24 +23,28 @@
         12
       ]
     ],
-    "6": [
-      [
-        1,
-        1,
-        1,
-        4,
-        6,
-        0
+    "6": {
+      "atoms_and_charge": [
+        [
+          1,
+          1,
+          2,
+          6,
+          10,
+          -2
+        ],
+        [
+          1,
+          1,
+          2,
+          6,
+          10,
+          -2
+        ]
       ],
-      [
-        1,
-        1,
-        1,
-        4,
-        6,
-        0
-      ]
-    ],
+      "hydroxide_deprotonation": 2,
+      "hydroxide_precipitation": 2
+    },
     "8": [
       42,
       37,
@@ -82,7 +87,7 @@
       true
     ],
     "15": {
-      "stoichiometric_balance": [
+      "balanced_leach": [
         [
           2,
           2,
@@ -100,15 +105,16 @@
           2
         ]
       ],
-      "pH_floor": "5",
-      "pH_ceiling": "19/2",
+      "minimum_tested_pH": "11/2",
+      "high_pH_Al_dissolved_percent": 78,
       "product_g": "3219/100"
     },
-    "16": [
-      "3/250",
-      "3/50",
-      "3/5000"
-    ],
+    "16": {
+      "original_mol_L": "3/250",
+      "matrix_consumption_mmol": "3/50",
+      "lost_mol_per_L_min": "3/5000",
+      "unremoved_solid_error": "continued peroxide decomposition and iodide oxidation have opposite signs"
+    },
     "17": [
       [
         [

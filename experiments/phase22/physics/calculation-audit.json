@@ -1,21 +1,28 @@
 {
   "subject": "physics",
-  "paper_sha256": "149f80156336f0ccab10d10dcc5619ec6671b3ab9e28114c1f6e5be0c0607b72",
-  "method": "从学生版读输入，使用独立有理数验算、分段函数和枚举。未读取候选答案。",
-  "scope": "只记录可计算子结论；完整推理及选项审查见独立重解。",
+  "paper_sha256": "634c4da7fbeaa4416654185ccb9f436b103a6ab58b5ad5c83f6160dacff94c06",
+  "pages": 7,
+  "scope": "只独立复算可量化的子结论。定性推理与评分需查重解记录。",
+  "input": "从终版学生页转录，不读取候选答案。",
   "checked_items": {
-    "1": 15,
-    "2": "400",
+    "1": {
+      "slope": "2/5",
+      "threshold_in_1e14_Hz": "19/4"
+    },
+    "2": {
+      "outer_period_over_T": 8,
+      "same_ray_interval_over_T": "8/7"
+    },
     "3": [
       "40",
       "40",
       "8",
       "3/5"
     ],
-    "4": [
-      "9/25",
-      "16/9"
-    ],
+    "4": {
+      "equivalent_primary_load_ohm": 20,
+      "secondary_RMS_V": "48"
+    },
     "5": [
       "-1",
       "2",
@@ -76,12 +83,42 @@
         "passes": true
       }
     ],
-    "14": [
-      "5",
-      "7/2",
-      "9",
-      "25/2"
-    ],
+    "14": {
+      "cases": [
+        {
+          "r_over_L": "3/4",
+          "enters_II": false,
+          "furthest_x_over_L": null,
+          "returns_with_screen": false
+        },
+        {
+          "r_over_L": "1",
+          "enters_II": false,
+          "furthest_x_over_L": null,
+          "returns_with_screen": false
+        },
+        {
+          "r_over_L": "3/2",
+          "enters_II": true,
+          "furthest_x_over_L": "7/2",
+          "returns_with_screen": true
+        },
+        {
+          "r_over_L": "2",
+          "enters_II": true,
+          "furthest_x_over_L": "4",
+          "returns_with_screen": false
+        },
+        {
+          "r_over_L": "9/4",
+          "enters_II": true,
+          "furthest_x_over_L": "17/4",
+          "returns_with_screen": false
+        }
+      ],
+      "PQ_squared_over_L_squared": "12",
+      "transit_in_pi_m_over_qB": "4/3"
+    },
     "15": {
       "v2_thresholds_in_fd_over_m": [
         "8/3",

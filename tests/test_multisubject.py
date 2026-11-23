@@ -75,16 +75,23 @@ class MultisubjectTests(unittest.TestCase):
             broken["questions"][0]["proposed_answer"] = {"velocity_m_s":4}
             with self.assertRaises(ValueError):
                 prepare(ROOT,blueprint,broken,out)
-            prepare(ROOT,blueprint,candidate,out)
+            prepared = prepare(ROOT,blueprint,candidate,out)
+            review = {**review, "paper_version": prepared["paper_version"]}
             with self.assertRaises(OSError):
                 publish(out,{})
             with self.assertRaises(ValueError):
                 adjudicate(out,{**review,"paper_version":"0"*64})
             adjudicate(out,review)
+            from pypdf import PdfReader
+
             artifact = example("physics","publication.json")["visual"]
-            with self.assertRaises(ValueError):
-                publish(out,{**artifact,"paper_sha256":"0"*64})
-            fresh = {**artifact, **{f"{k}_sha256":digest(out/f"{k}.pdf") for k in ("paper","solutions")}}
+            fresh = {**artifact, "paper_version": prepared["paper_version"]}
+            for kind in ("paper", "solutions"):
+                pdf = out / f"{kind}.pdf"
+                fresh[f"{kind}_sha256"] = digest(pdf)
+                fresh[f"{kind}_pages"] = len(PdfReader(pdf).pages)
+            with self.assertRaisesRegex(ValueError, "PDF版本或页数不符"):
+                publish(out, {**fresh, "paper_sha256": "0"*64})
             self.assertEqual(publish(out,fresh)["status"],"project_practice_independently_reviewed")
 
     def test_committed_pdf_and_versions(self):

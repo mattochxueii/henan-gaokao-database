@@ -1,6 +1,7 @@
 {
   "subject": "chemistry",
   "paper": {
+    "subject": "chemistry",
     "title": "河南新高考化学模拟试卷",
     "minutes": 75,
     "total_points": 100,
@@ -43,7 +44,7 @@
         "order": 3,
         "kind": "single_choice",
         "points": 3,
-        "stem": "用 \\(\\mathrm{AgNO_3}\\) 标准溶液滴定水样中的 \\(\\mathrm{Cl^-}\\)。滴定前后滴定管读数如图。起始时尖嘴内有一气泡，滴定结束时气泡消失。其他操作均正确。下列判断正确的是",
+        "stem": "用 \\(\\mathrm{AgNO_3}\\) 标准溶液滴定水样中的 \\(\\mathrm{Cl^-}\\)。滴定前后的凹液面读数分别为 3.10 mL、20.40 mL，如图。起始时尖嘴内有一气泡，滴定结束时气泡消失。其他操作均正确。下列判断正确的是",
         "options": {
           "A": "记录的标准溶液体积为 17.30 mL，据此算出的氯离子含量偏高",
           "B": "记录的标准溶液体积为 17.30 mL，据此算出的氯离子含量偏低",
@@ -52,8 +53,8 @@
         },
         "parts": [],
         "figure": {
-          "path": "figures/e8677fea6861c3c9070fd52fdbd79c0759764b2e2829d31fe76b87ec7030490d.png",
-          "sha256": "e8677fea6861c3c9070fd52fdbd79c0759764b2e2829d31fe76b87ec7030490d"
+          "path": "figures/f897a1ee17a88352f9007f17ced9b2d4adb020ee70d2727edb854e1d2bb4ce3b.png",
+          "sha256": "f897a1ee17a88352f9007f17ced9b2d4adb020ee70d2727edb854e1d2bb4ce3b"
         }
       },
       {
@@ -94,18 +95,15 @@
         "order": 6,
         "kind": "single_choice",
         "points": 3,
-        "stem": "用可溶性碱处理硬水，处理前有关离子的浓度比见图。硬水中的钙、镁全部转化为 \\(\\mathrm{CaCO_3}\\)、\\(\\mathrm{Mg(OH)_2}\\) 固相。与除去钙、镁对应的净离子方程式为",
+        "stem": "用氢氧化钠调节硬水。开始时 \\(\\mathrm{Ca^{2+}}\\)、\\(\\mathrm{Mg^{2+}}\\)、\\(\\mathrm{HCO_3^-}\\) 的物质的量之比为 \\(1:1:2\\)。终态 pH 约为 \\(12.5\\)，固相分析表明钙、镁主要分别进入 \\(\\mathrm{CaCO_3}\\)、\\(\\mathrm{Mg(OH)_2}\\)；滤液中的无机碳以 \\(\\mathrm{CO_3^{2-}}\\) 为主。只统计上述净转化消耗的 \\(\\mathrm{OH^-}\\)，维持终态所需的游离碱另计。下列离子方程式能表示该净转化的是",
         "options": {
-          "A": "\\(2\\mathrm{Ca^{2+}}+\\mathrm{Mg^{2+}}+2\\mathrm{HCO_3^-}+4\\mathrm{OH^-}\\rightarrow 2\\mathrm{CaCO_3}\\downarrow+\\mathrm{Mg(OH)_2}\\downarrow+2\\mathrm{H_2O}\\)",
-          "B": "\\(\\mathrm{Ca^{2+}}+\\mathrm{Mg^{2+}}+2\\mathrm{HCO_3^-}+2\\mathrm{OH^-}\\rightarrow\\mathrm{CaCO_3}\\downarrow+\\mathrm{MgCO_3}\\downarrow+2\\mathrm{H_2O}\\)",
-          "C": "\\(\\mathrm{Ca^{2+}}+\\mathrm{Mg^{2+}}+\\mathrm{HCO_3^-}+3\\mathrm{OH^-}\\rightarrow\\mathrm{CaCO_3}\\downarrow+\\mathrm{Mg(OH)_2}\\downarrow+\\mathrm{H_2O}\\)",
-          "D": "\\(\\mathrm{Ca^{2+}}+\\mathrm{Mg^{2+}}+\\mathrm{HCO_3^-}+2\\mathrm{OH^-}\\rightarrow\\mathrm{CaCO_3}\\downarrow+\\mathrm{MgOH^+}+\\mathrm{H_2O}\\)"
+          "A": "\\(\\mathrm{Ca^{2+}+Mg^{2+}+HCO_3^-+3OH^-\\rightarrow CaCO_3\\downarrow+Mg(OH)_2\\downarrow+H_2O}\\)",
+          "B": "\\(\\mathrm{Ca^{2+}+Mg^{2+}+2HCO_3^-+2OH^-\\rightarrow CaCO_3\\downarrow+MgCO_3\\downarrow+2H_2O}\\)",
+          "C": "\\(\\mathrm{Ca^{2+}+Mg^{2+}+2HCO_3^-+4OH^-\\rightarrow CaCO_3\\downarrow+Mg(OH)_2\\downarrow+CO_3^{2-}+2H_2O}\\)",
+          "D": "\\(\\mathrm{Ca^{2+}+Mg^{2+}+2HCO_3^-+6OH^-\\rightarrow Ca(OH)_2\\downarrow+Mg(OH)_2\\downarrow+2CO_3^{2-}+2H_2O}\\)"
         },
         "parts": [],
-        "figure": {
-          "path": "figures/8ab6bd3fa4c4b7bf5b7463e093ecce0c8eba9f0fe899aa83e0bb0aa8ec7b9ec4.png",
-          "sha256": "8ab6bd3fa4c4b7bf5b7463e093ecce0c8eba9f0fe899aa83e0bb0aa8ec7b9ec4"
-        }
+        "figure": null
       },
       {
         "id": "orig:chemistry:phase22-q07",
@@ -130,7 +128,7 @@
         "order": 8,
         "kind": "single_choice",
         "points": 3,
-        "stem": "某尾气净化反应在催化剂甲、乙上均经历两步，两条路线共用同一能量基准，各状态的相对焓如图。这里的能垒用该步过渡态与该步反应物的相对焓之差表示。根据图示，下列说法正确的是",
+        "stem": "某尾气净化反应在催化剂甲、乙上均经历两步，两条路线共用同一能量基准，如图，反应物、过渡态Ⅰ、中间体、过渡态Ⅱ、产物的相对焓，甲依次为 0、24、−24、18、−18，乙依次为 0、33、−12、25、−18，单位均为 \\(\\mathrm{kJ\\cdot mol^{-1}}\\)。这里的能垒用该步过渡态与该步反应物的相对焓之差表示。根据图示，下列说法正确的是",
         "options": {
           "A": "甲上两步中，最大的正向能垒为 24 \\(\\mathrm{kJ\\cdot mol^{-1}}\\)",
           "B": "乙上第二步的正向能垒为 37 \\(\\mathrm{kJ\\cdot mol^{-1}}\\)",
@@ -139,8 +137,8 @@
         },
         "parts": [],
         "figure": {
-          "path": "figures/ad31980707a668484e0cd9f3f4815c703ea7291af00173f9773bcca4bc637885.png",
-          "sha256": "ad31980707a668484e0cd9f3f4815c703ea7291af00173f9773bcca4bc637885"
+          "path": "figures/771b6410541887b50d1ffcb1bee321b008caf90fe142308a827998ea01e88208.png",
+          "sha256": "771b6410541887b50d1ffcb1bee321b008caf90fe142308a827998ea01e88208"
         }
       },
       {
@@ -166,7 +164,7 @@
         "order": 10,
         "kind": "single_choice",
         "points": 3,
-        "stem": "常温下，二元弱酸 \\(\\mathrm{H_2A}\\) 及其电离产物的分布分数随 pH 的变化如图。同一物种的分布分数等于其浓度与三种含 A 微粒总浓度之比，交叉点横坐标如图。下列说法正确的是",
+        "stem": "常温下，二元弱酸 \\(\\mathrm{H_2A}\\) 及其电离产物的分布分数随 pH 的变化如图。同一物种的分布分数等于其浓度与三种含 A 微粒总浓度之比，两处相邻曲线交点的横坐标分别为 pH 4.0 和 pH 8.0。下列说法正确的是",
         "options": {
           "A": "\\(\\mathrm{pH}=6\\) 时，\\(\\mathrm{H_2A}\\) 的分布分数为 \\(1/102\\)",
           "B": "\\(\\mathrm{pH}=8\\) 时，\\(\\mathrm{HA^-}\\) 的分布分数达到最大",
@@ -184,7 +182,7 @@
         "order": 11,
         "kind": "single_choice",
         "points": 3,
-        "stem": "氧化锂可形成反萤石型晶体，晶胞边长为 \\(a\\)。图为按高度分层的俯视图，图中标出的 \\(x,y,z\\) 坐标均以 \\(a\\) 为单位。取 Li、O 的相对原子质量分别为 7、16，\\(N_\\mathrm{A}\\) 为阿伏加德罗常数。下列说法正确的是",
+        "stem": "氧化锂可形成反萤石型晶体，晶胞边长为 \\(a\\)。图为按高度分层的俯视图，图中标出的 \\(x,y,z\\) 坐标均以 \\(a\\) 为单位，图示四层的高度分别为 \\(0,0.25,0.50,0.75\\)。取 Li、O 的相对原子质量分别为 7、16，\\(N_\\mathrm{A}\\) 为阿伏加德罗常数。下列说法正确的是",
         "options": {
           "A": "一个晶胞中 \\(\\mathrm{Li^+}\\) 与 \\(\\mathrm{O^{2-}}\\) 的数目比为 \\(1:1\\)",
           "B": "\\(\\mathrm{Li^+}\\) 与最近的 \\(\\mathrm{O^{2-}}\\) 之间的距离为 \\(a/2\\)",
@@ -202,7 +200,7 @@
         "order": 12,
         "kind": "single_choice",
         "points": 3,
-        "stem": "草酸钙水合物 \\(\\mathrm{CaC_2O_4\\cdot xH_2O}\\) 在惰性气氛下受热，质量随温度的变化如图。A 到 B 只失去结晶水。B 到 C、C 到 D 各只生成一种气体，每个阶段只生成一种固相；D 为 \\(\\mathrm{CaO}\\)。取 H、C、O、Ca 的相对原子质量分别为 1、12、16、40。下列说法正确的是",
+        "stem": "草酸钙水合物 \\(\\mathrm{CaC_2O_4\\cdot xH_2O}\\) 在惰性气氛下受热，热重曲线如图，A、B、C、D 四个平台对应的相对质量依次为 100.0%、87.7%、68.5%、38.4%。A 到 B 只失去结晶水。B 到 C、C 到 D 各只生成一种气体，每个阶段只生成一种固相；D 为 \\(\\mathrm{CaO}\\)。取 H、C、O、Ca 的相对原子质量分别为 1、12、16、40。下列说法正确的是",
         "options": {
           "A": "B 到 C 释放的气体为 \\(\\mathrm{CO_2}\\)",
           "B": "每有 1 mol 初始样品，B 到 C 失重约 28 g",
@@ -220,7 +218,7 @@
         "order": 13,
         "kind": "single_choice",
         "points": 3,
-        "stem": "阿司匹林分子中碳的标记位置如图。用该化合物分别作甲、乙两组实验。甲组用足量 \\(\\mathrm{NaOH}\\) 溶液使酯基完全水解，所得羧基、酚羟基均按去质子形式计，再充分酸化。乙组在酶催化下用乙醇处理，原有羧基不反应，只发生信息式所示的醇解。不考虑同位素交换。 已知：\\(\\mathrm{RCOOR'+R''OH\\rightarrow RCOOR''+R'OH}\\)。 下列说法正确的是",
+        "stem": "阿司匹林乙酰基的羰基碳用 \\({}^{13}\\mathrm{C}\\) 标记，结构如图。用该化合物分别作甲、乙两组实验。甲组用足量 \\(\\mathrm{NaOH}\\) 溶液使酯基完全水解，所得羧基、酚羟基均按去质子形式计，再充分酸化。乙组在酶催化下用乙醇处理，原有羧基不反应，只发生信息式所示的醇解。不考虑同位素交换。 已知：\\(\\mathrm{RCOOR'+R''OH\\rightarrow RCOOR''+R'OH}\\)。 下列说法正确的是",
         "options": {
           "A": "甲组充分酸化前，1 mol 该化合物只需消耗 2 mol \\(\\mathrm{NaOH}\\)",
           "B": "甲组充分酸化后，标记的碳进入水杨酸",
@@ -238,7 +236,7 @@
         "order": 14,
         "kind": "single_choice",
         "points": 3,
-        "stem": "某溶液初始含 \\(\\mathrm{Ag^+}\\)、\\(\\mathrm{Pb^{2+}}\\) 各 \\(1.0\\times10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}\\)。加入氯化物调节游离 \\(\\mathrm{Cl^-}\\) 浓度，忽略体积变化及配合物。图中直线分别为与相应氯化物固体共存时的理论平衡关系。\\(pX=-\\lg c(X)\\)，浓度按 \\(\\mathrm{mol\\cdot L^{-1}}\\) 代入。下列说法正确的是",
+        "stem": "某溶液初始含 \\(\\mathrm{Ag^+}\\)、\\(\\mathrm{Pb^{2+}}\\) 各 \\(1.0\\times10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}\\)。加入氯化物调节游离 \\(\\mathrm{Cl^-}\\) 浓度，用硝酸维持溶液为酸性，避免金属离子水解；控制总体积基本不变。图中直线分别为与相应氯化物固体共存时的理论平衡关系。银、铅两条线分别满足 \\(pAg=10-pCl\\)、\\(pPb=5-2pCl\\)。\\(pX=-\\lg c(X)\\)，浓度按 \\(\\mathrm{mol\\cdot L^{-1}}\\) 代入。下列说法正确的是",
         "options": {
           "A": "\\(\\mathrm{pCl}=2\\) 时，若 \\(\\mathrm{AgCl}\\) 已析出，游离 \\(\\mathrm{Ag^+}\\) 为 \\(10^{-6}\\ \\mathrm{mol\\cdot L^{-1}}\\)",
           "B": "\\(\\mathrm{pCl}=2\\) 时，形成 \\(\\mathrm{AgCl}\\)，但 \\(\\mathrm{PbCl_2}\\) 未达到饱和",
@@ -247,8 +245,8 @@
         },
         "parts": [],
         "figure": {
-          "path": "figures/ae857491c1084a00537e6a45e0cdacf29b68fd10ce740a482aacf4533f59fc2b.png",
-          "sha256": "ae857491c1084a00537e6a45e0cdacf29b68fd10ce740a482aacf4533f59fc2b"
+          "path": "figures/41ca0423eeb4ae0cf5868cc553bc8d781fb2d1a6246d073500a0ee05a237e3d1.png",
+          "sha256": "41ca0423eeb4ae0cf5868cc553bc8d781fb2d1a6246d073500a0ee05a237e3d1"
         }
       },
       {
@@ -256,7 +254,7 @@
         "order": 15,
         "kind": "constructed_response",
         "points": 14,
-        "stem": "某项目从退役正极粉中回收锂。正极粉主要含 \\(\\mathrm{LiFePO_4}\\)、导电碳，另含少量酸溶铝和镁。流程如图。氧化浸出时 \\(\\mathrm{LiFePO_4}\\) 中的铁进入 \\(\\mathrm{FePO_4}\\) 固相，\\(\\mathrm{H_2O_2}\\) 被还原为水；导电碳不参与反应。 常温下，取 \\(K_{\\mathrm{sp}}[\\mathrm{Al(OH)_3}]=1.0\\times10^{-33}\\)、\\(K_{\\mathrm{sp}}[\\mathrm{Mg(OH)_2}]=1.0\\times10^{-11}\\)、\\(K_\\mathrm{w}=1.0\\times10^{-14}\\)。加碱前 \\(c(\\mathrm{Al^{3+}})=1.0\\times10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}\\)，\\(c(\\mathrm{Mg^{2+}})=1.0\\times10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}\\)。忽略体积变化及可溶性羟基配合物。",
+        "stem": "某项目从退役正极粉中回收锂，流程如图。正极粉主要含 \\(\\mathrm{LiFePO_4}\\)、导电碳，另含少量酸溶铝和镁。氧化浸出时 \\(\\mathrm{LiFePO_4}\\) 中的铁进入 \\(\\mathrm{FePO_4}\\) 固相，\\(\\mathrm{H_2O_2}\\) 被还原为水；导电碳不参与反应。 小试取同一批氧化浸出滤液，分别以氢氧化钠调至 pH 4.5、5.5、6.0、10.5，平衡后过滤。相应滤液中总溶解态铝的保留率依次为 44%、2%、1%、78%，总溶解态镁的保留率依次为 100%、100%、100%、0.6%。保留率以该离子在加碱前的总溶解态含量为基准。工艺先在合适的 pH 除铝并过滤，再将该滤液调至 pH 10.5 除镁并过滤，随后加入 \\(\\mathrm{Na_2CO_3}\\) 沉锂。",
         "options": {},
         "parts": [
           {
@@ -265,20 +263,20 @@
           },
           {
             "label": "（2）",
-            "text": "“除铝”要求 \\(c(\\mathrm{Al^{3+}})\\leq1.0\\times10^{-6}\\ \\mathrm{mol\\cdot L^{-1}}\\)，且镁的离子积严格小于相应 \\(K_\\mathrm{sp}\\)。pH 的范围为 ③________。"
+            "text": "首段要求铝保留率不大于 2%、镁保留率不小于 98%。符合要求的最低已测 pH 为 ③________；总溶解态铝在高 pH 回升时，主要含铝阴离子的化学式为 ④________。"
           },
           {
             "label": "（3）",
-            "text": "“除镁”所得滤渣的主要成分为 ④________。分开过滤铝渣与镁渣的目的是 ⑤__________________。"
+            "text": "第二段所得滤渣中，镁主要以 ⑤________ 形式存在。首段过滤应在第二段加碱之前完成，原因是 ⑥________________________。"
           },
           {
             "label": "（4）",
-            "text": "稳定生产时，每批新料向沉锂工段提供 0.900 mol 锂。每批分离碳酸锂后，未分流母液共含 0.120 mol 锂，按图比例返回下一批，其余排出。忽略其他损失，\\(M(\\mathrm{Li_2CO_3})=74.0\\ \\mathrm{g\\cdot mol^{-1}}\\)。每批获得 \\(\\mathrm{Li_2CO_3}\\) ⑥________ g（保留两位小数）。"
+            "text": "稳定生产时，每批新料向沉锂工段提供 0.900 mol 锂。每批分离碳酸锂后，未分流母液共含 0.120 mol 锂，其中 \\(3/4\\) 返回下一批，其余排出。忽略其他损失，\\(M(\\mathrm{Li_2CO_3})=74.0\\ \\mathrm{g\\cdot mol^{-1}}\\)。每批获得 \\(\\mathrm{Li_2CO_3}\\) ⑦________ g（保留两位小数）。"
           }
         ],
         "figure": {
-          "path": "figures/882a0e386833c0d3191de62624b6e67e5d973ff06ed4c48db7fb2109ec6c8933.png",
-          "sha256": "882a0e386833c0d3191de62624b6e67e5d973ff06ed4c48db7fb2109ec6c8933"
+          "path": "figures/49063c3d3d7d29f2fa0665375bf0d3e7114bd4accdf4b31d5d50ebc212392bcb.png",
+          "sha256": "49063c3d3d7d29f2fa0665375bf0d3e7114bd4accdf4b31d5d50ebc212392bcb"
         }
       },
       {
@@ -286,24 +284,24 @@
         "order": 16,
         "kind": "constructed_response",
         "points": 14,
-        "stem": "小组研究某清洗液中 \\(\\mathrm{H_2O_2}\\) 在 \\(\\mathrm{MnO_2}\\) 存在下的分解。清洗液中的添加剂 R 会消耗一部分碘。取等量的 10.00 mL 清洗液分组，恒温静置 10.0 min；接触 \\(\\mathrm{MnO_2}\\) 的一组在计时结束立即除去固体。各取同批相同条件下的试样做原样测定和配对空白。空白先用不引入耗碘副反应的酶法完全去除 \\(\\mathrm{H_2O_2}\\)，且 R 含量保持不变。各待测液均加入过量酸化 KI，再等量加入 0.200 mmol 碘，用 \\(0.0200\\ \\mathrm{mol\\cdot L^{-1}}\\) 的 \\(\\mathrm{Na_2S_2O_3}\\) 滴定剩余碘。数据如图。酸性下残留的 \\(\\mathrm{MnO_2}\\) 也可能氧化 \\(\\mathrm{I^-}\\)。",
+        "stem": "小组研究某清洗液中 \\(\\mathrm{H_2O_2}\\) 在 \\(\\mathrm{MnO_2}\\) 存在下的分解。清洗液中的添加剂 R 会消耗一部分碘。取等量的 10.00 mL 清洗液分组，恒温静置 10.0 min；接触 \\(\\mathrm{MnO_2}\\) 的一组在计时结束立即除去固体。各取同批相同条件下的试样做原样测定和配对空白。空白先用不引入耗碘副反应的酶法完全去除 \\(\\mathrm{H_2O_2}\\)，且 R 含量保持不变。各待测液均加入过量酸化 KI，再等量加入 0.200 mmol 碘，用 \\(0.0200\\ \\mathrm{mol\\cdot L^{-1}}\\) 的 \\(\\mathrm{Na_2S_2O_3}\\) 滴定剩余碘。未加 \\(\\mathrm{MnO_2}\\) 时原样、空白的滴定体积为 26.00、14.00 mL；接触 \\(\\mathrm{MnO_2}\\) 时分别为 20.00、14.00 mL，如图。酸性下残留的 \\(\\mathrm{MnO_2}\\) 也可能氧化 \\(\\mathrm{I^-}\\)。",
         "options": {},
         "parts": [
           {
             "label": "（1）",
-            "text": "酸性下 \\(\\mathrm{H_2O_2}\\) 氧化 \\(\\mathrm{I^-}\\) 的离子方程式为 ①______________________。碘被硫代硫酸根还原时生成 \\(\\mathrm{I^-}\\) 与 \\(\\mathrm{S_4O_6^{2-}}\\)，写出该反应的离子方程式 ②______________________。"
+            "text": "重力过滤时，用于引流的玻璃仪器是 ①________。滴定接近终点时加入淀粉溶液，终点的颜色变化为 ②________。酸性下 \\(\\mathrm{H_2O_2}\\) 氧化 \\(\\mathrm{I^-}\\) 的离子方程式为 ③______________________。碘被硫代硫酸根还原时生成 \\(\\mathrm{I^-}\\) 与 \\(\\mathrm{S_4O_6^{2-}}\\)，写出该反应的离子方程式 ④______________________。"
           },
           {
             "label": "（2）",
-            "text": "未加 \\(\\mathrm{MnO_2}\\) 的组，测得 \\(\\mathrm{H_2O_2}\\) 的浓度为 ③________ \\(\\mathrm{mol\\cdot L^{-1}}\\)，每份清洗液的 R 可消耗碘 ④________ mmol。"
+            "text": "未加 \\(\\mathrm{MnO_2}\\) 的组，测得 \\(\\mathrm{H_2O_2}\\) 的浓度为 ⑤________ \\(\\mathrm{mol\\cdot L^{-1}}\\)，每份清洗液的 R 可消耗碘 ⑥________ mmol。"
           },
           {
             "label": "（3）",
-            "text": "与未加 \\(\\mathrm{MnO_2}\\) 的组比较，10.0 min 内因接触 \\(\\mathrm{MnO_2}\\) 而多分解的 \\(\\mathrm{H_2O_2}\\) 对应的平均速率为 ⑤________ \\(\\mathrm{mol\\cdot L^{-1}\\cdot min^{-1}}\\)。"
+            "text": "与未加 \\(\\mathrm{MnO_2}\\) 的组比较，10.0 min 内因接触 \\(\\mathrm{MnO_2}\\) 而多分解的 \\(\\mathrm{H_2O_2}\\) 对应的平均速率为 ⑦________ \\(\\mathrm{mol\\cdot L^{-1}\\cdot min^{-1}}\\)。"
           },
           {
             "label": "（4）",
-            "text": "若该组的原样测定未除净 \\(\\mathrm{MnO_2}\\)，而仍用图中空白值作校正，能否仅根据已知数据判定结果偏高还是偏低？填 ⑥________，理由为 ⑦________________________。"
+            "text": "若该组的原样测定未除净 \\(\\mathrm{MnO_2}\\)，而仍用图中空白值作校正，能否仅根据已知数据判定结果偏高还是偏低？填 ⑧________，理由为 ⑨________________________。"
           }
         ],
         "figure": {
@@ -316,7 +314,7 @@
         "order": 17,
         "kind": "constructed_response",
         "points": 15,
-        "stem": "恒压密闭容器中，只考虑下列两个气相反应：\nⅠ　\\(\\mathrm{CO_2(g)+H_2(g)}\\rightleftharpoons\\mathrm{CO(g)+H_2O(g)}\\)\nⅡ　\\(\\mathrm{CO(g)+3H_2(g)}\\rightleftharpoons\\mathrm{CH_4(g)+H_2O(g)}\\)\n两组实验均投料 \\(1.00\\) mol \\(\\mathrm{CO_2}\\)、\\(4.00\\) mol \\(\\mathrm{H_2}\\)，恒压 400 kPa。两温度 \\(T_1\\)、\\(T_2\\) 下的平衡转化率和选择性见图。选择性定义为 \\(\\mathrm{CH_4}\\) 的物质的量占已转化 \\(\\mathrm{CO_2}\\) 物质的量的分数。图中 \\(2/3\\) 为准确值。以 \\(p_i/(100\\ \\mathrm{kPa})\\) 代替浓度写无量纲平衡常数。",
+        "stem": "恒压密闭容器中，只考虑下列两个气相反应：\nⅠ　\\(\\mathrm{CO_2(g)+H_2(g)}\\rightleftharpoons\\mathrm{CO(g)+H_2O(g)}\\)\nⅡ　\\(\\mathrm{CO(g)+3H_2(g)}\\rightleftharpoons\\mathrm{CH_4(g)+H_2O(g)}\\)\n两组实验均投料 \\(1.00\\) mol \\(\\mathrm{CO_2}\\)、\\(4.00\\) mol \\(\\mathrm{H_2}\\)，恒压 400 kPa。两温度 \\(T_1\\)、\\(T_2\\) 下的平衡转化率和选择性如图，\\(T_1\\) 下二氧化碳转化率为 \\(0.75\\)、甲烷选择性为 \\(2/3\\)，\\(T_2\\) 下分别为 \\(0.80,0.50\\)。选择性定义为 \\(\\mathrm{CH_4}\\) 的物质的量占已转化 \\(\\mathrm{CO_2}\\) 物质的量的分数。图中 \\(2/3\\) 为准确值。以 \\(p_i/(100\\ \\mathrm{kPa})\\) 代替浓度写无量纲平衡常数。",
         "options": {},
         "parts": [
           {
@@ -372,7 +370,10 @@
         }
       }
     ],
+    "layout_mode": "practice",
     "quality_reference_sha256": "dcc4260b93c0e81768efe9288b96a05bd4832f04a278c4b50198dac7e2553495",
+    "standard": true,
+    "edition_rules": "gaokao-edition-rules-v1",
     "layout": "science",
     "layout_rules": {
       "choice_figures_minimum": 7,
@@ -389,5 +390,5 @@
     },
     "partial_credit": null
   },
-  "paper_version": "0f445c9d8c53cf3ebed40c9e58779051f3fc4827573d81eb283178532fa498be"
+  "paper_version": "3fa21837a036f9d13fed980fe35d7c65e6ad89265118e3cd87b73cde101d79cf"
 }

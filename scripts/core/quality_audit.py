@@ -5,6 +5,7 @@ from analysis_db import fingerprint
 from forecast_store import write_new
 from gaokao import digest, read_json, require
 from subjects import SCIENCES
+from core.editorial_rules import REVISION, figure_issues, item_text, notation_issues, paper_issues, solution_competition
 
 VERSION = "gaokao-editorial-audit-v1"
 MAIN_VERSION = "gaokao-editorial-audit-v2"
@@ -193,7 +194,8 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
     versions = _versions(paper)
     keys = _answers(paper, review) if review is not None else None
     require(keys is None or len(keys) == len(items), "独立核对题数不符")
-    failures = []
+    current_edition = paper.get("edition_rules") == REVISION
+    failures = [{"number":0,"rule":"coverage","reason":reason} for reason in paper_issues(subject, paper)]
     for n, (q, row) in enumerate(zip(questions, items, strict=True), 1):
         def reject(rule, evidence):
             failures.append({"number": n, "rule": rule, "reason": evidence})
@@ -227,6 +229,13 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
                    and all(_text(value) for value in values)
                    and len(set(values)) == len(values) for values in (steps, concepts)):
             reject("depth", "缺少同题位要求的不同信息处理步骤及相互联结的概念")
+        if current_edition and subject not in {"chinese","english"}:
+            for issue in figure_issues(q, row):
+                reject("figure", issue)
+            if subject == "math" and (issue := notation_issues(item_text(q, options=True))):
+                reject("language", issue)
+            if subject == "chemistry" and (issue := solution_competition(q, row)):
+                reject("depth", issue)
         if main:
             independent = review["questions"][n - 1] if subject == "math" and review is not None else None
             _main_findings(subject, paper, q, row, n, reject, independent)
@@ -256,7 +265,9 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
         for failure in prior["failures"]:
             n = str(failure["number"])
             change = revisions.get(n, {}).get(failure["rule"])
-            if versions[n] == prior["item_versions"][n] or not _text(change):
+            changed = (versions != prior["item_versions"] if n == "0"
+                       else versions.get(n) != prior["item_versions"].get(n))
+            if not changed or not _text(change):
                 failures.append({**failure, "reason": "退稿题未换版，或缺少针对该项退稿的改写记录"})
     require(failures or review is not None, "通过版须以独立重解核定选择题键")
     return {
@@ -286,8 +297,11 @@ def _paper_inputs(folder):
     paper = read_json(folder / "student-text.json")
     require(fingerprint(candidate) == manifest["candidate_sha256"]
             and fingerprint(paper) == manifest["writing_sha256"], "数学题面已修改，须重新生成")
+    # Once released, validate the distributed bytes instead of old local preview files.
+    published = folder / "paper.pdf"
     preview = folder / "review-only/paper.pdf"
-    pdf = digest(preview if preview.is_file() else folder / "paper.pdf")
+    use_published = (folder / "publication.json").is_file() or not preview.is_file()
+    pdf = digest(published if use_published else preview)
     require(pdf == manifest["pdf_sha256"], "PDF已修改，须重新生成")
     return candidate.get("quality_benchmarks"), paper, manifest["writing_sha256"], pdf
 

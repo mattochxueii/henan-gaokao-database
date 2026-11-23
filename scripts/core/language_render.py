@@ -4,12 +4,18 @@ from xml.sax.saxutils import escape
 
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import Image, KeepTogether, PageBreak, Paragraph, Spacer, SimpleDocTemplate
-from gaokao import atomic_write
+from reportlab.platypus import Image, KeepTogether, Paragraph, Spacer, SimpleDocTemplate
+from gaokao import atomic_write, require
 from mathgen.export import chinese_font
+from core.editorial_rules import LAYOUT_MODES
+from mathgen.student_pdf import AnswerSpace, answer_height
 
 
 def render(paper, output, answers=None, *, listening=None):
+    mode = paper.get("layout_mode", "practice")
+    require(mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
+    practice = mode=="practice" and not answers and not listening
+    spaces = []
     title=paper["title"]+(" · 听力朗读稿" if listening else " · 答案与评分参考" if answers else "")
     font=chinese_font()
     styles={
@@ -51,8 +57,6 @@ def render(paper, output, answers=None, *, listening=None):
         sections={key["id"]:key for key in paper["sections"]}
         for q in paper["questions"]:
             if q["section"] not in seen_sections:
-                if q["section"] == "continuation" and answers is None:
-                    flow.append(PageBreak())
                 put(sections[q["section"]]["title"],"h2")
                 seen_sections.add(q["section"])
             n=q["number"]
@@ -92,6 +96,8 @@ def render(paper, output, answers=None, *, listening=None):
             else:
                 for key,line in options:
                     put(f"{key}. {line}",target=block)
+            if practice and (height := answer_height(q)):
+                block.append(AnswerSpace(n, height, spaces))
             flow.append(KeepTogether(block))
             if q["kind"] not in ("single_choice","multiple_choice","gap_match","grammar_gap"):
                 flow.append(Spacer(1,9))

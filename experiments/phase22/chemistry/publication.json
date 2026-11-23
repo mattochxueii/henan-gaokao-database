@@ -1,8 +1,8 @@
 {
-  "quality_audit_sha256": "e1e45e78b8e5e9c61129ca8bfdd83d4d269c1c7645f809ca49476e5567095830",
+  "quality_audit_sha256": "30feaa05046999b8ed3e1bd0f218b8167727fc7be9a829d44be6db8f6eceffd4",
   "status": "project_practice_independently_reviewed",
   "subject": "chemistry",
-  "paper_version": "0f445c9d8c53cf3ebed40c9e58779051f3fc4827573d81eb283178532fa498be",
+  "paper_version": "3fa21837a036f9d13fed980fe35d7c65e6ad89265118e3cd87b73cde101d79cf",
   "question_ids": [
     "orig:chemistry:phase22-q01",
     "orig:chemistry:phase22-q02",
@@ -23,55 +23,18 @@
     "orig:chemistry:phase22-q17",
     "orig:chemistry:phase22-q18"
   ],
-  "review_sha256": "b50f7efcf6c937cd88351fad033b9812c3f95584ddecd2277bcff0355666b010",
-  "verification_sha256": "5e9370f2ab868f41fdc69fa5c26e2582184c000bf9065110d2cc34a9da8d0a8c",
+  "review_sha256": "39a3c6b97cad1026380e7a35a1d10e17cf4d2092ff5a89a63ef4b5051610dc2e",
+  "verification_sha256": "380f7c8fcea2dfb89ab1f3b1de9d72ebed677e293210fa5c539058d64da67366",
   "visual": {
-    "paper_version": "0f445c9d8c53cf3ebed40c9e58779051f3fc4827573d81eb283178532fa498be",
-    "reviewer": "Work 宿主逐页目视",
+    "paper_version": "3fa21837a036f9d13fed980fe35d7c65e6ad89265118e3cd87b73cde101d79cf",
     "passed": true,
-    "paper_sha256": "84bcd939069dcc252849d3f3b0d312225a262196cd2fdaf9bdefe70dcddf4620",
-    "solutions_sha256": "1d1acf0a7bd81e9565172103a435a260339f49d318b240b4b26229582958e849",
-    "paper_pages": 6,
+    "reviewer": "宿主逐页视觉核对",
+    "paper_pages": 7,
     "solutions_pages": 3,
-    "paper_note": "逐页见 page_checks.paper。",
-    "solutions_note": "逐页见 page_checks.solutions。",
-    "page_checks": {
-      "paper": [
-        "Q1–3。氮化硼原子点与化学键清晰，3.10/20.40 mL 的凹面窗及尖嘴分开。",
-        "Q4–7。流程箭头、钙镁柱高、有机键线式与独立列出的长离子方程清晰。",
-        "Q8–11。能垒图例与数据点无重叠，膜边界连续，分布交点与晶胞四层分数刻度可辨。",
-        "Q12–14。热重平台、标记碳及两条沉淀共存线与正确题号相配，双列长项同排续行。",
-        "Q15–16。锂母液回用分支、测量表及放大横线完整，铝镁初始浓度清楚。",
-        "Q17–18。分行的耦合反应、选择性柱高、合成六步不与结构标签相连，末问长横线和分值完整。"
-      ],
-      "solutions": [
-        "逐项核对 Q1–13：化学式、电荷上标、图上读数和碱处理前后口径。",
-        "Q14–17：检查沉淀阈值、两条反应方程式、四道大题中的前三道圈号答案及评分续排。",
-        "Q17 末评分续接，Q18 六步、20 种、四步路线的答案及评分齐全。"
-      ]
-    },
-    "method": "Poppler 145–160 dpi 逐页目视。另核对渲染 PDF 题号、分值及横线笔画。",
-    "choice_figure_numbers": [
-      2,
-      3,
-      4,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14
-    ],
-    "blank_counts_by_question": {
-      "15": 6,
-      "16": 7,
-      "17": 8,
-      "18": 7
-    },
-    "measured_continuous_rules": 28
+    "paper_note": "1 滴定管尖嘴和气泡标注不压线。2 核查硬水离子式完整、能垒数字与线分离。3 核查电解膜允许通过的离子与晶胞分层。4 核查同位素标记及银铅共存线。5 检查工艺过滤先后、数据表与第15题空位。6 检查第16题滴定终点及第17题两组柱和分压公式。7 核查六步有机路线、结构式、空位和答区。",
+    "solutions_note": "1 检查强碱净反应、能垒及所选选项。2 复核除铝、除镁依据和负号；滴定误差两方向，保持逐空对应。3 核查有机结构及分步评分。",
+    "paper_sha256": "e87f98d02e50019c2b2f23be8e6afa67058360554934ab5736c36741da9aa73e",
+    "solutions_sha256": "5def00d45ae118efad0d84cfc1556adbe81b56dcff1ff898b383a3cd72c5bfc0"
   },
   "scope": "学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。"
 }

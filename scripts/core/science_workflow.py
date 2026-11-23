@@ -9,6 +9,7 @@ import shutil
 from analysis_db import fingerprint
 from core.catalog import catalog, query, use
 from core.science_dna import STANDARD_LAYOUT
+from core.editorial_rules import LAYOUT_MODES, REVISION
 from forecast_store import write_new
 from gaokao import digest, read_json, relative_path, require
 from subjects import SCIENCES, SUBJECTS, science_verifier
@@ -151,8 +152,9 @@ def independent_evidence(evidence, labels):
     return evidence
 
 
-def prepare(root, blueprint, candidate, output, figure_root=None):
+def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode="practice"):
     subject = blueprint["subject"]
+    require(layout_mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
     require(candidate["subject"]==subject, "候选学科与蓝图不符")
     questions = candidate["questions"]
     require(questions and isinstance(questions,list) and len(questions)<=50, "题量不合理")
@@ -235,11 +237,11 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     else:
         minutes = candidate.get("minutes", max(5,len(visible)*6))
         require(type(minutes) is int and 0<minutes<=180, "专项练习时长无效")
-    paper = {"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
-             "minutes":minutes,"total_points":points,"questions":visible}
+    paper = {"subject":subject,"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
+             "minutes":minutes,"total_points":points,"questions":visible,"layout_mode":layout_mode}
     if standard:
         if reference := candidate.get("quality_benchmarks"):
-            paper["quality_reference_sha256"] = fingerprint(reference)
+            paper.update(quality_reference_sha256=fingerprint(reference), standard=True, edition_rules=REVISION)
         paper["layout"] = "science"
         paper["layout_rules"] = rules
         paper["partial_credit"] = next(

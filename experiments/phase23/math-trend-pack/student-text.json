@@ -2,6 +2,7 @@
   "title": "2027 河南数学趋势研判专题",
   "minutes": 55,
   "total_points": 45,
+  "layout_mode": "practice",
   "questions": [
     {
       "id": "orig:ai:phase23:trend:q01",
@@ -1824,14 +1825,14 @@
             "dot": true
           },
           {
-            "math": "H",
+            "math": "H:xy=1",
             "at": [
-              2.6,
-              0.3846153846153846
+              2.7,
+              0.37037037037037035
             ],
             "offset": [
               5,
-              5
+              7
             ],
             "dot": false
           },
@@ -1891,7 +1892,9 @@
     }
   ],
   "layout": "math_compact",
-  "partial_credit": 3,
+  "subject": "math",
+  "standard": false,
+  "edition_rules": "gaokao-edition-rules-v1",
   "benchmark_slots": {
     "1": 11,
     "2": 14,

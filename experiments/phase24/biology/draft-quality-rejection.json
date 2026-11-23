@@ -1,0 +1,100 @@
+{
+  "protocol": "gaokao-editorial-audit-v1",
+  "status": "returned",
+  "reference_sha256": "cfd490ea036a403d516c75dd105bd8257346e414ee657285f355d403392167cf",
+  "paper_version": "5f10dab3e5013833d8690f40fd61a123a9438b14ff29b3dca6cd1802f5188124",
+  "paper_pdf_sha256": "e790c4398e68997da6667d236bfa8855c037c54c3162de72e80caba8868d3b1c",
+  "item_versions": {
+    "1": "671384afc19ba28419b4105b3d986d552848bb8c906fc6231f7c0bfd9504bfe2",
+    "2": "b9015f75541bacfd2f56980e953f05d1eef8fb6b8d9516dff2938f4eabbc0bca",
+    "3": "7c3dbacff694c5634f5f026f80d6b3886da37d6125a4d4e6bf806c9b5498c301",
+    "4": "78e7626aff89cfffa1593997c02f87cac988a034d926b443edc8df9be5baf2db",
+    "5": "af94d7795e463785d7221ed3ebab8c3a5a617bf30d418cb8e33054dd267fb8fb",
+    "6": "b1d63f005ceceb19afb5cad19d0ef78606c69885df36b2e93e8fecc893051d1e",
+    "7": "fd60a56aff08490557555fc4ba036adfa66ec12eec8ffd0d8acdc998c652d4d3",
+    "8": "42ad7904cc1f54cad2857f4e8b948fc2c05f452e037a5480d895a9e9bcd34361",
+    "9": "daea1856df629838bcb6fb007338004e824f07129bbafd528302dd00fa0625e9",
+    "10": "84cd594c44392156afa51539d830184531df3f6256bf1daee00114ac3222bb4e",
+    "11": "4e1410ef076454e11bf90229bcbfa46d6a5fc15563ca5ecf18f1bfa6206bfea3",
+    "12": "2135edbbe49ce48e2e5c36fee0d0e3af592721c3db915de3582188f72d70ec3c",
+    "13": "d8989c7166747a25a612fb99cb7822740dd577894c23d790634a227c8d80da0e",
+    "14": "df964a1b09e724d8e6484ff944fb33d671a91c8d565fea73b7eebef090eb35d5",
+    "15": "c911194a22dde78938978be33a30644d64354a71efe9ae0318f80905e0af6d74",
+    "16": "42ea4cf24bfc02d15bb320869a413af21d0692558ad759a5830e608df02e56c3",
+    "17": "04cc053fb22cb9c83a67ccb6750a7522fb582ab1f2fc65a478578ed45e8d6c68",
+    "18": "2375069033c4080c832b43491d7a93d31ed60dcf47cb3cc3fce5607be3702c17",
+    "19": "ac31e041c3c54aac6c853b4f10b5834bfa611b21cc9ca94c81f46f89b1f4d5ca",
+    "20": "1495929d18ea3dd528159e1bd4406f1933c846d5f02b60e8b211d403e0fd8078",
+    "21": "dbc445c51cec74e1bd283a1af1f6d09445be7bea485be8bd555c71be10eaf6cd"
+  },
+  "audit_sha256": "962a40eb27470ae02757a771dbc71bab520210f830dc5189c5df3e34c2631fb7",
+  "independent_review_sha256": null,
+  "prior_rejection_sha256": null,
+  "failures": [
+    {
+      "number": 1,
+      "rule": "language",
+      "reason": "加上 ATP 不透膜及腔内无产酸反应，使H+跨膜的推断有明确边界。"
+    },
+    {
+      "number": 3,
+      "rule": "distractors",
+      "reason": "给出正常转运误判或取错分母的具体路径。"
+    },
+    {
+      "number": 3,
+      "rule": "depth",
+      "reason": "把从一个柱点抄数字改为比较浓度—初速曲线及判断的证据边界。"
+    },
+    {
+      "number": 3,
+      "rule": "distractors",
+      "reason": "B项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 3,
+      "rule": "distractors",
+      "reason": "C项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 3,
+      "rule": "distractors",
+      "reason": "D项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 10,
+      "rule": "distractors",
+      "reason": "用错配对照、剂量外推、把表型当分子靶点三个真实误区。"
+    },
+    {
+      "number": 10,
+      "rule": "depth",
+      "reason": "把读单柱改为 M 与 ABA 的两次同条件对照。"
+    },
+    {
+      "number": 10,
+      "rule": "distractors",
+      "reason": "B项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 10,
+      "rule": "distractors",
+      "reason": "C项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 10,
+      "rule": "distractors",
+      "reason": "D项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 17,
+      "rule": "figure",
+      "reason": "增加图1和图2编号，把正常与升高CO₂的图例移进可印区域。"
+    },
+    {
+      "number": 20,
+      "rule": "depth",
+      "reason": "从直接套9:3:4改为从存活表型和分型找缺失合子，再求条件配子和杂交比例。"
+    }
+  ]
+}

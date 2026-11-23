@@ -749,6 +749,7 @@ def run_ai(
     forecast_context=None,
     skip_pilot=False,
     quality_reference=None,
+    layout_mode="practice",
 ):
     require(not output.exists(), "输出目录已存在")
     if evaluation_split:
@@ -793,7 +794,8 @@ def run_ai(
             require(uses_protocol(document), "留出实验须逐题关联严格复核依据")
             verify_candidate_references(document, evaluation_split)
         manifest = prepare(
-            root, document, output, pilot_certificate, specialty_certificates, skip_pilot=skip_pilot
+            root, document, output, pilot_certificate, specialty_certificates,
+            skip_pilot=skip_pilot, layout_mode=layout_mode,
         )
         return {
             "generation_mode": "ai",
