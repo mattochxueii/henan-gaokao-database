@@ -7,7 +7,7 @@ from contextlib import closing
 from pathlib import Path
 from gaokao import read_json, read_lines, require, digest
 from analysis_db import fingerprint
-from national_quality import practice_reviewed, research_eligible
+from national_quality import practice_reviewed, practice_view, research_eligible
 import local_archive
 import math_calibration
 
@@ -266,6 +266,8 @@ def query(
             continue
         if not include_quarantined and not research_eligible(r):
             continue
+        if not include_quarantined and not verified_only:
+            r = practice_view(r)
         if subject and r["subject"] != subject:
             continue
         if year is not None and r["year"] != year:

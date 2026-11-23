@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import KeepTogether, PageBreak, Paragraph, Spacer, SimpleDocTemplate
+from reportlab.platypus import Image, KeepTogether, PageBreak, Paragraph, Spacer, SimpleDocTemplate
 from gaokao import atomic_write
 from mathgen.export import chinese_font
 
@@ -26,12 +26,17 @@ def render(paper, output, answers=None, *, listening=None):
         for line in text.splitlines():
             if not line.strip():
                 continue
-            target.append(Paragraph(escape(line),styles[kind]))
+            styled=escape(line)
+            for token in ("u","strong","em","sub","sup"):
+                replacement={"strong":"b","em":"i"}.get(token,token)
+                styled=styled.replace(f"&lt;{token}&gt;",f"<{replacement}>").replace(f"&lt;/{token}&gt;",f"</{replacement}>")
+            target.append(Paragraph(styled,styles[kind]))
             marker={"h1":"# ","h2":"## ","h3":"### ","text":""}[kind]
             md.append(marker+line)
     put(title,"h1")
     if listening:
-        put("监考用。两节材料均读两遍。第一节每段后留10秒。第二节每组读前按每题5秒读题，读后按每题5秒作答。")
+        if not paper.get("archive_practice"):
+            put("监考用。两节材料均读两遍。第一节每段后留10秒。第二节每组读前按每题5秒读题，读后按每题5秒作答。")
         for label,text in listening.items():
             put(paper["materials"][label]["title"],"h2")
             put(text)
@@ -40,7 +45,7 @@ def render(paper, output, answers=None, *, listening=None):
             put("项目参考评分。开放性试题允许依据合理、表达准确的不同答案。")
         else:
             put(f'满分{paper["points"]}分　考试时间{paper["minutes"]}分钟')
-            if paper["subject"]=="english":
+            if paper["subject"]=="english" and not paper.get("archive_practice"):
                 put("听力30分，笔试120分。河南计入高考文化成绩的外语分为笔试原始分 × 1.25 后四舍五入。")
         seen_sections, seen_materials=set(),set()
         sections={key["id"]:key for key in paper["sections"]}
@@ -77,8 +82,16 @@ def render(paper, output, answers=None, *, listening=None):
                 put(f'{n}. ____________________', "text")
                 continue
             put(f'{n}.（{q["points"]:g}分）{q["stem"]}', "h3" if q.get("options") else "text",block)
-            for key,line in q.get("options",{}).items():
-                put(f"{key}. {line}",target=block)
+            for figure in q.get("archive_figures",[]):
+                block.append(Image(str(figure),width=340,height=145,kind="proportional"))
+                md.append(f"![题图]({figure.relative_to(output.parent).as_posix()})")
+            options=list(q.get("options",{}).items())
+            if paper.get("archive_practice") and paper["subject"]=="english" and all(len(v)<38 for _,v in options):
+                for i in range(0,len(options),2):
+                    put("　　".join(f"{k}. {v}" for k,v in options[i:i+2]),target=block)
+            else:
+                for key,line in options:
+                    put(f"{key}. {line}",target=block)
             flow.append(KeepTogether(block))
             if q["kind"] not in ("single_choice","multiple_choice","gap_match","grammar_gap"):
                 flow.append(Spacer(1,9))

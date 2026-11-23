@@ -1,0 +1,523 @@
+{
+  "pdf_sha256": "8c4cba9d011425c95d0a1ff44e721859cc915b616fb058190ce79d60e8d3b309",
+  "student_review_sha256": "843ffdf1db54b67f5442bd02363d38507d0a0fa29128fd55dafa21d40fafc831",
+  "math_verification_sha256": "a0ea34b7c00dd5a108ea66127bfbcad566b62414a877b5a838b01bb36fb43bd2",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "逐个判定0、2在区间内，3为右开端点，4在区间外，因此是两个元素。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "计算复数商的实部为1/2，共轭相加得到两倍实部。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "由和、积知两边长为2和4；夹角余弦是1/2，所以对边平方为4＋16−8＝12。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "新数据是13、19、19、25，均值19，方差是两项36除以4。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "在长度平方的比较中，交叉项是−4倍数量积，故数量积为1。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 6,
+      "passed": true,
+      "evidence": "正渐近线通过原点和(3,4)，右焦点为(5,0)；点到直线距离为4。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 7,
+      "passed": true,
+      "evidence": "函数关于x=1对称。二阶导数为正、且在1处一阶导数为0，所以两支各严格单调；端点共同给最大高度10，并确有两个端点根。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 8,
+      "passed": true,
+      "evidence": "判别式得实根必要条件；其正侧最大根是1＋2√3/3，此时另一对根相等且各为1−√3/3，正且能代回两条件。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 9,
+      "passed": true,
+      "evidence": "递推从2得到3、5；aₙ−1每次乘2。由首项检验C时n=1即失败；n=3反驳D。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 2,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 10,
+      "passed": true,
+      "evidence": "同奇偶两对，积偶五对；公共部分只有(2,4)。联合概率1/6与乘积5/18不等。五个积偶对子中仅一对满足和偶。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 0,
+        "partial_tasks": 4,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 11,
+      "passed": true,
+      "evidence": "平移2后，原式为二次曲线关于横轴折叠。两支给四根需内半径为正、外内不重合。四个中心位移为正负两种根式，平方和固定，故距离和严格小于4；成对乘积则等于1−a²。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 2,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 12,
+      "passed": true,
+      "evidence": "点(2,4)处的切线斜率9。横坐标由2到0时纵坐标减少18，纵截距为−14。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 13,
+      "passed": true,
+      "evidence": "经过三截点的平面有法向量(4,3,2)，沿该方向由原点达到常数12的平面所需距离为12/√29。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 14,
+      "passed": true,
+      "evidence": "从四次改面得到五段，第一段面在三段中分四个，另一面分成两段，都是3种；乘以两种开头得18，除以四正面全部70种。独立遍历8位序列也为18。",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 15,
+      "passed": true,
+      "evidence": "直接把通项代入首项、递推并用正性保证唯一。乘积化为2/(2k−1)−2/(2k＋1)，加总后第9项边界未超过1.9、第10项超过，且Sₙ严格增加。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 16,
+      "passed": true,
+      "evidence": "把正序排列中的第二白球看成两个标记位置的最大值，位置对等可能。条件下的7对中只有后两次均白这一对使前三次没有白球。最大位为4的有3对、为5的有4对。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 1,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 17,
+      "passed": true,
+      "evidence": "以A为原点并用三棱为轴。平行需要DE沿目标面法空间的零点，解得垂直高度1；D不在目标面，验证是严格平行。独立取向量DC、DE叉积得另一面的法向量，再与(3,4,6)点积算锐角。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 1,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 18,
+      "passed": true,
+      "evidence": "非水平弦可写x=4+ky，y的两根之和为4k、积为−16；两切线交点为(−4,2k)。弦长乘T到弦的距离再除以2，得面积4(k²＋4)^(3/2)。两边点积为12(k²＋4)>0，因此角为锐角；以面积两倍除点积得tan角＝2√(k²＋4)/3。60°限制等价于k²≤11/4。所有这样的k都有两实根，故上下界均可达且无缺口。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 19,
+      "passed": true,
+      "evidence": "正性来自f的唯一低点1。上界用差式的二阶导数为(x−1)/x²>0，且差式与一阶导数在1均为0。下界另将x写为t³，差式除以1+t²后直接求导分解为(t−1)^4(t²+t+1)/(t²(t²+1)^2)，严格为正。从y−1≥ln y取y=x^δ可证明对数被任意正次幂压住，故任何b<1的大x都不能控制R(x)。第一问保证b=1可用。",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    }
+  ],
+  "scoring": {
+    "authority": "project",
+    "paper_sha256": "8c4cba9d011425c95d0a1ff44e721859cc915b616fb058190ce79d60e8d3b309",
+    "questions": [
+      {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分，选中的选项均正确但未选全得部分分，含错误选项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分，选中的选项均正确但未选全得部分分，含错误选项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分，选中的选项均正确但未选全得部分分，含错误选项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "说明各项为正并合法取倒数"
+          },
+          {
+            "part": 1,
+            "points": 4,
+            "criterion": "写出倒数等差关系并给出通项"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "推出乘积等于相邻差"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "裂项与望远镜求和"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "处理严格不等式并得最小整数"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "说明白球位置对等可能"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "写出全部分布"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "正确计算期望"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "确定条件事件和归一化分母"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "计出恰一白条件概率"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "计算剩余次数的条件期望"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "正确建立空间坐标系与目标面法向量"
+          },
+          {
+            "part": 1,
+            "points": 4,
+            "criterion": "解得 AE 并说明存在与唯一"
+          },
+          {
+            "part": 2,
+            "points": 4,
+            "criterion": "正确建立第二平面的法向量"
+          },
+          {
+            "part": 2,
+            "points": 4,
+            "criterion": "正确用夹角公式计算锐角余弦"
+          }
+        ]
+      },
+      {
+        "number": 18,
+        "steps": [
+          {
+            "part": 1,
+            "points": 4,
+            "criterion": "建立弦方程并得 uv＝−4"
+          },
+          {
+            "part": 1,
+            "points": 4,
+            "criterion": "建立切线并求交点横坐标"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "求参数化面积"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "由点积把夹角变为参数范围"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "证明边界和中间值可达并写出范围"
+          }
+        ]
+      },
+      {
+        "number": 19,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证明分母为正"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "构造差式并正确求导"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证明严格上界"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "立方根代换得到差式"
+          },
+          {
+            "part": 2,
+            "points": 4,
+            "criterion": "证明导数因式及严格下界"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "证明较小指数失效并确定最优值"
+          }
+        ]
+      }
+    ]
+  }
+}

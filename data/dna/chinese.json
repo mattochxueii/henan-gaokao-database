@@ -1703,6 +1703,671 @@
       }
     ],
     "aggregate": {
+      "authoring": {
+        "scope": "近三年真实正文的编辑归纳；干扰项方法和评分颗粒供原创设计，缺少官方评分时仅为项目建议。",
+        "groups": [
+          {
+            "group": "信息阅读",
+            "position_range": [
+              1,
+              5
+            ],
+            "typical_prompt": "从对照材料观点到定位论证证据，再跨材料归纳或迁移。",
+            "distractor_patterns": [
+              "扩大适用范围",
+              "把例证写成唯一原因",
+              "将材料外判断当作结论"
+            ],
+            "scoring_components": [
+              "答出明确观点",
+              "引用或概括两条相符的材料证据",
+              "说明证据与结论的关系"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2024-cn-chinese-national-1:q001",
+                    "sha256": "a8ed2e99ed454fe3b6e7fce8b66e83c3af87d72bb61b2937fa1ce0f8c1b51c3c",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2024-cn-chinese-national-1:q002",
+                    "sha256": "8f28775ac529f345c7f5b175e111eae34d70f149c7cc0683a61e4fa97f32e5f0",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2024-cn-chinese-national-1:q003",
+                    "sha256": "a364f6ef971cd831262e50810e90216389605015c61b1cb268052541ad5816f6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2024-cn-chinese-national-1:q004",
+                    "sha256": "1a4f69160b5ea3b908648e47bc76d0e532a8d515c54c4a03a9d0926400cfb8c6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2024-cn-chinese-national-1:q005",
+                    "sha256": "536db5510edf7e54209b64b1cff7ab6d50ade293a6d010c677e516bc942548f0",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2025-cn-chinese-national-1:q001",
+                    "sha256": "29bc44370240ed4dd611a87b57550cb57437a3c828b0802146403b06768db2a5",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2025-cn-chinese-national-1:q002",
+                    "sha256": "b9bc9081a4d92b5b63ea22154b28e2e558fb1aa0f2d43a42d0583aa1576ef03d",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2025-cn-chinese-national-1:q003",
+                    "sha256": "f75d786300a9542b92007324d686455ba56c45e0aca8ecfa028f86c99044f254",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2025-cn-chinese-national-1:q004",
+                    "sha256": "154175c29e12d4ef8c93ede1123bc26207ab787f48951a7ca2f7157eb4ff9635",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2025-cn-chinese-national-1:q005",
+                    "sha256": "5fbfaf8a5f79fa9b9d10cfb83f75d342be258a1695793b658755d565140b607e",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 1,
+                    "id": "2026-cn-chinese-national-1:q001",
+                    "sha256": "ee9d6dd17a9181bcdc11ef3b284b7c8db7d22467c23526a31d27ef40464b81d0",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 2,
+                    "id": "2026-cn-chinese-national-1:q002",
+                    "sha256": "07531e6a0233936d2c7165f887a1696060a6df5280fc250549738fa74cc04bd9",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 3,
+                    "id": "2026-cn-chinese-national-1:q003",
+                    "sha256": "ca9b9270f03cc65b4f2a0493f5641fe25060ccd96a00c30b46d353d918afea97",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 4,
+                    "id": "2026-cn-chinese-national-1:q004",
+                    "sha256": "1a1cf57dcac2ca691cbabc463e3fe70276bdb11f74d998b867d3b16424aa8752",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 5,
+                    "id": "2026-cn-chinese-national-1:q005",
+                    "sha256": "1f313fd512ddd8ac0fb3e422f135e6d8061a8b17dd843ae05ef2d967b0fa7c9a",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "文学阅读",
+            "position_range": [
+              6,
+              9
+            ],
+            "typical_prompt": "从情节、语词或叙述角度出发，解释人物、表达效果或结构。",
+            "distractor_patterns": [
+              "将某人物态度归给另一人物",
+              "把局部情绪扩大为全文主题",
+              "叙述技法存在但作用归因错误"
+            ],
+            "scoring_components": [
+              "明示观察角度",
+              "结合具体文句或情节",
+              "解释审美效果或主题作用"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2024-cn-chinese-national-1:q006",
+                    "sha256": "816862f716fc3c6ac470fbb649ed945123f334e2a17d5866ee2bdaea967801b4",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2024-cn-chinese-national-1:q007",
+                    "sha256": "945a0ecff966daf4abc28265c1f00d927c1a6f479c12047eca9f2d33e78e48c7",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2024-cn-chinese-national-1:q008",
+                    "sha256": "464835fb081421a3a61ad55f5db8e86d1e7c2ee22dd8799877bf04f2695c262e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2024-cn-chinese-national-1:q009",
+                    "sha256": "591127ec46cbcd46a6457c49c0b05d56b2921f6ad20543bed886df14f6bf367d",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2025-cn-chinese-national-1:q006",
+                    "sha256": "72771cf7a1b94d76cd0f1e4751581a5ad20889503fe559110250b79c32a5438d",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2025-cn-chinese-national-1:q007",
+                    "sha256": "9c20fcc52342d7c58ab8deb238511c50d8657dcdc176ec6ed35f35b6a4db5ee8",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2025-cn-chinese-national-1:q008",
+                    "sha256": "e555c3527c1f7cfd2460e0cde9f4aa05360b94f4546ac039fc6f08f7017d4cea",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2025-cn-chinese-national-1:q009",
+                    "sha256": "b2a6978439c7af3f39b689eb1d800c1c84fd55dcfa3efded080ae3eba6915795",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 6,
+                    "id": "2026-cn-chinese-national-1:q006",
+                    "sha256": "658456ef3e148fa6954d25a9dd3438fb480cb0412b22258b7a14b2e8861f83a5",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 7,
+                    "id": "2026-cn-chinese-national-1:q007",
+                    "sha256": "d51ed25eda4c7ef8458585ec4984f2e53435fe2804d000c820732d38cf800733",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 8,
+                    "id": "2026-cn-chinese-national-1:q008",
+                    "sha256": "52eb07a3c5c84765aec8ba8173bd64e1216e44848ac864d3632953a951e15876",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 9,
+                    "id": "2026-cn-chinese-national-1:q009",
+                    "sha256": "3ba1edf50fe3783da4a90bfa8d4733b2829889b422509a7146341be34fb8bf85",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "文言文",
+            "position_range": [
+              10,
+              14
+            ],
+            "typical_prompt": "断句、词义对比、事实归属、翻译与信息整合。",
+            "distractor_patterns": [
+              "混淆主客体",
+              "颠倒事件先后或因果",
+              "用现代词义解释古义"
+            ],
+            "scoring_components": [
+              "翻译覆盖关键实词和句式",
+              "概括须回到原文措施与结果"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 10,
+                    "id": "2024-cn-chinese-national-1:q010",
+                    "sha256": "5bdc607f2bccdfc13ad7720539b9fbd365505f23a45e97fe0a847efcb9317265",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2024-cn-chinese-national-1:q011",
+                    "sha256": "aa49064525f7be4613d05ddef2d75d10952502167c93771f96f51be6e62cb5e3",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2024-cn-chinese-national-1:q012",
+                    "sha256": "abd1eea4763f2540e2df51d8421a62e94d5652e5de7e239f1eaa33ef4b9bb0d2",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2024-cn-chinese-national-1:q013",
+                    "sha256": "8580071f7388b08cbedd5ff1d535e92c3bf15056de3812048d44ede286626c1f",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2024-cn-chinese-national-1:q014",
+                    "sha256": "5ae05afaff1c6e9def2d2e9f34d1fb83c03db28112e03aa50d50f39a69fb2cc5",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 10,
+                    "id": "2025-cn-chinese-national-1:q010",
+                    "sha256": "7862b1ac2b9ebf399264e72dea9c29ec095b442f3113670c00e9fbe7849e202b",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2025-cn-chinese-national-1:q011",
+                    "sha256": "999f3c64886b05accd5d922ba4a5bd6d9831eb1e63ea9b707e9ab638765fa795",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2025-cn-chinese-national-1:q012",
+                    "sha256": "a86672d3da27a91bc1dfdb94ec98c7250c900137c0df1c09a018f0fb4ef8602e",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2025-cn-chinese-national-1:q013",
+                    "sha256": "ad55d06e5ed8955f362b0a8d2a2dc926c08f38f758f885ab85318422e28541ca",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2025-cn-chinese-national-1:q014",
+                    "sha256": "2ddee8a62855aeecefa3ee183a60f4b1539e05f4f490521b493206e74978fcd2",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 10,
+                    "id": "2026-cn-chinese-national-1:q010",
+                    "sha256": "b3098bb80af40d11018432db0458d2930436d7443a8891378146a559a81864c3",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 11,
+                    "id": "2026-cn-chinese-national-1:q011",
+                    "sha256": "0197dcb897c8ce416f92633c51273cb8d774e7948949220cd0d1331ebefd26bf",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 12,
+                    "id": "2026-cn-chinese-national-1:q012",
+                    "sha256": "7f835e562cec899b0c8db085a2ac8b1cd3b050322edafb9796c489f607c35a44",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 13,
+                    "id": "2026-cn-chinese-national-1:q013",
+                    "sha256": "9c55029a5e7388ef5cb1413ba9fad1d5a6ea3561f30e6de29fd8e68efbf71e84",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 14,
+                    "id": "2026-cn-chinese-national-1:q014",
+                    "sha256": "70d49b7bed36b78492bcd6e65dae9eeb69ee1cac11dc46b0d3f0458ae867987f",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "古诗",
+            "position_range": [
+              15,
+              16
+            ],
+            "typical_prompt": "辨识诗句与用典细节，联系语境解释诗意或情感。",
+            "distractor_patterns": [
+              "颠倒诗中时空",
+              "将诗人态度与典故人物混同"
+            ],
+            "scoring_components": [
+              "写出情感或主旨",
+              "结合意象、关键字或用典阐明依据"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 15,
+                    "id": "2024-cn-chinese-national-1:q015",
+                    "sha256": "d48b9d5fcf6ab00ebbf233bba96596c356b5699175b4d2203796fe4c79f591ce",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2024-cn-chinese-national-1:q016",
+                    "sha256": "07f366b7064a0e06e2e75afe6bc4084cbf1feaf9e85dee0d69224696951ac939",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 15,
+                    "id": "2025-cn-chinese-national-1:q015",
+                    "sha256": "6dcfd2fd114314d847cf005021e7b8d342ec82204f6d487a29e5da4e0ef75afd",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2025-cn-chinese-national-1:q016",
+                    "sha256": "60462e6c28af0beb46a7b970f8136719baf3f531c1ac6a34fd8de823915e44d4",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 15,
+                    "id": "2026-cn-chinese-national-1:q015",
+                    "sha256": "390483ba2cd49009bdc27a3b27208bfd5b80531c75e04c7001acd8aa2abedee6",
+                    "practice_eligible": true
+                  },
+                  {
+                    "number": 16,
+                    "id": "2026-cn-chinese-national-1:q016",
+                    "sha256": "68dabfc57b348d40876d342e6061dbf98c8daed58c9a6f37d731bd80c08e2ff8",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "默写",
+            "position_range": [
+              17,
+              17
+            ],
+            "typical_prompt": "按语境补写，保留开放设问的合格备选。",
+            "distractor_patterns": [],
+            "scoring_components": [
+              "逐空核字",
+              "开放例句同时满足场景与两句出处"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 17,
+                    "id": "2024-cn-chinese-national-1:q017",
+                    "sha256": "963b098a791dade9521566bad3b68487fc9761b0f9514513762e15ed60720ecc",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 17,
+                    "id": "2025-cn-chinese-national-1:q017",
+                    "sha256": "b108f2c0eb62e75d7c883498972fd457738c15d2212565d3a11c307ff6f79e4f",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 17,
+                    "id": "2026-cn-chinese-national-1:q017",
+                    "sha256": "45ec65695007f16582f9b80e8d24b27b7f77bda82d7c16b59ae1340b0a7ddfd7",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "写作",
+            "typical_prompt": "明确材料中的论题，形成可用论据检验的立场",
+            "scoring_components": [
+              "回应材料的问题",
+              "提出并论证立场",
+              "例证与论点有实质联系",
+              "表达与结构完整"
+            ],
+            "evidence": [
+              {
+                "year": 2024,
+                "items": [
+                  {
+                    "number": 23,
+                    "id": "2024-cn-chinese-national-1:q023",
+                    "sha256": "c19bcfeba9aa315b73bc423678f3d5e2581c614b2d6b733bb449f178929c23c4",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2025,
+                "items": [
+                  {
+                    "number": 23,
+                    "id": "2025-cn-chinese-national-1:q023",
+                    "sha256": "12c2605632bc9bd5b7677899f2b16389cd89808638e14fa1af534b0d4c9275b1",
+                    "practice_eligible": true
+                  }
+                ]
+              },
+              {
+                "year": 2026,
+                "items": [
+                  {
+                    "number": 22,
+                    "id": "2026-cn-chinese-national-1:q022",
+                    "sha256": "23575148d5bf99a7d4d6fd02c7cde44c22d14606dcd6c754095ee04151adcf40",
+                    "practice_eligible": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "evolution": [
+          {
+            "year": 2024,
+            "item": {
+              "number": 18,
+              "id": "2024-cn-chinese-national-1:q018",
+              "sha256": "c84d1f06083d0d1436f569ce7c50e53834647122c410cfa86c9bc9e899d50315",
+              "practice_eligible": true
+            },
+            "action": "以指定本体写借喻"
+          },
+          {
+            "year": 2024,
+            "item": {
+              "number": 19,
+              "id": "2024-cn-chinese-national-1:q019",
+              "sha256": "56c1d420abe639d6210c7cf3c1aaa2b09fb604244bc3edcb39e495bbb1a7bb2e",
+              "practice_eligible": true
+            },
+            "action": "成语语境"
+          },
+          {
+            "year": 2024,
+            "item": {
+              "number": 20,
+              "id": "2024-cn-chinese-national-1:q020",
+              "sha256": "4dad6e3e36551ddb839488b0a540f917c267a36317daf786c34943cb20664c76",
+              "practice_eligible": true
+            },
+            "action": "病句与逻辑"
+          },
+          {
+            "year": 2024,
+            "item": {
+              "number": 21,
+              "id": "2024-cn-chinese-national-1:q021",
+              "sha256": "8a6e5081cf9756ff0666e163c1ddcc3c7cafd2069e32640ec361460a714251e4",
+              "practice_eligible": true
+            },
+            "action": "补写"
+          },
+          {
+            "year": 2024,
+            "item": {
+              "number": 22,
+              "id": "2024-cn-chinese-national-1:q022",
+              "sha256": "86d737f83b555fe5fcf3a17a599df4000eca5315e4b1e5e349ffe65e28169478",
+              "practice_eligible": true
+            },
+            "action": "评议词语搭配"
+          },
+          {
+            "year": 2025,
+            "item": {
+              "number": 18,
+              "id": "2025-cn-chinese-national-1:q018",
+              "sha256": "742f618730d225ea87a0173f78ea00946f85c54adc5ef469ecf57cd9605740f3",
+              "practice_eligible": true
+            },
+            "action": "病句与逻辑"
+          },
+          {
+            "year": 2025,
+            "item": {
+              "number": 19,
+              "id": "2025-cn-chinese-national-1:q019",
+              "sha256": "b6f610942ab80eb40e3d511530ea220528544ce8506a34912b761e298bc78484",
+              "practice_eligible": true
+            },
+            "action": "句子衔接"
+          },
+          {
+            "year": 2025,
+            "item": {
+              "number": 20,
+              "id": "2025-cn-chinese-national-1:q020",
+              "sha256": "94ff35068fcd90bf9042d4f5d665c4f60960af5021144b49dc7dd2e11ae25142",
+              "practice_eligible": true
+            },
+            "action": "词语辨析"
+          },
+          {
+            "year": 2025,
+            "item": {
+              "number": 21,
+              "id": "2025-cn-chinese-national-1:q021",
+              "sha256": "029a7d4c297b5bd68248e961b387ffd99b1953184d86887ab5723d1aa5733f57",
+              "practice_eligible": true
+            },
+            "action": "剪纸图意和谐音"
+          },
+          {
+            "year": 2025,
+            "item": {
+              "number": 22,
+              "id": "2025-cn-chinese-national-1:q022",
+              "sha256": "9af3f75868b5267e930bbb665d03497626a203a05838317f971df9c583ee3799",
+              "practice_eligible": true
+            },
+            "action": "按文意列研究问题"
+          },
+          {
+            "year": 2026,
+            "item": {
+              "number": 18,
+              "id": "2026-cn-chinese-national-1:q018",
+              "sha256": "d30c787a0f0d4d7ffd2fc2ecaf67d57ca0eba26ab45d4a1690fec28c6f31cc59",
+              "practice_eligible": true
+            },
+            "action": "找出并改正错字"
+          },
+          {
+            "year": 2026,
+            "item": {
+              "number": 19,
+              "id": "2026-cn-chinese-national-1:q019",
+              "sha256": "a3d03db789ab7b39e3e2463e467f98875cdc370d616a68237f41aedd8b0c9f76",
+              "practice_eligible": true
+            },
+            "action": "语句排序"
+          },
+          {
+            "year": 2026,
+            "item": {
+              "number": 20,
+              "id": "2026-cn-chinese-national-1:q020",
+              "sha256": "4246c44df08995c7cd76df58347bff274fccc338c9f42b3b3fd01e4f6a542757",
+              "practice_eligible": true
+            },
+            "action": "病句与逻辑"
+          },
+          {
+            "year": 2026,
+            "item": {
+              "number": 21,
+              "id": "2026-cn-chinese-national-1:q021",
+              "sha256": "07d2bb43ed4583bfd80621cc2e39c5c77d6b3274ed3072df7d2a66db1d768b9a",
+              "practice_eligible": true
+            },
+            "action": "热词释义及例句"
+          }
+        ]
+      },
       "reading_length_range": {
         "信息类": [
           1592,

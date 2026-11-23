@@ -6,7 +6,7 @@
     "2022": 112,
     "2023": 67,
     "2024": 38,
-    "2025": 37,
+    "2025": 38,
     "2026": 35
   },
   "positions": {
@@ -320,17 +320,18 @@
         "数列": 1,
         "平面向量": 1,
         "概率统计": 2,
+        "独立性检验": 1,
         "线面平行与距离": 1
       },
       "kinds": {
         "fill_in": 16,
-        "constructed_response": 5
+        "constructed_response": 6
       },
       "features": {},
       "points": {
         "5": 15,
         "6": 1,
-        "13": 5
+        "13": 6
       },
       "scores": {},
       "passage_length_range": null
@@ -2562,6 +2563,11 @@
     },
     {
       "paper_id": "2025-cn-math-national-1",
+      "number": 15,
+      "version_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f"
+    },
+    {
+      "paper_id": "2025-cn-math-national-1",
       "number": 16,
       "version_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00"
     },
@@ -3163,10 +3169,10 @@
       {
         "year": 2025,
         "paper_id": "2025-cn-math-national-1",
-        "paper_sha256": "1f76b735f13f5237b982b057a352c36720bb594db974bff236067a41c90194fc",
+        "paper_sha256": "5f23b71ec62f4ec72c1d6670ec2fec14cc31cf02ff1d55903eb37b32311ead79",
         "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
         "question_count": 19,
-        "eligible_questions": 18,
+        "eligible_questions": 19,
         "tail": {
           "number": 19,
           "question_id": "2025-cn-math-national-1:q019",
@@ -3267,7 +3273,804 @@
         }
       }
     ],
-    "aggregate": {},
+    "aggregate": {
+      "authoring": {
+        "scope": "近三年真实正文的编辑归纳；干扰项方法和评分颗粒供原创设计，缺少官方评分时仅为项目建议。",
+        "position_rotation": [
+          {
+            "number": 1,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "集合与逻辑",
+                "number": 1,
+                "id": "2024-cn-math-new-gaokao-1:q001",
+                "sha256": "9f1a58a30b601e4fd1940662ec125bd6eb6e01c972faf5a85874ed4d85c9cd3b",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "复数",
+                "number": 1,
+                "id": "2025-cn-math-national-1:q001",
+                "sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "统计与概率",
+                "number": 1,
+                "id": "2026-cn-math-national-1:q001",
+                "sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "集合与逻辑": 1,
+              "复数": 1,
+              "统计与概率": 1
+            }
+          },
+          {
+            "number": 2,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "复数",
+                "number": 2,
+                "id": "2024-cn-math-new-gaokao-1:q002",
+                "sha256": "348d806568e2959d36285b83e26a3ea5fe8088198490e19acbbf994698abb194",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "集合与逻辑",
+                "number": 2,
+                "id": "2025-cn-math-national-1:q002",
+                "sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "平面向量",
+                "number": 2,
+                "id": "2026-cn-math-national-1:q002",
+                "sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "复数": 1,
+              "集合与逻辑": 1,
+              "平面向量": 1
+            }
+          },
+          {
+            "number": 3,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "平面向量",
+                "number": 3,
+                "id": "2024-cn-math-new-gaokao-1:q003",
+                "sha256": "3bab80f29e1bfc24de6cb3569c60b9975287409f04f8389fecad9cf7a4392da1",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "解析几何",
+                "number": 3,
+                "id": "2025-cn-math-national-1:q003",
+                "sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "集合与逻辑",
+                "number": 3,
+                "id": "2026-cn-math-national-1:q003",
+                "sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "平面向量": 1,
+              "解析几何": 1,
+              "集合与逻辑": 1
+            }
+          },
+          {
+            "number": 4,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "三角函数与解三角形",
+                "number": 4,
+                "id": "2024-cn-math-new-gaokao-1:q004",
+                "sha256": "9fc352b6c5678c005d97cc00317e2a3cb4cfc8d3966cdedd1592e1e8b0fa97b1",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "三角函数与解三角形",
+                "number": 4,
+                "id": "2025-cn-math-national-1:q004",
+                "sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "函数与导数",
+                "number": 4,
+                "id": "2026-cn-math-national-1:q004",
+                "sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "三角函数与解三角形": 2,
+              "函数与导数": 1
+            }
+          },
+          {
+            "number": 5,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "立体几何",
+                "number": 5,
+                "id": "2024-cn-math-new-gaokao-1:q005",
+                "sha256": "e5cc0e2c7e46e681809be248dd81b3de6c32ff3fca6ebcddbffae03052842fc0",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "函数与导数",
+                "number": 5,
+                "id": "2025-cn-math-national-1:q005",
+                "sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "解析几何",
+                "number": 5,
+                "id": "2026-cn-math-national-1:q005",
+                "sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "立体几何": 1,
+              "函数与导数": 1,
+              "解析几何": 1
+            }
+          },
+          {
+            "number": 6,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "函数与导数",
+                "number": 6,
+                "id": "2024-cn-math-new-gaokao-1:q006",
+                "sha256": "e880831faf3dc1c30e1738424919172c8cb1a5ae4fa1ea3a81b05180cb9a4af0",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "平面向量",
+                "number": 6,
+                "id": "2025-cn-math-national-1:q006",
+                "sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "函数与导数",
+                "number": 6,
+                "id": "2026-cn-math-national-1:q006",
+                "sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "函数与导数": 2,
+              "平面向量": 1
+            }
+          },
+          {
+            "number": 7,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "三角函数与解三角形",
+                "number": 7,
+                "id": "2024-cn-math-new-gaokao-1:q007",
+                "sha256": "c4135c6ab9083fd4621b1ff0e653adc60fe85a321eb3709fee96a4086fc7dbd8",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "解析几何",
+                "number": 7,
+                "id": "2025-cn-math-national-1:q007",
+                "sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "数列",
+                "number": 7,
+                "id": "2026-cn-math-national-1:q007",
+                "sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "三角函数与解三角形": 1,
+              "解析几何": 1,
+              "数列": 1
+            }
+          },
+          {
+            "number": 8,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "函数与导数",
+                "number": 8,
+                "id": "2024-cn-math-new-gaokao-1:q008",
+                "sha256": "801a846b9bc2a36a9b0a85e770a977976e79a16efc303bbc2f5ee344da00a617",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "函数与导数",
+                "number": 8,
+                "id": "2025-cn-math-national-1:q008",
+                "sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "统计与概率",
+                "number": 8,
+                "id": "2026-cn-math-national-1:q008",
+                "sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "函数与导数": 2,
+              "统计与概率": 1
+            },
+            "structures": [
+              {
+                "year": 2024,
+                "number": 8,
+                "id": "2024-cn-math-new-gaokao-1:q008",
+                "sha256": "801a846b9bc2a36a9b0a85e770a977976e79a16efc303bbc2f5ee344da00a617",
+                "practice_eligible": true,
+                "description": "把分段函数的全域不等式拆成分支约束，取交集"
+              },
+              {
+                "year": 2025,
+                "number": 8,
+                "id": "2025-cn-math-national-1:q008",
+                "sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+                "practice_eligible": true,
+                "description": "用公共对数参数表示三个变量，比较交点并排除一种排列"
+              },
+              {
+                "year": 2026,
+                "number": 8,
+                "id": "2026-cn-math-national-1:q008",
+                "sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+                "practice_eligible": true,
+                "description": "有限均匀样本空间删去一点，先利用对称性再修正期望"
+              }
+            ],
+            "design_guidance": "同一短题干提供一个能消去变量或利用对称性的结构；留足检查边界、等号或不可行情形的空间。"
+          },
+          {
+            "number": 9,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "统计与概率",
+                "number": 9,
+                "id": "2024-cn-math-new-gaokao-1:q009",
+                "sha256": "9fbf02acb14ecee2f96f2176710f501e86c20bfdc5f9e972155f653bda415dfb",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "立体几何",
+                "number": 9,
+                "id": "2025-cn-math-national-1:q009",
+                "sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "复数",
+                "number": 9,
+                "id": "2026-cn-math-national-1:q009",
+                "sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+                "practice_eligible": false
+              }
+            ],
+            "module_counts": {
+              "统计与概率": 1,
+              "立体几何": 1
+            }
+          },
+          {
+            "number": 10,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "函数与导数",
+                "number": 10,
+                "id": "2024-cn-math-new-gaokao-1:q010",
+                "sha256": "ab5e33089eac5f25997cdb3c93b7ddb7a2a06e862c2d6ddc7669583f7ce8b03a",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "解析几何",
+                "number": 10,
+                "id": "2025-cn-math-national-1:q010",
+                "sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "立体几何",
+                "number": 10,
+                "id": "2026-cn-math-national-1:q010",
+                "sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "函数与导数": 1,
+              "解析几何": 1,
+              "立体几何": 1
+            }
+          },
+          {
+            "number": 11,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "解析几何",
+                "number": 11,
+                "id": "2024-cn-math-new-gaokao-1:q011",
+                "sha256": "c2387a8233b2f48aa716aa7d1995f88efa3095a961314b2e2a5a83744d609617",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "三角函数与解三角形",
+                "number": 11,
+                "id": "2025-cn-math-national-1:q011",
+                "sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "解析几何",
+                "number": 11,
+                "id": "2026-cn-math-national-1:q011",
+                "sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "解析几何": 2,
+              "三角函数与解三角形": 1
+            },
+            "structures": [
+              {
+                "year": 2024,
+                "number": 11,
+                "id": "2024-cn-math-new-gaokao-1:q011",
+                "sha256": "c2387a8233b2f48aa716aa7d1995f88efa3095a961314b2e2a5a83744d609617",
+                "practice_eligible": true,
+                "description": "将坐标与距离条件转成圆锥曲线关系，再逐项检验局部和整体性质"
+              },
+              {
+                "year": 2025,
+                "number": 11,
+                "id": "2025-cn-math-national-1:q011",
+                "sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+                "practice_eligible": true,
+                "description": "由两条三角恒等关系约束三角形，分别检查角、边及其量值"
+              },
+              {
+                "year": 2026,
+                "number": 11,
+                "id": "2026-cn-math-national-1:q011",
+                "sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+                "practice_eligible": true,
+                "description": "由弦长推出圆心到直线的距离；在多个圆间联立距离条件"
+              }
+            ],
+            "design_guidance": "四个命题共享同一模型，分别考查条件、全域性质、反例和数值关系。只套一次公式不应同时判断四项。"
+          },
+          {
+            "number": 12,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "解析几何",
+                "number": 12,
+                "id": "2024-cn-math-new-gaokao-1:q012",
+                "sha256": "93dcd3cdd2b1895193558222f0baa0246b3ab603020b8aef173c6e365608f2bc",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "函数与导数",
+                "number": 12,
+                "id": "2025-cn-math-national-1:q012",
+                "sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "解析几何",
+                "number": 12,
+                "id": "2026-cn-math-national-1:q012",
+                "sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+                "practice_eligible": false
+              }
+            ],
+            "module_counts": {
+              "解析几何": 1,
+              "函数与导数": 1
+            }
+          },
+          {
+            "number": 13,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "函数与导数",
+                "number": 13,
+                "id": "2024-cn-math-new-gaokao-1:q013",
+                "sha256": "679ae80535b272ad427ec2a85bbc8d84688577646adca6c11efd779dbffe8474",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "数列",
+                "number": 13,
+                "id": "2025-cn-math-national-1:q013",
+                "sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "三角函数与解三角形",
+                "number": 13,
+                "id": "2026-cn-math-national-1:q013",
+                "sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "函数与导数": 1,
+              "数列": 1,
+              "三角函数与解三角形": 1
+            }
+          },
+          {
+            "number": 14,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "统计与概率",
+                "number": 14,
+                "id": "2024-cn-math-new-gaokao-1:q014",
+                "sha256": "96638baf69bcf66d2b0b0b612088b1c157a9ad422275ef6f189d4c921c985ea7",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "统计与概率",
+                "number": 14,
+                "id": "2025-cn-math-national-1:q014",
+                "sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "数列",
+                "number": 14,
+                "id": "2026-cn-math-national-1:q014",
+                "sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "统计与概率": 2,
+              "数列": 1
+            },
+            "structures": [
+              {
+                "year": 2024,
+                "number": 14,
+                "id": "2024-cn-math-new-gaokao-1:q014",
+                "sha256": "96638baf69bcf66d2b0b0b612088b1c157a9ad422275ef6f189d4c921c985ea7",
+                "practice_eligible": true,
+                "description": "四轮不放回对阵，用逐轮计数得到至少一次或比赛结果"
+              },
+              {
+                "year": 2025,
+                "number": 14,
+                "id": "2025-cn-math-national-1:q014",
+                "sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+                "practice_eligible": true,
+                "description": "直接数不同编号不便，改用各号出现的指示量累加"
+              },
+              {
+                "year": 2026,
+                "number": 14,
+                "id": "2026-cn-math-national-1:q014",
+                "sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+                "practice_eligible": true,
+                "description": "分块部分和给出每三项的总量，再将局部等比约束转成公比上界"
+              }
+            ],
+            "design_guidance": "用短设问要求一次关键转化。证明极值可达或排除遗漏，不靠冗长枚举。"
+          },
+          {
+            "number": 15,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "三角函数与解三角形",
+                "number": 15,
+                "id": "2024-cn-math-new-gaokao-1:q015",
+                "sha256": "a9cf3ff05201471b80a60d8311645144ea40ce804ac65bbec0f848a983ff7b45",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "统计与概率",
+                "number": 15,
+                "id": "2025-cn-math-national-1:q015",
+                "sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "立体几何",
+                "number": 15,
+                "id": "2026-cn-math-national-1:q015",
+                "sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "三角函数与解三角形": 1,
+              "统计与概率": 1,
+              "立体几何": 1
+            }
+          },
+          {
+            "number": 16,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "解析几何",
+                "number": 16,
+                "id": "2024-cn-math-new-gaokao-1:q016",
+                "sha256": "d39d98ba9d7de6cc166caceeee3be5b292245cb43ff401eb05f93d8c28246f8f",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "数列",
+                "number": 16,
+                "id": "2025-cn-math-national-1:q016",
+                "sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "三角函数与解三角形",
+                "number": 16,
+                "id": "2026-cn-math-national-1:q016",
+                "sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "解析几何": 1,
+              "数列": 1,
+              "三角函数与解三角形": 1
+            }
+          },
+          {
+            "number": 17,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "立体几何",
+                "number": 17,
+                "id": "2024-cn-math-new-gaokao-1:q017",
+                "sha256": "394f2ab517329c6d3a1ae02180167e0ae9cdbbc73ad34d84026f6bb8bf83132e",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "立体几何",
+                "number": 17,
+                "id": "2025-cn-math-national-1:q017",
+                "sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "统计与概率",
+                "number": 17,
+                "id": "2026-cn-math-national-1:q017",
+                "sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "立体几何": 2,
+              "统计与概率": 1
+            }
+          },
+          {
+            "number": 18,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "函数与导数",
+                "number": 18,
+                "id": "2024-cn-math-new-gaokao-1:q018",
+                "sha256": "234ec8f731ab4d4ee5ea8f1647e19d7696a6166be52ce6d2b2f4a6739fcccb06",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "解析几何",
+                "number": 18,
+                "id": "2025-cn-math-national-1:q018",
+                "sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "解析几何",
+                "number": 18,
+                "id": "2026-cn-math-national-1:q018",
+                "sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+                "practice_eligible": false
+              }
+            ],
+            "module_counts": {
+              "函数与导数": 1,
+              "解析几何": 1
+            },
+            "structures": [
+              {
+                "year": 2024,
+                "number": 18,
+                "id": "2024-cn-math-new-gaokao-1:q018",
+                "sha256": "234ec8f731ab4d4ee5ea8f1647e19d7696a6166be52ce6d2b2f4a6739fcccb06",
+                "practice_eligible": true,
+                "description": "从单个函数性质入手，逐步处理受约束的参数关系"
+              },
+              {
+                "year": 2025,
+                "number": 18,
+                "id": "2025-cn-math-national-1:q018",
+                "sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+                "practice_eligible": true,
+                "description": "由离心率和已知点求标准方程，再把动点条件表示成轨迹方程"
+              },
+              {
+                "year": 2026,
+                "number": 18,
+                "id": "2026-cn-math-national-1:q018",
+                "sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+                "practice_eligible": false,
+                "description": "椭圆标准方程与焦点弦；求斜率和角的最值。局部有版本争议，仅取明确共性"
+              }
+            ],
+            "design_guidance": "先得到标准方程或不变量，再让它驱动第二问的存在性、位置关系或受限极值。"
+          },
+          {
+            "number": 19,
+            "samples": [
+              {
+                "year": 2024,
+                "module": "数列",
+                "number": 19,
+                "id": "2024-cn-math-new-gaokao-1:q019",
+                "sha256": "5f16fdf167bf3d28fa8ec14b3381e37bce92e94f4899c3741ba8cffde182fc2d",
+                "practice_eligible": true
+              },
+              {
+                "year": 2025,
+                "module": "三角函数与解三角形",
+                "number": 19,
+                "id": "2025-cn-math-national-1:q019",
+                "sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+                "practice_eligible": true
+              },
+              {
+                "year": 2026,
+                "module": "函数与导数",
+                "number": 19,
+                "id": "2026-cn-math-national-1:q019",
+                "sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+                "practice_eligible": true
+              }
+            ],
+            "module_counts": {
+              "数列": 1,
+              "三角函数与解三角形": 1,
+              "函数与导数": 1
+            },
+            "structures": [
+              {
+                "year": 2024,
+                "number": 19,
+                "id": "2024-cn-math-new-gaokao-1:q019",
+                "sha256": "5f16fdf167bf3d28fa8ec14b3381e37bce92e94f4899c3741ba8cffde182fc2d",
+                "practice_eligible": true,
+                "description": "用新定义把删项后的四项组变成可验证构造，从特例到一般再接概率下界"
+              },
+              {
+                "year": 2025,
+                "number": 19,
+                "id": "2025-cn-math-national-1:q019",
+                "sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+                "practice_eligible": true,
+                "description": "先求三角函数在区间的极值，再证明覆盖引理并用于相位的全局最值"
+              },
+              {
+                "year": 2026,
+                "number": 19,
+                "id": "2026-cn-math-national-1:q019",
+                "sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+                "practice_eligible": true,
+                "description": "新定义比较函数值的位移集合，逐步推出集合与函数序关系"
+              }
+            ],
+            "design_guidance": "第一问产出可用于后续的引理或比较关系；最后一问检验量词、参数范围与边界。"
+          }
+        ],
+        "sections": {
+          "single_choice": [
+            1,
+            8
+          ],
+          "multiple_choice": [
+            9,
+            11
+          ],
+          "fill_in": [
+            12,
+            14
+          ],
+          "constructed_response": [
+            15,
+            19
+          ]
+        },
+        "workload_note": "8、11、14 是题型收尾的对照样本。模块与具体题号是历史观察，不能作为下一届排位规则。"
+      }
+    },
     "scope": "题位和字数从已入库文本计算；主题、体裁和语法为逐卷编辑标注；设问检出使用表面词规则，可漏检。"
   },
   "scope": "仅统计可读完整题及现有审定的结构标签；无标注不推断难度、考点或干扰项。"

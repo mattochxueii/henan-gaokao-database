@@ -27,6 +27,11 @@ def archive_questions(questions):
     return normalized
 
 
+def listening_fingerprint(doc):
+    return fingerprint({key: doc[key] for key in
+                        ("listening_groups", "listening_transcript", "listening_source")})
+
+
 def documents(root, subject):
     by_id = {}
     for base in (PUBLIC, LOCAL):
@@ -34,6 +39,9 @@ def documents(root, subject):
             doc = read_json(path)
             require(doc["subject"] == subject and doc["content_sha256"] == fingerprint(doc["questions"]),
                     "明文库校验失败：" + str(path))
+            if "listening_sha256" in doc:
+                require(doc["listening_sha256"] == listening_fingerprint(doc),
+                        "听力文本或来源校验失败：" + str(path))
             if prior := by_id.get(doc["id"]):
                 previous = prior[1]
                 same = previous["content_sha256"] == doc["content_sha256"]
@@ -131,6 +139,8 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
 
 def research(root, subject, *, year=None, region=None, topic=None, limit=10,
              verified_only=False, exam_kind="official_exam", exclude_compatible_math=False):
+    from national_quality import practice_view
+
     result = []
     for path, doc in documents(root, subject):
         if exclude_compatible_math and doc.get("compatibility") == "national-math-v1":
@@ -143,9 +153,10 @@ def research(root, subject, *, year=None, region=None, topic=None, limit=10,
                 continue
             if topic and not any(topic in str(q.get(field, "")) for field in ("topic","features","stem")):
                 continue
-            result.append({**q, "subject":subject, "year":doc["year"], "paper_id":doc["id"],
+            result.append({**practice_view(q), "subject":subject, "year":doc["year"], "paper_id":doc["id"],
                            "source":doc["source"], "record_type":"full_text",
                            "passage_text":doc.get("passages",{}).get(q.get("passage")),
+                            "listening_text":doc.get("listening_transcript",{}).get(q.get("listen_group")),
                            "asset_root":path.parent.relative_to(root).as_posix()})
     return result[:limit]
 

@@ -5031,8 +5031,53 @@
         "calibration_source_conflict"
       ],
       "assessment_state": "source_conflict",
-      "usable_for_practice": false,
-      "source_and_solution_reviewed": false
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false,
+      "practice_review": {
+        "decision": "usable_for_practice",
+        "basis": "answer_invariant_variant",
+        "version_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+        "source_url": "https://img.gaokaozhitongche.com/resource/pdf/paper/202510/20251029033732_J2Ceon.pdf",
+        "source_page": 3,
+        "source_pdf_sha256": "b3084b081ff6b7e1d42715f958ea1bdbc62bc31bcab7b38da07e2b6207b72199",
+        "image": "assets/f96321cb4b270fbad9ccb7df48c9afffb18ddfd7e2623c7cb6ebe9cafd98c0da.png",
+        "image_sha256": "f96321cb4b270fbad9ccb7df48c9afffb18ddfd7e2623c7cb6ebe9cafd98c0da",
+        "variant": {
+          "stem": "为研究某疾病与超声波检查结果的关系，从做过超声波检查的人群中随机调查了1000人，得到如下列联表（见图）。",
+          "candidate": null,
+          "parts": [
+            {
+              "number": "1",
+              "text": "记超声波检查结果不正常者患该疾病的概率为 \\(P\\)，求 \\(P\\) 的估计值。"
+            },
+            {
+              "number": "2",
+              "text": "根据小概率值 \\(\\alpha=0.001\\) 的独立性检验，分析超声波检查结果是否与患该疾病有关。公式和附表见图。"
+            }
+          ],
+          "source_locator": {
+            "source_url": "https://img.gaokaozhitongche.com/resource/pdf/paper/202510/20251029033732_J2Ceon.pdf",
+            "page": 3,
+            "edition": "A版"
+          },
+          "asset_refs": [
+            {
+              "plaintext_path": "assets/f96321cb4b270fbad9ccb7df48c9afffb18ddfd7e2623c7cb6ebe9cafd98c0da.png",
+              "plaintext_sha256": "f96321cb4b270fbad9ccb7df48c9afffb18ddfd7e2623c7cb6ebe9cafd98c0da",
+              "description": "公开A版第15题，包含列联表、公式和0.050版附表"
+            }
+          ],
+          "answer": {
+            "reference_answer": "（1）9/10；（2）在题设显著性水平下拒绝独立性假设。",
+            "explanation": "200名超声检查异常者中有180名患病。代入四格数据，χ²＝765.625，超过0.001列的临界值10.828。"
+          },
+          "version_sha256": "197195a4d280a8726928af7bfcebb96323836d73743aae0de6c94156094cae29"
+        },
+        "finding": "公开A版页图首列为0.050。旧锦宏候选首列0.005保留原样。题面指定的0.001和数据在两版相同。练习返回独立绑定的A版，不混用附表。",
+        "independent_solution": "估计180/200=9/10；四格20、180、780、20给统计量765.625，显著性0.001的临界值为10.828，两版结论相同。",
+        "reviewed_on": "2026-11-23",
+        "official_original": false
+      }
     },
     {
       "id": "2025-cn-math-national-1:q016",
@@ -6618,5 +6663,5 @@
       "source_and_solution_reviewed": true
     }
   ],
-  "content_sha256": "1f76b735f13f5237b982b057a352c36720bb594db974bff236067a41c90194fc"
+  "content_sha256": "5f23b71ec62f4ec72c1d6670ec2fec14cc31cf02ff1d55903eb37b32311ead79"
 }

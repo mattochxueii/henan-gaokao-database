@@ -2,6 +2,8 @@
 from collections import Counter
 import re
 
+from core.paper_authoring_dna import authoring_guidance
+
 SERIES = "cn-new-gaokao-1"
 
 MATH_FINAL = {
@@ -78,6 +80,7 @@ def official_first_profiles(subject, papers):
         if paper["series_id"] != SERIES or paper["exam_kind"] != "official_exam" or year not in MATH_FINAL:
             continue
         questions = paper["questions"]
+        by_number = {q["number"]:q for q in questions}
         row = {"year":year, "paper_id":paper["id"], "paper_sha256":paper["content_sha256"],
                "source_url":paper["source"]["url"], "question_count":len(questions),
                "eligible_questions":sum(q["usable_for_practice"] for q in questions)}
@@ -106,17 +109,17 @@ def official_first_profiles(subject, papers):
             genres, application, continuation = ENGLISH[year]
             row["reading"]=[]
             for index,start in enumerate((21,24,28,32)):
-                q=questions[start-21]
+                q=by_number[start]
                 row["reading"].append({**reference(q),"genre":genres.split()[index],
                     "words":len(re.findall(r"[A-Za-z]+(?:[’'-][A-Za-z]+)*",paper["passages"][q["passage"]])),
                     "stem_actions":{a:[reference(x) for x in questions if x.get("passage")==q["passage"]
                                        and re.search(p,x["stem"],re.IGNORECASE)] for a,p in READING_ACTIONS.items()}})
             row["grammar"] = [{**reference(q),"focus":category}
-                              for q,category in zip(questions[35:45],GRAMMAR[year].split(),strict=True)]
+                              for q,category in zip((by_number[n] for n in range(56,66)),GRAMMAR[year].split(),strict=True)]
             row["application"] = {**reference(questions[-2]),"theme":application}
             row["continuation"] = {**reference(questions[-1]),"theme":continuation}
         result.append(row)
-    summary = {}
+    summary = {"authoring":authoring_guidance(subject,papers)}
     if subject=="english":
         summary["grammar_counts"]=dict(Counter(q["focus"] for row in result for q in row["grammar"]))
         summary["reading_genres"]=dict(Counter(q["genre"] for row in result for q in row["reading"]))

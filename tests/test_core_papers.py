@@ -91,3 +91,39 @@ class CorePapersTest(unittest.TestCase):
         self.assertTrue(research_eligible(row))
         self.assertFalse(research_eligible({**row,"version_sha256":"y"}))
         self.assertFalse(research_eligible({**row,"issues":["quarantined_source_content_conflict"]}))
+
+    def test_priority_english_listening_has_bound_written_layer(self):
+        for path,paper in store.documents(ROOT,"english"):
+            if paper["id"] not in ("2024-cn-english-national-1","2025-cn-english-national-1",
+                                   "2026-cn-english-national-1","2025-ha-english-adaptation"):
+                continue
+            self.assertFalse(paper["written_only"])
+            self.assertEqual(paper["points"],150)
+            first=paper["questions"][:20]
+            self.assertEqual([q["number"] for q in first],list(range(1,21)))
+            self.assertEqual(paper["written_sha256"],fingerprint(paper["questions"][20:]))
+            self.assertEqual(len({q["listen_group"] for q in first}),10)
+
+    def test_archive_practice_variant_stays_outside_strict_reference(self):
+        from national_db import query
+        (item,)=query(ROOT,year=2025,region="河南",number=15)
+        self.assertEqual(item["source_locator"]["edition"],"A版")
+        self.assertNotEqual(item["version_sha256"],item["archived_version_sha256"])
+        self.assertFalse(query(ROOT,year=2025,region="河南",number=15,verified_only=True))
+
+    def test_workbook_rejects_mismatched_answer_and_retains_linked_context(self):
+        from core.practice_workbook import selection,render_archive,review_workbook
+        picked=selection(ROOT,"english",question_ids=["2025-cn-english-national-1:q006"],limit=1)
+        self.assertEqual([q["number"] for q in picked],[6,7])
+        with TemporaryDirectory() as tmp:
+            folder=Path(tmp)/"listening"
+            manifest=render_archive(ROOT,"english",picked,folder,title="听力小练",minutes=10)
+            self.assertTrue((folder/"listening-script.pdf").is_file())
+            student="".join(p.extract_text() for p in PdfReader(folder/"paper.pdf").pages)
+            self.assertNotIn("driver", student.lower().replace("speed limit",""))
+            review={"paper_sha256":manifest["paper_sha256"],"input_scope":"student_pdf",
+                    "items":[{"number":i,"answer":"Z","reasoning":"用于验证错误答案拒绝",
+                              "consistent":True} for i in (1,2)]}
+            with self.assertRaisesRegex(ValueError,"独立选择"):
+                review_workbook(folder,review)
+            self.assertFalse((folder/"solutions.pdf").exists())

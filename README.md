@@ -2,6 +2,18 @@
 
 本项目资料仅用于个人学习与教研参考。主三科统一使用 `scripts/gaokao_platform.py`。当前主三科明文库与逐卷覆盖见[第十八阶段验收](reports/phase18.md)。两套 150 分原创卷见[第十七阶段验收](reports/phase17.md)。
 
+## 主三科出题入口
+
+以下命令接在 `python scripts/gaokao_platform.py` 后。
+
+- 真题拼卷用 `assemble chinese 练习/语文 --year 2024 --topic 信息类阅读 --limit 5`，再用 `workbook-review` 核对并生成解析。
+- 真题改编用 `authoring-context english --source-id 2025-cn-english-national-1:q021 --output 对照.json`，填写改编候选后运行 `adapt english 候选.json 练习/改编`。
+- 完整模拟先用 `authoring-context math --output 数学上下文.json`，创作并绑定已有画像，运行 `simulate math 2027 候选.json 练习/模拟 --context 数学上下文.json`。
+- 专项训练用 `train english 练习/英语 --year 2025 --topic 阅读理解 --limit 3`，再独立核对答案。
+
+[工作入口](skills/gaokao-platform/SKILL.md) · [第十九阶段试卷和核验](reports/phase19.md)
+
+
 
 第十五阶段新增河南化学逐题来源核验、化学验证器和原创专题练习。[阶段验收](reports/phase15.md) · [化学试做](experiments/phase15/chemistry/README.md)
 

@@ -20,6 +20,40 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command",required=True)
     sub.add_parser("subjects")
     sub.add_parser("dna").add_argument("subject", choices=paper_intake.CORE)
+    context = sub.add_parser("authoring-context", help="读取固定命题画像和近年Ⅰ卷真题")
+    context.add_argument("subject",choices=paper_intake.CORE)
+    context.add_argument("--topic")
+    context.add_argument("--source-id")
+    context.add_argument("--limit",type=int,default=12)
+    context.add_argument("--output",type=Path,required=True)
+    for action in ("assemble","train"):
+        worksheet=sub.add_parser(action)
+        worksheet.add_argument("subject",choices=paper_intake.CORE)
+        worksheet.add_argument("output",type=Path)
+        worksheet.add_argument("--year",type=int)
+        worksheet.add_argument("--kind")
+        worksheet.add_argument("--topic",required=action=="train")
+        worksheet.add_argument("--question-id",action="append",default=[])
+        worksheet.add_argument("--limit",type=int,default=6)
+        worksheet.add_argument("--adaptation",action="store_true")
+        worksheet.add_argument("--title")
+        worksheet.add_argument("--minutes",type=int,default=30)
+    adapt=sub.add_parser("adapt")
+    adapt.add_argument("subject",choices=paper_intake.CORE)
+    adapt.add_argument("candidate",type=Path)
+    adapt.add_argument("output",type=Path)
+    simulate=sub.add_parser("simulate",help="使用绑定近期真题和DNA的原创候选生成整卷")
+    simulate.add_argument("subject",choices=paper_intake.CORE)
+    simulate.add_argument("year",type=int)
+    simulate.add_argument("candidate",type=Path)
+    simulate.add_argument("output",type=Path)
+    simulate.add_argument("--context",required=True,type=Path)
+    listen=sub.add_parser("attach-listening")
+    listen.add_argument("paper_id")
+    listen.add_argument("packet",type=Path)
+    check=sub.add_parser("workbook-review")
+    check.add_argument("output",type=Path)
+    check.add_argument("review",type=Path)
     docx = sub.add_parser("docx")
     docx.add_argument("markdown", type=Path)
     docx.add_argument("output", type=Path)
@@ -80,6 +114,48 @@ def main(argv=None):
         if command=="subjects":
             result = [{"id":k,"label":v,"status":"active"}
                       for k,v in SUBJECTS.items()]
+        elif command in ("authoring-context","assemble","train","adapt","workbook-review"):
+            from core import practice_workbook
+            from storage import atomic_json
+            if command=="authoring-context":
+                result=practice_workbook.authoring_context(root,args.subject,topic=args.topic,
+                                                          source_id=args.source_id,limit=args.limit)
+                atomic_json(args.output,result)
+                result={"output":str(args.output),"reference_count":len(result["references"]),"dna_sha256":result["dna_sha256"]}
+            elif command=="adapt":
+                result=practice_workbook.adaptive_workbook(root,args.subject,read_json(args.candidate),args.output)
+            elif command=="workbook-review":
+                result=practice_workbook.review_workbook(args.output,read_json(args.review))
+            else:
+                chosen=practice_workbook.selection(root,args.subject,year=args.year,kind=args.kind,topic=args.topic,
+                                                  question_ids=args.question_id,limit=args.limit,adaptation=args.adaptation)
+                result=practice_workbook.render_archive(root,args.subject,chosen,args.output,
+                    title=args.title or SUBJECTS[args.subject]+(f" · {args.topic}专项" if args.topic else " · 历年真题练习"),
+                    minutes=args.minutes)
+        elif command=="attach-listening":
+            from core.paper_listening import attach
+            result=attach(root,args.paper_id,read_json(args.packet))
+        elif command=="simulate":
+            from analysis_db import fingerprint
+            from core.practice_workbook import authoring_context
+            from gaokao import digest, require
+            packet=read_json(args.context)
+            candidate=read_json(args.candidate)
+            actual=authoring_context(root,args.subject,**packet["query"])
+            require(fingerprint(actual)==fingerprint(packet) and packet["subject"]==args.subject
+                    and not packet["query"]["topic"] and not packet["query"]["source_id"]
+                    and {2024,2025,2026}<={q["year"] for q in packet["references"]},
+                    "整卷上下文须含2024–2026年Ⅰ卷正文和当前命题画像")
+            proof=candidate.get("provenance",{})
+            require(proof.get("dna_sha256")==actual["dna_sha256"] and
+                    proof.get("context_sha256")==digest(args.context),"候选须绑定当前命题上下文")
+            if args.subject=="math":
+                from math_skill import main as math_main
+                return math_main(["--root",str(root),"generate","--engine","ai","--study-mode","standard",
+                                  "--mode","full","--skip-pilot","--candidates",str(args.candidate),
+                                  "--output",str(args.output)])
+            blueprint=language_workflow.plan(root,args.subject,"河南",args.year)
+            result=language_workflow.prepare(root,blueprint,candidate,args.output)
         elif command=="dna":
             result=paper_intake.dna(root,args.subject)
         elif command=="docx":

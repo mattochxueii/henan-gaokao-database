@@ -43,4 +43,13 @@ def practice_reviewed(row):
     return (set(row.get("issues", [])) == {"calibration_source_conflict"}
             and review.get("decision") == "usable_for_practice"
             and review.get("version_sha256") == row.get("version_sha256")
-            and review.get("basis") == "visual_crosscheck")
+            and (review.get("basis") == "visual_crosscheck"
+                 or (review.get("basis") == "answer_invariant_variant" and review.get("variant")
+                     and review.get("source_url","").startswith("https://"))))
+
+
+def practice_view(row):
+    """Use one explicitly named source variant, preserving the archive in the base row."""
+    if practice_reviewed(row) and (variant:=row["practice_review"].get("variant")):
+        return {**row, **variant, "archived_version_sha256":row["version_sha256"]}
+    return row

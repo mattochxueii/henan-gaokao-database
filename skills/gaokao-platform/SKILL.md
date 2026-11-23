@@ -1,16 +1,33 @@
 ---
 name: gaokao-platform
-description: 检索语数英明文真题、分析新高考命题特征并生成、独立核阅与排版原创试卷；转发现有理科、数学与预测入口。
+description: 用入仓真题检索和拼卷，按同一考查思维改编题目，依据近年Ⅰ卷命题画像创作整卷或生成专项练习，并独立核对学生卷和答案。
 ---
 
-# 全国高考真题研究与原创命题
+# 全国高考真题研究与出题
 
-在项目根目录运行 `python scripts/gaokao_platform.py`。已安装入口可用本目录 `scripts/run.py`，跨目录时使用 `--database`。
+统一入口为项目根目录的 `python scripts/gaokao_platform.py`。安装后的入口为同目录结构下的 `scripts/run.py --database <项目目录>`。以下命令都接在统一入口后。
 
-1. 用 `exam <subject> <year>` 核对适用身份。适应性演练用 `research --adaptation` 单独查询。资料完整度、来源定位、答案和冲突按题检查。
-2. 主三科可先查看 `data/dna/<subject>.json`，运行 `dna <subject>` 核对当前语料并刷新画像，再运行 `research <subject> --region 河南 --year <year>`，读取目标题位的真实材料和逐题证据。查阅 `national_first_profile` 中绑定原题版本的题位、体裁、语法和设问证据。适应性演练样本另查。没有题面样本时只能使用来源可追溯的结构与评析，候选需标为 `structure_only`；独立答案和评分记录与预测无关。
-3. `plan chinese|english <year> --mode standard` 获取逐题分值与特征。语文保留指定年份的题号、连续的阅读材料与评分颗粒。英语听力信息单独存储；先核对听力播放次数、题组，完整卷 150，河南笔试分另由 `english-score` 换算。材料均须原创或获得明确使用许可，勿只换同义词。
-4. 由宿主 AI 完成有版本的原创候选。语文/英语候选键参考 `experiments/phase17/<subject>/candidate.json`。先核对选项与文本证据，避免范围扩大、时序错误等被误当正确；语文古诗文核字、英文逐空作答；主观题分解给分且写作附合格范文。
-5. `generate <subject> <year> --mode standard <candidate.json> <new-folder>` 生成学生卷。独立复核只从学生题面和必要的英语听力文本作答。用 `review <folder> <review.json>` 校验版本、答案和评分，再逐页渲染检查，使用 `publish <folder> <visual.json>` 绑定最终 PDF。学生版、听力稿、解析各自发放。
-6. 数学用 `math` 转发现有数学规划、原创、独立求解、正式发布和预测程序。检索优先读取明文数学快照，原题 ID 与旧复核证据继续有效。
-7. 物化生沿用原有 `plan/generate/review/publish`，`program` 或 `independent_review` 两条通道。研究预测可用 `forecast`，四年以内仅输出小样本历史趋势。
+## 真题检索与拼卷
+
+- `research chinese --year 2024 --topic 信息类阅读` 读取题面、原题位置和参考答案。演练卷加 `--adaptation`。隔离题不参与默认选题。
+- `assemble chinese <新目录> --year 2024 --topic 信息类阅读 --limit 5` 生成独立学生卷 PDF 和 Markdown。可用多个 `--question-id` 固定题单，或用 `--kind` 筛题型。完形、七选五和听力按完整题组展开。
+- 独立从学生 PDF 作答，检查图件与材料，再用 `workbook-review <目录> <逐题核对.json>` 对照档案答案并生成分离的答案 PDF。听力文字通过单独的朗读稿提供。保持原题年份、题号和版本可追溯。
+
+## 真题同构改编
+
+1. `authoring-context english --source-id 2025-cn-english-national-1:q021 --output <对照.json>` 获取题面和版本绑定的命题依据。
+2. 新题复用原题的核心推理，不复用原句或仅换数字。说明保留的考查动作、条件或情境的实质变化，以及难度依据。候选格式见 [改编与核对](references/practice.md)。
+3. `adapt english <改编候选.json> <新目录>` 生成改编学生卷。另行求解，运行 `workbook-review`。
+
+## AI 高仿真完整模拟
+
+1. 先运行 `authoring-context math --output <真题上下文.json>`，读取其中三个年份的真实题面和 `data/dna/math.json` 的题位、条件及推理层次。其他学科更换学科名。
+2. 数学候选遵循 `scripts/math_skill.py` 的内部规格与写作分层，答案子问与分步评分分别保留。语文和英语用 `plan <学科> <年份> --mode standard` 获取结构与蓝图哈希。不要将最近某年考点位置当成下一年的必然规律。
+3. 宿主 AI 生成候选后，运行 `simulate <学科> <年份> <候选.json> <新目录> --context <真题上下文.json>`。命令核对画像和 2024–2026 三年题面的版本，再调用原有出卷流程。
+4. 数学用 `math publish <目录> --student-review <核对.json> --math-comparison <数学核对.json>`。语英用 `review <目录> <核对.json>`，逐页验收后用 `publish <目录> <视觉核对.json>`。只有已完成独立求解和页图对照的版本可交付。
+
+## 专项训练
+
+`train english <新目录> --year 2025 --topic 阅读理解 --limit 3` 为指定弱项抽真实题。需要新题时，从同一考点的对照材料选取参考，走改编流程；数学也可用 `math generate --engine ai --mode sequence|derivative --candidates <候选.json> --output <新目录>` 完成原创专项并沿用数学独立核对。
+
+原有理科、数学预测和试做工具仍由同一入口转发。版式可编辑稿保留为 Markdown，语文、英语文本可用 `docx <Markdown> <Word>` 转换。

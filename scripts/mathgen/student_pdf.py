@@ -157,7 +157,7 @@ def render(paper, path, solutions=False):
         at = 0
         for m in re.finditer(r"\\\((.*?)\\\)", text, re.S):
             chunks.append(formatted_plain(text[at : m.start()]))
-            formula = normalise_tex(m.group(1))
+            formula = normalise_tex(m.group(1).replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
             formula = re.sub(
                 r"\\(mathbb|mathbf|mathcal|boldsymbol|mathrm|overline)\s+([A-Za-z])",
                 r"\\\1{\2}",
@@ -283,6 +283,8 @@ def render(paper, path, solutions=False):
                 block.append(
                     Image(str(figure), width=435 if science_layout else 250, height=155, kind="proportional")
                 )
+            for figure in q.get("archive_figures",[]):
+                block.append(Image(str(figure),width=355,height=155,kind="proportional"))
             if q["kind"] == "single_choice":
                 block.append(option_grid(
                     [para(key + "．" + text) for key, text in q["options"].items()],
@@ -309,6 +311,7 @@ def render(paper, path, solutions=False):
             if solutions
             else [
                 q["stem"],
+                *[f"![题图]({image.relative_to(path.parent).as_posix()})" for image in q.get("archive_figures",[])],
                 *["%s．%s" % p for p in q["options"].items()],
                 *[p["label"] + " " + p["text"] for p in q["parts"]],
             ]
