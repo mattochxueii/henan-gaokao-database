@@ -1,0 +1,491 @@
+{
+  "subject": "physics",
+  "title": "河南新高考物理模拟试卷",
+  "provenance": {
+    "author": "Work 宿主 AI",
+    "revision": "rewritten",
+    "dna_sha256": "955f6858b00cf3706661459a0209734b27dc2ea52a9529a50cf8b205cb29b23f",
+    "context_sha256": "0f64c86310be15caf3e5793baf9c7e34aaf775119b0fa58c8c093a3819b85a64",
+    "quality_reference_sha256": "e22c02a5eece9ff4062d4767a247566a50b940187290c6739b1e0abf1bd5f201"
+  },
+  "questions": [
+    {
+      "id": "orig:physics:phase22-q01",
+      "topic": "脉冲测距",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "巡检车沿直线驶向固定的激光测距仪。相隔 0.20 s 发出的两束光，从发出到收到回波分别用时 120 ns 和 100 ns。取光速为 \\(3.0\\times10^8\\) m/s，忽略回波传播期间车的位移。两次测距之间，巡检车的平均速率为",
+      "options": {
+        "A": "7.5 m/s",
+        "B": "15 m/s",
+        "C": "18 m/s",
+        "D": "30 m/s"
+      },
+      "parts": [],
+      "figure": null,
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：脉冲测距。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 B。"
+        }
+      },
+      "proposed_answer": "B"
+    },
+    {
+      "id": "orig:physics:phase22-q02",
+      "topic": "双缝干涉",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "用同一套双缝装置分别测定两束单色光的波长，屏上同一区域的亮纹如图。甲光的波长为 600 nm。图中粗线均为中央亮纹，乙光的波长为",
+      "options": {
+        "A": "200 nm",
+        "B": "400 nm",
+        "C": "800 nm",
+        "D": "900 nm"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-02.png",
+        "sha256": "dd77c7b6b10c8b4b9f6868089a2390b10014c345b0604b9d963417b45e81ecfe"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：双缝干涉。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 B。"
+        }
+      },
+      "proposed_answer": "B"
+    },
+    {
+      "id": "orig:physics:phase22-q03",
+      "topic": "再生制动",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "检修人员在同一段水平轨道上做两次滑行试验。质量为 40 kg 的小车只受大小恒定的行驶阻力和可能开启的再生制动力。甲试验关闭再生制动，乙试验开启，速度变化如图。乙试验的 2 s 内电池增加的能量为 192 J。该过程中，再生制动力做功的绝对值中转化为电池储能的比例为",
+      "options": {
+        "A": "30%",
+        "B": "40%",
+        "C": "60%",
+        "D": "80%"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-03.png",
+        "sha256": "0d116369c4000d631c33d908fe4689ef15a597a53031e9e0fc3ed8327ca5507b"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：再生制动。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 C。"
+        }
+      },
+      "proposed_answer": "C"
+    },
+    {
+      "id": "orig:physics:phase22-q04",
+      "topic": "光路传感",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "传感探头内的玻璃折射率为 \\(5/3\\)，玻璃的两个光学面相互垂直。下方入射面外的液体折射率为 \\(4/3\\)，另一面与待测液体接触，光路如图。若光在另一界面恰达到全反射的临界条件，则待测液体的折射率为",
+      "options": {
+        "A": "\\(1\\)",
+        "B": "\\(5/4\\)",
+        "C": "\\(4/3\\)",
+        "D": "\\(5/3\\)"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-04.png",
+        "sha256": "277d5c5de60e5e333f9b70ce1147232fb0b48890568a10fcbb6193966aea27b0"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：光路传感。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 C。"
+        }
+      },
+      "proposed_answer": "C"
+    },
+    {
+      "id": "orig:physics:phase22-q05",
+      "topic": "感应电流选图",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "在直线导轨上测试无接触速度标记器。电阻为 \\(R\\) 的矩形线框，以速度 \\(v\\) 向右匀速穿过两个等宽磁区，忽略线框的自感。图中纸面外、内的磁场强度大小均为 \\(B\\)。左边磁区的宽度、右边磁区的宽度和线框沿运动方向的宽度均为 \\(a\\)，线框高为 \\(b\\)。线框右边缘到达左边磁区左边界时记 \\(t=0\\)。取逆时针为电流正方向，\\(T=a/v\\)，\\(I_0=Bbv/R\\)。四幅选项图的纵轴标度相同，与感应电流相符的是",
+      "options": {
+        "A": "图 A",
+        "B": "图 B",
+        "C": "图 C",
+        "D": "图 D"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-05.png",
+        "sha256": "f535067a373a6bc3175f3d10b7510e1ed2e9d40a0d36caba42d15a0277c8e8b0"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：感应电流选图。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 D。"
+        }
+      },
+      "proposed_answer": "D"
+    },
+    {
+      "id": "orig:physics:phase22-q06",
+      "topic": "光信号反推",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "两种发光材料配成一块余辉标记片。相同检测条件下，甲、乙材料单独制片的归一化光强如图，纵坐标为该材料在时刻 \\(t\\) 的光强与其初始光强之比。混合片中两种材料的光强可以直接相加。混合片在 \\(0\\) 和 \\(2.0\\) s 的光强分别为 100 和 40，单位相同。混合片初始时甲、乙的光强之比为",
+      "options": {
+        "A": "\\(2:3\\)",
+        "B": "\\(1:1\\)",
+        "C": "\\(3:2\\)",
+        "D": "\\(3:1\\)"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-06.png",
+        "sha256": "e13052ac09ce6452d8dceb21e6e93fbcff550113d53f8e06897d0a0783b27934"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：光信号反推。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 C。"
+        }
+      },
+      "proposed_answer": "C"
+    },
+    {
+      "id": "orig:physics:phase22-q07",
+      "topic": "过顶载荷",
+      "kind": "single_choice",
+      "points": 4,
+      "stem": "质量为 \\(m\\) 的巡检模块由弹簧从静止弹出，沿图示导轨通过最高点 P。除标出的粗糙段外，其余各处无机械能损失。粗糙段对模块的阻力大小为 \\(mg/4\\)。模块到达 P 时弹簧已与之分离，只受重力和轨道向上的支持力，支持力大小为 \\(mg/2\\)。弹簧最初的弹性势能为",
+      "options": {
+        "A": "\\(5mgR/4\\)",
+        "B": "\\(3mgR/2\\)",
+        "C": "\\(7mgR/4\\)",
+        "D": "\\(9mgR/4\\)"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-07.png",
+        "sha256": "cf1a92678cee77e3158d93e930d2481850447171c95fa6a862cdc70a2d733284"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：过顶载荷。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 C。"
+        }
+      },
+      "proposed_answer": "C"
+    },
+    {
+      "id": "orig:physics:phase22-q08",
+      "topic": "驻波频闪辨析",
+      "kind": "multiple_choice",
+      "points": 6,
+      "stem": "仪器用频闪成像测定两端固定的弦线的振动。图中实线和虚线是弦线相邻两次达到两种极端位置时的波形，拍摄间隔为 10 ms。弦上各处振动为简谐运动。关于该驻波，下列说法正确的是",
+      "options": {
+        "A": "形成驻波的行波波长为 0.40 m",
+        "B": "弦上非节点处的振动频率为 50 Hz",
+        "C": "\\(x=0.20\\) m 处和 \\(x=0.60\\) m 处的质点始终同相振动",
+        "D": "形成驻波的行波传播速度为 40 m/s"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-08.png",
+        "sha256": "075b34755b5c14ff0e0dda636f3599daa6604a8e34537a342202efdf951e8d6f"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：驻波频闪辨析。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 BD。"
+        }
+      },
+      "proposed_answer": "BD"
+    },
+    {
+      "id": "orig:physics:phase22-q09",
+      "topic": "定差供气",
+      "kind": "multiple_choice",
+      "points": 6,
+      "stem": "气动采样器的两个刚性气室 A、B 的体积分别为 \\(V\\)、\\(2V\\)，初始均为压强 \\(p_0\\)、温度 \\(T_0\\) 的同种理想气体。阀门仅允许从 A 向 B 送气。当 A 的压强比 B 高 \\(p_0/2\\) 时阀门刚开启；缓慢加热中一旦送气，阀门便使两侧压强差保持 \\(p_0/2\\)。让 B 始终处于 \\(T_0\\)，将 A 缓慢加热至 \\(2T_0\\)。下列说法正确的是",
+      "options": {
+        "A": "A 升至 \\(1.5T_0\\) 时阀门刚开启",
+        "B": "加热结束时 A 内压强为 \\(1.5p_0\\)",
+        "C": "加热结束时已转移的气体物质的量是 A 初始值的 20%",
+        "D": "加热结束时 B 内的气体物质的量比 B 初始值增加 20%"
+      },
+      "parts": [],
+      "figure": null,
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：定差供气。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 AC。"
+        }
+      },
+      "proposed_answer": "AC"
+    },
+    {
+      "id": "orig:physics:phase22-q10",
+      "topic": "变间距电容传感",
+      "kind": "multiple_choice",
+      "points": 6,
+      "stem": "图中两平行板电容器极板等面积，空气间隙如图。间距为 \\(d\\) 时，电容为 \\(C\\)。开关 S 闭合，电路稳定后的电压表读数为 \\(U_0\\)，随后断开 S。将图中可动极板缓慢移至虚线位置，电压表视为理想，忽略边缘效应和漏电。下列说法正确的是",
+      "options": {
+        "A": "末态的电压表读数为 \\(3U_0/2\\)",
+        "B": "移动过程中经导线 a 迁移的电荷量为 \\(CU_0/2\\)",
+        "C": "末态可动极板所在电容器内的电场强度是初态的 \\(3/2\\) 倍",
+        "D": "该过程中外力对可动极板做的功为 \\(3CU_0^2/8\\)"
+      },
+      "parts": [],
+      "figure": {
+        "path": "figures/physics-10.png",
+        "sha256": "20ba814a92e96e7e197d370c9c8ca8310343aeb0bbad208ee0e67d04687cfd95"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：变间距电容传感。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "overall": "命题预期选择 AD。"
+        }
+      },
+      "proposed_answer": "AD"
+    },
+    {
+      "id": "orig:physics:phase22-q11",
+      "topic": "弹射与滑动摩擦实验",
+      "kind": "constructed_response",
+      "points": 6,
+      "stem": "兴趣小组用图 1 装置测定弹簧劲度系数 \\(k\\) 和粗糙板对滑块的平均阻力 \\(f\\)。将质量为 0.20 kg 的滑块从静止释放，滑块与弹簧不粘连。弹簧恢复原长时滑块恰在 P 点离开弹簧，P 前的轨道光滑。每次改变弹簧压缩量 \\(x\\)，得到图 2。遮光片很窄，光电门读数所对应的位置用 Q 表示。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "遮光片宽 \\(d\\)，挡光时间为 \\(\\Delta t\\)，滑块经过 Q 的速率可取为 ________。"
+        },
+        {
+          "label": "（2）",
+          "text": "由图 2 可得 \\(k=\\) ________ N/m，\\(f=\\) ________ N。"
+        },
+        {
+          "label": "（3）",
+          "text": "仅把光电门沿粗糙板移至更远处，若 \\(f\\) 不变，再作同样的图，纵截距将 ________（填“变大”“变小”或“不变”），斜率将 ________（填“变大”“变小”或“不变”）。"
+        }
+      ],
+      "figure": {
+        "path": "figures/physics-11.png",
+        "sha256": "0c4a1eb59a8ff8c3e2ea613846df955cc8690fd77b126e453c40964d515814e6"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：弹射与滑动摩擦实验。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "（1）": "d/Δt",
+          "（2）": "100 N/m；0.125 N",
+          "（3）": "变小；不变"
+        }
+      },
+      "proposed_answer": {
+        "（1）": "d/Δt",
+        "（2）": "100 N/m；0.125 N",
+        "（3）": "变小；不变"
+      }
+    },
+    {
+      "id": "orig:physics:phase22-q12",
+      "topic": "电阻自热误差实验",
+      "kind": "constructed_response",
+      "points": 9,
+      "stem": "金属电阻丝在室温 \\(T_0\\) 下的电阻为 \\(R_0\\)。测量范围内，\\(R=R_0[1+\\alpha(T-T_0)]\\)，\\(\\alpha=0.010\\ \\mathrm{K}^{-1}\\)。热平衡时有 \\(I^2R=G(T-T_0)\\)，\\(G\\) 为散热系数。图 1 为测量电路，所有电表均视为理想。改变电流，待阻值稳定后读数，作得图 2。图中横坐标是以 mA 为单位时电流数值的平方，纵坐标为 \\(1/R\\)（单位为 \\(\\mathrm{k\\Omega}^{-1}\\)）。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "插口 a 应接 ________（填“电压表”或“电流表”）。若 a、b 两表的示数分别为 \\(I\\)、\\(U\\)，则 \\(R=\\) ________。"
+        },
+        {
+          "label": "（2）",
+          "text": "由图 2 得 \\(R_0=\\) ________ \\(\\Omega\\)，\\(G=\\) ________ W/K。"
+        },
+        {
+          "label": "（3）",
+          "text": "直接采用 10 mA 时测得的阻值，比室温阻值大 ________%。若只允许作一次测量，应适当 ________（填“增大”或“减小”）测量电流，以减小自热误差。"
+        }
+      ],
+      "figure": {
+        "path": "figures/physics-12.png",
+        "sha256": "01c4ad8560692fbe73298d4d9e87b71760f7429f3124f46b6f5904e75da51395"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：电阻自热误差实验。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "（1）": "电流表；U/I",
+          "（2）": "100 Ω；5.0×10^-4 W/K",
+          "（3）": "25%；减小"
+        }
+      },
+      "proposed_answer": {
+        "（1）": "电流表；U/I",
+        "（2）": "100 Ω；5.0×10^-4 W/K",
+        "（3）": "25%；减小"
+      }
+    },
+    {
+      "id": "orig:physics:phase22-q13",
+      "topic": "电子束偏转",
+      "kind": "constructed_response",
+      "points": 10,
+      "stem": "用图示装置标定电子束的偏转。电子由静止经电压 \\(U\\) 加速，沿两平行板的中线进入偏转区。偏转电场强度大小为 \\(E\\)，板间距为 \\(h\\)。电子从偏转板右端飞出后，做直线运动至荧光屏。不计重力和边缘效应，电子碰到极板（含边缘）即被吸收。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求电子打到屏上时相对入射中线的竖直偏移量大小。"
+        },
+        {
+          "label": "（2）",
+          "text": "为使电子能到达荧光屏，求加速电压 \\(U\\) 的取值范围。"
+        }
+      ],
+      "figure": {
+        "path": "figures/physics-13.png",
+        "sha256": "d06d0a9741b0d534923f21d98b4e8fbaa5893dba7208b8bf9c37e0459a0c895f"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：电子束偏转。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "（1）": "3EL²/(4U)",
+          "（2）": "U>EL²/(2h)"
+        }
+      },
+      "proposed_answer": {
+        "（1）": "3EL²/(4U)",
+        "（2）": "U>EL²/(2h)"
+      }
+    },
+    {
+      "id": "orig:physics:phase22-q14",
+      "topic": "双阶段气囊校准",
+      "kind": "constructed_response",
+      "points": 12,
+      "stem": "图中气缸固定在水平地面上，无摩擦活塞面积为 \\(S\\)，重力为 \\(p_0 S/2\\)。活塞上方空气压强恒为 \\(p_0\\)。气缸内为一定质量的理想气体，初温为 \\(T_0\\)，初体积为 \\(V_0\\)。缓慢加热，活塞上升，接触原长的轻弹簧后继续压缩弹簧，直至气体体积为 \\(3V_0\\)。弹簧的劲度系数为 \\(p_0S^2/V_0\\)。已知该气体的内能变化满足 \\(\\Delta U=\\frac{3}{2}\\Delta(pV)\\)。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求活塞刚接触弹簧时的气体体积和末态气体的温度。"
+        },
+        {
+          "label": "（2）",
+          "text": "求全过程中气体对外做的功及所吸收的热量。"
+        },
+        {
+          "label": "（3）",
+          "text": "若换用刚度加倍、原长相同的弹簧，从相同初态缓慢加热至同一末温，末态气体体积与 \\(3V_0\\) 比较如何？说明理由。"
+        }
+      ],
+      "figure": {
+        "path": "figures/physics-14.png",
+        "sha256": "a2b749b2866ac382795e230bfc1c428453bcb31df0f43f6ebdc7b35366cf5b6e"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：双阶段气囊校准。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "（1）": "2V₀；5T₀",
+          "（2）": "7p₀V₀/2；25p₀V₀/2",
+          "（3）": "小于3V₀；同体积时压强更大且pV随V增大"
+        }
+      },
+      "proposed_answer": {
+        "（1）": "2V₀；5T₀",
+        "（2）": "7p₀V₀/2；25p₀V₀/2",
+        "（3）": "小于3V₀；同体积时压强更大且pV随V增大"
+      }
+    },
+    {
+      "id": "orig:physics:phase22-q15",
+      "topic": "自由平台上的往返",
+      "kind": "constructed_response",
+      "points": 17,
+      "stem": "质量为 \\(3m\\) 的小车静止在光滑水平地面上。质量为 \\(m\\) 的滑块以水平向右的速度 \\(v\\) 从车左端 O 滑上车面。图中有短斜线标记的区段粗糙，滑块相对车滑动时受到大小为 \\(f\\) 的摩擦力；其余车面光滑。劲度系数为 \\(k\\) 的轻弹簧右端固定在车上，原长时左端恰在 P。滑块与弹簧不粘连，达到相对静止后若没有维持相对滑动的外力，二者保持相对静止。不计其他阻力。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "滑块向右到达 P 且仍相对车运动时，求此刻滑块相对车的速率 \\(u\\)，以及发生这种情形的 \\(v\\) 的范围。"
+        },
+        {
+          "label": "（2）",
+          "text": "求滑块向右能够压缩弹簧时的最大压缩量。若它返回粗糙段后停在 O、P 之间且相对车静止，求停点到 P 的距离以及对应的 \\(v\\) 的范围。"
+        },
+        {
+          "label": "（3）",
+          "text": "若滑块从 O 点滑离小车，求它离车时相对地面的水平速度（取向右为正）。要求该速度向左，求 \\(v\\) 应满足的条件。"
+        }
+      ],
+      "figure": {
+        "path": "figures/physics-15.png",
+        "sha256": "7888f8a3480af25ea6e2ac9327cdcb0105aadada06443c53f2d23d39527b19e8"
+      },
+      "verification_mode": "independent_review",
+      "independent_check": {
+        "checks": {
+          "derivation": "命题端预解对象：自由平台上的往返。将数值和条件交独立求解再对照。"
+        },
+        "parts": {
+          "（1）": "√(v²−8fd/(3m))；v²>8fd/(3m)",
+          "（2）": "√[((3m/4)v²−2fd)/k]；3mv²/(8f)−d；8fd/(3m)<v²<16fd/(3m)",
+          "（3）": "v/4−3√(v²−16fd/(3m))/4；v²>6fd/m"
+        }
+      },
+      "proposed_answer": {
+        "（1）": "√(v²−8fd/(3m))；v²>8fd/(3m)",
+        "（2）": "√[((3m/4)v²−2fd)/k]；3mv²/(8f)−d；8fd/(3m)<v²<16fd/(3m)",
+        "（3）": "v/4−3√(v²−16fd/(3m))/4；v²>6fd/m"
+      }
+    }
+  ]
+}

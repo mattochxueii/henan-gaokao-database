@@ -53,7 +53,7 @@ SPECS = {
 }
 
 
-def parse_markdown(source):
+def parse_markdown(source, *, retain_paragraphs=False):
     blocks = re.split(r"(?m)^## (\d+) ([^\n]+)\n", source)[1:]
     for i in range(0, len(blocks), 3):
         number, topic, body = blocks[i:i+3]
@@ -66,9 +66,9 @@ def parse_markdown(source):
                 parts.append({"label": match[1], "text": match[2]})
             elif match := re.fullmatch(r"!\[[^]]+\]\(([^)]+)\)", line):
                 figure_path = match[1]
-            elif line.strip():
+            elif line.strip() or (retain_paragraphs and stem and stem[-1]):
                 stem.append(line)
-        yield int(number), topic, "\n".join(stem), options, parts, figure_path
+        yield int(number), topic, "\n".join(stem).strip(), options, parts, figure_path
 
 
 def sha256(path):

@@ -48,6 +48,10 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
             "references":[{k:v for k,v in q.items() if k not in
                             ("answer","reviewed_answer","curation","explanation","analysis","candidate","rubric")}
                           for q in references]}
+    if not topic and not source_id:
+        from core.quality_audit import position_reference
+
+        result["quality_benchmarks"] = position_reference(root, subject)
     if subject in SCIENCES:
         result["paper_layout"] = evidence["aggregate"]["paper_layout"]
     return result

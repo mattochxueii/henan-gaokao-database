@@ -49,6 +49,11 @@ def main(argv=None):
     simulate.add_argument("candidate",type=Path)
     simulate.add_argument("output",type=Path)
     simulate.add_argument("--context",required=True,type=Path)
+    audit=sub.add_parser("quality-audit", help="审查当前学生 PDF 的逐题命题质量")
+    audit.add_argument("input",type=Path)
+    audit.add_argument("evidence",type=Path)
+    audit.add_argument("--blind-review",type=Path)
+    audit.add_argument("--previous-rejection",type=Path)
     listen=sub.add_parser("attach-listening")
     listen.add_argument("paper_id")
     listen.add_argument("packet",type=Path)
@@ -102,6 +107,7 @@ def main(argv=None):
             if command=="generate":
                 p.add_argument("candidates",type=Path)
                 p.add_argument("output",type=Path)
+                p.add_argument("--context",type=Path)
     for command in ("review","publish","score"):
         p = sub.add_parser(command)
         p.add_argument("input",type=Path)
@@ -138,8 +144,17 @@ def main(argv=None):
         elif command=="attach-listening":
             from core.paper_listening import attach
             result=attach(root,args.paper_id,read_json(args.packet))
+        elif command=="quality-audit":
+            from core.quality_audit import submit
+
+            result=submit(args.input,read_json(args.evidence),
+                          review=read_json(args.blind_review) if args.blind_review else None,
+                          prior=read_json(args.previous_rejection) if args.previous_rejection else None)
+            print(dumps(result))
+            return 1 if result["status"] == "returned" else 0
         elif command=="simulate":
             from analysis_db import fingerprint
+            from core.quality_audit import bound_reference
             from core.practice_workbook import authoring_context
             from gaokao import digest, require
             packet=read_json(args.context)
@@ -153,11 +168,13 @@ def main(argv=None):
             proof=candidate.get("provenance",{})
             require(proof.get("dna_sha256")==actual["dna_sha256"] and
                     proof.get("context_sha256")==digest(args.context),"候选须绑定当前命题上下文")
+            quality_reference=bound_reference(actual,candidate)
+            candidate={**candidate,"quality_benchmarks":quality_reference}
             if args.subject=="math":
                 from math_skill import main as math_main
                 return math_main(["--root",str(root),"generate","--engine","ai","--study-mode","standard",
                                   "--mode","full","--skip-pilot","--candidates",str(args.candidate),
-                                  "--output",str(args.output)])
+                                  "--output",str(args.output)], quality_reference=quality_reference)
             if args.subject in SCIENCES:
                 blueprint=plan(root,args.subject,"河南",args.year,"standard")
                 result=prepare(root,blueprint,candidate,args.output,args.candidate.parent)
@@ -206,10 +223,13 @@ def main(argv=None):
             else:
                 result = import_electronic(root,args.input,args.markdown,args.images)
         elif command in ("plan","generate"):
+            if command=="generate" and (args.subject in language_workflow.LANGUAGES or args.mode=="standard"):
+                if args.context is None or args.region != "河南":
+                    raise ValueError("河南标准卷须先读取 authoring-context，使用 simulate --context")
+                return main(["--root",str(root),"simulate",args.subject,str(args.year),
+                             str(args.candidates),str(args.output),"--context",str(args.context)])
             if args.subject in language_workflow.LANGUAGES:
                 result=language_workflow.plan(root,args.subject,args.region,args.year)
-                if command=="generate":
-                    result=language_workflow.prepare(root,result,read_json(args.candidates),args.output)
             else:
                 result = plan(root,args.subject,args.region,args.year,args.mode,args.topic)
                 if command=="generate":

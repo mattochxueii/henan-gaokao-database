@@ -83,12 +83,16 @@ def prepare(root, blueprint, candidate, output):
               "points":150,"sections":blueprint["sections"],"materials":materials,
               "questions":[{k:v for k,v in q.items() if k in {"number","id","points","kind","section","stem","material","options"}}
                            for q in questions]}
+    reference=candidate.get("quality_benchmarks")
+    if reference:
+        public["quality_reference_sha256"]=fingerprint(reference)
     packet={"paper":public,"paper_version":fingerprint(public)}
     output.mkdir(parents=True,exist_ok=False)
     render(public, output/"paper")
     write_new(output/"blind-packet.json",packet)
     write_new(output/"listening-review.json",scripts)
     write_new(output/"verification.json",{"paper_version":packet["paper_version"],"paper_sha256":digest(output/"paper.pdf"),
+              **({"quality_benchmarks":reference} if reference else {}),
               "expected":[q["answer"] for q in questions],"blueprint_sha256":fingerprint(blueprint),
               "listening_sha256":fingerprint(scripts),"reference_notes":candidate["reference_notes"],
               "reference_scope":candidate["reference_scope"]})
@@ -154,5 +158,9 @@ def publish(folder, record):
                 and all(n.strip() for n in notes["pages"]),"须逐页核对最终PDF")
     require(record["artifacts"]["paper"]["sha256"]==bind["paper_sha256"],"发布学生卷已变更")
     result={**record,"review_sha256":fingerprint(checked),"status":"reviewed","reference_scope":bind["reference_scope"]}
+    if packet["paper"].get("quality_reference_sha256"):
+        from core.quality_audit import publication_quality
+
+        result["quality_audit_sha256"]=publication_quality(folder, checked)
     write_new(folder/"publication.json",result)
     return result

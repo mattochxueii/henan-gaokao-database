@@ -238,6 +238,8 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     paper = {"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
              "minutes":minutes,"total_points":points,"questions":visible}
     if standard:
+        if reference := candidate.get("quality_benchmarks"):
+            paper["quality_reference_sha256"] = fingerprint(reference)
         paper["layout"] = "science"
         paper["layout_rules"] = rules
         paper["partial_credit"] = next(
@@ -258,6 +260,7 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
     ]}
     render(rendered,output/"paper.pdf")
     write_new(output/"verification.json",{"blueprint":blueprint,"questions":checks,"answers":answers,
+              **({"quality_benchmarks":reference} if standard and (reference := candidate.get("quality_benchmarks")) else {}),
               "candidate_sha256":fingerprint(candidate),"paper_version":packet["paper_version"],
               "paper_pdf_sha256":digest(output/"paper.pdf")})
     return {"state":"await_independent_review","paper_version":packet["paper_version"],
@@ -339,7 +342,11 @@ def publication_record(folder, visual):
         require(visual[label+"_sha256"]==digest(path)==pending[label+"_sha256"]
                 and visual[label+"_pages"]==len(PdfReader(path).pages)
                 and visual.get(label+"_note"), "视觉记录与PDF版本或页数不符")
+    from core.quality_audit import publication_quality
+
+    quality = publication_quality(folder, review) if packet["paper"].get("quality_reference_sha256") else None
     record = {
+        **({"quality_audit_sha256":quality} if quality else {}),
         "status":"project_practice_independently_reviewed","subject":packet["subject"],
         "paper_version":packet["paper_version"],"question_ids":[q["id"] for q in packet["paper"]["questions"]],
         "review_sha256":fingerprint(review),"verification_sha256":pending["verification_sha256"],"visual":visual,

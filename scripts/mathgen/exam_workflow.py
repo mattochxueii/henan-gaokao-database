@@ -324,6 +324,11 @@ def publish(output, review_path, comparison_path):
     )
     require(review.get("overall_pass") is True, "整卷考生视角/风格审查未通过，禁止发布")
     verify_blind_quality(raw, review)
+    quality = None
+    if raw.get("quality_benchmarks"):
+        from core.quality_audit import publication_quality
+
+        quality = publication_quality(output, review)
     position = None
     if raw["paper"]["mode"] == "full" or raw.get("position_pilot"):
         plan = read_json(output / "position-plan.json")
@@ -416,6 +421,7 @@ def publish(output, review_path, comparison_path):
     solutions = solution_book(student, raw, comparison.get("solution_revisions", {}), guide)
     cert = {
         **manifest,
+        **({"quality_audit_sha256": quality} if quality else {}),
         "published": True,
         "status": "独立AI考生审题及数学对照通过；教师与实测待审",
         "review_sha256": fingerprint(review),

@@ -1,0 +1,66 @@
+{
+  "quality_audit_sha256": "bd21e583ae42c56a67eefc9ad9572c41bb9085799c33a6c8cc55b9e1ed9edb6c",
+  "status": "project_practice_independently_reviewed",
+  "subject": "physics",
+  "paper_version": "c0ed1a71d07293c425c960b1996849937d2f1d26422da96e665cf0dbf8fb4c5e",
+  "question_ids": [
+    "orig:physics:phase22-q01",
+    "orig:physics:phase22-q02",
+    "orig:physics:phase22-q03",
+    "orig:physics:phase22-q04",
+    "orig:physics:phase22-q05",
+    "orig:physics:phase22-q06",
+    "orig:physics:phase22-q07",
+    "orig:physics:phase22-q08",
+    "orig:physics:phase22-q09",
+    "orig:physics:phase22-q10",
+    "orig:physics:phase22-q11",
+    "orig:physics:phase22-q12",
+    "orig:physics:phase22-q13",
+    "orig:physics:phase22-q14",
+    "orig:physics:phase22-q15"
+  ],
+  "review_sha256": "dbdcd160df81cb7f958dbc4e75233962ea5575da97828ac528c0c3b544dad8b1",
+  "verification_sha256": "724c0c3379e35bbe217f0b3760827c0d4bb2432c1a3cf821999cc9649c902dcd",
+  "visual": {
+    "paper_version": "c0ed1a71d07293c425c960b1996849937d2f1d26422da96e665cf0dbf8fb4c5e",
+    "reviewer": "Work 宿主逐页目视",
+    "passed": true,
+    "paper_sha256": "149f80156336f0ccab10d10dcc5619ec6671b3ab9e28114c1f6e5be0c0607b72",
+    "solutions_sha256": "795a92173ac4a2c2cd5f4fd5eae72e3d2df7d410145380c19ccef9e52e4c51e2",
+    "paper_pages": 5,
+    "solutions_pages": 2,
+    "paper_note": "逐页见 page_checks.paper。",
+    "solutions_note": "逐页见 page_checks.solutions。",
+    "page_checks": {
+      "paper": [
+        "首节和 Q1–4。核对两行亮纹共用刻度、速度图量纲、临界光线位置。",
+        "Q5–7。检查四幅图同标度、正负台阶和时刻、甲乙衰减曲线、P 点载荷和尺寸。",
+        "Q8–10。多选说明只出现一次，节点与轴标完整，定差题选项左右成对换行。",
+        "Q11–13。查光电门与弹簧不穿过滑块，电表串并联正确，11 处横线完整，电子束图两段 L 对齐。",
+        "Q14–15。外气室开口与弹簧间隙可读，粗糙区 O 到 P、弹簧固定端、所有计算问在末页。"
+      ],
+      "solutions": [
+        "核对 Q1–11 的逐项判断、物理量单位和公式，Q12 的圈号答案在页尾。",
+        "Q12 从推导开始续排，Q13–15 完整，核对严格临界的根式和全部评分条目。"
+      ]
+    },
+    "method": "Poppler 145–160 dpi 逐页目视。另核对渲染 PDF 题号、分值及横线笔画。",
+    "choice_figure_numbers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10
+    ],
+    "blank_counts_by_question": {
+      "11": 5,
+      "12": 6
+    },
+    "measured_continuous_rules": 11
+  },
+  "scope": "学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。"
+}

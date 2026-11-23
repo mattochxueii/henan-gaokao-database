@@ -748,6 +748,7 @@ def run_ai(
     study_mode=None,
     forecast_context=None,
     skip_pilot=False,
+    quality_reference=None,
 ):
     require(not output.exists(), "输出目录已存在")
     if evaluation_split:
@@ -775,6 +776,8 @@ def run_ai(
     from forecast_modes import attach_mode
 
     document = attach_mode(document, study_mode, forecast_context)
+    if quality_reference is not None:
+        document = {**document, "quality_benchmarks": quality_reference}
     if skip_pilot:
         require(document.get("schema_version") == 2 and document["paper"]["mode"] == "full",
                 "直接整卷须使用三层题面的 full 候选")

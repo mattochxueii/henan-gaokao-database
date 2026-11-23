@@ -34,14 +34,22 @@ MATH_RASTER = MathTextParser("agg")
 
 def option_grid(options, width, compact=False):
     """Use the widest fitting row while keeping each label and answer together."""
-    for columns in (4, 2, 1):
+    layouts = [(1/4,)*4, (.5,.5)]
+    if compact:
+        layouts.extend([(.54,.46), (.46,.54)])
+    layouts.append((1,))
+    for ratios in layouts:
+        columns = len(ratios)
+        widths = [width * ratio for ratio in ratios]
         usable = width / columns - 12
         if compact:
-            for option in options:
-                option.wrap(usable, 1000)
+            for i, option in enumerate(options):
+                option.wrap(widths[i % columns] - 12, 1000)
             lengths = [len(option.blPara.lines) for option in options]
-            row_lines = sum(max(lengths[i:i + columns]) for i in range(0, len(lengths), columns))
-            fits = row_lines <= (1 if columns == 4 else 3) and all(
+            rows = [lengths[i:i + columns] for i in range(0, len(lengths), columns)]
+            fits = all(len(set(row)) == 1 for row in rows) and sum(map(max, rows)) <= (
+                1 if columns == 4 else 3
+            ) and all(
                 line.extraSpace >= -1e-6 for option in options for line in option.blPara.lines
             )
         else:
@@ -57,7 +65,7 @@ def option_grid(options, width, compact=False):
                 ]
             return Table(
                 [options[i:i + columns] for i in range(0, len(options), columns)],
-                colWidths=[width / columns] * columns,
+                colWidths=widths,
                 hAlign="LEFT",
                 style=style,
             )
@@ -155,12 +163,13 @@ def render(paper, path, solutions=False):
     assets.mkdir(exist_ok=True)
     font = chinese_font()
     science_layout = paper.get("layout") == "science"
+    science_key = science_layout and solutions
     body = ParagraphStyle(
         "student-body",
         fontName=font,
-        fontSize=11 if science_layout else 11.5,
-        leading=16 if science_layout else 23,
-        spaceAfter=3.5 if science_layout else 9,
+        fontSize=10.5 if science_key else 11 if science_layout else 11.5,
+        leading=14.5 if science_key else 16 if science_layout else 23,
+        spaceAfter=3 if science_key else 3.5 if science_layout else 9,
         wordWrap="CJK",
         autoLeading="max" if science_layout else "",
     )

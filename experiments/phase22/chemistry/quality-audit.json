@@ -1,0 +1,1074 @@
+{
+  "protocol": "gaokao-editorial-audit-v1",
+  "reviewer": "Work 宿主题位与命题质量审稿",
+  "paper_version": "0f445c9d8c53cf3ebed40c9e58779051f3fc4827573d81eb283178532fa498be",
+  "paper_pdf_sha256": "84bcd939069dcc252849d3f3b0d312225a262196cd2fdaf9bdefe70dcddf4620",
+  "reference_sha256": "dcc4260b93c0e81768efe9288b96a05bd4832f04a278c4b50198dac7e2553495",
+  "items": [
+    {
+      "number": 1,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b68b6ae932a357a33815480ef7e0d385d1e5b9b1a6e3b6d66eafdcb1fb49606d",
+          "comparison": "真题用历史材料辨别成分，起到低阅读负担的热身。本题用同等短的工业储氢模型判断平衡。"
+        },
+        "2026": {
+          "version_sha256": "6334039b8999d36c9215d4a07e3ce758f94bad195889227c4c95ab66cbf45056",
+          "comparison": "真题区分现象是否伴随化学反应。本题用可逆储氢检验压强、温度和催化几个基础方向。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：错误地把降压移动方向套到较少气体的生成侧。；B：认为催化既改变达到平衡的用时又提高平衡压力。；D：将升温通常加快反应误作升高放热反应平衡转化率。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "固定温度比较气态反应物对应的反应商 → 区分升温和催化对平衡的作用"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题为文字条件。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "正反应、放热和两固相共存写明。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "固定温度比较气态反应物对应的反应商",
+          "区分升温和催化对平衡的作用"
+        ],
+        "linked_concepts": [
+          "气固平衡",
+          "放热方向与温度效应",
+          "催化不改平衡"
+        ]
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "加压促进放气方向混淆",
+          "mechanism": "错误地把降压移动方向套到较少气体的生成侧。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "变快误当平衡量变大",
+          "mechanism": "认为催化既改变达到平衡的用时又提高平衡压力。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "碰撞频率与平衡倾向混淆",
+          "mechanism": "将升温通常加快反应误作升高放热反应平衡转化率。"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "0a3bb19c4842df859c0e600244733adb10b96cdb4159c4bad3cd9816baa13954",
+          "comparison": "题库同位化学用语图原件记录有限，可见任务是比较模型或化学表示。新题用局部层状结构读近邻。"
+        },
+        "2026": {
+          "version_sha256": "be83cb85685b845350f580a8a0d22ee6818dbd0da384546415b25817c9c5d289",
+          "comparison": "题库同位非线性光学晶体题可见结构/化学用语任务，图证不全。新题通过局部网络识别键与元素。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：看见同一六元环的另一个B，误当有直接键相连。；C：漏数边缘N只画出两个相邻单元，误作四B二N。；D：整个六元环图案对称，误认为每个B—N键没有极性。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "在图中跟踪六元环的交替成键 → 将同元素键判断与不同元素间的极性比较"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图中 B、N 点的相对排列和连线是比例、近邻及键极性的依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "区分局部图与完整单层的重复网络。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "在图中跟踪六元环的交替成键",
+          "将同元素键判断与不同元素间的极性比较"
+        ],
+        "linked_concepts": [
+          "共价网络的最近邻",
+          "原子交替配位",
+          "键的极性"
+        ]
+      },
+      "required_figure_information": "图中 B、N 点的相对排列和连线是比例、近邻及键极性的依据。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "把次近邻当最近邻",
+          "mechanism": "看见同一六元环的另一个B，误当有直接键相连。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "用部分截面点代替整环点",
+          "mechanism": "漏数边缘N只画出两个相邻单元，误作四B二N。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把几何对称当键非极性",
+          "mechanism": "整个六元环图案对称，误认为每个B—N键没有极性。"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "2c0ad2e4d418cec4724d8ade60512c85b8eaf16eff49bc468023bdc4b28206a0",
+          "comparison": "真题以图辨别实验操作是否规范；本题把正确读图和误差方向连接。"
+        },
+        "2026": {
+          "version_sha256": "1d8c898895ee6f81bc7c60722257833c784ac74e6abaf976f364d4eb3639db6f",
+          "comparison": "真题要求从实验示意图判断规范操作；本题加读数差和偏差方向。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "B：把读数差错误看作从较小量修正到较大量。；C：把末读数20.40 mL当滴定净量，误差虽向上但体积错。；D：默认滴定管内少了多少就全部流进反应容器。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "按滴定管自上而下增大的标尺读弯月面 → 比较示差体积与实际流入锥形瓶的体积"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "凹液面底比分别为3.10、20.40 mL，初末尖嘴状态也在图上。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "明确气泡先存在、后消失，避免方向争议。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按滴定管自上而下增大的标尺读弯月面",
+          "比较示差体积与实际流入锥形瓶的体积"
+        ],
+        "linked_concepts": [
+          "凹液面读数",
+          "体积差与尖嘴余量",
+          "定量误差传递"
+        ]
+      },
+      "required_figure_information": "凹液面底比分别为3.10、20.40 mL，初末尖嘴状态也在图上。",
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "气泡误差方向相反",
+          "mechanism": "把读数差错误看作从较小量修正到较大量。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "漏扣初读数",
+          "mechanism": "把末读数20.40 mL当滴定净量，误差虽向上但体积错。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "尖嘴库存变化漏算",
+          "mechanism": "默认滴定管内少了多少就全部流进反应容器。"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a306be26fdc821bf77df766771a3cbf6c5a77c39c5d6594edc4bc44742912b8b",
+          "comparison": "真题从矿物多步图中追踪同组成元素；本题改变为两条产品线，分别守恒碳酸根、硫酸根和铵根。"
+        },
+        "2026": {
+          "version_sha256": "6e2e37495624bd8f68845585a0d6236057da7d719a7db6e12c27b97208f03ba6",
+          "comparison": "真题沿漂白粉转化图认定元素去向。本题用湿法石膏转化考同一物料追踪动作。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：仅按一摩尔初始碳酸钙含一个碳，错误预计只增加一摩尔碳酸氢根。；B：看见−2误计每份石膏含两个硫酸根。；C：用一份碳酸氢铵只供一个铵根却按两份铵根计。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由图中滤液、滤渣分别判断硫和钙的去向 → 核对铵根的配比及二氧化碳进入溶液的转化"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "滤液标定为硫酸铵路线、滤渣进入碳酸氢钙支线，两产品信息需要看流程。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "保留图的两条流向，给滤渣固相名称。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由图中滤液、滤渣分别判断硫和钙的去向",
+          "核对铵根的配比及二氧化碳进入溶液的转化"
+        ],
+        "linked_concepts": [
+          "沉淀驱动复分解",
+          "物料衡算",
+          "碳酸盐转化"
+        ]
+      },
+      "required_figure_information": "滤液标定为硫酸铵路线、滤渣进入碳酸氢钙支线，两产品信息需要看流程。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "漏计引入的二氧化碳之碳",
+          "mechanism": "仅按一摩尔初始碳酸钙含一个碳，错误预计只增加一摩尔碳酸氢根。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "把硫酸根电荷数当计量数",
+          "mechanism": "看见−2误计每份石膏含两个硫酸根。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "漏算硫酸铵的铵根配比",
+          "mechanism": "用一份碳酸氢铵只供一个铵根却按两份铵根计。"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7a62aca943729729a0e33894e2f29d1b9aa45929d6fd25093cf1258bc0dc8256",
+          "comparison": "真题要求在给定条件下核查离子方程式。本题同处基础概念向多约束的过渡位置。"
+        },
+        "2026": {
+          "version_sha256": "3bfe52d0b4242dbd6776c8ae11e338afb8a486ba56d5fdb91a6d85e19d47ad1e",
+          "comparison": "真题的化学史叙述配概念判断；本题以三条电子约束确定四粒子再比较。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "B：在各符号类别内误逆对比核吸引。；C：忽略电子数相同，核电荷越大束缚越强。；D：误以为钠、镁失电子后仍保留第三层。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由2p电子数和位置辨识氧、氟 → 利用等电子数推出钠、镁并按核电荷重排半径"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题为文字条件。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "元素名称由给定条件够确定，四种选项沿同一物理量比较。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由2p电子数和位置辨识氧、氟",
+          "利用等电子数推出钠、镁并按核电荷重排半径"
+        ],
+        "linked_concepts": [
+          "基态电子排布",
+          "等电子微粒",
+          "离子半径与核吸引"
+        ]
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "按阴阳离子带电绝对值排序",
+          "mechanism": "在各符号类别内误逆对比核吸引。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把元素序数当作半径增大方向",
+          "mechanism": "忽略电子数相同，核电荷越大束缚越强。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "用原子所处周期比较离子",
+          "mechanism": "误以为钠、镁失电子后仍保留第三层。"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "319ed20ae317b799f0999374ee2d2935559f56f9670210664f1c687b6e6e07de",
+          "comparison": "真题由元素位置信息及电子数确定物种；本题用柱图给离子比例后再锁定两种固相。"
+        },
+        "2026": {
+          "version_sha256": "7a7bb8f613005422074e8198b94f82d432d0ba7f6a10831df3f3c8159e3c9370",
+          "comparison": "真题在不同反应介质中辨析净离子反应；本题四式均守恒，需用介质及计量比取舍。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：套用钙镁2∶1的反应配比，式虽守恒却不足以描述图上等量去除。；B：忽略题设镁为氢氧化物。；D：把镁的完全沉淀算成只形成一个可溶羟基离子。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由柱高确定钙镁同量且重碳酸根充足 → 分别写成碳酸钙及氢氧化镁，合并离子方程"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "钙镁比为1∶1、重碳酸根相对量4在图中确定。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "只规定要写原水两种固相去除的总净式，移除与试剂来源无关的解释。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由柱高确定钙镁同量且重碳酸根充足",
+          "分别写成碳酸钙及氢氧化镁，合并离子方程"
+        ],
+        "linked_concepts": [
+          "重碳酸根去质子化",
+          "沉淀离子方程与电荷守恒",
+          "离子量比"
+        ]
+      },
+      "required_figure_information": "钙镁比为1∶1、重碳酸根相对量4在图中确定。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "漏读两金属离子等量",
+          "mechanism": "套用钙镁2∶1的反应配比，式虽守恒却不足以描述图上等量去除。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "习惯让两种二价离子都成碳酸盐",
+          "mechanism": "忽略题设镁为氢氧化物。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "漏掉第二个氢氧根",
+          "mechanism": "把镁的完全沉淀算成只形成一个可溶羟基离子。"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a75f52e82573e631658133834bc9b51777a052c4af6b986b923f366200278d56",
+          "comparison": "真题给天然产物结构并从多个官能团推性质；本题保留来源情境与四判断。"
+        },
+        "2026": {
+          "version_sha256": "f621f330a0453cdbb7b1d79e62c1dc52b282d47ae7a94d71f55c6b0b7e35a297",
+          "comparison": "真题同位为植物活性化合物结构辨识；本题用阿魏酸的碳碳双键加氢区分顺反和手性。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：漏数取代甲氧基的碳或把双键两端的隐含氢数算错，会把正确分子式选为错误。；B：忽略酚羟基同样可与NaOH反应，误否定正确的2当量。；C：没有检查双键两端各连接两种不同基团，误将C判错。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从键线式复原取代基、羟基及双键 → 分别核对式量、酸碱位点和成键立体条件"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "相邻甲氧基与酚羟基，以及从苯环到羧基的碳碳双键，均由结构给出。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "用‘错误的是’把选择方向写清，限制为侧链双键加氢。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "从键线式复原取代基、羟基及双键",
+          "分别核对式量、酸碱位点和成键立体条件"
+        ],
+        "linked_concepts": [
+          "有机官能团",
+          "顺反与手性条件",
+          "酚及羧酸碱性反应"
+        ]
+      },
+      "required_figure_information": "相邻甲氧基与酚羟基，以及从苯环到羧基的碳碳双键，均由结构给出。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "键线式漏算末端甲基或烯氢",
+          "mechanism": "漏数取代甲氧基的碳或把双键两端的隐含氢数算错，会把正确分子式选为错误。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "只计羧基耗碱",
+          "mechanism": "忽略酚羟基同样可与NaOH反应，误否定正确的2当量。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "以无手性中心排除顺反异构",
+          "mechanism": "没有检查双键两端各连接两种不同基团，误将C判错。"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "50262fb6e76ad05a7bc16fc3fdfbc5038d710bea894be37e77c6dc8de969f824",
+          "comparison": "真题同位通过配位与转化对照分辨结论。本题也要求区分局部状态与路线总体性质。"
+        },
+        "2026": {
+          "version_sha256": "412eb32d52e2146a1b8bc318152dfa3b292e6621b5766e9ea7f7c580dda85d50",
+          "comparison": "真题同位用多条电子排布约束确定催化剂元素。本题用两套能量数据，跨状态比较。实际同类机理/能量图见2025年第10、13题。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：只比较从0起的24，漏去甲第二步18−(−24)。；C：从中间体减为42，没有从产物−18出发。；D：两中态相差12就误认为催化改了反应的端点差。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从两条路线分别读中间体、峰顶、产物节点 → 把各峰减去对应方向的局部起点，并与总焓变区别"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "两条能量路线的各节点数值只有图给出，尤其−24/−12吸附态。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "把相对焓与能垒的取值规定放在一处。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "从两条路线分别读中间体、峰顶、产物节点",
+          "把各峰减去对应方向的局部起点，并与总焓变区别"
+        ],
+        "linked_concepts": [
+          "催化中间体与分步能垒",
+          "正逆方向",
+          "始终态焓变"
+        ]
+      },
+      "required_figure_information": "两条能量路线的各节点数值只有图给出，尤其−24/−12吸附态。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "拿首峰当全程最大能垒",
+          "mechanism": "只比较从0起的24，漏去甲第二步18−(−24)。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "逆反应用正向起点",
+          "mechanism": "从中间体减为42，没有从产物−18出发。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "用中间体差替代总焓变",
+          "mechanism": "两中态相差12就误认为催化改了反应的端点差。"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "620732f8b75c703c52fe386da3bb7ff84e1ba83bab5dd42caffbf0780759c5b0",
+          "comparison": "真题同位以热重与结构给定约束作计量联立。本题改为跨膜电荷与半反应，比照同年膜电解题第12题。"
+        },
+        "2026": {
+          "version_sha256": "9eb1aa2dfe9b00dc8856bee3cda5774a4e25ee77083437402e5f61199dcc99f4",
+          "comparison": "真题同位铁的对照实验要求分辨各槽/管的局部作用。本题区分两电极、小室和选择性膜，另与第12题装置可比。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：误记一价Na⁺应当和二价硫酸根等量转移。；B：将阴极H₂:阳极O₂的2∶1写成酸室比碱室。；D：把阴极每电子耗一水套到阳极每四电子耗二水。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由极性和膜选择性定位迁移方向 → 联立水半反应和电荷守恒比较气体、水及碱"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "正、负极与两膜的可通过离子仅由图标明，决定去向。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "限定只看水的电极反应和两种膜输运，避免氯析出等歧义。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由极性和膜选择性定位迁移方向",
+          "联立水半反应和电荷守恒比较气体、水及碱"
+        ],
+        "linked_concepts": [
+          "阴阳极半反应",
+          "离子交换膜",
+          "电荷与化学计量"
+        ]
+      },
+      "required_figure_information": "正、负极与两膜的可通过离子仅由图标明，决定去向。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "用膜粒子数相等代替输运电荷相等",
+          "mechanism": "误记一价Na⁺应当和二价硫酸根等量转移。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "产气比颠倒",
+          "mechanism": "将阴极H₂:阳极O₂的2∶1写成酸室比碱室。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "两半反应水耗同当量",
+          "mechanism": "把阴极每电子耗一水套到阳极每四电子耗二水。"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "189c7df635db8ac45af71d07a3db6fd7210b017aed60f1fa867c418033db0d08",
+          "comparison": "真题第10题由两催化路线的图读不同参照能量，本题同样需按两条约束读图后推新状态。"
+        },
+        "2026": {
+          "version_sha256": "07e2db9a356279b67da9b3061f313dc588f053116b22d22be8a76d9fe87e41aa",
+          "comparison": "真题第10题从微观结构作宏观解释，本题从电离及浓度比解释分布形状。同专题更接近2025年第14题。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "B：在与A²⁻相交处，误认HA⁻占比最大。；C：正确是K₂/[H⁺]=10，互换分子分母得到1/10。；D：误认为处于两交点中间，H₂A与HA⁻必等量。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由交点识别逐级平衡常数 → 在另一pH下计算同一物种浓度比并归一化"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "相邻曲线在 pH=4、8相交，决定两个电离常数；无需猜初始浓度。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "先定义分布分数，再明确读交点横坐标。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由交点识别逐级平衡常数",
+          "在另一pH下计算同一物种浓度比并归一化"
+        ],
+        "linked_concepts": [
+          "二级电离平衡式",
+          "分布分数与浓度比",
+          "pH 对数尺度"
+        ]
+      },
+      "required_figure_information": "相邻曲线在 pH=4、8相交，决定两个电离常数；无需猜初始浓度。",
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把交点误当中间分量峰值",
+          "mechanism": "在与A²⁻相交处，误认HA⁻占比最大。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把电离浓度比写倒",
+          "mechanism": "正确是K₂/[H⁺]=10，互换分子分母得到1/10。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把区间中点当两级共用pKa",
+          "mechanism": "误认为处于两交点中间，H₂A与HA⁻必等量。"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "ca22a7cd605368d1cfd5dcc3aa672a5df17299584b9d9dc15d7cd351901ed12f",
+          "comparison": "真题同位从可持续聚酯路线追踪重复单元与结构。本题把重复和计数的问题放在晶胞图上。"
+        },
+        "2026": {
+          "version_sha256": "6c775f98ab97f3e0d7bda050b6bab65d85496c3f7f3c4cacab03ca091360668b",
+          "comparison": "真题同位聚酯醚结构资料因个别图文有限，只用于结构追踪题位比较。本题另用四层切片体现跨图整合。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：把两层锂简并成同一层，或忽略共享后误得等量。；B：把半层厚当最近距离，漏三个方向的a/4分量。；C：用一个Li周围的四个O代替一个O周围的八个Li。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "计入角点、面心与内点各自分摊 → 在三个方向找最近点并分清锂位和氧位配位数 → 用计数转单胞质量"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "给出锂的1/4、3/4层和氧的角、面位置；只有四层能够计数并判断最近邻。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "坐标统一以边长a为单位，顶面规则写在图例。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "计入角点、面心与内点各自分摊",
+          "在三个方向找最近点并分清锂位和氧位配位数",
+          "用计数转单胞质量"
+        ],
+        "linked_concepts": [
+          "晶体边界共享",
+          "分数坐标距离",
+          "配位数和微观质量"
+        ]
+      },
+      "required_figure_information": "给出锂的1/4、3/4层和氧的角、面位置；只有四层能够计数并判断最近邻。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "只计一个内部层或重复计边界",
+          "mechanism": "把两层锂简并成同一层，或忽略共享后误得等量。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "仅做平面或轴向距离估计",
+          "mechanism": "把半层厚当最近距离，漏三个方向的a/4分量。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "互换阴、阳离子配位",
+          "mechanism": "用一个Li周围的四个O代替一个O周围的八个Li。"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5e6873308d42023e4eaac771875243f5c432b372debb314f361300d2d3c7e6f4",
+          "comparison": "真题第12题联合多室电荷和物料。这里同样做跨阶段衡算，实际同类热重图见2025年第9题。"
+        },
+        "2026": {
+          "version_sha256": "33113920a0dc88a128b3463ee7cd8bd7d6621d3cafbe64bdc6f2cc81fe69ef35",
+          "comparison": "真题第12题辨析串联装置的多个物料变化。本题跨三个热重台阶求固相和气相归属。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：忽略该步平台差是28 g，44 g对应下一步。；C：直接用68.5%−38.4%，没有除以68.5%。；D：将水重18除以128而非水合物146。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "以末态CaO反推开始式量和各平台每摩尔质量 → 逐段作差并守恒判定气体和百分比分母"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "四个平台按同一初始样品标定，B、C、D读数用于确定结晶水和后续失重。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "交代只失水、单固相单气体及终态，先读后推无需猜测其他氧化物。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "以末态CaO反推开始式量和各平台每摩尔质量",
+          "逐段作差并守恒判定气体和百分比分母"
+        ],
+        "linked_concepts": [
+          "热重平台量比",
+          "元素守恒",
+          "同样质量损失的基准选择"
+        ]
+      },
+      "required_figure_information": "四个平台按同一初始样品标定，B、C、D读数用于确定结晶水和后续失重。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "先入为主把含碳盐分解作放CO₂",
+          "mechanism": "忽略该步平台差是28 g，44 g对应下一步。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把图上的初始质量分母沿用到C平台",
+          "mechanism": "直接用68.5%−38.4%，没有除以68.5%。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "用脱水后的无水盐作起始分母",
+          "mechanism": "将水重18除以128而非水合物146。"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "2819fc803a61d3af93a097333a4cd67e50c55edfec76999e12cbb42a6e6b9e5b",
+          "comparison": "真题第13题沿机理图追踪成键断键；本题通过位置标记追踪哪一侧保有羰基碳。"
+        },
+        "2026": {
+          "version_sha256": "3f3d7339a6b00bbcd18790ca28998adc375b4bd9f9d4454e2084d1849a4cdb59",
+          "comparison": "真题第13题需区分连续反应各组分随时间曲线；本题区分水解前后和酸化前后的官能团状态。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：只数羧基中和和酯的皂化两当量。；B：没从酰—氧处断开，错误追踪标记碳到水杨酸。；D：把新醇的氧所进入的烷氧键误当成替代羰基氧。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由键线式确定标记在乙酰羰基，定位芳氧酯键 → 分别对水解后酸化与酶催化醇解追踪两种产物和标记位置 → 按完全去质子化口径核算碱用量，并区分两种酯氧"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "结构图把标记定位在乙酰羰基、并给羧基与芳氧酯键，控制水解产物。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "先区分甲、乙处理的选择性，再显式限定酸化与同位素口径。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由键线式确定标记在乙酰羰基，定位芳氧酯键",
+          "分别对水解后酸化与酶催化醇解追踪两种产物和标记位置",
+          "按完全去质子化口径核算碱用量，并区分两种酯氧"
+        ],
+        "linked_concepts": [
+          "芳香酯酰氧断键及给定醇解信息",
+          "同位素位置守恒",
+          "羧基、酚羟基的酸碱"
+        ]
+      },
+      "required_figure_information": "结构图把标记定位在乙酰羰基、并给羧基与芳氧酯键，控制水解产物。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "漏数水解新生酚羟基耗碱",
+          "mechanism": "只数羧基中和和酯的皂化两当量。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "沿芳环一侧保留乙酰羰基",
+          "mechanism": "没从酰—氧处断开，错误追踪标记碳到水杨酸。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "混淆酯中的两种氧",
+          "mechanism": "把新醇的氧所进入的烷氧键误当成替代羰基氧。"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b6028dc0c76f6f45ac8f791fdb859f70c0acbdc24bbec81d3cb7036126d3ba7c",
+          "comparison": "真题乙二胺多步质子化关系需结合多条分布关系。本题在相同题位把多线比较用于选择性沉淀。"
+        },
+        "2026": {
+          "version_sha256": "13acef7bdb690275ac3068cc70175e0a784f70789dedd371c7d5fd8ab3beb0f9",
+          "comparison": "真题可见 pH、硫酸钡固体与配位耦合，部分题面转录异常，仅比较带固相边界的曲线任务。公开原卷图文另作交叉证据。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "A：误用双价金属氯化物的斜率，得到10⁻⁶ mol/L。；C：将PbCl₂在pCl=2的饱和值0.1 mol/L当作现有浓度，即使初始仅0.01 mol/L。；D：读出两个门槛后弄反变化方向，把铅先析出。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "按给定pCl在两线读取理论平衡浓度 → 将理论值分别和初始浓度比较确定能否析出 → 由横轴变化方向比较两个开始沉淀的阈值"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "给出AgCl与PbCl₂两条共存曲线的斜率及交点，能查两条沉淀阈值。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "明示为‘与固体共存时的理论值’，不替考生判断固体是否实际生成。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按给定pCl在两线读取理论平衡浓度",
+          "将理论值分别和初始浓度比较确定能否析出",
+          "由横轴变化方向比较两个开始沉淀的阈值"
+        ],
+        "linked_concepts": [
+          "溶度积与离子积",
+          "浓度负对数关系",
+          "固相是否共存的边界"
+        ]
+      },
+      "required_figure_information": "给出AgCl与PbCl₂两条共存曲线的斜率及交点，能查两条沉淀阈值。",
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "把氯离子按二次方代入AgCl的溶度积",
+          "mechanism": "误用双价金属氯化物的斜率，得到10⁻⁶ mol/L。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "见曲线就套共存条件",
+          "mechanism": "将PbCl₂在pCl=2的饱和值0.1 mol/L当作现有浓度，即使初始仅0.01 mol/L。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "从小pCl向大pCl扫描",
+          "mechanism": "读出两个门槛后弄反变化方向，把铅先析出。"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "68c7965255ab5ee935a926cecbe22f6c68c442040235c6cdf62f7644296725c0",
+          "comparison": "真题贵金属提铑要通过反应价态、分离和酸度控制。新题用电池粉的价态、两段pH和回收量。"
+        },
+        "2026": {
+          "version_sha256": "556a6993afe5d23f7f6837527b0160b8d0ce05316e53e5cc03873bc9d4786b93",
+          "comparison": "真题废芯片流程结合分步浸出、回流和再生。新题回流量真正进入稳态收率计算，回收对象不同。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答题。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "按铁价态配平固相选择性氧化脱锂 → 联立除铝要求与镁的沉淀界限 → 按流程母液回用比例写稳定批次的锂衡算"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "回流比例3/4仅图上给出，同时给出除铝、除镁和沉锂先后。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "稳态每批的新料、未分流母液和返回比例分别给出。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按铁价态配平固相选择性氧化脱锂",
+          "联立除铝要求与镁的沉淀界限",
+          "按流程母液回用比例写稳定批次的锂衡算"
+        ],
+        "linked_concepts": [
+          "氧化还原与异相离子方程",
+          "沉淀溶度积窗口",
+          "回流稳态物料衡算"
+        ]
+      },
+      "required_figure_information": "回流比例3/4仅图上给出，同时给出除铝、除镁和沉锂先后。",
+      "distractors": {}
+    },
+    {
+      "number": 16,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e4cf590443eb32156483da6e518e3cd8335bb1427edb38ecc500a52bb345adcd",
+          "comparison": "真题可见硫的样品预处理、氧化及定量滴定；档案复核有限。新题将定量扩展为两套配对样本及相反系统误差。"
+        },
+        "2026": {
+          "version_sha256": "fb8f30cd3d620c80e07f5543791f370f86e9a43174c7d34b0fb79e9915e5b7fc",
+          "comparison": "真题碘的萃取用定性对照推进到定量验证。本题改为碘量测过氧化氢，保留用空白判定干扰。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答题。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "将两次滴定差与等量加碘建立当量关系 → 以配对空白消去还原剂耗碘，比较对照和处理组 → 用两种相反干扰检验能否定偏差方向"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "两组原样值及配对空白14.00 mL给出定量校正依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "明确空白与原样同批、同条件，唯一移去的是待测过氧化氢。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "将两次滴定差与等量加碘建立当量关系",
+          "以配对空白消去还原剂耗碘，比较对照和处理组",
+          "用两种相反干扰检验能否定偏差方向"
+        ],
+        "linked_concepts": [
+          "氧化还原滴定",
+          "矩阵匹配和对照实验",
+          "由数据限定因果和误差方向"
+        ]
+      },
+      "required_figure_information": "两组原样值及配对空白14.00 mL给出定量校正依据。",
+      "distractors": {}
+    },
+    {
+      "number": 17,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "904b85acf1841bf41adb03a33a85de5164eee8b707d909ccac208b125112e991",
+          "comparison": "真题将分解、重整和热化学联结。本题用碳去向拆分两反应并算耦合组分。"
+        },
+        "2026": {
+          "version_sha256": "24e198eaf3a2263217cbd1ad90dd14a67a50e0c579c297f76f2528016002a55e",
+          "comparison": "真题在恒压条件下用分压处理非等体反应。本题进一步分开立即压缩的Q与改温的平衡常数。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答题。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由转化率及选择性推两个反应进度和五组分 → 用气体总物质的量归一化到分压并计算两K → 从瞬时Q的压力级数与另一温度K改变判断反应趋向"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "柱图同时给两温度下的转化率和选择性，四个标高均用于计算。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "分别用‘尚未变化’和‘另一温度平衡’约束两类推断。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由转化率及选择性推两个反应进度和五组分",
+          "用气体总物质的量归一化到分压并计算两K",
+          "从瞬时Q的压力级数与另一温度K改变判断反应趋向"
+        ],
+        "linked_concepts": [
+          "计量反应进度",
+          "分压平衡常数",
+          "温度与外界压力改变"
+        ]
+      },
+      "required_figure_information": "柱图同时给两温度下的转化率和选择性，四个标高均用于计算。",
+      "distractors": {}
+    },
+    {
+      "number": 18,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bcb410080668fb52ab524eb37e8c5c7f05ee49d05a4e5cd0f305e9c75341b38d",
+          "comparison": "题库与公开版第18题都可见多阶段路线、含氮信息反应、异构体要求及副反应。新题含六步结构追踪、保护条件和逆推；原题个别转录未升级。"
+        },
+        "2026": {
+          "version_sha256": "8d43c6b66c7498812454a251d40d287656f71be82215e3b670ebe7ef0b13fd99",
+          "comparison": "题库与公开参考第18题都可见手术用药多路径、异构体和酰基取代位置控制。新题换为香兰酸乙酯和酚保护四步迁移；原题个别图文需保留证据边界。"
+        }
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "分步作答题。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用三处取代位置和保护信息倒推B及产物官能团 → 以苯环对称计数两个酯键连接方向的异构体 → 将选择性保护—转换—脱保护迁移到另一原料，控制酸和酚的相容性"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图示 A、C、E 三种实际取代位置和六步流向，限定 B结构与后续甲氧基化方向。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "指明两类取代基排列允许包括G，明确四步路线须满足所给保护条件。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用三处取代位置和保护信息倒推B及产物官能团",
+          "以苯环对称计数两个酯键连接方向的异构体",
+          "将选择性保护—转换—脱保护迁移到另一原料，控制酸和酚的相容性"
+        ],
+        "linked_concepts": [
+          "亲电取代位置与芳基官能团互换",
+          "酚保护及化学选择性",
+          "取代苯的对称性",
+          "合成路线迁移"
+        ]
+      },
+      "required_figure_information": "图示 A、C、E 三种实际取代位置和六步流向，限定 B结构与后续甲氧基化方向。",
+      "distractors": {}
+    }
+  ],
+  "revisions": {
+    "8": {
+      "depth": "分别比较两路线单步能垒，区分中间体基准、反向能垒与固定总焓变。"
+    },
+    "9": {
+      "figure": "仅在图中给通膜离子和装置极性，需用来判断离子去向。",
+      "depth": "联结半反应与两个膜的电荷闭合，分辨水耗、产气比和碱生成量。"
+    },
+    "11": {
+      "figure": "改为四个 z 截面，实际从角、面和内部的点位取数。",
+      "depth": "比较最近距离、不同离子的配位数，分摊角面点求单胞质量。"
+    },
+    "13": {
+      "distractors": "用漏计水解后酚羟基耗碱、错追标记到水杨酸和把醇解烷氧替换误作羰基氧替换三条路径，加入给定酶催化醇解并行实验。"
+    },
+    "14": {
+      "depth": "同时考虑两条理论曲线、初始浓度上限和析出先后，识别铅盐未饱和时不能套共存线。"
+    },
+    "18": {
+      "depth": "从对羟基苯甲醛经六步构建甲氧基，加入选择性信息、两类异构体数目与缩短路线迁移。",
+      "language": "写明信息反应对酚羟基、酯键的选择性和计数边界，明确同分子式并含 G。"
+    }
+  }
+}

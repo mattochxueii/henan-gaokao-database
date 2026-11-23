@@ -1,0 +1,109 @@
+{
+  "protocol": "gaokao-editorial-audit-v1",
+  "status": "returned",
+  "reference_sha256": "e22c02a5eece9ff4062d4767a247566a50b940187290c6739b1e0abf1bd5f201",
+  "paper_version": "ad9757bdf56d4b3aabdfb9d642c7395b829acd866fe97cdd12e0f0fcc7fc4514",
+  "paper_pdf_sha256": "00771083176014eea4ac7ade7d31d5fe7d971bde60c0a9335a137cbca8997818",
+  "item_versions": {
+    "1": "d665d31c854d35034796fd7691ecda7b26ff7a37588d00d496bb66a5f80cc5ea",
+    "2": "9f56e8db45d0934931f814c37cbfd99be3e49f3c3f1356326ee061728b46bd7d",
+    "3": "428e753847c7d2b4de2e2c5d6076f8f82b155661c675601b565a1a9c05d8efa4",
+    "4": "790d56162927a28b48e3e8e465fa39b012503747b597a3d47eacac97b0b23e1f",
+    "5": "24cefa6a4250e1a0eb212c31e33b219017973796cd602fd6bb38221ceed2d014",
+    "6": "0b94f51d102aecc6abda9f6add647f1ef7525076ddb6a5c3861dac83e5e1fa17",
+    "7": "e21712b886980a55e22fb6c73bc9f4bc600c193bf87a6ce7e72d14df3157f590",
+    "8": "767f3a52419bb52137e2a65237e7f233acd19920098a40625b4b877270d241b0",
+    "9": "8f4ebf39a1f0d535a3d6c8f3b4e0ae41fe05c21f10f0dd3baf2b09ff12aaf032",
+    "10": "2764e292271af7a5f3797eaee6a4ca6d11b35c09a2a0aff77767b9ea665e822c",
+    "11": "a9e0aee6fde6870715ff15fe4653f0e3e8641273c89cf2d5ad0d1146712cb7b2",
+    "12": "803b9f8d0db85b6e69fc8edd286ec469cd7239362a1b749a59849e497e97c441",
+    "13": "5b314842a440dceea4179f7cd18f7f2e691f7c82e9d50807e81118fe5e926f64",
+    "14": "8b89f004de9e5c025310ad675d6059eee06a58742181ea8c50a58117c26b7e22",
+    "15": "9dd86bb421af4c0b8f52c7e5d80b4b1338e74a4b4abc59375676ea0eb9d3294c"
+  },
+  "audit_sha256": "d851c94d6b07ac6b594f5b08d2ce3aa0036b5f7db033a1ecbe4a041bbc538727",
+  "independent_review_sha256": null,
+  "prior_rejection_sha256": null,
+  "failures": [
+    {
+      "number": 4,
+      "rule": "depth",
+      "reason": "只读入射角后代一次折射公式，第二界面没有进入任务。"
+    },
+    {
+      "number": 4,
+      "rule": "depth",
+      "reason": "缺少同题位要求的不同信息处理步骤及相互联结的概念"
+    },
+    {
+      "number": 5,
+      "rule": "depth",
+      "reason": "直接给出两边电动势大小与合方向，选择题只剩相加。"
+    },
+    {
+      "number": 5,
+      "rule": "figure",
+      "reason": "无图也能从给出的大小和方向选 D。"
+    },
+    {
+      "number": 5,
+      "rule": "language",
+      "reason": "把两个边切割叠加的解题提示写进题干。"
+    },
+    {
+      "number": 5,
+      "rule": "depth",
+      "reason": "缺少同题位要求的不同信息处理步骤及相互联结的概念"
+    },
+    {
+      "number": 7,
+      "rule": "depth",
+      "reason": "只写最高点一个受力方程，无需在初态与末态之间建立关系。"
+    },
+    {
+      "number": 7,
+      "rule": "figure",
+      "reason": "文字已经给出唯一用于解题的曲率半径，粗糙段和高度无用。"
+    },
+    {
+      "number": 7,
+      "rule": "depth",
+      "reason": "缺少同题位要求的不同信息处理步骤及相互联结的概念"
+    },
+    {
+      "number": 9,
+      "rule": "distractors",
+      "reason": "D 的负绝对压强可凭常识排除，无需分清两室或比较分子数。"
+    },
+    {
+      "number": 9,
+      "rule": "depth",
+      "reason": "阀门全过程关闭，送气阈值、两侧守恒和末态压力耦合均未考。"
+    },
+    {
+      "number": 9,
+      "rule": "depth",
+      "reason": "缺少同题位要求的不同信息处理步骤及相互联结的概念"
+    },
+    {
+      "number": 9,
+      "rule": "distractors",
+      "reason": "B项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 9,
+      "rule": "distractors",
+      "reason": "D项缺可信的学生误区或具体推错路径"
+    },
+    {
+      "number": 15,
+      "rule": "depth",
+      "reason": "前两问是单式代入，最后只含一个匀滑阶段，没有返程能量门槛和参考系切换。"
+    },
+    {
+      "number": 15,
+      "rule": "depth",
+      "reason": "缺少同题位要求的不同信息处理步骤及相互联结的概念"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ from mathgen.pipeline import run, custom_blueprint
 from mathgen.quality import verify, assert_fresh
 
 
-def main(argv=None):
+def main(argv=None, *, quality_reference=None):
     parser = argparse.ArgumentParser(description="河南数学真题研究与命题原型")
     parser.add_argument("--root", type=Path, default=ROOT)
     actions = parser.add_subparsers(dest="action", required=True)
@@ -239,6 +239,7 @@ def main(argv=None):
                     evaluation_split=read_json(args.evaluation_split) if args.evaluation_split else None,
                     study_mode=args.study_mode,
                     forecast_context=forecast_context,
+                    quality_reference=quality_reference,
                 )
                 result = {
                     "output": str(args.output.resolve()),

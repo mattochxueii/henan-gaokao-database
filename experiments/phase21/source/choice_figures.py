@@ -101,7 +101,7 @@ def physics(folder):
     save(fig, folder, 6)
 
     fig, axes = plt.subplots(1, 2, figsize=(8.4, 2.32))
-    fig.subplots_adjust(left=.10, right=.98, top=.78, bottom=.24, wspace=.34)
+    fig.subplots_adjust(left=.135, right=.98, top=.78, bottom=.24, wspace=.34)
     x = np.linspace(0, .80, 200)
     for i, (ax, direction) in enumerate(zip(axes, ("沿 x 轴正向", "沿 x 轴负向")), 1):
         ax.plot(x, np.cos(2*np.pi*x/.80), color=INK, lw=1.8)
