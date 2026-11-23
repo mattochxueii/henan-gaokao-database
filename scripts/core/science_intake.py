@@ -15,6 +15,86 @@ from local_archive import TABLES, write_bundle
 from subjects import SCIENCES
 
 
+SCIENCE_KINDS = ("single_choice", "multiple_choice", "fill_in", "constructed_response")
+
+
+def validate_plain_identity(root, doc):
+    """Bind the known Henan formal identifiers independently of the source title."""
+    subject, year, regions = doc["subject"], doc["year"], doc["regions"]
+    require(len(regions) == 1 and isinstance(regions[0],str) and regions[0].strip(),
+            "省级选择性考试须登记明确的单一适用地区")
+    series = f"cn-ha-{subject}-selective"
+    if regions == ["河南"] and doc["exam_kind"] == "official_exam":
+        refs = use(root,subject,"河南",year)
+        require(len(refs) == 1 and refs[0]["status"] == "historical_selective"
+                and (doc["id"], doc["series_id"]) == (refs[0]["paper_id"], refs[0]["series_id"]),
+                "河南正式卷的年份、卷系或试卷 ID 与已核口径不符")
+        structure = refs[0].get("structure",{}).get("sections",[])
+        if structure:
+            require(doc["question_count"] == sum(s["count"] for s in structure)
+                    and doc["points"] == sum(s["points"] for s in structure), "与已登记的河南卷题量或总分不符")
+            expected = {}
+            for section in refs[0]["structure"].get("source_details",[]):
+                kind = section["kind"]
+                if kind in ("experiment","calculation"):
+                    kind = "constructed_response"
+                numbers = section.get("numbers")
+                if numbers is None:
+                    first = len(expected)+1
+                    numbers = range(first,first+section.get("count",section.get("questions",0)))
+                scores = section.get("individual_points",section.get("individual"))
+                base = section.get("points_each",section.get("each"))
+                for i,n in enumerate(numbers):
+                    expected[n]=(kind,scores[i] if scores is not None else base)
+            for q in doc["questions"]:
+                if q["number"] in expected:
+                    kind,points = expected[q["number"]]
+                    require(q["kind"]==kind and (points is None or q["points"]==points),
+                            "与已登记的河南卷逐题题型或分值不符")
+    else:
+        require(doc["series_id"] != series and not doc["id"].endswith(series),
+                "演练卷及外省卷须与河南正式卷分开编号")
+
+
+def validate_plain_question(q, answer_missing):
+    kind, options = q["kind"], q.get("options", {})
+    require(kind in SCIENCE_KINDS and q.get("conflict_severity","minor") in {"minor","material"},
+            "理科题型或冲突状态无效")
+    parts = q.get("parts",[])
+    require(isinstance(parts,list) and all(isinstance(p,dict) and all(isinstance(p.get(k),str)
+                and p[k].strip() for k in ("label","text")) for p in parts), "子问须提供题标与完整内容")
+    if kind in SCIENCE_KINDS[:2]:
+        require(isinstance(options,dict) and (set(options) == set("ABCD") or q.get("incomplete_text") is True)
+                and all(isinstance(v,str) and v.strip() for v in options.values()), "理科选择题选项不完整")
+        if not answer_missing:
+            key=q["answer"]
+            require(isinstance(key,str) and set(key) <= set("ABCD") and len(key) == len(set(key))
+                    and (len(key)==1 if kind=="single_choice" else len(key)>1), "理科客观题题键无效")
+    else:
+        require(not options, "理科非选择题不能含选择项字段")
+    if "figure_source" in q:
+        require(q["figure_source"] in {"source_image","reconstructed_from_text"}, "未知的题图来源")
+
+
+def import_plain(root, doc, markdown=None, images=None, *, track=False):
+    from core.paper_intake import ingest
+
+    if not doc.get("id"):
+        subject, region, year = doc["subject"], doc.get("region","河南"), doc["year"]
+        mapping = use(root,subject,region,year)
+        require(len(mapping) == 1 and mapping[0]["status"]=="historical_selective", "卷型未获确认")
+        current = mapping[0]
+        require(doc.get("paper_id",current["paper_id"]) == current["paper_id"], "来源所报试卷身份不符")
+        qs=[{**q, "position":q.get("position") or f'电子版第 {q["number"]} 题'} for q in doc["questions"]]
+        structure=current.get("structure",{}).get("sections") or []
+        count=sum(s["count"] for s in structure) or len(qs)
+        total=sum(s["points"] for s in structure) or sum(q["points"] for q in qs)
+        doc={**doc, "id":current["paper_id"], "series_id":current["series_id"],
+             "regions":[region], "exam_kind":"official_exam", "question_count":count, "points":total,
+             "questions":qs, "missing_numbers":sorted(set(range(1,count+1))-{q["number"] for q in qs})}
+    return ingest(root,doc,markdown,images,track=track)
+
+
 def markdown_questions(path):
     text = path.read_text(encoding="utf-8-sig")
     blocks = re.split(r"(?m)^##[ \t]+(\d+)[ \t]*$", text)

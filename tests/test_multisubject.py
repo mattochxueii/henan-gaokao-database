@@ -160,7 +160,10 @@ class MultisubjectTests(unittest.TestCase):
             if public_edition(ROOT):
                 self.assertEqual(report["science"],0)
             else:
-                self.assertEqual(report["science"],19)
+                from core.paper_intake import documents
+                from subjects import SCIENCES
+                tracked = sum(len(paper["questions"]) for subject in SCIENCES for _,paper in documents(ROOT,subject))
+                self.assertEqual(report["science"],19+tracked)
                 expected = math_available(ROOT)
                 self.assertEqual(report["math_archive_available"],expected)
                 self.assertEqual(report["math"],496 if expected else 0)
@@ -170,6 +173,10 @@ class MultisubjectTests(unittest.TestCase):
                 self.assertGreater(n,0)
                 generated = db.execute("SELECT count(*) FROM entity WHERE kind='GeneratedQuestion'").fetchone()[0]
                 self.assertEqual(generated,19)
+                if not public_edition(ROOT) and tracked:
+                    record=db.execute("SELECT subject, number FROM question WHERE id=?",
+                        ("2025-ha-physics-adaptation:q001",)).fetchone()
+                    self.assertEqual(record,("physics",1))
 
 
 if __name__ == "__main__":

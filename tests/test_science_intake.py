@@ -19,6 +19,35 @@ from storage import atomic_json
 
 
 class ScienceIntakeTests(unittest.TestCase):
+    def test_tracked_science_retains_missing_figure_item_and_siblings(self):
+        from core.paper_intake import dna, research
+        from core.science_intake import import_plain
+        from core.practice_workbook import selection
+
+        with TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/DATA).mkdir(parents=True)
+            shutil.copyfile(ROOT/DATA/"catalog.json",root/DATA/"catalog.json")
+            item={"number":1,"kind":"single_choice","points":4,"stem":"自制测试题",
+                  "position":"测试第 1 页","options":dict(zip("ABCD","甲乙丙丁")),"answer":"A"}
+            doc={"id":"2025-cn-ha-physics-selective","year":2025,"subject":"physics","title":"合成测试",
+                 "series_id":"cn-ha-physics-selective","regions":["河南"],"exam_kind":"official_exam",
+                 "source":{"title":"合成测试","url":"https://example.invalid"},"question_count":15,"points":100,
+                 "missing_numbers":list(range(3,16)),
+                 "questions":[item,{**item,"number":2,"stem":"测试题图缺失","requires_figure":True}]}
+            mismatch={**doc,"regions":["湖北"]}
+            with self.assertRaisesRegex(ValueError,"分开编号"):
+                import_plain(root,mismatch,track=True)
+            result=import_plain(root,doc,track=True)
+            self.assertEqual((result["installed"],result["eligible"]),(2,1))
+            self.assertEqual(query(root,"physics",year=2025)[0]["answer"],"A")
+            self.assertEqual([row["number"] for row in selection(root,"physics")],[1])
+            _, blocked=research(root,"physics",include_incomplete=True)
+            self.assertTrue(blocked["missing_figure"])
+            self.assertFalse(blocked["usable_for_practice"])
+            profile=dna(root,"physics")["henan_selective_profile"]
+            self.assertEqual([q["practice_eligible"] for q in profile["by_year"][0]["items"]],[True,False])
+
     def test_electronic_markdown_and_figures_with_two_admission_levels(self):
         with TemporaryDirectory() as temp:
             folder = Path(temp)

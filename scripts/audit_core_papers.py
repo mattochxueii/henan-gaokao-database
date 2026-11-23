@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import bootstrap  # noqa: F401
-from core.paper_intake import CORE, PUBLIC, dna, documents
+from core.paper_intake import PAPER_SUBJECTS, PUBLIC, dna, documents
 from gaokao import ROOT, digest, require
 from storage import atomic_json
 
@@ -16,14 +16,16 @@ def answer_present(value):
 
 def audit(root, write_profiles=False):
     coverage = {}
-    for subject in CORE:
+    for subject in PAPER_SUBJECTS:
         rows = []
         for path, paper in documents(root, subject):
             if not path.is_relative_to(root / PUBLIC):
                 continue
             questions = paper["questions"]
             start = 21 if paper.get("written_only") else 1
-            require([q["number"] for q in questions] == list(range(start, start+paper["question_count"])),
+            missing=paper.get("missing_numbers",[])
+            expected=[n for n in range(start,start+paper["question_count"]) if n not in missing]
+            require([q["number"] for q in questions] == expected,
                     "明文卷题号不连续："+paper["id"])
             require(all(q["stem"] and q["stem"].strip() for q in questions), "明文卷缺题干："+paper["id"])
             for q in questions:
@@ -38,6 +40,10 @@ def audit(root, write_profiles=False):
                          "exam_kind":paper["exam_kind"],"written_only":bool(paper.get("written_only")),
                          "path":path.relative_to(root).as_posix(),"content_sha256":paper["content_sha256"],
                          "question_count":len(questions),
+                         "expected_question_count":paper["question_count"],"missing_numbers":missing,
+                         "missing_figure_numbers":[q["number"] for q in questions if q.get("missing_figure")],
+                         "missing_answer_numbers":[q["number"] for q in questions if q.get("missing_answer")],
+                         "missing_point_numbers":[q["number"] for q in questions if q.get("missing_points")],
                          "standalone_answers":sum(answer_present(q.get("reviewed_answer") or q.get("answer")) for q in questions),
                          "answers":sum(answer_present(q.get("reviewed_answer") or q.get("answer"))
                                        or bool(isinstance(q.get("answer"), dict)

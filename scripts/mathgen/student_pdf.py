@@ -220,7 +220,7 @@ def render(paper, path, solutions=False):
     }
     section_number = 0
     md = ["# " + paper["title"], ""]
-    for q in paper["questions"]:
+    for index, q in enumerate(paper["questions"]):
         require(
             not any(k in q for k in ("math_spec", "tasks", "design", "solver_record")),
             "排版输入混入内部数据",
@@ -283,9 +283,26 @@ def render(paper, path, solutions=False):
                 block.append(
                     Image(str(figure), width=435 if science_layout else 250, height=155, kind="proportional")
                 )
-            for figure in q.get("archive_figures",[]):
+            figures = q.get("archive_figures",[])
+            captions = q.get("archive_figure_captions",[])
+            labeled = {label:picture for picture,label in zip(figures,captions) if label in q["options"]}
+            separate_options = not (labeled and set(labeled)==set(q["options"]))
+            for figure_index, figure in enumerate(figures):
+                caption = captions[figure_index] if figure_index < len(captions) else None
+                if not separate_options and caption in labeled:
+                    continue
+                if caption:
+                    block.append(para(caption,note))
                 block.append(Image(str(figure),width=355,height=155,kind="proportional"))
-            if q["kind"] == "single_choice":
+            if not separate_options:
+                cells=[]
+                for key,value in q["options"].items():
+                    label=key+"．"+("" if value=="对应选项图" else value)
+                    cells.append([para(label,note),Image(str(labeled[key]),width=218,height=94,kind="proportional")])
+                block.append(Table([cells[i:i+2] for i in range(0,len(cells),2)],
+                                   colWidths=[(A4[0]-100)/2]*2,hAlign="LEFT",
+                                   style=[("VALIGN",(0,0),(-1,-1),"TOP")]))
+            elif q["kind"] == "single_choice":
                 block.append(option_grid(
                     [para(key + "．" + text) for key, text in q["options"].items()],
                     A4[0] - 2 * 44 - 12,
@@ -300,10 +317,11 @@ def render(paper, path, solutions=False):
         if solutions:
             # Keep each solution together when it fits a page; long solutions may split.
             story.append(KeepTogether(block))
-            story.append(Spacer(1, 12))
+            if index + 1 < len(paper["questions"]):
+                story.append(Spacer(1, 12))
         else:
             story.append(KeepTogether(block))
-            if not science_layout or q["kind"] != "constructed_response":
+            if index + 1 < len(paper["questions"]) and (not science_layout or q["kind"] != "constructed_response"):
                 story.append(Spacer(1, 190 if q["kind"] == "constructed_response" else 8))
         md.extend([f"## {q['order']}.（{q['points']}分）", ""])
         md.extend(

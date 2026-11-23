@@ -147,8 +147,19 @@ def import_science(root, bundle):
 
 
 def all_science_rows(root):
+    from core.paper_intake import research as plaintext_research
+
     path = root / DATA / "research-samples.json"
     rows = list(read_json(path)) if path.is_file() and not public_edition(root) else []
+    for subject in SCIENCES:
+        for kind in ("official_exam","adaptation_exam"):
+            for q in plaintext_research(root,subject,limit=None,exam_kind=kind,include_incomplete=True):
+                rows.append({
+                    **q,"source_url":q["source"]["url"],"rights":"private_research",
+                    "answer_version_sha256":q["version_sha256"],
+                    "review_status":("practice_readable" if q["usable_for_practice"] else "quarantined"),
+                    "strict_official_verified":False,
+                })
     for p in sorted((root / LOCAL).glob("*")):
         if not p.is_dir() or p.name.startswith("."):
             continue
@@ -180,7 +191,8 @@ def query(root, subject, *, year=None, region=None, topic=None, limit=10, verifi
         return research(root, year=year, region=region, topic=topic, limit=limit, verified_only=verified_only)
     result = []
     for q in all_science_rows(root):
-        if q["subject"] != subject or (year is not None and q["year"] != year) or (region and q["region"] != region):
+        if (q["subject"] != subject or q.get("exam_kind")=="adaptation_exam"
+                or (year is not None and q["year"] != year) or (region and q["region"] != region)):
             continue
         if q.get("review_status") == "quarantined" or verified_only and q.get("review_status") not in (
             "source_and_solution_reviewed", "independently_solved_summary", "practice_reviewed",
@@ -193,7 +205,7 @@ def query(root, subject, *, year=None, region=None, topic=None, limit=10, verifi
             if (q["record_type"]!="semantic_summary" or evidence.get("state")!="candidate_strict_reviewed"
                     or evidence.get("summary_version_sha256")!=q["version_sha256"]):
                 continue
-        if topic and topic not in str(q.get("topic")):
+        if topic and not any(topic in str(q.get(field,"")) for field in ("topic","features","stem")):
             continue
         result.append(q)
     unique = {}
@@ -281,7 +293,7 @@ CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
                 if row["subject"]=="math":
                     db.execute("INSERT OR IGNORE INTO exam_use VALUES (?,?,?,?,?,?)",
                                ("math",row["year"],row["region_id"],math_series.get(row["paper_id"]),row["paper_id"],dumps(row)))
-        for q in [*math,*science]:
+        for q in {(q.get("occurrence_id",q["id"]),q["version_sha256"]):q for q in [*math,*science]}.values():
             identity = q.get("occurrence_id",q["id"])
             version = q["version_sha256"]
             status = grade(q) if q["subject"]=="math" else q["review_status"]

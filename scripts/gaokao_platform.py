@@ -19,18 +19,19 @@ def main(argv=None):
     parser.add_argument("--root",type=Path,default=ROOT)
     sub = parser.add_subparsers(dest="command",required=True)
     sub.add_parser("subjects")
-    sub.add_parser("dna").add_argument("subject", choices=paper_intake.CORE)
-    context = sub.add_parser("authoring-context", help="读取固定命题画像和近年Ⅰ卷真题")
-    context.add_argument("subject",choices=paper_intake.CORE)
+    sub.add_parser("dna").add_argument("subject", choices=paper_intake.PAPER_SUBJECTS)
+    context = sub.add_parser("authoring-context", help="读取命题画像和目标卷系近年真题")
+    context.add_argument("subject",choices=paper_intake.PAPER_SUBJECTS)
     context.add_argument("--topic")
     context.add_argument("--source-id")
     context.add_argument("--limit",type=int,default=12)
     context.add_argument("--output",type=Path,required=True)
     for action in ("assemble","train"):
         worksheet=sub.add_parser(action)
-        worksheet.add_argument("subject",choices=paper_intake.CORE)
+        worksheet.add_argument("subject",choices=paper_intake.PAPER_SUBJECTS)
         worksheet.add_argument("output",type=Path)
         worksheet.add_argument("--year",type=int)
+        worksheet.add_argument("--region")
         worksheet.add_argument("--kind")
         worksheet.add_argument("--topic",required=action=="train")
         worksheet.add_argument("--question-id",action="append",default=[])
@@ -39,11 +40,11 @@ def main(argv=None):
         worksheet.add_argument("--title")
         worksheet.add_argument("--minutes",type=int,default=30)
     adapt=sub.add_parser("adapt")
-    adapt.add_argument("subject",choices=paper_intake.CORE)
+    adapt.add_argument("subject",choices=paper_intake.PAPER_SUBJECTS)
     adapt.add_argument("candidate",type=Path)
     adapt.add_argument("output",type=Path)
     simulate=sub.add_parser("simulate",help="使用绑定近期真题和DNA的原创候选生成整卷")
-    simulate.add_argument("subject",choices=paper_intake.CORE)
+    simulate.add_argument("subject",choices=paper_intake.PAPER_SUBJECTS)
     simulate.add_argument("year",type=int)
     simulate.add_argument("candidate",type=Path)
     simulate.add_argument("output",type=Path)
@@ -76,6 +77,7 @@ def main(argv=None):
     research.add_argument("--verified-only",action="store_true")
     research.add_argument("--official-only",action="store_true",help="只返回已绑定官方原页图像的版本")
     research.add_argument("--strict",action="store_true",help="化学题的跨来源与解答双复核子集")
+    research.add_argument("--include-incomplete",action="store_true",help="显示明文档案中的缺图、缺答及隔离题")
     for subject in ("physics", "chemistry"):
         evidence = sub.add_parser(f"{subject}-index", help=f"河南{SUBJECTS[subject]}逐题证据")
         evidence.add_argument("year",type=int)
@@ -123,11 +125,12 @@ def main(argv=None):
                 atomic_json(args.output,result)
                 result={"output":str(args.output),"reference_count":len(result["references"]),"dna_sha256":result["dna_sha256"]}
             elif command=="adapt":
-                result=practice_workbook.adaptive_workbook(root,args.subject,read_json(args.candidate),args.output)
+                result=practice_workbook.adaptive_workbook(root,args.subject,read_json(args.candidate),args.output,
+                                                           args.candidate.parent)
             elif command=="workbook-review":
                 result=practice_workbook.review_workbook(args.output,read_json(args.review))
             else:
-                chosen=practice_workbook.selection(root,args.subject,year=args.year,kind=args.kind,topic=args.topic,
+                chosen=practice_workbook.selection(root,args.subject,year=args.year,region=args.region,kind=args.kind,topic=args.topic,
                                                   question_ids=args.question_id,limit=args.limit,adaptation=args.adaptation)
                 result=practice_workbook.render_archive(root,args.subject,chosen,args.output,
                     title=args.title or SUBJECTS[args.subject]+(f" · {args.topic}专项" if args.topic else " · 历年真题练习"),
@@ -142,10 +145,11 @@ def main(argv=None):
             packet=read_json(args.context)
             candidate=read_json(args.candidate)
             actual=authoring_context(root,args.subject,**packet["query"])
+            years = {2025,2026} if args.subject in SCIENCES else {2024,2025,2026}
             require(fingerprint(actual)==fingerprint(packet) and packet["subject"]==args.subject
                     and not packet["query"]["topic"] and not packet["query"]["source_id"]
-                    and {2024,2025,2026}<={q["year"] for q in packet["references"]},
-                    "整卷上下文须含2024–2026年Ⅰ卷正文和当前命题画像")
+                    and years<={q["year"] for q in packet["references"]},
+                    "整卷上下文须覆盖目标卷系已要求的完整年份范围，并绑定当前命题画像")
             proof=candidate.get("provenance",{})
             require(proof.get("dna_sha256")==actual["dna_sha256"] and
                     proof.get("context_sha256")==digest(args.context),"候选须绑定当前命题上下文")
@@ -154,8 +158,12 @@ def main(argv=None):
                 return math_main(["--root",str(root),"generate","--engine","ai","--study-mode","standard",
                                   "--mode","full","--skip-pilot","--candidates",str(args.candidate),
                                   "--output",str(args.output)])
-            blueprint=language_workflow.plan(root,args.subject,"河南",args.year)
-            result=language_workflow.prepare(root,blueprint,candidate,args.output)
+            if args.subject in SCIENCES:
+                blueprint=plan(root,args.subject,"河南",args.year,"standard")
+                result=prepare(root,blueprint,candidate,args.output,args.candidate.parent)
+            else:
+                blueprint=language_workflow.plan(root,args.subject,"河南",args.year)
+                result=language_workflow.prepare(root,blueprint,candidate,args.output)
         elif command=="dna":
             result=paper_intake.dna(root,args.subject)
         elif command=="docx":
@@ -164,12 +172,13 @@ def main(argv=None):
             result={"output":str(args.output)}
         elif command=="english-score":
             result={"written":args.written,"henan_score":language_workflow.henan_english_score(args.written)}
-        elif command=="research" and (args.subject in language_workflow.LANGUAGES or args.adaptation):
+        elif command=="research" and (args.subject in language_workflow.LANGUAGES or args.adaptation or args.include_incomplete):
             if args.official_only or args.strict:
                 raise ValueError("此查询通道不支持官方原页或历史理科摘要过滤")
             result=paper_intake.research(root,args.subject,year=args.year,region=args.region,topic=args.topic,
                                          limit=args.limit,verified_only=args.verified_only,
-                                         exam_kind="adaptation_exam" if args.adaptation else "official_exam")
+                                         exam_kind="adaptation_exam" if args.adaptation else "official_exam",
+                                         include_incomplete=args.include_incomplete)
         elif command=="research":
             result = query(root,args.subject,year=args.year,region=args.region,topic=args.topic,
                            limit=args.limit,verified_only=args.verified_only,strict=args.strict,official_only=args.official_only)
@@ -188,13 +197,13 @@ def main(argv=None):
         elif command=="import":
             result = import_science(root,args.bundle)
         elif command=="import-electronic":
-            from core.science_intake import import_electronic
+            from core.science_intake import import_electronic, import_plain
             doc=read_json(args.input)
             if doc["subject"] in paper_intake.CORE:
                 result = paper_intake.ingest(root,doc,args.markdown,args.images,track=args.track)
+            elif args.track or doc.get("id"):
+                result = import_plain(root,doc,args.markdown,args.images,track=args.track)
             else:
-                if args.track:
-                    raise ValueError("理科保持既有本地导入流程")
                 result = import_electronic(root,args.input,args.markdown,args.images)
         elif command in ("plan","generate"):
             if args.subject in language_workflow.LANGUAGES:

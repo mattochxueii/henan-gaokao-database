@@ -13,6 +13,8 @@
 
 [工作入口](skills/gaokao-platform/SKILL.md) · [第十九阶段试卷和核验](reports/phase19.md)
 
+物理、化学、生物学使用相同的明文库和工作流。可用 `research physics --region 河南 --year 2026` 查题，`assemble chemistry 练习/化学 --region 河南 --year 2025 --limit 3` 拼卷，`dna biology` 读取命题画像。河南演练卷可通过 `--adaptation` 单独选取。 [第 20 阶段资料和验收](reports/phase20.md)
+
 
 
 第十五阶段新增河南化学逐题来源核验、化学验证器和原创专题练习。[阶段验收](reports/phase15.md) · [化学试做](experiments/phase15/chemistry/README.md)

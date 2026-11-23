@@ -8,8 +8,10 @@ import shutil
 from analysis_db import fingerprint
 from gaokao import digest, read_json, relative_path, require
 from storage import atomic_json
+from subjects import SCIENCES
 
 CORE = ("math", "chinese", "english")
+PAPER_SUBJECTS = (*CORE, *SCIENCES)
 PUBLIC = Path("data/papers")
 LOCAL = Path(".local-data/papers")
 SAFE_ID = re.compile(r"[a-z0-9][a-z0-9-]{2,99}\Z")
@@ -55,10 +57,11 @@ def documents(root, subject):
 
 
 def ingest(root, doc, markdown=None, images=None, *, track=False):
-    from core.science_intake import markdown_questions
+    from core.science_intake import markdown_questions, validate_plain_identity, validate_plain_question
     doc = {**doc}
     subject, year, identifier = doc["subject"], doc["year"], doc["id"]
-    require(subject in CORE and SAFE_ID.fullmatch(identifier) and type(year) is int and 1952 <= year <= 2100,
+    science = subject in SCIENCES
+    require(subject in PAPER_SUBJECTS and SAFE_ID.fullmatch(identifier) and type(year) is int and 1952 <= year <= 2100,
             "明文卷须有合法的学科、年份及稳定ID")
     require(doc["exam_kind"] in ("official_exam", "adaptation_exam"), "适应性演练须单独分类")
     require(doc["series_id"] and doc["title"] and isinstance(doc["regions"], list) and doc["regions"],
@@ -74,9 +77,15 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
     from_text = markdown_questions(markdown) if markdown else {}
     require(not markdown or set(from_text) == {q["number"] for q in questions}, "Markdown题号不匹配")
     first = 21 if subject=="english" and doc.get("written_only") is True and questions and questions[0]["number"]==21 else 1
-    require(questions and [q["number"] for q in questions] == list(range(first, first + len(questions))),
-            "题号须连续，不得以空索引冒充整卷")
-    require(type(doc["question_count"]) is int and len(questions) == doc["question_count"], "题数与已核元数据不符")
+    require(type(doc["question_count"]) is int and doc["question_count"] > 0, "缺少已核题数")
+    numbers = list(range(first, first + doc["question_count"]))
+    missing = doc.get("missing_numbers", [])
+    require(isinstance(missing,list) and (not missing or science) and missing == sorted(set(missing))
+            and all(type(n) is int and n in numbers for n in missing), "缺题清单无效")
+    require(questions and [q["number"] for q in questions] == [n for n in numbers if n not in missing],
+            "题号与已核题量或缺题清单不符")
+    if science:
+        validate_plain_identity(root, doc)
     if (subject in ("chinese","english")
             and doc["series_id"] == "cn-new-gaokao-1" and doc["exam_kind"] == "official_exam"
             and "河南" in doc["regions"] and year in (2024,2025,2026)):
@@ -95,13 +104,20 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
     normalized = []
     for raw in questions:
         q = {**raw, **from_text.get(raw["number"], {})}
-        require(isinstance(q["stem"], str) and q["stem"].strip() and q.get("answer") not in (None,"",{},[])
-                and type(q["points"]) in (int,float) and q["points"] > 0, "题面、答案或分值不完整")
+        answer = q.get("answer")
+        answer_missing = answer in (None,"",{},[])
+        require(isinstance(q["stem"], str) and q["stem"].strip()
+                and (not answer_missing or (science and q.get("missing_answer") is True))
+                and ((type(q["points"]) in (int,float) and q["points"] > 0)
+                     or (science and q["points"] is None and q.get("missing_points") is True)),
+                "题面、答案或分值不完整")
         require(not q.get("passage") or q["passage"] in passages, "缺共享阅读材料")
         require(q.get("position") or q.get("page"), "须提供原题来源定位")
         options = q.get("options", {})
-        if q["kind"] == "single_choice":
-            require(isinstance(options, dict) and len(options) >= 3 and q["answer"] in options
+        if science:
+            validate_plain_question(q, answer_missing)
+        elif q["kind"] == "single_choice":
+            require(isinstance(options, dict) and len(options) >= 3 and answer in options
                     and all(isinstance(o, str) and o.strip() for o in options.values()), "客观题缺选项或答案无效")
         refs = []
         for name in q.pop("images", []):
@@ -116,14 +132,25 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
             sha = digest(image)
             file = "assets/" + sha + image.suffix.lower()
             assets[file] = image
-            refs.append({"path": file, "sha256": sha})
-        require(not q.get("requires_figure") or refs, "缺必要图件")
+            ref = {"path": file, "sha256": sha}
+            if caption := q.get("image_captions",{}).get(name):
+                ref["caption"] = caption
+            refs.append(ref)
+        q.pop("image_captions", None)
+        if science and q.get("requires_figure") and not refs:
+            q["missing_figure"] = True
+        else:
+            require(science or not q.get("requires_figure") or refs, "缺必要图件")
         q.update(asset_refs=refs, id=f'{identifier}:q{q["number"]:03d}',
-                 usable_for_practice=q.get("conflict_severity") != "material",
+                 usable_for_practice=q.get("conflict_severity") != "material"
+                 and not (science and (q.get("missing_figure") or q.get("missing_answer") or
+                                       q.get("missing_points") or q.get("incomplete_text"))),
                  source_and_solution_reviewed=False)
         q["version_sha256"] = fingerprint(q)
         normalized.append(q)
-    require(sum(q["points"] for q in normalized) == doc["points"], "分值总和不符")
+    actual = sum(q["points"] or 0 for q in normalized)
+    unknown_points = missing or any(q.get("missing_points") for q in normalized)
+    require((actual < doc["points"] if unknown_points else actual == doc["points"]), "分值总和不符")
     doc["questions"] = normalized
     doc["content_sha256"] = fingerprint(normalized)
     for file, image in assets.items():
@@ -138,7 +165,8 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
 
 
 def research(root, subject, *, year=None, region=None, topic=None, limit=10,
-             verified_only=False, exam_kind="official_exam", exclude_compatible_math=False):
+             verified_only=False, exam_kind="official_exam", exclude_compatible_math=False,
+             include_incomplete=False):
     from national_quality import practice_view
 
     result = []
@@ -149,12 +177,15 @@ def research(root, subject, *, year=None, region=None, topic=None, limit=10,
                 or doc["exam_kind"] != exam_kind):
             continue
         for q in doc["questions"]:
-            if not q.get("usable_for_practice", False) or (verified_only and not q.get("source_and_solution_reviewed")):
+            if ((not include_incomplete and not q.get("usable_for_practice", False))
+                    or (verified_only and not q.get("source_and_solution_reviewed"))):
                 continue
             if topic and not any(topic in str(q.get(field, "")) for field in ("topic","features","stem")):
                 continue
             result.append({**practice_view(q), "subject":subject, "year":doc["year"], "paper_id":doc["id"],
                            "source":doc["source"], "record_type":"full_text",
+                           **({"region":doc["regions"][0], "regions":doc["regions"],"series_id":doc["series_id"],
+                               "exam_kind":doc["exam_kind"]} if subject in SCIENCES else {}),
                            "passage_text":doc.get("passages",{}).get(q.get("passage")),
                             "listening_text":doc.get("listening_transcript",{}).get(q.get("listen_group")),
                            "asset_root":path.parent.relative_to(root).as_posix()})
@@ -168,6 +199,9 @@ def dna(root, subject, *, tracked_only=False):
     references = []
     files = [(path,doc) for path,doc in documents(root,subject)
              if not tracked_only or path.is_relative_to(root / PUBLIC)]
+    if subject in SCIENCES:
+        from core.science_dna import science_profile
+        return science_profile(subject, [paper for _, paper in files])
     for _, paper in files:
         if paper["exam_kind"] != "official_exam":
             continue
