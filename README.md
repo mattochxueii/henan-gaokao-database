@@ -1,5 +1,8 @@
 # 全国高考真题研究与多学科 AI 命题平台
 
+本项目资料仅用于个人学习与教研参考。主三科统一使用 `scripts/gaokao_platform.py`。主库明文入口、转换命令、两套 150 分原创卷及公开候选范围见[第十七阶段验收](reports/phase17.md)。
+
+
 第十五阶段新增河南化学逐题来源核验、化学验证器和原创专题练习。[阶段验收](reports/phase15.md) · [化学试做](experiments/phase15/chemistry/README.md)
 
 第十四阶段新增河南 2025、2026 物理逐题证据、分段与实验验证，以及独立审阅的原创专题卷。[物理验收报告](reports/phase14.md) · [物理专题试做](experiments/phase14/physics/README.md)

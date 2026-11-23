@@ -34,10 +34,22 @@ def private_folder(root):
     return path
 
 
+def plain_math(root, include_legacy=True):
+    from core.paper_intake import documents
+
+    return [
+        {**q, "plain_asset_root": path.parent.relative_to(root).as_posix()}
+        for path, doc in documents(root, "math")
+        if doc.get("compatibility") == "national-math-v1"
+        for q in doc["questions"]
+        if include_legacy or not q["legacy"]
+    ]
+
+
 def available(root):
     if local_archive.public_edition(root):
         return (root / "sample-data/manifest.json").is_file()
-    return (root / "national/config.json").exists() and (
+    return bool(plain_math(root)) or (root / "national/config.json").exists() and (
         private_folder(root) / "manifest.json"
     ).is_file()
 
@@ -107,9 +119,11 @@ def legacy_rows(root):
     return result
 
 
-def rows(root, include_legacy=True, calibrated=True):
+def rows(root, include_legacy=True, calibrated=True, *, prefer_plaintext=True):
     if local_archive.public_edition(root):
         return local_archive.load(root)["rows"]
+    if prefer_plaintext and calibrated and (plaintext := plain_math(root, include_legacy)):
+        return plaintext
     require(
         available(root),
         "全国题面尚未恢复；运行national_cli.py restore --key <分离密钥>",
@@ -566,6 +580,12 @@ def sqlite_query(root, year, series, number):
 
 def _calibration_revision(root):
     ledger = root / math_calibration.LEDGER
+    from core.paper_intake import documents
+
+    plain = [doc["content_sha256"] for _, doc in documents(root, "math")
+             if doc.get("compatibility") == "national-math-v1"]
+    if plain:
+        return fingerprint({"plaintext": plain})
     if ledger.is_file():
         resolutions = root / math_calibration.RESOLUTIONS
         return fingerprint(

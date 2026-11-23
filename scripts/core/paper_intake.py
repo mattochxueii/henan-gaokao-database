@@ -1,0 +1,170 @@
+"""Plain-text paper store shared by research and authoring."""
+from pathlib import Path
+from collections import Counter
+import re
+import shutil
+
+from analysis_db import fingerprint
+from gaokao import digest, read_json, relative_path, require
+from storage import atomic_json
+
+CORE = ("math", "chinese", "english")
+PUBLIC = Path("data/papers")
+LOCAL = Path(".local-data/papers")
+SAFE_ID = re.compile(r"[a-z0-9][a-z0-9-]{2,99}\Z")
+
+
+def documents(root, subject):
+    by_id = {}
+    for base in (PUBLIC, LOCAL):
+        for path in sorted((root / base / subject).glob("*.json")):
+            doc = read_json(path)
+            require(doc["subject"] == subject and doc["content_sha256"] == fingerprint(doc["questions"]),
+                    "明文库校验失败：" + str(path))
+            require(doc["id"] not in by_id, "重复试卷：" + doc["id"])
+            by_id[doc["id"]] = (path, doc)
+    return list(by_id.values())
+
+
+def ingest(root, doc, markdown=None, images=None, *, track=False):
+    from core.science_intake import markdown_questions
+    doc = {**doc}
+    subject, year, identifier = doc["subject"], doc["year"], doc["id"]
+    require(subject in CORE and SAFE_ID.fullmatch(identifier) and type(year) is int and 1952 <= year <= 2100,
+            "明文卷须有合法的学科、年份及稳定ID")
+    require(doc["exam_kind"] in ("official_exam", "adaptation_exam"), "适应性演练须单独分类")
+    require(doc["series_id"] and doc["title"] and isinstance(doc["regions"], list) and doc["regions"],
+            "缺卷系、卷名或适用地区")
+    source = doc["source"]
+    require(source["title"].strip() and source["url"].startswith("https://") and source["rights_basis"].strip(),
+            "缺来源、网址或本地授权依据")
+    require(not any(d["id"] == identifier for _, d in documents(root, subject)), "该试卷已导入")
+    questions = doc["questions"]
+    from_text = markdown_questions(markdown) if markdown else {}
+    require(not markdown or set(from_text) == {q["number"] for q in questions}, "Markdown题号不匹配")
+    first = 21 if subject=="english" and doc.get("written_only") is True and questions and questions[0]["number"]==21 else 1
+    require(questions and [q["number"] for q in questions] == list(range(first, first + len(questions))),
+            "题号须连续，不得以空索引冒充整卷")
+    require(type(doc["question_count"]) is int and len(questions) == doc["question_count"], "题数与已核元数据不符")
+    if (subject in ("chinese","english")
+            and doc["series_id"] == "cn-new-gaokao-1" and doc["exam_kind"] == "official_exam"
+            and "河南" in doc["regions"] and year in (2024,2025,2026)):
+        from core.language_workflow import plan
+        blueprint=plan(root,subject,"河南",year)
+        scores=[x for section in blueprint["sections"] for x in section["scores"]]
+        require([q["points"] for q in questions] == scores[first-1:], "该卷题量或逐题分值与历史蓝图不符")
+    if track:
+        scopes = source.get("public_reuse", {})
+        require(all(isinstance(scopes.get(key),str) and scopes[key].strip()
+                    for key in ("questions","passages","answers","assets"))
+                and source.get("license_url","").startswith("https://"),
+                "提交全文须记录题目、阅读材料、答案及图件各自可公开分发的依据")
+    doc["distribution"] = "public-reuse-documented" if track else "local-only"
+    path = root / (PUBLIC if track else LOCAL) / subject / (identifier + ".json")
+    passages = doc.get("passages", {})
+    require(isinstance(passages, dict) and all(isinstance(v, str) and v.strip() for v in passages.values()),
+            "阅读材料必须完整")
+    require(subject != "english" or doc.get("listening_transcript") or doc.get("written_only") is True,
+            "英语完整卷缺听力文本")
+    assets = {}
+    normalized = []
+    for raw in questions:
+        q = {**raw, **from_text.get(raw["number"], {})}
+        require(isinstance(q["stem"], str) and q["stem"].strip() and q.get("answer") not in (None,"",{},[])
+                and type(q["points"]) in (int,float) and q["points"] > 0, "题面、答案或分值不完整")
+        require(not q.get("passage") or q["passage"] in passages, "缺共享阅读材料")
+        require(q.get("position") or q.get("page"), "须提供原题来源定位")
+        options = q.get("options", {})
+        if q["kind"] == "single_choice":
+            require(isinstance(options, dict) and len(options) >= 3 and q["answer"] in options
+                    and all(isinstance(o, str) and o.strip() for o in options.values()), "客观题缺选项或答案无效")
+        refs = []
+        for name in q.pop("images", []):
+            require(images is not None, "须指定本地图件目录")
+            image = relative_path(images, name)
+            require(image.is_file() and not image.is_symlink() and image.suffix.lower() in (".png",".jpg",".jpeg")
+                    and image.stat().st_size <= 2_000_000, "只接受轻量PNG/JPEG图件")
+            from PIL import Image
+            with Image.open(image) as img:
+                require(img.format in ("PNG", "JPEG"), "题图格式不符")
+                img.verify()
+            sha = digest(image)
+            file = "assets/" + sha + image.suffix.lower()
+            assets[file] = image
+            refs.append({"path": file, "sha256": sha})
+        require(not q.get("requires_figure") or refs, "缺必要图件")
+        q.update(asset_refs=refs, id=f'{identifier}:q{q["number"]:03d}',
+                 usable_for_practice=q.get("conflict_severity") != "material",
+                 source_and_solution_reviewed=False)
+        q["version_sha256"] = fingerprint(q)
+        normalized.append(q)
+    require(sum(q["points"] for q in normalized) == doc["points"], "分值总和不符")
+    doc["questions"] = normalized
+    doc["content_sha256"] = fingerprint(normalized)
+    for file, image in assets.items():
+        dest = path.parent / file
+        dest.parent.mkdir(parents=True,exist_ok=True)
+        if not dest.exists():
+            shutil.copyfile(image,dest)
+        require(digest(dest) == digest(image), "题图校验失败")
+    atomic_json(path,doc)
+    return {"installed":len(normalized),"path":path.relative_to(root).as_posix(),
+            "eligible":sum(q["usable_for_practice"] for q in normalized)}
+
+
+def research(root, subject, *, year=None, region=None, topic=None, limit=10,
+             verified_only=False, exam_kind="official_exam", exclude_compatible_math=False):
+    result = []
+    for path, doc in documents(root, subject):
+        if exclude_compatible_math and doc.get("compatibility") == "national-math-v1":
+            continue
+        if ((year is not None and doc["year"] != year) or (region and region not in doc["regions"])
+                or doc["exam_kind"] != exam_kind):
+            continue
+        for q in doc["questions"]:
+            if not q.get("usable_for_practice", False) or (verified_only and not q.get("source_and_solution_reviewed")):
+                continue
+            if topic and not any(topic in str(q.get(field, "")) for field in ("topic","features","stem")):
+                continue
+            result.append({**q, "subject":subject, "year":doc["year"], "paper_id":doc["id"],
+                           "source":doc["source"], "record_type":"full_text",
+                           "passage_text":doc.get("passages",{}).get(q.get("passage")),
+                           "asset_root":path.parent.relative_to(root).as_posix()})
+    return result[:limit]
+
+
+def dna(root, subject):
+    stats = {}
+    times = Counter()
+    references = []
+    files = documents(root, subject)
+    for _, paper in files:
+        if paper["exam_kind"] != "official_exam":
+            continue
+        for q in paper["questions"]:
+            if not q.get("usable_for_practice"):
+                continue
+            entry = stats.setdefault(q["number"], {
+                "topics": Counter(), "kinds": Counter(), "features": Counter(), "points": Counter(),
+                "scores": Counter(), "texts": [],
+            })
+            for val in q.get("features", []):
+                entry["features"][val] += 1
+            entry["topics"].update(q.get("topic_flags", []))
+            if q.get("topic"):
+                entry["topics"][q["topic"]] += 1
+            entry["kinds"][q["kind"]] += 1
+            entry["points"][str(q["points"])] += 1
+            if rubric := q.get("rubric"):
+                entry["scores"][str(len(rubric))] += 1
+            if p := paper.get("passages",{}).get(q.get("passage")):
+                length = len(p.split()) if subject == "english" else len(re.sub(r"\s","",p))
+                entry["texts"].append(length)
+            times[str(paper["year"])] += 1
+            references.append({"paper_id":paper["id"], "number":q["number"], "version_sha256":q["version_sha256"]})
+    for position in stats.values():
+        lengths=position.pop("texts")
+        position["passage_length_range"] = [min(lengths), max(lengths)] if lengths else None
+    return {"subject":subject,"eligible_rows_by_year":times,"positions":stats,"references":references,
+            "tags_are_editorial":True,
+            "scope":"仅统计可读完整题及现有审定的结构标签；无标注不推断难度、考点或干扰项。"}
