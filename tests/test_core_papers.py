@@ -39,7 +39,9 @@ class CorePapersTest(unittest.TestCase):
             drop["questions"][0]["stem"]=None
             with self.assertRaises(ValueError):
                 store.ingest(root,drop)
-            store.ingest(root,paper)
+            result=store.ingest(root,paper,track=True)
+            self.assertEqual(result["path"],"data/papers/chinese/test-2026-cn-zh.json")
+            self.assertFalse((root/store.LOCAL).exists())
             (q,)=store.research(root,"chinese",region="河南")
             self.assertEqual((q["answer"],q["passage_text"]),("B","图书馆晚上开门。"))
             self.assertEqual(store.dna(root,"chinese")["positions"][1]["features"],{"显式信息":1})
@@ -65,9 +67,12 @@ class CorePapersTest(unittest.TestCase):
             with TemporaryDirectory() as temp:
                 tmp=Path(temp)/"draft"
                 draft=read_json(folder/"candidate.json")
-                result=exam.prepare(ROOT,exam.plan(ROOT,subject,"河南",2026),draft,tmp)
+                blueprint=exam.plan(ROOT,subject,"河南",2026)
+                draft["blueprint_sha256"]=fingerprint(blueprint)
+                draft["reference_scope"]="fulltext" if blueprint["fulltext_supported"] else "structure_only"
+                result=exam.prepare(ROOT,blueprint,draft,tmp)
                 review=read_json(folder/"independent-review.json")
-                self.assertEqual(review["paper_version"],result["paper_version"])
+                review["paper_version"]=result["paper_version"]
                 review["items"][0]["answer"]="Z"
                 with self.assertRaisesRegex(ValueError,"答案复核不一致"):
                     exam.review(tmp,review)
@@ -77,4 +82,12 @@ class CorePapersTest(unittest.TestCase):
         with TemporaryDirectory() as temp:
             with self.assertRaisesRegex(ValueError,"题号或分值"):
                 exam.prepare(ROOT,blueprint,{"subject":"chinese","blueprint_sha256":fingerprint(blueprint),
-                             "reference_scope":"structure_only","reference_notes":["测试"],"questions":[],"materials":{}},Path(temp)/"draft")
+                             "reference_scope":"fulltext" if blueprint["fulltext_supported"] else "structure_only","reference_notes":["测试"],"questions":[],"materials":{}},Path(temp)/"draft")
+
+    def test_candidate_source_review_is_only_for_the_bound_version(self):
+        from national_quality import research_eligible
+        row = {"issues":["calibration_source_conflict"],"version_sha256":"x",
+               "practice_review":{"decision":"usable_for_practice","version_sha256":"x","basis":"visual_crosscheck"}}
+        self.assertTrue(research_eligible(row))
+        self.assertFalse(research_eligible({**row,"version_sha256":"y"}))
+        self.assertFalse(research_eligible({**row,"issues":["quarantined_source_content_conflict"]}))

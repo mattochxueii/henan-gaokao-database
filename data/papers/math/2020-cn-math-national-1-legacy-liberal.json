@@ -1,0 +1,2403 @@
+{
+  "id": "2020-cn-math-national-1-legacy-liberal",
+  "subject": "math",
+  "year": 2020,
+  "title": "2020年全国I卷（文）",
+  "regions": [
+    "安徽",
+    "山西",
+    "广东",
+    "江西",
+    "河北",
+    "河南",
+    "湖北",
+    "湖南",
+    "福建"
+  ],
+  "series_id": "cn-national-1-legacy",
+  "exam_kind": "official_exam",
+  "question_count": 23,
+  "source": {
+    "title": "原有项目双源档案",
+    "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
+    "rights_basis": "仅用于个人学习与教研归档"
+  },
+  "distribution": "private-research",
+  "compatibility": "national-math-v1",
+  "questions": [
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q001",
+      "subject": "math",
+      "stem": "已知集合 \\(A=\\{x\\mid x^2-3x-4<0\\}\\)，\\(B=\\{-4,1,3,5\\}\\)，则 \\(A\\cap B=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\{-4,1\\}\\)",
+        "B": "\\(\\{1,5\\}\\)",
+        "C": "\\(\\{3,5\\}\\)",
+        "D": "\\(\\{1,3\\}\\)"
+      },
+      "formulas": [
+        "A=\\{x\\mid x^2-3x-4<0\\}",
+        "B=\\{-4,1,3,5\\}",
+        "A\\cap B=",
+        "\\{-4,1\\}",
+        "\\{1,5\\}",
+        "\\{3,5\\}",
+        "\\{1,3\\}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知集合 \\(A=\\{x\\mid x^2-3x-4<0\\}\\)，\\(B=\\{-4,1,3,5\\}\\)，则 \\(A\\cap B=\\)（\\quad）\n\n\\choices\n    {\\(\\{-4,1\\}\\)}\n    {\\(\\{1,5\\}\\)}\n    {\\(\\{3,5\\}\\)}\n    {\\(\\{1,3\\}\\)}",
+      "content_sha256": "8473bd5144008ed534dd6cd246dafe882b1865cef417543a5b76fa0aa667314f",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q001",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q001",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "0d0b7cbccf7403e6a2490cdce8f5436b6b6d7970379465ab2044e2b85bac97a0",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 5,
+          "end": 13,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q001:answer",
+      "topic_flags": [
+        "集合与复数"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q001",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q001:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q001",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q001",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 15,
+            "end": 17
+          }
+        ],
+        "question_version_sha256": "0d0b7cbccf7403e6a2490cdce8f5436b6b6d7970379465ab2044e2b85bac97a0",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q002",
+      "subject": "math",
+      "stem": "若 \\(z=1+2i+i^3\\)，则 \\(\\lvert z\\rvert=\\)（\\quad）",
+      "options": {
+        "A": "\\(0\\)",
+        "B": "\\(1\\)",
+        "C": "\\(\\sqrt{2}\\)",
+        "D": "\\(2\\)"
+      },
+      "formulas": [
+        "z=1+2i+i^3",
+        "\\lvert z\\rvert=",
+        "0",
+        "1",
+        "\\sqrt{2}",
+        "2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若 \\(z=1+2\\i+\\i^3\\)，则 \\(\\lvert z\\rvert=\\)（\\quad）\n\n\\choices\n    {\\(0\\)}\n    {\\(1\\)}\n    {\\(\\sqrt{2}\\)}\n    {\\(2\\)}",
+      "content_sha256": "ba92b63c132c4652c18fd94f07f89b403032dec745e3e34f7d6cd8ae2f226621",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q002",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q002",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "9c4672fa781c4b802258ad6307bb08b8bbe35f70de81b38502855e55ba66f748",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 19,
+          "end": 27,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q002:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q002",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q002:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q002",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q002",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 29,
+            "end": 31
+          }
+        ],
+        "question_version_sha256": "9c4672fa781c4b802258ad6307bb08b8bbe35f70de81b38502855e55ba66f748",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q003",
+      "subject": "math",
+      "stem": "埃及胡夫金字塔是古代世界建筑奇迹之一，它的形状可视为一个正四棱锥. 以该四棱锥的高为边长的正方形面积等于该四棱锥一个侧面三角形的面积，则其侧面三角形底边上的高与底面正方形的边长的比值为（\\quad）\n\n[图：img/2020/national_paper_1_liberal/q3_question_fig1.png]",
+      "options": {
+        "A": "\\(\\dfrac{\\sqrt{5}-1}{4}\\)",
+        "B": "\\(\\dfrac{\\sqrt{5}-1}{2}\\)",
+        "C": "\\(\\dfrac{\\sqrt{5}+1}{4}\\)",
+        "D": "\\(\\dfrac{\\sqrt{5}+1}{2}\\)"
+      },
+      "formulas": [
+        "\\dfrac{\\sqrt{5}-1}{4}",
+        "\\dfrac{\\sqrt{5}-1}{2}",
+        "\\dfrac{\\sqrt{5}+1}{4}",
+        "\\dfrac{\\sqrt{5}+1}{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q3_question_fig1.png",
+          "sha256": "54f8ff0ab8e68fc2d71da825334658876ca40d06ff35c9defbb0c55b1a5c178a",
+          "kind": "image",
+          "plaintext_path": "assets/54f8ff0ab8e68fc2d71da825334658876ca40d06ff35c9defbb0c55b1a5c178a.png"
+        }
+      ],
+      "raw_problem_latex": "埃及胡夫金字塔是古代世界建筑奇迹之一，它的形状可视为一个正四棱锥. 以该四棱锥的高为边长的正方形面积等于该四棱锥一个侧面三角形的面积，则其侧面三角形底边上的高与底面正方形的边长的比值为（\\quad）\n\n\\bitmapfigure[max width=5.2cm]{img/2020/national_paper_1_liberal/q3_question_fig1.png}\n\n\\choices\n    {\\(\\dfrac{\\sqrt{5}-1}{4}\\)}\n    {\\(\\dfrac{\\sqrt{5}-1}{2}\\)}\n    {\\(\\dfrac{\\sqrt{5}+1}{4}\\)}\n    {\\(\\dfrac{\\sqrt{5}+1}{2}\\)}",
+      "content_sha256": "854aeefeb4397e3a5bbdc2fdf899b675220836a62822ab3c74bfd70f36b1dc3a",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q003",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q003",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "10f5d5cc9ca844e7a6c2eef1a2c1c3c8b0c257cb4662e74a7fa38d53c4a95d9c",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 33,
+          "end": 43,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q003:answer",
+      "topic_flags": [
+        "立体几何",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q003",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q003:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q003",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q003",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 45,
+            "end": 47
+          }
+        ],
+        "question_version_sha256": "10f5d5cc9ca844e7a6c2eef1a2c1c3c8b0c257cb4662e74a7fa38d53c4a95d9c",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q004",
+      "subject": "math",
+      "stem": "设 \\(O\\) 为正方形 \\(ABCD\\) 的中心，在 \\(O\\)，\\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 中任取 \\(3\\) 点，则取到的 \\(3\\) 点共线的概率为（\\quad）",
+      "options": {
+        "A": "\\(\\dfrac{1}{5}\\)",
+        "B": "\\(\\dfrac{2}{5}\\)",
+        "C": "\\(\\dfrac{1}{2}\\)",
+        "D": "\\(\\dfrac{4}{5}\\)"
+      },
+      "formulas": [
+        "O",
+        "ABCD",
+        "O",
+        "A",
+        "B",
+        "C",
+        "D",
+        "3",
+        "3",
+        "\\dfrac{1}{5}",
+        "\\dfrac{2}{5}",
+        "\\dfrac{1}{2}",
+        "\\dfrac{4}{5}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(O\\) 为正方形 \\(ABCD\\) 的中心，在 \\(O\\)，\\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 中任取 \\(3\\) 点，则取到的 \\(3\\) 点共线的概率为（\\quad）\n\n\\choices\n    {\\(\\dfrac{1}{5}\\)}\n    {\\(\\dfrac{2}{5}\\)}\n    {\\(\\dfrac{1}{2}\\)}\n    {\\(\\dfrac{4}{5}\\)}",
+      "content_sha256": "73f414e658d00f8f0884bd1976904c343d4767305234d327e6eb4cf70a5e7e55",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q004",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q004",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "5327e13ea6942fbae662223c545ae4d4b1aa4f1c272ea3d90a34d2e2fe09618d",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 49,
+          "end": 57,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q004:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q004",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q004:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q004",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q004",
+        "reference_answer": "A",
+        "explanation": null,
+        "raw_answer_latex": "A",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 59,
+            "end": 61
+          }
+        ],
+        "question_version_sha256": "5327e13ea6942fbae662223c545ae4d4b1aa4f1c272ea3d90a34d2e2fe09618d",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q005",
+      "subject": "math",
+      "stem": "某校一个课外学习小组为研究某作物种子的发芽率 \\(y\\) 和温度 \\(x\\)（单位：\\(^{\\circ}\\mathrm{C}\\)）的关系，在 \\(20\\) 个不同的温度条件下进行种子发芽实验，由实验数据 \\((x_i,y_i)\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(20\\)）得到下面的散点图：\n\n[图：img/2020/national_paper_1_liberal/q5_fig1.png]\n\n由此散点图，在 \\(10^{\\circ}\\mathrm{C}\\) 至 \\(40^{\\circ}\\mathrm{C}\\) 之间，下面四个回归方程类型中最适宜作为发芽率 \\(y\\) 和温度 \\(x\\) 的回归方程类型的是（\\quad）",
+      "options": {
+        "A": "\\(y=a+bx\\)",
+        "B": "\\(y=a+bx^2\\)",
+        "C": "\\(y=a+be^x\\)",
+        "D": "\\(y=a+b\\ln x\\)"
+      },
+      "formulas": [
+        "y",
+        "x",
+        "^{\\circ}\\mathrm{C}",
+        "20",
+        "(x_i,y_i)",
+        "i=1",
+        "2",
+        "\\cdots",
+        "20",
+        "10^{\\circ}\\mathrm{C}",
+        "40^{\\circ}\\mathrm{C}",
+        "y",
+        "x",
+        "y=a+bx",
+        "y=a+bx^2",
+        "y=a+be^x",
+        "y=a+b\\ln x"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q5_fig1.png",
+          "sha256": "fc2db6cfff581a264b39108db0386d9fa4babae14d6d8b9cc737491ccb82de2b",
+          "kind": "image",
+          "plaintext_path": "assets/fc2db6cfff581a264b39108db0386d9fa4babae14d6d8b9cc737491ccb82de2b.png"
+        }
+      ],
+      "raw_problem_latex": "某校一个课外学习小组为研究某作物种子的发芽率 \\(y\\) 和温度 \\(x\\)（单位：\\(^{\\circ}\\mathrm{C}\\)）的关系，在 \\(20\\) 个不同的温度条件下进行种子发芽实验，由实验数据 \\((x_i,y_i)\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(20\\)）得到下面的散点图：\n\n\\bitmapfigure[max width=8cm]{img/2020/national_paper_1_liberal/q5_fig1.png}\n\n由此散点图，在 \\(10^{\\circ}\\mathrm{C}\\) 至 \\(40^{\\circ}\\mathrm{C}\\) 之间，下面四个回归方程类型中最适宜作为发芽率 \\(y\\) 和温度 \\(x\\) 的回归方程类型的是（\\quad）\n\n\\choices\n    {\\(y=a+bx\\)}\n    {\\(y=a+bx^2\\)}\n    {\\(y=a+b\\e^x\\)}\n    {\\(y=a+b\\ln x\\)}",
+      "content_sha256": "41bd22c85709a2fffb4ecbf70b64967b1feae15d447e0e324df46f55cd7c6830",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q005",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q005",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "13ab05a5011bacd2552bc0f91c939a3e9e8021bf972d0d931b0e07a4f5c01160",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 63,
+          "end": 75,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q005:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q005",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q005:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q005",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q005",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 77,
+            "end": 79
+          }
+        ],
+        "question_version_sha256": "13ab05a5011bacd2552bc0f91c939a3e9e8021bf972d0d931b0e07a4f5c01160",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q006",
+      "subject": "math",
+      "stem": "已知圆 \\(x^2+y^2-6x=0\\)，过点 \\((1,2)\\) 的直线被该圆所截得的弦的长度的最小值为（\\quad）",
+      "options": {
+        "A": "\\(1\\)",
+        "B": "\\(2\\)",
+        "C": "\\(3\\)",
+        "D": "\\(4\\)"
+      },
+      "formulas": [
+        "x^2+y^2-6x=0",
+        "(1,2)",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知圆 \\(x^2+y^2-6x=0\\)，过点 \\((1,2)\\) 的直线被该圆所截得的弦的长度的最小值为（\\quad）\n\n\\choices\n    {\\(1\\)}\n    {\\(2\\)}\n    {\\(3\\)}\n    {\\(4\\)}",
+      "content_sha256": "90ba006212b053e8e89139cd43f1a39751abcf85ef62f84e82896eb548684b6a",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q006",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q006",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "538e8b89286cc1e694e5a557b6ac9cdf200080ba406bea0def91d65ede096c86",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 81,
+          "end": 89,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q006:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q006",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q006:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q006",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q006",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 91,
+            "end": 93
+          }
+        ],
+        "question_version_sha256": "538e8b89286cc1e694e5a557b6ac9cdf200080ba406bea0def91d65ede096c86",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q007",
+      "subject": "math",
+      "stem": "设函数 \\(f(x)=\\cos\\left(\\omega x+\\dfrac{\\pi}{6}\\right)\\) 在 \\([-\\pi,\\pi]\\) 的图象大致如图，则 \\(f(x)\\) 的最小正周期为（\\quad）\n\n[图：img/2020/national_paper_1_liberal/q7_fig1.png]",
+      "options": {
+        "A": "\\(\\dfrac{10\\pi}{9}\\)",
+        "B": "\\(\\dfrac{7\\pi}{6}\\)",
+        "C": "\\(\\dfrac{4\\pi}{3}\\)",
+        "D": "\\(\\dfrac{3\\pi}{2}\\)"
+      },
+      "formulas": [
+        "f(x)=\\cos\\left(\\omega x+\\dfrac{\\pi}{6}\\right)",
+        "[-\\pi,\\pi]",
+        "f(x)",
+        "\\dfrac{10\\pi}{9}",
+        "\\dfrac{7\\pi}{6}",
+        "\\dfrac{4\\pi}{3}",
+        "\\dfrac{3\\pi}{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q7_fig1.png",
+          "sha256": "2bb2c767d12aab4a2104c1df6e6d0d6ea7958a6ba0e456580026385fea3155aa",
+          "kind": "image",
+          "plaintext_path": "assets/2bb2c767d12aab4a2104c1df6e6d0d6ea7958a6ba0e456580026385fea3155aa.png"
+        }
+      ],
+      "raw_problem_latex": "设函数 \\(f(x)=\\cos\\left(\\omega x+\\dfrac{\\pi}{6}\\right)\\) 在 \\([-\\pi,\\pi]\\) 的图象大致如图，则 \\(f(x)\\) 的最小正周期为（\\quad）\n\n\\bitmapfigure[max width=7cm]{img/2020/national_paper_1_liberal/q7_fig1.png}\n\n\\choices\n    {\\(\\dfrac{10\\pi}{9}\\)}\n    {\\(\\dfrac{7\\pi}{6}\\)}\n    {\\(\\dfrac{4\\pi}{3}\\)}\n    {\\(\\dfrac{3\\pi}{2}\\)}",
+      "content_sha256": "7dd600ed741dd72c22e85b6f379e65fa2d100dd7dcf09d28ba97341477e47b23",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q007",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q007",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "710681a7e87a19817974e228ef8c690cf33c825aad04de452fb0f294205cd180",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 95,
+          "end": 105,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q007:answer",
+      "topic_flags": [
+        "函数与导数",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q007",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q007:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q007",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q007",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 107,
+            "end": 109
+          }
+        ],
+        "question_version_sha256": "710681a7e87a19817974e228ef8c690cf33c825aad04de452fb0f294205cd180",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q008",
+      "subject": "math",
+      "stem": "设 \\(a\\log_3 4=2\\)，则 \\(4^{-a}=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\dfrac{1}{16}\\)",
+        "B": "\\(\\dfrac{1}{9}\\)",
+        "C": "\\(\\dfrac{1}{8}\\)",
+        "D": "\\(\\dfrac{1}{6}\\)"
+      },
+      "formulas": [
+        "a\\log_3 4=2",
+        "4^{-a}=",
+        "\\dfrac{1}{16}",
+        "\\dfrac{1}{9}",
+        "\\dfrac{1}{8}",
+        "\\dfrac{1}{6}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(a\\log_3 4=2\\)，则 \\(4^{-a}=\\)（\\quad）\n\n\\choices\n    {\\(\\dfrac{1}{16}\\)}\n    {\\(\\dfrac{1}{9}\\)}\n    {\\(\\dfrac{1}{8}\\)}\n    {\\(\\dfrac{1}{6}\\)}",
+      "content_sha256": "1faf1b7c25f302420e82f2c8f50f4e85f80e5d3591620d1ef5a1a85367083162",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q008",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q008",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "7fbb41716790189c3f3a0794401c3c6d9c62d68f466e62b8efecb1bbcb3d48ae",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 111,
+          "end": 119,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q008:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q008",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q008:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q008",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q008",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 121,
+            "end": 123
+          }
+        ],
+        "question_version_sha256": "7fbb41716790189c3f3a0794401c3c6d9c62d68f466e62b8efecb1bbcb3d48ae",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q009",
+      "subject": "math",
+      "stem": "执行如图的程序框图，则输出的 \\(n=\\)（\\quad）\n\n[图：img/2020/national_paper_1_liberal/q9_fig1.png]",
+      "options": {
+        "A": "\\(17\\)",
+        "B": "\\(19\\)",
+        "C": "\\(21\\)",
+        "D": "\\(23\\)"
+      },
+      "formulas": [
+        "n=",
+        "17",
+        "19",
+        "21",
+        "23"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q9_fig1.png",
+          "sha256": "9bc29002ea7de3047fd66d3a27ad1d9d483fced62c57b5f99e9194cb52354089",
+          "kind": "image",
+          "plaintext_path": "assets/9bc29002ea7de3047fd66d3a27ad1d9d483fced62c57b5f99e9194cb52354089.png"
+        }
+      ],
+      "raw_problem_latex": "执行如图的程序框图，则输出的 \\(n=\\)（\\quad）\n\n\\bitmapfigure[max width=4.6cm]{img/2020/national_paper_1_liberal/q9_fig1.png}\n\n\\choices\n    {\\(17\\)}\n    {\\(19\\)}\n    {\\(21\\)}\n    {\\(23\\)}",
+      "content_sha256": "876fe28de60b49e6f74d99d30349f3be4b731ffe8e9de900304c4cea1a1e83e6",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q009",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q009",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 9,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "7f5a47c74962ac5b2be68c8530220620f5c8d37544a4b0e022e52751d3bdbd50",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 125,
+          "end": 135,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "native_pdf_text_alignment_needs_review"
+      ],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q009:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q009",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q009:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q009",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q009",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 137,
+            "end": 139
+          }
+        ],
+        "question_version_sha256": "7f5a47c74962ac5b2be68c8530220620f5c8d37544a4b0e022e52751d3bdbd50",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q009",
+        "base_version_sha256": "7f5a47c74962ac5b2be68c8530220620f5c8d37544a4b0e022e52751d3bdbd50",
+        "source": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "review_page_sha256": "c622f44b6d55b495c231e6d26728f783c8510afc5430b9b60adabebf1dc1b2b5",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "核对题图初值、累加顺序、≤分支及输出选项。",
+        "topic": "数列与流程图",
+        "deep_analysis": {
+          "knowledge": "奇数和、循环终止",
+          "methods": "执行跟踪、平方和模型",
+          "competencies": "数学运算、数学抽象",
+          "condition_design": "先累加再检查不超过100",
+          "breakthrough": "识别累计前k个奇数为k²",
+          "computation": "低，阈值比较",
+          "misconception": "把等号留在退出一侧导致输出19",
+          "integration": "等差求和与流程控制",
+          "context": "流程图承担条件",
+          "progression": "单问",
+          "difficulty": "基础，边界与更新顺序",
+          "related": "2022乙文7需逐次看新的a,b值",
+          "design_value": "旧卷图形适合研究算法推理，不能据此推断新卷要求",
+          "solution_path": "S依次为前k个正奇数和k²，只有S>100才退出；首次退出k=11，对应n=21。"
+        },
+        "result": "C",
+        "solution": "S依次为前k个正奇数和k²，只有S>100才退出；首次退出k=11，对应n=21。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "7f5a47c74962ac5b2be68c8530220620f5c8d37544a4b0e022e52751d3bdbd50",
+        "reference_answer": "C",
+        "explanation": "S依次为前k个正奇数和k²，只有S>100才退出；首次退出k=11，对应n=21。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "奇数和、循环终止",
+        "methods": "执行跟踪、平方和模型",
+        "competencies": "数学运算、数学抽象",
+        "condition_design": "先累加再检查不超过100",
+        "breakthrough": "识别累计前k个奇数为k²",
+        "computation": "低，阈值比较",
+        "misconception": "把等号留在退出一侧导致输出19",
+        "integration": "等差求和与流程控制",
+        "context": "流程图承担条件",
+        "progression": "单问",
+        "difficulty": "基础，边界与更新顺序",
+        "related": "2022乙文7需逐次看新的a,b值",
+        "design_value": "旧卷图形适合研究算法推理，不能据此推断新卷要求",
+        "solution_path": "S依次为前k个正奇数和k²，只有S>100才退出；首次退出k=11，对应n=21。",
+        "version_sha256": "7f5a47c74962ac5b2be68c8530220620f5c8d37544a4b0e022e52751d3bdbd50",
+        "evidence": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q010",
+      "subject": "math",
+      "stem": "设 \\(\\{a_n\\}\\) 是等比数列，且 \\(a_1+a_2+a_3=1\\)，\\(a_2+a_3+a_4=2\\)，则 \\(a_6+a_7+a_8=\\)（\\quad）",
+      "options": {
+        "A": "\\(12\\)",
+        "B": "\\(24\\)",
+        "C": "\\(30\\)",
+        "D": "\\(32\\)"
+      },
+      "formulas": [
+        "\\{a_n\\}",
+        "a_1+a_2+a_3=1",
+        "a_2+a_3+a_4=2",
+        "a_6+a_7+a_8=",
+        "12",
+        "24",
+        "30",
+        "32"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(\\{a_n\\}\\) 是等比数列，且 \\(a_1+a_2+a_3=1\\)，\\(a_2+a_3+a_4=2\\)，则 \\(a_6+a_7+a_8=\\)（\\quad）\n\n\\choices\n    {\\(12\\)}\n    {\\(24\\)}\n    {\\(30\\)}\n    {\\(32\\)}",
+      "content_sha256": "8f06fcd515ae551bd2bc3595c92ac8bed71855ff0d6d1b2b525d2b69ea390000",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q010",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q010",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 10,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "3d7d7b6a94a1968b643ef6539dcf324c517b45fd00d7a7bb124a455020ec647e",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 141,
+          "end": 149,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q010:answer",
+      "topic_flags": [
+        "数列"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q010",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q010:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q010",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q010",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 151,
+            "end": 153
+          }
+        ],
+        "question_version_sha256": "3d7d7b6a94a1968b643ef6539dcf324c517b45fd00d7a7bb124a455020ec647e",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q011",
+      "subject": "math",
+      "stem": "设 \\(F_1\\)，\\(F_2\\) 是双曲线 \\(C:x^2-\\dfrac{y^2}{3}=1\\) 的两个焦点，\\(O\\) 为坐标原点，点 \\(P\\) 在 \\(C\\) 上且 \\(\\lvert OP\\rvert=2\\)，则 \\(\\triangle PF_1F_2\\) 的面积为（\\quad）",
+      "options": {
+        "A": "\\(\\dfrac{7}{2}\\)",
+        "B": "\\(3\\)",
+        "C": "\\(\\dfrac{5}{2}\\)",
+        "D": "\\(2\\)"
+      },
+      "formulas": [
+        "F_1",
+        "F_2",
+        "C:x^2-\\dfrac{y^2}{3}=1",
+        "O",
+        "P",
+        "C",
+        "\\lvert OP\\rvert=2",
+        "\\triangle PF_1F_2",
+        "\\dfrac{7}{2}",
+        "3",
+        "\\dfrac{5}{2}",
+        "2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(F_1\\)，\\(F_2\\) 是双曲线 \\(C:x^2-\\dfrac{y^2}{3}=1\\) 的两个焦点，\\(O\\) 为坐标原点，点 \\(P\\) 在 \\(C\\) 上且 \\(\\lvert OP\\rvert=2\\)，则 \\(\\triangle PF_1F_2\\) 的面积为（\\quad）\n\n\\choices\n    {\\(\\dfrac{7}{2}\\)}\n    {\\(3\\)}\n    {\\(\\dfrac{5}{2}\\)}\n    {\\(2\\)}",
+      "content_sha256": "8d381b4764df5f1f1854249fd143fac9042b4976411c5b354e82a5875d29010b",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q011",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q011",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 11,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "d7c28daed5c84ade60e7d95eb727ad7137b473fd416b663cdd1b462f4ec9e1db",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 155,
+          "end": 163,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q011:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q011",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q011:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q011",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q011",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 165,
+            "end": 167
+          }
+        ],
+        "question_version_sha256": "d7c28daed5c84ade60e7d95eb727ad7137b473fd416b663cdd1b462f4ec9e1db",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q012",
+      "subject": "math",
+      "stem": "已知 \\(A\\)，\\(B\\)，\\(C\\) 为球 \\(O\\) 的球面上的三个点，\\(\\odot O_1\\) 为 \\(\\triangle ABC\\) 的外接圆. 若 \\(\\odot O_1\\) 的面积为 \\(4\\pi\\)，\\(AB=BC=AC=OO_1\\)，则球 \\(O\\) 的表面积为（\\quad）",
+      "options": {
+        "A": "\\(64\\pi\\)",
+        "B": "\\(48\\pi\\)",
+        "C": "\\(36\\pi\\)",
+        "D": "\\(32\\pi\\)"
+      },
+      "formulas": [
+        "A",
+        "B",
+        "C",
+        "O",
+        "\\odot O_1",
+        "\\triangle ABC",
+        "\\odot O_1",
+        "4\\pi",
+        "AB=BC=AC=OO_1",
+        "O",
+        "64\\pi",
+        "48\\pi",
+        "36\\pi",
+        "32\\pi"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(A\\)，\\(B\\)，\\(C\\) 为球 \\(O\\) 的球面上的三个点，\\(\\odot O_1\\) 为 \\(\\triangle ABC\\) 的外接圆. 若 \\(\\odot O_1\\) 的面积为 \\(4\\pi\\)，\\(AB=BC=AC=OO_1\\)，则球 \\(O\\) 的表面积为（\\quad）\n\n\\choices\n    {\\(64\\pi\\)}\n    {\\(48\\pi\\)}\n    {\\(36\\pi\\)}\n    {\\(32\\pi\\)}",
+      "content_sha256": "e127e5b12b72097cec174d3c38213b43fdee94f9050e05f545161f960b90e0fb",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q012",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q012",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 12,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "e5709544dd8bf564472eadb4e8a713e40d197962880116a7d2c5220ee59ddd3b",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 169,
+          "end": 177,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q012:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q012",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q012:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q012",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q012",
+        "reference_answer": "A",
+        "explanation": null,
+        "raw_answer_latex": "A",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 179,
+            "end": 181
+          }
+        ],
+        "question_version_sha256": "e5709544dd8bf564472eadb4e8a713e40d197962880116a7d2c5220ee59ddd3b",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q013",
+      "subject": "math",
+      "stem": "若 \\(x\\)，\\(y\\) 满足约束条件 \\(\\begin{cases}\n2x+y-2\\le 0,\\\\\nx-y-1\\ge 0,\\\\\ny+1\\ge 0,\n\\end{cases}\\)，则 \\(z=x+7y\\) 的最大值为________.",
+      "options": {},
+      "formulas": [
+        "x",
+        "y",
+        "\\begin{cases}\n2x+y-2\\le 0,\\\\\nx-y-1\\ge 0,\\\\\ny+1\\ge 0,\n\\end{cases}",
+        "z=x+7y"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若 \\(x\\)，\\(y\\) 满足约束条件 \\(\\begin{cases}\n2x+y-2\\le 0,\\\\\nx-y-1\\ge 0,\\\\\ny+1\\ge 0,\n\\end{cases}\\)，则 \\(z=x+7y\\) 的最大值为\\fillinblank{}.",
+      "content_sha256": "f81f95bcc339b92cdbcf7fffb1e4643e103d6d1e12230e5172a54cc53be1b3a2",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q013",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q013",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "f85dddbd49239fd9daa86845eaee00af73eb5ebfaeee715044dda4266e77a5a8",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 185,
+          "end": 191,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q013:answer",
+      "topic_flags": [],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q013",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q013:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q013",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q013",
+        "reference_answer": "\\(1\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(1\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 193,
+            "end": 195
+          }
+        ],
+        "question_version_sha256": "f85dddbd49239fd9daa86845eaee00af73eb5ebfaeee715044dda4266e77a5a8",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q014",
+      "subject": "math",
+      "stem": "设向量 \\(\\boldsymbol a=(1,-1)\\)，\\(\\boldsymbol b=(m+1,2m-4)\\)，若 \\(\\boldsymbol a\\perp\\boldsymbol b\\)，则 \\(m=________\\).",
+      "options": {},
+      "formulas": [
+        "\\boldsymbol a=(1,-1)",
+        "\\boldsymbol b=(m+1,2m-4)",
+        "\\boldsymbol a\\perp\\boldsymbol b",
+        "m=________"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设向量 \\(\\bs a=(1,-1)\\)，\\(\\bs b=(m+1,2m-4)\\)，若 \\(\\bs a\\perp\\bs b\\)，则 \\(m=\\fillinblank{}\\).",
+      "content_sha256": "2e0e97189dfd3741d2206daac828c899f90fd9c831ed8e0400db67946b6ec95e",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q014",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q014",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "afa4461db4deb912d9e95a930cb345898deea42afdf4ba3c10406f384fba53fc",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 197,
+          "end": 199,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q014:answer",
+      "topic_flags": [
+        "平面向量"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q014",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q014:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q014",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q014",
+        "reference_answer": "\\(5\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(5\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 201,
+            "end": 203
+          }
+        ],
+        "question_version_sha256": "afa4461db4deb912d9e95a930cb345898deea42afdf4ba3c10406f384fba53fc",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q015",
+      "subject": "math",
+      "stem": "曲线 \\(y=\\ln x+x+1\\) 的一条切线的斜率为 \\(2\\)，则该切线的方程为________.",
+      "options": {},
+      "formulas": [
+        "y=\\ln x+x+1",
+        "2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "曲线 \\(y=\\ln x+x+1\\) 的一条切线的斜率为 \\(2\\)，则该切线的方程为\\fillinblank{}.",
+      "content_sha256": "9250893714ade94752950a8c1656a68f8efff43d1bf4cbf8d0141ced15e98936",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q015",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q015",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 15,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "8e588eaea2449ac0ca1ed81ec5424ce74ca9caa91578876ff67cf0fb9ddbd7c2",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 205,
+          "end": 207,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q015:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q015",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q015:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q015",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q015",
+        "reference_answer": "\\(y=2x\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(y=2x\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 209,
+            "end": 211
+          }
+        ],
+        "question_version_sha256": "8e588eaea2449ac0ca1ed81ec5424ce74ca9caa91578876ff67cf0fb9ddbd7c2",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q016",
+      "subject": "math",
+      "stem": "数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2}+(-1)^n a_n=3n-1\\)，前 \\(16\\) 项和为 \\(540\\)，则 \\(a_1=________\\).",
+      "options": {},
+      "formulas": [
+        "\\{a_n\\}",
+        "a_{n+2}+(-1)^n a_n=3n-1",
+        "16",
+        "540",
+        "a_1=________"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "数列 \\(\\{a_n\\}\\) 满足 \\(a_{n+2}+(-1)^n a_n=3n-1\\)，前 \\(16\\) 项和为 \\(540\\)，则 \\(a_1=\\fillinblank{}\\).",
+      "content_sha256": "2bb36f71d07508a8b5f176c1cf06633df5298e5aa2f7d59c1a6942869f1f0b4f",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q016",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q016",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 16,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "1fc69dde266cf096db3fcb68f59002b1409772f8a2bfb79fb6126373d7af57cb",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 213,
+          "end": 215,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q016:answer",
+      "topic_flags": [
+        "数列"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q016",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q016:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q016",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q016",
+        "reference_answer": "\\(7\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(7\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 217,
+            "end": 219
+          }
+        ],
+        "question_version_sha256": "1fc69dde266cf096db3fcb68f59002b1409772f8a2bfb79fb6126373d7af57cb",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q017",
+      "subject": "math",
+      "stem": "某厂接受了一项加工业务，加工出来的产品（单位：件）按标准分为 A，B，C，D 四个等级. 加工业务约定：对于 A 级品，B 级品，C 级品，厂家每件分别收取加工费 \\(90\\) 元，\\(50\\) 元，\\(20\\) 元；对于 D 级品，厂家每件要赔偿原料损失费 \\(50\\) 元. 该厂有甲，乙两个分厂可承接加工业务. 甲分厂加工成本费为 \\(25\\) 元/件，乙分厂加工成本费为 \\(20\\) 元/件. 厂家为决定由哪个分厂承接加工业务，在两个分厂各试加工了 \\(100\\) 件这种产品，并统计了这些产品的等级，整理如下：\n\n\n甲分厂产品等级的频数分布表\n\n\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 40 & 20 & 20 & 20 \\\\\n\\hline\n\\end{tabular}\n\n\n\n乙分厂产品等级的频数分布表\n\n\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 28 & 17 & 34 & 21 \\\\\n\\hline\n\\end{tabular}\n\n\n\n\n（子项） 分别估计甲，乙两分厂加工出来的一件产品为 \\(A\\) 级品的概率；\n\n\n（子项） 分别求甲，乙两分厂加工出来的 \\(100\\) 件产品的平均利润，以平均利润为依据，厂家应选哪个分厂承接加工业务？",
+      "options": {},
+      "formulas": [
+        "90",
+        "50",
+        "20",
+        "50",
+        "25",
+        "20",
+        "100",
+        "A",
+        "B",
+        "C",
+        "D",
+        "A",
+        "B",
+        "C",
+        "D",
+        "A",
+        "100"
+      ],
+      "parts": [
+        "分别估计甲，乙两分厂加工出来的一件产品为 \\(A\\) 级品的概率；",
+        "分别求甲，乙两分厂加工出来的 \\(100\\) 件产品的平均利润，以平均利润为依据，厂家应选哪个分厂承接加工业务？"
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "分别估计甲，乙两分厂加工出来的一件产品为 \\(A\\) 级品的概率；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "分别求甲，乙两分厂加工出来的 \\(100\\) 件产品的平均利润，以平均利润为依据，厂家应选哪个分厂承接加工业务？"
+        }
+      ],
+      "tables_latex": [
+        "\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 40 & 20 & 20 & 20 \\\\\n\\hline\n\\end{tabular}",
+        "\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 28 & 17 & 34 & 21 \\\\\n\\hline\n\\end{tabular}"
+      ],
+      "asset_refs": [],
+      "raw_problem_latex": "某厂接受了一项加工业务，加工出来的产品（单位：件）按标准分为 A，B，C，D 四个等级. 加工业务约定：对于 A 级品，B 级品，C 级品，厂家每件分别收取加工费 \\(90\\) 元，\\(50\\) 元，\\(20\\) 元；对于 D 级品，厂家每件要赔偿原料损失费 \\(50\\) 元. 该厂有甲，乙两个分厂可承接加工业务. 甲分厂加工成本费为 \\(25\\) 元/件，乙分厂加工成本费为 \\(20\\) 元/件. 厂家为决定由哪个分厂承接加工业务，在两个分厂各试加工了 \\(100\\) 件这种产品，并统计了这些产品的等级，整理如下：\n\n\\begin{center}\n甲分厂产品等级的频数分布表\n\n\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 40 & 20 & 20 & 20 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n\\begin{center}\n乙分厂产品等级的频数分布表\n\n\\begin{tabular}{c|cccc}\n\\hline\n等级 & \\(A\\) & \\(B\\) & \\(C\\) & \\(D\\) \\\\\n\\hline\n频数 & 28 & 17 & 34 & 21 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n\\begin{enumerate}\n\\item 分别估计甲，乙两分厂加工出来的一件产品为 \\(A\\) 级品的概率；\n\n\\item 分别求甲，乙两分厂加工出来的 \\(100\\) 件产品的平均利润，以平均利润为依据，厂家应选哪个分厂承接加工业务？\n\\end{enumerate}",
+      "content_sha256": "9fe4c3000360fbb2a0cb941d359a2eccbe162af40d79b05cd5c569b148cfb726",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q017",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q017",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 17,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "97bf24bc64470f9391e93bf966e0054d233ee71d7dbc4698a95eae5464d08522",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 223,
+          "end": 255,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q017:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q017",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q017:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q017",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q017",
+        "reference_answer": null,
+        "explanation": "（子项） 用试加工中各等级产品出现的频率估计相应等级产品的概率，所以甲分厂加工出一件 \\(A\\) 级品的概率估计值为\n\\(\\dfrac{40}{100}=0.4\\)，乙分厂加工出一件 \\(A\\) 级品的概率估计值为 \\(\\dfrac{28}{100}=0.28\\).\n\n\n（子项） 甲分厂加工一件 \\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 级产品所得的利润分别为\n\\(90-25=65\\)，\\(50-25=25\\)，\\(20-25=-5\\)，\\(-50-25=-75\\)（元），因此加工 \\(100\\) 件产品的平均利润为\n\\[\n\\dfrac{40\\times65+20\\times25+20\\times(-5)+20\\times(-75)}{100}=15\\text{（元）}\n\\]\n\n乙分厂加工一件 \\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 级产品所得的利润分别为\n\\(90-20=70\\)，\\(50-20=30\\)，\\(20-20=0\\)，\\(-50-20=-70\\)（元），因此加工 \\(100\\) 件产品的平均利润为\n\\[\n\\dfrac{28\\times70+17\\times30+34\\times0+21\\times(-70)}{100}=10\\text{（元）}\n\\]\n\n因为 \\(15>10\\)，所以厂家应选甲分厂承接加工业务.",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 用试加工中各等级产品出现的频率估计相应等级产品的概率，所以甲分厂加工出一件 \\(A\\) 级品的概率估计值为\n\\(\\dfrac{40}{100}=0.4\\)，乙分厂加工出一件 \\(A\\) 级品的概率估计值为 \\(\\dfrac{28}{100}=0.28\\).\n\n\\item 甲分厂加工一件 \\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 级产品所得的利润分别为\n\\(90-25=65\\)，\\(50-25=25\\)，\\(20-25=-5\\)，\\(-50-25=-75\\)（元），因此加工 \\(100\\) 件产品的平均利润为\n\\[\n\\dfrac{40\\times65+20\\times25+20\\times(-5)+20\\times(-75)}{100}=15\\text{（元）}\n\\]\n\n乙分厂加工一件 \\(A\\)，\\(B\\)，\\(C\\)，\\(D\\) 级产品所得的利润分别为\n\\(90-20=70\\)，\\(50-20=30\\)，\\(20-20=0\\)，\\(-50-20=-70\\)（元），因此加工 \\(100\\) 件产品的平均利润为\n\\[\n\\dfrac{28\\times70+17\\times30+34\\times0+21\\times(-70)}{100}=10\\text{（元）}\n\\]\n\n因为 \\(15>10\\)，所以厂家应选甲分厂承接加工业务.\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 257,
+            "end": 276
+          }
+        ],
+        "question_version_sha256": "97bf24bc64470f9391e93bf966e0054d233ee71d7dbc4698a95eae5464d08522",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q018",
+      "subject": "math",
+      "stem": "\\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\). 已知 \\(B=150^{\\circ}\\).\n\n\n\n（子项） 若 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，求 \\(\\triangle ABC\\) 的面积；\n\n\n（子项） 若 \\(\\sin A+\\sqrt{3}\\sin C=\\dfrac{\\sqrt{2}}{2}\\)，求 \\(C\\).",
+      "options": {},
+      "formulas": [
+        "\\triangle ABC",
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c",
+        "B=150^{\\circ}",
+        "a=\\sqrt{3}c",
+        "b=2\\sqrt{7}",
+        "\\triangle ABC",
+        "\\sin A+\\sqrt{3}\\sin C=\\dfrac{\\sqrt{2}}{2}",
+        "C"
+      ],
+      "parts": [
+        "若 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，求 \\(\\triangle ABC\\) 的面积；",
+        "若 \\(\\sin A+\\sqrt{3}\\sin C=\\dfrac{\\sqrt{2}}{2}\\)，求 \\(C\\)."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "若 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，求 \\(\\triangle ABC\\) 的面积；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(\\sin A+\\sqrt{3}\\sin C=\\dfrac{\\sqrt{2}}{2}\\)，求 \\(C\\)."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "\\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\). 已知 \\(B=150^{\\circ}\\).\n\n\\begin{enumerate}\n\\item 若 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，求 \\(\\triangle ABC\\) 的面积；\n\n\\item 若 \\(\\sin A+\\sqrt{3}\\sin C=\\dfrac{\\sqrt{2}}{2}\\)，求 \\(C\\).\n\\end{enumerate}",
+      "content_sha256": "82284cc3ed47bcceccaf4b4116a038811d17ad6b57f06f3a185249a4b4fb6918",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q018",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q018",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 18,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "0a0cf04a55f8e84cbe4a7d5ea6b8d4fa20e45034f85494ec411bf82a2472f624",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 278,
+          "end": 286,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 1,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q018:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q018",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q018:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q018",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q018",
+        "reference_answer": null,
+        "explanation": "（子项） 由余弦定理以及 \\(\\cos150^{\\circ}=-\\dfrac{\\sqrt{3}}{2}\\)，得\n\\[\nb^2=a^2+c^2-2ac\\cos B=a^2+c^2+\\sqrt{3}ac\n\\]\n代入 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，得\n\\[\n28=3c^2+c^2+3c^2=7c^2\n\\]\n所以 \\(c=2\\)，从而 \\(a=2\\sqrt{3}\\).\n因此\n\\[\nS_{\\triangle ABC}=\\dfrac12ac\\sin B\n=\\dfrac12\\times2\\sqrt{3}\\times2\\times\\dfrac12=\\sqrt{3}\n\\]\n\n\n（子项） 因为 \\(A+B+C=180^{\\circ}\\)，且 \\(B=150^{\\circ}\\)，所以\n \\(A=30^{\\circ}-C\\)，其中 \\(0^{\\circ}<C<30^{\\circ}\\). 于是\n\\(\\sin A+\\sqrt{3}\\sin C=\\sin(30^{\\circ}-C)+\\sqrt{3}\\sin C=\\dfrac12\\cos C+\\dfrac{\\sqrt{3}}2\\sin C=\\sin(C+30^{\\circ})\\).\n所以 \\(\\sin(C+30^{\\circ})=\\dfrac{\\sqrt{2}}2=\\sin45^{\\circ}\\).\n又因为 \\(30^{\\circ}<C+30^{\\circ}<60^{\\circ}\\)，故 \\(C+30^{\\circ}=45^{\\circ}\\)，从而 \\(C=15^{\\circ}\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 由余弦定理以及 \\(\\cos150^{\\circ}=-\\dfrac{\\sqrt{3}}{2}\\)，得\n\\[\nb^2=a^2+c^2-2ac\\cos B=a^2+c^2+\\sqrt{3}ac\n\\]\n代入 \\(a=\\sqrt{3}c\\)，\\(b=2\\sqrt{7}\\)，得\n\\[\n28=3c^2+c^2+3c^2=7c^2\n\\]\n所以 \\(c=2\\)，从而 \\(a=2\\sqrt{3}\\).\n因此\n\\[\nS_{\\triangle ABC}=\\dfrac12ac\\sin B\n=\\dfrac12\\times2\\sqrt{3}\\times2\\times\\dfrac12=\\sqrt{3}\n\\]\n\n\\item 因为 \\(A+B+C=180^{\\circ}\\)，且 \\(B=150^{\\circ}\\)，所以\n \\(A=30^{\\circ}-C\\)，其中 \\(0^{\\circ}<C<30^{\\circ}\\). 于是\n\\(\\sin A+\\sqrt{3}\\sin C=\\sin(30^{\\circ}-C)+\\sqrt{3}\\sin C=\\dfrac12\\cos C+\\dfrac{\\sqrt{3}}2\\sin C=\\sin(C+30^{\\circ})\\).\n所以 \\(\\sin(C+30^{\\circ})=\\dfrac{\\sqrt{2}}2=\\sin45^{\\circ}\\).\n又因为 \\(30^{\\circ}<C+30^{\\circ}<60^{\\circ}\\)，故 \\(C+30^{\\circ}=45^{\\circ}\\)，从而 \\(C=15^{\\circ}\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 288,
+            "end": 311
+          }
+        ],
+        "question_version_sha256": "0a0cf04a55f8e84cbe4a7d5ea6b8d4fa20e45034f85494ec411bf82a2472f624",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q019",
+      "subject": "math",
+      "stem": "如图，\\(D\\) 为圆锥的顶点，\\(O\\) 是圆锥底面的圆心，\\(\\triangle ABC\\) 是底面的内接正三角形，\\(P\\) 为 \\(DO\\) 上一点，\\(\\angle APC=90^{\\circ}\\).\n\n\n\n（子项） 证明：平面 \\(PAB\\perp\\) 平面 \\(PAC\\)；\n\n\n（子项） 设 \\(DO=\\sqrt{2}\\)，圆锥的侧面积为 \\(\\sqrt{3}\\pi\\)，求三棱锥 \\(P-ABC\\) 的体积.\n\n\n[图：img/2020/national_paper_1_liberal/q19_fig1.png]",
+      "options": {},
+      "formulas": [
+        "D",
+        "O",
+        "\\triangle ABC",
+        "P",
+        "DO",
+        "\\angle APC=90^{\\circ}",
+        "PAB\\perp",
+        "PAC",
+        "DO=\\sqrt{2}",
+        "\\sqrt{3}\\pi",
+        "P-ABC"
+      ],
+      "parts": [
+        "证明：平面 \\(PAB\\perp\\) 平面 \\(PAC\\)；",
+        "设 \\(DO=\\sqrt{2}\\)，圆锥的侧面积为 \\(\\sqrt{3}\\pi\\)，求三棱锥 \\(P-ABC\\) 的体积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "证明：平面 \\(PAB\\perp\\) 平面 \\(PAC\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "设 \\(DO=\\sqrt{2}\\)，圆锥的侧面积为 \\(\\sqrt{3}\\pi\\)，求三棱锥 \\(P-ABC\\) 的体积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q19_fig1.png",
+          "sha256": "1d5d05735f64ead3b3898f4731b4dfc522cc0edf7f5fc26618cd3e87a822df79",
+          "kind": "image",
+          "plaintext_path": "assets/1d5d05735f64ead3b3898f4731b4dfc522cc0edf7f5fc26618cd3e87a822df79.png"
+        }
+      ],
+      "raw_problem_latex": "如图，\\(D\\) 为圆锥的顶点，\\(O\\) 是圆锥底面的圆心，\\(\\triangle ABC\\) 是底面的内接正三角形，\\(P\\) 为 \\(DO\\) 上一点，\\(\\angle APC=90^{\\circ}\\).\n\n\\begin{enumerate}\n\\item 证明：平面 \\(PAB\\perp\\) 平面 \\(PAC\\)；\n\n\\item 设 \\(DO=\\sqrt{2}\\)，圆锥的侧面积为 \\(\\sqrt{3}\\pi\\)，求三棱锥 \\(P-ABC\\) 的体积.\n\\end{enumerate}\n\n\\bitmapfigure[max width=6.0cm]{img/2020/national_paper_1_liberal/q19_fig1.png}",
+      "content_sha256": "a8895cee5f539fdec16d4146e75b2701d65acc28ff97d0159c98340f45d53cbe",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q019",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q019",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 19,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "8567182d0e4bb36b577e3abc9d64383dfb354b72873c0dd87203e2f1dbd49703",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 313,
+          "end": 323,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 2,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q019:answer",
+      "topic_flags": [
+        "立体几何",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q019",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q019:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q019",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q019",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(\\triangle ABC\\) 是正三角形，\\(O\\) 是其外接圆圆心，所以 \\(OC\\perp AB\\). 又因为 \\(PO\\perp\\) 底面，故 \\(PO\\perp AB\\). 直线 \\(PO\\)，\\(OC\\) 是平面 \\(POC\\) 内相交的两条直线，且均垂直于 \\(AB\\)，所以 \\(AB\\perp\\) 平面 \\(POC\\)，从而\n\\(PC\\perp AB\\). 由 \\(\\angle APC=90^{\\circ}\\)，得 \\(PC\\perp PA\\).\n\n直线 \\(PA\\)，\\(AB\\) 是平面 \\(PAB\\) 内相交的两条直线，且直线 \\(PC\\) 同时垂直于这两条直线，所以 \\(PC\\perp\\) 平面 \\(PAB\\). 又 \\(PC\\) 在平面 \\(PAC\\) 内，因此平面 \\(PAB\\perp\\) 平面 \\(PAC\\).\n\n\n（子项） 设圆锥底面半径为 \\(r\\)，母线长为 \\(l\\)，高为 \\(h\\). 由题意\n\\(\\pi rl=\\sqrt{3}\\pi\\)，\\(h=DO=\\sqrt{2}\\)，\\(l^2=h^2+r^2\\).\n所以 \\(rl=\\sqrt{3}\\)，\\(l^2=2+r^2\\). 两式平方并代入，得\n\\(r^2(2+r^2)=3\\)，\\(r^4+2r^2-3=0\\)，\\((r^2-1)(r^2+3)=0\\).\n因为 \\(r>0\\)，所以 \\(r=1\\)，且 \\(AC=\\sqrt{3}r=\\sqrt{3}\\).\n\n设 \\(OP=d\\). 由于 \\(PO\\perp\\) 底面，且 \\(OA=OC=r=1\\)，有\n\\[\nPA^2=PC^2=PO^2+OA^2=d^2+1\n\\]\n又因为 \\(\\angle APC=90^{\\circ}\\)，在直角三角形 \\(APC\\) 中\n\\[\nAC^2=PA^2+PC^2=2(d^2+1)\n\\]\n代入 \\(AC^2=3\\)，得 \\(2(d^2+1)=3\\)，所以 \\(d=\\dfrac{\\sqrt{2}}2\\).\n正三角形 \\(ABC\\) 的边长为 \\(AC=\\sqrt{3}\\)，所以其面积为\n\\(S_{\\triangle ABC}=\\dfrac{\\sqrt{3}}4AC^2=\\dfrac{3\\sqrt{3}}4\\)，故三棱锥 \\(P-ABC\\) 的体积为\n\\[\nV=\\dfrac13\\times\\dfrac{3\\sqrt{3}}4\\times\\dfrac{\\sqrt{2}}2=\\dfrac{\\sqrt{6}}8\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 因为 \\(\\triangle ABC\\) 是正三角形，\\(O\\) 是其外接圆圆心，所以 \\(OC\\perp AB\\). 又因为 \\(PO\\perp\\) 底面，故 \\(PO\\perp AB\\). 直线 \\(PO\\)，\\(OC\\) 是平面 \\(POC\\) 内相交的两条直线，且均垂直于 \\(AB\\)，所以 \\(AB\\perp\\) 平面 \\(POC\\)，从而\n\\(PC\\perp AB\\). 由 \\(\\angle APC=90^{\\circ}\\)，得 \\(PC\\perp PA\\).\n\n直线 \\(PA\\)，\\(AB\\) 是平面 \\(PAB\\) 内相交的两条直线，且直线 \\(PC\\) 同时垂直于这两条直线，所以 \\(PC\\perp\\) 平面 \\(PAB\\). 又 \\(PC\\) 在平面 \\(PAC\\) 内，因此平面 \\(PAB\\perp\\) 平面 \\(PAC\\).\n\n\\item 设圆锥底面半径为 \\(r\\)，母线长为 \\(l\\)，高为 \\(h\\). 由题意\n\\(\\pi rl=\\sqrt{3}\\pi\\)，\\(h=DO=\\sqrt{2}\\)，\\(l^2=h^2+r^2\\).\n所以 \\(rl=\\sqrt{3}\\)，\\(l^2=2+r^2\\). 两式平方并代入，得\n\\(r^2(2+r^2)=3\\)，\\(r^4+2r^2-3=0\\)，\\((r^2-1)(r^2+3)=0\\).\n因为 \\(r>0\\)，所以 \\(r=1\\)，且 \\(AC=\\sqrt{3}r=\\sqrt{3}\\).\n\n设 \\(OP=d\\). 由于 \\(PO\\perp\\) 底面，且 \\(OA=OC=r=1\\)，有\n\\[\nPA^2=PC^2=PO^2+OA^2=d^2+1\n\\]\n又因为 \\(\\angle APC=90^{\\circ}\\)，在直角三角形 \\(APC\\) 中\n\\[\nAC^2=PA^2+PC^2=2(d^2+1)\n\\]\n代入 \\(AC^2=3\\)，得 \\(2(d^2+1)=3\\)，所以 \\(d=\\dfrac{\\sqrt{2}}2\\).\n正三角形 \\(ABC\\) 的边长为 \\(AC=\\sqrt{3}\\)，所以其面积为\n\\(S_{\\triangle ABC}=\\dfrac{\\sqrt{3}}4AC^2=\\dfrac{3\\sqrt{3}}4\\)，故三棱锥 \\(P-ABC\\) 的体积为\n\\[\nV=\\dfrac13\\times\\dfrac{3\\sqrt{3}}4\\times\\dfrac{\\sqrt{2}}2=\\dfrac{\\sqrt{6}}8\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 325,
+            "end": 353
+          }
+        ],
+        "question_version_sha256": "8567182d0e4bb36b577e3abc9d64383dfb354b72873c0dd87203e2f1dbd49703",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q020",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=e^x-a(x+2)\\).\n\n\n\n（子项） 当 \\(a=1\\) 时，讨论 \\(f(x)\\) 的单调性；\n\n\n（子项） 若 \\(f(x)\\) 有两个零点，求 \\(a\\) 的取值范围.",
+      "options": {},
+      "formulas": [
+        "f(x)=e^x-a(x+2)",
+        "a=1",
+        "f(x)",
+        "f(x)",
+        "a"
+      ],
+      "parts": [
+        "当 \\(a=1\\) 时，讨论 \\(f(x)\\) 的单调性；",
+        "若 \\(f(x)\\) 有两个零点，求 \\(a\\) 的取值范围."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "当 \\(a=1\\) 时，讨论 \\(f(x)\\) 的单调性；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(f(x)\\) 有两个零点，求 \\(a\\) 的取值范围."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=\\e^x-a(x+2)\\).\n\n\\begin{enumerate}\n\\item 当 \\(a=1\\) 时，讨论 \\(f(x)\\) 的单调性；\n\n\\item 若 \\(f(x)\\) 有两个零点，求 \\(a\\) 的取值范围.\n\\end{enumerate}",
+      "content_sha256": "7ceef9d8e6b1af4932eb681467ab71b25482ce41a3ef93eb337f9f5440d2e86c",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q020",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q020",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 20,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "b006d71501e20f4a5dddaced8e519b9ff0902fe4a0ffc3cc8448f948b64aa7e7",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 355,
+          "end": 363,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 2,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q020:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q020",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q020:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q020",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q020",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(a=1\\) 时，\\(f(x)=e^x-x-2\\)，所以\n\\[\nf'(x)=e^x-1\n\\]\n当 \\(x<0\\) 时，\\(e^x<1\\)，故 \\(f'(x)<0\\)，函数 \\(f(x)\\) 在 \\((-\\infty,0)\\) 上单调递减；当 \\(x>0\\) 时，\\(e^x>1\\)，故 \\(f'(x)>0\\)，函数 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增.\n\n\n（子项） 因为 \\(f(-2)=e^{-2}\\ne0\\)，所以零点不可能是 \\(-2\\). 对 \\(x\\ne-2\\)，方程 \\(f(x)=0\\) 等价于\n\\(a=g(x)\\)，\\(g(x)=\\dfrac{e^x}{x+2}\\).\n又\n\\[\ng'(x)=\\dfrac{e^x(x+1)}{(x+2)^2}\n\\]\n在 \\((-\\infty,-2)\\) 上，\\(x+1<0\\)，所以 \\(g(x)\\) 单调递减，且\n\\(\\lim_{x\\to-\\infty}g(x)=0^{-}\\)，\\(\\lim_{x\\to-2^-}g(x)=-\\infty\\).\n因此对每个 \\(a<0\\)，方程 \\(a=g(x)\\) 只有一个根.\n\n在 \\((-2,-1)\\) 上，\\(g'(x)<0\\)；在 \\((-1,+\\infty)\\) 上，\\(g'(x)>0\\)，且\n\\(\\lim_{x\\to-2^+}g(x)=+\\infty\\)，\\(g(-1)=\\dfrac1{e}\\)，\\(\\lim_{x\\to+\\infty}g(x)=+\\infty\\).\n所以当 \\(a>0\\) 时，方程 \\(a=g(x)\\) 有两个根当且仅当 \\(a>\\dfrac1{e}\\)；当 \\(a=\\dfrac1{e}\\) 时只有一个根，当 \\(0<a<\\dfrac1{e}\\) 时没有根.\n\n当 \\(a=0\\) 时，\\(f(x)=e^x>0\\)，没有零点.\n\n综上，\\(f(x)\\) 有两个零点时，\\(a\\) 的取值范围为\n\\[\na>\\dfrac1{e}\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 当 \\(a=1\\) 时，\\(f(x)=\\e^x-x-2\\)，所以\n\\[\nf'(x)=\\e^x-1\n\\]\n当 \\(x<0\\) 时，\\(\\e^x<1\\)，故 \\(f'(x)<0\\)，函数 \\(f(x)\\) 在 \\((-\\infty,0)\\) 上单调递减；当 \\(x>0\\) 时，\\(\\e^x>1\\)，故 \\(f'(x)>0\\)，函数 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增.\n\n\\item 因为 \\(f(-2)=\\e^{-2}\\ne0\\)，所以零点不可能是 \\(-2\\). 对 \\(x\\ne-2\\)，方程 \\(f(x)=0\\) 等价于\n\\(a=g(x)\\)，\\(g(x)=\\dfrac{\\e^x}{x+2}\\).\n又\n\\[\ng'(x)=\\dfrac{\\e^x(x+1)}{(x+2)^2}\n\\]\n在 \\((-\\infty,-2)\\) 上，\\(x+1<0\\)，所以 \\(g(x)\\) 单调递减，且\n\\(\\lim_{x\\to-\\infty}g(x)=0^{-}\\)，\\(\\lim_{x\\to-2^-}g(x)=-\\infty\\).\n因此对每个 \\(a<0\\)，方程 \\(a=g(x)\\) 只有一个根.\n\n在 \\((-2,-1)\\) 上，\\(g'(x)<0\\)；在 \\((-1,+\\infty)\\) 上，\\(g'(x)>0\\)，且\n\\(\\lim_{x\\to-2^+}g(x)=+\\infty\\)，\\(g(-1)=\\dfrac1{\\e}\\)，\\(\\lim_{x\\to+\\infty}g(x)=+\\infty\\).\n所以当 \\(a>0\\) 时，方程 \\(a=g(x)\\) 有两个根当且仅当 \\(a>\\dfrac1{\\e}\\)；当 \\(a=\\dfrac1{\\e}\\) 时只有一个根，当 \\(0<a<\\dfrac1{\\e}\\) 时没有根.\n\n当 \\(a=0\\) 时，\\(f(x)=\\e^x>0\\)，没有零点.\n\n综上，\\(f(x)\\) 有两个零点时，\\(a\\) 的取值范围为\n\\[\na>\\dfrac1{\\e}\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 365,
+            "end": 394
+          }
+        ],
+        "question_version_sha256": "b006d71501e20f4a5dddaced8e519b9ff0902fe4a0ffc3cc8448f948b64aa7e7",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "national_analysis": {
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q020",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q020",
+        "version_sha256": "b006d71501e20f4a5dddaced8e519b9ff0902fe4a0ffc3cc8448f948b64aa7e7",
+        "knowledge": {
+          "primary": [
+            "指数函数双零点"
+          ],
+          "secondary": [
+            "函数与导数"
+          ]
+        },
+        "methods": [
+          "导数",
+          "分类讨论",
+          "零点个数"
+        ],
+        "competencies": [
+          "逻辑推理",
+          "数学运算"
+        ],
+        "difficulty": {
+          "level": 4,
+          "basis": "旧文科卷也需由极值与两端走势判定两个零点，不能笼统认为旧卷只有机械计算。",
+          "measurement": "AI content-based editorial judgment; not empirical"
+        },
+        "reasoning_observation": "旧文科卷也需由极值与两端走势判定两个零点，不能笼统认为旧卷只有机械计算。",
+        "evidence": {
+          "tex": {
+            "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+            "start": 355,
+            "end": 363,
+            "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+          },
+          "pdf": {
+            "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+            "page": 2,
+            "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+          },
+          "source_ids": [
+            "dxathing-pinned",
+            "deekur-pinned"
+          ]
+        },
+        "model_version": "not_exposed_by_host",
+        "analysis_class": "limited_sample_observation",
+        "source_was_read": true,
+        "human_reviewed": false,
+        "formal_proof": false
+      },
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q021",
+      "subject": "math",
+      "stem": "已知 \\(A\\)，\\(B\\) 分别为椭圆 \\(E:\\dfrac{x^2}{a^2}+y^2=1\\)（\\(a>1\\)）的左，右顶点，\\(G\\) 为 \\(E\\) 的上顶点，\\(\\overrightarrow{AG}\\cdot\\overrightarrow{GB}=8\\). \\(P\\) 为直线 \\(x=6\\) 上的动点，\\(PA\\) 与 \\(E\\) 的另一交点为 \\(C\\)，\\(PB\\) 与 \\(E\\) 的另一交点为 \\(D\\).\n\n\n\n（子项） 求 \\(E\\) 的方程；\n\n\n（子项） 证明：直线 \\(CD\\) 过定点.",
+      "options": {},
+      "formulas": [
+        "A",
+        "B",
+        "E:\\dfrac{x^2}{a^2}+y^2=1",
+        "a>1",
+        "G",
+        "E",
+        "\\overrightarrow{AG}\\cdot\\overrightarrow{GB}=8",
+        "P",
+        "x=6",
+        "PA",
+        "E",
+        "C",
+        "PB",
+        "E",
+        "D",
+        "E",
+        "CD"
+      ],
+      "parts": [
+        "求 \\(E\\) 的方程；",
+        "证明：直线 \\(CD\\) 过定点."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(E\\) 的方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "证明：直线 \\(CD\\) 过定点."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(A\\)，\\(B\\) 分别为椭圆 \\(E:\\dfrac{x^2}{a^2}+y^2=1\\)（\\(a>1\\)）的左，右顶点，\\(G\\) 为 \\(E\\) 的上顶点，\\(\\overrightarrow{AG}\\cdot\\overrightarrow{GB}=8\\). \\(P\\) 为直线 \\(x=6\\) 上的动点，\\(PA\\) 与 \\(E\\) 的另一交点为 \\(C\\)，\\(PB\\) 与 \\(E\\) 的另一交点为 \\(D\\).\n\n\\begin{enumerate}\n\\item 求 \\(E\\) 的方程；\n\n\\item 证明：直线 \\(CD\\) 过定点.\n\\end{enumerate}",
+      "content_sha256": "82b24fc4c35ca2c2db29f2c51bff626f871805a2fe314c7b53cdffa11ee04ec2",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q021",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q021",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 21,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "48fe66292b765a0511d4de0ea336e75cabc65f1e791bbbf820be4be6eb5b7087",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 396,
+          "end": 404,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 2,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q021:answer",
+      "topic_flags": [
+        "解析几何",
+        "平面向量"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q021",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q021:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q021",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q021",
+        "reference_answer": null,
+        "explanation": "（子项） 由椭圆方程可知 \\(A=(-a,0)\\)，\\(B=(a,0)\\)，\\(G=(0,1)\\)，所以\n\\(\\overrightarrow{AG}=(a,1)\\)，\\(\\overrightarrow{GB}=(a,-1)\\).\n由 \\(\\overrightarrow{AG}\\cdot\\overrightarrow{GB}=8\\)，得\n\\[\na^2-1=8\n\\]\n所以 \\(a=3\\). 因此椭圆 \\(E\\) 的方程为\n\\[\n\\dfrac{x^2}{9}+y^2=1\n\\]\n\n\n（子项） 设 \\(P=(6,t)\\)，其中 \\(t\\in\\mathbb{R}\\). 直线 \\(AP\\) 上的点可表示为\n\\[\n(x,y)=(-3,0)+\\lambda(9,t)=(-3+9\\lambda,\\lambda t)\n\\]\n代入椭圆方程，得\n\\[\n\\dfrac{(-3+9\\lambda)^2}{9}+\\lambda^2t^2=1\n\\Longrightarrow \\lambda\\bigl((9+t^2)\\lambda-6\\bigr)=0\n\\]\n其中 \\(\\lambda=0\\) 对应点 \\(A\\)，故点 \\(C\\) 对应的参数为 \\(\\lambda=\\dfrac{6}{9+t^2}\\)，从而\n\\[\nC=\\left(\\dfrac{3(9-t^2)}{9+t^2},\\dfrac{6t}{9+t^2}\\right)\n\\]\n\n同理，直线 \\(PB\\) 上的点可表示为\n\\[\n(x,y)=(3,0)+\\mu(3,t)=(3+3\\mu,\\mu t)\n\\]\n代入椭圆方程，得\n\\[\n(1+\\mu)^2+\\mu^2t^2=1\n\\Longrightarrow \\mu\\bigl((1+t^2)\\mu+2\\bigr)=0\n\\]\n其中 \\(\\mu=0\\) 对应点 \\(B\\)，故点 \\(D\\) 对应的参数为 \\(\\mu=-\\dfrac{2}{1+t^2}\\)，从而\n\\[\nD=\\left(\\dfrac{3(t^2-1)}{1+t^2},-\\dfrac{2t}{1+t^2}\\right)\n\\]\n\n由直线 \\(CD\\) 的两点式，得\n\\[\n\\left(\\dfrac{6t}{9+t^2}+\\dfrac{2t}{1+t^2}\\right)x\n+\\left(\\dfrac{3(t^2-1)}{1+t^2}-\\dfrac{3(9-t^2)}{9+t^2}\\right)y\n-\\dfrac{12t(t^2+3)}{(9+t^2)(1+t^2)}=0\n\\]\n通分并约去非零公因式 \\(\\dfrac{2(t^2+3)}{(9+t^2)(1+t^2)}\\)，得到\n\\[\n3(t^2-3)y+(4x-6)t=0\n\\]\n当 \\(x=\\dfrac32\\)，\\(y=0\\) 时，上式恒成立，与 \\(t\\) 的取值无关，所以直线 \\(CD\\) 过定点 \\(\\left(\\dfrac32,0\\right)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 由椭圆方程可知 \\(A=(-a,0)\\)，\\(B=(a,0)\\)，\\(G=(0,1)\\)，所以\n\\(\\overrightarrow{AG}=(a,1)\\)，\\(\\overrightarrow{GB}=(a,-1)\\).\n由 \\(\\overrightarrow{AG}\\cdot\\overrightarrow{GB}=8\\)，得\n\\[\na^2-1=8\n\\]\n所以 \\(a=3\\). 因此椭圆 \\(E\\) 的方程为\n\\[\n\\dfrac{x^2}{9}+y^2=1\n\\]\n\n\\item 设 \\(P=(6,t)\\)，其中 \\(t\\in\\R\\). 直线 \\(AP\\) 上的点可表示为\n\\[\n(x,y)=(-3,0)+\\lambda(9,t)=(-3+9\\lambda,\\lambda t)\n\\]\n代入椭圆方程，得\n\\[\n\\dfrac{(-3+9\\lambda)^2}{9}+\\lambda^2t^2=1\n\\Longrightarrow \\lambda\\bigl((9+t^2)\\lambda-6\\bigr)=0\n\\]\n其中 \\(\\lambda=0\\) 对应点 \\(A\\)，故点 \\(C\\) 对应的参数为 \\(\\lambda=\\dfrac{6}{9+t^2}\\)，从而\n\\[\nC=\\left(\\dfrac{3(9-t^2)}{9+t^2},\\dfrac{6t}{9+t^2}\\right)\n\\]\n\n同理，直线 \\(PB\\) 上的点可表示为\n\\[\n(x,y)=(3,0)+\\mu(3,t)=(3+3\\mu,\\mu t)\n\\]\n代入椭圆方程，得\n\\[\n(1+\\mu)^2+\\mu^2t^2=1\n\\Longrightarrow \\mu\\bigl((1+t^2)\\mu+2\\bigr)=0\n\\]\n其中 \\(\\mu=0\\) 对应点 \\(B\\)，故点 \\(D\\) 对应的参数为 \\(\\mu=-\\dfrac{2}{1+t^2}\\)，从而\n\\[\nD=\\left(\\dfrac{3(t^2-1)}{1+t^2},-\\dfrac{2t}{1+t^2}\\right)\n\\]\n\n由直线 \\(CD\\) 的两点式，得\n\\[\n\\left(\\dfrac{6t}{9+t^2}+\\dfrac{2t}{1+t^2}\\right)x\n+\\left(\\dfrac{3(t^2-1)}{1+t^2}-\\dfrac{3(9-t^2)}{9+t^2}\\right)y\n-\\dfrac{12t(t^2+3)}{(9+t^2)(1+t^2)}=0\n\\]\n通分并约去非零公因式 \\(\\dfrac{2(t^2+3)}{(9+t^2)(1+t^2)}\\)，得到\n\\[\n3(t^2-3)y+(4x-6)t=0\n\\]\n当 \\(x=\\dfrac32\\)，\\(y=0\\) 时，上式恒成立，与 \\(t\\) 的取值无关，所以直线 \\(CD\\) 过定点 \\(\\left(\\dfrac32,0\\right)\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 406,
+            "end": 459
+          }
+        ],
+        "question_version_sha256": "48fe66292b765a0511d4de0ea336e75cabc65f1e791bbbf820be4be6eb5b7087",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q022",
+      "subject": "math",
+      "stem": "在直角坐标系 \\(xOy\\) 中，曲线 \\(C_1\\) 的参数方程为 \\(\\begin{cases}\nx=\\cos^k t,\\\\\ny=\\sin^k t\n\\end{cases}\\)（\\(t\\) 为参数）. 以坐标原点为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_2\\) 的极坐标方程为 \\(4\\rho\\cos\\theta-16\\rho\\sin\\theta+3=0\\).\n\n\n\n（子项） 当 \\(k=1\\) 时，\\(C_1\\) 是什么曲线？\n\n\n（子项） 当 \\(k=4\\) 时，求 \\(C_1\\) 与 \\(C_2\\) 的公共点的直角坐标.",
+      "options": {},
+      "formulas": [
+        "xOy",
+        "C_1",
+        "\\begin{cases}\nx=\\cos^k t,\\\\\ny=\\sin^k t\n\\end{cases}",
+        "t",
+        "x",
+        "C_2",
+        "4\\rho\\cos\\theta-16\\rho\\sin\\theta+3=0",
+        "k=1",
+        "C_1",
+        "k=4",
+        "C_1",
+        "C_2"
+      ],
+      "parts": [
+        "当 \\(k=1\\) 时，\\(C_1\\) 是什么曲线？",
+        "当 \\(k=4\\) 时，求 \\(C_1\\) 与 \\(C_2\\) 的公共点的直角坐标."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "当 \\(k=1\\) 时，\\(C_1\\) 是什么曲线？"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "当 \\(k=4\\) 时，求 \\(C_1\\) 与 \\(C_2\\) 的公共点的直角坐标."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在直角坐标系 \\(xOy\\) 中，曲线 \\(C_1\\) 的参数方程为 \\(\\begin{cases}\nx=\\cos^k t,\\\\\ny=\\sin^k t\n\\end{cases}\\)（\\(t\\) 为参数）. 以坐标原点为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_2\\) 的极坐标方程为 \\(4\\rho\\cos\\theta-16\\rho\\sin\\theta+3=0\\).\n\n\\begin{enumerate}\n\\item 当 \\(k=1\\) 时，\\(C_1\\) 是什么曲线？\n\n\\item 当 \\(k=4\\) 时，求 \\(C_1\\) 与 \\(C_2\\) 的公共点的直角坐标.\n\\end{enumerate}",
+      "content_sha256": "30d7127a344a2a48263d239edffffac0eb063b0500d0fe6e2b9d5110ab6852b8",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q022",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q022",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 22,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "a2e3459bf0bd1ce616010bcadf3a5cd89c53abe3ed3966051b755e2806be4c7f",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 463,
+          "end": 474,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 2,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q022:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q022",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q022:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q022",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q022",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(k=1\\) 时，\\(x=\\cos t\\)，\\(y=\\sin t\\)，所以\n\\[\nx^2+y^2=\\cos^2t+\\sin^2t=1\n\\]\n由于 \\(t\\) 取遍实数，故 \\(C_1\\) 是以坐标原点为圆心、半径为 \\(1\\) 的圆.\n\n\n（子项） 极坐标与直角坐标的关系为 \\(x=\\rho\\cos\\theta\\)，\\(y=\\rho\\sin\\theta\\)，所以 \\(C_2\\) 的方程化为\n\\[\n4x-16y+3=0\n\\]\n当 \\(k=4\\) 时，\\(C_1\\) 上的点满足\n\\(x=\\cos^4t\\ge0\\)，\\(y=\\sin^4t\\ge0\\)，\\(\\sqrt{x}+\\sqrt{y}=\\cos^2t+\\sin^2t=1\\).\n设 \\(u=\\sqrt{x}\\)，\\(v=\\sqrt{y}\\)，则 \\(u\\)，\\(v\\in[0,1]\\)，且 \\(u+v=1\\). 由 \\(C_2\\) 的方程，得\n\\[\n4u^2-16v^2+3=0\n\\]\n代入 \\(u=1-v\\)，得\n\\[\n4(1-v)^2-16v^2+3=0\n\\Longrightarrow 12v^2+8v-7=0\n\\]\n解得 \\(v=\\dfrac12\\) 或 \\(v=-\\dfrac76\\). 因为 \\(v\\in[0,1]\\)，所以 \\(v=\\dfrac12\\)，从而 \\(u=\\dfrac12\\). 因此公共点的直角坐标为\n\\[\n\\left(x,y\\right)=\\left(u^2,v^2\\right)=\\left(\\dfrac14,\\dfrac14\\right)\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 当 \\(k=1\\) 时，\\(x=\\cos t\\)，\\(y=\\sin t\\)，所以\n\\[\nx^2+y^2=\\cos^2t+\\sin^2t=1\n\\]\n由于 \\(t\\) 取遍实数，故 \\(C_1\\) 是以坐标原点为圆心、半径为 \\(1\\) 的圆.\n\n\\item 极坐标与直角坐标的关系为 \\(x=\\rho\\cos\\theta\\)，\\(y=\\rho\\sin\\theta\\)，所以 \\(C_2\\) 的方程化为\n\\[\n4x-16y+3=0\n\\]\n当 \\(k=4\\) 时，\\(C_1\\) 上的点满足\n\\(x=\\cos^4t\\ge0\\)，\\(y=\\sin^4t\\ge0\\)，\\(\\sqrt{x}+\\sqrt{y}=\\cos^2t+\\sin^2t=1\\).\n设 \\(u=\\sqrt{x}\\)，\\(v=\\sqrt{y}\\)，则 \\(u\\)，\\(v\\in[0,1]\\)，且 \\(u+v=1\\). 由 \\(C_2\\) 的方程，得\n\\[\n4u^2-16v^2+3=0\n\\]\n代入 \\(u=1-v\\)，得\n\\[\n4(1-v)^2-16v^2+3=0\n\\Longrightarrow 12v^2+8v-7=0\n\\]\n解得 \\(v=\\dfrac12\\) 或 \\(v=-\\dfrac76\\). 因为 \\(v\\in[0,1]\\)，所以 \\(v=\\dfrac12\\)，从而 \\(u=\\dfrac12\\). 因此公共点的直角坐标为\n\\[\n\\left(x,y\\right)=\\left(u^2,v^2\\right)=\\left(\\dfrac14,\\dfrac14\\right)\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 476,
+            "end": 504
+          }
+        ],
+        "question_version_sha256": "a2e3459bf0bd1ce616010bcadf3a5cd89c53abe3ed3966051b755e2806be4c7f",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2020-cn-math-national-1-legacy-liberal:q023",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=\\lvert 3x+1\\rvert-2\\lvert x-1\\rvert\\).\n\n\n\n（子项） 画出 \\(y=f(x)\\) 的图象；\n\n\n（子项） 求不等式 \\(f(x)>f(x+1)\\) 的解集.\n\n\n[图：img/2020/national_paper_1_liberal/q23_question_fig1.png]",
+      "options": {},
+      "formulas": [
+        "f(x)=\\lvert 3x+1\\rvert-2\\lvert x-1\\rvert",
+        "y=f(x)",
+        "f(x)>f(x+1)"
+      ],
+      "parts": [
+        "画出 \\(y=f(x)\\) 的图象；",
+        "求不等式 \\(f(x)>f(x+1)\\) 的解集."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "画出 \\(y=f(x)\\) 的图象；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "求不等式 \\(f(x)>f(x+1)\\) 的解集."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2020/national_paper_1_liberal/q23_question_fig1.png",
+          "sha256": "dc18f0e573b8820603caffec47e30f95e822d0fad12c31a6480c280fbfe775fe",
+          "kind": "image",
+          "plaintext_path": "assets/dc18f0e573b8820603caffec47e30f95e822d0fad12c31a6480c280fbfe775fe.png"
+        }
+      ],
+      "raw_problem_latex": "已知函数 \\(f(x)=\\lvert 3x+1\\rvert-2\\lvert x-1\\rvert\\).\n\n\\begin{enumerate}\n\\item 画出 \\(y=f(x)\\) 的图象；\n\n\\item 求不等式 \\(f(x)>f(x+1)\\) 的解集.\n\\end{enumerate}\n\n\\bitmapfigure[max width=6.0cm]{img/2020/national_paper_1_liberal/q23_question_fig1.png}",
+      "content_sha256": "ac3513258901dfedcb271e6cf15a2867a81a45d904d2e2ebe99e666813fb49b9",
+      "origin_occurrence_id": "2020-cn-math-national-1-legacy-liberal:q023",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2020-cn-math-national-1-legacy-liberal:q023",
+      "paper_id": "2020-cn-math-national-1-legacy-liberal",
+      "number": 23,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "13ec0a506f49598781d5dc92b995174b39f39a739ecc83c6d2da7cd1c3fc27c5",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2020/national_paper_1_liberal.tex",
+          "start": 506,
+          "end": 516,
+          "sha256": "7f49d39169abdd3386eeb90e157a837d39f5fc3e58548e17da048d0b2a3f43a0"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2020-cn-math-national-1-legacy-liberal.pdf",
+          "page": 2,
+          "sha256": "cc95cd12b0f508b6fa18916109b8bc014e97ac0910df8e94ca756fcfd9b5e945"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2020-cn-math-national-1-legacy-liberal:q023:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q023",
+      "year": 2020,
+      "series_id": "cn-national-1-legacy",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2020年全国I卷（文）",
+      "answer": {
+        "id": "2020-cn-math-national-1-legacy-liberal:q023:answer",
+        "occurrence_id": "2020-cn-math-national-1-legacy-liberal:q023",
+        "question_id": "2020-cn-math-national-1-legacy-liberal:q023",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(x<-\\dfrac13\\) 时，\\(3x+1<0\\)，\\(x-1<0\\)；当 \\(-\\dfrac13\\le x<1\\) 时，\\(3x+1\\ge0\\)，\\(x-1<0\\)；当 \\(x\\ge1\\) 时，\\(3x+1\\ge0\\)，\\(x-1\\ge0\\). 因此\n\\[\nf(x)=\n\\begin{cases}\n-x-3,&x<-\\dfrac13,\\\\\n5x-1,&-\\dfrac13\\le x<1,\\\\\nx+3,&x\\ge1.\n\\end{cases}\n\\]\n所以图象由三段直线组成：左侧为直线 \\(y=-x-3\\) 的一部分，中间为直线 \\(y=5x-1\\) 的一部分，右侧为直线 \\(y=x+3\\) 的一部分；两处连接点分别为 \\(\\left(-\\dfrac13,-\\dfrac83\\right)\\) 和 \\((1,4)\\). 据此可在题图坐标系中作出图象.\n\n\n（子项） 不等式中 \\(f(x)\\) 与 \\(f(x+1)\\) 的分段临界点为 \\(-\\dfrac43\\)，\\(-\\dfrac13\\)，\\(0\\)，\\(1\\)，分段讨论如下.\n\n当 \\(x<-\\dfrac43\\) 时，\\(x\\) 与 \\(x+1\\) 均小于 \\(-\\dfrac13\\)，所以\n\\[\nf(x)-f(x+1)=(-x-3)-[-(x+1)-3]=1>0\n\\]\n\n当 \\(-\\dfrac43\\le x<-\\dfrac13\\) 时，\\(x<-\\dfrac13\\)，且 \\(-\\dfrac13\\le x+1<\\dfrac23\\)，所以\n\\[\nf(x)-f(x+1)=(-x-3)-[5(x+1)-1]=-6x-7\n\\]\n此时不等式等价于 \\(x<-\\dfrac76\\)，故得到 \\(-\\dfrac43\\le x<-\\dfrac76\\).\n\n当 \\(-\\dfrac13\\le x<0\\) 时，\\(x\\) 与 \\(x+1\\) 均在中间分段内，所以\n\\[\nf(x)-f(x+1)=(5x-1)-[5(x+1)-1]=-5<0\n\\]\n\n当 \\(0\\le x<1\\) 时，\\(x\\) 在中间分段内而 \\(x+1\\ge1\\)，所以\n\\[\nf(x)-f(x+1)=(5x-1)-(x+4)=4x-5<0\n\\]\n\n当 \\(x\\ge1\\) 时，\\(x\\) 与 \\(x+1\\) 均在右侧分段内，所以\n\\[\nf(x)-f(x+1)=(x+3)-(x+4)=-1<0\n\\]\n\n合并各段可得不等式的解集为\n\\[\n\\left(-\\infty,-\\dfrac76\\right)\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 当 \\(x<-\\dfrac13\\) 时，\\(3x+1<0\\)，\\(x-1<0\\)；当 \\(-\\dfrac13\\le x<1\\) 时，\\(3x+1\\ge0\\)，\\(x-1<0\\)；当 \\(x\\ge1\\) 时，\\(3x+1\\ge0\\)，\\(x-1\\ge0\\). 因此\n\\[\nf(x)=\n\\begin{cases}\n-x-3,&x<-\\dfrac13,\\\\\n5x-1,&-\\dfrac13\\le x<1,\\\\\nx+3,&x\\ge1.\n\\end{cases}\n\\]\n所以图象由三段直线组成：左侧为直线 \\(y=-x-3\\) 的一部分，中间为直线 \\(y=5x-1\\) 的一部分，右侧为直线 \\(y=x+3\\) 的一部分；两处连接点分别为 \\(\\left(-\\dfrac13,-\\dfrac83\\right)\\) 和 \\((1,4)\\). 据此可在题图坐标系中作出图象.\n\n\\item 不等式中 \\(f(x)\\) 与 \\(f(x+1)\\) 的分段临界点为 \\(-\\dfrac43\\)，\\(-\\dfrac13\\)，\\(0\\)，\\(1\\)，分段讨论如下.\n\n当 \\(x<-\\dfrac43\\) 时，\\(x\\) 与 \\(x+1\\) 均小于 \\(-\\dfrac13\\)，所以\n\\[\nf(x)-f(x+1)=(-x-3)-[-(x+1)-3]=1>0\n\\]\n\n当 \\(-\\dfrac43\\le x<-\\dfrac13\\) 时，\\(x<-\\dfrac13\\)，且 \\(-\\dfrac13\\le x+1<\\dfrac23\\)，所以\n\\[\nf(x)-f(x+1)=(-x-3)-[5(x+1)-1]=-6x-7\n\\]\n此时不等式等价于 \\(x<-\\dfrac76\\)，故得到 \\(-\\dfrac43\\le x<-\\dfrac76\\).\n\n当 \\(-\\dfrac13\\le x<0\\) 时，\\(x\\) 与 \\(x+1\\) 均在中间分段内，所以\n\\[\nf(x)-f(x+1)=(5x-1)-[5(x+1)-1]=-5<0\n\\]\n\n当 \\(0\\le x<1\\) 时，\\(x\\) 在中间分段内而 \\(x+1\\ge1\\)，所以\n\\[\nf(x)-f(x+1)=(5x-1)-(x+4)=4x-5<0\n\\]\n\n当 \\(x\\ge1\\) 时，\\(x\\) 与 \\(x+1\\) 均在右侧分段内，所以\n\\[\nf(x)-f(x+1)=(x+3)-(x+4)=-1<0\n\\]\n\n合并各段可得不等式的解集为\n\\[\n\\left(-\\infty,-\\dfrac76\\right)\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 518,
+            "end": 564
+          }
+        ],
+        "question_version_sha256": "13ec0a506f49598781d5dc92b995174b39f39a739ecc83c6d2da7cd1c3fc27c5",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    }
+  ],
+  "content_sha256": "e6ad23077f24e7a263380e3380db3a0cbbae88c5eb5c252e9dc9719d547a4250"
+}

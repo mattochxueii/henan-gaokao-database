@@ -1,0 +1,2313 @@
+{
+  "id": "2023-cn-math-national-b-liberal",
+  "subject": "math",
+  "year": 2023,
+  "title": "2023年全国乙卷（文）",
+  "regions": [
+    "内蒙古",
+    "宁夏",
+    "新疆",
+    "江西",
+    "河南",
+    "甘肃",
+    "陕西",
+    "青海"
+  ],
+  "series_id": "cn-national-b",
+  "exam_kind": "official_exam",
+  "question_count": 23,
+  "source": {
+    "title": "原有项目双源档案",
+    "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
+    "rights_basis": "仅用于个人学习与教研归档"
+  },
+  "distribution": "private-research",
+  "compatibility": "national-math-v1",
+  "questions": [
+    {
+      "id": "2023-cn-math-national-b-liberal:q001",
+      "subject": "math",
+      "stem": "\\(\\left|2+i^2+2i^3\\right|=\\)（\\quad）",
+      "options": {
+        "A": "\\(1\\)",
+        "B": "\\(2\\)",
+        "C": "\\(\\sqrt5\\)",
+        "D": "\\(5\\)"
+      },
+      "formulas": [
+        "\\left|2+i^2+2i^3\\right|=",
+        "1",
+        "2",
+        "\\sqrt5",
+        "5"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "\\(\\left|2+\\i^2+2\\i^3\\right|=\\)（\\quad）\n\\choices{\\(1\\)}{\\(2\\)}{\\(\\sqrt5\\)}{\\(5\\)}",
+      "content_sha256": "533a2a9051e7dd1329c37574cea7212c90625863ff5628e6cf94889ebc6511b0",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q001",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q001",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "bd0f84118775e04724b0ab78144ec6e5314b1640b6ebe376a959138c2bcd3100",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 5,
+          "end": 12,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q001:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q001",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q001:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q001",
+        "question_id": "2023-cn-math-national-b-liberal:q001",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 9,
+            "end": 11
+          }
+        ],
+        "question_version_sha256": "bd0f84118775e04724b0ab78144ec6e5314b1640b6ebe376a959138c2bcd3100",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q002",
+      "subject": "math",
+      "stem": "设全集 \\(U=\\{0,1,2,4,6,8\\}\\)，集合 \\(M=\\{0,4,6\\}\\)，\\(N=\\{0,1,6\\}\\)，则 \\(M\\cup(U\\mathbin{\\backslash}N)\\) 等于（\\quad）",
+      "options": {
+        "A": "\\(\\{0,2,4,6,8\\}\\)",
+        "B": "\\(\\{0,1,4,6,8\\}\\)",
+        "C": "\\(\\{1,2,4,6,8\\}\\)",
+        "D": "\\(U\\)"
+      },
+      "formulas": [
+        "U=\\{0,1,2,4,6,8\\}",
+        "M=\\{0,4,6\\}",
+        "N=\\{0,1,6\\}",
+        "M\\cup(U\\mathbin{\\backslash}N)",
+        "\\{0,2,4,6,8\\}",
+        "\\{0,1,4,6,8\\}",
+        "\\{1,2,4,6,8\\}",
+        "U"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设全集 \\(U=\\{0,1,2,4,6,8\\}\\)，集合 \\(M=\\{0,4,6\\}\\)，\\(N=\\{0,1,6\\}\\)，则 \\(M\\cup(U\\mathbin{\\backslash}N)\\) 等于（\\quad）\n\\choices{\\(\\{0,2,4,6,8\\}\\)}{\\(\\{0,1,4,6,8\\}\\)}{\\(\\{1,2,4,6,8\\}\\)}{\\(U\\)}",
+      "content_sha256": "d78b2399e8a456535899d03f50c6c42a47006f5c45597ff87f5e5cd50315dc5c",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q002",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q002",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "7a783c7895838286265b8b9920ca214767d04c994539072e03a8474872b95421",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 14,
+          "end": 21,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q002:answer",
+      "topic_flags": [
+        "集合与复数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q002",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q002:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q002",
+        "question_id": "2023-cn-math-national-b-liberal:q002",
+        "reference_answer": "A",
+        "explanation": null,
+        "raw_answer_latex": "A",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 18,
+            "end": 20
+          }
+        ],
+        "question_version_sha256": "7a783c7895838286265b8b9920ca214767d04c994539072e03a8474872b95421",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q003",
+      "subject": "math",
+      "stem": "如图，网格纸上绘制的是一个零件的三视图，网格小正方形的边长为 \\(1\\)，则该零件的表面积为（\\quad）",
+      "options": {
+        "A": "\\(24\\)",
+        "B": "\\(26\\)",
+        "C": "\\(28\\)",
+        "D": "\\(30\\)"
+      },
+      "formulas": [
+        "1",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2023/national_paper_b_liberal/q3_fig1.png",
+          "sha256": "a720283ba6f0849cd343930bf27c983e973453a7151b2d4e1d3d261991489756",
+          "kind": "image",
+          "plaintext_path": "assets/a720283ba6f0849cd343930bf27c983e973453a7151b2d4e1d3d261991489756.png"
+        }
+      ],
+      "raw_problem_latex": "如图，网格纸上绘制的是一个零件的三视图，网格小正方形的边长为 \\(1\\)，则该零件的表面积为（\\quad）\n\\FigureLayoutDeclare{img/2023/national_paper_b_liberal/q3_fig1.png}{8.0cm}{7bp 10bp 31bp 4bp}\n\\begin{center}\\bitmapfigure[max width=6.0cm]{img/2023/national_paper_b_liberal/q3_fig1.png}\\end{center}\n\\choices{\\(24\\)}{\\(26\\)}{\\(28\\)}{\\(30\\)}",
+      "content_sha256": "09b770cf7e98523679a5d9485e993be1705a161489c9f581f6199f0bc827e75b",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q003",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q003",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "6c3ccd0a5c0bd154f477991c33ac875c42f3fe3868403e71b8f0a502fcfe5427",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 23,
+          "end": 32,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q003:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q003",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q003:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q003",
+        "question_id": "2023-cn-math-national-b-liberal:q003",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 29,
+            "end": 31
+          }
+        ],
+        "question_version_sha256": "6c3ccd0a5c0bd154f477991c33ac875c42f3fe3868403e71b8f0a502fcfe5427",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q004",
+      "subject": "math",
+      "stem": "记 \\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\)，若 \\(a\\cos B-b\\cos A=c\\)，且 \\(C=\\frac\\pi5\\)，则 \\(B=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\frac\\pi{10}\\)",
+        "B": "\\(\\frac\\pi5\\)",
+        "C": "\\(\\frac{3\\pi}{10}\\)",
+        "D": "\\(\\frac{2\\pi}5\\)"
+      },
+      "formulas": [
+        "\\triangle ABC",
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c",
+        "a\\cos B-b\\cos A=c",
+        "C=\\frac\\pi5",
+        "B=",
+        "\\frac\\pi{10}",
+        "\\frac\\pi5",
+        "\\frac{3\\pi}{10}",
+        "\\frac{2\\pi}5"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "记 \\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\)，若 \\(a\\cos B-b\\cos A=c\\)，且 \\(C=\\frac\\pi5\\)，则 \\(B=\\)（\\quad）\n\\choices{\\(\\frac\\pi{10}\\)}{\\(\\frac\\pi5\\)}{\\(\\frac{3\\pi}{10}\\)}{\\(\\frac{2\\pi}5\\)}",
+      "content_sha256": "c2e00fa8053d165205338f67ea42319c031f31f71ffecbc09ebdde8586db64e7",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q004",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q004",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "3d77979f9203e86085b06c9346103fe52c1d3f683497a1747df143af1c7520c7",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 34,
+          "end": 41,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q004:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q004",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q004:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q004",
+        "question_id": "2023-cn-math-national-b-liberal:q004",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 38,
+            "end": 40
+          }
+        ],
+        "question_version_sha256": "3d77979f9203e86085b06c9346103fe52c1d3f683497a1747df143af1c7520c7",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q005",
+      "subject": "math",
+      "stem": "已知 \\(f(x)=\\dfrac{xe^x}{e^{ax}-1}\\) 是偶函数，则 \\(a=\\)（\\quad）",
+      "options": {
+        "A": "\\(-2\\)",
+        "B": "\\(-1\\)",
+        "C": "\\(1\\)",
+        "D": "\\(2\\)"
+      },
+      "formulas": [
+        "f(x)=\\dfrac{xe^x}{e^{ax}-1}",
+        "a=",
+        "-2",
+        "-1",
+        "1",
+        "2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(f(x)=\\dfrac{x\\e^x}{\\e^{ax}-1}\\) 是偶函数，则 \\(a=\\)（\\quad）\n\\choices{\\(-2\\)}{\\(-1\\)}{\\(1\\)}{\\(2\\)}",
+      "content_sha256": "3d84a8db519ea77af7e8c7599240a42935e840974243c1509ac105a6a5d98b85",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q005",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q005",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "dc6195f9f9960f2249a6339168e9412872a0e42ee78f4b4580444b8a84048605",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 43,
+          "end": 50,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q005:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q005",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q005:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q005",
+        "question_id": "2023-cn-math-national-b-liberal:q005",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 47,
+            "end": 49
+          }
+        ],
+        "question_version_sha256": "dc6195f9f9960f2249a6339168e9412872a0e42ee78f4b4580444b8a84048605",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q006",
+      "subject": "math",
+      "stem": "已知正方形 \\(ABCD\\) 的边长为 \\(2\\)，\\(E\\) 为 \\(AB\\) 的中点，则 \\(\\overrightarrow{EC}\\cdot\\overrightarrow{ED}=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\sqrt5\\)",
+        "B": "\\(3\\)",
+        "C": "\\(2\\sqrt5\\)",
+        "D": "\\(5\\)"
+      },
+      "formulas": [
+        "ABCD",
+        "2",
+        "E",
+        "AB",
+        "\\overrightarrow{EC}\\cdot\\overrightarrow{ED}=",
+        "\\sqrt5",
+        "3",
+        "2\\sqrt5",
+        "5"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知正方形 \\(ABCD\\) 的边长为 \\(2\\)，\\(E\\) 为 \\(AB\\) 的中点，则 \\(\\overrightarrow{EC}\\cdot\\overrightarrow{ED}=\\)（\\quad）\n\\choices{\\(\\sqrt5\\)}{\\(3\\)}{\\(2\\sqrt5\\)}{\\(5\\)}",
+      "content_sha256": "bf8b473924f2ef12261557e57fd4697bfde9183793de791a76996155ca4cbea1",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q006",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q006",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "33d7e87831d6f06573aada8be649799c2d4212a1788ac173432ed08db52d76a4",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 52,
+          "end": 59,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q006:answer",
+      "topic_flags": [
+        "平面向量"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q006",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q006:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q006",
+        "question_id": "2023-cn-math-national-b-liberal:q006",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 56,
+            "end": 58
+          }
+        ],
+        "question_version_sha256": "33d7e87831d6f06573aada8be649799c2d4212a1788ac173432ed08db52d76a4",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q007",
+      "subject": "math",
+      "stem": "设 \\(O\\) 为平面直角坐标系原点，在区域 \\(\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}\\) 内随机取一点，记该点为 \\(A\\)，则直线 \\(OA\\) 的倾斜角不大于 \\(\\frac\\pi4\\) 的概率为（\\quad）",
+      "options": {
+        "A": "\\(\\frac18\\)",
+        "B": "\\(\\frac16\\)",
+        "C": "\\(\\frac14\\)",
+        "D": "\\(\\frac12\\)"
+      },
+      "formulas": [
+        "O",
+        "\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}",
+        "A",
+        "OA",
+        "\\frac\\pi4",
+        "\\frac18",
+        "\\frac16",
+        "\\frac14",
+        "\\frac12"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(O\\) 为平面直角坐标系原点，在区域 \\(\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}\\) 内随机取一点，记该点为 \\(A\\)，则直线 \\(OA\\) 的倾斜角不大于 \\(\\frac\\pi4\\) 的概率为（\\quad）\n\\choices{\\(\\frac18\\)}{\\(\\frac16\\)}{\\(\\frac14\\)}{\\(\\frac12\\)}",
+      "content_sha256": "0cce252a8534ad07a2c91045a42fa0437bed2c7ec03481f7aed1e1b9bb179bf9",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q007",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q007",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "58a6906b583238378c84ae62f378954276c6407c209f8c28f08b2b1f5c93b3ea",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 61,
+          "end": 68,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q007:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q007",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q007:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q007",
+        "question_id": "2023-cn-math-national-b-liberal:q007",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 65,
+            "end": 67
+          }
+        ],
+        "question_version_sha256": "58a6906b583238378c84ae62f378954276c6407c209f8c28f08b2b1f5c93b3ea",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q008",
+      "subject": "math",
+      "stem": "若函数 \\(f(x)=x^3+ax+2\\) 存在 \\(3\\) 个零点，则 \\(a\\) 的取值范围是（\\quad）",
+      "options": {
+        "A": "\\((-\\infty,-2)\\)",
+        "B": "\\((-\\infty,-3)\\)",
+        "C": "\\((-4,-1)\\)",
+        "D": "\\((-3,0)\\)"
+      },
+      "formulas": [
+        "f(x)=x^3+ax+2",
+        "3",
+        "a",
+        "(-\\infty,-2)",
+        "(-\\infty,-3)",
+        "(-4,-1)",
+        "(-3,0)"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若函数 \\(f(x)=x^3+ax+2\\) 存在 \\(3\\) 个零点，则 \\(a\\) 的取值范围是（\\quad）\n\\choices{\\((-\\infty,-2)\\)}{\\((-\\infty,-3)\\)}{\\((-4,-1)\\)}{\\((-3,0)\\)}",
+      "content_sha256": "e6e2926220b001fa677cb586880824f9a791698ce1627365d5b3abe665042e08",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q008",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q008",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "c5cdfee1dfd7d6ffd9ee99275c4a1290df72f8d8bcf7a3114a5f9ac2e9238b98",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 70,
+          "end": 77,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q008:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q008",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q008:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q008",
+        "question_id": "2023-cn-math-national-b-liberal:q008",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 74,
+            "end": 76
+          }
+        ],
+        "question_version_sha256": "c5cdfee1dfd7d6ffd9ee99275c4a1290df72f8d8bcf7a3114a5f9ac2e9238b98",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q009",
+      "subject": "math",
+      "stem": "某学校举办作文比赛，共设 \\(6\\) 个主题，每位参赛同学从中随机抽取一个主题准备作文，则甲，乙两位参赛同学抽到不同主题的概率为（\\quad）",
+      "options": {
+        "A": "\\(\\frac56\\)",
+        "B": "\\(\\frac23\\)",
+        "C": "\\(\\frac12\\)",
+        "D": "\\(\\frac13\\)"
+      },
+      "formulas": [
+        "6",
+        "\\frac56",
+        "\\frac23",
+        "\\frac12",
+        "\\frac13"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "某学校举办作文比赛，共设 \\(6\\) 个主题，每位参赛同学从中随机抽取一个主题准备作文，则甲，乙两位参赛同学抽到不同主题的概率为（\\quad）\n\\choices{\\(\\frac56\\)}{\\(\\frac23\\)}{\\(\\frac12\\)}{\\(\\frac13\\)}",
+      "content_sha256": "851d472783a6bd15e6b2c775e91f21492d9230df9836f6ef53103ed951bfcc3c",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q009",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q009",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 9,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "3306eeea65521cb89d0d322bd7bbb325e52bade68c1bb5116abccc32c20d4eda",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 79,
+          "end": 86,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q009:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q009",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q009:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q009",
+        "question_id": "2023-cn-math-national-b-liberal:q009",
+        "reference_answer": "A",
+        "explanation": null,
+        "raw_answer_latex": "A",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 83,
+            "end": 85
+          }
+        ],
+        "question_version_sha256": "3306eeea65521cb89d0d322bd7bbb325e52bade68c1bb5116abccc32c20d4eda",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q010",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=\\sin(\\omega x+\\varphi)\\) 在区间 \\(\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)\\) 上单调递增，直线 \\(x=\\frac\\pi6\\) 和 \\(x=\\frac{2\\pi}3\\) 为函数 \\(y=f(x)\\) 的图象的两条对称轴，则 \\(f\\left(-\\frac{5\\pi}{12}\\right)=\\)（\\quad）",
+      "options": {
+        "A": "\\(-\\frac{\\sqrt3}{2}\\)",
+        "B": "\\(-\\frac12\\)",
+        "C": "\\(\\frac12\\)",
+        "D": "\\(\\frac{\\sqrt3}{2}\\)"
+      },
+      "formulas": [
+        "f(x)=\\sin(\\omega x+\\varphi)",
+        "\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)",
+        "x=\\frac\\pi6",
+        "x=\\frac{2\\pi}3",
+        "y=f(x)",
+        "f\\left(-\\frac{5\\pi}{12}\\right)=",
+        "-\\frac{\\sqrt3}{2}",
+        "-\\frac12",
+        "\\frac12",
+        "\\frac{\\sqrt3}{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=\\sin(\\omega x+\\varphi)\\) 在区间 \\(\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)\\) 上单调递增，直线 \\(x=\\frac\\pi6\\) 和 \\(x=\\frac{2\\pi}3\\) 为函数 \\(y=f(x)\\) 的图象的两条对称轴，则 \\(f\\left(-\\frac{5\\pi}{12}\\right)=\\)（\\quad）\n\\choices{\\(-\\frac{\\sqrt3}{2}\\)}{\\(-\\frac12\\)}{\\(\\frac12\\)}{\\(\\frac{\\sqrt3}{2}\\)}",
+      "content_sha256": "731b98f11da589d43832619c908754d085967ec6f2421cc4324a29902fd90a05",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q010",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q010",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 10,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "fb69839467d4789b896fa2d98f58f6f383e532153e46bd784239ebb8bbf1a60a",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 88,
+          "end": 95,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q010:answer",
+      "topic_flags": [
+        "函数与导数",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q010",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q010:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q010",
+        "question_id": "2023-cn-math-national-b-liberal:q010",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 92,
+            "end": 94
+          }
+        ],
+        "question_version_sha256": "fb69839467d4789b896fa2d98f58f6f383e532153e46bd784239ebb8bbf1a60a",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q011",
+      "subject": "math",
+      "stem": "已知 \\(x\\)，\\(y\\) 满足 \\(x^2+y^2-4x-2y-4=0\\)，则 \\(x-y\\) 的最大值为（\\quad）",
+      "options": {
+        "A": "\\(1+\\frac{3\\sqrt2}{2}\\)",
+        "B": "\\(4\\)",
+        "C": "\\(1+3\\sqrt2\\)",
+        "D": "\\(7\\)"
+      },
+      "formulas": [
+        "x",
+        "y",
+        "x^2+y^2-4x-2y-4=0",
+        "x-y",
+        "1+\\frac{3\\sqrt2}{2}",
+        "4",
+        "1+3\\sqrt2",
+        "7"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(x\\)，\\(y\\) 满足 \\(x^2+y^2-4x-2y-4=0\\)，则 \\(x-y\\) 的最大值为（\\quad）\n\\choices{\\(1+\\frac{3\\sqrt2}{2}\\)}{\\(4\\)}{\\(1+3\\sqrt2\\)}{\\(7\\)}",
+      "content_sha256": "fe34acbbde7abc5b942249aaba7369e0045f0d8b5de76590ad82b665ceaebea8",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q011",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q011",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 11,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "972f98ada58b5948406489d34c4093dd7b127803fa6ccb69eb191ad83d692b85",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 97,
+          "end": 104,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q011:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q011",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q011:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q011",
+        "question_id": "2023-cn-math-national-b-liberal:q011",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 101,
+            "end": 103
+          }
+        ],
+        "question_version_sha256": "972f98ada58b5948406489d34c4093dd7b127803fa6ccb69eb191ad83d692b85",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q012",
+      "subject": "math",
+      "stem": "设 \\(A\\)，\\(B\\) 是双曲线 \\(x^2-\\dfrac{y^2}{9}=1\\) 上两点，下列四个点中，可以为线段 \\(AB\\) 中点的是（\\quad）",
+      "options": {
+        "A": "\\((1,1)\\)",
+        "B": "\\((-1,2)\\)",
+        "C": "\\((1,3)\\)",
+        "D": "\\((-1,-4)\\)"
+      },
+      "formulas": [
+        "A",
+        "B",
+        "x^2-\\dfrac{y^2}{9}=1",
+        "AB",
+        "(1,1)",
+        "(-1,2)",
+        "(1,3)",
+        "(-1,-4)"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(A\\)，\\(B\\) 是双曲线 \\(x^2-\\dfrac{y^2}{9}=1\\) 上两点，下列四个点中，可以为线段 \\(AB\\) 中点的是（\\quad）\n\\choices{\\((1,1)\\)}{\\((-1,2)\\)}{\\((1,3)\\)}{\\((-1,-4)\\)}",
+      "content_sha256": "037d8b3497c0b53f9196091fab99230ed9decf8206bb900489b1eaedf4237c72",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q012",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q012",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 12,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "8a8850c359a4934fc101cc5ac27d69c52d3a6dda6fa22b84030fc1d90333c4af",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 106,
+          "end": 113,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q012:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q012",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q012:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q012",
+        "question_id": "2023-cn-math-national-b-liberal:q012",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 110,
+            "end": 112
+          }
+        ],
+        "question_version_sha256": "8a8850c359a4934fc101cc5ac27d69c52d3a6dda6fa22b84030fc1d90333c4af",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q013",
+      "subject": "math",
+      "stem": "已知点 \\(A(1,\\sqrt5)\\) 在抛物线 \\(C:y^2=2px\\) 上，则 \\(A\\) 到 \\(C\\) 的准线的距离为________.",
+      "options": {},
+      "formulas": [
+        "A(1,\\sqrt5)",
+        "C:y^2=2px",
+        "A",
+        "C"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知点 \\(A(1,\\sqrt5)\\) 在抛物线 \\(C:y^2=2px\\) 上，则 \\(A\\) 到 \\(C\\) 的准线的距离为\\fillinblank{}.",
+      "content_sha256": "2fcbe03f4c3560316fce20777c63c8a3cce6ceec6bb70d9d1b74c3d91ffb4b09",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q013",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q013",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "d70da65d9b9993be0f28e7615033ff04f18cd1b325c09c0492035996ddb36e70",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 117,
+          "end": 123,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q013:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q013",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q013:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q013",
+        "question_id": "2023-cn-math-national-b-liberal:q013",
+        "reference_answer": "\\(\\frac94\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(\\frac94\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 120,
+            "end": 122
+          }
+        ],
+        "question_version_sha256": "d70da65d9b9993be0f28e7615033ff04f18cd1b325c09c0492035996ddb36e70",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q014",
+      "subject": "math",
+      "stem": "若 \\(\\theta\\in\\left(0,\\frac\\pi2\\right)\\)，且 \\(\\tan\\theta=\\frac13\\)，则 \\(\\sin\\theta-\\cos\\theta=\\)________.",
+      "options": {},
+      "formulas": [
+        "\\theta\\in\\left(0,\\frac\\pi2\\right)",
+        "\\tan\\theta=\\frac13",
+        "\\sin\\theta-\\cos\\theta="
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若 \\(\\theta\\in\\left(0,\\frac\\pi2\\right)\\)，且 \\(\\tan\\theta=\\frac13\\)，则 \\(\\sin\\theta-\\cos\\theta=\\)\\fillinblank{}.",
+      "content_sha256": "86fef79ac2c8a588020b82f8b67dd161cc39d521ff7cf52ca687d9ff8ebc03b1",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q014",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q014",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "fb2a58d7b33a16ab2244f4138b7502ac60d73661a32d5bcd64dd126fc4b7712b",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 125,
+          "end": 131,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q014:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q014",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q014:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q014",
+        "question_id": "2023-cn-math-national-b-liberal:q014",
+        "reference_answer": "\\(-\\frac{\\sqrt{10}}{5}\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(-\\frac{\\sqrt{10}}{5}\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 128,
+            "end": 130
+          }
+        ],
+        "question_version_sha256": "fb2a58d7b33a16ab2244f4138b7502ac60d73661a32d5bcd64dd126fc4b7712b",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q015",
+      "subject": "math",
+      "stem": "若 \\(x\\)，\\(y\\) 满足约束条件 \\(\\begin{cases}\nx-3y\\le-1,\\\\\nx+2y\\le9,\\\\\n3x+y\\ge7,\n\\end{cases}\\) 则 \\(z=2x-y\\) 的最大值为________.",
+      "options": {},
+      "formulas": [
+        "x",
+        "y",
+        "\\begin{cases}\nx-3y\\le-1,\\\\\nx+2y\\le9,\\\\\n3x+y\\ge7,\n\\end{cases}",
+        "z=2x-y"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若 \\(x\\)，\\(y\\) 满足约束条件 \\(\\begin{cases}\nx-3y\\le-1,\\\\\nx+2y\\le9,\\\\\n3x+y\\ge7,\n\\end{cases}\\) 则 \\(z=2x-y\\) 的最大值为\\fillinblank{}.",
+      "content_sha256": "17270043d4cfa6261237362402e4bf20a3e232e538e6c9cf78f18987b7c4b5b2",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q015",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q015",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 15,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "a4255e3de586c8c5512878e9bb13c77aa49ce99eaab63b5fd780e3acff8ac8f5",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 133,
+          "end": 143,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q015:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q015",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q015:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q015",
+        "question_id": "2023-cn-math-national-b-liberal:q015",
+        "reference_answer": "\\(8\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(8\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 140,
+            "end": 142
+          }
+        ],
+        "question_version_sha256": "a4255e3de586c8c5512878e9bb13c77aa49ce99eaab63b5fd780e3acff8ac8f5",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q016",
+      "subject": "math",
+      "stem": "已知点 \\(S\\)，\\(A\\)，\\(B\\)，\\(C\\) 均在半径为 \\(2\\) 的球面上，\\(\\triangle ABC\\) 是边长为 \\(3\\) 的等边三角形，且 \\(SA\\perp\\) 平面 \\(ABC\\)，则 \\(SA=\\)________.",
+      "options": {},
+      "formulas": [
+        "S",
+        "A",
+        "B",
+        "C",
+        "2",
+        "\\triangle ABC",
+        "3",
+        "SA\\perp",
+        "ABC",
+        "SA="
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知点 \\(S\\)，\\(A\\)，\\(B\\)，\\(C\\) 均在半径为 \\(2\\) 的球面上，\\(\\triangle ABC\\) 是边长为 \\(3\\) 的等边三角形，且 \\(SA\\perp\\) 平面 \\(ABC\\)，则 \\(SA=\\)\\fillinblank{}.",
+      "content_sha256": "d9b0a612397c37e9145f8cf4f559dd0eaab9437905ad61a4508368f33d76431d",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q016",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q016",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 16,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "84982ea28c527e780c8be997067be1c58d2642c23e8b2d5d56f8d18261e3f801",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 145,
+          "end": 151,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q016:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q016",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q016:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q016",
+        "question_id": "2023-cn-math-national-b-liberal:q016",
+        "reference_answer": "\\(2\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(2\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 148,
+            "end": 150
+          }
+        ],
+        "question_version_sha256": "84982ea28c527e780c8be997067be1c58d2642c23e8b2d5d56f8d18261e3f801",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q017",
+      "subject": "math",
+      "stem": "某厂为比较甲，乙两种工艺对橡胶产品伸缩率的处理效应，进行 \\(10\\) 次配对试验，每次配对试验选用材质相同的两个橡胶产品，随机地选其中一个用甲工艺处理，另一个用乙工艺处理，测量处理后的橡胶产品的伸缩率. 甲，乙两种工艺处理后的橡胶产品的伸缩率分别记为 \\(x_i\\)，\\(y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)）. 试验结果如下：\n\n\n\\begin{tabular}{c|cccccccccc}\n试验序号 \\(i\\)&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n伸缩率 \\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n伸缩率 \\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}\n\n\n记 \\(z_i=x_i-y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)），记 \\(z_1\\)，\\(z_2\\)，\\(\\cdots\\)，\\(z_{10}\\) 的样本平均数为 \\(\\bar z\\)，样本方差为 \\(s^2\\).\n\n\n（子项） 求 \\(\\bar z\\)，\\(s^2\\)；\n\n（子项） 判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge2\\sqrt{\\frac{s^2}{10}}\\)，则认为有显著提高，否则不认为有显著提高）.",
+      "options": {},
+      "formulas": [
+        "10",
+        "x_i",
+        "y_i",
+        "i=1",
+        "2",
+        "\\cdots",
+        "10",
+        "i",
+        "x_i",
+        "y_i",
+        "z_i=x_i-y_i",
+        "i=1",
+        "2",
+        "\\cdots",
+        "10",
+        "z_1",
+        "z_2",
+        "\\cdots",
+        "z_{10}",
+        "\\bar z",
+        "s^2",
+        "\\bar z",
+        "s^2",
+        "\\bar z\\ge2\\sqrt{\\frac{s^2}{10}}"
+      ],
+      "parts": [
+        "求 \\(\\bar z\\)，\\(s^2\\)；",
+        "判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge2\\sqrt{\\frac{s^2}{10}}\\)，则认为有显著提高，否则不认为有显著提高）."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(\\bar z\\)，\\(s^2\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge2\\sqrt{\\frac{s^2}{10}}\\)，则认为有显著提高，否则不认为有显著提高）."
+        }
+      ],
+      "tables_latex": [
+        "\\begin{tabular}{c|cccccccccc}\n试验序号 \\(i\\)&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n伸缩率 \\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n伸缩率 \\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}"
+      ],
+      "asset_refs": [],
+      "raw_problem_latex": "某厂为比较甲，乙两种工艺对橡胶产品伸缩率的处理效应，进行 \\(10\\) 次配对试验，每次配对试验选用材质相同的两个橡胶产品，随机地选其中一个用甲工艺处理，另一个用乙工艺处理，测量处理后的橡胶产品的伸缩率. 甲，乙两种工艺处理后的橡胶产品的伸缩率分别记为 \\(x_i\\)，\\(y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)）. 试验结果如下：\n\n\\begin{center}\n\\begin{tabular}{c|cccccccccc}\n试验序号 \\(i\\)&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n伸缩率 \\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n伸缩率 \\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}\n\\end{center}\n\n记 \\(z_i=x_i-y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)），记 \\(z_1\\)，\\(z_2\\)，\\(\\cdots\\)，\\(z_{10}\\) 的样本平均数为 \\(\\bar z\\)，样本方差为 \\(s^2\\).\n\\begin{enumerate}\n\\item 求 \\(\\bar z\\)，\\(s^2\\)；\n\\item 判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge2\\sqrt{\\frac{s^2}{10}}\\)，则认为有显著提高，否则不认为有显著提高）.\n\\end{enumerate}",
+      "content_sha256": "5346589416a326c2ee9009fd0a65c51c9583d2894167e9f3d574e0195d5cf138",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q017",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q017",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 17,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "7e879141a0813a7686c00a67d9bf03e0ae50cf7d321cd26676e2a039675d33c4",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 155,
+          "end": 183,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q017:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q017",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q017:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q017",
+        "question_id": "2023-cn-math-national-b-liberal:q017",
+        "reference_answer": null,
+        "explanation": "（子项） 由表中数据得\n\\(z_1\\)，\\(z_2\\)，\\(\\ldots\\)，\\(z_{10}\\) 依次为 \\(9\\)，\\(6\\)，\\(8\\)，\\(-8\\)，\\(15\\)，\\(11\\)，\\(19\\)，\\(18\\)，\\(20\\)，\\(12\\).\n因此 \\(\\bar z=\\dfrac{9+6+8-8+15+11+19+18+20+12}{10}=11\\)，且\n\\[\ns^2=\\frac{1}{10}\\bigl[(-2)^2+(-5)^2+(-3)^2+(-19)^2+4^2+0^2+8^2+7^2+9^2+1^2\\bigr]=61\n\\]\n\n（子项） 由 \\(\\bar z=11\\)，\\(s^2=61\\)，得 \\(2\\sqrt{\\dfrac{s^2}{10}}=2\\sqrt{\\dfrac{61}{10}}\\). 因为 \\(11^2=121>\\dfrac{122}{5}=\\left(2\\sqrt{\\dfrac{61}{10}}\\right)^2\\)，所以 \\(\\bar z\\ge2\\sqrt{\\dfrac{s^2}{10}}\\). 故认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高.",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 由表中数据得\n\\(z_1\\)，\\(z_2\\)，\\(\\ldots\\)，\\(z_{10}\\) 依次为 \\(9\\)，\\(6\\)，\\(8\\)，\\(-8\\)，\\(15\\)，\\(11\\)，\\(19\\)，\\(18\\)，\\(20\\)，\\(12\\).\n因此 \\(\\bar z=\\dfrac{9+6+8-8+15+11+19+18+20+12}{10}=11\\)，且\n\\[\ns^2=\\frac{1}{10}\\bigl[(-2)^2+(-5)^2+(-3)^2+(-19)^2+4^2+0^2+8^2+7^2+9^2+1^2\\bigr]=61\n\\]\n\\item 由 \\(\\bar z=11\\)，\\(s^2=61\\)，得 \\(2\\sqrt{\\dfrac{s^2}{10}}=2\\sqrt{\\dfrac{61}{10}}\\). 因为 \\(11^2=121>\\dfrac{122}{5}=\\left(2\\sqrt{\\dfrac{61}{10}}\\right)^2\\)，所以 \\(\\bar z\\ge2\\sqrt{\\dfrac{s^2}{10}}\\). 故认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高.\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 172,
+            "end": 182
+          }
+        ],
+        "question_version_sha256": "7e879141a0813a7686c00a67d9bf03e0ae50cf7d321cd26676e2a039675d33c4",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q018",
+      "subject": "math",
+      "stem": "记 \\(S_n\\) 为等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和，已知 \\(a_2=11\\)，\\(S_{10}=40\\).\n\n\n（子项） 求 \\(\\{a_n\\}\\) 的通项公式；\n\n（子项） 求数列 \\(\\{|a_n|\\}\\) 的前 \\(n\\) 项和 \\(T_n\\).",
+      "options": {},
+      "formulas": [
+        "S_n",
+        "\\{a_n\\}",
+        "n",
+        "a_2=11",
+        "S_{10}=40",
+        "\\{a_n\\}",
+        "\\{|a_n|\\}",
+        "n",
+        "T_n"
+      ],
+      "parts": [
+        "求 \\(\\{a_n\\}\\) 的通项公式；",
+        "求数列 \\(\\{|a_n|\\}\\) 的前 \\(n\\) 项和 \\(T_n\\)."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(\\{a_n\\}\\) 的通项公式；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "求数列 \\(\\{|a_n|\\}\\) 的前 \\(n\\) 项和 \\(T_n\\)."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "记 \\(S_n\\) 为等差数列 \\(\\{a_n\\}\\) 的前 \\(n\\) 项和，已知 \\(a_2=11\\)，\\(S_{10}=40\\).\n\\begin{enumerate}\n\\item 求 \\(\\{a_n\\}\\) 的通项公式；\n\\item 求数列 \\(\\{|a_n|\\}\\) 的前 \\(n\\) 项和 \\(T_n\\).\n\\end{enumerate}",
+      "content_sha256": "e6814ba726a78ce81323077ec690133f9dcf5af4e4d82d542bd2d7601588de9b",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q018",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q018",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 18,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "5716d627653c10de779055b9c6a255dc86c88efe30f578bd0e441ce6488221ce",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 185,
+          "end": 211,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q018:answer",
+      "topic_flags": [
+        "数列"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q018",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q018:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q018",
+        "question_id": "2023-cn-math-national-b-liberal:q018",
+        "reference_answer": null,
+        "explanation": "（子项） 设等差数列 \\(\\{a_n\\}\\) 的首项为 \\(a_1\\)，公差为 \\(d\\)，则 \\(a_2=a_1+d=11\\). 又因为\n\\(S_{10}=\\dfrac{10}{2}(2a_1+9d)=40\\)，所以 \\(2a_1+9d=8\\). 联立得 \\(a_1=13\\)，\\(d=-2\\)，从而\n\\(a_n=a_1+(n-1)d=13-2(n-1)=15-2n\\).\n\n（子项） 当 \\(1\\le n\\le7\\) 时，\\(a_n=15-2n>0\\)，所以\n\\(T_n=\\sum_{k=1}^n(15-2k)=n(14-n)\\).\n\n当 \\(n\\ge8\\) 时，\\(a_1\\)，\\(\\ldots\\)，\\(a_7\\) 为正数，且 \\(a_k<0\\)（\\(k\\ge8\\)），因此\n\\(T_n=\\sum_{k=1}^7(15-2k)+\\sum_{k=8}^n(2k-15)=49+(n-7)^2\\).\n综上，\n\\[\nT_n=\\begin{cases}\nn(14-n),&1\\le n\\le7,\\\\\n49+(n-7)^2,&n\\ge8.\n\\end{cases}\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 设等差数列 \\(\\{a_n\\}\\) 的首项为 \\(a_1\\)，公差为 \\(d\\)，则 \\(a_2=a_1+d=11\\). 又因为\n\\(S_{10}=\\dfrac{10}{2}(2a_1+9d)=40\\)，所以 \\(2a_1+9d=8\\). 联立得 \\(a_1=13\\)，\\(d=-2\\)，从而\n\\(a_n=a_1+(n-1)d=13-2(n-1)=15-2n\\).\n\\item 当 \\(1\\le n\\le7\\) 时，\\(a_n=15-2n>0\\)，所以\n\\(T_n=\\sum_{k=1}^n(15-2k)=n(14-n)\\).\n\n当 \\(n\\ge8\\) 时，\\(a_1\\)，\\(\\ldots\\)，\\(a_7\\) 为正数，且 \\(a_k<0\\)（\\(k\\ge8\\)），因此\n\\(T_n=\\sum_{k=1}^7(15-2k)+\\sum_{k=8}^n(2k-15)=49+(n-7)^2\\).\n综上，\n\\[\nT_n=\\begin{cases}\nn(14-n),&1\\le n\\le7,\\\\\n49+(n-7)^2,&n\\ge8.\n\\end{cases}\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 192,
+            "end": 210
+          }
+        ],
+        "question_version_sha256": "5716d627653c10de779055b9c6a255dc86c88efe30f578bd0e441ce6488221ce",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q019",
+      "subject": "math",
+      "stem": "如图，在三棱锥 \\(P-ABC\\) 中，\\(AB\\perp BC\\)，\\(AB=2\\)，\\(BC=2\\sqrt2\\)，\\(PB=PC=\\sqrt6\\)，\\(BP\\)，\\(AP\\)，\\(BC\\) 的中点分别为 \\(D\\)，\\(E\\)，\\(O\\)，点 \\(F\\) 在 \\(AC\\) 上，\\(BF\\perp AO\\).\n\n\n（子项） 证明 \\(EF\\parallel\\) 平面 \\(ADO\\)；\n\n（子项） 若 \\(\\angle POF=120^\\circ\\)，求三棱锥 \\(P-ABC\\) 的体积.\n\n[图：img/2023/national_paper_b_liberal/q19_fig1.png]",
+      "options": {},
+      "formulas": [
+        "P-ABC",
+        "AB\\perp BC",
+        "AB=2",
+        "BC=2\\sqrt2",
+        "PB=PC=\\sqrt6",
+        "BP",
+        "AP",
+        "BC",
+        "D",
+        "E",
+        "O",
+        "F",
+        "AC",
+        "BF\\perp AO",
+        "EF\\parallel",
+        "ADO",
+        "\\angle POF=120^\\circ",
+        "P-ABC"
+      ],
+      "parts": [
+        "证明 \\(EF\\parallel\\) 平面 \\(ADO\\)；",
+        "若 \\(\\angle POF=120^\\circ\\)，求三棱锥 \\(P-ABC\\) 的体积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "证明 \\(EF\\parallel\\) 平面 \\(ADO\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(\\angle POF=120^\\circ\\)，求三棱锥 \\(P-ABC\\) 的体积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2023/national_paper_b_liberal/q19_fig1.png",
+          "sha256": "0a70230794f2acadc78ad59a23b2ce8580d650c27d0cc37e553d024d8f55c91d",
+          "kind": "image",
+          "plaintext_path": "assets/0a70230794f2acadc78ad59a23b2ce8580d650c27d0cc37e553d024d8f55c91d.png"
+        }
+      ],
+      "raw_problem_latex": "如图，在三棱锥 \\(P-ABC\\) 中，\\(AB\\perp BC\\)，\\(AB=2\\)，\\(BC=2\\sqrt2\\)，\\(PB=PC=\\sqrt6\\)，\\(BP\\)，\\(AP\\)，\\(BC\\) 的中点分别为 \\(D\\)，\\(E\\)，\\(O\\)，点 \\(F\\) 在 \\(AC\\) 上，\\(BF\\perp AO\\).\n\\begin{enumerate}\n\\item 证明 \\(EF\\parallel\\) 平面 \\(ADO\\)；\n\\item 若 \\(\\angle POF=120^\\circ\\)，求三棱锥 \\(P-ABC\\) 的体积.\n\\end{enumerate}\n\\bitmapfigure[max width=6.0cm]{img/2023/national_paper_b_liberal/q19_fig1.png}",
+      "content_sha256": "00d03da7c5f80803d7c17a36065965a6133428ddda7876193f08e517b074b4f1",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q019",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q019",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 19,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "fce077251d0148a2f10dd992da443326ad3980172209b7e984d1733daf8b4bee",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 213,
+          "end": 244,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 1,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q019:answer",
+      "topic_flags": [
+        "立体几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q019",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q019:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q019",
+        "question_id": "2023-cn-math-national-b-liberal:q019",
+        "reference_answer": null,
+        "explanation": "（子项） 设 \\(\\overrightarrow{AF}=m\\overrightarrow{AC}\\)，则 \\(0\\le m\\le1\\)，并且\n\\(\\overrightarrow{BF}=(m-1)\\overrightarrow{AB}+m\\overrightarrow{BC}\\)，\\(\\overrightarrow{AO}=\\overrightarrow{AB}+\\dfrac12\\overrightarrow{BC}\\). 由 \\(BF\\perp AO\\) 及 \\(AB\\perp BC\\)，得\n\\[\n0=\\overrightarrow{BF}\\cdot\\overrightarrow{AO}=4(m-1)+\\frac{m}{2}\\times8=8m-4\n\\]\n所以 \\(m=\\dfrac12\\)，即 \\(F\\) 是 \\(AC\\) 的中点.\n\n在三角形 \\(APC\\) 中，\\(E\\)，\\(F\\) 分别是 \\(AP\\)，\\(AC\\) 的中点，所以 \\(EF\\parallel PC\\). 在三角形 \\(BPC\\) 中，\\(D\\)，\\(O\\) 分别是 \\(BP\\)，\\(BC\\) 的中点，所以 \\(DO\\parallel PC\\). 因此 \\(EF\\parallel DO\\)，且 \\(DO\\subset\\) 平面 \\(ADO\\).\n又 \\(P\\notin\\) 平面 \\(ABC\\)，故平面 \\(ADO\\) 与平面 \\(ABC\\) 的交线为 \\(AO\\). 由\n\\(\\overrightarrow{AF}=\\dfrac12\\overrightarrow{AC}=\\dfrac12\\left(\\overrightarrow{AB}+\\overrightarrow{BC}\\right)\\) 与\n\\(\\overrightarrow{AO}=\\overrightarrow{AB}+\\dfrac12\\overrightarrow{BC}\\)，且 \\(\\overrightarrow{AB}\\)，\\(\\overrightarrow{BC}\\) 不共线，可知 \\(F\\notin AO\\)，从而 \\(F\\notin\\) 平面 \\(ADO\\)，即 \\(EF\\) 不在平面 \\(ADO\\) 内. 因此 \\(EF\\parallel\\) 平面 \\(ADO\\).\n\n（子项） 建立空间直角坐标系，使 \\(B=(0,0,0)\\)，\\(A=(2,0,0)\\)，\\(C=(0,2\\sqrt2,0)\\). 设 \\(P=(u,v,w)\\)，由 \\(PB=PC=\\sqrt6\\) 得\n\\(u^2+v^2+w^2=6\\)，\\(u^2+(v-2\\sqrt2)^2+w^2=6\\).\n两式相减得 \\(v=\\sqrt2\\)，代回得 \\(u^2+w^2=4\\). 由上面的结论，\\(O=(0,\\sqrt2,0)\\)，\\(F=(1,\\sqrt2,0)\\)，故 \\(\\overrightarrow{OP}=(u,0,w)\\)，\\(\\overrightarrow{OF}=(1,0,0)\\)，且 \\(|OP|=2\\)，\\(|OF|=1\\).\n\n由 \\(\\angle POF=120^\\circ\\)，得 \\(u=\\overrightarrow{OP}\\cdot\\overrightarrow{OF}=|OP||OF|\\cos120^\\circ=-1\\). 所以 \\(w^2=4-u^2=3\\)，点 \\(P\\) 到平面 \\(ABC\\) 的距离为 \\(\\sqrt3\\). 又 \\(S_{\\triangle ABC}=\\dfrac12\\times2\\times2\\sqrt2=2\\sqrt2\\)，故\n\\[\nV_{P-ABC}=\\frac13S_{\\triangle ABC}\\cdot\\sqrt3=\\frac{2\\sqrt6}{3}\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 设 \\(\\overrightarrow{AF}=m\\overrightarrow{AC}\\)，则 \\(0\\le m\\le1\\)，并且\n\\(\\overrightarrow{BF}=(m-1)\\overrightarrow{AB}+m\\overrightarrow{BC}\\)，\\(\\overrightarrow{AO}=\\overrightarrow{AB}+\\dfrac12\\overrightarrow{BC}\\). 由 \\(BF\\perp AO\\) 及 \\(AB\\perp BC\\)，得\n\\[\n0=\\overrightarrow{BF}\\cdot\\overrightarrow{AO}=4(m-1)+\\frac{m}{2}\\times8=8m-4\n\\]\n所以 \\(m=\\dfrac12\\)，即 \\(F\\) 是 \\(AC\\) 的中点.\n\n在三角形 \\(APC\\) 中，\\(E\\)，\\(F\\) 分别是 \\(AP\\)，\\(AC\\) 的中点，所以 \\(EF\\parallel PC\\). 在三角形 \\(BPC\\) 中，\\(D\\)，\\(O\\) 分别是 \\(BP\\)，\\(BC\\) 的中点，所以 \\(DO\\parallel PC\\). 因此 \\(EF\\parallel DO\\)，且 \\(DO\\subset\\) 平面 \\(ADO\\).\n又 \\(P\\notin\\) 平面 \\(ABC\\)，故平面 \\(ADO\\) 与平面 \\(ABC\\) 的交线为 \\(AO\\). 由\n\\(\\overrightarrow{AF}=\\dfrac12\\overrightarrow{AC}=\\dfrac12\\left(\\overrightarrow{AB}+\\overrightarrow{BC}\\right)\\) 与\n\\(\\overrightarrow{AO}=\\overrightarrow{AB}+\\dfrac12\\overrightarrow{BC}\\)，且 \\(\\overrightarrow{AB}\\)，\\(\\overrightarrow{BC}\\) 不共线，可知 \\(F\\notin AO\\)，从而 \\(F\\notin\\) 平面 \\(ADO\\)，即 \\(EF\\) 不在平面 \\(ADO\\) 内. 因此 \\(EF\\parallel\\) 平面 \\(ADO\\).\n\\item 建立空间直角坐标系，使 \\(B=(0,0,0)\\)，\\(A=(2,0,0)\\)，\\(C=(0,2\\sqrt2,0)\\). 设 \\(P=(u,v,w)\\)，由 \\(PB=PC=\\sqrt6\\) 得\n\\(u^2+v^2+w^2=6\\)，\\(u^2+(v-2\\sqrt2)^2+w^2=6\\).\n两式相减得 \\(v=\\sqrt2\\)，代回得 \\(u^2+w^2=4\\). 由上面的结论，\\(O=(0,\\sqrt2,0)\\)，\\(F=(1,\\sqrt2,0)\\)，故 \\(\\overrightarrow{OP}=(u,0,w)\\)，\\(\\overrightarrow{OF}=(1,0,0)\\)，且 \\(|OP|=2\\)，\\(|OF|=1\\).\n\n由 \\(\\angle POF=120^\\circ\\)，得 \\(u=\\overrightarrow{OP}\\cdot\\overrightarrow{OF}=|OP||OF|\\cos120^\\circ=-1\\). 所以 \\(w^2=4-u^2=3\\)，点 \\(P\\) 到平面 \\(ABC\\) 的距离为 \\(\\sqrt3\\). 又 \\(S_{\\triangle ABC}=\\dfrac12\\times2\\times2\\sqrt2=2\\sqrt2\\)，故\n\\[\nV_{P-ABC}=\\frac13S_{\\triangle ABC}\\cdot\\sqrt3=\\frac{2\\sqrt6}{3}\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 221,
+            "end": 243
+          }
+        ],
+        "question_version_sha256": "fce077251d0148a2f10dd992da443326ad3980172209b7e984d1733daf8b4bee",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q020",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=\\left(\\frac1x+a\\right)\\ln(1+x)\\).\n\n\n（子项） 当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；\n\n（子项） 若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增，求 \\(a\\) 的取值范围.",
+      "options": {},
+      "formulas": [
+        "f(x)=\\left(\\frac1x+a\\right)\\ln(1+x)",
+        "a=-1",
+        "y=f(x)",
+        "(1,f(1))",
+        "f(x)",
+        "(0,+\\infty)",
+        "a"
+      ],
+      "parts": [
+        "当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；",
+        "若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增，求 \\(a\\) 的取值范围."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增，求 \\(a\\) 的取值范围."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=\\left(\\frac1x+a\\right)\\ln(1+x)\\).\n\\begin{enumerate}\n\\item 当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；\n\\item 若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增，求 \\(a\\) 的取值范围.\n\\end{enumerate}",
+      "content_sha256": "14fa666b3617fe14de9bcc3aa17d6e9d2ebdadfa888a63c5992ee593023dbd96",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q020",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q020",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 20,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "5eeb80e23a7c6b2996f98bd12e06e90fe10b3fbd29fbdbbffa5a47c6fc1b631f",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 246,
+          "end": 275,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 2,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q020:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q020",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q020:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q020",
+        "question_id": "2023-cn-math-national-b-liberal:q020",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(a=-1\\) 时，\\(f(x)=\\left(\\dfrac1x-1\\right)\\ln(1+x)\\)，所以 \\(f(1)=0\\)，且\n\\[\nf'(x)=-\\frac{\\ln(1+x)}{x^2}+\\frac{\\frac{1}{x}-1}{1+x}\n\\]\n因此 \\(f'(1)=-\\ln2\\)，曲线在 \\((1,f(1))=(1,0)\\) 处的切线方程为 \\(y=-\\ln2(x-1)\\)，即 \\(y=-(\\ln2)x+\\ln2\\).\n\n（子项） 当 \\(x>0\\) 时，\n\\[\nf'(x)=\\frac{\\frac{1}{x}+a}{1+x}-\\frac{\\ln(1+x)}{x^2}=\\frac{x+ax^2-(1+x)\\ln(1+x)}{x^2(1+x)}\n\\]\n由于分母为正，\\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增等价于\n\\(a\\ge g(x)\\)，其中\n\\[\ng(x)=\\frac{(1+x)\\ln(1+x)-x}{x^2}\n\\]\n令 \\(h(x)=\\dfrac{x^2}{2}+x-(1+x)\\ln(1+x)\\)，则 \\(h(0)=0\\)，且 \\(h'(x)=x-\\ln(1+x)>0\\)（因为 \\(\\ln(1+x)<x\\)），所以 \\(h(x)>0\\). 因而\n\\(g(x)<\\dfrac12\\)；另一方面，由两次求导或 \\(\\ln(1+x)=x-\\dfrac{x^2}{2}+o(x^2)\\)，得 \\(\\lim_{x\\to0^+}g(x)=\\dfrac12\\). 所以 \\(\\sup_{x>0}g(x)=\\dfrac12\\).\n\n当 \\(a\\ge\\dfrac12\\) 时，\\(a\\ge g(x)\\) 对任意 \\(x>0\\) 成立，故 \\(f'(x)>0\\)，函数在 \\((0,+\\infty)\\) 上单调递增；当 \\(a<\\dfrac12\\) 时，由 \\(g(x)\\to\\dfrac12\\)，可取充分小的正数 \\(x\\) 使 \\(g(x)>a\\)，此时 \\(f'(x)<0\\)，不满足题意. 因此 \\(a\\) 的取值范围为 \\(\\left[\\dfrac12,+\\infty\\right)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 当 \\(a=-1\\) 时，\\(f(x)=\\left(\\dfrac1x-1\\right)\\ln(1+x)\\)，所以 \\(f(1)=0\\)，且\n\\[\nf'(x)=-\\frac{\\ln(1+x)}{x^2}+\\frac{\\frac{1}{x}-1}{1+x}\n\\]\n因此 \\(f'(1)=-\\ln2\\)，曲线在 \\((1,f(1))=(1,0)\\) 处的切线方程为 \\(y=-\\ln2(x-1)\\)，即 \\(y=-(\\ln2)x+\\ln2\\).\n\\item 当 \\(x>0\\) 时，\n\\[\nf'(x)=\\frac{\\frac{1}{x}+a}{1+x}-\\frac{\\ln(1+x)}{x^2}=\\frac{x+ax^2-(1+x)\\ln(1+x)}{x^2(1+x)}\n\\]\n由于分母为正，\\(f(x)\\) 在 \\((0,+\\infty)\\) 上单调递增等价于\n\\(a\\ge g(x)\\)，其中\n\\[\ng(x)=\\frac{(1+x)\\ln(1+x)-x}{x^2}\n\\]\n令 \\(h(x)=\\dfrac{x^2}{2}+x-(1+x)\\ln(1+x)\\)，则 \\(h(0)=0\\)，且 \\(h'(x)=x-\\ln(1+x)>0\\)（因为 \\(\\ln(1+x)<x\\)），所以 \\(h(x)>0\\). 因而\n\\(g(x)<\\dfrac12\\)；另一方面，由两次求导或 \\(\\ln(1+x)=x-\\dfrac{x^2}{2}+o(x^2)\\)，得 \\(\\lim_{x\\to0^+}g(x)=\\dfrac12\\). 所以 \\(\\sup_{x>0}g(x)=\\dfrac12\\).\n\n当 \\(a\\ge\\dfrac12\\) 时，\\(a\\ge g(x)\\) 对任意 \\(x>0\\) 成立，故 \\(f'(x)>0\\)，函数在 \\((0,+\\infty)\\) 上单调递增；当 \\(a<\\dfrac12\\) 时，由 \\(g(x)\\to\\dfrac12\\)，可取充分小的正数 \\(x\\) 使 \\(g(x)>a\\)，此时 \\(f'(x)<0\\)，不满足题意. 因此 \\(a\\) 的取值范围为 \\(\\left[\\dfrac12,+\\infty\\right)\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 253,
+            "end": 274
+          }
+        ],
+        "question_version_sha256": "5eeb80e23a7c6b2996f98bd12e06e90fe10b3fbd29fbdbbffa5a47c6fc1b631f",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "national_analysis": {
+        "occurrence_id": "2023-cn-math-national-b-liberal:q020",
+        "question_id": "2023-cn-math-national-b-liberal:q020",
+        "version_sha256": "5eeb80e23a7c6b2996f98bd12e06e90fe10b3fbd29fbdbbffa5a47c6fc1b631f",
+        "knowledge": {
+          "primary": [
+            "对数有理复合与单调参数"
+          ],
+          "secondary": [
+            "函数与导数"
+          ]
+        },
+        "methods": [
+          "导数",
+          "参数分离"
+        ],
+        "competencies": [
+          "逻辑推理",
+          "数学运算"
+        ],
+        "difficulty": {
+          "level": 4,
+          "basis": "起步切线后讨论正半轴单调参数，旧文科结构仍可供经典方法研究，但其选考题和分值不输入现代蓝图。",
+          "measurement": "AI content-based editorial judgment; not empirical"
+        },
+        "reasoning_observation": "起步切线后讨论正半轴单调参数，旧文科结构仍可供经典方法研究，但其选考题和分值不输入现代蓝图。",
+        "evidence": {
+          "tex": {
+            "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+            "start": 246,
+            "end": 275,
+            "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+          },
+          "pdf": {
+            "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+            "page": 2,
+            "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+          },
+          "source_ids": [
+            "dxathing-pinned",
+            "deekur-pinned"
+          ]
+        },
+        "model_version": "not_exposed_by_host",
+        "analysis_class": "limited_sample_observation",
+        "source_was_read": true,
+        "human_reviewed": false,
+        "formal_proof": false
+      },
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q021",
+      "subject": "math",
+      "stem": "已知椭圆 \\(C:\\dfrac{y^2}{a^2}+\\dfrac{x^2}{b^2}=1\\)（\\(a>b>0\\)）的离心率为 \\(\\dfrac{\\sqrt5}{3}\\)，点 \\(A(-2,0)\\) 在 \\(C\\) 上.\n\n\n（子项） 求 \\(C\\) 的方程；\n\n（子项） 过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点.",
+      "options": {},
+      "formulas": [
+        "C:\\dfrac{y^2}{a^2}+\\dfrac{x^2}{b^2}=1",
+        "a>b>0",
+        "\\dfrac{\\sqrt5}{3}",
+        "A(-2,0)",
+        "C",
+        "C",
+        "(-2,3)",
+        "C",
+        "P",
+        "Q",
+        "AP",
+        "AQ",
+        "y",
+        "M",
+        "N",
+        "MN"
+      ],
+      "parts": [
+        "求 \\(C\\) 的方程；",
+        "过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(C\\) 的方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知椭圆 \\(C:\\dfrac{y^2}{a^2}+\\dfrac{x^2}{b^2}=1\\)（\\(a>b>0\\)）的离心率为 \\(\\dfrac{\\sqrt5}{3}\\)，点 \\(A(-2,0)\\) 在 \\(C\\) 上.\n\\begin{enumerate}\n\\item 求 \\(C\\) 的方程；\n\\item 过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点.\n\\end{enumerate}",
+      "content_sha256": "5f0e383e9f938c08d4e33de61809535b0526dc15b478ae7c9aa0ba9a5c1166e7",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q021",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q021",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 21,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "40070cde94141842b4970a43d754918b0e25cfe468f54cee75896d2b3cb5813e",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 277,
+          "end": 307,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 2,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q021:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q021",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q021:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q021",
+        "question_id": "2023-cn-math-national-b-liberal:q021",
+        "reference_answer": null,
+        "explanation": "（子项） 设椭圆的半焦距为 \\(c\\)，则 \\(c^2=a^2-b^2\\). 由点 \\(A(-2,0)\\) 在椭圆上，得 \\(b=2\\). 又由离心率得\n\\(\\dfrac{c^2}{a^2}=\\dfrac59\\)，所以 \\(1-\\dfrac{4}{a^2}=\\dfrac59\\)，从而 \\(a=3\\). 因此 \\(C\\) 的方程为 \\(\\dfrac{y^2}{9}+\\dfrac{x^2}{4}=1\\).\n\n（子项） 过点 \\((-2,3)\\) 的直线若为 \\(x=-2\\)，则与椭圆只有一个交点，故由题意可设该直线斜率为 \\(k\\)，其方程为 \\(y=k(x+2)+3\\). 设 \\(P(x_1,y_1)\\)，\\(Q(x_2,y_2)\\)，则 \\(x_1\\)，\\(x_2\\) 是方程\n\\[\n9x^2+4\\bigl(k(x+2)+3\\bigr)^2=36\n\\]\n的两个根，即\n\\[\n(9+4k^2)x^2+8k(2k+3)x+4(2k+3)^2-36=0\n\\]\n由韦达定理，\n\\(x_1+x_2=-\\frac{8k(2k+3)}{9+4k^2}\\)，\\(x_1x_2=\\frac{16k(k+3)}{9+4k^2}\\).\n直线 \\(AP\\) 与 \\(y\\) 轴的交点纵坐标为 \\(\\dfrac{2y_1}{x_1+2}\\)，而 \\(y_1=k(x_1+2)+3\\)，所以该纵坐标为 \\(2k+\\dfrac{6}{x_1+2}\\). 同理，点 \\(N\\) 的纵坐标为 \\(2k+\\dfrac{6}{x_2+2}\\). 因而线段 \\(MN\\) 的中点横坐标为 \\(0\\)，纵坐标为\n\\[\n2k+3\\left(\\frac1{x_1+2}+\\frac1{x_2+2}\\right)=2k+3\\frac{x_1+x_2+4}{x_1x_2+2(x_1+x_2)+4}\n\\]\n由上式中的韦达关系，\n\\(x_1+x_2+4=\\frac{12(3-2k)}{9+4k^2}\\)，\\(x_1x_2+2(x_1+x_2)+4=\\frac{36}{9+4k^2}\\)，\n故中点纵坐标为 \\(2k+3\\cdot\\dfrac{3-2k}{3}=3\\). 所以线段 \\(MN\\) 的中点为定点 \\((0,3)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 设椭圆的半焦距为 \\(c\\)，则 \\(c^2=a^2-b^2\\). 由点 \\(A(-2,0)\\) 在椭圆上，得 \\(b=2\\). 又由离心率得\n\\(\\dfrac{c^2}{a^2}=\\dfrac59\\)，所以 \\(1-\\dfrac{4}{a^2}=\\dfrac59\\)，从而 \\(a=3\\). 因此 \\(C\\) 的方程为 \\(\\dfrac{y^2}{9}+\\dfrac{x^2}{4}=1\\).\n\\item 过点 \\((-2,3)\\) 的直线若为 \\(x=-2\\)，则与椭圆只有一个交点，故由题意可设该直线斜率为 \\(k\\)，其方程为 \\(y=k(x+2)+3\\). 设 \\(P(x_1,y_1)\\)，\\(Q(x_2,y_2)\\)，则 \\(x_1\\)，\\(x_2\\) 是方程\n\\[\n9x^2+4\\bigl(k(x+2)+3\\bigr)^2=36\n\\]\n的两个根，即\n\\[\n(9+4k^2)x^2+8k(2k+3)x+4(2k+3)^2-36=0\n\\]\n由韦达定理，\n\\(x_1+x_2=-\\frac{8k(2k+3)}{9+4k^2}\\)，\\(x_1x_2=\\frac{16k(k+3)}{9+4k^2}\\).\n直线 \\(AP\\) 与 \\(y\\) 轴的交点纵坐标为 \\(\\dfrac{2y_1}{x_1+2}\\)，而 \\(y_1=k(x_1+2)+3\\)，所以该纵坐标为 \\(2k+\\dfrac{6}{x_1+2}\\). 同理，点 \\(N\\) 的纵坐标为 \\(2k+\\dfrac{6}{x_2+2}\\). 因而线段 \\(MN\\) 的中点横坐标为 \\(0\\)，纵坐标为\n\\[\n2k+3\\left(\\frac1{x_1+2}+\\frac1{x_2+2}\\right)=2k+3\\frac{x_1+x_2+4}{x_1x_2+2(x_1+x_2)+4}\n\\]\n由上式中的韦达关系，\n\\(x_1+x_2+4=\\frac{12(3-2k)}{9+4k^2}\\)，\\(x_1x_2+2(x_1+x_2)+4=\\frac{36}{9+4k^2}\\)，\n故中点纵坐标为 \\(2k+3\\cdot\\dfrac{3-2k}{3}=3\\). 所以线段 \\(MN\\) 的中点为定点 \\((0,3)\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 284,
+            "end": 306
+          }
+        ],
+        "question_version_sha256": "40070cde94141842b4970a43d754918b0e25cfe468f54cee75896d2b3cb5813e",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q022",
+      "subject": "math",
+      "stem": "在直角坐标系 \\(xOy\\) 中，以坐标原点 \\(O\\) 为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_1\\) 的极坐标方程为 \\(\\rho=2\\sin\\theta\\)（\\(\\frac\\pi4\\le\\theta\\le\\frac\\pi2\\)），曲线 \\(C_2:\\begin{cases}\nx=2\\cos\\alpha,\\\\\ny=2\\sin\\alpha\n\\end{cases}\\)（\\(\\alpha\\) 为参数，\\(\\frac\\pi2<\\alpha<\\pi\\)）.\n\n\n（子项） 写出 \\(C_1\\) 的直角坐标方程；\n\n（子项） 若直线 \\(y=x+m\\) 与 \\(C_1\\)，\\(C_2\\) 均无公共点，求 \\(m\\) 的取值范围.",
+      "options": {},
+      "formulas": [
+        "xOy",
+        "O",
+        "x",
+        "C_1",
+        "\\rho=2\\sin\\theta",
+        "\\frac\\pi4\\le\\theta\\le\\frac\\pi2",
+        "C_2:\\begin{cases}\nx=2\\cos\\alpha,\\\\\ny=2\\sin\\alpha\n\\end{cases}",
+        "\\alpha",
+        "\\frac\\pi2<\\alpha<\\pi",
+        "C_1",
+        "y=x+m",
+        "C_1",
+        "C_2",
+        "m"
+      ],
+      "parts": [
+        "写出 \\(C_1\\) 的直角坐标方程；",
+        "若直线 \\(y=x+m\\) 与 \\(C_1\\)，\\(C_2\\) 均无公共点，求 \\(m\\) 的取值范围."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "写出 \\(C_1\\) 的直角坐标方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若直线 \\(y=x+m\\) 与 \\(C_1\\)，\\(C_2\\) 均无公共点，求 \\(m\\) 的取值范围."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在直角坐标系 \\(xOy\\) 中，以坐标原点 \\(O\\) 为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_1\\) 的极坐标方程为 \\(\\rho=2\\sin\\theta\\)（\\(\\frac\\pi4\\le\\theta\\le\\frac\\pi2\\)），曲线 \\(C_2:\\begin{cases}\nx=2\\cos\\alpha,\\\\\ny=2\\sin\\alpha\n\\end{cases}\\)（\\(\\alpha\\) 为参数，\\(\\frac\\pi2<\\alpha<\\pi\\)）.\n\\begin{enumerate}\n\\item 写出 \\(C_1\\) 的直角坐标方程；\n\\item 若直线 \\(y=x+m\\) 与 \\(C_1\\)，\\(C_2\\) 均无公共点，求 \\(m\\) 的取值范围.\n\\end{enumerate}",
+      "content_sha256": "a707a390777ea3a8ea3a7318f09728837e199702f2fe5f5bdc03524caf1e21e9",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q022",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q022",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 22,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "ab9b725077d30b763b947c0b898dcd8a8ba4ade0f91cc10bf86503d455ea2900",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 311,
+          "end": 334,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 2,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q022:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q022",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q022:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q022",
+        "question_id": "2023-cn-math-national-b-liberal:q022",
+        "reference_answer": null,
+        "explanation": "（子项） 由极坐标与直角坐标的关系 \\(x=\\rho\\cos\\theta\\)，\\(y=\\rho\\sin\\theta\\)，得 \\(\\rho^2=2\\rho\\sin\\theta=2y\\)，所以\n\\(x^2+y^2=2y\\)，即 \\(x^2+(y-1)^2=1\\). 由 \\(\\dfrac\\pi4\\le\\theta\\le\\dfrac\\pi2\\)，可知该曲线取第一象限内从 \\((1,1)\\) 到 \\((0,2)\\) 的圆弧，故还需满足 \\(x\\in[0,1]\\)，\\(y\\in[1,2]\\).\n\n（子项） 直线 \\(y=x+m\\) 与曲线有公共点，当且仅当 \\(m=y-x\\). 对 \\(C_1\\)，令\n\\(x=2\\sin\\theta\\cos\\theta\\)，\\(y=2\\sin^2\\theta\\)，故 \\(m=y-x=2\\sin^2\\theta-2\\sin\\theta\\cos\\theta=1-\\cos2\\theta-\\sin2\\theta\\)，其中 \\(\\theta\\in\\left[\\dfrac\\pi4,\\dfrac\\pi2\\right]\\). 其导数为 \\(m'(\\theta)=2\\sin2\\theta-2\\cos2\\theta>0\\)，且 \\(m\\left(\\dfrac\\pi4\\right)=0\\)，\\(m\\left(\\dfrac\\pi2\\right)=2\\)，所以 \\(m\\) 的取值范围为 \\([0,2]\\).\n\n对 \\(C_2\\)，有 \\(m=2\\sin\\alpha-2\\cos\\alpha=2(\\sin\\alpha-\\cos\\alpha)\\)，其中 \\(\\alpha\\in\\left(\\dfrac\\pi2,\\pi\\right)\\). 因为 \\(m'=2(\\sin\\alpha+\\cos\\alpha)\\)，所以 \\(m\\) 在 \\(\\alpha=\\dfrac{3\\pi}{4}\\) 处取得最大值 \\(2\\sqrt2\\)；又当 \\(\\alpha\\to\\dfrac\\pi2^+\\) 或 \\(\\alpha\\to\\pi^-\\) 时，\\(m\\to2\\)，但 \\(\\alpha\\) 不取端点，故 \\(m\\) 的取值范围为 \\((2,2\\sqrt2]\\).\n\n因此直线同时与 \\(C_1\\)，\\(C_2\\) 无公共点时，\\(m\\) 不属于 \\([0,2]\\cup(2,2\\sqrt2]=[0,2\\sqrt2]\\)，即\n\\(m\\in(-\\infty,0)\\cup(2\\sqrt2,+\\infty)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 由极坐标与直角坐标的关系 \\(x=\\rho\\cos\\theta\\)，\\(y=\\rho\\sin\\theta\\)，得 \\(\\rho^2=2\\rho\\sin\\theta=2y\\)，所以\n\\(x^2+y^2=2y\\)，即 \\(x^2+(y-1)^2=1\\). 由 \\(\\dfrac\\pi4\\le\\theta\\le\\dfrac\\pi2\\)，可知该曲线取第一象限内从 \\((1,1)\\) 到 \\((0,2)\\) 的圆弧，故还需满足 \\(x\\in[0,1]\\)，\\(y\\in[1,2]\\).\n\\item 直线 \\(y=x+m\\) 与曲线有公共点，当且仅当 \\(m=y-x\\). 对 \\(C_1\\)，令\n\\(x=2\\sin\\theta\\cos\\theta\\)，\\(y=2\\sin^2\\theta\\)，故 \\(m=y-x=2\\sin^2\\theta-2\\sin\\theta\\cos\\theta=1-\\cos2\\theta-\\sin2\\theta\\)，其中 \\(\\theta\\in\\left[\\dfrac\\pi4,\\dfrac\\pi2\\right]\\). 其导数为 \\(m'(\\theta)=2\\sin2\\theta-2\\cos2\\theta>0\\)，且 \\(m\\left(\\dfrac\\pi4\\right)=0\\)，\\(m\\left(\\dfrac\\pi2\\right)=2\\)，所以 \\(m\\) 的取值范围为 \\([0,2]\\).\n\n对 \\(C_2\\)，有 \\(m=2\\sin\\alpha-2\\cos\\alpha=2(\\sin\\alpha-\\cos\\alpha)\\)，其中 \\(\\alpha\\in\\left(\\dfrac\\pi2,\\pi\\right)\\). 因为 \\(m'=2(\\sin\\alpha+\\cos\\alpha)\\)，所以 \\(m\\) 在 \\(\\alpha=\\dfrac{3\\pi}{4}\\) 处取得最大值 \\(2\\sqrt2\\)；又当 \\(\\alpha\\to\\dfrac\\pi2^+\\) 或 \\(\\alpha\\to\\pi^-\\) 时，\\(m\\to2\\)，但 \\(\\alpha\\) 不取端点，故 \\(m\\) 的取值范围为 \\((2,2\\sqrt2]\\).\n\n因此直线同时与 \\(C_1\\)，\\(C_2\\) 无公共点时，\\(m\\) 不属于 \\([0,2]\\cup(2,2\\sqrt2]=[0,2\\sqrt2]\\)，即\n\\(m\\in(-\\infty,0)\\cup(2\\sqrt2,+\\infty)\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 321,
+            "end": 333
+          }
+        ],
+        "question_version_sha256": "ab9b725077d30b763b947c0b898dcd8a8ba4ade0f91cc10bf86503d455ea2900",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q023",
+      "subject": "math",
+      "stem": "已知 \\(f(x)=2|x|+|x-2|\\).\n\n\n（子项） 求不等式 \\(f(x)\\le6-x\\) 的解集；\n\n（子项） 在直角坐标系 \\(xOy\\) 中，求不等式组 \\(\\begin{cases}\nf(x)\\le y,\\\\\nx+y-6\\le0\n\\end{cases}\\) 所确定的平面区域的面积.",
+      "options": {},
+      "formulas": [
+        "f(x)=2|x|+|x-2|",
+        "f(x)\\le6-x",
+        "xOy",
+        "\\begin{cases}\nf(x)\\le y,\\\\\nx+y-6\\le0\n\\end{cases}"
+      ],
+      "parts": [
+        "求不等式 \\(f(x)\\le6-x\\) 的解集；",
+        "在直角坐标系 \\(xOy\\) 中，求不等式组 \\(\\begin{cases}\nf(x)\\le y,\\\\\nx+y-6\\le0\n\\end{cases}\\) 所确定的平面区域的面积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求不等式 \\(f(x)\\le6-x\\) 的解集；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "在直角坐标系 \\(xOy\\) 中，求不等式组 \\(\\begin{cases}\nf(x)\\le y,\\\\\nx+y-6\\le0\n\\end{cases}\\) 所确定的平面区域的面积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(f(x)=2|x|+|x-2|\\).\n\\begin{enumerate}\n\\item 求不等式 \\(f(x)\\le6-x\\) 的解集；\n\\item 在直角坐标系 \\(xOy\\) 中，求不等式组 \\(\\begin{cases}\nf(x)\\le y,\\\\\nx+y-6\\le0\n\\end{cases}\\) 所确定的平面区域的面积.\n\\end{enumerate}",
+      "content_sha256": "aeb03a7a504e807c3a11115c717b5572811592d016db7dbbe2801523f07df4b9",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q023",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q023",
+      "paper_id": "2023-cn-math-national-b-liberal",
+      "number": 23,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "533556eb8e38ad42b5380c7aab6570e5008d2e1dd544524c5c3819cf911baa11",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_liberal.tex",
+          "start": 336,
+          "end": 363,
+          "sha256": "9ab7a32db5dd9a9c5ba054388dbbc8bd43758f0789ced27785abb1a74dd41acc"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-liberal.pdf",
+          "page": 2,
+          "sha256": "997c0ca294fde300afd4c043d4f98fd9f0a0dd1f05ecf9aa11854f43e5f43bb0"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2023-cn-math-national-b-liberal:q023:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-liberal:q023",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "liberal",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（文）",
+      "answer": {
+        "id": "2023-cn-math-national-b-liberal:q023:answer",
+        "occurrence_id": "2023-cn-math-national-b-liberal:q023",
+        "question_id": "2023-cn-math-national-b-liberal:q023",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(x<0\\) 时，\\(f(x)=2-3x\\)；当 \\(0\\le x\\le2\\) 时，\\(f(x)=x+2\\)；当 \\(x>2\\) 时，\\(f(x)=3x-2\\). 因此\n\\[\n\\begin{cases}\n2-3x\\le6-x,&x<0,\\\\\nx+2\\le6-x,&0\\le x\\le2,\\\\\n3x-2\\le6-x,&x>2.\n\\end{cases}\n\\]\n第一种情形得 \\(-2\\le x<0\\)，第二种情形得 \\(0\\le x\\le2\\)，第三种情形无解，所以不等式的解集为 \\([-2,2]\\).\n\n（子项） 不等式组表示的区域位于曲线 \\(y=f(x)\\) 上方、直线 \\(y=6-x\\) 下方. 由第（1）问，区域的横坐标范围为 \\([-2,2]\\). 当 \\(-2\\le x\\le0\\) 时，上、下边界之差为 \\((6-x)-(2-3x)=4+2x\\)；当 \\(0\\le x\\le2\\) 时，上、下边界之差为 \\((6-x)-(x+2)=4-2x\\). 因此区域面积为\n\\[\n\\int_{-2}^{0}(4+2x)\\,\\mathrm{d}x+\\int_{0}^{2}(4-2x)\\,\\mathrm{d}x=4+4=8\n\\]",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n\\item 当 \\(x<0\\) 时，\\(f(x)=2-3x\\)；当 \\(0\\le x\\le2\\) 时，\\(f(x)=x+2\\)；当 \\(x>2\\) 时，\\(f(x)=3x-2\\). 因此\n\\[\n\\begin{cases}\n2-3x\\le6-x,&x<0,\\\\\nx+2\\le6-x,&0\\le x\\le2,\\\\\n3x-2\\le6-x,&x>2.\n\\end{cases}\n\\]\n第一种情形得 \\(-2\\le x<0\\)，第二种情形得 \\(0\\le x\\le2\\)，第三种情形无解，所以不等式的解集为 \\([-2,2]\\).\n\\item 不等式组表示的区域位于曲线 \\(y=f(x)\\) 上方、直线 \\(y=6-x\\) 下方. 由第（1）问，区域的横坐标范围为 \\([-2,2]\\). 当 \\(-2\\le x\\le0\\) 时，上、下边界之差为 \\((6-x)-(2-3x)=4+2x\\)；当 \\(0\\le x\\le2\\) 时，上、下边界之差为 \\((6-x)-(x+2)=4-2x\\). 因此区域面积为\n\\[\n\\int_{-2}^{0}(4+2x)\\,\\mathrm{d}x+\\int_{0}^{2}(4-2x)\\,\\mathrm{d}x=4+4=8\n\\]\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 346,
+            "end": 362
+          }
+        ],
+        "question_version_sha256": "533556eb8e38ad42b5380c7aab6570e5008d2e1dd544524c5c3819cf911baa11",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "assessment_state": "unreviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": false
+    }
+  ],
+  "content_sha256": "39d281be283505cbb63ccacbe47656d3232949faddd4a498f2e45171800484e5"
+}

@@ -1,6 +1,6 @@
 # 全国高考真题研究与多学科 AI 命题平台
 
-本项目资料仅用于个人学习与教研参考。主三科统一使用 `scripts/gaokao_platform.py`。主库明文入口、转换命令、两套 150 分原创卷及公开候选范围见[第十七阶段验收](reports/phase17.md)。
+本项目资料仅用于个人学习与教研参考。主三科统一使用 `scripts/gaokao_platform.py`。当前主三科明文库与逐卷覆盖见[第十八阶段验收](reports/phase18.md)。两套 150 分原创卷见[第十七阶段验收](reports/phase17.md)。
 
 
 第十五阶段新增河南化学逐题来源核验、化学验证器和原创专题练习。[阶段验收](reports/phase15.md) · [化学试做](experiments/phase15/chemistry/README.md)
@@ -29,7 +29,7 @@
 
 ## 恢复与全文查询
 
-安装requirements.txt；原件渲染需要Poppler与中文字体。完整第三方原文和答案不进入Git明文，恢复两个独立备份需分别持有仓库外的密钥，勿将密钥放入仓库或ZIP。
+安装requirements.txt；原件渲染需要Poppler与中文字体。当前私有研发分支的主三科真题可从 `data/papers/` 直接检索。仅恢复历史原始资料和早期备份时需使用仓库外的密钥，勿将密钥放入仓库或 ZIP。
 
 ```powershell
 python scripts/private_data.py restore --key <旧库密钥文件>

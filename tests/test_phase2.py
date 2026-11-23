@@ -383,6 +383,12 @@ class PrivateStorageTests(unittest.TestCase):
                 "research",
                 "--topic",
                 "数列",
+                "--region",
+                "河南",
+                "--year-from",
+                "2025",
+                "--year-to",
+                "2026",
             )
             self.assertEqual(len(found), 4)
             generated = command(

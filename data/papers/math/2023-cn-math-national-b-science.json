@@ -1,0 +1,2535 @@
+{
+  "id": "2023-cn-math-national-b-science",
+  "subject": "math",
+  "year": 2023,
+  "title": "2023年全国乙卷（理）",
+  "regions": [
+    "内蒙古",
+    "宁夏",
+    "新疆",
+    "江西",
+    "河南",
+    "甘肃",
+    "陕西",
+    "青海"
+  ],
+  "series_id": "cn-national-b",
+  "exam_kind": "official_exam",
+  "question_count": 23,
+  "source": {
+    "title": "原有项目双源档案",
+    "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
+    "rights_basis": "仅用于个人学习与教研归档"
+  },
+  "distribution": "private-research",
+  "compatibility": "national-math-v1",
+  "questions": [
+    {
+      "id": "2023-cn-math-national-b-science:q001",
+      "subject": "math",
+      "stem": "设 \\(z=\\frac{2+i}{1+i^2+i^5}\\)，则 \\(\\overline z=\\)（\\quad）",
+      "options": {
+        "A": "\\(1-2i\\)",
+        "B": "\\(1+2i\\)",
+        "C": "\\(2-i\\)",
+        "D": "\\(2+i\\)"
+      },
+      "formulas": [
+        "z=\\frac{2+i}{1+i^2+i^5}",
+        "\\overline z=",
+        "1-2i",
+        "1+2i",
+        "2-i",
+        "2+i"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "44bceb78dcfc4a793ae857a3f63d2224d8cf319cf77fdfc13cf3eb525e0cb584",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q001",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q001",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "7497f29e752e5615e8e195b06e5b5af14f5fb22af857b2fec2d9cfbd153c18bc",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 5,
+          "end": 13,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q001:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q001",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "7497f29e752e5615e8e195b06e5b5af14f5fb22af857b2fec2d9cfbd153c18bc",
+        "reference_answer": "B",
+        "explanation": "分母1+i²+i⁵=i，z=1−2i，取共轭得1+2i。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q001",
+        "base_version_sha256": "8909720826b17f6c77246b855fea29deeed846e3799353b3b9aad1cfd132ff71",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "PDF与高考直通车整理版均支持改正分母、设问和A/B项。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "{2+2i}",
+            "{1+i^2+i^5}"
+          ],
+          [
+            "则 \\(z=\\)",
+            "则 \\(\\overline z=\\)"
+          ]
+        ],
+        "option_edits": [
+          [
+            "A",
+            "\\(1-i\\)",
+            "\\(1-2i\\)"
+          ],
+          [
+            "B",
+            "\\(1+i\\)",
+            "\\(1+2i\\)"
+          ]
+        ],
+        "result": "B",
+        "solution": "分母1+i²+i⁵=i，z=1−2i，取共轭得1+2i。"
+      },
+      "base_version_sha256": "8909720826b17f6c77246b855fea29deeed846e3799353b3b9aad1cfd132ff71",
+      "reviewed_answer": {
+        "question_version_sha256": "7497f29e752e5615e8e195b06e5b5af14f5fb22af857b2fec2d9cfbd153c18bc",
+        "reference_answer": "B",
+        "explanation": "分母1+i²+i⁵=i，z=1−2i，取共轭得1+2i。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q002",
+      "subject": "math",
+      "stem": "设集合 \\(U=\\mathbb{R}\\)，集合 \\(M=\\{x\\mid x<1\\}\\)，\\(N=\\{x\\mid -1<x<2\\}\\)，则 \\(\\{x\\mid x\\ge2\\}=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\complement_U(M\\cup N)\\)",
+        "B": "\\(N\\cup\\complement_U M\\)",
+        "C": "\\(\\complement_U(M\\cap N)\\)",
+        "D": "\\(M\\cup\\complement_U N\\)"
+      },
+      "formulas": [
+        "U=\\mathbb{R}",
+        "M=\\{x\\mid x<1\\}",
+        "N=\\{x\\mid -1<x<2\\}",
+        "\\{x\\mid x\\ge2\\}=",
+        "\\complement_U(M\\cup N)",
+        "N\\cup\\complement_U M",
+        "\\complement_U(M\\cap N)",
+        "M\\cup\\complement_U N"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "dd86b1e082965ae3068dbeecbf2de5e6ee1c9ddff5bfb56dcc7be7f6465e7973",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q002",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q002",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "4e2c009d69e5b2aa3b2728c374bef6cc4f4d4988ae64efcbcde694d52af296f8",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 23,
+          "end": 31,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "native_pdf_text_alignment_needs_review",
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q002:answer",
+      "topic_flags": [
+        "集合与复数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q002",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "4e2c009d69e5b2aa3b2728c374bef6cc4f4d4988ae64efcbcde694d52af296f8",
+        "reference_answer": "A",
+        "explanation": "M与N的并为x<2，补集正是x≥2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q002",
+        "base_version_sha256": "9cb08c9b13ab7694da02d4c384a66d03dd7d00844c111daa45616edf08605640",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "PDF与高考直通车整理版均支持恢复右半线设问。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "则 \\(M\\cup N^c\\text{ 的补集}\\) 为",
+            "则 \\(\\{x\\mid x\\ge2\\}=\\)"
+          ]
+        ],
+        "result": "A",
+        "solution": "M与N的并为x<2，补集正是x≥2。"
+      },
+      "base_version_sha256": "9cb08c9b13ab7694da02d4c384a66d03dd7d00844c111daa45616edf08605640",
+      "reviewed_answer": {
+        "question_version_sha256": "4e2c009d69e5b2aa3b2728c374bef6cc4f4d4988ae64efcbcde694d52af296f8",
+        "reference_answer": "A",
+        "explanation": "M与N的并为x<2，补集正是x≥2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q003",
+      "subject": "math",
+      "stem": "如图，网格纸上绘制的一个零件的三视图，网格小正方形边长为 1，则该零件表面积为（\\quad）\n\n\n\n[图：img/2023/national_paper_b_science/q3_fig1.png]",
+      "options": {
+        "A": "\\(24\\)",
+        "B": "\\(26\\)",
+        "C": "\\(28\\)",
+        "D": "\\(30\\)"
+      },
+      "formulas": [
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2023/national_paper_b_science/q3_fig1.png",
+          "sha256": "df0fcbc17f3a8b0c6682a050095f51dd84e1bbd39e5e1937747e873434ceefd5",
+          "kind": "image",
+          "plaintext_path": "assets/df0fcbc17f3a8b0c6682a050095f51dd84e1bbd39e5e1937747e873434ceefd5.png"
+        }
+      ],
+      "raw_problem_latex": "如图，网格纸上绘制的一个零件的三视图，网格小正方形边长为 1，则该零件表面积为（\\quad）\n\n\\begin{center}\n\\FigureLayoutDeclare{img/2023/national_paper_b_science/q3_fig1.png}{6.0cm}{0bp 29bp 22bp 10bp}\n\\bitmapfigure[max width=6.0cm]{img/2023/national_paper_b_science/q3_fig1.png}\n\\end{center}\n\n\\choices\n    {\\(24\\)}\n    {\\(26\\)}\n    {\\(28\\)}\n    {\\(30\\)}",
+      "content_sha256": "044e4100beb34d6993fde42eeb7e02db1628a4a3a88120bab2d607cc711d0d8e",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q003",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q003",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "6a0cba2f94f81caa90d56769a3d63115c4d4ebb276f1b2090ff1f84d8b56d8a0",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 41,
+          "end": 54,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q003:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q003",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q003:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q003",
+        "question_id": "2023-cn-math-national-b-science:q003",
+        "reference_answer": "D",
+        "explanation": "因为网格边长为\\(1\\)，由三视图可数得主视图面积为\\(6\\)，俯视图面积为\\(4\\)，左视图面积为\\(5\\)，所以前后两面面积之和为\\(12\\)，上下两面面积之和为\\(8\\)，左右两面面积之和为\\(10\\)，故表面积为\\(12+8+10=30\\)，即对应选项D，所以按本页现稿选D. 对照原PDF题面，三视图与选项完全一致，故结论同样为D.",
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "因为网格边长为\\(1\\)，由三视图可数得主视图面积为\\(6\\)，俯视图面积为\\(4\\)，左视图面积为\\(5\\)，所以前后两面面积之和为\\(12\\)，上下两面面积之和为\\(8\\)，左右两面面积之和为\\(10\\)，故表面积为\\(12+8+10=30\\)，即对应选项D，所以按本页现稿选D. 对照原PDF题面，三视图与选项完全一致，故结论同样为D.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 56,
+            "end": 58
+          },
+          {
+            "kind": "solution",
+            "start": 60,
+            "end": 62
+          }
+        ],
+        "question_version_sha256": "6a0cba2f94f81caa90d56769a3d63115c4d4ebb276f1b2090ff1f84d8b56d8a0",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q004",
+      "subject": "math",
+      "stem": "已知 \\(f(x)=\\frac{x e^x}{e^{ax}-1}\\)，若 \\(f(x)\\) 为偶函数，则 \\(a=\\)（\\quad）",
+      "options": {
+        "A": "\\(-2\\)",
+        "B": "\\(-1\\)",
+        "C": "\\(1\\)",
+        "D": "\\(2\\)"
+      },
+      "formulas": [
+        "f(x)=\\frac{x e^x}{e^{ax}-1}",
+        "f(x)",
+        "a=",
+        "-2",
+        "-1",
+        "1",
+        "2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(f(x)=\\frac{x \\e^x}{\\e^{ax}-1}\\)，若 \\(f(x)\\) 为偶函数，则 \\(a=\\)（\\quad）\n\n\\choices\n    {\\(-2\\)}\n    {\\(-1\\)}\n    {\\(1\\)}\n    {\\(2\\)}",
+      "content_sha256": "bb2273971ce13a540975c4ef5b4d7b93c31647fb6dc983133509b274f4760799",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q004",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q004",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "c5ac9cf1e378c63a481655c1939a8ef20d7d55be0b10045637a2f666e64045cf",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 64,
+          "end": 72,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q004:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q004",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q004:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q004",
+        "question_id": "2023-cn-math-national-b-science:q004",
+        "reference_answer": "D",
+        "explanation": "因为定义域除\\(x=0\\)外关于原点对称，且\\(f\\left(-x\\right)=\\frac{-xe^{-x}}{e^{-ax}-1}=\\frac{xe^{\\left(a-1\\right)x}}{e^{ax}-1}\\)，所以\\(f\\left(-x\\right)=f\\left(x\\right)\\)对\\(x\\ne 0\\)成立等价于\\(e^{\\left(a-1\\right)x}=e^{x}\\)，故\\(a-1=1\\)，即\\(a=2\\)，回代得\\(f\\left(x\\right)=\\frac{xe^{x}}{e^{2x}-1}\\)满足\\(f\\left(-x\\right)=f\\left(x\\right)\\)，所以按本页现稿选D. 对照原PDF题面，题干与选项完全一致，故结论同样为D.",
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "因为定义域除\\(x=0\\)外关于原点对称，且\\(f\\left(-x\\right)=\\frac{-x\\e^{-x}}{\\e^{-ax}-1}=\\frac{x\\e^{\\left(a-1\\right)x}}{\\e^{ax}-1}\\)，所以\\(f\\left(-x\\right)=f\\left(x\\right)\\)对\\(x\\ne 0\\)成立等价于\\(\\e^{\\left(a-1\\right)x}=\\e^{x}\\)，故\\(a-1=1\\)，即\\(a=2\\)，回代得\\(f\\left(x\\right)=\\frac{x\\e^{x}}{\\e^{2x}-1}\\)满足\\(f\\left(-x\\right)=f\\left(x\\right)\\)，所以按本页现稿选D. 对照原PDF题面，题干与选项完全一致，故结论同样为D.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 74,
+            "end": 76
+          },
+          {
+            "kind": "solution",
+            "start": 78,
+            "end": 80
+          }
+        ],
+        "question_version_sha256": "c5ac9cf1e378c63a481655c1939a8ef20d7d55be0b10045637a2f666e64045cf",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q005",
+      "subject": "math",
+      "stem": "设 \\(O\\) 为平面坐标系原点，在区域 \\(\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}\\) 内随机取一点 A. 则直线 \\(OA\\) 的倾斜角不大于 \\(\\frac\\pi4\\) 的概率为（\\quad）",
+      "options": {
+        "A": "\\(\\frac18\\)",
+        "B": "\\(\\frac16\\)",
+        "C": "\\(\\frac14\\)",
+        "D": "\\(\\frac12\\)"
+      },
+      "formulas": [
+        "O",
+        "\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}",
+        "OA",
+        "\\frac\\pi4",
+        "\\frac18",
+        "\\frac16",
+        "\\frac14",
+        "\\frac12"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "80f954f4c85c58abda9c80ed1eb8429bd4cdbcfab7af17efc2866b25728d759f",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q005",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q005",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "2fa36b1e3a805f800bf1e5bafb2ffe7a24eebda0b3ed997158c60738e18f8260",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 82,
+          "end": 90,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q005:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q005",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "2fa36b1e3a805f800bf1e5bafb2ffe7a24eebda0b3ed997158c60738e18f8260",
+        "reference_answer": "C",
+        "explanation": "以原点为中心的圆环上，满足倾斜角范围的两块扇环的角度和为π/2，概率1/4。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q005",
+        "base_version_sha256": "b9a41458c31a1ebb6ac0ec3b3042ebe20d03e18311f55a20b732802be8776c82",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "PDF与自主选拔在线整理版均支持恢复圆环和A项1/8。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "\\(1\\le x+y\\le4\\)",
+            "\\(\\{(x,y)\\mid1\\le x^2+y^2\\le4\\}\\)"
+          ]
+        ],
+        "option_edits": [
+          [
+            "A",
+            "\\(\\frac12\\)",
+            "\\(\\frac18\\)"
+          ]
+        ],
+        "result": "C",
+        "solution": "以原点为中心的圆环上，满足倾斜角范围的两块扇环的角度和为π/2，概率1/4。"
+      },
+      "base_version_sha256": "b9a41458c31a1ebb6ac0ec3b3042ebe20d03e18311f55a20b732802be8776c82",
+      "reviewed_answer": {
+        "question_version_sha256": "2fa36b1e3a805f800bf1e5bafb2ffe7a24eebda0b3ed997158c60738e18f8260",
+        "reference_answer": "C",
+        "explanation": "以原点为中心的圆环上，满足倾斜角范围的两块扇环的角度和为π/2，概率1/4。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-liberal:q010",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=\\sin(\\omega x+\\varphi)\\) 在区间 \\(\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)\\) 上单调递增，直线 \\(x=\\frac\\pi6\\) 和 \\(x=\\frac{2\\pi}3\\) 为函数 \\(y=f(x)\\) 的图象的两条对称轴，则 \\(f\\left(-\\frac{5\\pi}{12}\\right)=\\)（\\quad）",
+      "options": {
+        "A": "\\(-\\frac{\\sqrt3}{2}\\)",
+        "B": "\\(-\\frac12\\)",
+        "C": "\\(\\frac12\\)",
+        "D": "\\(\\frac{\\sqrt3}{2}\\)"
+      },
+      "formulas": [
+        "f(x)=\\sin(\\omega x+\\varphi)",
+        "\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)",
+        "x=\\frac\\pi6",
+        "x=\\frac{2\\pi}3",
+        "y=f(x)",
+        "f\\left(-\\frac{5\\pi}{12}\\right)=",
+        "-\\frac{\\sqrt3}{2}",
+        "-\\frac12",
+        "\\frac12",
+        "\\frac{\\sqrt3}{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=\\sin(\\omega x+\\varphi)\\) 在区间 \\(\\left(\\frac\\pi6,\\frac{2\\pi}3\\right)\\) 上单调递增，直线 \\(x=\\frac\\pi6\\) 和 \\(x=\\frac{2\\pi}3\\) 为函数 \\(y=f(x)\\) 的图象的两条对称轴，则 \\(f\\left(-\\frac{5\\pi}{12}\\right)=\\)（\\quad）\n\\choices{\\(-\\frac{\\sqrt3}{2}\\)}{\\(-\\frac12\\)}{\\(\\frac12\\)}{\\(\\frac{\\sqrt3}{2}\\)}",
+      "content_sha256": "731b98f11da589d43832619c908754d085967ec6f2421cc4324a29902fd90a05",
+      "origin_occurrence_id": "2023-cn-math-national-b-liberal:q010",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-liberal:q010",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "ef4a049c15b9302d88714d54c202b4c9e0fe0a26dd71a93cf7249c5e1e536f56",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 100,
+          "end": 108,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q006:answer",
+      "topic_flags": [
+        "函数与导数",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q006",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q006:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q006",
+        "question_id": "2023-cn-math-national-b-liberal:q010",
+        "reference_answer": "D",
+        "explanation": "正弦型函数的相邻两条对称轴相距半个周期，且每条对称轴对应一个极大值或极小值. 由于函数在两条给定对称轴之间单调递增，其中不能再有对称轴，故它们相邻，左端对应极小值 \\(-1\\)，右端对应极大值 \\(1\\). 因此 \\(\\frac{T}{2}=\\frac{2\\pi}{3}-\\frac{\\pi}{6}=\\frac{\\pi}{2}\\)，得 \\(T=\\pi\\)，\\(\\lvert\\omega\\rvert=2\\). 以左端极小值点为基准，无论 \\(\\omega\\) 的正负，函数均可写成 \\(f(x)=-\\cos\\left(2\\left(x-\\frac{\\pi}{6}\\right)\\right)\\). 代入左端、右端分别得 \\(-1\\)，\\(1\\)，且在该区间内 \\(f'(x)=2\\sin\\left(2\\left(x-\\frac{\\pi}{6}\\right)\\right)>0\\)，符合题设. 所以 \\(f\\left(-\\frac{5\\pi}{12}\\right)=-\\cos\\left(-\\frac{7\\pi}{6}\\right)=\\frac{\\sqrt3}{2}\\)，故选 D.",
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "正弦型函数的相邻两条对称轴相距半个周期，且每条对称轴对应一个极大值或极小值. 由于函数在两条给定对称轴之间单调递增，其中不能再有对称轴，故它们相邻，左端对应极小值 \\(-1\\)，右端对应极大值 \\(1\\). 因此 \\(\\frac{T}{2}=\\frac{2\\pi}{3}-\\frac{\\pi}{6}=\\frac{\\pi}{2}\\)，得 \\(T=\\pi\\)，\\(\\lvert\\omega\\rvert=2\\). 以左端极小值点为基准，无论 \\(\\omega\\) 的正负，函数均可写成 \\(f(x)=-\\cos\\left(2\\left(x-\\frac{\\pi}{6}\\right)\\right)\\). 代入左端、右端分别得 \\(-1\\)，\\(1\\)，且在该区间内 \\(f'(x)=2\\sin\\left(2\\left(x-\\frac{\\pi}{6}\\right)\\right)>0\\)，符合题设. 所以 \\(f\\left(-\\frac{5\\pi}{12}\\right)=-\\cos\\left(-\\frac{7\\pi}{6}\\right)=\\frac{\\sqrt3}{2}\\)，故选 D.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 110,
+            "end": 112
+          },
+          {
+            "kind": "solution",
+            "start": 114,
+            "end": 116
+          }
+        ],
+        "question_version_sha256": "ef4a049c15b9302d88714d54c202b4c9e0fe0a26dd71a93cf7249c5e1e536f56",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q007",
+      "subject": "math",
+      "stem": "甲乙两位同学从 6 种课外读物中各自选读 2 种，则这两人选读的课外读物中恰有 1 种相同的选法共有（\\quad）",
+      "options": {
+        "A": "\\(30\\)",
+        "B": "\\(60\\)",
+        "C": "\\(120\\)",
+        "D": "\\(240\\)"
+      },
+      "formulas": [
+        "30",
+        "60",
+        "120",
+        "240"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "甲乙两位同学从 6 种课外读物中各自选读 2 种，则这两人选读的课外读物中恰有 1 种相同的选法共有（\\quad）\n\n\\choices\n    {\\(30\\)}\n    {\\(60\\)}\n    {\\(120\\)}\n    {\\(240\\)}",
+      "content_sha256": "14eddc9c9bf04d30a75cab057afe7c9a41f994a28349a628b2c3a33262602530",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q007",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q007",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "a2a31fca65309d435470e410728e1d4181b1b5895e89661a83df8cdc5c1e508a",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 118,
+          "end": 126,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q007:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q007",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q007:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q007",
+        "question_id": "2023-cn-math-national-b-science:q007",
+        "reference_answer": "C",
+        "explanation": "因为恰有\\(1\\)种相同可分步计数，先选相同的\\(1\\)种有\\(\\mathrm C_{6}^{1}=6\\)种，再为甲选另\\(1\\)种有\\(\\mathrm C_{5}^{1}=5\\)种，最后为乙从既非相同种又非甲另选种的余下\\(4\\)种中选\\(1\\)种有\\(4\\)种，所以总数为\\(6\\times 5\\times 4=120\\)，即对应选项C，故按本页现稿选C. 对照原PDF题面，除选项多写量词种外计数对象完全一致，故结论同样为C.",
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "因为恰有\\(1\\)种相同可分步计数，先选相同的\\(1\\)种有\\(\\mathrm C_{6}^{1}=6\\)种，再为甲选另\\(1\\)种有\\(\\mathrm C_{5}^{1}=5\\)种，最后为乙从既非相同种又非甲另选种的余下\\(4\\)种中选\\(1\\)种有\\(4\\)种，所以总数为\\(6\\times 5\\times 4=120\\)，即对应选项C，故按本页现稿选C. 对照原PDF题面，除选项多写量词种外计数对象完全一致，故结论同样为C.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 128,
+            "end": 130
+          },
+          {
+            "kind": "solution",
+            "start": 132,
+            "end": 134
+          }
+        ],
+        "question_version_sha256": "a2a31fca65309d435470e410728e1d4181b1b5895e89661a83df8cdc5c1e508a",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q008",
+      "subject": "math",
+      "stem": "已知圆锥 \\(PO\\) 的底面半径为 3，\\(O\\) 为底面圆心，\\(PA\\)，\\(PB\\) 为圆锥母线，\\(\\angle AOB=120^\\circ\\)，若 \\(\\triangle PAB\\) 面积为 \\( \\frac{3\\sqrt3}{4}\\)，则该圆锥体积为（\\quad）",
+      "options": {
+        "A": "\\(\\pi\\)",
+        "B": "\\(6\\pi\\)",
+        "C": "\\(3\\pi\\)",
+        "D": "\\(\\frac{3\\pi}{2}\\)"
+      },
+      "formulas": [
+        "PO",
+        "O",
+        "PA",
+        "PB",
+        "\\angle AOB=120^\\circ",
+        "\\triangle PAB",
+        "\\frac{3\\sqrt3}{4}",
+        "\\pi",
+        "6\\pi",
+        "3\\pi",
+        "\\frac{3\\pi}{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知圆锥 \\(PO\\) 的底面半径为 3，\\(O\\) 为底面圆心，\\(PA\\)，\\(PB\\) 为圆锥母线，\\(\\angle AOB=120^\\circ\\)，若 \\(\\triangle PAB\\) 面积为 \\( \\frac{3\\sqrt3}{4}\\)，则该圆锥体积为（\\quad）\n\n\\choices\n    {\\(\\pi\\)}\n    {\\(6\\pi\\)}\n    {\\(3\\pi\\)}\n    {\\(\\frac{3\\pi}{2}\\)}",
+      "content_sha256": "e34e5b770d4b15eea454d4ec05b57ae54b0e5d4818e3b745fc0f211ba9f9780d",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q008",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q008",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "2ea37cf4c0beb948dfb7334ff5a565daff899d9b9808f660a5f44af2ed0a3456",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 136,
+          "end": 144,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q008:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q008",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q008:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q008",
+        "question_id": "2023-cn-math-national-b-science:q008",
+        "reference_answer": "按本页现稿无解（对应原PDF选项B）",
+        "explanation": "因为按本页现稿底面半径为\\(3\\)且\\(\\angle AOB=120^{\\circ}\\)，所以\\(AB^{2}=9+9-2\\times 9\\times \\left(-\\frac{1}{2}\\right)=27\\)，即\\(AB=3\\sqrt{3}\\)，若\\(\\triangle PAB\\)面积为\\(\\frac{3\\sqrt{3}}{4}\\)，则其在底边\\(AB\\)上的高为\\(\\frac{1}{2}\\)，故母线长为\\(\\sqrt{\\left(\\frac{1}{2}\\right)^{2}+\\left(\\frac{3\\sqrt{3}}{2}\\right)^{2}}=\\sqrt{7}\\)，它小于底面半径\\(3\\)，圆锥高为虚数，所以按本页现稿无解. 对照原PDF题面，半径为\\(\\sqrt{3}\\)且面积为\\(\\frac{9\\sqrt{3}}{4}\\)，因为此时\\(AB=3\\)，对应高为\\(\\frac{3\\sqrt{3}}{2}\\)，所以母线为\\(3\\)，故高为\\(\\sqrt{6}\\)，体积为\\(\\frac{1}{3}\\pi\\times 3\\times \\sqrt{6}=\\sqrt{6}\\pi\\)，即对应原PDF选项B.",
+        "raw_answer_latex": "按本页现稿无解（对应原PDF选项B）",
+        "raw_solution_latex": "因为按本页现稿底面半径为\\(3\\)且\\(\\angle AOB=120^{\\circ}\\)，所以\\(AB^{2}=9+9-2\\times 9\\times \\left(-\\frac{1}{2}\\right)=27\\)，即\\(AB=3\\sqrt{3}\\)，若\\(\\triangle PAB\\)面积为\\(\\frac{3\\sqrt{3}}{4}\\)，则其在底边\\(AB\\)上的高为\\(\\frac{1}{2}\\)，故母线长为\\(\\sqrt{\\left(\\frac{1}{2}\\right)^{2}+\\left(\\frac{3\\sqrt{3}}{2}\\right)^{2}}=\\sqrt{7}\\)，它小于底面半径\\(3\\)，圆锥高为虚数，所以按本页现稿无解. 对照原PDF题面，半径为\\(\\sqrt{3}\\)且面积为\\(\\frac{9\\sqrt{3}}{4}\\)，因为此时\\(AB=3\\)，对应高为\\(\\frac{3\\sqrt{3}}{2}\\)，所以母线为\\(3\\)，故高为\\(\\sqrt{6}\\)，体积为\\(\\frac{1}{3}\\pi\\times 3\\times \\sqrt{6}=\\sqrt{6}\\pi\\)，即对应原PDF选项B.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 146,
+            "end": 148
+          },
+          {
+            "kind": "solution",
+            "start": 150,
+            "end": 152
+          }
+        ],
+        "question_version_sha256": "2ea37cf4c0beb948dfb7334ff5a565daff899d9b9808f660a5f44af2ed0a3456",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q009",
+      "subject": "math",
+      "stem": "已知 \\(\\triangle ABC\\) 为等腰直角三角形，\\(AB\\) 为斜边，\\(\\triangle ABD\\) 为等边三角形，若二面角 \\(C-AB-D\\) 为 \\(150^\\circ\\)，则直线 \\(CD\\) 与平面 \\(ABC\\) 所成角的正切值为（\\quad）",
+      "options": {
+        "A": "\\(\\frac15\\)",
+        "B": "\\(\\frac{3}{5}\\)",
+        "C": "\\(\\frac{5}{3}\\)",
+        "D": "\\(\\frac{5}{\\sqrt3}\\)"
+      },
+      "formulas": [
+        "\\triangle ABC",
+        "AB",
+        "\\triangle ABD",
+        "C-AB-D",
+        "150^\\circ",
+        "CD",
+        "ABC",
+        "\\frac15",
+        "\\frac{3}{5}",
+        "\\frac{5}{3}",
+        "\\frac{5}{\\sqrt3}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(\\triangle ABC\\) 为等腰直角三角形，\\(AB\\) 为斜边，\\(\\triangle ABD\\) 为等边三角形，若二面角 \\(C-AB-D\\) 为 \\(150^\\circ\\)，则直线 \\(CD\\) 与平面 \\(ABC\\) 所成角的正切值为（\\quad）\n\n\\choices\n    {\\(\\frac15\\)}\n    {\\(\\frac{3}{5}\\)}\n    {\\(\\frac{5}{3}\\)}\n    {\\(\\frac{5}{\\sqrt3}\\)}",
+      "content_sha256": "11c30db968df3c2051c4400997dbd139cf44e8a9e8a02d823f4e7637f7d23e48",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q009",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q009",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 9,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "e161c8a1d116983ab0b06fe0ffca276d2dab1553aaf66982f361dceffab9fd7e",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 154,
+          "end": 162,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q009:answer",
+      "topic_flags": [
+        "立体几何",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q009",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q009:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q009",
+        "question_id": "2023-cn-math-national-b-science:q009",
+        "reference_answer": "无正确选项（正确值为\\(\\frac{\\sqrt{3}}{5}\\)，对应原PDF选项C）",
+        "explanation": "设\\(E\\)为\\(\\overline{AB}\\)的中点，因为\\(\\triangle ABC\\)为以\\(\\overline{AB}\\)为斜边的等腰直角三角形，所以\\(\\overline{CE}\\perp\\overline{AB}\\)，因为\\(\\triangle ABD\\)为等边三角形，所以\\(\\overline{DE}\\perp\\overline{AB}\\)，所以\\(\\angle CED\\)为二面角\\(C-AB-D\\)的平面角，即\\(\\angle CED=150^\\circ\\)，所求正切值与\\(\\left\\lvert AB\\right\\rvert\\)的取值无关，故设\\(\\left\\lvert AB\\right\\rvert=2\\)，则\\(\\left\\lvert CE\\right\\rvert=1\\)，\\(\\left\\lvert DE\\right\\rvert=\\sqrt{3}\\)，由余弦定理得\\(\\left\\lvert CD\\right\\rvert^{2}=1+3-2\\left(1\\right)\\left(\\sqrt{3}\\right)\\cos150^\\circ=7\\)，因为\\(\\overline{AB}\\perp\\overline{CE}\\)且\\(\\overline{AB}\\perp\\overline{DE}\\)，所以\\(\\overline{AB}\\perp\\)平面\\(CDE\\)，又\\(\\overline{AB}\\subset\\)平面\\(ABC\\)，所以平面\\(CDE\\)与平面\\(ABC\\)垂直，其交线为直线\\(CE\\)，过\\(D\\)在平面\\(CDE\\)内作\\(DH\\perp\\)直线\\(CE\\)，垂足为\\(H\\)，则\\(\\overline{DH}\\perp\\)平面\\(ABC\\)，所以\\(\\angle DCH\\)即直线\\(CD\\)与平面\\(ABC\\)所成角，因为\\(\\angle CED=150^\\circ\\)为钝角，所以\\(H\\)落在\\(\\overline{CE}\\)向\\(E\\)外侧的延长线上，且\\(\\left\\lvert EH\\right\\rvert=\\left\\lvert DE\\right\\rvert\\cos30^\\circ=\\frac{3}{2}\\)，\\(\\left\\lvert DH\\right\\rvert=\\left\\lvert DE\\right\\rvert\\sin30^\\circ=\\frac{\\sqrt{3}}{2}\\)，于是\\(\\left\\lvert CH\\right\\rvert=1+\\frac{3}{2}=\\frac{5}{2}\\)，所以\\(\\tan\\angle DCH=\\frac{\\sqrt{3}}{5}\\)，经回代\\(\\left\\lvert CD\\right\\rvert^{2}=\\left\\lvert CH\\right\\rvert^{2}+\\left\\lvert DH\\right\\rvert^{2}=7\\)一致. 按本页现稿选项为\\(\\frac{1}{5}\\)，\\(\\frac{3}{5}\\)，\\(\\frac{5}{3}\\)，\\(\\frac{5}{\\sqrt{3}}\\)，正确值\\(\\frac{\\sqrt{3}}{5}\\)不在其中，故现稿无正确选项；对照原PDF题面（p001，对应1185页）选项为\\(\\frac{1}{5}\\)，\\(\\frac{\\sqrt{2}}{5}\\)，\\(\\frac{\\sqrt{3}}{5}\\)，\\(\\frac{2}{5}\\)，结论为C.",
+        "raw_answer_latex": "无正确选项（正确值为\\(\\frac{\\sqrt{3}}{5}\\)，对应原PDF选项C）",
+        "raw_solution_latex": "设\\(E\\)为\\(\\overline{AB}\\)的中点，因为\\(\\triangle ABC\\)为以\\(\\overline{AB}\\)为斜边的等腰直角三角形，所以\\(\\overline{CE}\\perp\\overline{AB}\\)，因为\\(\\triangle ABD\\)为等边三角形，所以\\(\\overline{DE}\\perp\\overline{AB}\\)，所以\\(\\angle CED\\)为二面角\\(C-AB-D\\)的平面角，即\\(\\angle CED=150^\\circ\\)，所求正切值与\\(\\left\\lvert AB\\right\\rvert\\)的取值无关，故设\\(\\left\\lvert AB\\right\\rvert=2\\)，则\\(\\left\\lvert CE\\right\\rvert=1\\)，\\(\\left\\lvert DE\\right\\rvert=\\sqrt{3}\\)，由余弦定理得\\(\\left\\lvert CD\\right\\rvert^{2}=1+3-2\\left(1\\right)\\left(\\sqrt{3}\\right)\\cos150^\\circ=7\\)，因为\\(\\overline{AB}\\perp\\overline{CE}\\)且\\(\\overline{AB}\\perp\\overline{DE}\\)，所以\\(\\overline{AB}\\perp\\)平面\\(CDE\\)，又\\(\\overline{AB}\\subset\\)平面\\(ABC\\)，所以平面\\(CDE\\)与平面\\(ABC\\)垂直，其交线为直线\\(CE\\)，过\\(D\\)在平面\\(CDE\\)内作\\(DH\\perp\\)直线\\(CE\\)，垂足为\\(H\\)，则\\(\\overline{DH}\\perp\\)平面\\(ABC\\)，所以\\(\\angle DCH\\)即直线\\(CD\\)与平面\\(ABC\\)所成角，因为\\(\\angle CED=150^\\circ\\)为钝角，所以\\(H\\)落在\\(\\overline{CE}\\)向\\(E\\)外侧的延长线上，且\\(\\left\\lvert EH\\right\\rvert=\\left\\lvert DE\\right\\rvert\\cos30^\\circ=\\frac{3}{2}\\)，\\(\\left\\lvert DH\\right\\rvert=\\left\\lvert DE\\right\\rvert\\sin30^\\circ=\\frac{\\sqrt{3}}{2}\\)，于是\\(\\left\\lvert CH\\right\\rvert=1+\\frac{3}{2}=\\frac{5}{2}\\)，所以\\(\\tan\\angle DCH=\\frac{\\sqrt{3}}{5}\\)，经回代\\(\\left\\lvert CD\\right\\rvert^{2}=\\left\\lvert CH\\right\\rvert^{2}+\\left\\lvert DH\\right\\rvert^{2}=7\\)一致. 按本页现稿选项为\\(\\frac{1}{5}\\)，\\(\\frac{3}{5}\\)，\\(\\frac{5}{3}\\)，\\(\\frac{5}{\\sqrt{3}}\\)，正确值\\(\\frac{\\sqrt{3}}{5}\\)不在其中，故现稿无正确选项；对照原PDF题面（p001，对应1185页）选项为\\(\\frac{1}{5}\\)，\\(\\frac{\\sqrt{2}}{5}\\)，\\(\\frac{\\sqrt{3}}{5}\\)，\\(\\frac{2}{5}\\)，结论为C.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 164,
+            "end": 166
+          },
+          {
+            "kind": "solution",
+            "start": 168,
+            "end": 170
+          }
+        ],
+        "question_version_sha256": "e161c8a1d116983ab0b06fe0ffca276d2dab1553aaf66982f361dceffab9fd7e",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q010",
+      "subject": "math",
+      "stem": "已知等差数列 \\(\\{a_n\\}\\) 的公差为 \\(\\frac{2\\pi}{3}\\)，集合 \\(S=\\{\\cos a_n\\mid n\\in\\mathbb{N}^*\\}=\\{a,b\\}\\)，则 \\(ab=\\)（\\quad）",
+      "options": {
+        "A": "\\(-1\\)",
+        "B": "\\(-\\frac12\\)",
+        "C": "\\(0\\)",
+        "D": "\\(\\frac12\\)"
+      },
+      "formulas": [
+        "\\{a_n\\}",
+        "\\frac{2\\pi}{3}",
+        "S=\\{\\cos a_n\\mid n\\in\\mathbb{N}^*\\}=\\{a,b\\}",
+        "ab=",
+        "-1",
+        "-\\frac12",
+        "0",
+        "\\frac12"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知等差数列 \\(\\{a_n\\}\\) 的公差为 \\(\\frac{2\\pi}{3}\\)，集合 \\(S=\\{\\cos a_n\\mid n\\in\\N^*\\}=\\{a,b\\}\\)，则 \\(ab=\\)（\\quad）\n\n\\choices\n    {\\(-1\\)}\n    {\\(-\\frac12\\)}\n    {\\(0\\)}\n    {\\(\\frac12\\)}",
+      "content_sha256": "80cb7c1e4f653322a120d2a46ee43bb8390addc603602ccd89812833e7f1b920",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q010",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q010",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 10,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "e6fe11ffcf439ba15533468ea55f74207039dfffa9d12b3f3cd63e88a048aebc",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 172,
+          "end": 180,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q010:answer",
+      "topic_flags": [
+        "数列",
+        "三角函数与解三角形",
+        "集合与复数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q010",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q010:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q010",
+        "question_id": "2023-cn-math-national-b-science:q010",
+        "reference_answer": "B",
+        "explanation": "设\\(a_{1}=\\theta\\)，则\\(\\cos a_{n}\\)依次取\\(\\cos\\theta\\)，\\(\\cos\\left(\\theta+\\frac{2\\pi}{3}\\right)\\)，\\(\\cos\\left(\\theta+\\frac{4\\pi}{3}\\right)\\)并以\\(3\\)为周期循环，因为\\(S\\)恰有两个元素，所以上述三项不可能全异，也不可能全相等而只剩一元，故恰有一对相等，因为若\\(\\cos\\alpha=\\cos\\beta\\)，则\\(\\alpha-\\beta=2k\\pi\\)或\\(\\alpha+\\beta=2k\\pi\\)（\\(k\\in\\mathbb{Z}\\)），对第一对\\(\\theta\\)与\\(\\theta+\\frac{2\\pi}{3}\\)，差\\(\\frac{2\\pi}{3}\\)不是\\(2\\pi\\)的整数倍，故相等当且仅当\\(2\\theta+\\frac{2\\pi}{3}=2k\\pi\\)，即\\(\\theta=k\\pi-\\frac{\\pi}{3}\\)，同理第二对相等当且仅当\\(\\theta=k\\pi-\\frac{2\\pi}{3}\\)，第三对\\(\\theta+\\frac{2\\pi}{3}\\)与\\(\\theta+\\frac{4\\pi}{3}\\)相等当且仅当\\(\\theta=k\\pi\\)，且任意两组条件不能同时成立，所以三项全相等不可能，当\\(\\theta=k\\pi\\)时三项为\\(1\\)，\\(-\\frac{1}{2}\\)，\\(-\\frac{1}{2}\\)或\\(-1\\)，\\(\\frac{1}{2}\\)，\\(\\frac{1}{2}\\)，即\\(S=\\left\\{1,-\\frac{1}{2}\\right\\}\\)或\\(\\left\\{-1,\\frac{1}{2}\\right\\}\\)，当\\(\\theta=k\\pi-\\frac{\\pi}{3}\\)或\\(\\theta=k\\pi-\\frac{2\\pi}{3}\\)时直接代入同样得到\\(S=\\left\\{1,-\\frac{1}{2}\\right\\}\\)或\\(\\left\\{-1,\\frac{1}{2}\\right\\}\\)，例如\\(\\theta=-\\frac{\\pi}{3}\\)时三项为\\(\\frac{1}{2}\\)，\\(\\frac{1}{2}\\)，\\(-1\\)，故无论哪一对相等都有\\(ab=-\\frac{1}{2}\\). 按本页现稿结论为B；对照原PDF题面（p001，对应1185页）题干与选项一致，结论同样为B.",
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "设\\(a_{1}=\\theta\\)，则\\(\\cos a_{n}\\)依次取\\(\\cos\\theta\\)，\\(\\cos\\left(\\theta+\\frac{2\\pi}{3}\\right)\\)，\\(\\cos\\left(\\theta+\\frac{4\\pi}{3}\\right)\\)并以\\(3\\)为周期循环，因为\\(S\\)恰有两个元素，所以上述三项不可能全异，也不可能全相等而只剩一元，故恰有一对相等，因为若\\(\\cos\\alpha=\\cos\\beta\\)，则\\(\\alpha-\\beta=2k\\pi\\)或\\(\\alpha+\\beta=2k\\pi\\)（\\(k\\in\\Z\\)），对第一对\\(\\theta\\)与\\(\\theta+\\frac{2\\pi}{3}\\)，差\\(\\frac{2\\pi}{3}\\)不是\\(2\\pi\\)的整数倍，故相等当且仅当\\(2\\theta+\\frac{2\\pi}{3}=2k\\pi\\)，即\\(\\theta=k\\pi-\\frac{\\pi}{3}\\)，同理第二对相等当且仅当\\(\\theta=k\\pi-\\frac{2\\pi}{3}\\)，第三对\\(\\theta+\\frac{2\\pi}{3}\\)与\\(\\theta+\\frac{4\\pi}{3}\\)相等当且仅当\\(\\theta=k\\pi\\)，且任意两组条件不能同时成立，所以三项全相等不可能，当\\(\\theta=k\\pi\\)时三项为\\(1\\)，\\(-\\frac{1}{2}\\)，\\(-\\frac{1}{2}\\)或\\(-1\\)，\\(\\frac{1}{2}\\)，\\(\\frac{1}{2}\\)，即\\(S=\\left\\{1,-\\frac{1}{2}\\right\\}\\)或\\(\\left\\{-1,\\frac{1}{2}\\right\\}\\)，当\\(\\theta=k\\pi-\\frac{\\pi}{3}\\)或\\(\\theta=k\\pi-\\frac{2\\pi}{3}\\)时直接代入同样得到\\(S=\\left\\{1,-\\frac{1}{2}\\right\\}\\)或\\(\\left\\{-1,\\frac{1}{2}\\right\\}\\)，例如\\(\\theta=-\\frac{\\pi}{3}\\)时三项为\\(\\frac{1}{2}\\)，\\(\\frac{1}{2}\\)，\\(-1\\)，故无论哪一对相等都有\\(ab=-\\frac{1}{2}\\). 按本页现稿结论为B；对照原PDF题面（p001，对应1185页）题干与选项一致，结论同样为B.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 182,
+            "end": 184
+          },
+          {
+            "kind": "solution",
+            "start": 186,
+            "end": 188
+          }
+        ],
+        "question_version_sha256": "e6fe11ffcf439ba15533468ea55f74207039dfffa9d12b3f3cd63e88a048aebc",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q011",
+      "subject": "math",
+      "stem": "设 \\(A\\)，\\(B\\) 为双曲线 \\(\\frac{x^2}{9}-\\frac{y^2}{1}=1\\) 上两点，下列点中可为 \\(\\overline{AB}\\) 中点的是（\\quad）",
+      "options": {
+        "A": "\\((1,1)\\)",
+        "B": "\\((-1,2)\\)",
+        "C": "\\((1,3)\\)",
+        "D": "\\((-1,-4)\\)"
+      },
+      "formulas": [
+        "A",
+        "B",
+        "\\frac{x^2}{9}-\\frac{y^2}{1}=1",
+        "\\overline{AB}",
+        "(1,1)",
+        "(-1,2)",
+        "(1,3)",
+        "(-1,-4)"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设 \\(A\\)，\\(B\\) 为双曲线 \\(\\frac{x^2}{9}-\\frac{y^2}{1}=1\\) 上两点，下列点中可为 \\(\\overline{AB}\\) 中点的是（\\quad）\n\n\\choices\n    {\\((1,1)\\)}\n    {\\((-1,2)\\)}\n    {\\((1,3)\\)}\n    {\\((-1,-4)\\)}",
+      "content_sha256": "1b719d7ef78748cbfb75a908b70a48b7681f08fdadeaab1b40ebae0c0c9bc1aa",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q011",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q011",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 11,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "7ffc44447a758040218406ddde858b6a4243b51853ae2ab2a2ad8609ec108079",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 190,
+          "end": 198,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q011:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q011",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q011:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q011",
+        "question_id": "2023-cn-math-national-b-science:q011",
+        "reference_answer": "现稿下A/B/C/D均可为中点（对应原PDF唯一为D）",
+        "explanation": "对双曲线\\(x^{2}-\\frac{y^{2}}{9}=1\\)设\\(A\\left(x_{1},y_{1}\\right)\\)，\\(B\\left(x_{2},y_{2}\\right)\\)，中点\\(M\\left(x_{0},y_{0}\\right)\\)，当\\(y_{0}\\ne0\\)且\\(x_{1}\\ne x_{2}\\)时两式相减得\\(\\left(x_{1}-x_{2}\\right)\\left(x_{1}+x_{2}\\right)=\\frac{\\left(y_{1}-y_{2}\\right)\\left(y_{1}+y_{2}\\right)}{9}\\)，所以弦斜率\\(k=\\frac{9x_{0}}{y_{0}}\\)，以此斜率过\\(M\\)作直线并代入双曲线，用判别式检验是否确交于两点且根和为\\(2x_{0}\\)，对\\(\\left(1,1\\right)\\)得\\(k=9\\)，直线\\(y=9x-8\\)代入得\\(72x^{2}-144x+73=0\\)，判别式小于\\(0\\)，不可为中点，对\\(\\left(-1,2\\right)\\)得\\(k=-\\frac{9}{2}\\)，代入得\\(45x^{2}+90x+61=0\\)，判别式小于\\(0\\)，不可为中点，对\\(\\left(1,3\\right)\\)得\\(k=3\\)，直线为\\(y=3x\\)，恰为渐近线，代入得\\(0=1\\)，无交点，不可为中点，对\\(\\left(-1,-4\\right)\\)得\\(k=\\frac{9}{4}\\)，直线\\(y=\\frac{9}{4}x-\\frac{7}{4}\\)代入得\\(63x^{2}+126x-193=0\\)，判别式大于\\(0\\)且根和为\\(-2=2x_{0}\\)，故恰以其为中点，垂直或\\(y_{0}=0\\)情形不适用于本题四点，已逐点覆盖. 按本页现稿双曲线为\\(\\frac{x^{2}}{9}-\\frac{y^{2}}{1}=1\\)，此时中点斜率公式为\\(k=\\frac{x_{0}}{9y_{0}}\\)，四个候选点代入分别得\\(8x^{2}-16x-145=0\\)，\\(35x^{2}+70x-1549=0\\)，\\(80x^{2}-160x-7129=0\\)，\\(143x^{2}+286x-21745=0\\)，判别式均大于\\(0\\)且根和均为\\(2x_{0}\\)，故现稿下四个选项都可为中点，单选不成立；对照原PDF题面（p001，对应1185页）双曲线为\\(x^{2}-\\frac{y^{2}}{9}=1\\)，唯一结论为D.",
+        "raw_answer_latex": "现稿下A/B/C/D均可为中点（对应原PDF唯一为D）",
+        "raw_solution_latex": "对双曲线\\(x^{2}-\\frac{y^{2}}{9}=1\\)设\\(A\\left(x_{1},y_{1}\\right)\\)，\\(B\\left(x_{2},y_{2}\\right)\\)，中点\\(M\\left(x_{0},y_{0}\\right)\\)，当\\(y_{0}\\ne0\\)且\\(x_{1}\\ne x_{2}\\)时两式相减得\\(\\left(x_{1}-x_{2}\\right)\\left(x_{1}+x_{2}\\right)=\\frac{\\left(y_{1}-y_{2}\\right)\\left(y_{1}+y_{2}\\right)}{9}\\)，所以弦斜率\\(k=\\frac{9x_{0}}{y_{0}}\\)，以此斜率过\\(M\\)作直线并代入双曲线，用判别式检验是否确交于两点且根和为\\(2x_{0}\\)，对\\(\\left(1,1\\right)\\)得\\(k=9\\)，直线\\(y=9x-8\\)代入得\\(72x^{2}-144x+73=0\\)，判别式小于\\(0\\)，不可为中点，对\\(\\left(-1,2\\right)\\)得\\(k=-\\frac{9}{2}\\)，代入得\\(45x^{2}+90x+61=0\\)，判别式小于\\(0\\)，不可为中点，对\\(\\left(1,3\\right)\\)得\\(k=3\\)，直线为\\(y=3x\\)，恰为渐近线，代入得\\(0=1\\)，无交点，不可为中点，对\\(\\left(-1,-4\\right)\\)得\\(k=\\frac{9}{4}\\)，直线\\(y=\\frac{9}{4}x-\\frac{7}{4}\\)代入得\\(63x^{2}+126x-193=0\\)，判别式大于\\(0\\)且根和为\\(-2=2x_{0}\\)，故恰以其为中点，垂直或\\(y_{0}=0\\)情形不适用于本题四点，已逐点覆盖. 按本页现稿双曲线为\\(\\frac{x^{2}}{9}-\\frac{y^{2}}{1}=1\\)，此时中点斜率公式为\\(k=\\frac{x_{0}}{9y_{0}}\\)，四个候选点代入分别得\\(8x^{2}-16x-145=0\\)，\\(35x^{2}+70x-1549=0\\)，\\(80x^{2}-160x-7129=0\\)，\\(143x^{2}+286x-21745=0\\)，判别式均大于\\(0\\)且根和均为\\(2x_{0}\\)，故现稿下四个选项都可为中点，单选不成立；对照原PDF题面（p001，对应1185页）双曲线为\\(x^{2}-\\frac{y^{2}}{9}=1\\)，唯一结论为D.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 200,
+            "end": 202
+          },
+          {
+            "kind": "solution",
+            "start": 204,
+            "end": 206
+          }
+        ],
+        "question_version_sha256": "7ffc44447a758040218406ddde858b6a4243b51853ae2ab2a2ad8609ec108079",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q012",
+      "subject": "math",
+      "stem": "已知圆 \\(O\\) 的半径为 1，直线 \\(PA\\) 与 \\(O\\) 相切于 \\(A\\)，\\(\\overline{PB}\\cap\\overline{PC}\\) 与 \\(O\\) 相交于 \\(B\\)，\\(C\\)，\\(D\\) 为 \\(BC\\) 中点，若 \\(PO=2\\)，则 \\(PA\\cdot PD\\) 的最大值为（\\quad）",
+      "options": {
+        "A": "\\(1\\)",
+        "B": "\\(2\\)",
+        "C": "\\(1+\\sqrt2\\)",
+        "D": "\\(2+\\sqrt2\\)"
+      },
+      "formulas": [
+        "O",
+        "PA",
+        "O",
+        "A",
+        "\\overline{PB}\\cap\\overline{PC}",
+        "O",
+        "B",
+        "C",
+        "D",
+        "BC",
+        "PO=2",
+        "PA\\cdot PD",
+        "1",
+        "2",
+        "1+\\sqrt2",
+        "2+\\sqrt2"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知圆 \\(O\\) 的半径为 1，直线 \\(PA\\) 与 \\(O\\) 相切于 \\(A\\)，\\(\\overline{PB}\\cap\\overline{PC}\\) 与 \\(O\\) 相交于 \\(B\\)，\\(C\\)，\\(D\\) 为 \\(BC\\) 中点，若 \\(PO=2\\)，则 \\(PA\\cdot PD\\) 的最大值为（\\quad）\n\n\\choices\n    {\\(1\\)}\n    {\\(2\\)}\n    {\\(1+\\sqrt2\\)}\n    {\\(2+\\sqrt2\\)}",
+      "content_sha256": "6aa2889685c8ee1ac104fb28f23c2b4e247cd7d2d3260a5174fa4a09bd151f2d",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q012",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q012",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 12,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "5b3966018b03c06e3e8465d5e0f523a4d80ad299b352a085f5b3529b32f757d8",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 208,
+          "end": 216,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q012:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q012",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q012:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q012",
+        "question_id": "2023-cn-math-national-b-science:q012",
+        "reference_answer": "无正确选项（正确值为\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，对应原PDF选项A）",
+        "explanation": "设\\(O=\\left(0,0\\right)\\)，\\(P=\\left(\\sqrt{2},0\\right)\\)，则\\(\\left\\lvert PA\\right\\rvert^{2}=\\left\\lvert PO\\right\\rvert^{2}-1=1\\)，\\(\\left\\lvert PA\\right\\rvert=1\\)，直线\\(PA\\)与圆切于\\(A\\)，不妨取\\(A=\\left(\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}\\right)\\)，对称性保证另一侧结果相同，设过\\(P\\)的割线交圆于\\(B\\)，\\(C\\)，\\(D\\)为\\(\\overline{BC}\\)中点，则\\(\\overline{OD}\\perp\\overline{PB}\\)，即\\(\\angle ODP=90^\\circ\\)，故\\(D\\)在以\\(\\overline{OP}\\)为直径的圆上，记\\(\\alpha=\\angle DPO\\)，则\\(\\left\\lvert PD\\right\\rvert=\\sqrt{2}\\cos\\alpha\\)，\\(\\left\\lvert OD\\right\\rvert=\\sqrt{2}\\sin\\alpha\\le1\\)，所以\\(0\\le\\alpha\\le\\frac{\\pi}{4}\\)，\\(\\angle APO=\\frac{\\pi}{4}\\)，当\\(D\\)与\\(A\\)同侧时\\(\\overrightarrow{PA}\\)与\\(\\overrightarrow{PD}\\)夹角为\\(\\frac{\\pi}{4}-\\alpha\\)，点积\\(f\\left(\\alpha\\right)=\\sqrt{2}\\cos\\alpha\\cos\\left(\\frac{\\pi}{4}-\\alpha\\right)=\\cos^{2}\\alpha+\\sin\\alpha\\cos\\alpha=\\frac{1}{2}+\\frac{\\cos2\\alpha+\\sin2\\alpha}{2}\\)，因为\\(2\\alpha\\in\\left[0,\\frac{\\pi}{2}\\right]\\)，所以\\(f\\)在\\(\\alpha=\\frac{\\pi}{8}\\)取最大值\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，端点值\\(f\\left(0\\right)=1\\)，\\(f\\left(\\frac{\\pi}{4}\\right)=1\\)均更小，当\\(D\\)与\\(A\\)异侧时点积\\(g\\left(\\alpha\\right)=\\sqrt{2}\\cos\\alpha\\cos\\left(\\frac{\\pi}{4}+\\alpha\\right)=\\frac{1}{2}+\\frac{\\cos2\\alpha-\\sin2\\alpha}{2}\\le1\\)，最大值\\(1\\)在\\(\\alpha=0\\)取得，故全局最大值为\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\). 按本页现稿\\(\\left\\lvert PO\\right\\rvert=2\\)且选项为\\(1\\)，\\(2\\)，\\(1+\\sqrt{2}\\)，\\(2+\\sqrt{2}\\)，同法得\\(\\left\\lvert PA\\right\\rvert=\\sqrt{3}\\)，\\(\\angle APO=\\frac{\\pi}{6}\\)，\\(0\\le\\alpha\\le\\frac{\\pi}{6}\\)，同侧点积为\\(\\frac{3}{2}+\\frac{3\\cos2\\alpha+\\sqrt{3}\\sin2\\alpha}{2}\\)，在\\(\\alpha=\\frac{\\pi}{12}\\)取最大值\\(\\frac{3}{2}+\\sqrt{3}\\)，异侧最大值\\(3\\)，两者都不在现稿选项中，故现稿无正确选项；对照原PDF题面（p001，对应1185页）\\(\\left\\lvert PO\\right\\rvert=\\sqrt{2}\\)且选项含\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，结论为A.",
+        "raw_answer_latex": "无正确选项（正确值为\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，对应原PDF选项A）",
+        "raw_solution_latex": "设\\(O=\\left(0,0\\right)\\)，\\(P=\\left(\\sqrt{2},0\\right)\\)，则\\(\\left\\lvert PA\\right\\rvert^{2}=\\left\\lvert PO\\right\\rvert^{2}-1=1\\)，\\(\\left\\lvert PA\\right\\rvert=1\\)，直线\\(PA\\)与圆切于\\(A\\)，不妨取\\(A=\\left(\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}\\right)\\)，对称性保证另一侧结果相同，设过\\(P\\)的割线交圆于\\(B\\)，\\(C\\)，\\(D\\)为\\(\\overline{BC}\\)中点，则\\(\\overline{OD}\\perp\\overline{PB}\\)，即\\(\\angle ODP=90^\\circ\\)，故\\(D\\)在以\\(\\overline{OP}\\)为直径的圆上，记\\(\\alpha=\\angle DPO\\)，则\\(\\left\\lvert PD\\right\\rvert=\\sqrt{2}\\cos\\alpha\\)，\\(\\left\\lvert OD\\right\\rvert=\\sqrt{2}\\sin\\alpha\\le1\\)，所以\\(0\\le\\alpha\\le\\frac{\\pi}{4}\\)，\\(\\angle APO=\\frac{\\pi}{4}\\)，当\\(D\\)与\\(A\\)同侧时\\(\\overrightarrow{PA}\\)与\\(\\overrightarrow{PD}\\)夹角为\\(\\frac{\\pi}{4}-\\alpha\\)，点积\\(f\\left(\\alpha\\right)=\\sqrt{2}\\cos\\alpha\\cos\\left(\\frac{\\pi}{4}-\\alpha\\right)=\\cos^{2}\\alpha+\\sin\\alpha\\cos\\alpha=\\frac{1}{2}+\\frac{\\cos2\\alpha+\\sin2\\alpha}{2}\\)，因为\\(2\\alpha\\in\\left[0,\\frac{\\pi}{2}\\right]\\)，所以\\(f\\)在\\(\\alpha=\\frac{\\pi}{8}\\)取最大值\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，端点值\\(f\\left(0\\right)=1\\)，\\(f\\left(\\frac{\\pi}{4}\\right)=1\\)均更小，当\\(D\\)与\\(A\\)异侧时点积\\(g\\left(\\alpha\\right)=\\sqrt{2}\\cos\\alpha\\cos\\left(\\frac{\\pi}{4}+\\alpha\\right)=\\frac{1}{2}+\\frac{\\cos2\\alpha-\\sin2\\alpha}{2}\\le1\\)，最大值\\(1\\)在\\(\\alpha=0\\)取得，故全局最大值为\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\). 按本页现稿\\(\\left\\lvert PO\\right\\rvert=2\\)且选项为\\(1\\)，\\(2\\)，\\(1+\\sqrt{2}\\)，\\(2+\\sqrt{2}\\)，同法得\\(\\left\\lvert PA\\right\\rvert=\\sqrt{3}\\)，\\(\\angle APO=\\frac{\\pi}{6}\\)，\\(0\\le\\alpha\\le\\frac{\\pi}{6}\\)，同侧点积为\\(\\frac{3}{2}+\\frac{3\\cos2\\alpha+\\sqrt{3}\\sin2\\alpha}{2}\\)，在\\(\\alpha=\\frac{\\pi}{12}\\)取最大值\\(\\frac{3}{2}+\\sqrt{3}\\)，异侧最大值\\(3\\)，两者都不在现稿选项中，故现稿无正确选项；对照原PDF题面（p001，对应1185页）\\(\\left\\lvert PO\\right\\rvert=\\sqrt{2}\\)且选项含\\(\\frac{1}{2}+\\frac{\\sqrt{2}}{2}\\)，结论为A.",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 218,
+            "end": 220
+          },
+          {
+            "kind": "solution",
+            "start": 222,
+            "end": 224
+          }
+        ],
+        "question_version_sha256": "5b3966018b03c06e3e8465d5e0f523a4d80ad299b352a085f5b3529b32f757d8",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q013",
+      "subject": "math",
+      "stem": "已知点 \\(A(1,\\sqrt5)\\) 在抛物线 \\(C:y^2=2px\\) 上，则 \\(A\\) 到 \\(C\\) 的准线距离为________.",
+      "options": {},
+      "formulas": [
+        "A(1,\\sqrt5)",
+        "C:y^2=2px",
+        "A",
+        "C"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "74867a3d0561a113c3562f243ef543f87a8b53ffa2516fd6507d8c20304ef08f",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q013",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q013",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "9fd67783f60b43386e3de7613565cbf568571bf6225732dc3ab0d48073f86e4c",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 227,
+          "end": 229,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q013:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q013",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "9fd67783f60b43386e3de7613565cbf568571bf6225732dc3ab0d48073f86e4c",
+        "reference_answer": "9/4",
+        "explanation": "点坐标给2p=5，准线x=−5/4，所求距离为1+5/4。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q013",
+        "base_version_sha256": "dabee1f668abc9c8ff3da0b52366dd81d264b412ebb7c470736707e248284500",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "原页纵坐标带根号。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "A(1,5)",
+            "A(1,\\sqrt5)"
+          ]
+        ],
+        "result": "9/4",
+        "solution": "点坐标给2p=5，准线x=−5/4，所求距离为1+5/4。"
+      },
+      "base_version_sha256": "dabee1f668abc9c8ff3da0b52366dd81d264b412ebb7c470736707e248284500",
+      "reviewed_answer": {
+        "question_version_sha256": "9fd67783f60b43386e3de7613565cbf568571bf6225732dc3ab0d48073f86e4c",
+        "reference_answer": "9/4",
+        "explanation": "点坐标给2p=5，准线x=−5/4，所求距离为1+5/4。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q014",
+      "subject": "math",
+      "stem": "若 \\(x\\)，\\(y\\) 满足 \\(x-3y\\le-1\\)，\\(x+2y\\le9\\)，\\(3x+y\\ge 7\\)，则 \\(z=2x-y\\) 的最大值为________.",
+      "options": {},
+      "formulas": [
+        "x",
+        "y",
+        "x-3y\\le-1",
+        "x+2y\\le9",
+        "3x+y\\ge 7",
+        "z=2x-y"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "f391f4680126ddc9c121b4351f7fec6a0f315411fe179733055a3bf462b7ca2d",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q014",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q014",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "631a1d66c650d5b6d5c7323e25c56927a56494fe5922e00cab7a3fae2497ebc9",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 239,
+          "end": 241,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q014:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q014",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "631a1d66c650d5b6d5c7323e25c56927a56494fe5922e00cab7a3fae2497ebc9",
+        "reference_answer": "8",
+        "explanation": "前两个约束相加给2x−y≤8；在(5,2)同时取等且第三个约束也成立。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q014",
+        "base_version_sha256": "911d56cef5a43aa12e3f8d9151ef595a98aa009ccc29ed1b7db209f6aa97d649",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "原页三个约束，恢复缺失的首条。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "满足 \\(x+2y\\le 9\\)",
+            "满足 \\(x-3y\\le-1\\)，\\(x+2y\\le9\\)"
+          ]
+        ],
+        "result": "8",
+        "solution": "前两个约束相加给2x−y≤8；在(5,2)同时取等且第三个约束也成立。"
+      },
+      "base_version_sha256": "911d56cef5a43aa12e3f8d9151ef595a98aa009ccc29ed1b7db209f6aa97d649",
+      "reviewed_answer": {
+        "question_version_sha256": "631a1d66c650d5b6d5c7323e25c56927a56494fe5922e00cab7a3fae2497ebc9",
+        "reference_answer": "8",
+        "explanation": "前两个约束相加给2x−y≤8；在(5,2)同时取等且第三个约束也成立。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q015",
+      "subject": "math",
+      "stem": "已知等比数列 \\(\\{a_n\\}\\) 满足 \\(a_2a_4a_5=a_3a_6\\)，\\(a_9a_{10}=-8\\)，则 \\(a_7=\\)________.",
+      "options": {},
+      "formulas": [
+        "\\{a_n\\}",
+        "a_2a_4a_5=a_3a_6",
+        "a_9a_{10}=-8",
+        "a_7="
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知等比数列 \\(\\{a_n\\}\\) 满足 \\(a_2a_4a_5=a_3a_6\\)，\\(a_9a_{10}=-8\\)，则 \\(a_7=\\)\\fillinblank{}.",
+      "content_sha256": "227c7041f5696c431b1f3681f31c5a932b815b89154311145f7c1d9b85bbba8e",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q015",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q015",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 15,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "e6473002f4f5234fec89d61397192e5fc21c0cc63258b81989b71f97bfcd8632",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 251,
+          "end": 253,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q015:answer",
+      "topic_flags": [
+        "数列"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q015",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q015:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q015",
+        "question_id": "2023-cn-math-national-b-science:q015",
+        "reference_answer": "\\(-2\\)",
+        "explanation": "设公比为\\(q\\)，则\\(a_{2}a_{4}a_{5}=a_{1}^{3}q^{8}\\)，\\(a_{3}a_{6}=a_{1}^{2}q^{7}\\)，因为\\(a_{9}a_{10}=-8\\ne0\\)，所以各项均非零，由\\(a_{2}a_{4}a_{5}=a_{3}a_{6}\\)约去\\(a_{1}^{2}q^{7}\\)得\\(a_{1}q=1\\)，即\\(a_{2}=1\\)，又\\(a_{9}a_{10}=a_{1}^{2}q^{17}=\\left(a_{1}q\\right)^{2}q^{15}=q^{15}=-8\\)，所以\\(q^{15}=-8\\)，而\\(a_{7}=a_{1}q^{6}=\\left(a_{1}q\\right)q^{5}=q^{5}\\)，由\\(\\left(q^{5}\\right)^{3}=-8\\)及实数立方唯一得\\(q^{5}=-2\\)，即\\(a_{7}=-2\\)，回代\\(a_{2}=1\\)，\\(q^{5}=-2\\)满足\\(a_{9}a_{10}=q^{7}q^{8}=q^{15}=-8\\)一致. 按本页现稿结论为\\(-2\\)，现稿虽有两个空位但实际只求一空，答案只写一个\\(-2\\)；对照原PDF题面（p001，对应1185页）条件一致，结论同样为\\(-2\\).",
+        "raw_answer_latex": "\\(-2\\)",
+        "raw_solution_latex": "设公比为\\(q\\)，则\\(a_{2}a_{4}a_{5}=a_{1}^{3}q^{8}\\)，\\(a_{3}a_{6}=a_{1}^{2}q^{7}\\)，因为\\(a_{9}a_{10}=-8\\ne0\\)，所以各项均非零，由\\(a_{2}a_{4}a_{5}=a_{3}a_{6}\\)约去\\(a_{1}^{2}q^{7}\\)得\\(a_{1}q=1\\)，即\\(a_{2}=1\\)，又\\(a_{9}a_{10}=a_{1}^{2}q^{17}=\\left(a_{1}q\\right)^{2}q^{15}=q^{15}=-8\\)，所以\\(q^{15}=-8\\)，而\\(a_{7}=a_{1}q^{6}=\\left(a_{1}q\\right)q^{5}=q^{5}\\)，由\\(\\left(q^{5}\\right)^{3}=-8\\)及实数立方唯一得\\(q^{5}=-2\\)，即\\(a_{7}=-2\\)，回代\\(a_{2}=1\\)，\\(q^{5}=-2\\)满足\\(a_{9}a_{10}=q^{7}q^{8}=q^{15}=-8\\)一致. 按本页现稿结论为\\(-2\\)，现稿虽有两个空位但实际只求一空，答案只写一个\\(-2\\)；对照原PDF题面（p001，对应1185页）条件一致，结论同样为\\(-2\\).",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 255,
+            "end": 257
+          },
+          {
+            "kind": "solution",
+            "start": 259,
+            "end": 261
+          }
+        ],
+        "question_version_sha256": "e6473002f4f5234fec89d61397192e5fc21c0cc63258b81989b71f97bfcd8632",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q016",
+      "subject": "math",
+      "stem": "设 \\(a\\in(0,1)\\)，若函数\n\\(f(x)=a^x+(1+a)^x\\)\n在 \\((0,+\\infty)\\) 上单调递增，则 \\(a\\) 的取值范围是________.",
+      "options": {},
+      "formulas": [
+        "a\\in(0,1)",
+        "f(x)=a^x+(1+a)^x",
+        "(0,+\\infty)",
+        "a"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "content_sha256": "6ec602a6446f9c187a0449b931862ee4cd492014bac8db4f0b7dad58131e83da",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q016",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q016",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 16,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "24696fecbfa5153d9ac4b2238fc11849ce2cd5fe6086bcb2909c39199b64fa86",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 263,
+          "end": 267,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ],
+        "calibrated_pdf_page": 1
+      },
+      "content_complete": true,
+      "issues": [
+        "upstream_version_note_requires_review",
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q016:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q016",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "question_version_sha256": "24696fecbfa5153d9ac4b2238fc11849ce2cd5fe6086bcb2909c39199b64fa86",
+        "reference_answer": "[(√5−1)/2,1)",
+        "explanation": "f″>0，故单调递增当且仅当右端导数极限ln(a(1+a))≥0。解得a≥(√5−1)/2，并保留a<1。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2023-cn-math-national-b-science:q016",
+        "base_version_sha256": "9dc8420fa3c822e766a1ca65767b31ff7032eddad9de3e2d9fbceac0d249432b",
+        "source": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "review_page_sha256": "7b9f3b161ced04103e084bd154ce1ef87d8c77c154d2f224d0fdccff3950b7aa",
+        "body": "pdf_repaired",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "原页两个指数均为x。仍在整卷隔离。",
+        "stem_edits": [
+          [
+            "(1+a)^{x+1}",
+            "(1+a)^x"
+          ]
+        ],
+        "result": "[(√5−1)/2,1)",
+        "solution": "f″>0，故单调递增当且仅当右端导数极限ln(a(1+a))≥0。解得a≥(√5−1)/2，并保留a<1。"
+      },
+      "base_version_sha256": "9dc8420fa3c822e766a1ca65767b31ff7032eddad9de3e2d9fbceac0d249432b",
+      "reviewed_answer": {
+        "question_version_sha256": "24696fecbfa5153d9ac4b2238fc11849ce2cd5fe6086bcb2909c39199b64fa86",
+        "reference_answer": "[(√5−1)/2,1)",
+        "explanation": "f″>0，故单调递增当且仅当右端导数极限ln(a(1+a))≥0。解得a≥(√5−1)/2，并保留a<1。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q017",
+      "subject": "math",
+      "stem": "某厂为比较甲乙两种工艺对橡胶产品伸缩率的处理效应，进行 10 次配对试验，每次配对试验选用材质相同的两个橡胶产品，随机地选其中一个用甲工艺处理，另一个用乙工艺处理，测量处理后的橡胶产品的伸缩率. 甲，乙两种工艺处理后的橡胶产品的伸缩率分别记为 \\(x_i\\)，\\(y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)）. 试验结果如下：\n\n\n\\begin{tabular}{c|cccccccccc}\ni&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n\\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n\\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}\n\n\n\\(z_i=x_i-y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)），记 \\(z_1\\)，\\(z_2\\)，\\(\\cdots\\)，\\(z_{10}\\) 的样本平均数为 \\(\\bar z\\)，样本方差为 \\(s^2\\).\n\n\n\n（子项） 求 \\(\\bar z\\)，\\(s^2\\)；\n\n（子项） 判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge 2\\sqrt{\\frac{s^2}{10}}\\)，则认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高，否则不认为有显著提高）.",
+      "options": {},
+      "formulas": [
+        "x_i",
+        "y_i",
+        "i=1",
+        "2",
+        "\\cdots",
+        "10",
+        "x_i",
+        "y_i",
+        "z_i=x_i-y_i",
+        "i=1",
+        "2",
+        "\\cdots",
+        "10",
+        "z_1",
+        "z_2",
+        "\\cdots",
+        "z_{10}",
+        "\\bar z",
+        "s^2",
+        "\\bar z",
+        "s^2",
+        "\\bar z\\ge 2\\sqrt{\\frac{s^2}{10}}"
+      ],
+      "parts": [
+        "求 \\(\\bar z\\)，\\(s^2\\)；",
+        "判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge 2\\sqrt{\\frac{s^2}{10}}\\)，则认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高，否则不认为有显著提高）."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(\\bar z\\)，\\(s^2\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge 2\\sqrt{\\frac{s^2}{10}}\\)，则认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高，否则不认为有显著提高）."
+        }
+      ],
+      "tables_latex": [
+        "\\begin{tabular}{c|cccccccccc}\ni&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n\\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n\\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}"
+      ],
+      "asset_refs": [],
+      "raw_problem_latex": "某厂为比较甲乙两种工艺对橡胶产品伸缩率的处理效应，进行 10 次配对试验，每次配对试验选用材质相同的两个橡胶产品，随机地选其中一个用甲工艺处理，另一个用乙工艺处理，测量处理后的橡胶产品的伸缩率. 甲，乙两种工艺处理后的橡胶产品的伸缩率分别记为 \\(x_i\\)，\\(y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)）. 试验结果如下：\n\n\\begin{center}\n\\begin{tabular}{c|cccccccccc}\ni&1&2&3&4&5&6&7&8&9&10\\\\\\hline\n\\(x_i\\)&545&533&551&522&575&544&541&568&596&548\\\\\n\\(y_i\\)&536&527&543&530&560&533&522&550&576&536\n\\end{tabular}\n\\end{center}\n\n\\(z_i=x_i-y_i\\)（\\(i=1\\)，\\(2\\)，\\(\\cdots\\)，\\(10\\)），记 \\(z_1\\)，\\(z_2\\)，\\(\\cdots\\)，\\(z_{10}\\) 的样本平均数为 \\(\\bar z\\)，样本方差为 \\(s^2\\).\n\n\\begin{enumerate}\n\\item 求 \\(\\bar z\\)，\\(s^2\\)；\n\\item 判断甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率是否有显著提高（如果 \\(\\bar z\\ge 2\\sqrt{\\frac{s^2}{10}}\\)，则认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高，否则不认为有显著提高）.\n\\end{enumerate}",
+      "content_sha256": "9e3eb02c4e7d1947b016ef3443f23272214773f789cf3bc614c7bf356591ee12",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q017",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q017",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 17,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "c751fef1e4f894e1e4522706226ac9255670bef8bd3cf4c38e1e2a7e3c3d8932",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 278,
+          "end": 295,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q017:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q017",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q017:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q017",
+        "question_id": "2023-cn-math-national-b-science:q017",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(z_{i}=x_{i}-y_{i}\\)，所以 \\(z_{1}=9\\)，\\(z_{2}=6\\)，\\(z_{3}=8\\)，\\(z_{4}=-8\\)，\\(z_{5}=15\\)，\\(z_{6}=11\\)，\\(z_{7}=19\\)，\\(z_{8}=18\\)，\\(z_{9}=20\\)，\\(z_{10}=12\\)，前五数之和为 \\(9+6+8-8+15=30\\)，后五数之和为 \\(11+19+18+20+12=80\\)，合计 \\(110\\)，故 \\(\\bar z=110/10=11\\)，离差平方依次为 \\(4\\)，\\(25\\)，\\(9\\)，\\(361\\)，\\(16\\)，\\(0\\)，\\(64\\)，\\(49\\)，\\(81\\)，\\(1\\)，和为 \\(610\\)，故 \\(s^{2}=610/10=61\\).\n（子项） 因为 \\(\\bar z=11\\)，\\(2\\sqrt{s^{2}/10}=2\\sqrt{6.1}=\\sqrt{24.4}\\)，而 \\(11^{2}=121>24.4\\)，所以 \\(\\bar z\\ge 2\\sqrt{s^{2}/10}\\)，故认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高.",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 因为 \\(z_{i}=x_{i}-y_{i}\\)，所以 \\(z_{1}=9\\)，\\(z_{2}=6\\)，\\(z_{3}=8\\)，\\(z_{4}=-8\\)，\\(z_{5}=15\\)，\\(z_{6}=11\\)，\\(z_{7}=19\\)，\\(z_{8}=18\\)，\\(z_{9}=20\\)，\\(z_{10}=12\\)，前五数之和为 \\(9+6+8-8+15=30\\)，后五数之和为 \\(11+19+18+20+12=80\\)，合计 \\(110\\)，故 \\(\\bar z=110/10=11\\)，离差平方依次为 \\(4\\)，\\(25\\)，\\(9\\)，\\(361\\)，\\(16\\)，\\(0\\)，\\(64\\)，\\(49\\)，\\(81\\)，\\(1\\)，和为 \\(610\\)，故 \\(s^{2}=610/10=61\\).\\item 因为 \\(\\bar z=11\\)，\\(2\\sqrt{s^{2}/10}=2\\sqrt{6.1}=\\sqrt{24.4}\\)，而 \\(11^{2}=121>24.4\\)，所以 \\(\\bar z\\ge 2\\sqrt{s^{2}/10}\\)，故认为甲工艺处理后的橡胶产品的伸缩率较乙工艺处理后的橡胶产品的伸缩率有显著提高.\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 297,
+            "end": 299
+          }
+        ],
+        "question_version_sha256": "c751fef1e4f894e1e4522706226ac9255670bef8bd3cf4c38e1e2a7e3c3d8932",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q018",
+      "subject": "math",
+      "stem": "在 \\(\\triangle ABC\\) 中，已知 \\(\\angle BAC=120^\\circ\\)，\\(AB=2\\)，\\(AC=1\\).\n\n\n\n（子项） 求 \\(\\sin \\angle ABC\\)；\n\n（子项） 若 \\(D\\) 为 \\(BC\\) 上一点，且 \\(\\angle BAD=90^\\circ\\)，求 \\(\\triangle ADC\\) 的面积.",
+      "options": {},
+      "formulas": [
+        "\\triangle ABC",
+        "\\angle BAC=120^\\circ",
+        "AB=2",
+        "AC=1",
+        "\\sin \\angle ABC",
+        "D",
+        "BC",
+        "\\angle BAD=90^\\circ",
+        "\\triangle ADC"
+      ],
+      "parts": [
+        "求 \\(\\sin \\angle ABC\\)；",
+        "若 \\(D\\) 为 \\(BC\\) 上一点，且 \\(\\angle BAD=90^\\circ\\)，求 \\(\\triangle ADC\\) 的面积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(\\sin \\angle ABC\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(D\\) 为 \\(BC\\) 上一点，且 \\(\\angle BAD=90^\\circ\\)，求 \\(\\triangle ADC\\) 的面积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在 \\(\\triangle ABC\\) 中，已知 \\(\\angle BAC=120^\\circ\\)，\\(AB=2\\)，\\(AC=1\\).\n\n\\begin{enumerate}\n\\item 求 \\(\\sin \\angle ABC\\)；\n\\item 若 \\(D\\) 为 \\(BC\\) 上一点，且 \\(\\angle BAD=90^\\circ\\)，求 \\(\\triangle ADC\\) 的面积.\n\\end{enumerate}",
+      "content_sha256": "39b1c02d8e24f29ec38a53f13b2150ea6e222d1ea9cafd0761bb5464c4628486",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q018",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q018",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 18,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "49c9ab1ff73f257682bcf1806c7bcfc5f57f266074173174695d301abb76833f",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 301,
+          "end": 308,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q018:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q018",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q018:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q018",
+        "question_id": "2023-cn-math-national-b-science:q018",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(\\angle BAC=120^{\\circ}\\)，\\(AB=2\\)，\\(AC=1\\)，所以由余弦定理 \\(BC^{2}=AB^{2}+AC^{2}-2\\cdot AB\\cdot AC\\cdot\\cos 120^{\\circ}=4+1-2\\cdot 2\\cdot 1\\cdot\\left(-1/2\\right)=7\\)，故 \\(BC=\\sqrt{7}\\)，再由余弦定理 \\(\\cos\\angle ABC=\\left(AB^{2}+BC^{2}-AC^{2}\\right)/\\left(2\\cdot AB\\cdot BC\\right)=\\left(4+7-1\\right)/\\left(4\\sqrt{7}\\right)=5\\sqrt{7}/14\\)，因为 \\(\\angle ABC\\)为三角形内角且对边 \\(AC\\)最短故为锐角，所以 \\(\\sin\\angle ABC=\\sqrt{1-\\cos^{2}\\angle ABC}=\\sqrt{21}/14\\).\n（子项） 因为 \\(\\angle BAD=90^{\\circ}\\)，\\(\\angle BAC=120^{\\circ}\\)，所以 \\(AD\\)落在 \\(\\angle BAC\\)内且 \\(\\angle DAC=30^{\\circ}\\)，故 \\(S_{\\triangle ABD}=\\left(AB\\cdot AD\\right)/2\\)，\\(S_{\\triangle ACD}=\\left(AC\\cdot AD\\cdot\\sin 30^{\\circ}\\right)/2\\)，所以 \\(S_{\\triangle ABD}/S_{\\triangle ACD}=4\\)，而 \\(S_{\\triangle ABC}=\\left(AB\\cdot AC\\cdot\\sin 120^{\\circ}\\right)/2=\\sqrt{3}/2\\)，故 \\(S_{\\triangle ADC}=S_{\\triangle ABC}/5=\\sqrt{3}/10\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 因为 \\(\\angle BAC=120^{\\circ}\\)，\\(AB=2\\)，\\(AC=1\\)，所以由余弦定理 \\(BC^{2}=AB^{2}+AC^{2}-2\\cdot AB\\cdot AC\\cdot\\cos 120^{\\circ}=4+1-2\\cdot 2\\cdot 1\\cdot\\left(-1/2\\right)=7\\)，故 \\(BC=\\sqrt{7}\\)，再由余弦定理 \\(\\cos\\angle ABC=\\left(AB^{2}+BC^{2}-AC^{2}\\right)/\\left(2\\cdot AB\\cdot BC\\right)=\\left(4+7-1\\right)/\\left(4\\sqrt{7}\\right)=5\\sqrt{7}/14\\)，因为 \\(\\angle ABC\\)为三角形内角且对边 \\(AC\\)最短故为锐角，所以 \\(\\sin\\angle ABC=\\sqrt{1-\\cos^{2}\\angle ABC}=\\sqrt{21}/14\\).\\item 因为 \\(\\angle BAD=90^{\\circ}\\)，\\(\\angle BAC=120^{\\circ}\\)，所以 \\(AD\\)落在 \\(\\angle BAC\\)内且 \\(\\angle DAC=30^{\\circ}\\)，故 \\(S_{\\triangle ABD}=\\left(AB\\cdot AD\\right)/2\\)，\\(S_{\\triangle ACD}=\\left(AC\\cdot AD\\cdot\\sin 30^{\\circ}\\right)/2\\)，所以 \\(S_{\\triangle ABD}/S_{\\triangle ACD}=4\\)，而 \\(S_{\\triangle ABC}=\\left(AB\\cdot AC\\cdot\\sin 120^{\\circ}\\right)/2=\\sqrt{3}/2\\)，故 \\(S_{\\triangle ADC}=S_{\\triangle ABC}/5=\\sqrt{3}/10\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 310,
+            "end": 312
+          }
+        ],
+        "question_version_sha256": "49c9ab1ff73f257682bcf1806c7bcfc5f57f266074173174695d301abb76833f",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q019",
+      "subject": "math",
+      "stem": "如图，在三棱锥 \\(P-ABC\\) 中，\\(AB\\perp BC\\)，\\(AB=2\\)，\\(BC=2\\sqrt2\\)，\\(PB=PC=\\sqrt6\\)，\\(BP\\)，\\(AP\\)，\\(BC\\) 的中点分别为 \\(D\\)，\\(E\\)，\\(O\\)，\\(AD=\\sqrt5 DO\\)，点 \\(F\\) 在 \\(AC\\) 上，\\(BF\\perp AO\\).\n\n\n\n\n\n（子项） 证明：\\(EF // \\text{平面 }ADO\\)；\n\n（子项） 证明：\\(\\text{平面 }ADO\\perp\\text{平面 }BEF\\)；\n\n（子项） 求二面角 \\(D-AO-C\\) 的正弦值.\n\n\n[图：img/2023/national_paper_b_science/q19_fig1.png]",
+      "options": {},
+      "formulas": [
+        "P-ABC",
+        "AB\\perp BC",
+        "AB=2",
+        "BC=2\\sqrt2",
+        "PB=PC=\\sqrt6",
+        "BP",
+        "AP",
+        "BC",
+        "D",
+        "E",
+        "O",
+        "AD=\\sqrt5 DO",
+        "F",
+        "AC",
+        "BF\\perp AO",
+        "EF // \\text{平面 }ADO",
+        "\\text{平面 }ADO\\perp\\text{平面 }BEF",
+        "D-AO-C"
+      ],
+      "parts": [
+        "证明：\\(EF // \\text{平面 }ADO\\)；",
+        "证明：\\(\\text{平面 }ADO\\perp\\text{平面 }BEF\\)；",
+        "求二面角 \\(D-AO-C\\) 的正弦值."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "证明：\\(EF // \\text{平面 }ADO\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "证明：\\(\\text{平面 }ADO\\perp\\text{平面 }BEF\\)；"
+        },
+        {
+          "number": 3,
+          "children": [],
+          "text": "求二面角 \\(D-AO-C\\) 的正弦值."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2023/national_paper_b_science/q19_fig1.png",
+          "sha256": "910e4f9bb78e65d837a00a8f761755d2a09815fd1d70f7976b95b29f1dd824db",
+          "kind": "image",
+          "plaintext_path": "assets/910e4f9bb78e65d837a00a8f761755d2a09815fd1d70f7976b95b29f1dd824db.png"
+        }
+      ],
+      "raw_problem_latex": "如图，在三棱锥 \\(P-ABC\\) 中，\\(AB\\perp BC\\)，\\(AB=2\\)，\\(BC=2\\sqrt2\\)，\\(PB=PC=\\sqrt6\\)，\\(BP\\)，\\(AP\\)，\\(BC\\) 的中点分别为 \\(D\\)，\\(E\\)，\\(O\\)，\\(AD=\\sqrt5 DO\\)，点 \\(F\\) 在 \\(AC\\) 上，\\(BF\\perp AO\\).\n\n\n\n\\begin{enumerate}\n\\item 证明：\\(EF // \\text{平面 }ADO\\)；\n\\item 证明：\\(\\text{平面 }ADO\\perp\\text{平面 }BEF\\)；\n\\item 求二面角 \\(D-AO-C\\) 的正弦值.\n\\end{enumerate}\n\n\\bitmapfigure[max width=6.0cm]{img/2023/national_paper_b_science/q19_fig1.png}",
+      "content_sha256": "c5f1a28d6410bd946714e4a038735dabf4ab7aa8974644e4db0aa422ca43d6cb",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q019",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q019",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 19,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "0c4091cfd302d85d1f7989ea7bdca8dc46375f09de12f06ffe45b40648534148",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 314,
+          "end": 326,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 1,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q019:answer",
+      "topic_flags": [
+        "立体几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q019",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q019:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q019",
+        "question_id": "2023-cn-math-national-b-science:q019",
+        "reference_answer": null,
+        "explanation": "（子项） 设 \\(\\overrightarrow{AF}=t\\overrightarrow{AC}\\)，则 \\(\\overrightarrow{BF}=\\left(1-t\\right)\\overrightarrow{BA}+t\\overrightarrow{BC}\\)，\\(\\overrightarrow{AO}=-\\overrightarrow{BA}+\\overrightarrow{BC}/2\\)，因为 \\(AB\\perp BC\\)，所以 \\(\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=0\\)，\\(\\left|\\overrightarrow{BA}\\right|=2\\)，\\(\\left|\\overrightarrow{BC}\\right|=2\\sqrt{2}\\)，因为 \\(BF\\perp AO\\)，所以 \\(0=\\overrightarrow{BF}\\cdot\\overrightarrow{AO}=-4\\left(1-t\\right)+4t=8t-4\\)，故 \\(t=1/2\\)，所以 \\(F\\)为 \\(AC\\)中点，因为 \\(D\\)，\\(E\\)分别为 \\(PB\\)，\\(PA\\)中点，所以 \\(DE\\parallel AB\\)且 \\(DE=AB/2\\)，因为 \\(O\\)，\\(F\\)分别为 \\(BC\\)，\\(AC\\)中点，所以 \\(OF\\parallel AB\\)且 \\(OF=AB/2\\)，故 \\(DE\\parallel OF\\)且 \\(DE=OF\\)，所以四边形 \\(ODEF\\)为平行四边形，从而 \\(EF\\parallel DO\\)，又 \\(EF\\)在平面 \\(ADO\\)外，\\(DO\\)在平面 \\(ADO\\)内，所以 \\(EF\\parallel\\)平面 \\(ADO\\).\n（子项） 因为 \\(O\\)为 \\(BC\\)中点，所以 \\(BO=\\sqrt{2}\\)，故 \\(AO=\\sqrt{AB^{2}+BO^{2}}=\\sqrt{6}\\)，因为 \\(D\\)，\\(O\\)分别为 \\(PB\\)，\\(BC\\)中点，所以 \\(DO\\parallel PC\\)且 \\(DO=PC/2=\\sqrt{6}/2\\)，结合条件 \\(AD=\\sqrt{5}DO=\\sqrt{30}/2\\)，有 \\(OD^{2}+AO^{2}=AD^{2}\\)，所以 \\(OD\\perp AO\\)，由第（1）问知 \\(EF\\parallel OD\\)，故 \\(EF\\perp AO\\)，又 \\(AO\\perp BF\\)且 \\(BF\\cap EF=F\\)，所以 \\(AO\\perp\\)平面 \\(BEF\\)，又 \\(AO\\)在平面 \\(ADO\\)内，故平面 \\(ADO\\perp\\)平面 \\(BEF\\).\n（子项） 过 \\(O\\)作 \\(OH\\parallel BF\\)交 \\(AC\\)于 \\(H\\)，因为 \\(BF\\perp AO\\)，所以 \\(OH\\perp AO\\)，又 \\(OD\\perp AO\\)且 \\(OH\\)在平面 \\(ABC\\)内，故 \\(\\angle DOH\\)为二面角 \\(D-AO-C\\)的平面角，因为 \\(\\overrightarrow{BF}=\\left(\\overrightarrow{BA}+\\overrightarrow{BC}\\right)/2\\)且 \\(H\\)在 \\(AC\\)上，由 \\(\\overrightarrow{OH}\\parallel\\overrightarrow{BF}\\)解得 \\(\\overrightarrow{OH}=\\overrightarrow{BF}/2\\)，故 \\(OH=BF/2\\)，又 \\(AD\\)，\\(BE\\)为 \\(\\triangle PAB\\)的中线，记 \\(G=AD\\cap BE\\)则 \\(G\\)为重心，故 \\(DG=AD/3\\)，由向量计算 \\(\\overrightarrow{DH}=3\\overrightarrow{GF}/2\\)，由余弦定理 \\(\\cos\\angle ABD=\\left(AB^{2}+BD^{2}-AD^{2}\\right)/\\left(2\\cdot AB\\cdot BD\\right)=-1/\\sqrt{6}\\)，因 \\(D\\)在 \\(PB\\)上故 \\(\\angle ABD=\\angle ABP\\)，由 \\(\\cos\\angle ABP=\\left(AB^{2}+BP^{2}-PA^{2}\\right)/\\left(2\\cdot AB\\cdot BP\\right)\\)解得 \\(PA=\\sqrt{14}\\)，再由 \\(\\cos\\angle BAP=\\left(AB^{2}+PA^{2}-BP^{2}\\right)/\\left(2\\cdot AB\\cdot PA\\right)=3/\\sqrt{14}\\)，在 \\(\\triangle ABE\\)中 \\(BE^{2}=AB^{2}+AE^{2}-2\\cdot AB\\cdot AE\\cdot\\cos\\angle BAP=3/2\\)，故 \\(BE=\\sqrt{6}/2\\)，又 \\(BF=AC/2=\\sqrt{AB^{2}+BC^{2}}/2=\\sqrt{3}\\)，\\(EF=DO=\\sqrt{6}/2\\)，故 \\(BE^{2}+EF^{2}=BF^{2}\\)，所以 \\(BE\\perp EF\\)，于是 \\(GF^{2}=GE^{2}+EF^{2}=5/3\\)，\\(GF=\\sqrt{15}/3\\)，\\(DH=3GF/2=\\sqrt{15}/2\\)，在 \\(\\triangle DOH\\)中 \\(OD=\\sqrt{6}/2\\)，\\(OH=\\sqrt{3}/2\\)，\\(DH=\\sqrt{15}/2\\)，所以 \\(\\cos\\angle DOH=\\left(OD^{2}+OH^{2}-DH^{2}\\right)/\\left(2\\cdot OD\\cdot OH\\right)=-\\sqrt{2}/2\\)，故 \\(\\sin\\angle DOH=\\sqrt{2}/2\\)，所以二面角 \\(D-AO-C\\)的正弦值为 \\(\\sqrt{2}/2\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 设 \\(\\overrightarrow{AF}=t\\overrightarrow{AC}\\)，则 \\(\\overrightarrow{BF}=\\left(1-t\\right)\\overrightarrow{BA}+t\\overrightarrow{BC}\\)，\\(\\overrightarrow{AO}=-\\overrightarrow{BA}+\\overrightarrow{BC}/2\\)，因为 \\(AB\\perp BC\\)，所以 \\(\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=0\\)，\\(\\left|\\overrightarrow{BA}\\right|=2\\)，\\(\\left|\\overrightarrow{BC}\\right|=2\\sqrt{2}\\)，因为 \\(BF\\perp AO\\)，所以 \\(0=\\overrightarrow{BF}\\cdot\\overrightarrow{AO}=-4\\left(1-t\\right)+4t=8t-4\\)，故 \\(t=1/2\\)，所以 \\(F\\)为 \\(AC\\)中点，因为 \\(D\\)，\\(E\\)分别为 \\(PB\\)，\\(PA\\)中点，所以 \\(DE\\parallel AB\\)且 \\(DE=AB/2\\)，因为 \\(O\\)，\\(F\\)分别为 \\(BC\\)，\\(AC\\)中点，所以 \\(OF\\parallel AB\\)且 \\(OF=AB/2\\)，故 \\(DE\\parallel OF\\)且 \\(DE=OF\\)，所以四边形 \\(ODEF\\)为平行四边形，从而 \\(EF\\parallel DO\\)，又 \\(EF\\)在平面 \\(ADO\\)外，\\(DO\\)在平面 \\(ADO\\)内，所以 \\(EF\\parallel\\)平面 \\(ADO\\).\\item 因为 \\(O\\)为 \\(BC\\)中点，所以 \\(BO=\\sqrt{2}\\)，故 \\(AO=\\sqrt{AB^{2}+BO^{2}}=\\sqrt{6}\\)，因为 \\(D\\)，\\(O\\)分别为 \\(PB\\)，\\(BC\\)中点，所以 \\(DO\\parallel PC\\)且 \\(DO=PC/2=\\sqrt{6}/2\\)，结合条件 \\(AD=\\sqrt{5}DO=\\sqrt{30}/2\\)，有 \\(OD^{2}+AO^{2}=AD^{2}\\)，所以 \\(OD\\perp AO\\)，由第（1）问知 \\(EF\\parallel OD\\)，故 \\(EF\\perp AO\\)，又 \\(AO\\perp BF\\)且 \\(BF\\cap EF=F\\)，所以 \\(AO\\perp\\)平面 \\(BEF\\)，又 \\(AO\\)在平面 \\(ADO\\)内，故平面 \\(ADO\\perp\\)平面 \\(BEF\\).\\item 过 \\(O\\)作 \\(OH\\parallel BF\\)交 \\(AC\\)于 \\(H\\)，因为 \\(BF\\perp AO\\)，所以 \\(OH\\perp AO\\)，又 \\(OD\\perp AO\\)且 \\(OH\\)在平面 \\(ABC\\)内，故 \\(\\angle DOH\\)为二面角 \\(D-AO-C\\)的平面角，因为 \\(\\overrightarrow{BF}=\\left(\\overrightarrow{BA}+\\overrightarrow{BC}\\right)/2\\)且 \\(H\\)在 \\(AC\\)上，由 \\(\\overrightarrow{OH}\\parallel\\overrightarrow{BF}\\)解得 \\(\\overrightarrow{OH}=\\overrightarrow{BF}/2\\)，故 \\(OH=BF/2\\)，又 \\(AD\\)，\\(BE\\)为 \\(\\triangle PAB\\)的中线，记 \\(G=AD\\cap BE\\)则 \\(G\\)为重心，故 \\(DG=AD/3\\)，由向量计算 \\(\\overrightarrow{DH}=3\\overrightarrow{GF}/2\\)，由余弦定理 \\(\\cos\\angle ABD=\\left(AB^{2}+BD^{2}-AD^{2}\\right)/\\left(2\\cdot AB\\cdot BD\\right)=-1/\\sqrt{6}\\)，因 \\(D\\)在 \\(PB\\)上故 \\(\\angle ABD=\\angle ABP\\)，由 \\(\\cos\\angle ABP=\\left(AB^{2}+BP^{2}-PA^{2}\\right)/\\left(2\\cdot AB\\cdot BP\\right)\\)解得 \\(PA=\\sqrt{14}\\)，再由 \\(\\cos\\angle BAP=\\left(AB^{2}+PA^{2}-BP^{2}\\right)/\\left(2\\cdot AB\\cdot PA\\right)=3/\\sqrt{14}\\)，在 \\(\\triangle ABE\\)中 \\(BE^{2}=AB^{2}+AE^{2}-2\\cdot AB\\cdot AE\\cdot\\cos\\angle BAP=3/2\\)，故 \\(BE=\\sqrt{6}/2\\)，又 \\(BF=AC/2=\\sqrt{AB^{2}+BC^{2}}/2=\\sqrt{3}\\)，\\(EF=DO=\\sqrt{6}/2\\)，故 \\(BE^{2}+EF^{2}=BF^{2}\\)，所以 \\(BE\\perp EF\\)，于是 \\(GF^{2}=GE^{2}+EF^{2}=5/3\\)，\\(GF=\\sqrt{15}/3\\)，\\(DH=3GF/2=\\sqrt{15}/2\\)，在 \\(\\triangle DOH\\)中 \\(OD=\\sqrt{6}/2\\)，\\(OH=\\sqrt{3}/2\\)，\\(DH=\\sqrt{15}/2\\)，所以 \\(\\cos\\angle DOH=\\left(OD^{2}+OH^{2}-DH^{2}\\right)/\\left(2\\cdot OD\\cdot OH\\right)=-\\sqrt{2}/2\\)，故 \\(\\sin\\angle DOH=\\sqrt{2}/2\\)，所以二面角 \\(D-AO-C\\)的正弦值为 \\(\\sqrt{2}/2\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 328,
+            "end": 330
+          }
+        ],
+        "question_version_sha256": "0c4091cfd302d85d1f7989ea7bdca8dc46375f09de12f06ffe45b40648534148",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q020",
+      "subject": "math",
+      "stem": "已知椭圆\n\\(\\frac{y^2}{a^2}+\\frac{x^2}{b^2}=1\\)（\\(a>b>0\\)），其离心率是 \\(\\frac{\\sqrt5}{3}\\)，点 \\(A(-2,0)\\) 在 \\(C\\) 上.\n\n\n\n（子项） 求 \\(C\\) 的方程；\n\n（子项） 过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点.",
+      "options": {},
+      "formulas": [
+        "\\frac{y^2}{a^2}+\\frac{x^2}{b^2}=1",
+        "a>b>0",
+        "\\frac{\\sqrt5}{3}",
+        "A(-2,0)",
+        "C",
+        "C",
+        "(-2,3)",
+        "C",
+        "P",
+        "Q",
+        "AP",
+        "AQ",
+        "y",
+        "M",
+        "N",
+        "MN"
+      ],
+      "parts": [
+        "求 \\(C\\) 的方程；",
+        "过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(C\\) 的方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知椭圆\n\\(\\frac{y^2}{a^2}+\\frac{x^2}{b^2}=1\\)（\\(a>b>0\\)），其离心率是 \\(\\frac{\\sqrt5}{3}\\)，点 \\(A(-2,0)\\) 在 \\(C\\) 上.\n\n\\begin{enumerate}\n\\item 求 \\(C\\) 的方程；\n\\item 过点 \\((-2,3)\\) 的直线交 \\(C\\) 于 \\(P\\)，\\(Q\\) 两点，直线 \\(AP\\)，\\(AQ\\) 与 \\(y\\) 轴的交点分别为 \\(M\\)，\\(N\\)，证明：线段 \\(MN\\) 的中点为定点.\n\\end{enumerate}",
+      "content_sha256": "daa91170d35d540b06df52cf2d65ae8f619d5eb47bfe18213d68e2fdd26e6b58",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q020",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q020",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 20,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "a810c449958b60108a293f57a2f60aacf3662ac18810c746f7057f8dff71055f",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 332,
+          "end": 340,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 2,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q020:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q020",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q020:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q020",
+        "question_id": "2023-cn-math-national-b-science:q020",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(A\\left(-2,0\\right)\\)在 \\(C\\)上，所以 \\(4/b^{2}=1\\)，故 \\(b=2\\)，又离心率 \\(c/a=\\sqrt{5}/3\\)且 \\(a^{2}=b^{2}+c^{2}\\)，解得 \\(a=3\\)，\\(c=\\sqrt{5}\\)，所以 \\(C\\)的方程为 \\(y^{2}/9+x^{2}/4=1\\).\n（子项） 若过点 \\(\\left(-2,3\\right)\\)的直线斜率不存在，则方程为 \\(x=-2\\)，此时与 \\(C\\)仅交于 \\(A\\left(-2,0\\right)\\)，不合两交点要求，故斜率存在，设 \\(PQ\\)为 \\(y=k\\left(x+2\\right)+3\\)，记 \\(P\\left(x_{1},y_{1}\\right)\\)，\\(Q\\left(x_{2},y_{2}\\right)\\)，联立 \\(y=k\\left(x+2\\right)+3\\)与 \\(y^{2}/9+x^{2}/4=1\\)消去 \\(y\\)得 \\(\\left(4k^{2}+9\\right)x^{2}+8k\\left(2k+3\\right)x+16\\left(k^{2}+3k\\right)=0\\)，判别式 \\(\\Delta=64k^{2}\\left(2k+3\\right)^{2}-64\\left(4k^{2}+9\\right)\\left(k^{2}+3k\\right)=-1728k>0\\)，故 \\(k<0\\)，且 \\(x_{1}+x_{2}=-8k\\left(2k+3\\right)/\\left(4k^{2}+9\\right)\\)，\\(x_{1}x_{2}=16\\left(k^{2}+3k\\right)/\\left(4k^{2}+9\\right)\\)，因为直线 \\(AP\\)为 \\(y=y_{1}\\left(x+2\\right)/\\left(x_{1}+2\\right)\\)，令 \\(x=0\\)得 \\(M\\left(0,2y_{1}/\\left(x_{1}+2\\right)\\right)\\)，同理 \\(N\\left(0,2y_{2}/\\left(x_{2}+2\\right)\\right)\\)，而 \\(y_{i}=k\\left(x_{i}+2\\right)+3\\)且 \\(x_{i}+2\\ne 0\\)，故 \\(MN\\)中点纵坐标为 \\(\\left[y_{1}\\left(x_{2}+2\\right)+y_{2}\\left(x_{1}+2\\right)\\right]/\\left[\\left(x_{1}+2\\right)\\left(x_{2}+2\\right)\\right]=\\left[2kx_{1}x_{2}+\\left(4k+3\\right)\\left(x_{1}+x_{2}\\right)+4\\left(2k+3\\right)\\right]/\\left[x_{1}x_{2}+2\\left(x_{1}+x_{2}\\right)+4\\right]=108/36=3\\)，所以线段 \\(MN\\)的中点为定点 \\(\\left(0,3\\right)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 因为 \\(A\\left(-2,0\\right)\\)在 \\(C\\)上，所以 \\(4/b^{2}=1\\)，故 \\(b=2\\)，又离心率 \\(c/a=\\sqrt{5}/3\\)且 \\(a^{2}=b^{2}+c^{2}\\)，解得 \\(a=3\\)，\\(c=\\sqrt{5}\\)，所以 \\(C\\)的方程为 \\(y^{2}/9+x^{2}/4=1\\).\\item 若过点 \\(\\left(-2,3\\right)\\)的直线斜率不存在，则方程为 \\(x=-2\\)，此时与 \\(C\\)仅交于 \\(A\\left(-2,0\\right)\\)，不合两交点要求，故斜率存在，设 \\(PQ\\)为 \\(y=k\\left(x+2\\right)+3\\)，记 \\(P\\left(x_{1},y_{1}\\right)\\)，\\(Q\\left(x_{2},y_{2}\\right)\\)，联立 \\(y=k\\left(x+2\\right)+3\\)与 \\(y^{2}/9+x^{2}/4=1\\)消去 \\(y\\)得 \\(\\left(4k^{2}+9\\right)x^{2}+8k\\left(2k+3\\right)x+16\\left(k^{2}+3k\\right)=0\\)，判别式 \\(\\Delta=64k^{2}\\left(2k+3\\right)^{2}-64\\left(4k^{2}+9\\right)\\left(k^{2}+3k\\right)=-1728k>0\\)，故 \\(k<0\\)，且 \\(x_{1}+x_{2}=-8k\\left(2k+3\\right)/\\left(4k^{2}+9\\right)\\)，\\(x_{1}x_{2}=16\\left(k^{2}+3k\\right)/\\left(4k^{2}+9\\right)\\)，因为直线 \\(AP\\)为 \\(y=y_{1}\\left(x+2\\right)/\\left(x_{1}+2\\right)\\)，令 \\(x=0\\)得 \\(M\\left(0,2y_{1}/\\left(x_{1}+2\\right)\\right)\\)，同理 \\(N\\left(0,2y_{2}/\\left(x_{2}+2\\right)\\right)\\)，而 \\(y_{i}=k\\left(x_{i}+2\\right)+3\\)且 \\(x_{i}+2\\ne 0\\)，故 \\(MN\\)中点纵坐标为 \\(\\left[y_{1}\\left(x_{2}+2\\right)+y_{2}\\left(x_{1}+2\\right)\\right]/\\left[\\left(x_{1}+2\\right)\\left(x_{2}+2\\right)\\right]=\\left[2kx_{1}x_{2}+\\left(4k+3\\right)\\left(x_{1}+x_{2}\\right)+4\\left(2k+3\\right)\\right]/\\left[x_{1}x_{2}+2\\left(x_{1}+x_{2}\\right)+4\\right]=108/36=3\\)，所以线段 \\(MN\\)的中点为定点 \\(\\left(0,3\\right)\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 342,
+            "end": 344
+          }
+        ],
+        "question_version_sha256": "a810c449958b60108a293f57a2f60aacf3662ac18810c746f7057f8dff71055f",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q021",
+      "subject": "math",
+      "stem": "已知\n\\(f(x)=\\left( \\frac1x+a \\right)\\ln(1+x)\\).\n\n\n\n（子项） 当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；\n\n（子项） 是否存在 \\(a\\)，\\(b\\)，使得曲线 \\(y=f\\left( \\frac1x \\right)\\) 关于直线 \\(x=b\\) 对称，若存在，求 \\(a\\)，\\(b\\) 的值，若不存在，说明理由；\n\n（子项） 若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 存在极值，求 \\(a\\) 的取值范围.",
+      "options": {},
+      "formulas": [
+        "f(x)=\\left( \\frac1x+a \\right)\\ln(1+x)",
+        "a=-1",
+        "y=f(x)",
+        "(1,f(1))",
+        "a",
+        "b",
+        "y=f\\left( \\frac1x \\right)",
+        "x=b",
+        "a",
+        "b",
+        "f(x)",
+        "(0,+\\infty)",
+        "a"
+      ],
+      "parts": [
+        "当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；",
+        "是否存在 \\(a\\)，\\(b\\)，使得曲线 \\(y=f\\left( \\frac1x \\right)\\) 关于直线 \\(x=b\\) 对称，若存在，求 \\(a\\)，\\(b\\) 的值，若不存在，说明理由；",
+        "若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 存在极值，求 \\(a\\) 的取值范围."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "是否存在 \\(a\\)，\\(b\\)，使得曲线 \\(y=f\\left( \\frac1x \\right)\\) 关于直线 \\(x=b\\) 对称，若存在，求 \\(a\\)，\\(b\\) 的值，若不存在，说明理由；"
+        },
+        {
+          "number": 3,
+          "children": [],
+          "text": "若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 存在极值，求 \\(a\\) 的取值范围."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知\n\\(f(x)=\\left( \\frac1x+a \\right)\\ln(1+x)\\).\n\n\\begin{enumerate}\n\\item 当 \\(a=-1\\) 时，求曲线 \\(y=f(x)\\) 在点 \\((1,f(1))\\) 处的切线方程；\n\\item 是否存在 \\(a\\)，\\(b\\)，使得曲线 \\(y=f\\left( \\frac1x \\right)\\) 关于直线 \\(x=b\\) 对称，若存在，求 \\(a\\)，\\(b\\) 的值，若不存在，说明理由；\n\\item 若 \\(f(x)\\) 在 \\((0,+\\infty)\\) 存在极值，求 \\(a\\) 的取值范围.\n\\end{enumerate}",
+      "content_sha256": "8741a9eb76418386191a7624255c61793e35c13c071ec518e375f9a95fd3d3d1",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q021",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q021",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 21,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "b1e1f3d29f092eb58f164a460cf18341ef64e75b1d86f97c2c99b017ffaa113d",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 346,
+          "end": 355,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 2,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q021:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q021",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q021:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q021",
+        "question_id": "2023-cn-math-national-b-science:q021",
+        "reference_answer": null,
+        "explanation": "（子项） 当 \\(a=-1\\)时 \\(f\\left(x\\right)=\\left(1/x-1\\right)\\ln\\left(1+x\\right)\\)，定义域为 \\(x>-1\\)且 \\(x\\ne 0\\)，\\(f^{\\prime}\\left(x\\right)=-\\ln\\left(1+x\\right)/x^{2}+\\left(1/x-1\\right)/\\left(x+1\\right)\\)，故 \\(f\\left(1\\right)=0\\)，\\(f^{\\prime}\\left(1\\right)=-\\ln 2\\)，所以切线为 \\(y=-\\ln 2\\cdot\\left(x-1\\right)\\)，即 \\(\\left(\\ln 2\\right)x+y-\\ln 2=0\\).\n（子项） 记 \\(h\\left(x\\right)=f\\left(1/x\\right)=\\left(x+a\\right)\\ln\\left(\\left(x+1\\right)/x\\right)\\)，由 \\(\\left(x+1\\right)/x>0\\)得定义域为 \\(x>0\\)或 \\(x<-1\\)，若 \\(h\\)关于 \\(x=b\\)对称则定义域关于 \\(b\\)对称，将区间 \\(\\left(0,+\\infty\\right)\\)反射为 \\(\\left(-\\infty,2b\\right)\\)必落在 \\(\\left(-\\infty,-1\\right)\\)内得 \\(2b\\le -1\\)，将 \\(\\left(-\\infty,-1\\right)\\)反射为 \\(\\left(2b+1,+\\infty\\right)\\)必落在 \\(\\left(0,+\\infty\\right)\\)内得 \\(2b\\ge -1\\)，故 \\(b=-1/2\\)，此时需 \\(h\\left(x\\right)=h\\left(-1-x\\right)\\)对一切 \\(x>0\\)成立，而 \\(h\\left(-1-x\\right)=\\left(-1-x+a\\right)\\ln\\left(x/\\left(x+1\\right)\\right)\\)，记 \\(L=\\ln\\left(\\left(x+1\\right)/x\\right)>0\\)，则条件化为 \\(\\left(x+a\\right)L=\\left(1+x-a\\right)L\\)，故 \\(a=1/2\\)，反之当 \\(a=1/2\\)，\\(b=-1/2\\)时定义域对称且上式恒成立，所以存在 \\(a=1/2\\)，\\(b=-1/2\\)使得曲线对称.\n（子项） 当 \\(x>0\\)时 \\(f^{\\prime}\\left(x\\right)=\\left[-\\left(x+1\\right)\\ln\\left(x+1\\right)+x+ax^{2}\\right]/\\left[x^{2}\\left(x+1\\right)\\right]\\)，记 \\(g\\left(x\\right)=ax^{2}+x-\\left(x+1\\right)\\ln\\left(x+1\\right)\\)，则 \\(f\\)在 \\(\\left(0,+\\infty\\right)\\)存在极值等价于 \\(g\\)在 \\(\\left(0,+\\infty\\right)\\)存在变号零点，且 \\(g\\left(0\\right)=0\\)，\\(g^{\\prime}\\left(x\\right)=2ax-\\ln\\left(x+1\\right)\\)，\\(g^{\\prime\\prime}\\left(x\\right)=2a-1/\\left(x+1\\right)\\)，当 \\(a\\le 0\\)时 \\(g^{\\prime}\\left(x\\right)<0\\)，故 \\(g\\)单调递减且 \\(g<0\\)，无变号零点，当 \\(a\\ge 1/2\\)时 \\(g^{\\prime\\prime}\\left(x\\right)>0\\)，故 \\(g^{\\prime}\\)单调递增且 \\(g^{\\prime}>g^{\\prime}\\left(0\\right)=0\\)，从而 \\(g\\)单调递增且 \\(g>0\\)，无变号零点，当 \\(0<a<1/2\\)时 \\(g^{\\prime\\prime}\\)零点为 \\(x_{0}=1/\\left(2a\\right)-1>0\\)，\\(g^{\\prime}\\)先减后增，最小值为 \\(1-2a+\\ln 2a<0\\)，又 \\(g^{\\prime}\\left(0\\right)=0\\)且由 \\(\\ln t\\le t-1\\)得 \\(g^{\\prime}\\left(x\\right)\\ge 2ax-2\\sqrt{x+1}\\to+\\infty\\)，故 \\(g^{\\prime}\\)在 \\(\\left(0,+\\infty\\right)\\)恰有一个零点 \\(x_{1}\\)，\\(g\\)先减后增且极小值 \\(g\\left(x_{1}\\right)<0\\)，随后 \\(g\\to+\\infty\\)，故 \\(g\\)恰有一个变号零点，所以 \\(a\\)的取值范围为 \\(\\left(0,1/2\\right)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 当 \\(a=-1\\)时 \\(f\\left(x\\right)=\\left(1/x-1\\right)\\ln\\left(1+x\\right)\\)，定义域为 \\(x>-1\\)且 \\(x\\ne 0\\)，\\(f^{\\prime}\\left(x\\right)=-\\ln\\left(1+x\\right)/x^{2}+\\left(1/x-1\\right)/\\left(x+1\\right)\\)，故 \\(f\\left(1\\right)=0\\)，\\(f^{\\prime}\\left(1\\right)=-\\ln 2\\)，所以切线为 \\(y=-\\ln 2\\cdot\\left(x-1\\right)\\)，即 \\(\\left(\\ln 2\\right)x+y-\\ln 2=0\\).\\item 记 \\(h\\left(x\\right)=f\\left(1/x\\right)=\\left(x+a\\right)\\ln\\left(\\left(x+1\\right)/x\\right)\\)，由 \\(\\left(x+1\\right)/x>0\\)得定义域为 \\(x>0\\)或 \\(x<-1\\)，若 \\(h\\)关于 \\(x=b\\)对称则定义域关于 \\(b\\)对称，将区间 \\(\\left(0,+\\infty\\right)\\)反射为 \\(\\left(-\\infty,2b\\right)\\)必落在 \\(\\left(-\\infty,-1\\right)\\)内得 \\(2b\\le -1\\)，将 \\(\\left(-\\infty,-1\\right)\\)反射为 \\(\\left(2b+1,+\\infty\\right)\\)必落在 \\(\\left(0,+\\infty\\right)\\)内得 \\(2b\\ge -1\\)，故 \\(b=-1/2\\)，此时需 \\(h\\left(x\\right)=h\\left(-1-x\\right)\\)对一切 \\(x>0\\)成立，而 \\(h\\left(-1-x\\right)=\\left(-1-x+a\\right)\\ln\\left(x/\\left(x+1\\right)\\right)\\)，记 \\(L=\\ln\\left(\\left(x+1\\right)/x\\right)>0\\)，则条件化为 \\(\\left(x+a\\right)L=\\left(1+x-a\\right)L\\)，故 \\(a=1/2\\)，反之当 \\(a=1/2\\)，\\(b=-1/2\\)时定义域对称且上式恒成立，所以存在 \\(a=1/2\\)，\\(b=-1/2\\)使得曲线对称.\\item 当 \\(x>0\\)时 \\(f^{\\prime}\\left(x\\right)=\\left[-\\left(x+1\\right)\\ln\\left(x+1\\right)+x+ax^{2}\\right]/\\left[x^{2}\\left(x+1\\right)\\right]\\)，记 \\(g\\left(x\\right)=ax^{2}+x-\\left(x+1\\right)\\ln\\left(x+1\\right)\\)，则 \\(f\\)在 \\(\\left(0,+\\infty\\right)\\)存在极值等价于 \\(g\\)在 \\(\\left(0,+\\infty\\right)\\)存在变号零点，且 \\(g\\left(0\\right)=0\\)，\\(g^{\\prime}\\left(x\\right)=2ax-\\ln\\left(x+1\\right)\\)，\\(g^{\\prime\\prime}\\left(x\\right)=2a-1/\\left(x+1\\right)\\)，当 \\(a\\le 0\\)时 \\(g^{\\prime}\\left(x\\right)<0\\)，故 \\(g\\)单调递减且 \\(g<0\\)，无变号零点，当 \\(a\\ge 1/2\\)时 \\(g^{\\prime\\prime}\\left(x\\right)>0\\)，故 \\(g^{\\prime}\\)单调递增且 \\(g^{\\prime}>g^{\\prime}\\left(0\\right)=0\\)，从而 \\(g\\)单调递增且 \\(g>0\\)，无变号零点，当 \\(0<a<1/2\\)时 \\(g^{\\prime\\prime}\\)零点为 \\(x_{0}=1/\\left(2a\\right)-1>0\\)，\\(g^{\\prime}\\)先减后增，最小值为 \\(1-2a+\\ln 2a<0\\)，又 \\(g^{\\prime}\\left(0\\right)=0\\)且由 \\(\\ln t\\le t-1\\)得 \\(g^{\\prime}\\left(x\\right)\\ge 2ax-2\\sqrt{x+1}\\to+\\infty\\)，故 \\(g^{\\prime}\\)在 \\(\\left(0,+\\infty\\right)\\)恰有一个零点 \\(x_{1}\\)，\\(g\\)先减后增且极小值 \\(g\\left(x_{1}\\right)<0\\)，随后 \\(g\\to+\\infty\\)，故 \\(g\\)恰有一个变号零点，所以 \\(a\\)的取值范围为 \\(\\left(0,1/2\\right)\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 357,
+            "end": 359
+          }
+        ],
+        "question_version_sha256": "b1e1f3d29f092eb58f164a460cf18341ef64e75b1d86f97c2c99b017ffaa113d",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q022",
+      "subject": "math",
+      "stem": "在直角坐标系 \\(xOy\\) 中，以坐标原点 \\(O\\) 为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_1\\) 的极坐标方程为 \\(\\rho=2\\sin\\theta\\)（\\(\\frac{\\pi}{4}\\le\\theta\\le\\frac{\\pi}{2}\\)），曲线 \\(C_2\\) 的参数方程为 \\(x=2\\cos\\alpha\\)，\\(y=2\\sin\\alpha\\)（\\(\\alpha\\) 为参数，\\(\\frac{\\pi}{2}<\\alpha<\\pi\\)）.\n\n\n\n（子项） 写出 \\(C_1\\) 的直角坐标方程；\n\n（子项） 若直线 \\(y=x+m\\) 既与 \\(C_1\\) 没有公共点，也与 \\(C_2\\) 没有公共点，求 \\(m\\) 的取值范围.",
+      "options": {},
+      "formulas": [
+        "xOy",
+        "O",
+        "x",
+        "C_1",
+        "\\rho=2\\sin\\theta",
+        "\\frac{\\pi}{4}\\le\\theta\\le\\frac{\\pi}{2}",
+        "C_2",
+        "x=2\\cos\\alpha",
+        "y=2\\sin\\alpha",
+        "\\alpha",
+        "\\frac{\\pi}{2}<\\alpha<\\pi",
+        "C_1",
+        "y=x+m",
+        "C_1",
+        "C_2",
+        "m"
+      ],
+      "parts": [
+        "写出 \\(C_1\\) 的直角坐标方程；",
+        "若直线 \\(y=x+m\\) 既与 \\(C_1\\) 没有公共点，也与 \\(C_2\\) 没有公共点，求 \\(m\\) 的取值范围."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "写出 \\(C_1\\) 的直角坐标方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若直线 \\(y=x+m\\) 既与 \\(C_1\\) 没有公共点，也与 \\(C_2\\) 没有公共点，求 \\(m\\) 的取值范围."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在直角坐标系 \\(xOy\\) 中，以坐标原点 \\(O\\) 为极点，\\(x\\) 轴正半轴为极轴建立极坐标系，曲线 \\(C_1\\) 的极坐标方程为 \\(\\rho=2\\sin\\theta\\)（\\(\\frac{\\pi}{4}\\le\\theta\\le\\frac{\\pi}{2}\\)），曲线 \\(C_2\\) 的参数方程为 \\(x=2\\cos\\alpha\\)，\\(y=2\\sin\\alpha\\)（\\(\\alpha\\) 为参数，\\(\\frac{\\pi}{2}<\\alpha<\\pi\\)）.\n\n\\begin{enumerate}\n\\item 写出 \\(C_1\\) 的直角坐标方程；\n\\item 若直线 \\(y=x+m\\) 既与 \\(C_1\\) 没有公共点，也与 \\(C_2\\) 没有公共点，求 \\(m\\) 的取值范围.\n\\end{enumerate}",
+      "content_sha256": "0f5a95e760c5e6bf1cc8e3123a18cf5581f9443daf2f0c78d6921099f1481057",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q022",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q022",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 22,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "5e83a71a49a4b03fa0ed8c6c0be4fc2b7fa8d3278377b424327047062a60dc68",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 363,
+          "end": 370,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 2,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q022:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2023-cn-math-national-b-science:q022",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q022:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q022",
+        "question_id": "2023-cn-math-national-b-science:q022",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(\\rho=2\\sin\\theta\\)，所以 \\(\\rho^{2}=2\\rho\\sin\\theta\\)，即 \\(x^{2}+y^{2}=2y\\)，整理为 \\(x^{2}+\\left(y-1\\right)^{2}=1\\)，又 \\(x=2\\sin\\theta\\cos\\theta=\\sin 2\\theta\\)，\\(y=2\\sin^{2}\\theta=1-\\cos 2\\theta\\)，由 \\(\\pi/4\\le\\theta\\le\\pi/2\\)得 \\(\\pi/2\\le 2\\theta\\le\\pi\\)，故 \\(x\\in\\left[0,1\\right]\\)，\\(y\\in\\left[1,2\\right]\\)，所以 \\(C_{1}\\)为 \\(x^{2}+\\left(y-1\\right)^{2}=1\\)，\\(x\\in\\left[0,1\\right]\\)，\\(y\\in\\left[1,2\\right]\\)，端点为 \\(\\left(1,1\\right)\\)与 \\(\\left(0,2\\right)\\).\n（子项） 曲线 \\(C_{2}\\)为 \\(x^{2}+y^{2}=4\\)，\\(x\\in\\left(-2,0\\right)\\)，\\(y\\in\\left(0,2\\right)\\)的第二象限弧，端点 \\(\\left(0,2\\right)\\)与 \\(\\left(-2,0\\right)\\)均不含在内，记 \\(f=y-x\\)，在 \\(C_{1}\\)上 \\(f=1-\\cos 2\\theta-\\sin 2\\theta\\)关于 \\(2\\theta\\)严格递增，故取值范围为 \\(\\left[0,2\\right]\\)，直线 \\(y=x+m\\)与 \\(C_{1}\\)有公共点等价于 \\(m\\in\\left[0,2\\right]\\)，在 \\(C_{2}\\)上 \\(f=2\\sin\\alpha-2\\cos\\alpha=2\\sqrt{2}\\sin\\left(\\alpha-\\pi/4\\right)\\)，当 \\(\\pi/2<\\alpha<\\pi\\)时取值范围为 \\(\\left(2,2\\sqrt{2}\\right]\\)，其中 \\(m=2\\sqrt{2}\\)对应与圆 \\(x^{2}+y^{2}=4\\)相切于 \\(\\left(-\\sqrt{2},\\sqrt{2}\\right)\\)，\\(m=2\\)仅对应两个去端点故无交点，所以直线与 \\(C_{2}\\)有公共点等价于 \\(m\\in\\left(2,2\\sqrt{2}\\right]\\)，故同时无公共点为 \\(m\\notin\\left[0,2\\right]\\)且 \\(m\\notin\\left(2,2\\sqrt{2}\\right]\\)，即 \\(m<0\\)或 \\(m>2\\sqrt{2}\\)，所以 \\(m\\)的取值范围为 \\(\\left(-\\infty,0\\right)\\cup\\left(2\\sqrt{2},+\\infty\\right)\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 因为 \\(\\rho=2\\sin\\theta\\)，所以 \\(\\rho^{2}=2\\rho\\sin\\theta\\)，即 \\(x^{2}+y^{2}=2y\\)，整理为 \\(x^{2}+\\left(y-1\\right)^{2}=1\\)，又 \\(x=2\\sin\\theta\\cos\\theta=\\sin 2\\theta\\)，\\(y=2\\sin^{2}\\theta=1-\\cos 2\\theta\\)，由 \\(\\pi/4\\le\\theta\\le\\pi/2\\)得 \\(\\pi/2\\le 2\\theta\\le\\pi\\)，故 \\(x\\in\\left[0,1\\right]\\)，\\(y\\in\\left[1,2\\right]\\)，所以 \\(C_{1}\\)为 \\(x^{2}+\\left(y-1\\right)^{2}=1\\)，\\(x\\in\\left[0,1\\right]\\)，\\(y\\in\\left[1,2\\right]\\)，端点为 \\(\\left(1,1\\right)\\)与 \\(\\left(0,2\\right)\\).\\item 曲线 \\(C_{2}\\)为 \\(x^{2}+y^{2}=4\\)，\\(x\\in\\left(-2,0\\right)\\)，\\(y\\in\\left(0,2\\right)\\)的第二象限弧，端点 \\(\\left(0,2\\right)\\)与 \\(\\left(-2,0\\right)\\)均不含在内，记 \\(f=y-x\\)，在 \\(C_{1}\\)上 \\(f=1-\\cos 2\\theta-\\sin 2\\theta\\)关于 \\(2\\theta\\)严格递增，故取值范围为 \\(\\left[0,2\\right]\\)，直线 \\(y=x+m\\)与 \\(C_{1}\\)有公共点等价于 \\(m\\in\\left[0,2\\right]\\)，在 \\(C_{2}\\)上 \\(f=2\\sin\\alpha-2\\cos\\alpha=2\\sqrt{2}\\sin\\left(\\alpha-\\pi/4\\right)\\)，当 \\(\\pi/2<\\alpha<\\pi\\)时取值范围为 \\(\\left(2,2\\sqrt{2}\\right]\\)，其中 \\(m=2\\sqrt{2}\\)对应与圆 \\(x^{2}+y^{2}=4\\)相切于 \\(\\left(-\\sqrt{2},\\sqrt{2}\\right)\\)，\\(m=2\\)仅对应两个去端点故无交点，所以直线与 \\(C_{2}\\)有公共点等价于 \\(m\\in\\left(2,2\\sqrt{2}\\right]\\)，故同时无公共点为 \\(m\\notin\\left[0,2\\right]\\)且 \\(m\\notin\\left(2,2\\sqrt{2}\\right]\\)，即 \\(m<0\\)或 \\(m>2\\sqrt{2}\\)，所以 \\(m\\)的取值范围为 \\(\\left(-\\infty,0\\right)\\cup\\left(2\\sqrt{2},+\\infty\\right)\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 372,
+            "end": 374
+          }
+        ],
+        "question_version_sha256": "5e83a71a49a4b03fa0ed8c6c0be4fc2b7fa8d3278377b424327047062a60dc68",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    },
+    {
+      "id": "2023-cn-math-national-b-science:q023",
+      "subject": "math",
+      "stem": "已知 \\(f(x)=2|x|+|x-2|\\).\n\n\n\n（子项） 求不等式 \\(f(x)\\le6-x\\) 的解集；\n\n（子项） 在直角坐标系 \\(xOy\\) 中，求由不等式 \\(f(x)\\le y\\) 与 \\(x+y-6\\le0\\) 所确定的平面区域的面积.",
+      "options": {},
+      "formulas": [
+        "f(x)=2|x|+|x-2|",
+        "f(x)\\le6-x",
+        "xOy",
+        "f(x)\\le y",
+        "x+y-6\\le0"
+      ],
+      "parts": [
+        "求不等式 \\(f(x)\\le6-x\\) 的解集；",
+        "在直角坐标系 \\(xOy\\) 中，求由不等式 \\(f(x)\\le y\\) 与 \\(x+y-6\\le0\\) 所确定的平面区域的面积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求不等式 \\(f(x)\\le6-x\\) 的解集；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "在直角坐标系 \\(xOy\\) 中，求由不等式 \\(f(x)\\le y\\) 与 \\(x+y-6\\le0\\) 所确定的平面区域的面积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(f(x)=2|x|+|x-2|\\).\n\n\\begin{enumerate}\n\\item 求不等式 \\(f(x)\\le6-x\\) 的解集；\n\\item 在直角坐标系 \\(xOy\\) 中，求由不等式 \\(f(x)\\le y\\) 与 \\(x+y-6\\le0\\) 所确定的平面区域的面积.\n\\end{enumerate}",
+      "content_sha256": "b01d0a107bbe552beb767181c484e1fe14cce6758c24526aefffc1a94e1c9656",
+      "origin_occurrence_id": "2023-cn-math-national-b-science:q023",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2023-cn-math-national-b-science:q023",
+      "paper_id": "2023-cn-math-national-b-science",
+      "number": 23,
+      "kind": "optional_response",
+      "points": 10,
+      "version_sha256": "0f002163fc578636baf52a4ea1284899a0899cce03a55596588ffaf2fdf265ee",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2023/national_paper_b_science.tex",
+          "start": 376,
+          "end": 383,
+          "sha256": "779cb1de5981c137c0c8dcc61601058421134c55d442b2091647f4460204ac2b"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2023-cn-math-national-b-science.pdf",
+          "page": 2,
+          "sha256": "2a9f2d4c7d552a308da579d2258639c6877a3906d5e2e4afa8bf1bc29611ed39"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [
+        "quarantined_source_content_conflict"
+      ],
+      "research_eligible": false,
+      "answer_id": "2023-cn-math-national-b-science:q023:answer",
+      "topic_flags": [],
+      "occurrence_id": "2023-cn-math-national-b-science:q023",
+      "year": 2023,
+      "series_id": "cn-national-b",
+      "track": "science",
+      "curriculum_id": "math-2003",
+      "paper_title": "2023年全国乙卷（理）",
+      "answer": {
+        "id": "2023-cn-math-national-b-science:q023:answer",
+        "occurrence_id": "2023-cn-math-national-b-science:q023",
+        "question_id": "2023-cn-math-national-b-science:q023",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(f\\left(x\\right)=2\\left|x\\right|+\\left|x-2\\right|=\\begin{cases}\n-3x+2,&x<0,\\\\\nx+2,&0\\le x\\le 2,\\\\\n3x-2,&x>2,\n\\end{cases}\\)，所以 \\(f\\left(x\\right)\\le 6-x\\)等价于 \\(x>2\\)且 \\(3x-2\\le 6-x\\)，或 \\(0\\le x\\le 2\\)且 \\(x+2\\le 6-x\\)，或 \\(x<0\\)且 \\(-3x+2\\le 6-x\\)，第一组无解，第二组得 \\(0\\le x\\le 2\\)，第三组得 \\(-2\\le x<0\\)，故解集为 \\(\\left[-2,2\\right]\\).\n（子项） 由 \\(f\\left(x\\right)\\le y\\)与 \\(x+y-6\\le 0\\)围成的区域下边界为 \\(y=f\\left(x\\right)\\)，上边界为 \\(y=6-x\\)，由第（1）问交点为 \\(A\\left(-2,8\\right)\\)与 \\(C\\left(2,4\\right)\\)，又 \\(f\\)在 \\(x=0\\)处折点为 \\(B\\left(0,2\\right)\\)，故区域为 \\(\\triangle ABC\\)，记 \\(D\\left(0,6\\right)\\)为 \\(AC\\)与 \\(y\\)轴交点，则 \\(S_{\\triangle ABC}=\\left|BD\\right|\\cdot\\left|x_{C}-x_{A}\\right|/2=4\\cdot 4/2=8\\)，所以所求平面区域的面积为 \\(8\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\\item 因为 \\(f\\left(x\\right)=2\\left|x\\right|+\\left|x-2\\right|=\\begin{cases}\n-3x+2,&x<0,\\\\\nx+2,&0\\le x\\le 2,\\\\\n3x-2,&x>2,\n\\end{cases}\\)，所以 \\(f\\left(x\\right)\\le 6-x\\)等价于 \\(x>2\\)且 \\(3x-2\\le 6-x\\)，或 \\(0\\le x\\le 2\\)且 \\(x+2\\le 6-x\\)，或 \\(x<0\\)且 \\(-3x+2\\le 6-x\\)，第一组无解，第二组得 \\(0\\le x\\le 2\\)，第三组得 \\(-2\\le x<0\\)，故解集为 \\(\\left[-2,2\\right]\\).\\item 由 \\(f\\left(x\\right)\\le y\\)与 \\(x+y-6\\le 0\\)围成的区域下边界为 \\(y=f\\left(x\\right)\\)，上边界为 \\(y=6-x\\)，由第（1）问交点为 \\(A\\left(-2,8\\right)\\)与 \\(C\\left(2,4\\right)\\)，又 \\(f\\)在 \\(x=0\\)处折点为 \\(B\\left(0,2\\right)\\)，故区域为 \\(\\triangle ABC\\)，记 \\(D\\left(0,6\\right)\\)为 \\(AC\\)与 \\(y\\)轴交点，则 \\(S_{\\triangle ABC}=\\left|BD\\right|\\cdot\\left|x_{C}-x_{A}\\right|/2=4\\cdot 4/2=8\\)，所以所求平面区域的面积为 \\(8\\).\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 385,
+            "end": 391
+          }
+        ],
+        "question_version_sha256": "0f002163fc578636baf52a4ea1284899a0899cce03a55596588ffaf2fdf265ee",
+        "authority": "third_party",
+        "review_status": "冲突题面关联答案，禁止当作原卷答案"
+      },
+      "legacy": false,
+      "assessment_state": "source_conflict",
+      "usable_for_practice": false,
+      "source_and_solution_reviewed": false
+    }
+  ],
+  "content_sha256": "e2cc03d1abe39a7ec70f2ffa5112bcc5845d66e38c713ff9c639eeb78cf3be07"
+}

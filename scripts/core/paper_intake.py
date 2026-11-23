@@ -1,6 +1,7 @@
 """Plain-text paper store shared by research and authoring."""
 from pathlib import Path
 from collections import Counter
+from urllib.parse import urlsplit
 import re
 import shutil
 
@@ -14,6 +15,18 @@ LOCAL = Path(".local-data/papers")
 SAFE_ID = re.compile(r"[a-z0-9][a-z0-9-]{2,99}\Z")
 
 
+def archive_questions(questions):
+    """Remove only derivatives from a comparison with the old local math snapshot."""
+    normalized = []
+    for q in questions:
+        row = {**q, "asset_refs":[{k:v for k,v in asset.items() if k not in ("plaintext_path","plaintext_sha256")}
+                                 for asset in q.get("asset_refs",[])]}
+        if row.pop("practice_review",None):
+            row["usable_for_practice"] = False
+        normalized.append(row)
+    return normalized
+
+
 def documents(root, subject):
     by_id = {}
     for base in (PUBLIC, LOCAL):
@@ -21,7 +34,14 @@ def documents(root, subject):
             doc = read_json(path)
             require(doc["subject"] == subject and doc["content_sha256"] == fingerprint(doc["questions"]),
                     "明文库校验失败：" + str(path))
-            require(doc["id"] not in by_id, "重复试卷：" + doc["id"])
+            if prior := by_id.get(doc["id"]):
+                previous = prior[1]
+                same = previous["content_sha256"] == doc["content_sha256"]
+                if not same and previous.get("compatibility") == doc.get("compatibility") == "national-math-v1":
+                    same = archive_questions(previous["questions"]) == archive_questions(doc["questions"])
+                require(prior[0].is_relative_to(root / PUBLIC) and base == LOCAL and same,
+                        "重复或冲突的明文试卷：" + doc["id"])
+                continue
             by_id[doc["id"]] = (path, doc)
     return list(by_id.values())
 
@@ -35,9 +55,12 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
     require(doc["exam_kind"] in ("official_exam", "adaptation_exam"), "适应性演练须单独分类")
     require(doc["series_id"] and doc["title"] and isinstance(doc["regions"], list) and doc["regions"],
             "缺卷系、卷名或适用地区")
-    source = doc["source"]
-    require(source["title"].strip() and source["url"].startswith("https://") and source["rights_basis"].strip(),
-            "缺来源、网址或本地授权依据")
+    source = dict(doc["source"])
+    url = urlsplit(source["url"])
+    require(source["title"].strip() and url.scheme in ("http", "https") and url.hostname,
+            "缺少来源标题或可追溯网址")
+    source["rights_basis"] = "仅用于个人学习与教研归档"
+    doc["source"] = source
     require(not any(d["id"] == identifier for _, d in documents(root, subject)), "该试卷已导入")
     questions = doc["questions"]
     from_text = markdown_questions(markdown) if markdown else {}
@@ -53,13 +76,7 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
         blueprint=plan(root,subject,"河南",year)
         scores=[x for section in blueprint["sections"] for x in section["scores"]]
         require([q["points"] for q in questions] == scores[first-1:], "该卷题量或逐题分值与历史蓝图不符")
-    if track:
-        scopes = source.get("public_reuse", {})
-        require(all(isinstance(scopes.get(key),str) and scopes[key].strip()
-                    for key in ("questions","passages","answers","assets"))
-                and source.get("license_url","").startswith("https://"),
-                "提交全文须记录题目、阅读材料、答案及图件各自可公开分发的依据")
-    doc["distribution"] = "public-reuse-documented" if track else "local-only"
+    doc["distribution"] = "private-research" if track else "local-only"
     path = root / (PUBLIC if track else LOCAL) / subject / (identifier + ".json")
     passages = doc.get("passages", {})
     require(isinstance(passages, dict) and all(isinstance(v, str) and v.strip() for v in passages.values()),
@@ -133,11 +150,13 @@ def research(root, subject, *, year=None, region=None, topic=None, limit=10,
     return result[:limit]
 
 
-def dna(root, subject):
+def dna(root, subject, *, tracked_only=False):
+    from core.paper_dna import official_first_profiles
     stats = {}
     times = Counter()
     references = []
-    files = documents(root, subject)
+    files = [(path,doc) for path,doc in documents(root,subject)
+             if not tracked_only or path.is_relative_to(root / PUBLIC)]
     for _, paper in files:
         if paper["exam_kind"] != "official_exam":
             continue
@@ -167,4 +186,5 @@ def dna(root, subject):
         position["passage_length_range"] = [min(lengths), max(lengths)] if lengths else None
     return {"subject":subject,"eligible_rows_by_year":times,"positions":stats,"references":references,
             "tags_are_editorial":True,
+            "national_first_profile":official_first_profiles(subject, [paper for _, paper in files]),
             "scope":"仅统计可读完整题及现有审定的结构标签；无标注不推断难度、考点或干扰项。"}

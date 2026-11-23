@@ -31,7 +31,7 @@ def main(argv=None):
     electronic.add_argument("input", type=Path, help="含卷型和题目元数据的 JSON")
     electronic.add_argument("--markdown", type=Path, help="可选，含逐题题干与答案的 Markdown")
     electronic.add_argument("--images", type=Path, help="实质题图和可选官方原页的本地目录")
-    electronic.add_argument("--track", action="store_true", help="仅限已记录各部分公开授权的主三科资料")
+    electronic.add_argument("--track", action="store_true", help="写入 Git 跟踪的私有教研目录")
     research = sub.add_parser("research")
     research.add_argument("subject",choices=SUBJECTS)
     research.add_argument("--year",type=int)

@@ -25,6 +25,8 @@ def source_issues(paper_id, answer_text):
 
 
 def research_eligible(row):
+    if practice_reviewed(row):
+        return True
     return not any(
         x in row.get("issues", [])
         for x in (
@@ -33,3 +35,12 @@ def research_eligible(row):
             "calibration_source_conflict",
         )
     )
+
+
+def practice_reviewed(row):
+    """A version-bound, practice-only disposition from comparison of two candidate page images."""
+    review = row.get("practice_review") or {}
+    return (set(row.get("issues", [])) == {"calibration_source_conflict"}
+            and review.get("decision") == "usable_for_practice"
+            and review.get("version_sha256") == row.get("version_sha256")
+            and review.get("basis") == "visual_crosscheck")

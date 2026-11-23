@@ -7,7 +7,7 @@ from contextlib import closing
 from pathlib import Path
 from gaokao import read_json, read_lines, require, digest
 from analysis_db import fingerprint
-from national_quality import research_eligible
+from national_quality import practice_reviewed, research_eligible
 import local_archive
 import math_calibration
 
@@ -637,7 +637,7 @@ def reference_pack(
     for row in found:
         if allowed_ids is not None and row["occurrence_id"] not in allowed_ids:
             continue
-        if row.get("curation", {}).get("body_state") == "存在版本冲突":
+        if row.get("curation", {}).get("body_state") == "存在版本冲突" and not practice_reviewed(row):
             continue
         if counts[row["paper_id"]] >= policy["per_paper_reference_cap"]:
             continue
