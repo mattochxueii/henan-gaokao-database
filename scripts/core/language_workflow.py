@@ -4,13 +4,38 @@ from itertools import groupby
 from pathlib import Path
 
 from analysis_db import fingerprint
-from core.paper_intake import dna
+from core.paper_intake import PUBLIC, dna, documents
 from forecast_store import write_new
 from gaokao import digest, read_json, require
 
 LANGUAGES = ("chinese", "english")
 ROOT_DATA = Path("data/language-blueprints.json")
 OBJECTIVE = ("single_choice", "gap_match", "multiple_choice", "grammar_gap", "recitation")
+
+
+def fulltext_corpus(root, subject):
+    ids = [f"{year}-cn-{subject}-national-1" for year in (2024,2025,2026)]
+    ids.append(f"2025-ha-{subject}-adaptation")
+    papers = {d["id"]: (path, d) for path, d in documents(root, subject)
+              if path.is_relative_to(root / PUBLIC) and d["id"] in ids}
+    if set(papers) != set(ids):
+        return []
+    corpus = []
+    for identifier in ids:
+        path, d = papers[identifier]
+        questions = d["questions"]
+        if (not d.get("passages") or not questions
+                or any(not q.get("usable_for_practice") or not q.get("stem") for q in questions)
+                or (subject == "english" and (d.get("written_only")
+                    or len(d.get("listening_transcript",{})) != 10))):
+            return []
+        corpus.append({"id":identifier,"year":d["year"],"exam_kind":d["exam_kind"],
+                       "path":path.relative_to(root).as_posix(),
+                       "url":d["source"]["url"],"questions":len(questions),
+                       "content_sha256":d["content_sha256"],
+                       "materials_sha256":fingerprint(d["passages"]),
+                       "listening_sha256":d.get("listening_sha256")})
+    return corpus
 
 
 def plan(root, subject, region, year):
@@ -20,11 +45,12 @@ def plan(root, subject, region, year):
     basis = min(year, 2026)
     version = historical[str(basis)]
     features = dna(root,subject)
+    corpus = fulltext_corpus(root,subject)
     return {"subject":subject,"region":region,"year":year,"basis_year":basis,
             "series":"cn-new-gaokao-1","minutes":evidence["minutes"],
             "points":150,"sections":version["sections"],"sources":version["sources"],
             "historical_traits":version["traits"],"listening_group_sizes":version.get("listening_group_sizes"),"dna":features,
-            "fulltext_supported":bool(features["references"])}
+            "fulltext_supported":bool(corpus), "language_corpus":corpus}
 
 
 def henan_english_score(written):
@@ -37,8 +63,8 @@ def prepare(root, blueprint, candidate, output):
     subject = blueprint["subject"]
     require(candidate["subject"] == subject and candidate.get("blueprint_sha256") == fingerprint(blueprint),
             "候选须绑定本学科题位与参考画像")
-    require(candidate.get("reference_scope") == ("fulltext" if blueprint["fulltext_supported"] else "structure_only"),
-            "原文覆盖与参考范围不符")
+    require(blueprint["fulltext_supported"] and candidate.get("reference_scope") == "fulltext",
+            "语英标准卷须以本学科三套正式卷和河南演练卷的全文为依据")
     require(candidate.get("reference_notes") and all(isinstance(x,str) and x.strip() for x in candidate["reference_notes"]),
             "必须说明真题特征及原创差异")
     questions, materials = candidate["questions"], candidate["materials"]

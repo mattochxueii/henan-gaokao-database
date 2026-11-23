@@ -1,0 +1,1237 @@
+{
+  "protocol": "gaokao-editorial-audit-v2",
+  "reviewer": "宿主编辑审稿",
+  "paper_version": "075a474680882b957017c5487b37303f03b8440cf9f8b7dd6d854a6519383a78",
+  "paper_pdf_sha256": "47d3d67e1cc731893da4d187b857c1d566f5da6c53ba2af63608d207397c484b",
+  "reference_sha256": "94191cc1d109ba56325fe6751258682c11fb242e1026602c6530ec0f8aa27837",
+  "items": [
+    {
+      "number": 1,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+          "id": "2025-cn-math-national-1:q001",
+          "comparison": "真题动作是虚部。本题用整除识别有限补集后保留并集去重。早段只核对基本集合运算。"
+        },
+        "2026": {
+          "version_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+          "id": "2026-cn-math-national-1:q001",
+          "comparison": "真题动作是中位数排序。本题用整除识别有限补集后保留并集去重。早段只核对基本集合运算。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用整除识别有限补集后保留并集去重。早段只核对基本集合运算。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "先找因数集合",
+          "并集去重"
+        ],
+        "linked_concepts": [
+          "集合与逻辑",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "先找因数集合",
+          "并集去重"
+        ],
+        "routine_shortcut_rejected": "用整除识别有限补集后保留并集去重。早段只核对基本集合运算。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "漏并集",
+          "mechanism": "只数补集中的4与5。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "忽略第一个集合",
+          "mechanism": "只数B的三个元素。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "重复计交集",
+          "mechanism": "把两个集合的元素个数相加，重复计入4。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 2,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+          "id": "2025-cn-math-national-1:q002",
+          "comparison": "真题动作是补集的基数。本题从复除到平移后求模，增加一个简单但必要的中间量。"
+        },
+        "2026": {
+          "version_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+          "id": "2026-cn-math-national-1:q002",
+          "comparison": "真题动作是不共线条件比较系数。本题从复除到平移后求模，增加一个简单但必要的中间量。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从复除到平移后求模，增加一个简单但必要的中间量。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "复除和平移后求模"
+        ],
+        "linked_concepts": [
+          "复数",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "复除和平移后求模"
+        ],
+        "routine_shortcut_rejected": "从复除到平移后求模，增加一个简单但必要的中间量。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "虚部平移方向弄反",
+          "mechanism": "把减i当成加i，得到实数1。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "未落实平移",
+          "mechanism": "直接算z的模。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "混淆模与虚部绝对值",
+          "mechanism": "只读平移后虚部的绝对值2，漏实部。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 3,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+          "id": "2025-cn-math-national-1:q003",
+          "comparison": "真题动作是双曲线轴比与离心率。本题通过垂直把坐标转为一个线性方程，考查向量基本运算。"
+        },
+        "2026": {
+          "version_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+          "id": "2026-cn-math-national-1:q003",
+          "comparison": "真题动作是角值化简后取交。本题通过垂直把坐标转为一个线性方程，考查向量基本运算。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "通过垂直把坐标转为一个线性方程，考查向量基本运算。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "将垂直关系写成数量积方程"
+        ],
+        "linked_concepts": [
+          "平面向量",
+          "representation"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "将垂直关系写成数量积方程"
+        ],
+        "routine_shortcut_rejected": "通过垂直把坐标转为一个线性方程，考查向量基本运算。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "B": {
+          "misconception": "一次方程移项变号遗漏",
+          "mechanism": "由1+10t=0漏写负号。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把垂直当成横坐标为零",
+          "mechanism": "只令1+3t=0。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "把垂直当成纵坐标为零",
+          "mechanism": "只令2-t=0。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 4,
+      "answer_key": "D",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+          "id": "2025-cn-math-national-1:q004",
+          "comparison": "真题动作是正切中心的最小正位置。本题将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+        },
+        "2026": {
+          "version_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+          "id": "2026-cn-math-national-1:q004",
+          "comparison": "真题动作是切线。本题将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "均值还原总和",
+          "扣除同偏差的两项总量"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "均值还原总和",
+          "扣除同偏差的两项总量"
+        ],
+        "routine_shortcut_rejected": "将有污染的分组统计量还原总量并更正。每条记录在合并时同权。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "遗漏更正次数",
+          "mechanism": "两组总量仅减去一次3。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "保留修正前总量",
+          "mechanism": "算(48+44)/10。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "组权重误读",
+          "mechanism": "更正后两组均值为7和11，直接平均得9。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 5,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+          "id": "2025-cn-math-national-1:q005",
+          "comparison": "真题动作是奇偶与周期合用。本题相位条件中必须确认从负初始角出发遇到的首个零点。"
+        },
+        "2026": {
+          "version_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+          "id": "2026-cn-math-national-1:q005",
+          "comparison": "真题动作是垂直轴向双焦点。本题相位条件中必须确认从负初始角出发遇到的首个零点。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "相位条件中必须确认从负初始角出发遇到的首个零点。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "将最小正零点折成首个正弦角",
+          "求频率、再代入"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "将最小正零点折成首个正弦角",
+          "求频率、再代入"
+        ],
+        "routine_shortcut_rejected": "相位条件中必须确认从负初始角出发遇到的首个零点。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "代入遗漏初相",
+          "mechanism": "计算2sin(2π/3)。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "忽略对频率的反求",
+          "mechanism": "默认角频率1，计算2sin(π/3−π/6)。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "混淆零点位置与周期",
+          "mechanism": "把首个正零点当零点间距，误以为四倍仍为零点。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 6,
+      "answer_key": "A",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+          "id": "2025-cn-math-national-1:q006",
+          "comparison": "真题动作是视风向量及风级表。本题从两段等长和恢复一次结构，再确定所问位置。"
+        },
+        "2026": {
+          "version_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+          "id": "2026-cn-math-national-1:q006",
+          "comparison": "真题动作是函数最大值反求参数。本题从两段等长和恢复一次结构，再确定所问位置。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从两段等长和恢复一次结构，再确定所问位置。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "两段和相减得到公差",
+          "回求首项"
+        ],
+        "linked_concepts": [
+          "数列",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "两段和相减得到公差",
+          "回求首项"
+        ],
+        "routine_shortcut_rejected": "从两段等长和恢复一次结构，再确定所问位置。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "B": {
+          "misconception": "求成前一项",
+          "mechanism": "用a₁+5d得到a₆。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把区段末项作为第七项",
+          "mechanism": "用a₈替代a₇。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "用块均值充当项值",
+          "mechanism": "把第5到第8项的平均数30/4直接填入。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 7,
+      "answer_key": "B",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+          "id": "2025-cn-math-national-1:q007",
+          "comparison": "真题动作是平行等距线与圆交点数。本题相邻块在两个有首位排除的计数空间内都须满足同一顺序。与真题中表示转换后再限制可行构型相应。"
+        },
+        "2026": {
+          "version_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+          "id": "2026-cn-math-national-1:q007",
+          "comparison": "真题动作是塔行数重组、配对可行性。本题相邻块在两个有首位排除的计数空间内都须满足同一顺序。与真题中表示转换后再限制可行构型相应。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "相邻块在两个有首位排除的计数空间内都须满足同一顺序。与真题中表示转换后再限制可行构型相应。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "相邻对和方向一起编码",
+          "区分合规基数和首位被排除的子空间",
+          "保留在两个空间的前后约束"
+        ],
+        "linked_concepts": [
+          "排列组合与计数",
+          "compare"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "相邻对和方向一起编码",
+          "区分合规基数和首位被排除的子空间",
+          "保留在两个空间的前后约束"
+        ],
+        "routine_shortcut_rejected": "相邻块在两个有首位排除的计数空间内都须满足同一顺序。与真题中表示转换后再限制可行构型相应。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "漏块内方向",
+          "mechanism": "只计12序不计21序，得到12−3。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "只扣一半首位反例",
+          "mechanism": "基数计两个方向，排除时只计一个，得到24−3。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "漏4首位限制",
+          "mechanism": "只处理相邻与3的顺序，得到24。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 8,
+      "answer_key": "C",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+          "id": "2025-cn-math-national-1:q008",
+          "comparison": "真题动作是统一参数比较三指数的次序。本题折叠关系改作半径后，必须检查内外两段上根的位置与折点重合。参数答案需要回到整数。"
+        },
+        "2026": {
+          "version_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+          "id": "2026-cn-math-national-1:q008",
+          "comparison": "真题动作是去掉一点后利用对称性重计。本题折叠关系改作半径后，必须检查内外两段上根的位置与折点重合。参数答案需要回到整数。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "折叠关系改作半径后，必须检查内外两段上根的位置与折点重合。参数答案需要回到整数。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "对称根用非负半径配对",
+          "求内外两段可接受的根",
+          "折点根合并且中心根只计一次",
+          "转回整数m"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "compare"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "对称根用非负半径配对",
+          "求内外两段可接受的根",
+          "折点根合并且中心根只计一次",
+          "转回整数m"
+        ],
+        "routine_shortcut_rejected": "折叠关系改作半径后，必须检查内外两段上根的位置与折点重合。参数答案需要回到整数。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "把可行参数个数当总和",
+          "mechanism": "找到三个正整数后直接作答3。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "混淆根个数与参数的总和",
+          "mechanism": "把题设中的目标根数5当成所求输出。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "重复计算折点",
+          "mechanism": "把m=4时内外两段的同一半径当作两个半径，误加4。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 9,
+      "answer_key": "AB",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+          "id": "2025-cn-math-national-1:q009",
+          "comparison": "真题动作是正三棱柱中的线面关系。本题由合向量和模同时固定实部与相对方向，实部、模和复乘积不能用同一算式直接判定。"
+        },
+        "2026": {
+          "version_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+          "id": "2026-cn-math-national-1:q009",
+          "comparison": "真题动作是题位与主题可见、选项冲突未采用。候选范围受限，仅据题位及可见主题。本题由合向量和模同时固定实部与相对方向，实部、模和复乘积不能用同一算式直接判定。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由合向量和模同时固定实部与相对方向，实部、模和复乘积不能用同一算式直接判定。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "令两虚部互为相反数",
+          "两模平方差固定实部",
+          "存在的两平方和都含非零虚部"
+        ],
+        "linked_concepts": [
+          "复数",
+          "counterexample"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "令两虚部互为相反数",
+          "两模平方差固定实部",
+          "存在的两平方和都含非零虚部"
+        ],
+        "routine_shortcut_rejected": "由合向量和模同时固定实部与相对方向，实部、模和复乘积不能用同一算式直接判定。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "C": {
+          "misconception": "漏复乘积的交互项",
+          "mechanism": "只看来自实虚交叉的虚项，遗漏能产生实部的a(√5−a)与b²。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "传递虚部相消",
+          "mechanism": "把z+w的虚部为零错误推广到平方和，忽略各实部系数不同。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 10,
+      "answer_key": "BC",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+          "id": "2025-cn-math-national-1:q010",
+          "comparison": "真题动作是焦准距垂线与焦点弦。本题同色、固定色数与固定位置对应三种条件空间。用独立分母比较后验并判断条件方向。"
+        },
+        "2026": {
+          "version_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+          "id": "2026-cn-math-national-1:q010",
+          "comparison": "真题动作是同轴距离与二面角。本题同色、固定色数与固定位置对应三种条件空间。用独立分母比较后验并判断条件方向。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "同色、固定色数与固定位置对应三种条件空间。用独立分母比较后验并判断条件方向。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "三个条件空间各有不同的分母",
+          "把已知中间颜色的两种条件对列",
+          "用精确后验排除错误方向"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "counterexample"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "三个条件空间各有不同的分母",
+          "把已知中间颜色的两种条件对列",
+          "用精确后验排除错误方向"
+        ],
+        "routine_shortcut_rejected": "同色、固定色数与固定位置对应三种条件空间。用独立分母比较后验并判断条件方向。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "A": {
+          "misconception": "遗漏条件化",
+          "mechanism": "算出三球同色的无条件概率1/7，未除以首尾同色概率。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "把中球颜色的总体占优当条件占优",
+          "mechanism": "按4白3黑猜白球作中间更会同色，实际取走白球后剩余颜色更均衡。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 11,
+      "answer_key": "AD",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+          "id": "2025-cn-math-national-1:q011",
+          "comparison": "真题动作是由两个角等式及面积判命题。本题用可行三角形和积研究上半轨迹，逐项分离最值、开边界和射线条件。"
+        },
+        "2026": {
+          "version_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+          "id": "2026-cn-math-national-1:q011",
+          "comparison": "真题动作是三圆直线弦长与参数限制。本题用可行三角形和积研究上半轨迹，逐项分离最值、开边界和射线条件。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用可行三角形和积研究上半轨迹，逐项分离最值、开边界和射线条件。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图注明焦点之间的距离4，决定余弦边界和最大高度。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "图示焦距和两个边长重写选项",
+          "反向用合法边长构造上半平面点",
+          "一端趋近共线不能取到",
+          "余弦下端实际可取"
+        ],
+        "linked_concepts": [
+          "解析几何",
+          "counterexample"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "图示焦距和两个边长重写选项",
+          "反向用合法边长构造上半平面点",
+          "一端趋近共线不能取到",
+          "余弦下端实际可取"
+        ],
+        "routine_shortcut_rejected": "用可行三角形和积研究上半轨迹，逐项分离最值、开边界和射线条件。"
+      },
+      "required_figure_information": "图注明焦点之间的距离4，决定余弦边界和最大高度。",
+      "distractors": {
+        "B": {
+          "misconception": "忘记两焦点有间隔",
+          "mechanism": "将半个距离和直接作高度上界且误认可达到。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "对可达边界判断相反",
+          "mechanism": "误纳入共线时余弦1，误舍去中垂线上的最小值1/9。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 12,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+          "id": "2025-cn-math-national-1:q012",
+          "comparison": "真题动作是由给定切线反求常数。本题由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+        },
+        "2026": {
+          "version_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+          "id": "2026-cn-math-national-1:q012",
+          "comparison": "真题动作是离心率题位、式面版本待核。候选范围受限，仅据题位及可见主题。本题由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "将平行写为相同导数值",
+          "比较正负两点的纵截距"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "compare"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "将平行写为相同导数值",
+          "比较正负两点的纵截距"
+        ],
+        "routine_shortcut_rejected": "由已知斜率同时找两个切点，并完整计算两个纵截距。2026候选只用题位类别。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    },
+    {
+      "number": 13,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+          "id": "2025-cn-math-national-1:q013",
+          "comparison": "真题动作是等比分段求和。本题按总次数约束配平两因式，收集三组系数及符号。"
+        },
+        "2026": {
+          "version_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+          "id": "2026-cn-math-national-1:q013",
+          "comparison": "真题动作是偶性、整数频率与单调区间。本题按总次数约束配平两因式，收集三组系数及符号。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "按总次数约束配平两因式，收集三组系数及符号。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按指数配对",
+          "核对负交叉项"
+        ],
+        "linked_concepts": [
+          "排列组合与计数",
+          "routine_algebra"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "按指数配对",
+          "核对负交叉项"
+        ],
+        "routine_shortcut_rejected": "按总次数约束配平两因式，收集三组系数及符号。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    },
+    {
+      "number": 14,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+          "id": "2025-cn-math-national-1:q014",
+          "comparison": "真题动作是不同编号出现次数的期望。本题用二次式符号编码‘中间’，再构造能达到全区间的两根。只求判别式无法完成中位数排序。"
+        },
+        "2026": {
+          "version_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+          "id": "2026-cn-math-national-1:q014",
+          "comparison": "真题动作是由分块前缀和反推连续等比段可行域。本题用二次式符号编码‘中间’，再构造能达到全区间的两根。只求判别式无法完成中位数排序。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "用二次式符号编码‘中间’，再构造能达到全区间的两根。只求判别式无法完成中位数排序。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由和与平方和写出关于另外两数的二次式",
+          "中位数夹在根间需函数值非正",
+          "用符号条件得到合法的两根",
+          "相等边界仍满足条件"
+        ],
+        "linked_concepts": [
+          "集合与逻辑",
+          "endpoint"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "由和与平方和写出关于另外两数的二次式",
+          "中位数夹在根间需函数值非正",
+          "用符号条件得到合法的两根",
+          "相等边界仍满足条件"
+        ],
+        "routine_shortcut_rejected": "用二次式符号编码‘中间’，再构造能达到全区间的两根。只求判别式无法完成中位数排序。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    },
+    {
+      "number": 15,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+          "id": "2025-cn-math-national-1:q015",
+          "comparison": "真题动作是列联数据、条件概率和检验结论。本题先分割面积求共用工具，再把等角约束折为边积的可行区间。"
+        },
+        "2026": {
+          "version_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+          "id": "2026-cn-math-national-1:q015",
+          "comparison": "真题动作是棱柱中点与线面角。本题先分割面积求共用工具，再把等角约束折为边积的可行区间。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "先分割面积求共用工具，再把等角约束折为边积的可行区间。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "标签D在BC线段上，确定面积可作相加分割。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "两小三角形的同角面积",
+          "消掉半角正弦得到角平分线长度",
+          "余弦小于1约束边积",
+          "按合法积构造两边和夹角"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "sufficiency"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "两小三角形的同角面积",
+          "消掉半角正弦得到角平分线长度",
+          "余弦小于1约束边积",
+          "按合法积构造两边和夹角"
+        ],
+        "routine_shortcut_rejected": "先分割面积求共用工具，再把等角约束折为边积的可行区间。"
+      },
+      "required_figure_information": "标签D在BC线段上，确定面积可作相加分割。",
+      "distractors": {}
+    },
+    {
+      "number": 16,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+          "id": "2025-cn-math-national-1:q016",
+          "comparison": "真题动作是递推改写等差并计算有限和导数。本题从棱柱图到投影模型，第二问的点域改变第三问的最值范围。"
+        },
+        "2026": {
+          "version_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+          "id": "2026-cn-math-national-1:q016",
+          "comparison": "真题动作是余弦与外部平行构型。本题从棱柱图到投影模型，第二问的点域改变第三问的最值范围。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从棱柱图到投影模型，第二问的点域改变第三问的最值范围。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "三维图给出棱长4及运动点、斜平面和投影的对应。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "建立与三个棱对应的坐标轴",
+          "到斜平面的投影位移固定",
+          "限制垂足三个坐标非负",
+          "用已缩短参数区间求线面角边界"
+        ],
+        "linked_concepts": [
+          "立体几何",
+          "optimality"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "建立与三个棱对应的坐标轴",
+          "到斜平面的投影位移固定",
+          "限制垂足三个坐标非负",
+          "用已缩短参数区间求线面角边界"
+        ],
+        "routine_shortcut_rejected": "从棱柱图到投影模型，第二问的点域改变第三问的最值范围。"
+      },
+      "required_figure_information": "三维图给出棱长4及运动点、斜平面和投影的对应。",
+      "distractors": {}
+    },
+    {
+      "number": 17,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+          "id": "2025-cn-math-national-1:q017",
+          "comparison": "真题动作是平面垂直与底面、角度条件。本题首次相邻异类产生两个生存轨迹，已知安全时长会改变下一次的条件概率。"
+        },
+        "2026": {
+          "version_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+          "id": "2026-cn-math-national-1:q017",
+          "comparison": "真题动作是停止规则、分布及条件尾概率。本题首次相邻异类产生两个生存轨迹，已知安全时长会改变下一次的条件概率。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "首次相邻异类产生两个生存轨迹，已知安全时长会改变下一次的条件概率。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "生存时的两全同轨迹互斥",
+          "逐步累加未停概率并处理截尾",
+          "先后两类轨迹权重给条件概率",
+          "离散阈值求最小下标"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "endpoint"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "生存时的两全同轨迹互斥",
+          "逐步累加未停概率并处理截尾",
+          "先后两类轨迹权重给条件概率",
+          "离散阈值求最小下标"
+        ],
+        "routine_shortcut_rejected": "首次相邻异类产生两个生存轨迹，已知安全时长会改变下一次的条件概率。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    },
+    {
+      "number": 18,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+          "id": "2025-cn-math-national-1:q018",
+          "comparison": "真题动作是椭圆方程与射线重构。本题从切点参数得到弦的方程及长度，再通过顶点是否进入非负区间判断等号点数。2026候选只用题位与焦点弦层次。"
+        },
+        "2026": {
+          "version_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+          "id": "2026-cn-math-national-1:q018",
+          "comparison": "真题动作是焦点弦与面积、后问条件存档分歧。候选范围受限，仅据题位及可见主题。本题从切点参数得到弦的方程及长度，再通过顶点是否进入非负区间判断等号点数。2026候选只用题位与焦点弦层次。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从切点参数得到弦的方程及长度，再通过顶点是否进入非负区间判断等号点数。2026候选只用题位与焦点弦层次。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图中标明移动直线方程x−y=−2，决定弦所过定点和第二问极值。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "切点参数及过定点条件转化为二次根",
+          "两切点和积给弦与长度",
+          "非负变量限定抛物线顶点是否可取",
+          "分类并明确边界处重合",
+          "判别式保证每个极值位置存在两切点"
+        ],
+        "linked_concepts": [
+          "解析几何",
+          "sufficiency"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "切点参数及过定点条件转化为二次根",
+          "两切点和积给弦与长度",
+          "非负变量限定抛物线顶点是否可取",
+          "分类并明确边界处重合",
+          "判别式保证每个极值位置存在两切点"
+        ],
+        "routine_shortcut_rejected": "从切点参数得到弦的方程及长度，再通过顶点是否进入非负区间判断等号点数。2026候选只用题位与焦点弦层次。"
+      },
+      "required_figure_information": "图中标明移动直线方程x−y=−2，决定弦所过定点和第二问极值。",
+      "distractors": {}
+    },
+    {
+      "number": 19,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+          "id": "2025-cn-math-national-1:q019",
+          "comparison": "真题动作是谐波极值、移位存在与全域限制。本题从有限驻点检验转到全域优化。奇偶拆分提供下界及取等条件，放宽阈值后仍要证明可构造。"
+        },
+        "2026": {
+          "version_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+          "id": "2026-cn-math-national-1:q019",
+          "comparison": "真题动作是优势位移集合、排序及全称约束。本题从有限驻点检验转到全域优化。奇偶拆分提供下界及取等条件，放宽阈值后仍要证明可构造。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "从有限驻点检验转到全域优化。奇偶拆分提供下界及取等条件，放宽阈值后仍要证明可构造。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "取对称点并分离奇偶部",
+          "两个特征点夹出系数",
+          "四处达到界迫使偶部为零",
+          "放宽界转而比较端点和内部极值",
+          "选择偶部零构造所有一次系数"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "sufficiency"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "取对称点并分离奇偶部",
+          "两个特征点夹出系数",
+          "四处达到界迫使偶部为零",
+          "放宽界转而比较端点和内部极值",
+          "选择偶部零构造所有一次系数"
+        ],
+        "routine_shortcut_rejected": "从有限驻点检验转到全域优化。奇偶拆分提供下界及取等条件，放宽阈值后仍要证明可构造。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    }
+  ],
+  "revisions": {
+    "3": {
+      "distractors": "原稿1/2缺少明确单步误解。用2专门检验把垂直错作纵分量为零。"
+    },
+    "4": {
+      "distractors": "将不合并数据的8.0改为9.0，精确对应错给两组相同权重。"
+    },
+    "6": {
+      "distractors": "原稿10需跳两项。换成15/2，针对把第5到8项平均数充当第7项。"
+    },
+    "7": {
+      "depth": "原稿仅求相邻打包的排列数。加相对顺序与禁首位，区分两个都须维持顺序的计数空间。",
+      "distractors": "删除缺具体计数来源的60。新干扰对应漏方向、只扣一半首位情形和漏首位限制。"
+    },
+    "10": {
+      "depth": "单球无条件概率改为不放回三次的条件事件。比较同色、色数及中间球条件。",
+      "distractors": "去掉零概率总和和1.4。用漏条件分母、误解取走一颗白球后的颜色比例作为干扰。"
+    },
+    "14": {
+      "depth": "两数求较大根改为三数求中位数区间，必须证排序约束的充要性与两端可达。"
+    }
+  }
+}

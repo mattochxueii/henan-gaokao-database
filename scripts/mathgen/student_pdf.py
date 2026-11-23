@@ -152,6 +152,54 @@ def normalise_tex(text):
     return "".join(out)
 
 
+def draw_figure(data, image):
+    fig = Figure(figsize=(4.8, 2.65), dpi=250)
+    if data["type"] == "wireframe":
+        ax = fig.add_subplot(111, projection="3d")
+        hidden = {frozenset(edge) for edge in data.get("hidden_edges", [])}
+        for a,b in data["edges"]:
+            ax.plot(*zip(data["vertices"][a], data["vertices"][b]),
+                    color="black", linewidth=1.15,
+                    linestyle="--" if frozenset((a,b)) in hidden else "-")
+        ax.view_init(*data.get("view_angles", (20,-55)))
+        ax.set_axis_off()
+        for name, point in data["vertices"].items():
+            px,py,_ = proj3d.proj_transform(*point, ax.get_proj())
+            if name in data.get("marked_points", ()):
+                ax.plot(*([value] for value in point), "ko", markersize=3)
+            display = re.sub(r"([A-Za-z])([0-9]+)", r"\1_{\2}", name)
+            ax.annotate("$" + display + "$", (px,py),
+                        xytext=data.get("label_offsets", {}).get(name,[3,3]),
+                        textcoords="offset points", fontsize=12)
+        for mark in data.get("labels", []):
+            px, py, _ = proj3d.proj_transform(*mark["at"], ax.get_proj())
+            ax.annotate("$" + mark["math"] + "$", (px, py),
+                        xytext=mark.get("offset", [3, 3]),
+                        textcoords="offset points", fontsize=11)
+    else:
+        require(data["type"] == "coordinate", "不支持的试卷图形")
+        ax = fig.add_subplot()
+        fig.subplots_adjust(left=.12,right=.93,bottom=.13,top=.90)
+        ax.set(xlim=data["xlim"],ylim=data["ylim"],xticks=[],yticks=[])
+        ax.set_axis_off()
+        if data.get("axes", True):
+            xmin,xmax=data["xlim"]
+            ymin,ymax=data["ylim"]
+            for start,end,label in [((xmin,0),(xmax,0),"$x$"), ((0,ymin),(0,ymax),"$y$")]:
+                ax.annotate("", end, start, arrowprops={"arrowstyle":"->","lw":.8})
+                ax.text(*end,label,fontsize=12)
+        for segment in data["paths"]:
+            ax.plot(*zip(*segment["points"]),color="black",lw=1.1,
+                    linestyle="--" if segment.get("dashed") else "-")
+        for mark in data.get("labels", []):
+            ax.annotate("$"+mark["math"]+"$",mark["at"],
+                        xytext=mark.get("offset",[3,3]),textcoords="offset points",fontsize=11)
+            if mark.get("dot"):
+                ax.plot(*mark["at"],"ko",markersize=2.8)
+    fig.savefig(image,bbox_inches="tight",pad_inches=.13,facecolor="white")
+
+
+
 def render(paper, path, solutions=False):
     require(
         not any(k in paper for k in ("math_spec", "tasks", "design", "verifications")),
@@ -163,23 +211,25 @@ def render(paper, path, solutions=False):
     assets.mkdir(exist_ok=True)
     font = chinese_font()
     science_layout = paper.get("layout") == "science"
-    science_key = science_layout and solutions
+    math_compact = paper.get("layout") == "math_compact"
+    compact = science_layout or math_compact
+    science_key = compact and solutions
     body = ParagraphStyle(
         "student-body",
         fontName=font,
-        fontSize=10.5 if science_key else 11 if science_layout else 11.5,
-        leading=14.5 if science_key else 16 if science_layout else 23,
-        spaceAfter=3 if science_key else 3.5 if science_layout else 9,
+        fontSize=10.5 if science_key else 11 if compact else 11.5,
+        leading=14.5 if science_key else 16 if compact else 23,
+        spaceAfter=3 if science_key else 3.5 if compact else 9,
         wordWrap="CJK",
-        autoLeading="max" if science_layout else "",
+        autoLeading="max" if compact else "",
     )
     heading = ParagraphStyle(
         "student-heading",
         parent=body,
         fontSize=12,
         leading=22,
-        spaceBefore=8 if science_layout else 12,
-        spaceAfter=3 if science_layout else 8,
+        spaceBefore=8 if compact else 12,
+        spaceAfter=3 if compact else 8,
         keepWithNext=True,
     )
     title = ParagraphStyle(
@@ -188,17 +238,17 @@ def render(paper, path, solutions=False):
         fontSize=19,
         leading=29,
         alignment=TA_CENTER,
-        spaceAfter=7 if science_layout else 14,
+        spaceAfter=7 if compact else 14,
     )
     note = ParagraphStyle(
-        "student-note", parent=body, fontSize=10, leading=15 if science_layout else 18,
-        spaceAfter=5 if science_layout else 8,
+        "student-note", parent=body, fontSize=10, leading=15 if compact else 18,
+        spaceAfter=5 if compact else 8,
     )
 
     def para(text, style=body):
         chunks = []
         at = 0
-        plain = plain_markup if science_layout else formatted_plain
+        plain = plain_markup if compact else formatted_plain
         for m in re.finditer(r"\\\((.*?)\\\)", text, re.S):
             chunks.append(plain(text[at : m.start()]))
             formula = normalise_tex(m.group(1).replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
@@ -237,14 +287,20 @@ def render(paper, path, solutions=False):
             )
             at = m.end()
         chunks.append(plain(text[at:]))
-        paragraph = ExamParagraph if science_layout else MathParagraph
+        paragraph = ExamParagraph if compact else MathParagraph
         return paragraph("".join(chunks).replace("\n", "<br/>"), style)
 
     def footer(canvas, doc):
         canvas.setFont(font, 9)
         canvas.drawCentredString(A4[0] / 2, 22, f"第 {doc.page} 页")
 
-    story = [para(paper["title"] + ("　参考答案与解析" if solutions else ""), title)]
+    if math_compact and solutions:
+        subtitle = ParagraphStyle("math-solution-subtitle", parent=title, fontSize=13,
+                                  leading=19, spaceAfter=12)
+        story = [para(paper["title"].removesuffix(" · 项目自拟评分"), title),
+                 para("参考答案与解析（含项目自拟评分）", subtitle)]
+    else:
+        story = [para(paper["title"] + ("　参考答案与解析" if solutions else ""), title)]
     if not solutions:
         story.append(
             para(
@@ -252,9 +308,9 @@ def render(paper, path, solutions=False):
             )
         )
         instruction = "请按题目要求作答。"
-        if not science_layout and any(q["kind"] == "constructed_response" for q in paper["questions"]):
+        if not compact and any(q["kind"] == "constructed_response" for q in paper["questions"]):
             instruction += "解答题须写出必要的文字说明、证明过程或演算步骤。"
-        if not science_layout:
+        if not compact:
             story.append(para(instruction, note))
     previous = None
     section_titles = {
@@ -263,12 +319,14 @@ def render(paper, path, solutions=False):
         "fill_in": "填空题",
         "constructed_response": "解答题",
     }
+    if compact:
+        section_titles.update(multiple_choice="多项选择题")
     if science_layout:
-        section_titles.update(multiple_choice="多项选择题", constructed_response="非选择题")
+        section_titles.update(constructed_response="非选择题")
     groups = {kind: list(items) for kind, items in groupby(paper["questions"], key=lambda q: q["kind"])}
     section_number = 0
     md = ["# " + paper["title"], ""]
-    if science_layout and not solutions:
+    if compact and not solutions:
         md += [f'满分{paper["total_points"]}分，考试时间{paper["minutes"]}分钟。', ""]
     for index, q in enumerate(paper["questions"]):
         require(
@@ -278,7 +336,7 @@ def render(paper, path, solutions=False):
         if (
             q["kind"] == "constructed_response"
             and previous == q["kind"]
-            and not science_layout
+            and not compact
             and not solutions
         ):
             story.append(PageBreak())
@@ -290,69 +348,48 @@ def render(paper, path, solutions=False):
             )
             label = prefix + section_titles[q["kind"]]
             section.append(para(label, heading))
-            if science_layout:
-                instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"))
+            if compact:
+                if math_compact and q["kind"] in ("fill_in", "constructed_response"):
+                    group = groups[q["kind"]]
+                    prompt = ("请将答案填在横线上。" if q["kind"] == "fill_in"
+                              else "解答应写出文字说明、证明过程或演算步骤。")
+                    instructions = f"本大题共{len(group)}小题，共{sum(item['points'] for item in group)}分。" + prompt
+                else:
+                    instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"))
                 section.append(para(instructions, note))
                 md.extend([f"## {label}", "", instructions, ""])
             previous = q["kind"]
         choice = q["kind"] in ("single_choice", "multiple_choice")
         number = f"{q['order']}."
-        if not science_layout or not choice:
+        if not compact or not choice:
             number += f"（{q['points']}分）"
         block = section
-        if not science_layout:
+        if not compact:
             block.append(para(number, heading))
         figures_in_md = []
         if solutions:
             solution = q["solution_paragraphs"]
-            if science_layout:
+            if compact:
                 first = solution[0].replace("\n", " ", 1) if choice else solution[0]
                 block.append(para(number + " " + first))
                 solution = solution[1:]
             block.extend(para(p) for p in solution)
         else:
-            block.append(para(number + " " + q["stem"] if science_layout else q["stem"]))
-            if q.get("figure"):
-                if isinstance(q["figure"], dict):
-                    data = q["figure"]
-                    require(data["type"] == "wireframe", "不支持的试卷图形")
-                    figure = assets / (fingerprint(data)[:20] + "-figure.png")
-                    fig = Figure(figsize=(4.5, 2.7), dpi=220)
-                    ax = fig.add_subplot(111, projection="3d")
-                    hidden = {frozenset(edge) for edge in data.get("hidden_edges", [])}
-                    for a, b in data["edges"]:
-                        ax.plot(
-                            *zip(data["vertices"][a], data["vertices"][b]),
-                            color="black",
-                            linewidth=0.9,
-                            linestyle="--" if frozenset((a, b)) in hidden else "-",
-                        )
-                    ax.view_init(*data.get("view_angles", (20, -55)))
-                    ax.set_axis_off()
-                    for name, point in data["vertices"].items():
-                        px, py, _ = proj3d.proj_transform(*point, ax.get_proj())
-                        if name in data.get("marked_points", ()):
-                            ax.plot(*([value] for value in point), "ko", markersize=2.5)
-                        display = re.sub(r"([A-Za-z])([0-9]+)", r"\1_{\2}", name)
-                        ax.annotate(
-                            "$" + display + "$",
-                            (px, py),
-                            xytext=data.get("label_offsets", {}).get(name, [3, 3]),
-                            textcoords="offset points",
-                            fontsize=11,
-                        )
-                    fig.savefig(figure, bbox_inches="tight", facecolor="white")
+            block.append(para(number + " " + q["stem"] if compact else q["stem"]))
+            if (data := q.get("figure")):
+                if isinstance(data, dict):
+                    directory = path.parent / "figures" if math_compact else assets
+                    directory.mkdir(exist_ok=True)
+                    figure = directory / (fingerprint(data)[:20] + "-figure.png")
+                    draw_figure(data, figure)
                 else:
-                    figure = Path(q["figure"])
+                    figure = Path(data)
                 require(figure.is_file(), "图形资源缺失")
-                if science_layout:
+                if compact:
                     figures_in_md.append(figure.resolve().relative_to(path.parent.resolve()).as_posix())
-                block.append(
-                    Image(
-                        str(figure), width=430 if science_layout else 250,
-                        height=(94 if choice else 116) if science_layout else 155, kind="proportional"
-                    )
-                )
+                block.append(Image(str(figure), width=430 if compact else 290,
+                                   height=(105 if choice else 139) if math_compact else (94 if choice else 116) if compact else 155,
+                                   kind="proportional"))
             figures = q.get("archive_figures",[])
             captions = q.get("archive_figure_captions",[])
             labeled = {label:picture for picture,label in zip(figures,captions) if label in q["options"]}
@@ -372,24 +409,27 @@ def render(paper, path, solutions=False):
                 block.append(Table([cells[i:i+2] for i in range(0,len(cells),2)],
                                    colWidths=[(A4[0]-100)/2]*2,hAlign="LEFT",
                                    style=[("VALIGN",(0,0),(-1,-1),"TOP")]))
-            elif q["kind"] == "single_choice" or (science_layout and choice):
+            elif q["kind"] == "single_choice" or (compact and choice):
                 block.append(option_grid(
                     [para(key + "．" + text) for key, text in q["options"].items()],
                     A4[0] - 2 * 44 - 12,
-                    compact=science_layout,
+                    compact=compact,
                 ))
             else:
                 for key, text in q["options"].items():
                     block.append(para(key + "．" + text))
-            if science_layout and not choice:
+            if compact and not choice:
                 # The opening and its figure follow each other; labeled subquestions can flow.
                 story.append(KeepTogether(block))
                 block = []
             block.extend(para(part["label"] + " " + part["text"]) for part in q["parts"])
             if q["kind"] == "fill_in" and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
-        if science_layout:
+        if compact:
             if solutions or not choice:
+                if math_compact and solutions and choice and len(block) >= 2:
+                    story.append(KeepTogether(block[:2]))
+                    block = block[2:]
                 story.extend(block)
             else:
                 story.append(KeepTogether(block))
@@ -422,8 +462,8 @@ def render(paper, path, solutions=False):
         pagesize=A4,
         leftMargin=44,
         rightMargin=44,
-        topMargin=33 if science_layout else 38,
-        bottomMargin=34 if science_layout else 42,
+        topMargin=33 if compact else 38,
+        bottomMargin=34 if compact else 42,
         title=paper["title"],
         author="理科模拟试卷" if science_layout else "数学模拟试卷",
     ).build(story, onFirstPage=footer, onLaterPages=footer)

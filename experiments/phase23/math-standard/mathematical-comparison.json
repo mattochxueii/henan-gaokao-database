@@ -1,0 +1,797 @@
+{
+  "pdf_sha256": "47d3d67e1cc731893da4d187b857c1d566f5da6c53ba2af63608d207397c484b",
+  "student_review_sha256": "ebdb0d505af5d0d1e2f95a63eaf7baf42e6d7c1f4674ad576fc9e5f22e7b8532",
+  "math_verification_sha256": "9f42a7242b3074e74c841db33908de3d5536583010df9a60de3b83a684fdaea3",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "并集去重",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "复除和平移后求模",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "将垂直关系写成数量积方程",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "扣除同偏差的两项总量",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "求频率、再代入",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 6,
+      "passed": true,
+      "evidence": "回求首项",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 7,
+      "passed": true,
+      "evidence": "保留在两个空间的前后约束",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 8,
+      "passed": true,
+      "evidence": "转回整数m",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 1,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "m": [
+          1,
+          2,
+          3
+        ],
+        "boundary": "内外段在r=1相遇，外段严格增加由纸面证明"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 9,
+      "passed": true,
+      "evidence": "存在的两平方和都含非零虚部",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 10,
+      "passed": true,
+      "evidence": "用精确后验排除错误方向",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {
+        "labelled_draws": 210,
+        "fractions": [
+          "1/3",
+          "1/3",
+          "8/15"
+        ]
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 11,
+      "passed": true,
+      "evidence": "余弦下端实际可取",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 3,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "cosine_range": "Interval.Ropen(1/9, 1)",
+        "ray_length": "5/2"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 12,
+      "passed": true,
+      "evidence": "比较正负两点的纵截距",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 13,
+      "passed": true,
+      "evidence": "核对负交叉项",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      },
+      "independent_program_checks": {},
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 14,
+      "passed": true,
+      "evidence": "相等边界仍满足条件",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 0,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "middle_condition": "3*v**2 - 12*v + 11",
+        "range": "Interval(2 - sqrt(3)/3, sqrt(3)/3 + 2)"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 15,
+      "passed": true,
+      "evidence": "按合法积构造两边和夹角",
+      "program_coverage": {
+        "total_tasks": 2,
+        "complete_tasks": 0,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "endpoints": [
+          "12",
+          "20"
+        ]
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 16,
+      "passed": true,
+      "evidence": "用已缩短参数区间求线面角边界",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 0,
+        "partial_tasks": 3,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "projection_parameter": "Interval(4/3, 8/3)",
+        "angle_sine_squared": "Interval(6/7, 8/9)"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 17,
+      "passed": true,
+      "evidence": "离散阈值求最小下标",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 1,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "third": "2/9",
+        "finite_expectations": {
+          "2": "2",
+          "3": "23/9",
+          "4": "26/9",
+          "5": "251/81",
+          "6": "262/81",
+          "7": "2423/729",
+          "8": "274/81",
+          "9": "22451/6561"
+        },
+        "first_integer": 5
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 18,
+      "passed": true,
+      "evidence": "判别式保证每个极值位置存在两切点",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 0,
+        "partial_tasks": 3,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "vertex": "v**2/4 - 4",
+        "at_4": "64",
+        "high_min_squared": "4*v**2"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    },
+    {
+      "number": 19,
+      "passed": true,
+      "evidence": "选择偶部零构造所有一次系数",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 0,
+        "partial_tasks": 3,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "independent_program_checks": {
+        "crit_and_endpoints": [
+          "-1/4",
+          "1/4",
+          "-1/4",
+          "1/4"
+        ],
+        "max_a": "3*2**(2/3)/4"
+      },
+      "solution_status": "纸面重解并程序辅助，完整覆盖按子任务记录"
+    }
+  ],
+  "scoring": {
+    "authority": "project",
+    "paper_sha256": "47d3d67e1cc731893da4d187b857c1d566f5da6c53ba2af63608d207397c484b",
+    "questions": [
+      {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分。所选均对但未选全得3分。含错误项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分。所选均对但未选全得3分。含错误项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "全对6分。所选均对但未选全得3分。含错误项得0分。"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案正确。"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "把两块面积写为共同角的正弦。"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "得出角平分线长度。"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "用边积与半角改写余弦定理。"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "获得可行边积范围并证明可取。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "正确写出边长区间。"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "建立与图一致的坐标系或构造两垂直方向。"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证明重心连线法向性。"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "求垂足坐标。"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "用三角形边界确定完整闭区间。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "由法向量写角的关系。"
+          },
+          {
+            "part": 3,
+            "points": 3,
+            "criterion": "求两个可达端点。"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "列出互斥轨迹。"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "求两者概率之和。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "求各步未报警的尾概率。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "正确处理截尾期望的求和范围。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "化简两个有限等比和。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "求下一步联合概率和条件分母。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "整理为显式条件概率。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "解整数阈值。"
+          }
+        ]
+      },
+      {
+        "number": 18,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "参数化两切线并求和积。"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "得到弦方程并确定定点。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "把弦长平方化成两因子。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "居中配方并给出等号点。"
+          },
+          {
+            "part": 3,
+            "points": 3,
+            "criterion": "取得一般的弦长平方，排除重根。"
+          },
+          {
+            "part": 3,
+            "points": 3,
+            "criterion": "在非负变量上分类。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "给出最小值及达到点数。"
+          }
+        ]
+      },
+      {
+        "number": 19,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "判定驻点并列端点。"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "取到最大绝对值。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "用反向点构造奇部并保留下界。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "两组点夹出一次项系数与界。"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "饱和条件确定偶部及唯一性。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "说明只需分类纯奇函数且可构造。"
+          },
+          {
+            "part": 3,
+            "points": 3,
+            "criterion": "分别处理端点和内部驻点。"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "合并区间并证明可取。"
+          }
+        ]
+      }
+    ]
+  },
+  "solution_revisions": {
+    "1": {
+      "paragraphs": [
+        "参考答案 C",
+        "\\(A=\\{1,2,3,6\\}\\)，所以 \\(U\\setminus A=\\{4,5\\}\\)。与 \\(B\\) 取并集后得到 \\(\\{2,4,5,6\\}\\)。其中 4 只计一次，共有 4 个元素。"
+      ]
+    },
+    "2": {
+      "paragraphs": [
+        "参考答案 D",
+        "分子分母同乘 \\(1-2i\\)，得到 \\(z=(5-5i)/5=1-i\\)。于是 \\(z-i=1-2i\\)，其模为 \\(\\sqrt{1+4}=\\sqrt5\\)。"
+      ]
+    },
+    "3": {
+      "paragraphs": [
+        "参考答案 A",
+        "垂直等价于 \\((\\mathbf a+t\\mathbf b)\\cdot\\mathbf b=0\\)。已知 \\(\\mathbf a\\cdot\\mathbf b=3-2=1\\)，\\(\\mathbf b\\cdot\\mathbf b=9+1=10\\)，所以 \\(1+10t=0\\)，解得 \\(t=-1/10\\)。"
+      ]
+    },
+    "4": {
+      "paragraphs": [
+        "参考答案 D",
+        "原有两组记录的和分别为 \\(6\\times8=48\\)、\\(4\\times11=44\\)。两个记录各减 \\(3\\)，总和变为 \\(48+44-6=86\\)，共有 \\(10\\) 个记录，平均数为 \\(8.6\\)。"
+      ]
+    },
+    "5": {
+      "paragraphs": [
+        "参考答案 B",
+        "从 \\(x=0\\) 起，角 \\(\\omega x-\\pi/6\\) 由 \\(-\\pi/6\\) 严格增加，第一次使正弦为零时角等于 \\(0\\)。因此 \\(\\omega(\\pi/12)=\\pi/6\\)，解得 \\(\\omega=2\\)。在 \\(x=\\pi/3\\) 时角等于 \\(2\\pi/3-\\pi/6=\\pi/2\\)，故函数值为 \\(2\\)。"
+      ]
+    },
+    "6": {
+      "paragraphs": [
+        "参考答案 A",
+        "设公差为 \\(d\\)。第 5 至第 8 项相对于前 4 项各增加 \\(4d\\)，所以 \\(S_8-S_4=S_4+16d\\)。代入得到 \\(d=1\\)。再由 \\(4a_1+6d=14\\) 求得 \\(a_1=2\\)，从而 \\(a_7=8\\)。"
+      ]
+    },
+    "7": {
+      "paragraphs": [
+        "参考答案 B",
+        "把相邻的 1、2 合在一起，块内有 \\(12\\)、\\(21\\) 两种次序。对任一种次序，3 在 1 之前等价于 3 在块前，故在块、3、4、5 的排列中恰有一半符合，共 \\(2\\cdot4!/2=24\\) 种。",
+        "再扣除 4 为首个信号的情形。固定 4 后还要使 3 在块前，有 \\(2\\cdot3!/2=6\\) 种。两步计数使用同一前后约束，因此答案为 \\(24-6=18\\)。"
+      ]
+    },
+    "8": {
+      "paragraphs": [
+        "参考答案 C",
+        "令 \\(r=|x-2|\\) 和 \\(a=m/4>0\\)。半径 \\(r=0\\) 对应一个实根，每个满足条件的正半径对应两个实根。原式化为 \\(|r^2-1|+ar=1\\)。",
+        "当 \\(0\\leq r\\leq1\\) 时，等式为 \\(r(a-r)=0\\)。始终有 \\(r=0\\)，另一个根 \\(r=a\\) 仅在 \\(a\\leq1\\) 时保留。",
+        "在 \\(r\\geq1\\) 上，等式为 \\(r^2+ar=2\\)。左端严格递增，从 \\(1+a\\) 增大到任意大，故当 \\(a<1\\) 时有一根 \\(r>1\\)，当 \\(a=1\\) 时有根 \\(r=1\\)，当 \\(a>1\\) 时无根。",
+        "若 \\(a=1\\)，内外两段得到的 \\(r=1\\) 是同一个根。故原方程恰有五根当且仅当 \\(0<a<1\\)。\\(m=1,2,3\\) 的和为 6。"
+      ]
+    },
+    "9": {
+      "paragraphs": [
+        "参考答案 AB",
+        "设 \\(z=a+bi\\)，则 \\(w=\\sqrt5-a-bi\\)。由 \\(|z|^2=1\\) 和 \\(|w|^2=4\\) 相减得 \\(5-2\\sqrt5a=3\\)，所以 \\(a=1/\\sqrt5\\)、\\(b=\\pm2/\\sqrt5\\)。A 成立。",
+        "这时 \\(z-w=-3/\\sqrt5+2bi\\)，模的平方为 \\(9/5+16/5=5\\)。B 成立。",
+        "乘积 \\(zw\\) 的实部是 \\(a(\\sqrt5-a)+b^2=8/5\\)，故 C 不成立。\\(z^2+w^2\\) 的虚部是 \\(2b(2a-\\sqrt5)\\)，取两个互为相反的非零值，故 D 不成立。"
+      ]
+    },
+    "10": {
+      "paragraphs": [
+        "参考答案 BC",
+        "首尾不计中间球时，\\(P(X)=(4\\cdot3+3\\cdot2)/(7\\cdot6)=3/7\\)。三球同色事件包含在 \\(X\\) 中，概率为 \\((\\binom43+\\binom33)/\\binom73=1/7\\)。因此已知 \\(X\\) 时三球同色的概率为 \\(1/3\\)，排除 A。",
+        "已知恰有两个白球时，唯一黑球在三个位置等可能。首尾同色等价于黑球在中间，故 B 成立。",
+        "若中间是白球，余下三白三黑。因此 \\(P(X\\mid Y)=2\\cdot3\\cdot2/(6\\cdot5)=2/5\\)。用 \\(P(Y)=4/7\\) 和 \\(P(X)=3/7\\) 得 \\(P(Y\\mid X)=8/15\\)，C 成立。",
+        "若中间是黑球，余下四白两黑，\\(P(X\\mid Y^c)=(4\\cdot3+2\\cdot1)/(6\\cdot5)=7/15\\)。因 \\(2/5<7/15\\)，D 不成立。"
+      ]
+    },
+    "11": {
+      "paragraphs": [
+        "参考答案 AD",
+        "从题图读出 \\(AB=4\\)。记 \\(p=|PA|,q=|PB|\\)，则 \\(p+q=6\\)，且因不共线而 \\(|p-q|<4\\)。故 \\(pq=(36-(p-q)^2)/4\\) 取遍 \\((5,9]\\)。上界在中垂线上达到。任取 \\(p+q=6\\) 且 \\(|p-q|<4\\) 的正数 \\(p,q\\)，都可构成一边为 4 的非退化三角形，在直线 \\(AB\\) 上方取其顶点。A 成立。",
+        "设 \\(P\\) 到 \\(AB\\) 的距离为 \\(h\\)。取直线 \\(AB\\) 为横轴、其中点为原点。设 \\(P(x,h)\\)。向量 \\((x+2,h)\\)、\\((2-x,h)\\) 的模分别为 \\(p,q\\)，和为 \\((4,2h)\\)。所以 \\(p+q\\geq2\\sqrt{4+h^2}\\)，等号在中垂线上达到。故 \\(h\\leq\\sqrt5\\)，B 不成立。",
+        "由余弦定理 \\(\\cos\\angle APB=10/(pq)-1\\)，取值范围为 \\([1/9,1)\\)。排除 C，注意共线顶点被排除。",
+        "若 \\(\\angle PAB=60^\\circ\\)，\\(q^2=p^2+16-4p\\)。代入 \\(q=6-p\\)，得 \\(36-12p=16-4p\\)，从而 \\(p=5/2\\)。两侧边长 \\(5/2,7/2\\) 与 4 构成合法三角形，D 成立。"
+      ]
+    },
+    "12": {
+      "paragraphs": [
+        "导函数为 \\(3x^2-3\\)。令斜率为 9，求得两切点横坐标 \\(x=2\\) 和 \\(x=-2\\)，纵坐标分别为 2 和 \\(-2\\)。截距分别为 \\(2-9\\cdot2=-16\\) 和 \\(-2+9\\cdot2=16\\)，差的绝对值是 32。"
+      ]
+    },
+    "13": {
+      "paragraphs": [
+        "两因式中 \\(x\\) 的次数可分别为 \\(2,0\\)、\\(1,1\\)、\\(0,2\\)。对应系数依次为 \\(4\\binom52=40\\)、\\(2\\binom51\\cdot(-2)=-20\\)、\\(1\\)。总和为 21。"
+      ]
+    },
+    "14": {
+      "paragraphs": [
+        "设中位数为 \\(t\\)，较小、较大的两个数为 \\(p,q\\)。则 \\(p+q=6-t\\)，\\(p^2+q^2=14-t^2\\)，故 \\(pq=t^2-6t+11\\)。",
+        "\\(p,q\\) 是首项系数为 1 的方程 \\(F(x)=x^2-(6-t)x+t^2-6t+11=0\\) 的两根。两根夹住 \\(t\\) 当且仅当 \\(F(t)\\leq0\\)。充分性来自开口向上且 \\(F(t)\\leq0\\)。曲线必与横轴相交，等号时 \\(t\\) 为根，允许两数相等。",
+        "\\(F(t)=3(t-2)^2-1\\)，所以 \\(t\\in[2-1/\\sqrt3,2+1/\\sqrt3]\\)。反过来在此区间取方程两根，所得 \\(p,t,q\\) 同时满足和、平方和与排序条件，区间内各值均可达到。"
+      ]
+    },
+    "15": {
+      "paragraphs": [
+        "（1）图中 \\(D\\) 位于边 \\(BC\\) 上。面积分割给出 \\(bc\\sin A=|AD|(b+c)\\sin(A/2)\\)。\\(0<A<\\pi\\)，可约去正的 \\(\\sin(A/2)\\)。得到 \\(|AD|=2bc\\cos(A/2)/(b+c)\\)。",
+        "（2）令 \\(s=bc\\)。由第一问 \\(s\\cos(A/2)=6\\)，所以 \\(s>6\\)。又因 \\(b+c=6\\)，有 \\(s\\leq9\\)。余弦定理给出 \\(a^2=(b+c)^2-4bc\\cos^2(A/2)=36-144/s\\)，它在 \\(s>0\\) 时递增。",
+        "任取 \\(6<s\\leq9\\)，取和为 6、积为 \\(s\\) 的两个正数作 \\(b,c\\)，再取唯一的 \\(A\\in(0,\\pi)\\) 使 \\(\\cos(A/2)=6/s\\)，便构成三角形。于是 \\(12<a^2\\leq20\\)，答案为 \\((2\\sqrt3,2\\sqrt5]\\)。"
+      ]
+    },
+    "16": {
+      "paragraphs": [
+        "（1）以 \\(A\\) 为原点，以 \\(AB,AC,AA_1\\) 的方向为坐标轴。从图读出棱长为 4。平面 \\(A_1BC\\) 方程为 \\(x+y+z=4\\)，法向量可取 \\((1,1,1)\\)。而 \\(M(4/3,4/3,4/3)\\)，故 \\(AM\\) 垂直该平面。",
+        "（2）置 \\(P(4-t,t,4)\\)，\\(0\\leq t\\leq4\\)。从 \\(P\\) 沿法向量减去 \\((4/3,4/3,4/3)\\) 即落在斜平面上，故 \\(Q(8/3-t,t-4/3,8/3)\\)。三个坐标非负且和为 4 当且仅当 \\(Q\\) 在该三角形内或边上。",
+        "\\(t\\) 的取值范围为 \\([4/3,8/3]\\)。在同一条棱上 \\(|B_1P|/|B_1C_1|=t/4\\)，所以比值范围为 \\([1/3,2/3]\\)。",
+        "（3）设线面角为 \\(\\theta\\)。\\(\\sin\\theta=8/(\\sqrt3\\,|AP|)\\)。又 \\(|AP|^2=(4-t)^2+t^2+16=24+2(t-2)^2\\)。在第二问区间内，该平方的最小值为 24、最大值为 \\(224/9\\)。对应的正弦值范围为 \\([\\sqrt{6/7},2\\sqrt2/3]\\)，两端都能达到。"
+      ]
+    },
+    "17": {
+      "paragraphs": [
+        "设 \\(p=2/3\\)，\\(q=1/3\\)。",
+        "（1）直到第三次才报警，轨迹只能是“甲甲乙”或“乙乙甲”。两事件互斥，所以 \\(P(T=3)=p^2q+q^2p=2/9\\)。",
+        "（2）记实际读取次数为 \\(Z=\\min(T,N)\\)。每次运行的读取数等于实际执行的各步的指示量之和。第一步必执行。对第 \\(k+1\\) 步，其中 \\(1\\leq k\\leq N-1\\)，前 \\(k\\) 次必须全是甲类或全是乙类，概率为 \\(p^k+q^k\\)。",
+        "令 \\(r=N-1\\)，将上述概率相加并求两个有限等比和，得 \\(E(Z)=7/2-2(2/3)^r-\\tfrac12(1/3)^r\\)。",
+        "（3）已读取 \\(n\\) 次未报警的两种互斥轨迹，其概率为 \\(p^n,q^n\\)。再读一次报警的联合概率为 \\(p^nq+q^np\\)。相除并约去 \\(3^{-n}\\)，得条件概率 \\((2^n+2)/(3(2^n+1))\\)。令其不超过 \\(7/20\\)，化简得 \\(2^n\\geq19\\)。因 \\(2^4=16<19\\leq2^5=32\\)，最小 \\(n\\) 为 5。"
+      ]
+    },
+    "18": {
+      "paragraphs": [
+        "（1）抛物线参数点记为 \\((r^2,2r)\\)，切线为 \\(x-ry+r^2=0\\)。可将它代入抛物线，得到 \\((y-2r)^2=0\\)，故直线与曲线相切，\\(r=0\\) 时也成立。设 \\(A,B\\) 对应不同参数 \\(r,s\\)。",
+        "\\(P(u,v)\\) 在两切线上，所以 \\(r,s\\) 是 \\(z^2-vz+u=0\\) 的两个根，\\(r+s=v,rs=u\\)。把 \\(A,B\\) 代入可知弦的方程为 \\(x-\\tfrac v2y+u=0\\)。题图给出 \\(u-v=-2\\)，所以弦过定点 \\((2,2)\\)。",
+        "（2）两切点的坐标差为 \\(((r-s)v,2(r-s))\\)，故 \\(|AB|^2=(v^2+4)(v^2-4u)\\)。在题图直线上 \\(v^2-4u=(v-2)^2+4>0\\)，任何 \\(v\\) 都对应两不同切点。",
+        "令 \\(z=(v-1)^2\\)，则 \\(|AB|^2=(v^2+4)((v-2)^2+4)=z^2+6z+25\\)。当 \\(z=0\\) 时且仅在此时取得最小值 25，故最短弦长 5，此时 \\(P(-1,1)\\)。",
+        "（3）将新直线代入，仍有 \\(v^2-4u=(v-\\lambda)^2+4>0\\)，不存在切点重合。令 \\(z=(v-\\lambda/2)^2\\) 和 \\(L=\\lambda^2/4\\)。弦长平方化为 \\(z^2+2(4-L)z+(L+4)^2\\)，且 \\(z\\geq0\\)。",
+        "当 \\(0\\leq\\lambda\\leq4\\) 时，最小值在 \\(z=0\\) 取得。包括 \\(\\lambda=4\\) 在内，只有 \\(v=\\lambda/2\\) 一个取等位置，最短弦长为 \\(L+4\\)。",
+        "当 \\(\\lambda>4\\) 时，顶点 \\(z=L-4>0\\) 合法。它对应两个不同的 \\(v\\)，从而对应两个不同的 \\(P\\)。最小弦长平方为 \\((L+4)^2-(L-4)^2=4\\lambda^2\\)，最短弦长为 \\(2\\lambda\\)。"
+      ]
+    },
+    "19": {
+      "paragraphs": [
+        "（1）\\(P_0'(x)=3x^2-3/4\\)，驻点是 \\(\\pm1/2\\)。比较两驻点、两端点的函数值，它们的绝对值都是 \\(1/4\\)。由于连续且各驻点之间单调，\\(D(P_0)=1/4\\)。",
+        "（2）取奇部 \\(g(x)=[P(x)-P(-x)]/2=x^3+vx\\)。对所有 \\(|x|\\leq1\\) 都有 \\(|g(x)|\\leq D(P)\\)。",
+        "若 \\(D(P)\\leq1/4\\)，从 \\(|g(1)|=|1+v|\\leq1/4\\) 得 \\(v\\leq-3/4\\)，从 \\(|g(1/2)|=|1/8+v/2|\\leq1/4\\) 得 \\(v\\geq-3/4\\)。因此 \\(v=-3/4\\)。此时 \\(|g(1)|=|g(1/2)|=1/4\\)，已经说明 \\(D(P)\\geq1/4\\)。",
+        "在 \\(\\pm1\\)、\\(\\pm1/2\\) 两对点上，偶部给正负数加上同一个量。若两值的绝对值均不超过 \\(1/4\\)，这个量必须为零，所以 \\(u+w=0\\)、\\(u/4+w=0\\)。解得 \\(u=w=0\\)。结合第一问，最小值 \\(1/4\\) 由且仅由 \\(P_0\\) 达到。",
+        "（3）若 \\(D(P)\\leq1/2\\)，奇部也满足该界。反之若某个 \\(v\\) 的奇部满足，直接取 \\(u=w=0\\) 即可。因此只考察 \\(g(x)=x^3-ax\\)，其中 \\(a=-v\\)。",
+        "在 \\(x=1\\) 处，\\(|1-a|\\leq1/2\\) 给出 \\(1/2\\leq a\\leq3/2\\)。在此范围内，\\(g\\) 在 \\([0,1]\\) 上唯一的内部驻点是 \\(x=\\sqrt{a/3}\\)。该点的函数值为 \\(-2(a/3)^{3/2}\\)，绝对值不超过 \\(1/2\\) 当且仅当 \\(a\\leq3/4^{2/3}\\)。",
+        "再结合 \\(g(0)=0\\) 与奇性，端点和内部驻点检查也足以控制整个区间。故 \\(v\\in[-3/4^{2/3},-1/2]\\)，全区间可达。"
+      ]
+    }
+  }
+}

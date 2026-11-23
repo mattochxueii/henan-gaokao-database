@@ -1,0 +1,42 @@
+{
+  "edition": "trend",
+  "pdf_sha256": "d28cb4181620f415d625f0cd39af70a2ecf1450c396a3ca4a6fe37bfbc2f5310",
+  "pages": 1,
+  "scope": "图文由终版PDF独立抄读。采用枚举、线性代数及符号表达式比对。全域论证与可达性见另行重解。",
+  "keys": {
+    "1": "AB",
+    "2": "-2"
+  },
+  "checks": {
+    "1": {
+      "reachable": [
+        1,
+        6,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "four_lamp_sets_at_two": 9
+    },
+    "2": {
+      "admissible_products": [
+        "3"
+      ]
+    },
+    "3": {
+      "overlap_area": "4*u/(u + v)",
+      "union_area": "4*v/(u + v)"
+    },
+    "4": {
+      "two_round_deviations": [
+        "v/2",
+        "-u/2",
+        "-v/2",
+        "u/2"
+      ],
+      "alternating_offset_erased": true
+    }
+  }
+}

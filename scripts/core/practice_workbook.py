@@ -42,19 +42,48 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
         references = [group[i] for i in range(max(map(len,strata),default=0))
                       for group in strata if i<len(group)][:limit]
     require(references,"找不到该考点的可用正文")
+    answer_fields = {"answer", "reviewed_answer", "curation", "explanation", "analysis",
+                     "candidate", "rubric", "answer_variants", "scoring", "legacy"}
     result = {"subject":subject,"dna_sha256":digest(profile),
             "query":{"topic":topic,"source_id":source_id,"limit":limit},
             "guidance":evidence["aggregate"]["authoring"],
-            "references":[{k:v for k,v in q.items() if k not in
-                            ("answer","reviewed_answer","curation","explanation","analysis","candidate","rubric")}
-                          for q in references]}
+            "references":[{k:v for k,v in q.items() if k not in answer_fields} for q in references]}
     if not topic and not source_id:
         from core.quality_audit import position_reference
 
         result["quality_benchmarks"] = position_reference(root, subject)
+        if subject in ("chinese","english"):
+            from core.language_workflow import fulltext_corpus
+
+            corpus = fulltext_corpus(root, subject)
+            result["language_corpus"] = corpus
+            result["rehearsal_references"] = [
+                {k: v for k, v in q.items() if k not in answer_fields}
+                for q in research(root, subject, year=2025, region="河南", limit=None,
+                                  exam_kind="adaptation_exam")
+                if q["paper_id"] == f"2025-ha-{subject}-adaptation"
+                and q["asset_root"] == f"data/papers/{subject}"
+            ] if corpus else []
     if subject in SCIENCES:
         result["paper_layout"] = evidence["aggregate"]["paper_layout"]
     return result
+
+
+
+def validate_authoring_context(root, subject, context_file, candidate):
+    from core.quality_audit import bound_reference
+
+    packet = read_json(context_file)
+    actual = authoring_context(root, subject, **packet["query"])
+    years = {2025,2026} if subject in SCIENCES else {2024,2025,2026}
+    require(fingerprint(actual) == fingerprint(packet) and packet["subject"] == subject
+            and not packet["query"]["topic"] and not packet["query"]["source_id"]
+            and years <= {q["year"] for q in packet["references"]},
+            "整卷上下文须覆盖目标卷系完整年份范围，并绑定当前命题画像")
+    proof = candidate.get("provenance",{})
+    require(proof.get("dna_sha256") == actual["dna_sha256"]
+            and proof.get("context_sha256") == digest(context_file), "候选须绑定当前命题上下文")
+    return bound_reference(actual,candidate)
 
 
 def selection(root, subject, *, year=None, region=None, kind=None, topic=None, question_ids=(), limit=6, adaptation=False):

@@ -1,11 +1,20 @@
 """Editorial release gate for new standard papers in the unified authoring flow."""
+import re
+
 from analysis_db import fingerprint
 from forecast_store import write_new
 from gaokao import digest, read_json, require
 from subjects import SCIENCES
 
 VERSION = "gaokao-editorial-audit-v1"
+MAIN_VERSION = "gaokao-editorial-audit-v2"
+MAIN_SUBJECTS = {"math", "chinese", "english"}
 YEARS = (2025, 2026)
+LANGUAGE_TRAPS = {"scope", "cause", "qualifier", "order", "referent", "stance",
+                  "inference_boundary", "collocation", "cohesion"}
+READING = {"information", "literary", "classical", "poetry", "reading", "reading_a",
+           "reading_b", "reading_c", "reading_d", "gap_match", "cloze", "grammar"}
+TEMPLATE = re.compile(r"作为(?:一[个名])?(?:AI|人工智能)|让我们一起来(?:探讨|思考)|作为语言模型|AI生成|此处省略正文", re.I)
 RULES = ("distractors", "depth", "figure", "language")
 CHOICE = ("single_choice", "multiple_choice")
 DEEP_SLOTS = {
@@ -41,13 +50,58 @@ def position_reference(root, subject):
                 "features": q.get("features", []), "kind": q["kind"], "points": q["points"],
                 "scope": "practice_text" if q.get("usable_for_practice") else "limited_position_evidence",
             }
-    return {"protocol": VERSION, "subject": subject, "series": series, "slots": slots}
+    version = MAIN_VERSION if subject in MAIN_SUBJECTS else VERSION
+    reference = {"protocol": version, "subject": subject, "series": series, "slots": slots}
+    if subject in {"chinese", "english"}:
+        reference["slots_by_basis_year"] = _language_slots(root, subject, slots)
+        reference["slots"] = reference["slots_by_basis_year"]["2026"]
+    return reference
+
+
+def _language_slots(root, subject, published_slots):
+    """Track each reading, language-use and writing position within its section."""
+    blueprints = read_json(root / "data/language-blueprints.json")[subject]["years"]
+    by_section = {year: {s["id"]: s for s in b["sections"]} for year, b in blueprints.items()}
+    mapped = {}
+    for basis, sections in by_section.items():
+        edition = {}
+        for section, target in sections.items():
+            for offset in range(len(target["scores"])):
+                number = target["first"] + offset
+                references = {}
+                for year in map(str, YEARS):
+                    peer = by_section[year][section]
+                    peer_offset = min(offset, len(peer["scores"]) - 1)
+                    original = peer["first"] + peer_offset
+                    source = published_slots.get(str(original), {}).get(year)
+                    require(source is not None, f"{subject} {year} {section}第{original}题缺对照材料")
+                    references[year] = {
+                        **source, "reference_number": original, "reference_section": section,
+                        "alignment": "same_section_position" if offset == peer_offset else "same_section_only",
+                    }
+                edition[str(number)] = references
+        mapped[basis] = edition
+    return mapped
+
+
+def language_edition(reference, basis_year):
+    edition = reference["slots_by_basis_year"].get(str(basis_year))
+    require(edition is not None, "语英蓝图与真题题位对照不符")
+    return {**reference, "slots": edition, "basis_year": basis_year}
 
 
 def bound_reference(context, candidate):
     reference = context.get("quality_benchmarks")
     require(reference and candidate.get("provenance", {}).get("quality_reference_sha256") == fingerprint(reference),
             "候选缺2025、2026同题位真题画像绑定，请先读取 authoring-context")
+    if context["subject"] in {"chinese", "english"}:
+        corpus = context.get("language_corpus", [])
+        rehearsal = context.get("rehearsal_references", [])
+        require(len(corpus) == 4 and candidate.get("reference_scope") == "fulltext"
+                and candidate["provenance"].get("language_corpus_sha256") == fingerprint(corpus)
+                and len(rehearsal) == corpus[-1]["questions"]
+                and all(q.get("paper_id") == corpus[-1]["id"] and _text(q.get("stem")) for q in rehearsal),
+                "语英标准卷须绑定四套真实全文与 DNA")
     return reference
 
 
@@ -77,8 +131,55 @@ def _answers(paper, review):
     return [q.get("answer_key") for q in review["questions"]]
 
 
+def _main_findings(subject, paper, q, row, n, reject, independent):
+    material = paper.get("materials", {}).get(q.get("material"), {})
+    if subject == "math":
+        slot = paper.get("benchmark_slots", {}).get(str(n), n)
+        demanding = slot in {7,8,9,10,11,14,15,16,17,18,19}
+        profile = row.get("math_depth", {})
+        chain = profile.get("linked_turns", [])
+        if demanding and (not isinstance(chain, list) or len(chain) < 2
+                          or not all(_text(x) for x in chain) or len(set(chain)) != len(chain)
+                          or not _text(profile.get("routine_shortcut_rejected"))):
+            reject("depth", "该题位须具备至少两次相连的非代入推理及捷径失效说明")
+        if demanding and independent is not None:
+            from mathgen.paper_quality import reasoning_profile
+
+            moves = independent.get("moves")
+            required_band = 4 if slot in {18, 19} else 3
+            if not moves or reasoning_profile(moves)["band"] < required_band:
+                reject("depth", "独立重解显示实际推理未达到这一题位的要求")
+        figure = q.get("figure")
+        requires_reference = re.search(r"如图|图示|见图|读图", q["stem"])
+        if (q.get("figure_required") or requires_reference) and not figure:
+            reject("figure", "适用几何/函数题缺少规范示意图")
+        if q.get("module") == "立体几何" and q["kind"] == "constructed_response":
+            if not isinstance(figure, dict) or figure.get("type") != "wireframe":
+                reject("figure", "立体几何大题须有三维线框")
+        return
+    style = row.get("language_style", {})
+    rendered = " ".join([q["stem"], material.get("text", ""), *q.get("options", {}).values()])
+    if (style.get("natural") is not True or not _text(style.get("register"))
+            or not _text(style.get("evidence")) or TEMPLATE.search(rendered)):
+        reject("language", "缺文体与语气依据，或题面含生成模板腔")
+    if q.get("section") == "classical" and (style.get("classical_checked") is not True
+            or re.search(r"进行相关|具体来说|在这种情况下|不由得感慨", material.get("text", ""))):
+        reject("language", "文言材料出现白话拟古，或缺语句体例核查")
+    if q.get("section") in READING:
+        material_text = material.get("text", "")
+        decision = row.get("reading_turn", {})
+        span = decision.get("span")
+        normalize = lambda value: "".join(value.split())
+        if (not _text(span) or normalize(span) not in normalize(material_text)
+                or not _text(decision.get("from"))
+                or not _text(decision.get("to"))
+                or decision["from"] == decision["to"]):
+            reject("depth", "阅读设问须定位实际材料并说明从哪条信息转到哪一推断")
+
+
 def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior=None):
-    require(reference and reference.get("protocol") == document.get("protocol") == VERSION,
+    require(reference and reference.get("protocol") == document.get("protocol")
+            and reference["protocol"] in (VERSION, MAIN_VERSION),
             "质量审稿规则版本缺失或不符")
     require(document["paper_version"] == version and document["paper_pdf_sha256"] == pdf_sha
             and document["reference_sha256"] == fingerprint(reference)
@@ -87,6 +188,8 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
     questions = paper["questions"]
     require([r["number"] for r in items] == list(range(1, len(questions) + 1)),
             "质量审稿漏题或题号错位")
+    main = reference["protocol"] == MAIN_VERSION
+    subject = reference["subject"]
     versions = _versions(paper)
     keys = _answers(paper, review) if review is not None else None
     require(keys is None or len(keys) == len(items), "独立核对题数不符")
@@ -124,6 +227,9 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
                    and all(_text(value) for value in values)
                    and len(set(values)) == len(values) for values in (steps, concepts)):
             reject("depth", "缺少同题位要求的不同信息处理步骤及相互联结的概念")
+        if main:
+            independent = review["questions"][n - 1] if subject == "math" and review is not None else None
+            _main_findings(subject, paper, q, row, n, reject, independent)
         if figure and not _text(row.get("required_figure_information")):
             reject("figure", "缺少移去题图后无法取得的条件或数据说明")
         if choice:
@@ -136,6 +242,12 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
                 if (path.get("plausible") is not True or not _text(path.get("misconception"))
                         or not _text(path.get("mechanism"))):
                     reject("distractors", f"{option}项缺可信的学生误区或具体推错路径")
+                if main and subject in {"chinese", "english"} and (
+                    path.get("trap") not in LANGUAGE_TRAPS
+                    or path.get("subtle") is not True
+                    or not _text(path.get("unchanged")) or not _text(path.get("distortion"))
+                ):
+                    reject("distractors", f"{option}项须指出保留信息和单一可信偏移")
 
     if prior is not None:
         require(prior["status"] == "returned" and prior["reference_sha256"] == fingerprint(reference),
@@ -148,7 +260,7 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
                 failures.append({**failure, "reason": "退稿题未换版，或缺少针对该项退稿的改写记录"})
     require(failures or review is not None, "通过版须以独立重解核定选择题键")
     return {
-        "protocol": VERSION, "status": "returned" if failures else "accepted",
+        "protocol": reference["protocol"], "status": "returned" if failures else "accepted",
         "reference_sha256": fingerprint(reference), "paper_version": version, "paper_pdf_sha256": pdf_sha,
         "item_versions": versions, "audit_sha256": fingerprint(document),
         "independent_review_sha256": fingerprint(review) if review is not None else None,
@@ -174,7 +286,8 @@ def _paper_inputs(folder):
     paper = read_json(folder / "student-text.json")
     require(fingerprint(candidate) == manifest["candidate_sha256"]
             and fingerprint(paper) == manifest["writing_sha256"], "数学题面已修改，须重新生成")
-    pdf = digest(folder / "review-only/paper.pdf")
+    preview = folder / "review-only/paper.pdf"
+    pdf = digest(preview if preview.is_file() else folder / "paper.pdf")
     require(pdf == manifest["pdf_sha256"], "PDF已修改，须重新生成")
     return candidate.get("quality_benchmarks"), paper, manifest["writing_sha256"], pdf
 

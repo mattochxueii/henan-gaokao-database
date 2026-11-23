@@ -49,6 +49,10 @@ def main(argv=None):
     simulate.add_argument("candidate",type=Path)
     simulate.add_argument("output",type=Path)
     simulate.add_argument("--context",required=True,type=Path)
+    trend = sub.add_parser("trend-pack", help="按冻结研判制作独立的数学专题审阅稿")
+    trend.add_argument("candidate", type=Path)
+    trend.add_argument("output", type=Path)
+    trend.add_argument("--context", required=True, type=Path)
     audit=sub.add_parser("quality-audit", help="审查当前学生 PDF 的逐题命题质量")
     audit.add_argument("input",type=Path)
     audit.add_argument("evidence",type=Path)
@@ -152,23 +156,20 @@ def main(argv=None):
                           prior=read_json(args.previous_rejection) if args.previous_rejection else None)
             print(dumps(result))
             return 1 if result["status"] == "returned" else 0
+        elif command=="trend-pack":
+            from core.practice_workbook import validate_authoring_context
+            from math_trends import bind_pack_positions
+            from mathgen.exam_workflow import prepare as prepare_math
+
+            candidate = read_json(args.candidate)
+            reference = validate_authoring_context(root, "math", args.context, candidate)
+            candidate["quality_benchmarks"] = bind_pack_positions(reference, candidate)
+            result = prepare_math(root, candidate, args.output)
         elif command=="simulate":
-            from analysis_db import fingerprint
-            from core.quality_audit import bound_reference
-            from core.practice_workbook import authoring_context
-            from gaokao import digest, require
-            packet=read_json(args.context)
+            from core.practice_workbook import validate_authoring_context
+
             candidate=read_json(args.candidate)
-            actual=authoring_context(root,args.subject,**packet["query"])
-            years = {2025,2026} if args.subject in SCIENCES else {2024,2025,2026}
-            require(fingerprint(actual)==fingerprint(packet) and packet["subject"]==args.subject
-                    and not packet["query"]["topic"] and not packet["query"]["source_id"]
-                    and years<={q["year"] for q in packet["references"]},
-                    "整卷上下文须覆盖目标卷系已要求的完整年份范围，并绑定当前命题画像")
-            proof=candidate.get("provenance",{})
-            require(proof.get("dna_sha256")==actual["dna_sha256"] and
-                    proof.get("context_sha256")==digest(args.context),"候选须绑定当前命题上下文")
-            quality_reference=bound_reference(actual,candidate)
+            quality_reference=validate_authoring_context(root,args.subject,args.context,candidate)
             candidate={**candidate,"quality_benchmarks":quality_reference}
             if args.subject=="math":
                 from math_skill import main as math_main
@@ -179,7 +180,10 @@ def main(argv=None):
                 blueprint=plan(root,args.subject,"河南",args.year,"standard")
                 result=prepare(root,blueprint,candidate,args.output,args.candidate.parent)
             else:
+                from core.quality_audit import language_edition
+
                 blueprint=language_workflow.plan(root,args.subject,"河南",args.year)
+                candidate["quality_benchmarks"] = language_edition(quality_reference, blueprint["basis_year"])
                 result=language_workflow.prepare(root,blueprint,candidate,args.output)
         elif command=="dna":
             result=paper_intake.dna(root,args.subject)

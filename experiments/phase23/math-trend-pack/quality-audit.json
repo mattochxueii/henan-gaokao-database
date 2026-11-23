@@ -1,0 +1,255 @@
+{
+  "protocol": "gaokao-editorial-audit-v2",
+  "reviewer": "宿主编辑审稿",
+  "paper_version": "4606d3984ddb2798f5201f881a070e1d8a8bb692fa4712fbba570fec09740150",
+  "paper_pdf_sha256": "d28cb4181620f415d625f0cd39af70a2ecf1450c396a3ca4a6fe37bfbc2f5310",
+  "reference_sha256": "595d19802fd98fee11291614cfc020c5d7eb4eeadaa695866e2f284bfe8d8c4e",
+  "items": [
+    {
+      "number": 1,
+      "answer_key": "AB",
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+          "id": "2025-cn-math-national-1:q011",
+          "comparison": "真题动作是由两个角等式及面积判命题。本题对边操作建立奇偶不变量，进一步区分可达、最少及恰好步数，须给出合法反例。"
+        },
+        "2026": {
+          "version_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+          "id": "2026-cn-math-national-1:q011",
+          "comparison": "真题动作是三圆直线弦长与参数限制。本题对边操作建立奇偶不变量，进一步区分可达、最少及恰好步数，须给出合法反例。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "对边操作建立奇偶不变量，进一步区分可达、最少及恰好步数，须给出合法反例。"
+        },
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "各错误项按具体误区重建。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "一步翻转两端点",
+          "奇编号灯数的奇偶性交替",
+          "沿路径只翻端点",
+          "四灯集合中3号灯没有合法邻点"
+        ],
+        "linked_concepts": [
+          "排列组合与计数",
+          "counterexample"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "一步翻转两端点",
+          "奇编号灯数的奇偶性交替",
+          "沿路径只翻端点",
+          "四灯集合中3号灯没有合法邻点"
+        ],
+        "routine_shortcut_rejected": "对边操作建立奇偶不变量，进一步区分可达、最少及恰好步数，须给出合法反例。"
+      },
+      "required_figure_information": null,
+      "distractors": {
+        "C": {
+          "misconception": "把任意四点视为可配相邻对",
+          "mechanism": "只数两次共四个端点，未验证目标点集能配成两条不交边。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "只检查总亮灯数的奇偶性",
+          "mechanism": "漏掉奇编号位置每一步恰翻一灯，四次后不能有三盏奇灯亮。",
+          "plausible": true
+        }
+      }
+    },
+    {
+      "number": 2,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+          "id": "2025-cn-math-national-1:q014",
+          "comparison": "真题动作是不同编号出现次数的期望。本题由差角条件和两角所在范围反求积。平方后把增根与可实现的正根分开。"
+        },
+        "2026": {
+          "version_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+          "id": "2026-cn-math-national-1:q014",
+          "comparison": "真题动作是由分块前缀和反推连续等比段可行域。本题由差角条件和两角所在范围反求积。平方后把增根与可实现的正根分开。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "由差角条件和两角所在范围反求积。平方后把增根与可实现的正根分开。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把两角条件改写为正切的和积",
+          "求出的一个积不可能为正",
+          "和角分母非零并给可实现的角"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "endpoint"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "把两角条件改写为正切的和积",
+          "求出的一个积不可能为正",
+          "和角分母非零并给可实现的角"
+        ],
+        "routine_shortcut_rejected": "由差角条件和两角所在范围反求积。平方后把增根与可实现的正根分开。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    },
+    {
+      "number": 3,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+          "id": "2025-cn-math-national-1:q018",
+          "comparison": "真题动作是椭圆方程与射线重构。本题切线的两截距给面积不变量，两切线的正根条件用于公共多边形及全区间可达性。"
+        },
+        "2026": {
+          "version_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+          "id": "2026-cn-math-national-1:q018",
+          "comparison": "真题动作是焦点弦与面积、后问条件存档分歧。候选范围受限，仅据题位及可见主题。本题切线的两截距给面积不变量，两切线的正根条件用于公共多边形及全区间可达性。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "切线的两截距给面积不变量，两切线的正根条件用于公共多边形及全区间可达性。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "图显示两个三角形覆盖时的两条边界和交点Q，可核对取公共区域的边界切换。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "导数与截距",
+          "单三角形面积始终为2",
+          "切点参数须是二次式正根",
+          "还原两个不同确切的切点",
+          "剖分两三角形的公共区域",
+          "用坐标积实现面积端点"
+        ],
+        "linked_concepts": [
+          "解析几何",
+          "endpoint"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "导数与截距",
+          "单三角形面积始终为2",
+          "切点参数须是二次式正根",
+          "还原两个不同确切的切点",
+          "剖分两三角形的公共区域",
+          "用坐标积实现面积端点"
+        ],
+        "routine_shortcut_rejected": "切线的两截距给面积不变量，两切线的正根条件用于公共多边形及全区间可达性。"
+      },
+      "required_figure_information": "图显示两个三角形覆盖时的两条边界和交点Q，可核对取公共区域的边界切换。",
+      "distractors": {}
+    },
+    {
+      "number": 4,
+      "answer_key": null,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+          "id": "2025-cn-math-national-1:q019",
+          "comparison": "真题动作是谐波极值、移位存在与全域限制。本题同时更新产生对边约束。用两轮后的状态比较初始跨组极差，判定等号。"
+        },
+        "2026": {
+          "version_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+          "id": "2026-cn-math-national-1:q019",
+          "comparison": "真题动作是优势位移集合、排序及全称约束。本题同时更新产生对边约束。用两轮后的状态比较初始跨组极差，判定等号。"
+        }
+      },
+      "findings": {
+        "depth": {
+          "verdict": "pass",
+          "evidence": "同时更新产生对边约束。用两轮后的状态比较初始跨组极差，判定等号。"
+        },
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题直接写出结论与依据。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "设问与完成形式可在学生页独立辨认，篇幅与前后条件匹配。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题条件都由文字或代数式确定。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "分离对边内差与均值组差",
+          "迭代后的对边和相等",
+          "两独立偏差确定极差",
+          "推两次平均的偏差量",
+          "比较初始极差所含的跨组项",
+          "还原等号的充要条件"
+        ],
+        "linked_concepts": [
+          "数列",
+          "sufficiency"
+        ]
+      },
+      "math_depth": {
+        "linked_turns": [
+          "分离对边内差与均值组差",
+          "迭代后的对边和相等",
+          "两独立偏差确定极差",
+          "推两次平均的偏差量",
+          "比较初始极差所含的跨组项",
+          "还原等号的充要条件"
+        ],
+        "routine_shortcut_rejected": "同时更新产生对边约束。用两轮后的状态比较初始跨组极差，判定等号。"
+      },
+      "required_figure_information": null,
+      "distractors": {}
+    }
+  ],
+  "revisions": {}
+}

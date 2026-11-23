@@ -66,6 +66,7 @@ def main(argv=None, *, quality_reference=None):
     action.add_argument("--no-export", action="store_true")
     action.add_argument("--engine", choices=("template", "ai"), default="template")
     action.add_argument("--candidates", type=Path)
+    action.add_argument("--context", type=Path)
     action.add_argument("--model")
     action.add_argument("--allow-template-fallback", action="store_true")
     pilot = action.add_mutually_exclusive_group()
@@ -228,6 +229,11 @@ def main(argv=None, *, quality_reference=None):
             if provider.name != "template":
                 from mathgen.dynamic import run_ai
 
+                if quality_reference is None and args.context:
+                    from core.practice_workbook import validate_authoring_context
+
+                    require(args.candidates is not None, "整卷审稿上下文须与宿主候选一同提交")
+                    quality_reference = validate_authoring_context(root,"math",args.context,read_json(args.candidates))
                 record = run_ai(
                     root,
                     provider,

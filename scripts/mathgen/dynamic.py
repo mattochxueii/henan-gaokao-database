@@ -776,6 +776,8 @@ def run_ai(
     from forecast_modes import attach_mode
 
     document = attach_mode(document, study_mode, forecast_context)
+    if document.get("paper",{}).get("mode") == "full" and study_mode in (None,"standard"):
+        require(quality_reference, "数学标准整卷使用 simulate --context，或提交 generate --context")
     if quality_reference is not None:
         document = {**document, "quality_benchmarks": quality_reference}
     if skip_pilot:

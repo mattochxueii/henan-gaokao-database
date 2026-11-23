@@ -1,0 +1,56 @@
+{
+  "version": "math-crowding-watch-v1",
+  "use": "原创专题的审稿备忘。演练频次、教辅饱和程度无总体样本。此表不作为预测输入的先行变量。",
+  "items": [
+    {
+      "id": "preset-conic",
+      "surface": "给离心率、套标准方程、套固定斜率韦达比值",
+      "evidence": [
+        "review26-conic",
+        "rehearsal-2025-ha:q018",
+        "2025-cn-math-national-1:q018"
+      ],
+      "basis": "标准方程常作起点，2025演练另有切线轨迹，正式卷在起式后另设射线条件。考试院明确提醒只背固定题型不足以应对。",
+      "retain": "保留真实几何关系、定义转换及必要充分性",
+      "crowding_status": "专题选题降权，未估计教辅频率"
+    },
+    {
+      "id": "renamed-definition",
+      "surface": "只改新定义的名词，再按固定样例代入或背形式",
+      "evidence": [
+        "review24-definition",
+        "review26-inquiry",
+        "rehearsal-2024:q019",
+        "rehearsal-2025-ha:q011",
+        "2026-cn-math-national-1:q019"
+      ],
+      "basis": "已有新定义分布在联考题位11、19和正式题位19，外观跨余数、绳图、函数推进，须检验能否提取不变量或全称结构。",
+      "retain": "用给定规则发现结构并构造证明或反例",
+      "crowding_status": "专题选题降权，未估计教辅频率"
+    },
+    {
+      "id": "trig-period-insertion",
+      "surface": "只读正弦或余弦的系数，直接报周期或套和差公式",
+      "evidence": [
+        "rehearsal-2025-ha:q002",
+        "rehearsal-2024:q007",
+        "review25-open"
+      ],
+      "basis": "2025演练Q2可直接报基本周期，2024演练Q7的同模块必须从条件反求角并核对区间。局部基础题做专项换壳有必要。",
+      "retain": "以实际正负、范围和唯一性核查恒等关系",
+      "crowding_status": "专题选题降权，未估计教辅频率"
+    },
+    {
+      "id": "linear-recursion-template",
+      "surface": "看到一次分式递推就套倒数平移，十余步仍只求通项",
+      "evidence": [
+        "rehearsal-2025-ha:q016",
+        "2025-cn-math-national-1:q016",
+        "review25-open"
+      ],
+      "basis": "两个真样本的重写都服务后续比值或有限和求导，单独只求通项削弱迁移任务。",
+      "retain": "从规则重写得到不变量，再处理一般状态或等号",
+      "crowding_status": "专题选题降权，未估计教辅频率"
+    }
+  ]
+}

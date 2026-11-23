@@ -1,0 +1,163 @@
+{
+  "version": "math-signals-v1",
+  "sources": [
+    {
+      "id": "review-2024",
+      "type": "official_review",
+      "year": 2024,
+      "issued": "2024-06-07",
+      "issuer": "教育部教育考试院",
+      "carrier": "中国教育在线刊载的考试院评析",
+      "url": "https://gaokao.eol.cn/shiti/zhenti/202406/t20240607_2615196.shtml",
+      "locators": [
+        "一、依托高考评价体系，创新试卷结构设计",
+        "考查思维和创新导向部分"
+      ]
+    },
+    {
+      "id": "review-2025",
+      "type": "official_review",
+      "year": 2025,
+      "issued": "2025-06-08",
+      "issuer": "教育部教育考试院命题专家",
+      "carrier": "中国教育报对命题专家发布内容的公开评析报道",
+      "url": "https://paper.jyb.cn/zgjyb/html/2025-06/08/content_144741_18593260.htm",
+      "parallel_url": "https://epaper.voc.com.cn/kjxb/html/2025-06/11/content_1741103.htm?div=-1",
+      "locators": [
+        "深化内容改革，加强基础性考查",
+        "优化试卷结构，考查灵活思维",
+        "创新试题设计，突出探索性和创新性"
+      ]
+    },
+    {
+      "id": "review-2026",
+      "type": "official_review",
+      "year": 2026,
+      "issued": "2026-06-07",
+      "issuer": "教育部教育考试院",
+      "carrier": "四川教育在线发布时注明来源为教育部教育考试院",
+      "url": "https://www.scjyxw.com/jyrd/20260607/1000010000452824.html",
+      "parallel_url": "https://www2.xinhuanet.com/edu/20260608/2abc5e5acbc841c1a726aace56209dea/c.html",
+      "locators": [
+        "二、强化数学基础",
+        "三、优化素材与呈现",
+        "四、深化情境设计"
+      ]
+    },
+    {
+      "id": "rehearsal-2024",
+      "type": "adaptation_exam",
+      "year": 2024,
+      "issued": "2024-01-19",
+      "issuer": "教育部教育考试院",
+      "url": "https://chengkao.neea.edu.cn/html1/report/2401/426-1.htm",
+      "content_url": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202401/20240129044611_h8c1JE.pdf",
+      "locators": [
+        "19题适应性测试正文第1–19题",
+        "全国试卷适应性参考，河南适应活动范围与正式使用卷型分列"
+      ]
+    },
+    {
+      "id": "rehearsal-2025-ha",
+      "type": "adaptation_exam",
+      "year": 2025,
+      "issued": "2025-01-04",
+      "issuer": "教育部教育考试院",
+      "url": "https://www.eol.cn/news/yaowen/202501/t20250104_2649865.shtml",
+      "content_url": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202501/20250103101803_2iCyPo.pdf",
+      "locators": [
+        "中国考试发布，河南卷面映射第1–19题、印刷页1–4"
+      ]
+    },
+    {
+      "id": "formal-2024",
+      "type": "official_exam",
+      "year": 2024,
+      "issued": "2024-06-07",
+      "paper_id": "2024-cn-math-new-gaokao-1",
+      "archive": "data/papers/math/2024-cn-math-new-gaokao-1.json",
+      "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
+      "locators": [
+        "项目档案中的19道题和版本字段",
+        "2024河南正式高考为旧高考，全国Ⅰ卷只作同卷系历史参考"
+      ]
+    },
+    {
+      "id": "formal-2025",
+      "type": "official_exam",
+      "year": 2025,
+      "issued": "2025-06-07",
+      "paper_id": "2025-cn-math-national-1",
+      "archive": "data/papers/math/2025-cn-math-national-1.json",
+      "url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+      "locators": [
+        "项目档案中的19道题和版本字段",
+        "URL为考试后的公开整理版"
+      ]
+    },
+    {
+      "id": "formal-2026",
+      "type": "official_exam",
+      "year": 2026,
+      "issued": "2026-06-07",
+      "paper_id": "2026-cn-math-national-1",
+      "archive": "data/papers/math/2026-cn-math-national-1.json",
+      "url": "https://1cunzhang.com/index.php?id=5830&p=article",
+      "locators": [
+        "项目档案中第9、12、18题限制为题位观察",
+        "URL为考试后的公开整理版"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "review24-time-and-method",
+      "source": "review-2024",
+      "location": "一、依托高考评价体系，创新试卷结构设计",
+      "observation": "减少题量及繁难运算，为分析与思考留时。优化不同题型的分值分配。"
+    },
+    {
+      "id": "review24-definition",
+      "source": "review-2024",
+      "location": "创新情境、呈现和设问，全国新课标Ⅰ卷第19题",
+      "observation": "用等差数列提供知识基础，引入可分的新定义，让学生读取规则、分析并自选策略求证。"
+    },
+    {
+      "id": "review25-rotation",
+      "source": "review-2025",
+      "location": "优化试卷结构、考查灵活思维",
+      "observation": "两份全国卷的内容顺序可以不同。各模块难度随整卷要求和试题位置动态调整。"
+    },
+    {
+      "id": "review25-open",
+      "source": "review-2025",
+      "location": "创新试题设计、强化思维考查及探索性",
+      "observation": "增加解法开放性，引导通过不同路径探究、论证，弱化细分题型和机械套路的复习。"
+    },
+    {
+      "id": "review26-conic",
+      "source": "review-2026",
+      "location": "第二部分、第三部分，全国Ⅰ卷第18题",
+      "observation": "解析几何强调课内基本方法。可结合平面几何、三角函数减少演算，鼓励主动选择表示或转化。"
+    },
+    {
+      "id": "review26-inquiry",
+      "source": "review-2026",
+      "location": "第三部分、第四部分，全国Ⅰ卷第7、8、19题",
+      "observation": "从真实或新定义情境提取结构。强调对称性、向量意义、多路径探究和论证。"
+    },
+    {
+      "id": "observed-module-rotation",
+      "source": "position-comparison",
+      "location": "逐位对照第1–3、9–11、15–17题",
+      "observation": "正式卷与演练中首题集合、复数、统计互换，立几、三角、计数概率主观题出现于不同位置。"
+    },
+    {
+      "id": "observed-turning-points",
+      "source": "position-comparison",
+      "location": "逐位对照第7–11、14、18–19题",
+      "observation": "使用新定义、图形、数据或规则的题位有变动。换元、边界分类、反例检验、构造与全域论证可在不同外壳中使用。"
+    }
+  ],
+  "scope": "原试题与命题机构发布的评析分别记录。只用于按题位提取数学动作，正式卷、演练卷与官方方向证据各有观察边界。资料归档时间与试题公开时间是不同的事件。"
+}

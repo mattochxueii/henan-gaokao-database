@@ -44,6 +44,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_science_intake.py -v
       - name: Six-subject editorial publication gate
         run: python -m unittest discover -s tests -p test_quality_audit.py -v
+      - name: Main-subject quality gate and frozen math trends
+        run: python -m unittest discover -s tests -p test_phase23_quality.py -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"

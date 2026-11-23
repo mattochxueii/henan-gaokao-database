@@ -1,0 +1,192 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "parity": "2*x"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "distance": "3"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "edges": "4"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "odd": "3"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 0,
+      "partial_tasks": 4,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": null,
+    "id": "orig:ai:phase23:trend:q01",
+    "math_spec_sha256": "c5df91e6663cd5b82db98c6b3a5fa69793b0ca43d2eca75c996763598f611572",
+    "writing_sha256": "d0bacc362a9c1c6b48b1dca7b02e93923dc36de67a7b1f26a71e795674001acc"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "-2",
+        "steps": [
+          "代入题设条件，化简 \\(-2\\)，得到 \\(-2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "reduction": "x**2 + 18*x - 63"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 1,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase23:trend:q02",
+    "math_spec_sha256": "420dba41d322339a0ae0effc57d0fc2ffdf3735f195b6b9de70b9ac7a500f79b",
+    "writing_sha256": "8cbd859ab117317e0063517f3c8d9cafb2ec58072892de943229f4585cd257cc"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "tangent": "x + y - 2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "discriminant": "-4*x*y + 4"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "overlap": "4*x/(x + y)",
+          "identity": "-4*x*y/(x + y)**2 + 1"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 3,
+      "complete_tasks": 0,
+      "partial_tasks": 3,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase23:trend:q03",
+    "math_spec_sha256": "a91c89314d2525afd75a925e3aa3135d2d0a989a13be73bc3dc3358ac8c60b6a",
+    "writing_sha256": "7a62858e027a035b26979114ca6493c9e825e45759260754775c3ac4e6fae13b"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "mean": "a/4 + b/4 + x/4 + y/4"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "norm": "x/2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "cross_span": "Abs(a) + 2*Abs(x) + Abs(y)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 3,
+      "complete_tasks": 0,
+      "partial_tasks": 3,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:ai:phase23:trend:q04",
+    "math_spec_sha256": "4421293b98a0f18daf28383ffa995dae4f86dd4b78eceda013d4ba6e88d35aaf",
+    "writing_sha256": "c6503e8de76c8c5a076e44942d0121afe004b8b873c5fa4c2a1bda0a30f73c38"
+  }
+]

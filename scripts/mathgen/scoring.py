@@ -48,6 +48,12 @@ def solution_book(student, document, revisions, guide=None):
         updated = revisions.get(str(number))
         paragraphs = updated["paragraphs"] if updated else authored["solution"]["paragraphs"]
         require(paragraphs and all(p.strip() for p in paragraphs), "解析正文缺失")
+        if authored.get("trend_basis"):
+            card = authored["trend_basis"]
+            labels = "、".join(card["evidence"])
+            paragraphs = [*paragraphs, f"【命题依据卡】{card['strength']}。证据编号 {labels}。",
+                          f"本题避开“{card['surface']}”的表层套路。{card['retained']}",
+                          card["difference"]]
         if guide is not None:
             paragraphs = list(paragraphs)
             for step in rubric[number]["steps"]:

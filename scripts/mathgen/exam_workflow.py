@@ -32,6 +32,13 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         "不是AI动态创作候选",
     )
     mode = document["paper"]["mode"]
+    trend = document["paper"].get("edition") == "trend_pack"
+    has_signals = "trend_snapshot_sha256" in document or any("trend_basis" in q for q in document["questions"])
+    require(trend == has_signals and (not trend or mode != "full"), "标准整卷与趋势研判专题须分别制作")
+    if trend:
+        from math_trends import validate_pack
+
+        validate_pack(root, document)
     verify_design(root, document)
     require(not skip_pilot or (mode == "full" and pilot_certificate is None), "仅可对整卷显式跳过样卷")
     if mode == "full" and uses_protocol(document) and not skip_pilot:
@@ -75,12 +82,21 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         "total_points": document["paper"]["total_points"],
         "questions": [],
     }
+    reference = document.get("quality_benchmarks") or {}
+    from core.quality_audit import MAIN_VERSION
+    if reference.get("protocol") == MAIN_VERSION:
+        presentation.update(layout="math_compact", partial_credit=3)
+        if trend:
+            presentation["benchmark_slots"] = reference["benchmark_slots"]
     verification = []
     failures = []
     for q in document["questions"]:
         try:
             require("family" not in q, "禁止模板题目族伪装AI")
             student = compile_writing(q)
+            if presentation.get("layout") == "math_compact":
+                student["module"] = q.get("module")
+                student["figure_required"] = q["writing"].get("figure_required", False)
             result = solve_spec(q["math_spec"])
             require(result["program_checks_passed"], "数学计算失败：" + str(result))
             if q["kind"] == "single_choice" and q["math_spec"].get("assertions"):
@@ -201,10 +217,10 @@ def render_preview(output):
             and check["math_spec_sha256"] == fingerprint(q["math_spec"]),
             "数学验证已过期",
         )
-        require(
-            fingerprint(compile_writing(q)) == fingerprint(visible),
-            "写作文本已变化，必须回到题面核查",
-        )
+        compiled = compile_writing(q)
+        if presentation.get("layout") == "math_compact":
+            compiled.update(module=q.get("module"), figure_required=q["writing"].get("figure_required", False))
+        require(fingerprint(compiled) == fingerprint(visible), "写作文本已变化，必须回到题面核查")
     mode = document["paper"]["mode"]
     preview = output / "review-only"
     preview.mkdir(exist_ok=True)
@@ -262,6 +278,10 @@ def verify_certificate(folder, cert):
         and digest(folder / "solutions.pdf") == cert["solutions_sha256"],
         "答案文件缺失或已改变",
     )
+    if document.get("quality_benchmarks"):
+        from core.quality_audit import publication_quality
+
+        require(publication_quality(folder, review) == cert.get("quality_audit_sha256"), "命题审稿证书失效")
     comparison = read_json(folder / "mathematical-comparison.json")
     require(
         fingerprint(read_json(folder / "math-verification.json"))
@@ -431,6 +451,11 @@ def publish(output, review_path, comparison_path):
     }
     render(solutions, output / "solutions.pdf", solutions=True)
     shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
+    if student.get("layout") == "math_compact":
+        shutil.copyfile(source.with_suffix(".md"), output / "paper.md")
+        figures = source.parent / "figures"
+        if figures.is_dir():
+            shutil.copytree(figures, output / "figures", dirs_exist_ok=True)
     atomic_json(output / "student-review.json", review)
     atomic_json(output / "mathematical-comparison.json", comparison)
     if position is not None:
