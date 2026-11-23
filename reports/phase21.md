@@ -1,0 +1,35 @@
+# 河南物理、化学和生物学标准结构模拟卷
+
+三套卷各 100 分、75 分钟，共 54 道原创题。物理与化学采用 2026 年河南正式卷面分值，生物学按 2026 年题组总分与 2025 年已见逐题分值分配。命题参考只使用河南 2025、2026 正式卷。当前的模拟设定沿用已核卷面，2027 年实际逐题结构仍待确认。教师审阅 0 人，真实学生试做 0 人，难度和预计用时为项目编辑判断。 [逐题结构](../experiments/phase21/structure.md)
+
+## 卷面与验证
+
+- 物理 15 题。1–7 各 4 分，8–10 各 6 分，11–12 为实验题 6、9 分，13–15 为计算题 10、12、17 分。分别留出选择题、两道实验、三道计算的练习梯度。学生卷 9 页，解析卷 5 页，原创新图 5 张。 [学生 PDF](../experiments/phase21/physics/paper.pdf) · [解析 PDF](../experiments/phase21/physics/solutions.pdf) · [学生 Markdown](../experiments/phase21/physics/paper.md) · [解析 Markdown](../experiments/phase21/physics/solutions.md)
+- 化学 18 题。1–14 各 3 分，15–18 依次为工艺流程、实验探究、反应原理、有机合成，分值为 14、14、15、15。学生卷与解析卷分别为 9、7 页，原创新图 4 张。 [学生 PDF](../experiments/phase21/chemistry/paper.pdf) · [解析 PDF](../experiments/phase21/chemistry/solutions.pdf) · [学生 Markdown](../experiments/phase21/chemistry/paper.md) · [解析 Markdown](../experiments/phase21/chemistry/solutions.md)
+- 生物学 21 题。1–16 各 3 分，17–21 依次为光合、调节、生态、遗传、生物技术，分值为 10、11、10、10、11。学生卷与解析卷分别为 11、7 页，原创新图 5 张。 [学生 PDF](../experiments/phase21/biology/paper.pdf) · [解析 PDF](../experiments/phase21/biology/solutions.pdf) · [学生 Markdown](../experiments/phase21/biology/paper.md) · [解析 Markdown](../experiments/phase21/biology/solutions.md)
+
+## 试题是怎样对照真题的
+
+- **物理实验与计算**。2025 第 11–12 题、2026 第 11 题展示了量程、遮光读数与系统误差如何进入设问。新第 11 题让去程、回程的阻力换向，从两个方向的加速度分离恒定阻力和倾斜引入的重力分量。第 12 题延续 2026 题位上的图线斜率与截距读法，要求先区分电流表读数和总电流，再反推两个参数及误差方向。2026 第 12 题只使用已登记的 DNA 设问观察。第 13 题由等压切换到等容，第 14 题由短碰动量守恒转入压缩与摩擦返程，第 15 题用三道边界判定对照 2025 电磁分区与 2026 的阶段衔接推理。学生要依次排除相切、识别首达分支及探测片有限长度的限制，并证明落点深度随参数单调。对应的入场、到面、被接收上限依次为 1、1/√2、1/2，其中入场上限不取等号。 [参考版本和题号](../experiments/phase21/physics/reference-lock.json) · [物理 DNA](../data/dna/physics.json)
+- **化学第 15 题**沿用 2025 铑回收的选择性分离、2026 废芯片的循环利用设问。阶段 16 的工艺题给出两个沉淀 pH 阈值并直接回收铜。本卷让学生用溶度积验算选择窗口，追踪锌粉置换后新增的锌，再把电流效率、析氢耗酸和回用条件接到同一物料账上。
+- **化学第 16 题**对照 2025 的空白校正与 2026 的分步定量。阶段 16 主要从单组滴定和催化对照推断速率。本卷先解总硬度与单独钙量，再判断只漏一个空白的偏差，并用处理前、过滤后及未加标三组比较回收增量。
+- **化学第 17 题**对照 2025 耦合平衡及 2026 的恒压分压。阶段 16 的异构化保持气体总量不变。本卷两条乙醇反应均增加气体总量，要求由转化率、选择性重建各组分分压，证明恒温时选择性为何对压力不敏感，再为惰性气体投料反求压力。
+- **化学第 18 题**对照两年有机合成题位，保留其结构转化、反应顺序和异构计数的要求。阶段 16 从脂肪族酯的水解和支链醇推断结构。本卷把羰基保护、成醚、皂化与脱保护串联，用苯环对称性去重，再为间位乙酯选择能保留目标官能团的路线。两年参考题答解存在缺项，只使用题位与设问观察。 [阶段 16 学生卷](../experiments/phase16/henan-chem-100/paper.md) · [参考版本和题号](../experiments/phase21/chemistry/reference-lock.json) · [化学 DNA](../data/dna/chemistry.json)
+- **生物学第 17–21 题**。第 17 题对照 2025 光补偿点读图与 2026 的物质、能量分开说明，增加暗呼吸校正后的总光合速率和提高二氧化碳浓度的反事实对照。第 18 题沿用从体外差异走向整体因果验证的结构，学生须先区分四组对比，再说明如何用保持激素升高、改变受体响应来检验作用环节。第 19 题把种群调查扩展到面积加权和独立处理小区的重复。第 20 题把两年表型比例反推的要求转为色素互作与败育识别，在筛过表型的亲本池重算配子比例，并用杂交鉴别白株。第 21 题用固定化乳糖酶考查技术读图、控制初始酶量、传质假说与滤液验证。2026 第 17–21 题的对照仅使用题位观察，逐题分值沿用 2025。 [参考版本和题号](../experiments/phase21/biology/reference-lock.json) · [生物学 DNA](../data/dna/biology.json)
+
+## 复核与实际修订
+
+- 三科通过 `authoring-context` 取得 29、29、34 道可用于命题的同系列样本，再用 `simulate`、`review`、`publish` 核对 54 道原创题。重解与候选键分别保留，四个选项分别判断，14 道主观题逐问推导并给出项目分步评分。重解由同一 Work 宿主按学生 PDF 另行完成，程序复算只取学生 PDF 和另行读出的可见数值。物理、化学、生物学分别有 10、8、8 道得到部分程序数值或枚举支持。 [物理判定](../experiments/phase21/physics/independent-review.json) · [化学判定](../experiments/phase21/chemistry/independent-review.json) · [生物学判定](../experiments/phase21/biology/independent-review.json)
+- 物理第 13 题重排题干以避免括号断行。第 12 题末点标注抬离曲线，第 15 题把边界 L 移离虚线并标明从 O 点发射，压缩了评分末尾的悬行。重渲染后复看第 6、9 页，其余学生页与通过目视的栅格一致。
+- 化学第 4 题明确要求完整离子方程式，第 9 题锁定终体积。第 15 题独立排除备选 pH 时发现初版缺总铁浓度，导致 pH 3.0 对某些起始条件也可能合格，补入 0.0100 mol/L 后重新核算。第 16 题明确镁定量分离的计算条件与滴定结果有效数字。第 17 题增加两温度的选择性曲线以区分压力与温度效应。两个溶度积公式已改用排版器能正常处理的括号。
+- 生物学第 18 题将处理标签与激素符号分开，并给出本题的相近阈值。第 20 题明确颜色由胚的基因决定。第 21 题把判断限制在第 1、3 轮已测结果，评分要求比较新生成产物，扣除滤液原有葡萄糖。
+- 最终 6 份 PDF 共 48 页均逐页渲染并目视检查。14 张题图核对坐标、刻度、单位、电路、箭头与分子结构。学生 PDF 逐题核对题号分值与题图，解析 PDF 另行核对符号与评分。 [物理发布记录](../experiments/phase21/physics/publication.json) · [化学发布记录](../experiments/phase21/chemistry/publication.json) · [生物学发布记录](../experiments/phase21/biology/publication.json)
+- 三科另实测了错误答案与篡改 PDF 校验值，审题或发布步骤均按预期拒绝。全套本地自动测试通过 261 项。 [PR #1 检查](https://github.com/mattochxueii/henan-gaokao-database/pull/1/checks)
+
+## 复算入口
+
+从仓库根目录运行，替换命令中的学科即可复算该科的数值检查。命题参考指纹与各题卷面版本保存在各科目录。学生 Markdown 引用同目录下的原始高分辨率图件。
+
+```text
+python experiments/phase21/source/calculation_audit.py physics experiments/phase21/physics/paper.pdf
+```

@@ -1,0 +1,64 @@
+{
+  "subject": "physics",
+  "scope": "partial_calculation_checks_only",
+  "input": "student PDF and separately transcribed visible numbers",
+  "paper_sha256": "e5c6fa9093264feb3fae14d3876317aaae99c4ba7fd0f23beda52490ed41dd4d",
+  "checked_question_count": 10,
+  "checkpoints": {
+    "6": {
+      "double_speed_charge_ratio": 1,
+      "heat_ratio": 2
+    },
+    "7": {
+      "slip_m": [
+        1,
+        1
+      ],
+      "match_position_m": [
+        1,
+        3
+      ]
+    },
+    "8": {
+      "normalized_spatial_factors": [
+        "0",
+        "sqrt(2)/2",
+        "-sqrt(2)/2",
+        "-1"
+      ]
+    },
+    "9": {
+      "post_separation_rise": "5*g*m/(4*k)"
+    },
+    "10": {
+      "end_voltage": "U/3",
+      "heat": "C*U**2/3"
+    },
+    "11": {
+      "forward_m_s2": 0.81,
+      "reverse_m_s2": 1.08,
+      "drag_per_kg": 0.135
+    },
+    "12": {
+      "slope_ohm": -24,
+      "internal_ohm": 30,
+      "emf_V": 6
+    },
+    "13": {
+      "stop_K": 400,
+      "final_Pa": 150000,
+      "work_J": 120,
+      "delta_U_J": 600
+    },
+    "14": {
+      "compression_m": "-1/8 + sqrt(65)/8",
+      "critical_speed_m_s": "2*sqrt(2)"
+    },
+    "15": {
+      "strict_field_entry": "s<1",
+      "plane_reach_inclusive": "sqrt(2)/2",
+      "detector_threshold": "1/2",
+      "first_arrival_branch": "checked at 1/4, 1/2, sqrt(2)/2"
+    }
+  }
+}

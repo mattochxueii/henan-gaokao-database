@@ -1,0 +1,645 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "biology",
+    "region": "河南",
+    "year": 2027,
+    "mode": "standard",
+    "mapping": {
+      "subject": "biology",
+      "year": 2027,
+      "paper_id": "2027-cn-ha-biology-selective",
+      "series_id": "cn-ha-biology-selective",
+      "curriculum_id": "biology-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "system_announced",
+      "points": null,
+      "minutes": null,
+      "evidence": [
+        "hn-2027",
+        "hn-reform"
+      ],
+      "structure": null
+    },
+    "curriculum_topics": [
+      "细胞结构与功能",
+      "细胞代谢",
+      "细胞分裂",
+      "遗传与变异",
+      "生物进化",
+      "稳态与调节",
+      "生态系统",
+      "生物技术",
+      "实验设计与结果分析"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-biology-selective:q002",
+        "topic": "生物技术与工程·异源细胞融合鉴别",
+        "source_url": "https://zy.21cnjy.com/25959270",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "11dad3cdc4533506e7dfa9f6f75c384f8c926b0747f73a4a9097ca72a9d5f523",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-biology-selective:q007",
+        "topic": "遗传与进化·自然选择和基因频率",
+        "source_url": "https://zy.21cnjy.com/25959270",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "b3f3348ee443f20e8ec3b9330808f9f71eb50d6c858926c33a3f4e6250e0010c",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      }
+    ],
+    "structure": {
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 16,
+          "points": 48
+        },
+        {
+          "kind": "constructed_response",
+          "count": 5,
+          "points": 52
+        }
+      ],
+      "source_urls": [
+        "https://zy.21cnjy.com/25959270"
+      ],
+      "status": "observed_third_party_paper",
+      "source_details": [
+        {
+          "kind": "single_choice",
+          "questions": 16,
+          "points": 48,
+          "each": 3
+        },
+        {
+          "kind": "constructed_response",
+          "questions": 5,
+          "points": 52
+        }
+      ]
+    },
+    "structure_minutes": 75,
+    "structure_year": 2026,
+    "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认"
+  },
+  "questions": [
+    {
+      "id": "orig:biology:phase21-q01",
+      "topic": "生物膜与主动运输",
+      "version_sha256": "47583607f79690a0a9afe286aefad458a1082ebdde1f430f60b4d98ca297bf88",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为生物膜与主动运输；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q02",
+      "topic": "温度处理与酶活性",
+      "version_sha256": "c441f052b9abfde0754c62e78a7c6ab61fd02349f1c48e984da56db493aa27a8",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为温度处理与酶活性；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q03",
+      "topic": "DNA 含量与细胞周期",
+      "version_sha256": "faeeb1d13202f25336b5a48d0e93a197ef9a65c56eaeceaef3268643fbfda8e2",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为DNA 含量与细胞周期；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q04",
+      "topic": "有氧呼吸中的氧去向",
+      "version_sha256": "2df8adb3922226a2db30b5b736cf56863e10761c510ec6ad1fede09ac478ae48",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为有氧呼吸中的氧去向；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q05",
+      "topic": "密码子与突变效应",
+      "version_sha256": "95fa63dea6ef224c628dbe91aa912f34dd447ef5d08aad6a3268664a4ba5dd91",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为密码子与突变效应；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q06",
+      "topic": "自然选择与等位基因频率",
+      "version_sha256": "2eb89e3e87d8825a4cd6b0d53697ea4ea57456ac1a189e301e876333eb3bbd6d",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为自然选择与等位基因频率；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q07",
+      "topic": "蒸腾作用与水分运输",
+      "version_sha256": "d7a582e9518eee51b7d4ba3af2f2746a9b7da6783996a41441b881eed3f4d784",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为蒸腾作用与水分运输；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q08",
+      "topic": "动作电位与突触传递",
+      "version_sha256": "f441cce113cff5297d35b69139b050f8251f49fd1a7d3fb7877f22078398cd43",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为动作电位与突触传递；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q09",
+      "topic": "水盐平衡调节",
+      "version_sha256": "c49fc4ef77be960851c7759fc09f33cb8b0cd8400c5847ebaa011be463bcb738",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为水盐平衡调节；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q10",
+      "topic": "初次应答和二次应答",
+      "version_sha256": "35f4ebabf7bfeee12adf0ac561b55bdfa286777b59a82747402934f8b82b2a36",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为初次应答和二次应答；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q11",
+      "topic": "环境容纳量改变",
+      "version_sha256": "3f91320e9254f77439a0a70a90ddd2049a07aaeb63290c1d797a021ca0b7467c",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为环境容纳量改变；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q12",
+      "topic": "营养级与食物来源",
+      "version_sha256": "7ef722de3713dfb6566577ab74c13fbed7d63d35e47b8b2d123d1b0a65a7b10c",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为营养级与食物来源；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q13",
+      "topic": "伴性遗传的条件比例",
+      "version_sha256": "c8b9523846b1660701b5f542c4281415b2a2354c3a6f517e64f8605597c6c155",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为伴性遗传的条件比例；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q14",
+      "topic": "质壁分离的时序证据",
+      "version_sha256": "c9f11e39009ce8e2a285ebdde5a63901d51a59bafc5c255baf2c05cebafcab34",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为质壁分离的时序证据；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q15",
+      "topic": "植物组织培养的比较",
+      "version_sha256": "476e76b2ec0157f65886c84b09d90745ecc6dc532b559e147cc9c8d657b0232b",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为植物组织培养的比较；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q16",
+      "topic": "对照实验与因果边界",
+      "version_sha256": "0f9a672ff19cfbe4603041713aac5ce91355b4298cfb293c5ff3f58f68e03b60",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为对照实验与因果边界；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q17",
+      "topic": "光驯化与碳同化",
+      "version_sha256": "16cd4d31830f689c5e3f6bc272a839da4c62c5692312810a3dd945dc4edea309",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "甲 100；乙 50；净吸收为零",
+          "（2）": "甲 11；乙 7；μmol CO₂·m⁻²·s⁻¹",
+          "（3）": "同光强和同其他条件比较常规与高 CO₂；高 CO₂ 净吸收更快",
+          "（4）": "ATP 提供能量；NADPH 提供还原力"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为光驯化与碳同化；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "甲 100；乙 50；净吸收为零",
+            "（2）": "甲 11；乙 7；μmol CO₂·m⁻²·s⁻¹",
+            "（3）": "同光强和同其他条件比较常规与高 CO₂；高 CO₂ 净吸收更快",
+            "（4）": "ATP 提供能量；NADPH 提供还原力"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q18",
+      "topic": "神经、激素与免疫应答",
+      "version_sha256": "c71c498486f905f5d3018c4009831e6a3ab8362d7ccd1076fe64df1b3b450110",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "神经调节；体液调节",
+          "（2）": "乙/甲抑制；丙/甲接近；丁/乙恢复并与丙接近",
+          "（3）": "声刺激×受体阻断四组；测 C 和 M；阻断削弱 M 响应而 C 仍升高"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为神经、激素与免疫应答；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "神经调节；体液调节",
+            "（2）": "乙/甲抑制；丙/甲接近；丁/乙恢复并与丙接近",
+            "（3）": "声刺激×受体阻断四组；测 C 和 M；阻断削弱 M 响应而 C 仍升高"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q19",
+      "topic": "生境分层与群落调查",
+      "version_sha256": "19981bdddc749b1c224ff9af0bb2fe618981136f2b26b7ab0ca7a7f9a4720911",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "6.4 株/m²；按面积加权",
+          "（2）": "记录物种；匹配季节、面积和调查强度",
+          "（3）": "距离分层后随机割草或不割；以独立地段为重复；比较密度变化"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为生境分层与群落调查；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "6.4 株/m²；按面积加权",
+            "（2）": "记录物种；匹配季节、面积和调查强度",
+            "（3）": "距离分层后随机割草或不割；以独立地段为重复；比较密度变化"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q20",
+      "topic": "色素互作与胚胎败育",
+      "version_sha256": "3c28864bfba110c292a22e1d13f22cf79d96264b5947fbf1a202fa9e26cfb4f9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "AAbb、aaBB、AaBb",
+          "（2）": "aabb；白色潜在类少一份",
+          "（3）": "1/9",
+          "（4）": "aaBB 全紫；aaBb 紫:黄=1:1"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为色素互作与胚胎败育；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "AAbb、aaBB、AaBb",
+            "（2）": "aabb；白色潜在类少一份",
+            "（3）": "1/9",
+            "（4）": "aaBB 全紫；aaBb 紫:黄=1:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:biology:phase21-q21",
+      "topic": "固定化乳糖酶与产物证据",
+      "version_sha256": "1ec7d17dbd95ea1091e08bbb638f25934daa9492b6a02816b96ae981317f6085",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "无酶空白凝胶；检验底物和载体背景",
+          "（2）": "小颗粒；传质距离较短",
+          "（3）": "同批大颗粒等量切小与假处理；切小组初速较高",
+          "（4）": "收集滤液后另加新乳糖；相对无酶对照有新增产物"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为固定化乳糖酶与产物证据；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "无酶空白凝胶；检验底物和载体背景",
+            "（2）": "小颗粒；传质距离较短",
+            "（3）": "同批大颗粒等量切小与假处理；切小组初速较高",
+            "（4）": "收集滤液后另加新乳糖；相对无酶对照有新增产物"
+          }
+        }
+      }
+    }
+  ],
+  "answers": [
+    "C",
+    "D",
+    "B",
+    "A",
+    "C",
+    "A",
+    "D",
+    "B",
+    "B",
+    "D",
+    "C",
+    "A",
+    "D",
+    "B",
+    "A",
+    "C",
+    {
+      "（1）": "甲 100；乙 50；净吸收为零",
+      "（2）": "甲 11；乙 7；μmol CO₂·m⁻²·s⁻¹",
+      "（3）": "同光强和同其他条件比较常规与高 CO₂；高 CO₂ 净吸收更快",
+      "（4）": "ATP 提供能量；NADPH 提供还原力"
+    },
+    {
+      "（1）": "神经调节；体液调节",
+      "（2）": "乙/甲抑制；丙/甲接近；丁/乙恢复并与丙接近",
+      "（3）": "声刺激×受体阻断四组；测 C 和 M；阻断削弱 M 响应而 C 仍升高"
+    },
+    {
+      "（1）": "6.4 株/m²；按面积加权",
+      "（2）": "记录物种；匹配季节、面积和调查强度",
+      "（3）": "距离分层后随机割草或不割；以独立地段为重复；比较密度变化"
+    },
+    {
+      "（1）": "AAbb、aaBB、AaBb",
+      "（2）": "aabb；白色潜在类少一份",
+      "（3）": "1/9",
+      "（4）": "aaBB 全紫；aaBb 紫:黄=1:1"
+    },
+    {
+      "（1）": "无酶空白凝胶；检验底物和载体背景",
+      "（2）": "小颗粒；传质距离较短",
+      "（3）": "同批大颗粒等量切小与假处理；切小组初速较高",
+      "（4）": "收集滤液后另加新乳糖；相对无酶对照有新增产物"
+    }
+  ],
+  "candidate_sha256": "249e9f7d3c60a329f869eb1e164da00d2197422cafa6e0c7d452a4c7b729614c",
+  "paper_version": "97d2536e9b3d5f8d815be67782ea70ad8648f42d8b154ea1716137bbe6271a51",
+  "paper_pdf_sha256": "7102b943bc8136812317a910096118202ee44335a3c860904a500e65379ca482"
+}

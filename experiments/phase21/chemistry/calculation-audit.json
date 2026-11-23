@@ -1,0 +1,55 @@
+{
+  "subject": "chemistry",
+  "scope": "partial_calculation_checks_only",
+  "input": "student PDF and separately transcribed visible numbers",
+  "paper_sha256": "cc6090d13624b7fd85b3411891065382912beb34c6732a649c207673e624c949",
+  "checked_question_count": 8,
+  "checkpoints": {
+    "2": {
+      "difference_in_neutrons_per_molecule": 4
+    },
+    "5": {
+      "nearest_X": 6,
+      "constituents_A_B_X": [
+        1,
+        1,
+        3
+      ]
+    },
+    "7": {
+      "ammonia_mole_fraction": 0.25,
+      "nitrogen_conversion": 0.4
+    },
+    "14": {
+      "physical_extent_fraction": "10/11"
+    },
+    "15": {
+      "balanced_oxidation_and_anode": true,
+      "viable_pH": [
+        4.5
+      ],
+      "charge_unit_F": 0.7875,
+      "net_protons_mol": 0.63
+    },
+    "16": {
+      "calcium_mol_per_L": 0.0017,
+      "magnesium_mol_per_L": 0.001
+    },
+    "17": {
+      "partial_pressures_kPa": [
+        25.0,
+        25.0,
+        12.5
+      ],
+      "Kp": [
+        0.25,
+        0.0625
+      ],
+      "inert_feed_pressure_kPa": 131.25
+    },
+    "18": {
+      "ordered_placements": 20,
+      "isomer_orbits": 10
+    }
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "chemistry",
+    "region": "河南",
+    "year": 2027,
+    "mode": "standard",
+    "mapping": {
+      "subject": "chemistry",
+      "year": 2027,
+      "paper_id": "2027-cn-ha-chemistry-selective",
+      "series_id": "cn-ha-chemistry-selective",
+      "curriculum_id": "chemistry-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "system_announced",
+      "points": null,
+      "minutes": null,
+      "evidence": [
+        "hn-2027",
+        "hn-reform"
+      ],
+      "structure": null
+    },
+    "curriculum_topics": [
+      "物质结构与性质",
+      "离子反应",
+      "氧化还原",
+      "化学反应原理",
+      "化学平衡",
+      "电化学",
+      "水溶液离子平衡",
+      "化学实验",
+      "无机物推断",
+      "有机化学",
+      "工业流程",
+      "基本概念与物质性质",
+      "物质结构与性质",
+      "化学反应原理",
+      "实验与探究",
+      "有机化学",
+      "化学综合应用"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-chemistry-selective:q001",
+        "topic": "物质变化的分类",
+        "source_url": "https://zy.21cnjy.com/25976018",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "bb8775e200a24a360d1682383ebb4f5feaef28cd9b1df71e21e946b9aa563ef7",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q006",
+        "topic": "用物种形态、原子数和电荷校验离子方程式",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "ad11be66c9543333f2dca2fb84542e88e15e1f18ceb810438c6901f54393f3ec",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q010",
+        "topic": "以晶体结构、分子间力、极性和电子壳层解释性质",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "cd18c9a82b5ce3c3d06dcc8860ec7682e0f6f6a207897f3e19b7e7ca5331bcb0",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      }
+    ],
+    "structure": {
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58
+        }
+      ],
+      "source_urls": [
+        "https://www.51jiaoxi.com/doc-18504525.html",
+        "https://zy.21cnjy.com/25976018",
+        "https://zy.21cnjy.com/25959272"
+      ],
+      "status": "observed_third_party_paper",
+      "source_details": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42,
+          "points_each": 3
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58,
+          "individual_points": [
+            14,
+            14,
+            15,
+            15
+          ]
+        }
+      ]
+    },
+    "structure_minutes": 75,
+    "structure_year": 2026,
+    "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认"
+  },
+  "questions": [
+    {
+      "id": "orig:chemistry:phase21-q01",
+      "topic": "天然高分子与离子交联",
+      "version_sha256": "3242fdf7e2701bcfbf32455dd4a4b80059580ff1ac095a07703323752903f028",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为天然高分子与离子交联；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q02",
+      "topic": "同位素与物质的量",
+      "version_sha256": "74b95b0351ffe82461231d99459f845f06fa5090c08203f0220e0c48f24856d3",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为同位素与物质的量；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q03",
+      "topic": "有机官能团与性质",
+      "version_sha256": "84e23ea7cba2ef5dbf2e71c570f858d13af6209612f8af328fb078130214e8e9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为有机官能团与性质；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q04",
+      "topic": "离子方程式与反应条件",
+      "version_sha256": "d2e6b74254a7a58959adb020ecd95d7e4bfe071c96bfdb24d17834b44151c14c",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为离子方程式与反应条件；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q05",
+      "topic": "晶胞计数与结构",
+      "version_sha256": "283315b14748bede72a3ea55d9d631f8a4f1705f1bb5e87b3111ac83703a855f",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为晶胞计数与结构；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q06",
+      "topic": "实验分离与现象判断",
+      "version_sha256": "c6ba61788d47f882f816b95472671bf4601e6c5334f0a0ce8a8538df3151e230",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为实验分离与现象判断；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q07",
+      "topic": "恒容体系反应进度",
+      "version_sha256": "628ff48af05ebaa0d2ca5f3d827f066459d626aba56e81d6fcc11e63a347f2bd",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为恒容体系反应进度；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q08",
+      "topic": "连续电离能与价层电子",
+      "version_sha256": "e37acfbbc3cb4e07dabe3d27265b10eb53266f70f64dc03eb0b3d1f22569a510",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为连续电离能与价层电子；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q09",
+      "topic": "吸收光谱与配合平衡",
+      "version_sha256": "3dc36771a381bdb02a6890f84fd0283504bb79cc99432f7f8ae852b7d6bb2379",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为吸收光谱与配合平衡；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 D。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q10",
+      "topic": "溶液电荷守恒与物料守恒",
+      "version_sha256": "ce39cabf6b11298589dc951758319538c8a28db5ef4560904a7cac22630fdcb0",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为溶液电荷守恒与物料守恒；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q11",
+      "topic": "燃料电池的电荷和物质转移",
+      "version_sha256": "085ae70add19d2bb1e5fc927b23066435ca765d427030084731d549d768b4a5f",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为燃料电池的电荷和物质转移；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q12",
+      "topic": "扩散阻力与速率证据",
+      "version_sha256": "0b90d09d41b2efcb9544843cd75e96052f0518892056fd22ed293f38cbeb9201",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为扩散阻力与速率证据；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 A。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q13",
+      "topic": "燃烧焓与盖斯定律",
+      "version_sha256": "25b436a8c798da84f02992a9eda320d7cf2fb981569bea762e0f7d0b94c29cd5",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为燃烧焓与盖斯定律；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 C。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q14",
+      "topic": "弱酸的质子转移平衡",
+      "version_sha256": "362b273e5efabb61b52a513d45b2d15b9747a6742e6469e3146d36359b6402df",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为弱酸的质子转移平衡；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "overall": "命题预期选择 B。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q15",
+      "topic": "镀锌炉尘的湿法回收",
+      "version_sha256": "65fcf06f32fa379d74de1dc6a90f8cc0932a1fab42b3d53f80b21d94c12aedd2",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "ZnO+2H⁺→Zn²⁺+H₂O；SiO₂",
+          "（2）": "H₂O₂+2Fe²⁺+2H⁺→2Fe³⁺+2H₂O；pH 4.5",
+          "（3）": "Zn+Cu²⁺→Zn²⁺+Cu；0.788 F",
+          "（4）": "2H₂O→O₂+4H⁺+4e⁻；0.630 mol；回用净生成的酸"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为镀锌炉尘的湿法回收；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "ZnO+2H⁺→Zn²⁺+H₂O；SiO₂",
+            "（2）": "H₂O₂+2Fe²⁺+2H⁺→2Fe³⁺+2H₂O；pH 4.5",
+            "（3）": "Zn+Cu²⁺→Zn²⁺+Cu；0.788 F",
+            "（4）": "2H₂O→O₂+4H⁺+4e⁻；0.630 mol；回用净生成的酸"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q16",
+      "topic": "水硬度的配位滴定",
+      "version_sha256": "b105b1420934f4910b797d0446ff56a909e5bd3c4bdfc0d28554b827fcae6a35",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "Mg²⁺+2OH⁻→Mg(OH)₂；酒红至蓝",
+          "（2）": "钙 1.70×10^-3 mol/L；镁 1.00×10^-3 mol/L",
+          "（3）": "镁偏大",
+          "（4）": "处理前后分别等量加标；前加标回收量更低"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为水硬度的配位滴定；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "Mg²⁺+2OH⁻→Mg(OH)₂；酒红至蓝",
+            "（2）": "钙 1.70×10^-3 mol/L；镁 1.00×10^-3 mol/L",
+            "（3）": "镁偏大",
+            "（4）": "处理前后分别等量加标；前加标回收量更低"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q17",
+      "topic": "乙醇转化的竞争平衡",
+      "version_sha256": "b366cd35f52b24f48f7098091fe9de30da3972707facc0be286795d823491d1d",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "T₂>T₁；T₂ 选择性更高；增压使两反应逆向移动",
+          "（2）": "25.0 kPa；25.0 kPa；0.250；0.0625",
+          "（3）": "不变；K₁/K₂=(n乙醛/n乙烯)²",
+          "（4）": "131.25 kPa"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为乙醇转化的竞争平衡；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "T₂>T₁；T₂ 选择性更高；增压使两反应逆向移动",
+            "（2）": "25.0 kPa；25.0 kPa；0.250；0.0625",
+            "（3）": "不变；K₁/K₂=(n乙醛/n乙烯)²",
+            "（4）": "131.25 kPa"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:phase21-q18",
+      "topic": "缩醛保护与芳香族合成",
+      "version_sha256": "dd442e65f629cd70489cb7c81edcbfd13c4848db70445b82fcfba823ce68b478",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "酚羟基和醛基；水；保护醛基",
+          "（2）": "C 对位 R-C₆H₄-OCH₂COOC₂H₅；D 对位 R-C₆H₄-OCH₂COONa；酯基",
+          "（3）": "10 种",
+          "（4）": "间位缩醛保护→酚盐取代→短时稀酸脱保护；跳过皂化"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "derivation": "命题预验范围为缩醛保护与芳香族合成；以下预期结论交由独立验算再对照。"
+          },
+          "parts": {
+            "（1）": "酚羟基和醛基；水；保护醛基",
+            "（2）": "C 对位 R-C₆H₄-OCH₂COOC₂H₅；D 对位 R-C₆H₄-OCH₂COONa；酯基",
+            "（3）": "10 种",
+            "（4）": "间位缩醛保护→酚盐取代→短时稀酸脱保护；跳过皂化"
+          }
+        }
+      }
+    }
+  ],
+  "answers": [
+    "C",
+    "B",
+    "D",
+    "A",
+    "B",
+    "B",
+    "C",
+    "D",
+    "D",
+    "C",
+    "B",
+    "A",
+    "C",
+    "B",
+    {
+      "（1）": "ZnO+2H⁺→Zn²⁺+H₂O；SiO₂",
+      "（2）": "H₂O₂+2Fe²⁺+2H⁺→2Fe³⁺+2H₂O；pH 4.5",
+      "（3）": "Zn+Cu²⁺→Zn²⁺+Cu；0.788 F",
+      "（4）": "2H₂O→O₂+4H⁺+4e⁻；0.630 mol；回用净生成的酸"
+    },
+    {
+      "（1）": "Mg²⁺+2OH⁻→Mg(OH)₂；酒红至蓝",
+      "（2）": "钙 1.70×10^-3 mol/L；镁 1.00×10^-3 mol/L",
+      "（3）": "镁偏大",
+      "（4）": "处理前后分别等量加标；前加标回收量更低"
+    },
+    {
+      "（1）": "T₂>T₁；T₂ 选择性更高；增压使两反应逆向移动",
+      "（2）": "25.0 kPa；25.0 kPa；0.250；0.0625",
+      "（3）": "不变；K₁/K₂=(n乙醛/n乙烯)²",
+      "（4）": "131.25 kPa"
+    },
+    {
+      "（1）": "酚羟基和醛基；水；保护醛基",
+      "（2）": "C 对位 R-C₆H₄-OCH₂COOC₂H₅；D 对位 R-C₆H₄-OCH₂COONa；酯基",
+      "（3）": "10 种",
+      "（4）": "间位缩醛保护→酚盐取代→短时稀酸脱保护；跳过皂化"
+    }
+  ],
+  "candidate_sha256": "e44375bc9f37825a0ebd095779e958286a978016c8dfd134c420e37506e77297",
+  "paper_version": "b7f5c9156bf2eed83f450b6f7113474085461bb8c87d33df985ec76b48d2ff7f",
+  "paper_pdf_sha256": "cc6090d13624b7fd85b3411891065382912beb34c6732a649c207673e624c949"
+}
