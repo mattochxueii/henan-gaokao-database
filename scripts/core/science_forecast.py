@@ -1,4 +1,4 @@
-"""Comparable province/series baselines, with abstention for sparse evidence."""
+"""Comparable province/series baselines, with descriptive small-sample trends."""
 
 from collections import defaultdict
 from datetime import date
@@ -11,7 +11,8 @@ from forecast_store import envelope
 from gaokao import require
 from subjects import SCIENCES
 
-VERSION = "province-science-frequency-v1"
+VERSION = "province-science-frequency-v2"
+LEGACY_VERSION = "province-science-frequency-v1"
 MIN_YEARS = 5
 
 
@@ -43,12 +44,17 @@ def evidence_rows(root, subject, region, series, document):
 def estimate(targets, indexed, year, cutoff):
     results = []
     for target in targets:
-        values = [r["values"].get(target) for y,r in indexed.items()
-                  if y<year and r["available"]<=cutoff and r["values"].get(target) is not None]
+        trend = [{"year":y,"value":r["values"][target]} for y,r in sorted(indexed.items())
+                 if y<year and r["available"]<=cutoff and r["values"].get(target) is not None]
+        values = [row["value"] for row in trend]
         supported = len(values)>=MIN_YEARS and len(set(values))==2
+        small_sample = 0 < len(values) < MIN_YEARS
+        status = ("exploratory_frequency" if supported else "small_sample_trend" if small_sample else
+                  "descriptive_constant" if values else "abstained")
         results.append({"target":target,"p":(sum(values)+1)/(len(values)+2) if supported else None,
-                        "n_years":len(values),"positive":sum(values),
-                        "status":"exploratory_frequency" if supported else "abstained"})
+                        "n_years":len(values),"positive":sum(values),"observed_rate":mean(values) if values else None,
+                        "observations":trend,"status":status,
+                        "note":"小样本趋势参考，仅描述已知卷面，不用于概率计分" if small_sample else None})
     return results
 
 
@@ -60,6 +66,13 @@ def forecast(root, subject, region, year, cutoff, document=None):
     require(len(mapping)==1 and mapping[0]["status"] in ("historical_selective","system_announced"),
             "预测需同地区同制度选择性考试")
     series = mapping[0]["series_id"]
+    default = root / "national" / "multisubject" / f"{subject}-observations.json"
+    if document is None and default.is_file():
+        from gaokao import read_json
+
+        stored = read_json(default)
+        if (stored["subject"], stored["region"], stored["series_id"]) == (subject, region, series):
+            document = stored
     document = document or {"subject":subject,"region":region,"series_id":series,"targets":[],"observations":[]}
     targets, indexed = evidence_rows(root,subject,region,series,document)
     probabilities = estimate(targets,indexed,year,cutoff)
@@ -77,7 +90,10 @@ def forecast(root, subject, region, year, cutoff, document=None):
         "model":VERSION,"subject":subject,"region":region,"year":year,"series_id":series,
         "as_of":cutoff.isoformat(),"historical_evidence_sha256":fingerprint(document),
         "eligible_years":sorted(y for y,r in indexed.items() if y<year and r["available"]<=cutoff),
-        "status":"exploratory_only" if any(x["p"] is not None for x in probabilities) else "abstained_insufficient_evidence",
+        "status":("exploratory_only" if any(x["p"] is not None for x in probabilities) else
+                  "small_sample_trend" if any(x["status"]=="small_sample_trend" for x in probabilities) else
+                  "descriptive_constant" if any(x["observations"] for x in probabilities) else
+                  "abstained_insufficient_evidence"),
         "minimum_independent_years":MIN_YEARS,"predictions":probabilities,"backtest":folds,
         "scored_cases":len(values),"brier":mean(x["brier"] for x in values) if values else None,
     })
@@ -85,7 +101,7 @@ def forecast(root, subject, region, year, cutoff, document=None):
 
 def score(snapshot, outcome):
     payload = snapshot["payload"]
-    require(snapshot["payload_sha256"]==fingerprint(payload) and payload["model"]==VERSION,
+    require(snapshot["payload_sha256"]==fingerprint(payload) and payload["model"] in (VERSION, LEGACY_VERSION),
             "快照或模型版本不匹配")
     require(all(payload[k]==outcome[k] for k in ("subject","region","year","series_id")),
             "实测结果不能跨学科、地区或卷系")

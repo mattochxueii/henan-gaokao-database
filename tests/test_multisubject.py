@@ -36,7 +36,10 @@ class MultisubjectTests(unittest.TestCase):
                 sections = plan(ROOT, subject, "河南", 2026, "standard")["structure"]["sections"]
                 self.assertEqual(sum(x["points"] for x in sections), 100)
                 self.assertEqual(use(ROOT, subject, "河南", 2024)[0]["status"], "historical_component")
-                for region, year in (("河北",2026),("河南",2027),("河南",2024)):
+                future = plan(ROOT, subject, "河南", 2027, "standard")
+                self.assertEqual(future["structure_year"], 2026)
+                self.assertEqual(future["structure"]["sections"], sections)
+                for region, year in (("河北",2026),("河南",2024)):
                     with self.assertRaises(ValueError):
                         plan(ROOT, subject, region, year, "standard")
 
@@ -104,6 +107,7 @@ class MultisubjectTests(unittest.TestCase):
                "targets":["physics:mechanics"],"observations":[observation]}
         snapshot = forecast(ROOT,"physics","河南",2027,"2026-11-10",doc)
         self.assertIsNone(snapshot["payload"]["predictions"][0]["p"])
+        self.assertEqual(snapshot["payload"]["predictions"][0]["observed_rate"],1)
         self.assertEqual(snapshot["payload"]["scored_cases"],0)
         for override in ({"region":"河北"},{"subject":"biology"},{"targets":["math:mechanics"]},
                          {"observations":[observation,observation]}):

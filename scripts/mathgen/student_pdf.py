@@ -210,6 +210,7 @@ def render(paper, path, solutions=False):
         if any(q["kind"] == "constructed_response" for q in paper["questions"]):
             instruction += "解答题须写出必要的文字说明、证明过程或演算步骤。"
         story.append(para(instruction, note))
+    science_layout = paper.get("layout") == "science"
     previous = None
     section_titles = {
         "single_choice": "单项选择题",
@@ -226,7 +227,8 @@ def render(paper, path, solutions=False):
         )
         if (
             q["kind"] == "constructed_response"
-            and previous == q["kind"]
+            and (previous == q["kind"] or science_layout)
+            and previous is not None
             and not solutions
         ):
             story.append(PageBreak())
@@ -279,7 +281,7 @@ def render(paper, path, solutions=False):
                     figure = Path(q["figure"])
                 require(figure.is_file(), "图形资源缺失")
                 block.append(
-                    Image(str(figure), width=250, height=155, kind="proportional")
+                    Image(str(figure), width=435 if science_layout else 250, height=155, kind="proportional")
                 )
             if q["kind"] == "single_choice":
                 block.append(option_grid(
@@ -299,7 +301,8 @@ def render(paper, path, solutions=False):
             story.append(Spacer(1, 12))
         else:
             story.append(KeepTogether(block))
-            story.append(Spacer(1, 190 if q["kind"] == "constructed_response" else 8))
+            if not science_layout or q["kind"] != "constructed_response":
+                story.append(Spacer(1, 190 if q["kind"] == "constructed_response" else 8))
         md.extend([f"## {q['order']}.（{q['points']}分）", ""])
         md.extend(
             q.get("solution_paragraphs", [])
@@ -319,7 +322,7 @@ def render(paper, path, solutions=False):
         topMargin=38,
         bottomMargin=42,
         title=paper["title"],
-        author="数学模拟试卷",
+        author="理科模拟试卷" if science_layout else "数学模拟试卷",
     ).build(story, onFirstPage=footer, onLaterPages=footer)
     atomic_write(path.with_suffix(".md"), "\n".join(md).rstrip() + "\n")
     return path

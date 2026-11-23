@@ -747,6 +747,7 @@ def run_ai(
     evaluation_split=None,
     study_mode=None,
     forecast_context=None,
+    skip_pilot=False,
 ):
     require(not output.exists(), "输出目录已存在")
     if evaluation_split:
@@ -763,6 +764,7 @@ def run_ai(
         research_context,
         "依据研究上下文动态设计新数学结构，输出schema_version=2的JSON。数学规格、AI中文写作、排版必须分层，协议见writing-protocol.md。不给考生看AST、内部任务名或解题方法。禁止family。"
         + (
+            "直接按目标蓝图构造整卷审阅稿，保留整卷题位与独立PDF审核。" if skip_pilot else
             "已提供5题样卷证书，可以按目标蓝图构造整卷。"
             if pilot_certificate or specialty_certificates
             else "本次只能先设计5题pilot，未完成PDF-only样卷审题前禁止生成整卷。"
@@ -773,6 +775,9 @@ def run_ai(
     from forecast_modes import attach_mode
 
     document = attach_mode(document, study_mode, forecast_context)
+    if skip_pilot:
+        require(document.get("schema_version") == 2 and document["paper"]["mode"] == "full",
+                "直接整卷须使用三层题面的 full 候选")
     if document.get("schema_version") == 2:
         from .exam_workflow import prepare
 
@@ -783,7 +788,7 @@ def run_ai(
             require(uses_protocol(document), "留出实验须逐题关联严格复核依据")
             verify_candidate_references(document, evaluation_split)
         manifest = prepare(
-            root, document, output, pilot_certificate, specialty_certificates
+            root, document, output, pilot_certificate, specialty_certificates, skip_pilot=skip_pilot
         )
         return {
             "generation_mode": "ai",

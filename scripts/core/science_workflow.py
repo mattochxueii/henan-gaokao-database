@@ -36,18 +36,34 @@ def plan(root, subject, region, year, mode="targeted", topics=()):
     require(mapping["status"]!="historical_component", "旧理综分科不能充当独立选择性考试蓝图")
     knowledge = [x["title"] for x in catalog(root)["entities"]["KnowledgePoint"] if x["subject"]==subject]
     layout = mapping.get("structure")
+    structure_mapping = mapping
     if mode == "standard":
-        require(mapping["status"]=="historical_selective" and layout and layout.get("sections"),
-                "暂无已核的同年同省完整卷面结构，使用专项训练")
+        if mapping["status"] == "system_announced":
+            history = [row for row in catalog(root)["exam_uses"]
+                       if row["subject"] == subject and row["region"] == region
+                       and row["year"] < year and row["series_id"] == mapping["series_id"]
+                       and row["exam_system_id"] == mapping["exam_system_id"]
+                       and row["status"] == "historical_selective"
+                       and (row.get("structure") or {}).get("sections")]
+            require(history, "没有可沿用的同省同卷系历史结构")
+            structure_mapping = max(history, key=lambda row: row["year"])
+            layout = structure_mapping["structure"]
+        require(structure_mapping["status"] == "historical_selective" and layout and layout.get("sections"),
+                "缺少可用的同省同卷系卷面结构")
     else:
         require(mode=="targeted", "概率研究使用独立命令")
     return {
         "workflow":VERSION,"subject":subject,"region":region,"year":year,"mode":mode,
         "mapping":mapping,"curriculum_topics":knowledge,"requested_topics":list(topics),
-        "reference_candidates": [{k:q.get(k) for k in ("id","topic","source_url","review_status","version_sha256")}
-                                 for q in query(root,subject,year=year,region=region,verified_only=True,strict=subject=="chemistry")],
+        "reference_candidates": [{k:q.get(k) for k in ("id","topic","source_url","review_status","version_sha256",
+                                                          "usable_for_practice","strict_official_verified","conflict_note")}
+                                 for q in query(root,subject,year=structure_mapping["year"],region=region,verified_only=True)],
         "structure":layout if mode=="standard" else None,
-        "scope":"专项分数和时长由练习设定" if mode=="targeted" else "同年同省已见卷面结构，非官方原创卷",
+        "structure_minutes": structure_mapping.get("minutes") if mode == "standard" else None,
+        "structure_year": structure_mapping["year"] if mode == "standard" else None,
+        "scope": ("专项分数和时长由练习设定" if mode == "targeted" else
+                  "同年同省已见卷面结构，项目原创" if structure_mapping is mapping else
+                  f"沿用河南 {structure_mapping['year']} 年已见卷面结构的项目模拟；{year} 年实际卷型待确认"),
     }
 
 
@@ -75,6 +91,20 @@ def normalize_subject_item(item, order, folder):
             "options":options,"parts":parts,"figure":figure}
 
 
+INDEPENDENT_CATEGORIES = {"conservation", "dimensions", "reaction_conditions", "experimental_controls",
+                          "derivation", "assumptions"}
+
+
+def independent_evidence(evidence, labels):
+    require(isinstance(evidence, dict), "缺少结构化 independent_check")
+    checks, parts = evidence.get("checks"), evidence.get("parts")
+    require(isinstance(checks, dict) and checks and checks.keys() <= INDEPENDENT_CATEGORIES
+            and all(isinstance(v, str) and v.strip() for v in checks.values()), "缺少有效学科核对要点")
+    require(isinstance(parts, dict) and parts.keys() == labels
+            and all(isinstance(v, str) and v.strip() for v in parts.values()), "核对记录须覆盖全部子问")
+    return evidence
+
+
 def prepare(root, blueprint, candidate, output, figure_root=None):
     subject = blueprint["subject"]
     require(candidate["subject"]==subject, "候选学科与蓝图不符")
@@ -92,17 +122,32 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
         public = normalize_subject_item(q,order,figure_root or root)
         figure_models = {"physics": {"velocity_graph", "terminal_data"},
                          "chemistry": {"iodine_evidence"}}
-        if q["problem"].get("op") in figure_models.get(subject, ()):
-            require(public["figure"], "学科规格需要学生版题图")
         normalized = re.sub(r"\W","",public["stem"])
         require(normalized and normalized not in known_text and normalized not in seen, "题干与现存真题或同卷题完全重复")
         seen.add(normalized)
         require(isinstance(q["topic"],str) and q["topic"].strip(), "题目缺少学科知识标签")
         require(not blueprint["requested_topics"] or q["topic"] in blueprint["requested_topics"],
                 "题目超出专项知识点范围")
-        result = solver(q["problem"])
-        require(same_answer(q["proposed_answer"],result["answer"]), "候选答案与独立程序不一致")
-        require(result["checks"] and result["explanation"], "缺少程序验证依据")
+        mode = q.get("verification_mode", "program")
+        require(mode in ("program", "independent_review"), "未知理科验证通道")
+        if mode == "program":
+            problem = q.get("problem")
+            require(isinstance(problem, dict) and problem.get("op"), "程序通道须提供 problem.op")
+            if problem["op"] in figure_models.get(subject, ()):
+                require(public["figure"], "学科规格需要学生版题图")
+            result = solver(problem)
+            require(same_answer(q["proposed_answer"],result["answer"]), "候选答案与独立程序不一致")
+            require(result["checks"] and result["explanation"], "缺少程序验证依据")
+        else:
+            labels = {p["label"] for p in public["parts"]} or {"overall"}
+            details = independent_evidence(q.get("independent_check"), labels)
+            answer = q.get("proposed_answer")
+            require(answer is not None and answer not in ("", {}, []), "独立复核通道须提交待核答案")
+            if public["parts"]:
+                require(isinstance(answer, dict) and answer.keys() == labels
+                        and all(v not in (None,"",{},[]) for v in answer.values()), "候选解须逐问提供")
+            result = {"answer":answer,"checks":[],"unverified":["完整学科推导待独立核对"],
+                      "explanation":"待审候选答案，未运行算子", "independent_check":details}
         if public["kind"] in KINDS[:2]:
             require(isinstance(result["answer"],str) and result["answer"] and
                     len(set(result["answer"]))==len(result["answer"]) and
@@ -110,7 +155,7 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
                     (len(result["answer"])==1)==(public["kind"]=="single_choice"), "选项键与题型不符")
         visible.append(public)
         answers.append(result["answer"])
-        checks.append({"id":q["id"],"topic":q["topic"],"version_sha256":fingerprint(q),"verification":result})
+        checks.append({"id":q["id"],"topic":q["topic"],"version_sha256":fingerprint(q),"verification_mode":mode,"verification":result})
     types = Counter(q["kind"] for q in visible)
     points = sum(q["points"] for q in visible)
     require(len({q["topic"] for q in questions})>1 or blueprint["mode"]!="standard", "整卷主题覆盖不足")
@@ -121,7 +166,7 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
             by_kind[q["kind"]] += q["points"]
         require(types == Counter({s["kind"]:s["count"] for s in sections})
                 and by_kind == Counter({s["kind"]:s["points"] for s in sections})
-                and points==blueprint["mapping"]["points"], "题型数量、分值或总分与已核卷面不符")
+                and points==sum(s["points"] for s in sections), "题型数量、分值或总分与已核卷面不符")
         offset = 0
         for section in blueprint["structure"]["source_details"]:
             count = section.get("count",section.get("questions",len(section.get("numbers",[]))))
@@ -135,12 +180,14 @@ def prepare(root, blueprint, candidate, output, figure_root=None):
             if detail := section.get("individual_points",section.get("individual")):
                 require([q["points"] for q in group]==detail, "已核逐题分值不符")
             offset += count
-        minutes = blueprint["mapping"]["minutes"]
+        minutes = blueprint["structure_minutes"]
     else:
         minutes = candidate.get("minutes", max(5,len(visible)*6))
         require(type(minutes) is int and 0<minutes<=180, "专项练习时长无效")
     paper = {"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
              "minutes":minutes,"total_points":points,"questions":visible}
+    if blueprint["mode"] == "standard":
+        paper["layout"] = "science"
     output.mkdir(parents=True,exist_ok=False)
     for q, view in zip(questions,visible,strict=True):
         if view["figure"]:
@@ -179,7 +226,14 @@ def adjudicate(folder, review):
     for q, answer, check in zip(questions,checks["answers"],checks["questions"],strict=True):
         j = judgments[q["id"]]
         require(j.get("approved") is True and isinstance(j.get("reasoning"),str) and j["reasoning"].strip()
-                and same_answer(j["answer"],answer), "独立解答未与程序结果一致")
+                and same_answer(j["answer"],answer), "独立解答未与绑定答案一致")
+        if check.get("verification_mode") == "independent_review":
+            labels = {p["label"] for p in q["parts"]} or {"overall"}
+            independent_evidence(j.get("independent_check"), labels)
+            require(j.get("independent_check") != check["verification"]["independent_check"],
+                    "独立核对不能原样复制候选核对要点")
+            if q["kind"] == "constructed_response" and checks["blueprint"]["mode"] == "standard":
+                require(j.get("rubric"), "整卷非选择题须有分步评分")
         if check["verification"]["unverified"]:
             require(isinstance(j.get("science_review"),str) and j["science_review"].strip(),
                     "程序覆盖外的科学判断须由审查者说明")

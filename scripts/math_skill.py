@@ -68,7 +68,9 @@ def main(argv=None):
     action.add_argument("--candidates", type=Path)
     action.add_argument("--model")
     action.add_argument("--allow-template-fallback", action="store_true")
-    action.add_argument("--pilot-certificate", type=Path)
+    pilot = action.add_mutually_exclusive_group()
+    pilot.add_argument("--pilot-certificate", type=Path)
+    pilot.add_argument("--skip-pilot", action="store_true", help="整卷直接生成审阅稿，仍须独立审核发布")
     action.add_argument("--specialty-certificate", type=Path, action="append", default=[])
     action.add_argument("--evaluation-split", type=Path)
     action.add_argument("--study-mode", choices=("standard", "targeted", "forecast-research"))
@@ -221,6 +223,8 @@ def main(argv=None):
                 not args.evaluation_split or provider.name != "template",
                 "留出集实验不能使用模板",
             )
+            require(not args.skip_pilot or (args.mode == "full" and provider.name != "template"),
+                    "--skip-pilot 只用于 --engine ai --mode full；模板整卷原本无需样卷")
             if provider.name != "template":
                 from mathgen.dynamic import run_ai
 
@@ -230,6 +234,7 @@ def main(argv=None):
                     args.output.resolve(),
                     not args.no_export,
                     pilot_certificate=args.pilot_certificate,
+                    skip_pilot=args.skip_pilot,
                     specialty_certificates=args.specialty_certificate,
                     evaluation_split=read_json(args.evaluation_split) if args.evaluation_split else None,
                     study_mode=args.study_mode,

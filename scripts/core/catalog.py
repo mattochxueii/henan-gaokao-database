@@ -72,6 +72,22 @@ def science_record(root, row):
                  and item["number"]==row["number"]),None)
 
 
+
+def practice_tier(row, historical):
+    # A local clean transcription can resolve an old candidate-page gap. An explicitly
+    # material or unresolved conflict on the current version still excludes that version.
+    usable = row.get("practice_reviewed") is True and row.get("conflict_severity", "minor") == "minor"
+    blocked = row.get("review_status") == "quarantined" or row.get("conflict_severity") == "material"
+    blocked |= not usable and (historical or {}).get("state") == "quarantined"
+    note = row.get("conflict_note")
+    if not note and historical and historical.get("state") == "quarantined":
+        note = "先前候选存在冲突或缺项；详见逐题证据，当前版本单独判定。"
+    return {"usable_for_practice": usable and not blocked,
+            "strict_official_verified": usable and not blocked and bool(row.get("official_page_sha256")),
+            "conflict_note": note, "review_status": "quarantined" if blocked else
+            "practice_reviewed" if usable else "local_unreviewed"}
+
+
 def import_science(root, bundle):
     """Admit locally owned copies with exact source, province and version bindings."""
     manifest, tables, rows = read_bundle(bundle, check_files=True)
@@ -101,10 +117,17 @@ def import_science(root, bundle):
         require(type(q.get("content_complete")) is bool and q["content_complete"],
                 "完整题面包缺少完整性证明")
         evidence = science_record(root,q)
-        blocked = q.get("review_status")=="quarantined" or (evidence or {}).get("state")=="quarantined"
+        tier = practice_tier(q, evidence)
+        blocked = tier["review_status"] == "quarantined"
+        if official_sha := q.get("official_page_sha256"):
+            require(source.get("authority") == "official" and source.get("url", "").startswith("https://")
+                    and q["source_locator"].get("page")
+                    and any(a.get("sha256") == official_sha and a.get("role") == "official_page"
+                            for a in q["asset_refs"]), "官方分级须绑定官方来源、原页与图像校验值")
         quarantined += int(blocked)
         if evidence and not blocked:
-            require(evidence["verification"]["figure"]=="not_required" or q["asset_refs"],
+            require(evidence["verification"]["figure"] == "not_required"
+                    or any(a.get("role") != "official_page" for a in q["asset_refs"]),
                     "本题在来源记录中包含必要图表，请随全文提供")
         require(q["answer"] is not None and q["answer"] != "" and q["answer"] != {},
                 "缺少已绑定的答案")
@@ -137,10 +160,9 @@ def all_science_rows(root):
             rows.append({
                 **q, "region":regions[q["paper_id"]], "source_url":source.get("url"),
                 "rights":source["rights"], "record_type":"full_text",
+                "local_bundle_path":p.relative_to(root).as_posix(),
                 "answer_version_sha256":q["version_sha256"],
-                "review_status":"quarantined" if (
-                    q.get("review_status")=="quarantined" or (science_record(root,q) or {}).get("state")=="quarantined"
-                ) else "local_unreviewed",
+                **practice_tier(q, science_record(root,q)),
             })
     for row in rows:
         require(row["subject"] in SCIENCES and HASH.fullmatch(row["version_sha256"]), "题面版本或学科无效")
@@ -149,8 +171,9 @@ def all_science_rows(root):
     return rows
 
 
-def query(root, subject, *, year=None, region=None, topic=None, limit=10, verified_only=False, strict=False):
+def query(root, subject, *, year=None, region=None, topic=None, limit=10, verified_only=False, strict=False, official_only=False):
     require(subject in SUBJECTS and type(limit) is int and limit>0, "学科或数量无效")
+    require(not official_only or subject in SCIENCES, "官方原页分级适用于三门理科")
     require(not strict or subject=="chemistry", "严格逐题证据模式当前支持化学")
     if subject == "math":
         from subjects.math import research
@@ -160,8 +183,10 @@ def query(root, subject, *, year=None, region=None, topic=None, limit=10, verifi
         if q["subject"] != subject or (year is not None and q["year"] != year) or (region and q["region"] != region):
             continue
         if q.get("review_status") == "quarantined" or verified_only and q.get("review_status") not in (
-            "source_and_solution_reviewed", "independently_solved_summary",
+            "source_and_solution_reviewed", "independently_solved_summary", "practice_reviewed",
         ):
+            continue
+        if official_only and not q.get("strict_official_verified"):
             continue
         if strict:
             evidence = science_record(root,q) or {}

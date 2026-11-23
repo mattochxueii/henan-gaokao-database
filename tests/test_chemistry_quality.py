@@ -31,8 +31,7 @@ class ChemistryQualityTests(unittest.TestCase):
             self.assertFalse(blocked & {q["number"] for q in query(ROOT,"chemistry",year=year,verified_only=True)})
         with self.assertRaises(ValueError):
             science_evidence(ROOT,"chemistry",2025,region="河北")
-        with self.assertRaises(ValueError):
-            plan(ROOT,"chemistry","河南",2027,"standard")
+        self.assertEqual(plan(ROOT,"chemistry","河南",2027,"standard")["structure_year"], 2026)
 
     def test_electrons_and_double_keys(self):
         p=self.problems[0]

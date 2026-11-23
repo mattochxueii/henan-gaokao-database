@@ -21,6 +21,10 @@ def main(argv=None):
     sub.add_parser("math").add_argument("args",nargs=argparse.REMAINDER)
     sub.add_parser("index").add_argument("output",type=Path)
     sub.add_parser("import").add_argument("bundle",type=Path)
+    electronic = sub.add_parser("import-electronic", help="从 JSON 或 Markdown 批量导入电子版理科题")
+    electronic.add_argument("input", type=Path, help="含卷型和题目元数据的 JSON")
+    electronic.add_argument("--markdown", type=Path, help="可选，含逐题题干与答案的 Markdown")
+    electronic.add_argument("--images", type=Path, help="实质题图和可选官方原页的本地目录")
     research = sub.add_parser("research")
     research.add_argument("subject",choices=SUBJECTS)
     research.add_argument("--year",type=int)
@@ -28,6 +32,7 @@ def main(argv=None):
     research.add_argument("--topic")
     research.add_argument("--limit",type=int,default=10)
     research.add_argument("--verified-only",action="store_true")
+    research.add_argument("--official-only",action="store_true",help="只返回已绑定官方原页图像的版本")
     research.add_argument("--strict",action="store_true",help="化学题的跨来源与解答双复核子集")
     for subject in ("physics", "chemistry"):
         evidence = sub.add_parser(f"{subject}-index", help=f"河南{SUBJECTS[subject]}逐题证据")
@@ -69,7 +74,7 @@ def main(argv=None):
                       for k,v in SUBJECTS.items()]
         elif command=="research":
             result = query(root,args.subject,year=args.year,region=args.region,topic=args.topic,
-                           limit=args.limit,verified_only=args.verified_only,strict=args.strict)
+                           limit=args.limit,verified_only=args.verified_only,strict=args.strict,official_only=args.official_only)
         elif command in ("physics-index", "chemistry-index"):
             result = science_evidence(root,command.removesuffix("-index"),args.year,args.number,region=args.region)
         elif command=="exam":
@@ -78,6 +83,9 @@ def main(argv=None):
             result = rebuild(root,args.output)
         elif command=="import":
             result = import_science(root,args.bundle)
+        elif command=="import-electronic":
+            from core.science_intake import import_electronic
+            result = import_electronic(root,args.input,args.markdown,args.images)
         elif command in ("plan","generate"):
             result = plan(root,args.subject,args.region,args.year,args.mode,args.topic)
             if command=="generate":

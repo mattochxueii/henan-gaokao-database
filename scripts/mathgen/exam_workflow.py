@@ -21,7 +21,7 @@ from .research_quality import (
 VERSION = "exam-workflow-v2"
 
 
-def prepare(root, document, output, pilot_certificate=None, specialty_certificates=()):
+def prepare(root, document, output, pilot_certificate=None, specialty_certificates=(), *, skip_pilot=False):
     output = Path(output)
     require(not output.exists(), "使用新目录保留旧候选和失败记录")
     require(document.get("schema_version") == 2, "须提供带中文写作层的v2候选")
@@ -33,7 +33,8 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
     )
     mode = document["paper"]["mode"]
     verify_design(root, document)
-    if mode == "full" and uses_protocol(document):
+    require(not skip_pilot or (mode == "full" and pilot_certificate is None), "仅可对整卷显式跳过样卷")
+    if mode == "full" and uses_protocol(document) and not skip_pilot:
         require_specialty_certificates(specialty_certificates)
         require(pilot_certificate is not None, "整卷须先通过五题题位样卷")
         cert = read_json(pilot_certificate)
@@ -43,7 +44,7 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
             "五题题位样卷未完成独立审核",
         )
         verify_certificate(Path(pilot_certificate).parent, cert)
-    elif mode == "full":
+    elif mode == "full" and not skip_pilot:
         require(pilot_certificate is not None, "整卷生成前须通过5题样卷")
         cert = read_json(pilot_certificate)
         require(
@@ -56,10 +57,12 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         verify_certificate(Path(pilot_certificate).parent, cert)
     coverage = None
     if mode == "full" or document.get("position_pilot"):
-        output.mkdir(parents=True)
+        output.mkdir(parents=True, exist_ok=True)
         atomic_json(output / "raw-ai-candidate.json", document)
         position = placement_report(document, None)
         atomic_json(output / "position-plan.json", position)
+        if skip_pilot:
+            atomic_json(output / "pilot-waiver.json", {"mode": "full", "scope": "generation_only"})
         require(not position["failures"], "整卷题位计划未通过，详见position-plan.json")
     if mode == "full":
         require(document["paper"].get("require_scoring") is True, "整卷需要逐步评分细则")
