@@ -75,6 +75,8 @@ def plan(root, subject, region, year, mode="targeted", topics=()):
 
 
 def normalize_subject_item(item, order, folder):
+    from core.native_tables import normalize_table
+
     kind = item.get("kind","single_choice" if item.get("options") else "constructed_response")
     options = item.get("options",{})
     points = item["points"]
@@ -94,8 +96,19 @@ def normalize_subject_item(item, order, folder):
                 and actual.suffix.lower() in (".png",".jpg",".jpeg"), "题图缺失或版本不符")
         figure = {"path":"figures/"+figure["sha256"]+actual.suffix.lower(),
                   "sha256":figure["sha256"]}
-    return {"id":item["id"],"order":order,"kind":kind,"points":points,"stem":stem,
-            "options":options,"parts":parts,"figure":figure}
+    data={"id":item["id"],"order":order,"kind":kind,"points":points,"stem":stem,
+          "options":options,"parts":parts,"figure":figure}
+    if "table" in item:
+        data["table"]=normalize_table(item["table"])
+    if "experiment_archetype" in item:
+        require(isinstance(item["experiment_archetype"],str) and item["experiment_archetype"].strip(),
+                "实验范式须为非空字符串")
+        data["experiment_archetype"]=item["experiment_archetype"]
+    if "model_fingerprint" in item:
+        require(isinstance(item["model_fingerprint"],str) and item["model_fingerprint"].strip(),
+                "模型指纹须为非空字符串")
+        data["model_fingerprint"]=item["model_fingerprint"]
+    return data
 
 
 def normalize_prose(text):
@@ -257,6 +270,15 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
             paper["qa_protocol"] = current_board
         if reference := candidate.get("quality_benchmarks"):
             paper.update(quality_reference_sha256=fingerprint(reference), standard=True, edition_rules=REVISION)
+            if reference.get("release_rules"):
+                paper["release_rules"]=reference["release_rules"]
+                paper["ledger_topics"]=candidate.get("ledger_topics",{})
+                if subject=="chemistry":
+                    masses=candidate.get("relative_atomic_masses",{})
+                    require(isinstance(masses,dict) and masses and all(
+                        re.fullmatch(r"[A-Z][a-z]?",element) and type(mass) in (int,float) and 0<mass<300
+                        for element,mass in masses.items()),"化学标准卷须附可核对的相对原子质量")
+                    paper["relative_atomic_masses"]=masses
         paper["layout"] = "science"
         paper["layout_rules"] = rules
         # Only other series lack a policy record and use their archived scoring note.
@@ -328,7 +350,13 @@ def adjudicate(folder, review):
             require(isinstance(rubric,list) and all(type(k["points"]) is int and k["points"]>0
                     and isinstance(k["step"],str) and k["step"].strip() for k in rubric)
                     and sum(k["points"] for k in rubric)==q["points"], "分步评分与本题分值不符")
-            paragraphs.append("项目参考评分　"+"；".join(f'{k["step"]}（{k["points"]}分）' for k in rubric)+"。")
+            from core.marking_standards import SCIENCE_EQUIVALENCE, science_note
+
+            paragraphs.append("评分参考　"+"；".join(f'{k["step"]}（{k["points"]}分）' for k in rubric)+"。")
+            if note := science_note(packet["paper"]["subject"],q):
+                paragraphs.append(note)
+            if packet["paper"].get("release_rules"):
+                paragraphs.append(SCIENCE_EQUIVALENCE)
         verified.append({**q, "solution_paragraphs":paragraphs})
     from mathgen.student_pdf import render
     render({**packet["paper"],"questions":verified},folder/"solutions.pdf",solutions=True)
@@ -376,8 +404,18 @@ def publication_record(folder, visual):
     return record
 
 
-def publish(folder, visual):
+def publish(folder, visual, *, root=None):
+    from core.release_checks import is_frozen_sample, require_release
+
+    root=root or Path(__file__).resolve().parents[2]
+    paper=read_json(folder/"blind-packet.json")["paper"]
+    if paper.get("release_rules") or is_frozen_sample(root,folder):
+        require_release(root,folder)
     record = publication_record(folder, visual)
+    if paper.get("release_rules"):
+        from core.publication_ledger import register
+
+        register(root,paper["subject"],paper,digest(folder/"paper.pdf"))
     write_new(folder/"publication.json",record)
     return record
 

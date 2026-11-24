@@ -64,7 +64,7 @@ def main(argv=None, *, quality_reference=None):
     action.add_argument("--seed", type=int, default=20261107)
     action.add_argument("--output", type=Path, required=True)
     action.add_argument("--no-export", action="store_true")
-    action.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
+    action.add_argument("--layout-mode", choices=("practice","exam"), default="exam")
     action.add_argument("--exam-year", type=int, default=2027, help="带审稿上下文的标准卷目标年份")
     action.add_argument("--engine", choices=("template", "ai"), default="template")
     action.add_argument("--candidates", type=Path)
@@ -238,7 +238,12 @@ def main(argv=None, *, quality_reference=None):
                     quality_reference = validate_authoring_context(root,"math",args.context,read_json(args.candidates))
                     from core.exam_policy import resolve as exam_policy
                     from core.review_board import VERSION as board_version
+                    from core.release_checks import VERSION as release_version
+                    from core.publication_ledger import claim
+
+                    session=claim(args.context.with_suffix(".session.json"),"math",read_json(args.candidates))
                     quality_reference = {**quality_reference,"review_board":board_version,
+                                         "release_rules":release_version,"session":session,
                                          "qa_policy":read_json(args.context)["anti_patterns"],
                                          "exam_policy":exam_policy(root,"math",args.exam_year,"河南",quality_reference["series"])}
                 record = run_ai(
@@ -312,7 +317,7 @@ def main(argv=None, *, quality_reference=None):
         elif args.action == "publish":
             from mathgen.exam_workflow import publish
 
-            result = publish(args.output, args.student_review, args.math_comparison)
+            result = publish(args.output, args.student_review, args.math_comparison, root=root)
         elif args.action == "solution-edition":
             from mathgen.scoring import render_edition
 

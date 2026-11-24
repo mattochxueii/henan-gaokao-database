@@ -252,6 +252,83 @@
       "severity": "fatal",
       "check": "查前五题STSE和基础操作、选必2的多角度覆盖、非选择题空位数",
       "counterexample": "全卷选必2只考一次常规晶胞，非选择题每题两个作答空"
+    },
+    {
+      "id": "all.answer_distribution",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "从版本绑定答案计算单选字母偏态和连续相同选项",
+      "counterexample": "语文9道单选中5个B"
+    },
+    {
+      "id": "all.publication_layout",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "依据学生PDF及答案文件核查练习版指令、作答区和评分模板",
+      "counterexample": "练习版要求在答题卡作答，作文稿纸少于1000格"
+    },
+    {
+      "id": "all.answer_leak",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "按空位和步骤编号核对题干是否已给出所问结论",
+      "counterexample": "题首已说明步骤5还原羰基，随后考步骤5的反应类型"
+    },
+    {
+      "id": "all.difficulty_probe",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "检查两层次分块估时和指定把关题的具体推理证据",
+      "counterexample": "尖子生完成150分数学卷估时80分钟，且压轴仅需代入"
+    },
+    {
+      "id": "chinese.material_integrity",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "逐段核验带引号的原词，检查古诗意象与开放默写去重",
+      "counterexample": "要求结合首末两段的两处“留”，首段却没有“留”"
+    },
+    {
+      "id": "math.standard_scoring",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "单选按键给分，多选按正解项数生成部分分，解答题认可等价通法",
+      "counterexample": "单选题评分印出可接受数学等价写法；终式8/√82"
+    },
+    {
+      "id": "math.progression",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "检查末两题递进、圆锥曲线覆盖及各题核心方法声明",
+      "counterexample": "末两题都只有两问，全卷圆锥曲线只考椭圆"
+    },
+    {
+      "id": "english.writing_listening",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "听力正文1050到1300个有效词，写作使用五档整体评分",
+      "counterexample": "写作按已印署名给分，语填提示词5比5"
+    },
+    {
+      "id": "physics.domain_balance",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "查直流分值、关键模型覆盖、实验范式以及探测门槛和可见光的区别",
+      "counterexample": "两道实验都用换向消除零位误差，4.2 eV被误称可见光"
+    },
+    {
+      "id": "chemistry.reaction_notation",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核对无机方程式等号或可逆符号、气体箭头及平衡常数记号",
+      "counterexample": "离子方程式以单向箭头连接，生成二氧化碳无上箭头"
+    },
+    {
+      "id": "biology.hedges_and_tables",
+      "subject": "biology",
+      "severity": "fatal",
+      "check": "从绑定答案统计正确选项的对冲措辞，并核查数据表引用",
+      "counterexample": "16道单选里的6个正解含对冲套语，把计数表叫作图示"
     }
   ]
 }

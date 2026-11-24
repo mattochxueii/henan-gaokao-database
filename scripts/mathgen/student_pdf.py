@@ -31,7 +31,7 @@ from storage import atomic_json
 from .cjk_layout import ExamParagraph, plain_markup
 from .export import chinese_font, MathParagraph, formatted_plain
 
-VERSION = "student-layout-v5"
+VERSION = "student-layout-v6"
 MATH_RASTER = MathTextParser("agg")
 
 
@@ -74,7 +74,7 @@ def option_grid(options, width, compact=False):
             )
 
 
-def science_section_note(kind, group, partial_credit=None, *, exam_policy=None):
+def science_section_note(kind, group, partial_credit=None, *, exam_policy=None, subject=None):
     total = sum(q["points"] for q in group)
     scores = {q["points"] for q in group}
     each = f"每小题{next(iter(scores))}分，" if len(scores) == 1 and kind.endswith("choice") else ""
@@ -91,7 +91,10 @@ def science_section_note(kind, group, partial_credit=None, *, exam_policy=None):
             partial = "部分选对得部分分" if partial_credit is None else f"选对但不全得{partial_credit}分"
             scoring = f"全部选对得满分，{partial}，有选错的得0分。"
         return text + "在每小题给出的四个选项中，有多项符合题目要求。" + scoring
-    return text + "按题意填写或作答。计算题须写出必要的文字说明、方程式和演算步骤。"
+    text += "按题意填写或作答。"
+    if subject in (None,"physics"):
+        text += "计算题须写出必要的文字说明、方程式和演算步骤。"
+    return text
 
 
 class AnswerSpace(Flowable):
@@ -114,8 +117,8 @@ class AnswerSpace(Flowable):
         if self.continuation or self.writable < 4*cm or avail_height < minimum + 8:
             return []
         first = min(avail_height-8, self.writable-minimum)
-        return [AnswerSpace(self.number, first/cm, self.placements),
-                AnswerSpace(self.number, (self.writable-first)/cm, self.placements, continuation=True)]
+        return [type(self)(self.number, first/cm, self.placements),
+                type(self)(self.number, (self.writable-first)/cm, self.placements, continuation=True)]
 
     def draw(self):
         c = self.canv
@@ -131,6 +134,19 @@ class AnswerSpace(Flowable):
         c.drawString(12, self.height-12, f"第 {self.number} 题作答区{suffix}")
         c.restoreState()
         self.placements.append({"number":self.number,"page":c.getPageNumber(),
+                                "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
+
+
+class LinedWritingSpace(AnswerSpace):
+    def draw(self):
+        canvas=self.canv
+        canvas.saveState()
+        canvas.setStrokeGray(.71)
+        canvas.setLineWidth(.4)
+        for y in range(8,int(self.height)-3,19):
+            canvas.line(0,y,self.width,y)
+        canvas.restoreState()
+        self.placements.append({"number":self.number,"page":canvas.getPageNumber(),
                                 "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
 
 
@@ -152,6 +168,7 @@ def answer_height(q):
 
 def formula_image(formula, filename):
     """Use the raster backend's ink bounds so italic glyphs are not clipped."""
+    formula=re.sub(r"(?<![A-Za-z\\{])([ie])(?![A-Za-z}])",lambda m:r"\mathrm{"+m[1]+"}",formula)
     with rc_context({"mathtext.fontset": "stix"}):
         parsed = MATH_RASTER.parse(
             "$" + formula + "$", dpi=240, prop=FontProperties(size=12)
@@ -166,6 +183,8 @@ def normalise_tex(text):
         not re.search(r"[\u3400-\u9fff]", text),
         "数学字体不支持公式内中文，须将中文说明移到正文，不能用缺字占位符发布",
     )
+    text = re.sub(r"\\complement(?![A-Za-z])",lambda _:r"\mathrm{∁}",text)
+    text = re.sub(r"\\triangle(?![A-Za-z])",lambda _:r"\mathrm{△}",text)
     text = re.sub(
         r"\\(le|ge)(?![A-Za-z])", lambda m: r"\leq" if m[1] == "le" else r"\geq", text
     )
@@ -221,13 +240,21 @@ def normalise_tex(text):
 def draw_figure(data, image):
     fig = Figure(figsize=(4.8, 2.65), dpi=250)
     if data["type"] == "wireframe":
+        from .wireframe import hidden_edges
+
         ax = fig.add_subplot(111, projection="3d")
-        hidden = {frozenset(edge) for edge in data.get("hidden_edges", [])}
+        angles=data.get("view_angles",(20,-55))
+        ax.view_init(*angles)
+        elevation,azimuth=np.radians(angles)
+        direction=np.array([np.cos(elevation)*np.cos(azimuth),np.cos(elevation)*np.sin(azimuth),np.sin(elevation)])
+        points=np.asarray(list(data["vertices"].values()),dtype=float)
+        center=(points.min(axis=0)+points.max(axis=0))/2
+        span=np.maximum(np.ptp(points,axis=0),1e-9)
+        hidden=hidden_edges(data["vertices"],data["edges"],center+10*span*direction)
         for a,b in data["edges"]:
             ax.plot(*zip(data["vertices"][a], data["vertices"][b]),
                     color="black", linewidth=1.15,
                     linestyle="--" if frozenset((a,b)) in hidden else "-")
-        ax.view_init(*data.get("view_angles", (20,-55)))
         ax.set_axis_off()
         for name, point in data["vertices"].items():
             px,py,_ = proj3d.proj_transform(*point, ax.get_proj())
@@ -243,8 +270,6 @@ def draw_figure(data, image):
             ax.annotate("$" + mark["math"] + "$", (px, py),
                         xytext=mark.get("offset", [3, 3]),
                         textcoords="offset points", fontsize=11)
-        if caption := data.get("caption_math"):
-            fig.text(.5, .015, "$" + caption + "$", ha="center", fontsize=11)
     else:
         require(data["type"] == "coordinate", "不支持的试卷图形")
         ax = fig.add_subplot()
@@ -270,6 +295,8 @@ def draw_figure(data, image):
 
 
 def render(paper, path, solutions=False, *, layout_mode=None):
+    from functools import partial
+    from core.exam_pages import ExamPages
     from core.exam_policy import guess_snapshot
     from gaokao import ROOT
 
@@ -382,10 +409,6 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         paragraph = ExamParagraph if compact else MathParagraph
         return paragraph("".join(chunks).replace("\n", "<br/>"), style)
 
-    def footer(canvas, doc):
-        canvas.setFont(font, 9)
-        canvas.drawCentredString(A4[0] / 2, 22, f"第 {doc.page} 页")
-
     if math_compact and solutions:
         subtitle = ParagraphStyle("math-solution-subtitle", parent=title, fontSize=13,
                                   leading=19, spaceAfter=12)
@@ -404,6 +427,10 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             instruction += "解答题须写出必要的文字说明、证明过程或演算步骤。"
         if not compact:
             story.append(para(instruction, note))
+        if mode=="exam":
+            story.append(para(f"本试卷共{len(paper['questions'])}题。请在答题卡相应位置作答。",note))
+        if paper.get("subject")=="chemistry" and (masses:=paper.get("relative_atomic_masses")):
+            story.append(para("可能用到的相对原子质量："+ "　".join(f"{k}—{v}" for k,v in masses.items()),note))
     previous = None
     section_titles = {
         "single_choice": "单项选择题",
@@ -441,7 +468,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
                     instructions = f"本大题共{len(group)}小题，共{sum(item['points'] for item in group)}分。" + prompt
                 else:
                     instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"),
-                                                        exam_policy=policy)
+                                                        exam_policy=policy,subject=paper.get("subject"))
                 section.append(para(instructions, note))
                 md.extend([f"## {label}", "", instructions, ""])
             previous = q["kind"]
@@ -462,6 +489,12 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             block.extend(para(p) for p in solution)
         else:
             block.append(para(number + " " + q["stem"] if compact else q["stem"]))
+            if table:=q.get("table"):
+                from core.native_tables import pdf_table
+
+                if table.get("caption"):
+                    block.append(para(table["caption"],note))
+                block.append(pdf_table(table,para))
             if (data := q.get("figure")):
                 if isinstance(data, dict):
                     directory = path.parent / "figures" if math_compact else assets
@@ -513,7 +546,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             parts = [para(part["label"] + " " + part["text"],
                           response_line if practice and "___" in part["text"] else body)
                      for part in q["parts"]]
-            keep_response = physics_layout and (height > 0 or (not choice and bool(parts)))
+            keep_response = height > 0 or (physics_layout and not choice and bool(parts))
             if compact and not choice and not keep_response:
                 # The figure and first subquestion stay with their stem.
                 story.append(KeepTogether(block + parts[:1]))
@@ -522,7 +555,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             if q["kind"] == "fill_in" and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
             if height:
-                block.append(AnswerSpace(q["order"], height, placements))
+                block.append(LinedWritingSpace(q["order"], height, placements))
             if keep_response:
                 # Leave the extended calculation and its blank together when they fit a sheet.
                 story.append(KeepTogether(block))
@@ -543,11 +576,13 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             if index + 1 < len(paper["questions"]):
                 story.append(Spacer(1, 12))
         md.extend([f"## {q['order']}.（{q['points']}分）", ""])
+        from core.native_tables import markdown_table
         md.extend(
             q.get("solution_paragraphs", [])
             if solutions
             else [
                 q["stem"],
+                *(markdown_table(q["table"]) if q.get("table") else []),
                 *[f"![题图]({image})" for image in figures_in_md],
                 *[f"![题图]({image.relative_to(path.parent).as_posix()})" for image in q.get("archive_figures",[])],
                 *["%s．%s" % p for p in q["options"].items()],
@@ -564,7 +599,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         bottomMargin=34 if compact else 42,
         title=paper["title"],
         author="理科模拟试卷" if science_layout else "数学模拟试卷",
-    ).build(story, onFirstPage=footer, onLaterPages=footer)
+    ).build(story, canvasmaker=partial(ExamPages,footer_font=font))
     atomic_write(path.with_suffix(".md"), "\n".join(md).rstrip() + "\n")
     if not solutions:
         atomic_json(path.with_suffix(".layout.json"), {"mode":mode,"paper_sha256":digest(path),

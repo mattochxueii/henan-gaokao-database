@@ -215,11 +215,16 @@ class Merge27Tests(TestCase):
             self.assertEqual(list(data["listening"]),[f"L{n:02d}" for n in range(1,11)])
             self.assertEqual(len(data["provenance"]["section_sha256"]),3)
             out = folder/"review"
-            with contextlib.redirect_stdout(StringIO()):
+            from unittest.mock import patch
+
+            with contextlib.redirect_stdout(StringIO()), patch(
+                    "core.language_render.english_font",return_value="Times-Roman"):
                 rc = main(["simulate","english","2027",str(candidate),str(out),"--context",str(ctx)])
             self.assertEqual(rc,0)
             state = review_board.evidence(ROOT,out)
-            self.assertTrue(state["preflight"]["passed"],state["preflight"]["issues"])
+            self.assertFalse(state["preflight"]["passed"])
+            self.assertEqual({i["rule"] for i in state["preflight"]["issues"]},
+                             {"english_listening_length","english_cross_item_leak"})
             self.assertEqual(state["protocol"],review_board.VERSION)
 
     def test_merge_rejects_cross_section_wrong_score_and_duplicate_part(self):

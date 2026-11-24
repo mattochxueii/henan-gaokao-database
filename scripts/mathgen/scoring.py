@@ -39,7 +39,9 @@ def scoring_by_number(document, guide):
     return {r["number"]: r for r in rows}
 
 
-def solution_book(student, document, revisions, guide=None):
+def solution_book(student, document, revisions, guide=None, *, answer_keys=None):
+    from core.marking_standards import MATH_EQUIVALENCE, math_choice
+
     rubric = scoring_by_number(document, guide) if guide is not None else {}
     solutions = []
     for visible, authored in zip(student["questions"], document["questions"], strict=True):
@@ -54,11 +56,15 @@ def solution_book(student, document, revisions, guide=None):
             paragraphs = [*paragraphs, f"【命题依据卡】{card['strength']}。证据编号 {labels}。",
                           f"本题避开“{card['surface']}”的表层套路。{card['retained']}",
                           card["difference"]]
-        if guide is not None:
+        if student.get("release_rules") and visible["kind"].endswith("_choice"):
+            paragraphs = [*paragraphs, math_choice(visible["kind"], answer_keys[number-1], visible["points"])]
+        elif guide is not None:
             paragraphs = list(paragraphs)
             for step in rubric[number]["steps"]:
                 part = f"（{step['part']}）" if step.get("part") else ""
                 paragraphs.append(f"评分{part}　{step['points']}分　{step['criterion']}")
+            if student.get("release_rules") and visible["kind"]=="constructed_response":
+                paragraphs.append(MATH_EQUIVALENCE)
         solutions.append({**visible, "solution_paragraphs": paragraphs})
     title = student["title"] + (" · 项目自拟评分" if guide else "")
     return {**student, "title": title, "questions": solutions}
@@ -75,7 +81,13 @@ def render_edition(source, edition, output):
     raw = read_json(source / "raw-ai-candidate.json")
     comparison = read_json(source / "mathematical-comparison.json")
     revisions = {**comparison.get("solution_revisions", {}), **edition.get("solution_revisions", {})}
-    book = solution_book(read_json(source / "student-text.json"), raw, revisions, edition)
+    visible=read_json(source/"student-text.json")
+    keys=None
+    if visible.get("release_rules"):
+        reviewed=read_json(source/"student-review.json")
+        keys=[q.get("answer_key") for q in reviewed["questions"]]
+        keys=["".join(key) if isinstance(key,list) else key for key in keys]
+    book = solution_book(visible, raw, revisions, edition, answer_keys=keys)
     output.mkdir(parents=True)
     pdf = render(book, output / "solutions.pdf", solutions=True)
     result = {

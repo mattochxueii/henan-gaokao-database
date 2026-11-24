@@ -7,8 +7,13 @@ from core import review_board as board
 
 def cycle(root,folder,inbox,previous=None,repair_slots=(),providers=None):
     """Render with simulate first. Resume after isolated reviewers deposit their independent replies."""
+    from core.release_checks import is_frozen_sample
+
+    frozen=is_frozen_sample(root,folder)
+    state=board.evidence(root,folder,enforce_release=frozen)
+    if not state["preflight"]["passed"] and (frozen or (folder/"board").exists()):
+        return {"state":"returned","issues":state["preflight"]["issues"],"pdf_sha256":state["pdf_sha256"]}
     inbox.mkdir(parents=True,exist_ok=True)
-    state=board.evidence(root,folder)
     if (folder/"board").exists():
         result=board.replay(folder/"board")
         require(result["pdf_sha256"]==state["pdf_sha256"],"旧评分与当前学生卷不匹配")

@@ -49,7 +49,7 @@ class ExternalReview27Tests(TestCase):
             self.assertEqual(rc,0)
             self.assertEqual({p.name for p in out.iterdir()},
                              {"student.pdf","student.md","instructions.md","policy-check.json","position-summaries.json",
-                              "anti-patterns.json","findings-template.json","listening.md"})
+                              "anti-patterns.json","findings-template.json","difficulty-probe-template.json","listening.md"})
             self.assertEqual(digest(out/"student.pdf"),digest(source/"paper.pdf"))
             self.assertEqual(read_json(out/"policy-check.json")["policy"]["year"],2027)
             self.assertNotIn("reference_answer",(out/"position-summaries.json").read_text(encoding="utf-8"))

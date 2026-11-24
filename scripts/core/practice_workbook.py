@@ -50,8 +50,10 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
             "references":[{k:v for k,v in q.items() if k not in answer_fields} for q in references]}
     if not topic and not source_id:
         from core.quality_audit import position_reference
+        from core.publication_ledger import history
 
         from core.exam_qa import policies
+        result["publication_history"] = history(root,subject)
         result["anti_patterns"] = policies(root, subject)
         result["quality_benchmarks"] = position_reference(root, subject)
         if subject in ("chinese","english"):
@@ -59,6 +61,10 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
 
             corpus = fulltext_corpus(root, subject)
             result["language_corpus"] = corpus
+            if subject=="chinese":
+                from core.chinese_corpus import manifest
+
+                result["classical_corpus"]=manifest(root)
             result["rehearsal_references"] = [
                 {k: v for k, v in q.items() if k not in answer_fields}
                 for q in research(root, subject, year=2025, region="河南", limit=None,

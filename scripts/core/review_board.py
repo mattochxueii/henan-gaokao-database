@@ -25,7 +25,8 @@ def successful(status):
 class BlindProvider(Protocol):
     """Optional heterogenous provider; the caller sends only these allowlisted inputs."""
     def review(self, *, role: str, student_pdf: bytes, rules: list,
-               benchmarks: list, listening_script: dict | None) -> dict: ...
+               benchmarks: list, listening_script: dict | None,
+               required_reply: dict | None = None) -> dict: ...
 
 
 def packet_path(folder):
@@ -33,8 +34,9 @@ def packet_path(folder):
     return pdf if pdf.is_file() else folder/"review-only/paper.pdf"
 
 
-def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False):
+def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False, enforce_release=False):
     from core.quality_audit import _paper_inputs
+    from core import release_checks
     from pypdf import PdfReader
 
     ref,paper,version,pdf_sha=_paper_inputs(folder)
@@ -64,8 +66,26 @@ def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False):
             paper = {**paper,"exam_policy":guess_snapshot(root,subj,paper["title"],series=ref.get("series"))}
         else:
             header = "".join(header.split())
+    release = ref.get("release_rules") == release_checks.VERSION
     gate=inspect(root,subj,paper,answers,header=header,observations=ref.get("constant_observations",()),
-                 policy_snapshot=rules,figure_folder=folder,listening=listening,enforce_corridors=strict)
+                 policy_snapshot=rules,figure_folder=folder,listening=listening,enforce_corridors=strict,
+                 release_artifacts=release_checks.from_folder(folder,pdf) if release or enforce_release else None)
+    if release:
+        from core.publication_ledger import reuse_findings
+
+        failures=[{"number":1,"rule":"release_ledger","evidence":detail}
+                  for detail in reuse_findings(root,subj,paper,pdf_sha)]
+        if failures:
+            gate.update(issues=[*gate["issues"],*failures],passed=False)
+        if subj=="chinese":
+            from core.chinese_corpus import recitation_findings
+
+            source=paper["questions"][16].get("recitation_sources",[])
+            keys=[answers[16],*spec.get("exact_key_variants",{}).get("17",[])]
+            for answer in keys:
+                for failure in recitation_findings(root,source,answer):
+                    gate["issues"].append({"number":17,"rule":"chinese_recitation_edition","evidence":failure})
+                    gate["passed"]=False
     # Lock printed stems, options, parts, content-bound figures and any shared passage.
     versions = {}
     local_versions = {}
@@ -94,7 +114,8 @@ def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False):
             **({"exact_key_variants":exact_variants} if exact_variants else {}),
             **({"local_versions":local_versions,"material_groups":material_groups} if local_versions else {}),
             "rules":rules,"preflight":gate,"reference_sha256":fingerprint(ref),
-            **({"protocol": VERSION} if strict else {})}
+            **({"protocol": VERSION} if strict else {}),
+            **({"release_rules":release_checks.VERSION} if release else {})}
 
 
 def blind_bundle(root, folder, role):
@@ -108,9 +129,14 @@ def blind_bundle(root, folder, role):
             if q["year"] in (2025,2026):
                 examples.append({k:q.get(k) for k in ("id","year","number","topic","stem","parts","options")})
     listening=folder/"listening-review.json"
-    return {"role":role,"rules":state["rules"],"benchmarks":examples,
+    bundle={"role":role,"rules":state["rules"],"benchmarks":examples,
             "listening_script":read_json(listening) if listening.is_file() and role!="visual" else None,
             "student_pdf":packet_path(folder).read_bytes()}
+    if state.get("release_rules"):
+        from core.review_probe import instructions
+
+        bundle["required_reply"]=instructions(state["subject"])
+    return bundle
 
 
 def dispatch(root,folder,role,provider):
@@ -232,6 +258,11 @@ def score_exam(state, reports, previous=None):
             if role=="visual":
                 require([p["number"] for p in report["pages"]]==list(range(1,state["pages"]+1))
                         and all(p["note"].strip() for p in report["pages"]),"漏审印刷页")
+            if state.get("release_rules"):
+                from core.review_probe import reply_findings
+
+                for number,rule,fact in reply_findings(state["subject"],report):
+                    add(number,"fatal",rule,fact,role)
             for issue in report["findings"]:
                 require(issue["rule"] in rules,"扣分未绑定当前排雷条目")
                 add(issue["number"],issue["category"],issue["rule"],issue["evidence"],role,issue.get("points"))
@@ -255,6 +286,7 @@ def score_exam(state, reports, previous=None):
             "rewrite":rewrite,"locked":sorted(numbers-set(rewrite)),
             **({k:state[k] for k in ("local_versions","material_groups")} if state.get("local_versions") else {}),
             **({"cycle_round":cycle_round,"paper_version":state["version"]} if protocol == VERSION else {}),
+            **({"release_rules":state["release_rules"]} if state.get("release_rules") else {}),
             "prior_sha256":fingerprint(previous) if previous else None,
             "inputs_sha256":fingerprint([state,reports])}
 

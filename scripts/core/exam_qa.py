@@ -165,7 +165,7 @@ def corridor_findings(subject, paper, answers, fields):
 
 
 def inspect(root, subject, paper, answers, *, header=None, observations=(), policy_snapshot=None,
-            figure_folder=None, listening=None, enforce_corridors=False):
+            figure_folder=None, listening=None, enforce_corridors=False, release_artifacts=None):
     rows = paper["questions"]
     require(rows and len(rows) == len(answers), "答案和题目须逐项对应")
     issues, warnings, wrong, absolutes, abstract = [], [], 0, 0, 0
@@ -281,6 +281,12 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
         value=constant_value(obs,item_text(rows[n-1]))
         if not math.isfinite(value) or abs(value/CONSTANTS[obs["symbol"]]-1)>0.01+1e-12:
             issue(n,"constant",f"{obs['symbol']}={value}，超过标准值的 1% 容差")
+    if release_artifacts is not None:
+        from core.release_checks import findings
+
+        for number, rule, fact in findings(subject,paper,answers,header=header or "",
+                                           listening=listening,artifacts=release_artifacts):
+            issue(number,rule,fact)
     return {"policy_sha256":fingerprint(policy_snapshot if policy_snapshot is not None else policies(root,subject)),"issues":issues,"warnings":warnings,
             "coverage":result["coverage"],"choice_figures":illustrated,"nonchoice_figures":nonchoice,
             "wrong_options":wrong,"absolute_wrong_options":absolutes,"abstract_mentions":abstract,
@@ -327,7 +333,23 @@ def figure_collisions(fig, tolerance_px=1):
     return findings
 
 
-def save_figure(fig,path,*,subject=None):
+def exam_axes(ax, xlabel, ylabel):
+    """Set a Cartesian exam plot's standard arrowheads, grid and axis labels."""
+    from matplotlib.ticker import AutoMinorLocator
+
+    ax.set(xlabel=xlabel,ylabel=ylabel)
+    ax.xaxis.set_minor_locator(AutoMinorLocator())
+    ax.yaxis.set_minor_locator(AutoMinorLocator())
+    ax.grid(which="minor",alpha=.15,linewidth=.35)
+    for axis in ("top","right"):
+        ax.spines[axis].set_visible(False)
+    for start,end in (((.97,0),(1.02,0)),((0,.97),(0,1.02))):
+        ax.annotate("",end,start,xycoords="axes fraction",
+                    annotation_clip=False,arrowprops={"arrowstyle":"->","lw":.9})
+    return ax
+
+
+def save_figure(fig,path,*,subject=None,cartesian=False):
     from matplotlib.text import Text
     collisions=figure_collisions(fig)
     require(not collisions,"图件文字交叠："+str(collisions))
@@ -336,6 +358,11 @@ def save_figure(fig,path,*,subject=None):
     if subject:
         bad = label_hits(labels,subject)
         require(not bad,"题图中须改写的英文标签："+"、".join(bad))
+    if cartesian:
+        require(all(ax.get_xlabel().strip() and ax.get_ylabel().strip() for ax in fig.axes),
+                "数据坐标图须标双轴、物理量和适用单位")
+        require(not any(re.search(r"\d(?:mm|nm|kPa|mWb|m²)(?![A-Za-z])",label) for label in labels),
+                "数据标注的数值与单位须留细空格")
     path=Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
     metadata = {LABEL_KEY:json.dumps(labels,ensure_ascii=False)} if path.suffix.lower()==".png" else None

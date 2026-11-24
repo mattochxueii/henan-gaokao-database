@@ -66,7 +66,7 @@ def run(root,a):
 
         result=import_reply(root,a.folder,read_json(a.reply))
     else:
-        result=review_board.evidence(root,a.folder,recheck_legacy_policy=True)["preflight"]
+        result=review_board.evidence(root,a.folder,recheck_legacy_policy=True,enforce_release=True)["preflight"]
         if a.output:write_new(a.output,result)
     return result
 

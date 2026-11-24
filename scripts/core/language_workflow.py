@@ -134,6 +134,9 @@ def student_paper(blueprint, candidate, layout_mode):
     reference=candidate.get("quality_benchmarks")
     if reference:
         public["quality_reference_sha256"]=fingerprint(reference)
+        if reference.get("release_rules"):
+            public["release_rules"]=reference["release_rules"]
+            public["ledger_topics"]=candidate.get("ledger_topics",{})
         if reference.get("review_board") == VERSION:
             public["qa_protocol"] = VERSION
     return public
@@ -163,6 +166,7 @@ def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
 
 def review(folder, doc):
     from core.language_render import render
+    from core.marking_standards import generated_only
     packet=read_json(folder/"blind-packet.json")
     public=packet["paper"]
     verification=read_json(folder/"verification.json")
@@ -180,21 +184,28 @@ def review(folder, doc):
                 f"第{label}题有歧义、错位或无复核依据")
         variants = verification.get("exact_key_variants", {}).get(str(label), [])
         require(result["answer"] in [expected, *variants], f"第{label}题答案复核不一致")
-        if q["kind"] not in OBJECTIVE:
+        managed=public.get("release_rules") and generated_only(public["subject"],label)
+        if managed:
+            require(not result.get("rubric"),f"第{label}题使用程序评分模板，不接受自拟评分档位")
+        if q["kind"] not in OBJECTIVE and not managed:
             rubric=result.get("rubric") or []
             require(rubric and all(type(r["points"]) in (int,float) and r["points"]>0 and r["step"].strip() for r in rubric)
                     and sum(r["points"] for r in rubric)==q["points"],f"第{label}题缺评分步骤")
-            if q["kind"]=="writing":
-                sample=result.get("sample","")
-                if public["subject"]=="english":
-                    valid_sample = len(sample.split()) >= (70 if q["section"]=="application" else 130)
-                else:
-                    valid_sample = len("".join(sample.split())) >= 800
-                require(valid_sample,f"第{label}题范文缺失或过短")
+        if q["kind"]=="writing":
+            sample=result.get("sample","")
+            if public["subject"]=="english":
+                valid_sample = len(sample.split()) >= (70 if q["section"]=="application" else 130)
+            else:
+                valid_sample = len("".join(sample.split())) >= 800
+            require(valid_sample,f"第{label}题范文缺失或过短")
         explanations[label]=result
     render(public,folder/"solutions",explanations)
     if listening:
         render(public,folder/"listening-script",listening=listening)
+        if public.get("release_rules"):
+            from core.language_render import export_tts
+
+            export_tts(listening, folder/"listening-tts.txt")
     write_new(folder/"independent-review.json",doc)
     names=["paper","solutions"]+(["listening-script"] if listening else [])
     write_new(folder/"review-binding.json",{"review_sha256":fingerprint(doc),
@@ -202,9 +213,14 @@ def review(folder, doc):
     return {"state":"await_visual_review","paper_version":packet["paper_version"]}
 
 
-def publish(folder, record):
+def publish(folder, record, *, root=None):
     from pypdf import PdfReader
+    from core.release_checks import is_frozen_sample, require_release
+
     packet=read_json(folder/"blind-packet.json")
+    root=root or Path(__file__).resolve().parents[2]
+    if packet["paper"].get("release_rules") or is_frozen_sample(root,folder):
+        require_release(root,folder)
     checked=read_json(folder/"independent-review.json")
     bind=read_json(folder/"verification.json")
     require(record["paper_version"]==packet["paper_version"]==checked["paper_version"]==bind["paper_version"]
@@ -229,5 +245,9 @@ def publish(folder, record):
         from core.review_board import LOCAL_QA_PASSED
 
         result["local_qa_status"] = LOCAL_QA_PASSED
+    if packet["paper"].get("release_rules"):
+        from core.publication_ledger import register
+
+        register(root,packet["paper"]["subject"],packet["paper"],bind["paper_sha256"])
     write_new(folder/"publication.json",result)
     return result

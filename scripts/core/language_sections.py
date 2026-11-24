@@ -23,7 +23,9 @@ def merge(root, subject, year, files, context, output):
     require(isinstance(identifier,str) and CODE.fullmatch(identifier)
             and isinstance(metadata["title"],str) and metadata["title"].strip(), "第一个片段须有统一卷 ID 与卷名")
     questions, materials, listening, notes = [], {}, {}, []
-    fields = {"protocol", "part", "subject", "paper_id", "title", "reference_notes", "questions", "materials", "listening"}
+    fields = {"protocol", "part", "subject", "paper_id", "title", "reference_notes", "questions", "materials", "listening",
+              "ledger_topics"}
+    ledger={}
     for index, section_ids in enumerate(PARTS[subject],1):
         part = by_part[f"part{index}"]
         require(part.keys() <= fields and part["protocol"] == PROTOCOL and part["subject"] == subject
@@ -49,6 +51,9 @@ def merge(root, subject, year, files, context, output):
         require(isinstance(references,list) and references and all(isinstance(s,str) and s.strip() for s in references),
                 f"part{index} 缺真题特征和原创差异说明")
         notes.extend(references)
+        for key,values in part.get("ledger_topics",{}).items():
+            require(isinstance(values,list) and all(isinstance(v,str) for v in values),"台账主题须为字符串列表")
+            ledger.setdefault(key,[]).extend(values)
         if scripts := part.get("listening"):
             require(subject == "english" and index == 1, "听力稿只能出现在英语 part1")
             group_ids = list(dict.fromkeys(q["material"] for q in fragment))
@@ -66,6 +71,8 @@ def merge(root, subject, year, files, context, output):
     }
     if listening:
         candidate["listening"] = listening
+    if ledger:
+        candidate["ledger_topics"] = {key:list(dict.fromkeys(values)) for key,values in ledger.items()}
     language_workflow.validate_structure(blueprint,candidate)
     validate_authoring_context(root,subject,context,candidate)
     paper = language_workflow.student_paper(blueprint,candidate,"practice")

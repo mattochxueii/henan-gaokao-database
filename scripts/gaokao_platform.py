@@ -1,6 +1,7 @@
 """Unified Gaokao entry point. Math keeps its existing production workflow."""
 
 import argparse
+import os
 from pathlib import Path
 import sys
 
@@ -15,6 +16,7 @@ from subjects import SCIENCES, SUBJECTS
 
 
 def main(argv=None):
+    host_session=(os.environ.get("GAOKAO_SESSION_ID") or os.environ.get("CODEX_THREAD_ID")) if argv is None else None
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root",type=Path,default=ROOT)
     sub = parser.add_subparsers(dest="command",required=True)
@@ -50,7 +52,8 @@ def main(argv=None):
     simulate.add_argument("candidate",type=Path)
     simulate.add_argument("output",type=Path)
     simulate.add_argument("--context",required=True,type=Path)
-    simulate.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
+    simulate.add_argument("--layout-mode", choices=("practice","exam"), default="exam")
+    simulate.add_argument("--session",type=Path,help="持久化本轮唯一学科与试卷 ID；修订沿用同一文件")
     simulate.add_argument("--batch-plan",type=Path)
     simulate.add_argument("--batch-candidates",type=Path,nargs="+")
     simulate.add_argument("--slot",type=int)
@@ -132,7 +135,7 @@ def main(argv=None):
                 p.add_argument("candidates",type=Path)
                 p.add_argument("output",type=Path)
                 p.add_argument("--context",type=Path)
-                p.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
+                p.add_argument("--layout-mode", choices=("practice","exam"), default="exam")
     for command in ("review","publish","score"):
         p = sub.add_parser(command)
         p.add_argument("input",type=Path)
@@ -205,13 +208,24 @@ def main(argv=None):
             candidate=read_json(args.candidate)
             quality_reference=validate_authoring_context(root,args.subject,args.context,candidate)
             from core.review_board import VERSION as board_version
+            from core.release_checks import VERSION as release_version
             snapshot=exam_policy.resolve(root,args.subject,args.year,"河南",quality_reference["series"])
-            quality_reference={**quality_reference,"review_board":board_version,
+            quality_reference={**quality_reference,"review_board":board_version,"release_rules":release_version,
                                "qa_policy":read_json(args.context)["anti_patterns"],"exam_policy":snapshot}
             if any((args.batch_plan,args.batch_candidates,args.slot)):
                 if not all((args.batch_plan,args.batch_candidates,args.slot)):
                     raise ValueError("批量模拟须同时提供计划、整批候选和卷序")
                 quality_reference["batch"]=board_cli.batch_binding(args.subject,args.candidate,args.batch_plan,args.batch_candidates,args.slot)
+            else:
+                from core.publication_ledger import claim
+
+                if host_session:
+                    from analysis_db import fingerprint
+
+                    receipt=root/"work/authoring-sessions"/(fingerprint(host_session)+".json")
+                else:
+                    receipt=args.session or args.context.with_suffix(".session.json")
+                quality_reference["session"]=claim(receipt,args.subject,candidate)
             if candidate.get("constant_observations"):
                 quality_reference["constant_observations"]=candidate["constant_observations"]
             candidate={**candidate,"quality_benchmarks":quality_reference}
@@ -277,9 +291,14 @@ def main(argv=None):
             if command=="generate" and (args.subject in language_workflow.LANGUAGES or args.mode=="standard"):
                 if args.context is None or args.region != "河南":
                     raise ValueError("河南标准卷须先读取 authoring-context，使用 simulate --context")
-                return main(["--root",str(root),"simulate",args.subject,str(args.year),
+                invocation=["--root",str(root),"simulate",args.subject,str(args.year),
                              str(args.candidates),str(args.output),"--context",str(args.context),
-                             "--layout-mode",args.layout_mode])
+                             "--layout-mode",args.layout_mode]
+                if host_session:
+                    from analysis_db import fingerprint
+
+                    invocation.extend(["--session",str(root/"work/authoring-sessions"/(fingerprint(host_session)+".json"))])
+                return main(invocation)
             if args.subject in language_workflow.LANGUAGES:
                 result=language_workflow.plan(root,args.subject,args.region,args.year)
             else:
@@ -287,6 +306,10 @@ def main(argv=None):
                 if command=="generate":
                     result = prepare(root,result,read_json(args.candidates),args.output,args.candidates.parent,
                                      layout_mode=args.layout_mode)
+            if command=="plan":
+                from core.publication_ledger import history
+
+                result["publication_history"]=history(root,args.subject)
         elif command=="forecast":
             result = forecast(root,args.subject,args.region,args.year,args.cutoff,
                               read_json(args.evidence) if args.evidence else None)
@@ -299,8 +322,10 @@ def main(argv=None):
             language=packet["paper"].get("subject") in language_workflow.LANGUAGES
             handler=(language_workflow.review if language else adjudicate) if command=="review" else (
                 language_workflow.publish if language else publish)
-            result=handler(args.input,read_json(args.evidence))
+            result=handler(args.input,read_json(args.evidence),root=root) if command=="publish" else handler(args.input,read_json(args.evidence))
         print(dumps(result))
+        if command == "exam-qa" and not result["passed"]:
+            return 1
         return 0
     except (KeyError, OSError, ValueError, TypeError) as exc:
         print("ERROR",exc,file=sys.stderr)

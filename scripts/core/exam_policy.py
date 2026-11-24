@@ -69,7 +69,7 @@ def listening_notes(snapshot, *, invigilator=False):
             timing = f"播放前每小题留{before}秒读题，播放完毕后每小题留{after}秒作答。"
         else:
             timing = f"每段播放完毕后留{after}秒作答并阅读下一小题。"
-        instruction = f"{name}　{'监考：' if invigilator else ''}共{length}段{form}，每段录音播放{repeats}遍。{timing}"
+        instruction = f"{name}　{'录音提示：' if invigilator else ''}共{length}段{form}，每段录音播放{repeats}遍。{timing}"
         notes[section["first_number"]] = instruction
     return notes
 

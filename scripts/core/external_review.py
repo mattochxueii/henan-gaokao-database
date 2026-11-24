@@ -85,13 +85,32 @@ def export(root, folder, target, *, year=None):
     copyfile(packet_path(folder),target/"student.pdf")
     printed_policy = paper.get("exam_policy")
     atomic_write(target/"student.md",clean_markdown(paper,printed_policy))
-    atomic_write(target/"instructions.md",INSTRUCTIONS)
+    from core.review_probe import DIMENSIONS, instructions
+
+    probe=instructions(subject)
+    checklist="\n".join(f"- {key}：{value}" for key,value in DIMENSIONS.items())
+    atomic_write(target/"instructions.md",INSTRUCTIONS+"\n## 八项回执\n"+checklist+
+                 "\n\n用时为编辑估时。分别提交中等生和尖子生的分块分钟数。"+
+                 f"尖子生审查线为{probe['advanced_min_minutes']}分钟。"+
+                 "核对把关题"+ "、".join(map(str,probe["gate_items"]))+
+                 "是否出现难度倒挂、熟背结论或重复模型。\n")
     write_new(target/"policy-check.json",{"policy":policy,"year_source":"bound" if printed_policy else "legacy_year",
               "student_instructions":exam_policy.student_instructions(policy),
               "invigilator_instructions":exam_policy.listening_notes(policy,invigilator=True)})
     write_new(target/"position-summaries.json",summaries)
     write_new(target/"anti-patterns.json",{"entries":rules,"additional_rules":sorted(EXTRA_RULES)})
+    probe_template={
+        "dimensions":{key:"" for key in DIMENSIONS},
+        "difficulty_probe":{"minutes":{profile:{block:None for block in probe["blocks"]}
+                                      for profile in probe["profiles"]},
+                            "gate_items":[{"number":n,"reasoning":"",
+                                           **{flag:None for flag in probe["gate_flags"]}}
+                                          for n in probe["gate_items"]]}
+    }
+    if ref.get("release_rules"):
+        letters.update(probe_template)
     write_new(target/"findings-template.json",letters)
+    write_new(target/"difficulty-probe-template.json",probe_template)
     if listening:
         notes = exam_policy.listening_notes(printed_policy, invigilator=True)
         groups = {}
@@ -105,8 +124,10 @@ def export(root, folder, target, *, year=None):
 
 
 def validate(response, local, rules):
-    require(isinstance(response, dict) and response.keys() == {
-        "protocol", "paper_version", "pdf_sha256", "model_family", "model", "findings"},
+    fields={"protocol","paper_version","pdf_sha256","model_family","model","findings"}
+    if local.get("release_rules"):
+        fields.update(("dimensions","difficulty_probe"))
+    require(isinstance(response,dict) and response.keys()==fields,
         "外审 JSON 字段与模板不符")
     require(response["protocol"] == PROTOCOL and response["paper_version"] == local["paper_version"]
             and response["pdf_sha256"] == local["pdf_sha256"], "外审回执绑定的试卷版本不符")
@@ -133,8 +154,19 @@ def validate(response, local, rules):
     return response
 
 
+def effective_findings(response,local):
+    findings=list(response["findings"])
+    if local.get("release_rules"):
+        from core.review_probe import reply_findings
+
+        for n,rule,detail in reply_findings(local["subject"],{**response,"role":"pedagogy"}):
+            findings.append({"number":n,"rule":rule,"severity":"fatal","evidence":detail,
+                             "revision":"按题位复查任务与难度依据，重做后重新独立送审。"})
+    return findings
+
+
 def repair_targets(responses, local, rules):
-    items = [item for response in responses for item in validate(response,local,rules)["findings"]]
+    items = [item for response in responses for item in effective_findings(validate(response,local,rules),local)]
     targets = {n for item in items for n in (item.get("repair_numbers",[]) or [item["number"]]) if n}
     layout_only = bool(items) and all(item["rule"] in LAYOUT_RULES and not item.get("repair_numbers") for item in items)
     return targets, layout_only
@@ -148,7 +180,7 @@ def active_findings(folder, local):
     for path in sorted((folder/"external-reviews").glob("*.json")):
         reply = validate(read_json(path),local,state["rules"])
         require(path.stem == fingerprint(reply), "外审回执内容已经改变")
-        if reply["findings"]:
+        if effective_findings(reply,local):
             results.append(reply)
     return results
 
@@ -161,7 +193,7 @@ def return_decision(folder, local, rules):
     return {"state":"returned","review_state":"EXTERNAL_REVIEW_RETURNED",
             "pdf_sha256":local["pdf_sha256"],"rewrite":sorted(rewrite),
             "locked":sorted(set(range(1,len(local["ids"])+1))-rewrite),"layout_repair":layout,
-            "external_findings":[item for response in responses for item in response["findings"]],
+            "external_findings":[item for response in responses for item in effective_findings(response,local)],
             "next":"重新生成到新目录并通过 board-cycle --previous 指回本次送审目录"}
 
 

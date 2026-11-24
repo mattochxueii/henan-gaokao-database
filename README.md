@@ -41,7 +41,7 @@ python scripts/gaokao_platform.py authoring-context english --source-id 2025-cn-
 python scripts/gaokao_platform.py adapt english adaptation.json work/adapted
 ```
 
-`practice` 在长答题后留书写空间，实验填空在横线上作答；`--layout-mode exam` 供另配答题卡。可向[排雷库](data/qa/anti-patterns.json)追加唯一编号、学科、严重度、检测要点与反例。详细操作见[统一命题入口](skills/gaokao-platform/SKILL.md)、[独立审稿与批量工作流](skills/gaokao-platform/references/batch.md)和[完整开发历史](docs/DEVELOPMENT-HISTORY.md)。
+标准模拟默认 `exam`，供另配答题卡。`--layout-mode practice` 在长答题后印书写横线，实验填空使用题内答位。单次任务限制一个学科的一套卷，批量仅限同一科。可向[排雷库](data/qa/anti-patterns.json)追加唯一编号、学科、严重度、检测要点与反例。详细操作见[统一命题入口](skills/gaokao-platform/SKILL.md)、[标准卷发布与红队验收](docs/STANDARD-RELEASE.md)和[完整开发历史](docs/DEVELOPMENT-HISTORY.md)。
 
 语英分三段创作后用 `merge-sections` 合卷。按 `export-external-review` 生成可交给独立模型的学生材料，用 `import-external-review` 把缺陷绑定到原 PDF 和返工题号。[标准卷与分块格式](skills/gaokao-platform/references/standard.md)
 

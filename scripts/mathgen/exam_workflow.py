@@ -92,6 +92,9 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
         presentation.update(layout="math_compact", subject="math", standard=mode=="full", edition_rules=REVISION)
         if mode == "full" and reference.get("exam_policy"):
             presentation.update(exam_policy=reference["exam_policy"], qa_protocol=reference["review_board"])
+            if reference.get("release_rules"):
+                presentation["release_rules"]=reference["release_rules"]
+                presentation["ledger_topics"]=document.get("ledger_topics",{})
         if trend:
             presentation["benchmark_slots"] = reference["benchmark_slots"]
     verification = []
@@ -102,6 +105,8 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
             student = compile_writing(q)
             if presentation.get("layout") == "math_compact":
                 student["module"] = q.get("module")
+                if q.get("math_technique"):
+                    student["math_technique"] = q["math_technique"]
                 student["figure_required"] = q["writing"].get("figure_required", False)
             result = solve_spec(q["math_spec"])
             require(result["program_checks_passed"], "数学计算失败：" + str(result))
@@ -324,8 +329,15 @@ def verify_certificate(folder, cert):
     )
 
 
-def publish(output, review_path, comparison_path):
+def publish(output, review_path, comparison_path, *, root=None):
+    from core.release_checks import is_frozen_sample, require_release
+    from gaokao import ROOT
+
     output = Path(output)
+    root=root or ROOT
+    student = read_json(output / "student-text.json")
+    if student.get("release_rules") or is_frozen_sample(root,output):
+        require_release(root,output)
     review = read_json(review_path)
     comparison = read_json(comparison_path)
     manifest = read_json(output / "review-manifest.json")
@@ -444,7 +456,16 @@ def publish(output, review_path, comparison_path):
         require(guide is not None, "此卷需要逐步评分细则")
     if guide is not None:
         require(guide.get("paper_sha256") == manifest["pdf_sha256"], "评分细则对应其他卷面")
-    solutions = solution_book(student, raw, comparison.get("solution_revisions", {}), guide)
+    answer_keys = [r.get("answer_key") for r in reviews]
+    answer_keys = ["".join(key) if isinstance(key,list) else key for key in answer_keys]
+    solutions = solution_book(student, raw, comparison.get("solution_revisions", {}), guide,
+                              answer_keys=answer_keys)
+    if student.get("release_rules"):
+        from core.marking_standards import grading_findings
+
+        rendered = {q["order"]:"\n".join(q["solution_paragraphs"]) for q in solutions["questions"]}
+        defects = list(grading_findings("math",solutions["questions"],{},rendered))
+        require(not defects,"数学解析评分格式错误："+str(defects))
     cert = {
         **manifest,
         **({"quality_audit_sha256": quality} if quality else {}),
@@ -475,5 +496,9 @@ def publish(output, review_path, comparison_path):
         atomic_json(output / "position-review.json", position)
         cert["position_review_sha256"] = fingerprint(position)
     cert["solutions_sha256"] = digest(output / "solutions.pdf")
+    if student.get("release_rules"):
+        from core.publication_ledger import register
+
+        register(root,"math",student,manifest["pdf_sha256"])
     atomic_json(output / "publication.json", cert)
     return cert
