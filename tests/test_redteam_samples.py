@@ -1,6 +1,7 @@
 
 """Immutable adversarial samples must fail the live gates but replay historical receipts."""
 from pathlib import Path
+from subprocess import check_output
 import sys
 from tempfile import TemporaryDirectory
 import unittest
@@ -9,7 +10,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import bootstrap
 from analysis_db import fingerprint
 from core import board_cycle, language_workflow, review_board, science_workflow
-from gaokao import ROOT, digest
+from gaokao import ROOT
 from mathgen import exam_workflow
 
 SAMPLES=ROOT/"samples/2027-henan"
@@ -36,10 +37,10 @@ EXPECTED={
                (17,"biology_table_reference","表格"),(5,COMMON,"同源体"),(7,COMMON,"居群"),(19,COMMON,"腐屑")},
 }
 FIXED={
-    "samples/2027-henan":(298,"ca720a76f58e830f9ebbe3fdc809e7f9caeacc6d602b220d92bee6023e4fffe8"),
-    "data/papers":(289,"95480d569983332b1479753de03c48601f0e6ef835fadc0cb9be2afdb86cd031"),
-    "forecast/frozen/henan-2027-math-v3.json":(1,"e95c89529e89cac65bce53290f3c9aa12bee004c67ffbf3994c83039797c2974"),
-    "forecast/preregistered/2027-math-trends.json":(1,"3760a9707ba91480a33f4d473af46d21d769a1c645cfeebe474cd6fe5674b8ec"),
+    "samples/2027-henan":(298,"69d0e6ad06bb2590d4326242a278323968f2b11e74fede0aa751b5f8d35343da"),
+    "data/papers":(289,"1fc1bccc8adeff02be99e39cf409571e4a296c3f57b3ca846060a0bb6940b1f5"),
+    "forecast/frozen/henan-2027-math-v3.json":(1,"e9a448a61a6ab9764f1152dedbee973f5fcf4b769769440d25ffd1e0646c19fb"),
+    "forecast/preregistered/2027-math-trends.json":(1,"5558b150e8ca4b413f7bdaee69c97d548a40431a3e4293cae93eb5e4c13230b3"),
 }
 
 
@@ -83,9 +84,13 @@ class SampleRedTeamTests(unittest.TestCase):
                 result=review_board.replay(SAMPLES/subject/"board")
                 self.assertTrue(review_board.successful(result["status"]))
 
-    def test_protected_corpus_samples_and_forecast_are_byte_identical(self):
+    def test_protected_corpus_samples_and_forecast_match_baseline_git_bytes(self):
         for name,expected in FIXED.items():
             root=ROOT/name
             files=root.rglob("*") if root.is_dir() else [root]
-            members=sorted((p.relative_to(ROOT).as_posix(),digest(p)) for p in files if p.is_file())
+            paths=sorted(p.relative_to(ROOT).as_posix() for p in files if p.is_file())
+            # Pin baseline blobs while honoring .gitattributes for preexisting CRLF checkout text.
+            hashes=check_output(["git","hash-object","--stdin-paths"],cwd=ROOT,
+                                input=("\n".join(paths)+"\n").encode()).decode().splitlines()
+            members=list(zip(paths,hashes,strict=True))
             self.assertEqual((len(members),fingerprint(members)),expected,name)
