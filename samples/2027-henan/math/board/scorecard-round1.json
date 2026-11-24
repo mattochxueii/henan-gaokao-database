@@ -1,0 +1,153 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 1,
+  "subject": "math",
+  "ids": [
+    "orig:math:hn27-math-pu:q01",
+    "orig:math:hn27-math-pu:q02",
+    "orig:math:hn27-math-pu:q03",
+    "orig:math:hn27-math-pu:q04",
+    "orig:math:hn27-math-pu:q05",
+    "orig:math:hn27-math-pu:q06",
+    "orig:math:hn27-math-pu:q07",
+    "orig:math:hn27-math-pu:q08",
+    "orig:math:hn27-math-pu:q09",
+    "orig:math:hn27-math-pu:q10",
+    "orig:math:hn27-math-pu:q11",
+    "orig:math:hn27-math-pu:q12",
+    "orig:math:hn27-math-pu:q13",
+    "orig:math:hn27-math-pu:q14",
+    "orig:math:hn27-math-pu:q15",
+    "orig:math:hn27-math-pu:q16",
+    "orig:math:hn27-math-pu:q17",
+    "orig:math:hn27-math-pu:q18",
+    "orig:math:hn27-math-pu:q19"
+  ],
+  "pdf_sha256": "a07ed130cd1d23b03b376efed19946ba56f870312bc4a4233da1722a329d3b4e",
+  "item_versions": {
+    "1": "3dcace3db2f4de333b25051394fabe0c670d0ed9626db2fbcbd4bcd579c806ff",
+    "2": "f64ce435795db193623edb7c49d9abb93004cdd7a8d78abfde95ac2dbc058669",
+    "3": "4e59373f3757dcaff651af609b3336ede6581a28be40c49acef1a5b1176de9ef",
+    "4": "3c4d8b8cb47aa172aa38c93e5e770a8c99d74d91916f391b0262d8567a573f8d",
+    "5": "cfacb941232a4ba0d3ab6b45ebdf8f7e4a1de6ba4e8803b8386fa222f285db7c",
+    "6": "22319abcbd9de463f00c6812dd44f6e2a06af789b4a36b16d7d2d9af4ca17e7e",
+    "7": "1d14e28b66a8c1fa65332cdda1851d1751bd7c091448542e217c7b2bb30b50bb",
+    "8": "0133c269fe4632bf3a14963ecc24dada4532c37756066a73fccd7bbcdf775ea2",
+    "9": "0d22b1a32bcadd077186aebb0698979a3424cf0e4ad47dbd16f7e72564d0d658",
+    "10": "0995ff18be124fa087eae6e22007292e68f1938f958fa0cd069e43096fd097dd",
+    "11": "7f3a9a85b8960278b5e83637cd5fed83b0f526139f98a2e0a61b402467830514",
+    "12": "f73100aa26d72f844663237e86bb71aaa6bc484d0483acd925c2258b2b92511e",
+    "13": "e229e28f7de10ec631c43aaa6024292832517dc9f73f45fc279fd408dff4c1e7",
+    "14": "579c73ab5dddca5e62720148cfb24dd8971546b105834c8420bb74c0b61e469a",
+    "15": "e651f80db6ddbb29c48e6fbb8f8639777a7a4c59d5eda96caf181f288f0f021b",
+    "16": "71ef288b59b67baffd47ec2aff18de8745b0bdb5568641dc9a9aaef4b4295fe3",
+    "17": "08ba9a857dd4965dd07b2b5dfc68c503ffc06cca4c551f68fea2deb267d1ace5",
+    "18": "989e96af07e875f30b40cbb03661cd4d7a5e91140e37e26289212cd023411873",
+    "19": "ed7306d6e52968184f1e5e04ee1bf717fc28a7b92687ae243c3eb57b6d246813"
+  },
+  "fatal_count": 1,
+  "final_score": 0,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 10,
+      "category": "fatal",
+      "rule": "all.solution",
+      "points": 0,
+      "evidence": "独立选项 ABD 与提交键 AB 不一致",
+      "reader": "comparison"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 3 页四棱锥示意图中，M 的字母被从 P 指向 C 的实线穿过，且靠近 PD 的边线。250 DPI 放大仍有线字叠压，建议将 M 标签移出 P 附近的线束。黑点在 PD 上，正文清楚说明 M 为 PD 中点。",
+      "reader": "solver"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 4 页椭圆示意图中，纵轴穿过方程标注的 y² 上标，弦的实线也穿过 P(1,0) 标注的下部。250 DPI 放大可定位两处线字叠压。题干完整给出椭圆方程与 P 的坐标。",
+      "reader": "solver"
+    },
+    {
+      "number": 7,
+      "category": "depth",
+      "rule": "math.modules",
+      "points": 4,
+      "evidence": "第7题位的几何量均已固定。正四面体顶点投影取底面中心后，由 AM=2、CN=4 得两个内分坐标，最后用高差除以线段长度即可，建系后没有条件选择。2025同号题须在两条平行等距线按半径1、3区分相切与相交，2026同号题须由组和的总和、奇偶及可达范围反推公差。当前线面角的计算量充足，但晚位的判别层次偏薄。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 11,
+      "category": "depth",
+      "rule": "math.modules",
+      "points": 4,
+      "evidence": "末道多选考固定两圆。切线所在两侧的分支有实际几何含义，但异侧要求圆心距至少为半径和3，题给距离2便可直接排除。同侧一次外位似得到交点，B只需把30°半角翻倍，D由公共弦方程求半弦后乘二。2026同号题中三圆共享待定直线，需要验证可行斜率、等长解数和弦长和最值，2025同号也须联合三角积、面积和角式。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第3页四棱锥图中 M 字母被从 P 引出的实线穿过笔画，D 字母也贴近多条棱交会。题干另有明确中点定义，图面标签应移到空白区域。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第4页椭圆图中 y 轴穿过方程标签 y² 的上标，斜弦线穿过 P(1,0) 的坐标字样并贴穿 H 字母上沿。题干可恢复条件，图面宜挪开公式和点注。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "Page 3, confirmed in a 300 dpi crop. The M glyph sits directly in the fan of segments from P and multiple strokes cross it. Separate M from the rays using an offset label or leader, and give D room among the adjoining edges.",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "Page 4, confirmed in a 300 dpi crop. The vertical y-axis crosses the superscript 2 in the ellipse equation's y². The secant traverses the digits in P(1,0), and H sits against the secant. Move the equation and point labels into clear whitespace.",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 20,
+  "rewrite": [
+    7,
+    10,
+    11,
+    16,
+    18
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    17,
+    19
+  ],
+  "cycle_round": 1,
+  "paper_version": "630ad7969f2de4de66f706d1bef6ce6b1d2ea05999be58f98ce0a9629199ea1c",
+  "prior_sha256": null,
+  "inputs_sha256": "a52bb440eeb20b475b354f561ee40b6183fca173ba99bf62a3b56e99b7b02cb2"
+}

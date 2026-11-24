@@ -180,6 +180,17 @@ class BoardTests(unittest.TestCase):
         s=state();s["choice_keys"]={"1":"B"}
         self.assertEqual(board.score_exam(s,reports(s))["final_score"],0)
 
+    def test_open_recitation_accepts_only_complete_verified_cells(self):
+        s=state()
+        s["exact_keys"]={"1":["舟过江声急","云开暮色寒","远树浮山外","归人到渡头"]}
+        s["exact_key_variants"]={"1":[["舟过江声急","云开暮色寒","潮平两岸阔","风正一帆悬"]]}
+        replies=reports(s)
+        answer=replies[0]["items"][0]
+        answer["answer"]="（1）舟过江声急，云开暮色寒。（2）潮平两岸阔，风正一帆悬。"
+        self.assertEqual(board.score_exam(s,replies)["status"],"eligible")
+        answer["answer"]=["舟过江声急云","开暮色寒","潮平两岸阔","风正一帆悬"]
+        self.assertEqual(board.score_exam(s,replies)["fatal_count"],1)
+
 
 class BatchTests(unittest.TestCase):
     def test_capacity_and_all_subjects(self):

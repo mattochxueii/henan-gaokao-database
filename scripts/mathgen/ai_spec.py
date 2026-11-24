@@ -218,6 +218,23 @@ def solve_task(task):
     return _solve_task(task)
 
 
+def real_zeros(expr, var, domain):
+    # Solveset may lose a factor's roots on a bounded interval for products of sinusoids.
+    # Recover every level of a single sin/cos atom from the exact polynomial first.
+    atoms = expr.atoms(s.sin, s.cos)
+    if len(atoms) == 1:
+        (trig,) = atoms
+        level = s.Dummy("level", real=True)
+        polynomial = expr.xreplace({trig: level})
+        if trig.free_symbols == {var} and polynomial.free_symbols == {level} and polynomial.is_polynomial(level):
+            levels = s.solveset(polynomial, level, domain=s.Interval(-1, 1))
+            if levels == s.S.EmptySet:
+                return levels
+            if isinstance(levels, s.FiniteSet):
+                return s.Union(*(s.solveset(trig - value, var, domain=domain) for value in levels))
+    return s.solveset(expr, var, domain=domain)
+
+
 def _solve_task(task):
     """Only the problem task is received. Claimed answers are never passed here."""
     op = task["op"]
@@ -238,7 +255,7 @@ def _solve_task(task):
         cross = None  # Exact arithmetic is a program check, not an independent numerical proof.
     elif op in ("equation", "root_count"):
         expr = parse(task["expression"])
-        roots = s.solveset(expr, var, domain=interval(task))
+        roots = real_zeros(expr, var, interval(task))
         if not isinstance(roots, s.FiniteSet) and roots is not s.S.EmptySet:
             raise ValueError("方程解集未完整确定")
         if task.get("unique") and len(roots) != 1:

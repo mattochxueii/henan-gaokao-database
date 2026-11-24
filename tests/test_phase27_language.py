@@ -69,6 +69,31 @@ def lang_rules(subject,draft):
 
 
 class LanguageCorridor27Tests(TestCase):
+    def test_numbered_blank_does_not_break_in_print(self):
+        from pypdf import PdfReader
+        from reportlab.lib.pagesizes import A4
+        from reportlab.pdfbase.pdfmetrics import stringWidth
+        from core.language_render import render
+        from mathgen.export import chinese_font
+
+        width=A4[0]-2*(49+6)
+        def measure(text):
+            return stringWidth(text,chinese_font(),10.7)
+        prefix=""
+        while measure(prefix+"x [45]") <= width:
+            prefix+="x "
+        self.assertGreater(measure(prefix+"[45] ____"),width)
+        paper={"subject":"english","title":"Grammar exercise","minutes":5,"points":1,
+               "sections":[{"id":"cloze","title":"Cloze"}],
+               "materials":{"story":{"title":"Text","text":prefix+"[45] ____ in this sentence."}},
+               "questions":[{"number":45,"points":1,"section":"cloze","kind":"single_choice",
+                             "material":"story","stem":"Choose the word."}]}
+        with TemporaryDirectory() as d:
+            name=Path(d)/"sample"
+            render(paper,name)
+            text=PdfReader(name.with_suffix(".pdf")).pages[0].extract_text()
+            self.assertRegex(text,r"\[45\][^\S\r\n]+____")
+
     def test_chinese_limits_count_each_passage_once(self):
         draft = chinese_draft()
         self.assertFalse(lang_rules("chinese",draft))

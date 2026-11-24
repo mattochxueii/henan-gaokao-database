@@ -1,0 +1,137 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 2,
+  "subject": "math",
+  "ids": [
+    "orig:math:hn27-math-pu:q01",
+    "orig:math:hn27-math-pu:q02",
+    "orig:math:hn27-math-pu:q03",
+    "orig:math:hn27-math-pu:q04",
+    "orig:math:hn27-math-pu:q05",
+    "orig:math:hn27-math-pu:q06",
+    "orig:math:hn27-math-pu:q07",
+    "orig:math:hn27-math-pu:q08",
+    "orig:math:hn27-math-pu:q09",
+    "orig:math:hn27-math-pu:q10",
+    "orig:math:hn27-math-pu:q11",
+    "orig:math:hn27-math-pu:q12",
+    "orig:math:hn27-math-pu:q13",
+    "orig:math:hn27-math-pu:q14",
+    "orig:math:hn27-math-pu:q15",
+    "orig:math:hn27-math-pu:q16",
+    "orig:math:hn27-math-pu:q17",
+    "orig:math:hn27-math-pu:q18",
+    "orig:math:hn27-math-pu:q19"
+  ],
+  "pdf_sha256": "450489ec46c433c07586be8ef24138eea0cf235db67ee9db054fc03778417887",
+  "item_versions": {
+    "1": "3dcace3db2f4de333b25051394fabe0c670d0ed9626db2fbcbd4bcd579c806ff",
+    "2": "f64ce435795db193623edb7c49d9abb93004cdd7a8d78abfde95ac2dbc058669",
+    "3": "4e59373f3757dcaff651af609b3336ede6581a28be40c49acef1a5b1176de9ef",
+    "4": "3c4d8b8cb47aa172aa38c93e5e770a8c99d74d91916f391b0262d8567a573f8d",
+    "5": "cfacb941232a4ba0d3ab6b45ebdf8f7e4a1de6ba4e8803b8386fa222f285db7c",
+    "6": "22319abcbd9de463f00c6812dd44f6e2a06af789b4a36b16d7d2d9af4ca17e7e",
+    "7": "8d3191f9d38d78b1031b454530cb1b838e8dd3767f6e54c19897892b74e3dbdf",
+    "8": "0133c269fe4632bf3a14963ecc24dada4532c37756066a73fccd7bbcdf775ea2",
+    "9": "0d22b1a32bcadd077186aebb0698979a3424cf0e4ad47dbd16f7e72564d0d658",
+    "10": "215fa1782642731583acd7af57f9f381ef164f1258f85b4c3893a9c215b78ef3",
+    "11": "f081f31dc7323c8385a33cd1f92b4e45084ada32f8646d8ca553930f5cd506a4",
+    "12": "f73100aa26d72f844663237e86bb71aaa6bc484d0483acd925c2258b2b92511e",
+    "13": "e229e28f7de10ec631c43aaa6024292832517dc9f73f45fc279fd408dff4c1e7",
+    "14": "579c73ab5dddca5e62720148cfb24dd8971546b105834c8420bb74c0b61e469a",
+    "15": "e651f80db6ddbb29c48e6fbb8f8639777a7a4c59d5eda96caf181f288f0f021b",
+    "16": "f94075ced9d0552e8589c95aacbaaa2300072fc76976e2ed07c58be8e9e2e24d",
+    "17": "08ba9a857dd4965dd07b2b5dfc68c503ffc06cca4c551f68fea2deb267d1ace5",
+    "18": "b5390d8fd30bff348f82fd05a0c95ed93d356188479b4c15a47695eefc684358",
+    "19": "ed7306d6e52968184f1e5e04ee1bf717fc28a7b92687ae243c3eb57b6d246813"
+  },
+  "fatal_count": 0,
+  "final_score": 86,
+  "status": "LOCAL_QA_PASSED",
+  "deductions": [
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 3 页 M 已移至图线以外。230 DPI 放大后，D 字母的笔画仍横跨 P 至 D 的实线，宜移到这条实线和邻边以外。题干的正方形、垂直关系与中点条件均写明。",
+      "reader": "solver"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 4 页椭圆方程标注已与纵轴分开，但 P(1,0) 标记右部与椭圆在 B 附近相叠，且靠 B 明显近于其实际指代的 x 轴上的黑点。宜将标记置于 P 黑点的正上方并留出与椭圆边界的净空。正文明确给出 P 的坐标，图上其实际黑点在横轴上。",
+      "reader": "solver"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第3页四棱锥图的 M 字样已移开棱线，但 D 的大写字母仍位于 PD 实线经过的位置，线从字母笔画上斜穿，且字样与实际顶点隔开。中点和四边形条件仍能从题面恢复。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第4页椭圆式与轴线、H 与弦线已分开。P(1,0) 的 0 与右括号仍被椭圆弧及靠近 B 的弦线压住，字样离 x 轴上的 P 点较远且贴近 B。题干仍可明确定位 P。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 7,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "P1, 300 dpi crop. The right peak of the M glyph meets the edge AB. A small downward offset will visibly separate the name from the line.",
+      "reader": "visual"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "P3, 300 dpi crop. The upper-right edge of D overlaps the PD line close to D. Offset the label into the open area just below the vertex.",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "P4, 300 dpi crop. The boundary of the ellipse crosses zero in P(1,0) and the closing parenthesis reaches the B dot. P's dot is left of this at the x-axis/secant intersection. Center the label on a clear horizontal area above the P dot.",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 14,
+  "rewrite": [
+    7,
+    16,
+    18
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    19
+  ],
+  "cycle_round": 2,
+  "paper_version": "dd89e4b986ead8a96f202f1593bb6a9dd88d4ee0d71c2c485318e287150eab8d",
+  "prior_sha256": "0908bdb64d43c6f407a4949c1e72b667aa41cccceb5f193d31f237a2f19f6d49",
+  "inputs_sha256": "421dedb3538ea1be4f82feb0ca35239df723de28daec0a0c92513e15c85e3877"
+}

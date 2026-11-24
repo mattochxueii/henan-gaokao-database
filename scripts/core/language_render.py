@@ -1,14 +1,23 @@
 """Shared typesetting for Chinese and English handouts."""
 from pathlib import Path
+import re
 from xml.sax.saxutils import escape
 
+from reportlab.lib import textsplit
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import Flowable, Image, KeepTogether, Paragraph, Spacer, SimpleDocTemplate
+from reportlab.platypus import paragraph
 from gaokao import atomic_write, require
 from core.editorial_rules import LAYOUT_MODES, inline_response_only
 from core.exam_policy import listening_notes, parameters
 
+NUMBERED_BLANK = re.compile(r"(\[\d+\])[ \t]+(_{2,})")
+
+# Extend ReportLab's CJK line-breaking set with the full-width punctuation used in these papers.
+CHINESE_CLOSING = "，；：！？）》”’"
+textsplit.ALL_CANNOT_START += CHINESE_CLOSING
+paragraph.ALL_CANNOT_START += CHINESE_CLOSING
 
 class ManuscriptLines(Flowable):
     """One writing row per flowable permits natural page breaks at row boundaries."""
@@ -58,6 +67,8 @@ def render(paper, output, answers=None, *, listening=None):
             for token in ("u","strong","em","sub","sup"):
                 replacement={"strong":"b","em":"i"}.get(token,token)
                 styled=styled.replace(f"&lt;{token}&gt;",f"<{replacement}>").replace(f"&lt;/{token}&gt;",f"</{replacement}>")
+            if paper["subject"]=="english":
+                styled=NUMBERED_BLANK.sub(r"\1&nbsp;\2",styled)
             target.append(Paragraph(styled,styles[kind]))
             marker={"h1":"# ","h2":"## ","h3":"### ","text":""}[kind]
             md.append(marker+line)
@@ -86,8 +97,12 @@ def render(paper, output, answers=None, *, listening=None):
         seen_sections, seen_materials=set(),set()
         sections={key["id"]:key for key in paper["sections"]}
         for q in paper["questions"]:
+            material_lead = []
             if q["section"] not in seen_sections:
-                put(sections[q["section"]]["title"],"h2")
+                keep_lead = (not answers and q["section"]!="listening"
+                             and (q.get("material") not in seen_materials and q.get("material")
+                                  or q["kind"]=="writing"))
+                put(sections[q["section"]]["title"],"h2",material_lead if keep_lead else flow)
                 seen_sections.add(q["section"])
             n=q["number"]
             if answers:
@@ -99,24 +114,34 @@ def render(paper, output, answers=None, *, listening=None):
                 for item in response.get("rubric",[]):
                     put(f'{item["points"]:g}分　{item["step"]}')
                 if sample:=response.get("sample"):
-                    put("范文","h3")
-                    put(sample)
+                    example = [] if paper["subject"]=="english" else flow
+                    put("范文","h3",example)
+                    put(sample,target=example)
+                    if example is not flow:
+                        flow.append(KeepTogether(example))
                 continue
             block=[]
             if q["section"] == "listening" and n in listening_instructions:
                 put(listening_instructions[n], "text", block)
             if (name:=q.get("material")) and name not in seen_materials:
                 material=paper["materials"][name]
-                # Keep a short listening label with the first question in its group.
-                short_poem = q["section"]=="poetry" and len(material["text"])<=650
-                intro = [] if short_poem else block if q["section"]=="listening" else flow
-                put(material["title"],"h2",intro)
-                put(material["text"],"text",intro)
-                if short_poem:
-                    flow.append(KeepTogether(intro))
+                if q["section"]=="listening":
+                    put(material["title"],"h2",block)
+                    put(material["text"],"text",block)
+                else:
+                    lines = [line for line in material["text"].splitlines() if line.strip()]
+                    first = 2 if len(lines)>1 and len(lines[0])<100 and len(lines[1])<650 else 1
+                    if q["section"]=="poetry" and len(material["text"])<=650:
+                        first = len(lines)
+                    put(material["title"],"h2",material_lead)
+                    put("\n".join(lines[:first]),"text",material_lead)
+                    flow.append(KeepTogether(material_lead))
+                    material_lead = []
+                    put("\n".join(lines[first:]))
                 for key,line in material.get("options",{}).items():
                     put(f"{key}. {line}")
                 seen_materials.add(name)
+            block.extend(material_lead)
             if q["kind"]=="grammar_gap":
                 put(f'{n}. ____________________', "text")
                 continue
@@ -147,7 +172,7 @@ def render(paper, output, answers=None, *, listening=None):
                     put(f"{key}. {line}",target=block)
             essay_grid = practice and paper["subject"] == "chinese" and q["section"] == "essay"
             if practice and not essay_grid and not continuation and (height := answer_height(q)):
-                block.append(AnswerSpace(n, height, spaces))
+                block.append(AnswerSpace(n, 6.3 if letter else height, spaces))
             if letter:
                 put("\n".join(prompt[cut+1:]),target=block)
             flow.append(KeepTogether(block))
@@ -177,7 +202,6 @@ def export_docx(markdown, output):
     from docx.enum.table import WD_ROW_HEIGHT_RULE
     from docx.shared import Cm, Pt, RGBColor
     from gaokao import read_json
-    import re
     doc=Document()
     section=doc.sections[0]
     section.page_width, section.page_height = Cm(21), Cm(29.7)
@@ -201,17 +225,14 @@ def export_docx(markdown, output):
     keep_with_options=set()
     source=Path(markdown)
     packet=source.parent/"blind-packet.json"
-    if source.name=="paper.md" and packet.is_file():
-        paper=read_json(packet)["paper"]
+    paper=read_json(packet)["paper"] if packet.is_file() else {}
+    if source.name=="paper.md" and paper:
         if paper.get("layout_mode")=="practice":
             for q in paper["questions"]:
                 first,*rest=q["stem"].strip().splitlines()
                 last=(rest[-1] if rest else f'{q["number"]}.（{q["points"]:g}分）{first}').strip()
-                if paper["subject"]=="chinese" and q.get("options"):
-                    # Keep the question with its options when Word repaginates the editable copy.
+                if q.get("options"):
                     keep_with_options.add(last)
-                    for key, option in list(q["options"].items())[:-1]:
-                        keep_with_options.add(f"{key}. {option}")
                 if q["section"]=="essay":
                     grid.add(last)
                 elif q["section"]=="application" and any(line.startswith("Dear ") for line in rest):
@@ -220,16 +241,21 @@ def export_docx(markdown, output):
                     prompts.update({line:8 for line in rest[-2:]})
                 elif q["kind"]=="response" and not inline_response_only(q):
                     prompts[last]=4
-    for line in Path(markdown).read_text(encoding="utf-8-sig").splitlines():
-        if not line.strip():
-            continue
+    lines = [line for line in source.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    short_example = False
+    for index, line in enumerate(lines):
         lead, sep, text=line.partition(" ")
         heading=sep and lead in ("#","##","###")
         content=text if heading else line
+        following = lines[index+1] if index+1<len(lines) else ""
+        if heading:
+            short_example = (content=="范文" and source.name=="solutions.md"
+                             and paper.get("subject")=="english")
         para=doc.add_paragraph(style={"#":"Title","##":"Heading 1","###":"Heading 2"}[lead] if heading else "Normal")
         if heading and lead=="#":para.alignment=WD_ALIGN_PARAGRAPH.CENTER
         active=set()
-        for fragment in re.split(r"(</?(?:u|em|strong|sub|sup)>)",content):
+        printable = NUMBERED_BLANK.sub(r"\1" + "\N{NO-BREAK SPACE}" + r"\2",content)
+        for fragment in re.split(r"(</?(?:u|em|strong|sub|sup)>)",printable):
             if re.fullmatch(r"</?(?:u|em|strong|sub|sup)>",fragment):
                 tag=fragment.strip("</>")
                 if fragment.startswith("</"):active.discard(tag)
@@ -242,8 +268,13 @@ def export_docx(markdown, output):
                 run.font.subscript="sub" in active
                 run.font.superscript="sup" in active
         line_count=prompts.get(content,0)
-        if line_count or content in keep_with_options:
+        option_chain = re.match(r"^[A-G]\. ",content) and re.match(r"^[A-G]\. ",following)
+        passage_label = re.fullmatch(r"材料[一二三][:：]?|听第\s*\d+\s*段材料.*",content)
+        if line_count or content in keep_with_options or option_chain or passage_label or (
+                short_example and following and not following.startswith("#")):
             para.paragraph_format.keep_with_next=True
+        if short_example:
+            para.paragraph_format.keep_together=True
         for idx in range(line_count):
             p=doc.add_paragraph()
             p.paragraph_format.space_after=Pt(0)
@@ -259,7 +290,7 @@ def export_docx(markdown, output):
                 borders.append(edge)
             table._tbl.tblPr.append(borders)
             for row in table.rows:
-                row.height=Cm(.66)
+                row.height=Cm(.63)
                 row.height_rule=WD_ROW_HEIGHT_RULE.EXACTLY
                 row._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
     doc.save(output)

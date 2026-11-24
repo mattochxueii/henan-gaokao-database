@@ -1,0 +1,404 @@
+{
+  "archive": {
+    "papers": 48,
+    "questions": 1297,
+    "frozen_sha256": {
+      "forecast/frozen/henan-2027-math-v3.json": "33c20281a81ddc747189bc251564b90fc725ad86f540ad068c767ea0ee185931",
+      "forecast/preregistered/2027-math-trends.json": "0d7d54bd820d4f572aba59f3e6e7e5346ae55cad0e55696d55ebad0b955ed8a0"
+    }
+  },
+  "papers": {
+    "chinese": {
+      "subject": "chinese",
+      "questions": 22,
+      "points": 150,
+      "minutes": 150,
+      "layout_mode": "practice",
+      "reference_sha256": "e2980c154ad9f0fa6e14b32cfba0a523b98cdc2f9f46b01e7cea14a12a1574c0",
+      "dna_sha256": "e32dd81dea91d2c9327625c783b58fc541dd0d45b9c0a38c33c44c9459cee39e",
+      "context_sha256": "84600f978fe1c54f91d6c4e7a929c3fe26437ea7153de8580967e1aa3ac9681e",
+      "typical_checks": {
+        "han_count": {
+          "information": 1655,
+          "literary": 1783,
+          "classical": 722
+        },
+        "body_only_han_count": {
+          "information": 1640,
+          "literary": 1779,
+          "classical": 632
+        },
+        "answer_grid_cells": 900,
+        "length_basis": "机器按段落材料中的汉字计算，含出处、图注及注释。另记独立审卷者检查的纯正文数。"
+      },
+      "student_sha256": "1d2ab766a10a2dca7fed95efac2283a9f3e30e66ebd29087e280bfce3fd4285b",
+      "artifacts": {
+        "paper": 11,
+        "solutions": 7
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "status": "returned",
+          "fatal_count": 1,
+          "charged_points": 21,
+          "rewrite": [
+            9,
+            15,
+            17,
+            18,
+            21
+          ]
+        },
+        {
+          "round": 2,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 3,
+          "rewrite": [
+            18
+          ]
+        },
+        {
+          "round": 3,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 0,
+          "rewrite": []
+        }
+      ],
+      "local_qa_status": "LOCAL_QA_PASSED",
+      "human_teacher_reviews": 0,
+      "student_trials": 0,
+      "reference_sources": [
+        {
+          "id": "2024-cn-chinese-national-1",
+          "year": 2024,
+          "exam_kind": "official_exam",
+          "path": "data/papers/chinese/2024-cn-chinese-national-1.json",
+          "url": "https://liangshibao.com/tiku/gaokao-chinese-2024-i",
+          "questions": 23,
+          "content_sha256": "079a5c2803eabd07f7a85b715457e5eb6d413cb44031d96717f6cc1411072d33",
+          "materials_sha256": "ee350bda67d6d56dbdf57f20f816a337b11a438e87d69c595ff451fefc6e6903",
+          "listening_sha256": null
+        },
+        {
+          "id": "2025-cn-chinese-national-1",
+          "year": 2025,
+          "exam_kind": "official_exam",
+          "path": "data/papers/chinese/2025-cn-chinese-national-1.json",
+          "url": "https://liangshibao.com/tiku/gaokao-chinese-2025-i",
+          "questions": 23,
+          "content_sha256": "8b1bc9ac0053bf3c3f89f6df693db2aab1d4453f55ce3d33ffc55e3c20133556",
+          "materials_sha256": "a0289e54300bb579926c89286c778d0c47e1b553dca7a8c4d6475c14971edc2f",
+          "listening_sha256": null
+        },
+        {
+          "id": "2026-cn-chinese-national-1",
+          "year": 2026,
+          "exam_kind": "official_exam",
+          "path": "data/papers/chinese/2026-cn-chinese-national-1.json",
+          "url": "https://liangshibao.com/tiku/gaokao-chinese-2026-i",
+          "questions": 22,
+          "content_sha256": "32924b4da3dda636a8d6d5fc9f55562f1791447450db417f8c48369c71ea7bde",
+          "materials_sha256": "2a84112f33bf52504ffde15d30cb845f4aa32f42c439d2884afcafc7b2aa84ef",
+          "listening_sha256": null
+        },
+        {
+          "id": "2025-ha-chinese-adaptation",
+          "year": 2025,
+          "exam_kind": "adaptation_exam",
+          "path": "data/papers/chinese/2025-ha-chinese-adaptation.json",
+          "url": "https://www.jhgk.cn/upload/file/20250103/1735895785250038361.pdf",
+          "questions": 23,
+          "content_sha256": "cbab172d1b14fe7b74f38a516401bd56eeae57540bde9fe1aa06cb4b3b83f0de",
+          "materials_sha256": "8bb068fc7ab2a5bc3f2cd51c448185aaf66d58a9b5d38650458820944a768260",
+          "listening_sha256": null
+        }
+      ],
+      "word_files": {
+        "paper": {
+          "word_preview_pages": 11,
+          "sha256": "6e9113e5a12b9f78101e7d7c8dd716bdd6d87d168d9c16f5c6a683bdb97881e3"
+        },
+        "solutions": {
+          "word_preview_pages": 7,
+          "sha256": "a9204c71fe2fd96c26b3786bd063eacaeada9e4f376f7035c743460535633b81"
+        }
+      }
+    },
+    "math": {
+      "subject": "math",
+      "questions": 19,
+      "points": 150,
+      "minutes": 120,
+      "layout_mode": "practice",
+      "reference_sha256": "1f82a2a470c49ee29c19c580a406c27f2e44e01dbdb6ca99b37e2634a8e94bb1",
+      "dna_sha256": "63053c23d62014937d0c0e5be490e1b4725ae2ab26bba5bddd9a764086b7fc59",
+      "context_sha256": "b635a44af7f3d654c01e97f83d85d6e423a816655dac9b7d1b1b5e09a08f5e25",
+      "typical_checks": {
+        "modules": {
+          "集合与逻辑": [
+            1,
+            14
+          ],
+          "复数": [
+            2
+          ],
+          "三角函数与解三角形": [
+            3,
+            10,
+            15
+          ],
+          "统计与概率": [
+            4,
+            9,
+            17
+          ],
+          "平面向量": [
+            5
+          ],
+          "数列": [
+            6
+          ],
+          "立体几何": [
+            7,
+            16
+          ],
+          "函数与导数": [
+            8,
+            12,
+            19
+          ],
+          "解析几何": [
+            11,
+            18
+          ],
+          "排列组合与计数": [
+            13
+          ]
+        },
+        "figures": {
+          "7": "wireframe",
+          "16": "wireframe",
+          "18": "coordinate"
+        },
+        "whole_program_spec_items": 14,
+        "argument_items": [
+          14,
+          15,
+          16,
+          18,
+          19
+        ],
+        "multi_choice_rule": "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+      },
+      "student_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+      "artifacts": {
+        "paper": 5,
+        "solutions": 4
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "status": "returned",
+          "fatal_count": 1,
+          "charged_points": 20,
+          "rewrite": [
+            7,
+            10,
+            11,
+            16,
+            18
+          ]
+        },
+        {
+          "round": 2,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 14,
+          "rewrite": [
+            7,
+            16,
+            18
+          ]
+        },
+        {
+          "round": 3,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 0,
+          "rewrite": []
+        }
+      ],
+      "local_qa_status": "LOCAL_QA_PASSED",
+      "human_teacher_reviews": 0,
+      "student_trials": 0,
+      "position_metadata_correction": "首道填空归为基础题位。重跑生成核对题面和验算结果相同，最终盲审 PDF 完全相同。"
+    },
+    "english": {
+      "subject": "english",
+      "questions": 67,
+      "points": 150,
+      "minutes": 120,
+      "layout_mode": "practice",
+      "reference_sha256": "438b71ff2e6c9237031084458b6663da63713670bf7233ef61d84714d8074766",
+      "dna_sha256": "6af1a7acf0fc3eb755b589802c60e05e45cba836ac550a8be53927af8cce6e68",
+      "context_sha256": "bb0267dfc859193dfbcc4d3f6129459e17451f614288035b312065a56579aaf4",
+      "typical_checks": {
+        "reading_words": {
+          "A": 314,
+          "B": 359,
+          "C": 397,
+          "D": 415
+        },
+        "total": 1485,
+        "mean_sentence_words": {
+          "C": 26.47,
+          "D": 20.75
+        },
+        "grammar_categories": {
+          "determiner": 1,
+          "nonfinite": 2,
+          "finite": 1,
+          "inflection": 1,
+          "preposition": 1,
+          "clause": 2,
+          "conversion": 1,
+          "conjunction": 1
+        },
+        "grammar_forms": {
+          "article": 1,
+          "infinitive": 1,
+          "passive": 1,
+          "number": 1,
+          "past_participle": 1,
+          "collocation": 1,
+          "relative": 1,
+          "adverb": 1,
+          "nominal": 1,
+          "coordinating": 1
+        },
+        "listening_tracks": 10,
+        "listening_words": 878,
+        "scoring_rule": {
+          "method": "listening_plus_written",
+          "written_points": 120,
+          "listening_points": 30,
+          "header": "听力30分、笔试120分，两项原始分合计150分，直接计入河南高考文化总成绩。"
+        },
+        "listening_plays": [
+          2,
+          2
+        ]
+      },
+      "student_sha256": "9dead1f5d15eb6b41284d80e93bae25b76ce7f3b285dab3373876a3c43e77f4e",
+      "artifacts": {
+        "paper": 14,
+        "solutions": 10,
+        "listening-script": 3
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "status": "returned",
+          "fatal_count": 2,
+          "charged_points": 18,
+          "rewrite": [
+            21,
+            31,
+            34,
+            41,
+            45,
+            57,
+            60
+          ]
+        },
+        {
+          "round": 2,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 13,
+          "rewrite": [
+            45,
+            57,
+            60,
+            66
+          ]
+        },
+        {
+          "round": 3,
+          "status": "LOCAL_QA_PASSED",
+          "fatal_count": 0,
+          "charged_points": 0,
+          "rewrite": []
+        }
+      ],
+      "local_qa_status": "LOCAL_QA_PASSED",
+      "human_teacher_reviews": 0,
+      "student_trials": 0,
+      "reference_sources": [
+        {
+          "id": "2024-cn-english-national-1",
+          "year": 2024,
+          "exam_kind": "official_exam",
+          "path": "data/papers/english/2024-cn-english-national-1.json",
+          "url": "https://zy.21cnjy.com/20568421",
+          "questions": 67,
+          "content_sha256": "59b2b58a969497c2738d91552e66d7f8ad52a1812e5c2409a0a7fe38988eb22e",
+          "materials_sha256": "babbddee5b126fb33c9790464a3e8d9eb01e574d06261f91e88e8c7971cbdd89",
+          "listening_sha256": "f3d15b67473086509ae0b64ac2c1f535b7456cee096da63a85acc3997030e644"
+        },
+        {
+          "id": "2025-cn-english-national-1",
+          "year": 2025,
+          "exam_kind": "official_exam",
+          "path": "data/papers/english/2025-cn-english-national-1.json",
+          "url": "https://static-gkcx.gaokao.cn/upload/zhenti/20250611/1749605734_7546.pdf",
+          "questions": 67,
+          "content_sha256": "e1d32f5c5e0c4ec9e725334444e6445a856e7d1ce408f99f1c3b760c9e1feb55",
+          "materials_sha256": "38ba197550ab2fc079eb440e371043a5a73abce51f7c999cab2ceaeef0beb49c",
+          "listening_sha256": "b9c45900f3a7a8c01dcb14201b620f071897b35005591c3d14952cc87de68b09"
+        },
+        {
+          "id": "2026-cn-english-national-1",
+          "year": 2026,
+          "exam_kind": "official_exam",
+          "path": "data/papers/english/2026-cn-english-national-1.json",
+          "url": "https://zy.21cnjy.com/25946873",
+          "questions": 67,
+          "content_sha256": "816003ec8472ce34aedbc7f8106b7b3395ff9c23986da23681f49b2695e348d3",
+          "materials_sha256": "77b5cc1b3dbb05460d23724851236a05051c25c7131492ed36b7657ae3df5a59",
+          "listening_sha256": "8287bb9b41e12fc29099c8d7b06b4a87dca18bc39c1c7fd4ef08d8a3d6fb7f53"
+        },
+        {
+          "id": "2025-ha-english-adaptation",
+          "year": 2025,
+          "exam_kind": "adaptation_exam",
+          "path": "data/papers/english/2025-ha-english-adaptation.json",
+          "url": "https://www.jhgk.cn/upload/file/20250104/1735986063924046685.pdf",
+          "questions": 67,
+          "content_sha256": "ad88b9b1e7ff809743e0b3133b538723d91cc1519bcc4704043e79d43a94e96c",
+          "materials_sha256": "c7d2d10745b5a7567f0ee00d02b0f03e0bf51aba455c70386c851881bd37019b",
+          "listening_sha256": "0e380316916abeb0f11ab43cbc72ac2be6aae58e0f56bad9be31951935fc84f4"
+        }
+      ],
+      "word_files": {
+        "paper": {
+          "word_preview_pages": 13,
+          "sha256": "7bb53f76277fbc7ca06e2e9404c3aee3d23f7110679c258b45c9c8006a87a122"
+        },
+        "solutions": {
+          "word_preview_pages": 10,
+          "sha256": "e3533823adebd74aba9d4f7c370b271161fe4463d57f1f2931a713d2fc6780e4"
+        },
+        "listening-script": {
+          "word_preview_pages": 3,
+          "sha256": "ad3a8a977495ee836b5e424c18bdaf64f66707146d384cc51a05a50e39a308a7"
+        }
+      }
+    }
+  },
+  "automated_tests_passed": 356,
+  "pending_external_validation": "候选卷已作本地独立审稿，教师和学生实测均为0。"
+}

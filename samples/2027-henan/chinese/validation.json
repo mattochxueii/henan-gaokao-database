@@ -1,0 +1,119 @@
+{
+  "subject": "chinese",
+  "questions": 22,
+  "points": 150,
+  "minutes": 150,
+  "layout_mode": "practice",
+  "reference_sha256": "e2980c154ad9f0fa6e14b32cfba0a523b98cdc2f9f46b01e7cea14a12a1574c0",
+  "dna_sha256": "e32dd81dea91d2c9327625c783b58fc541dd0d45b9c0a38c33c44c9459cee39e",
+  "context_sha256": "84600f978fe1c54f91d6c4e7a929c3fe26437ea7153de8580967e1aa3ac9681e",
+  "typical_checks": {
+    "han_count": {
+      "information": 1655,
+      "literary": 1783,
+      "classical": 722
+    },
+    "body_only_han_count": {
+      "information": 1640,
+      "literary": 1779,
+      "classical": 632
+    },
+    "answer_grid_cells": 900,
+    "length_basis": "机器按段落材料中的汉字计算，含出处、图注及注释。另记独立审卷者检查的纯正文数。"
+  },
+  "student_sha256": "1d2ab766a10a2dca7fed95efac2283a9f3e30e66ebd29087e280bfce3fd4285b",
+  "artifacts": {
+    "paper": 11,
+    "solutions": 7
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "status": "returned",
+      "fatal_count": 1,
+      "charged_points": 21,
+      "rewrite": [
+        9,
+        15,
+        17,
+        18,
+        21
+      ]
+    },
+    {
+      "round": 2,
+      "status": "LOCAL_QA_PASSED",
+      "fatal_count": 0,
+      "charged_points": 3,
+      "rewrite": [
+        18
+      ]
+    },
+    {
+      "round": 3,
+      "status": "LOCAL_QA_PASSED",
+      "fatal_count": 0,
+      "charged_points": 0,
+      "rewrite": []
+    }
+  ],
+  "local_qa_status": "LOCAL_QA_PASSED",
+  "human_teacher_reviews": 0,
+  "student_trials": 0,
+  "reference_sources": [
+    {
+      "id": "2024-cn-chinese-national-1",
+      "year": 2024,
+      "exam_kind": "official_exam",
+      "path": "data/papers/chinese/2024-cn-chinese-national-1.json",
+      "url": "https://liangshibao.com/tiku/gaokao-chinese-2024-i",
+      "questions": 23,
+      "content_sha256": "079a5c2803eabd07f7a85b715457e5eb6d413cb44031d96717f6cc1411072d33",
+      "materials_sha256": "ee350bda67d6d56dbdf57f20f816a337b11a438e87d69c595ff451fefc6e6903",
+      "listening_sha256": null
+    },
+    {
+      "id": "2025-cn-chinese-national-1",
+      "year": 2025,
+      "exam_kind": "official_exam",
+      "path": "data/papers/chinese/2025-cn-chinese-national-1.json",
+      "url": "https://liangshibao.com/tiku/gaokao-chinese-2025-i",
+      "questions": 23,
+      "content_sha256": "8b1bc9ac0053bf3c3f89f6df693db2aab1d4453f55ce3d33ffc55e3c20133556",
+      "materials_sha256": "a0289e54300bb579926c89286c778d0c47e1b553dca7a8c4d6475c14971edc2f",
+      "listening_sha256": null
+    },
+    {
+      "id": "2026-cn-chinese-national-1",
+      "year": 2026,
+      "exam_kind": "official_exam",
+      "path": "data/papers/chinese/2026-cn-chinese-national-1.json",
+      "url": "https://liangshibao.com/tiku/gaokao-chinese-2026-i",
+      "questions": 22,
+      "content_sha256": "32924b4da3dda636a8d6d5fc9f55562f1791447450db417f8c48369c71ea7bde",
+      "materials_sha256": "2a84112f33bf52504ffde15d30cb845f4aa32f42c439d2884afcafc7b2aa84ef",
+      "listening_sha256": null
+    },
+    {
+      "id": "2025-ha-chinese-adaptation",
+      "year": 2025,
+      "exam_kind": "adaptation_exam",
+      "path": "data/papers/chinese/2025-ha-chinese-adaptation.json",
+      "url": "https://www.jhgk.cn/upload/file/20250103/1735895785250038361.pdf",
+      "questions": 23,
+      "content_sha256": "cbab172d1b14fe7b74f38a516401bd56eeae57540bde9fe1aa06cb4b3b83f0de",
+      "materials_sha256": "8bb068fc7ab2a5bc3f2cd51c448185aaf66d58a9b5d38650458820944a768260",
+      "listening_sha256": null
+    }
+  ],
+  "word_files": {
+    "paper": {
+      "word_preview_pages": 11,
+      "sha256": "6e9113e5a12b9f78101e7d7c8dd716bdd6d87d168d9c16f5c6a683bdb97881e3"
+    },
+    "solutions": {
+      "word_preview_pages": 7,
+      "sha256": "a9204c71fe2fd96c26b3786bd063eacaeada9e4f376f7035c743460535633b81"
+    }
+  }
+}

@@ -314,6 +314,15 @@ class DefectRegressionTests(unittest.TestCase):
         )
         self.assertEqual(result["result"], "Interval(3, oo)")
 
+    def test_trigonometric_root_count_keeps_each_level(self):
+        task = {
+            "op": "root_count",
+            "expression": "(sin(x)-1)*(2*sin(x)+1)",
+            "domain": ["0", "2*pi"],
+            "open": [False, True],
+        }
+        self.assertEqual(str(solve_task(task)["result"]), "3")
+
     def test_cross_validation_is_not_formal_proof(self):
         record = solve_task({"op": "derivative", "expression": "x*x"})
         self.assertFalse(record["formal_proof"])

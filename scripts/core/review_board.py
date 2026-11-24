@@ -72,9 +72,12 @@ def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False):
     material_groups = {}
     choice_keys = {}
     exact_keys = {}
+    exact_variants = spec.get("exact_key_variants", {})
     for n,q in enumerate(paper["questions"],1):
         material = paper.get("materials",{}).get(q.get("material"))
         parts = [q, material, answers[n-1]]
+        if str(n) in exact_variants:
+            parts.append(exact_variants[str(n)])
         if q.get("material") in listening:
             parts.append(listening[q["material"]])
         versions[str(n)] = fingerprint(parts)
@@ -88,6 +91,7 @@ def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False):
     return {"subject":subj,"version":version,"pdf_sha256":pdf_sha,"pages":len(doc.pages),
             "item_versions":versions,"ids":[q.get("id",q.get("number",n)) for n,q in enumerate(paper["questions"],1)],
             "choice_keys":choice_keys, **({"exact_keys":exact_keys} if exact_keys else {}),
+            **({"exact_key_variants":exact_variants} if exact_variants else {}),
             **({"local_versions":local_versions,"material_groups":material_groups} if local_versions else {}),
             "rules":rules,"preflight":gate,"reference_sha256":fingerprint(ref),
             **({"protocol": VERSION} if strict else {})}
@@ -131,6 +135,15 @@ def normalize_gap(value):
     if re.search(r"[A-Za-z]",text):
         return " ".join(text.split())
     return re.sub(r"[\s，,。；;、]+", "", text)
+
+
+def recitation_cells(value):
+    """Compare each printed blank separately when an open recitation has accepted examples."""
+    import re
+    if isinstance(value, str):
+        text = re.sub(r"(?:^|(?<=[。；;\n]))\s*[（(][1-9][）)]", "", value)
+        value = [cell for cell in re.split(r"[，,。；;\n]+", text) if cell.strip()]
+    return tuple(normalize_gap(cell) for cell in value) if isinstance(value, list) else ()
 
 
 def score_exam(state, reports, previous=None):
@@ -208,7 +221,11 @@ def score_exam(state, reports, previous=None):
                     if key is not None and sorted(str(item["answer"]))!=sorted(key):
                         add(item["number"],"fatal","all.solution","独立选项 "+str(item["answer"])+" 与提交键 "+key+" 不一致","comparison")
                     exact = state.get("exact_keys",{}).get(str(item["number"]))
-                    if exact is not None and normalize_gap(item["answer"]) != normalize_gap(exact):
+                    variants = state.get("exact_key_variants", {}).get(str(item["number"]), [])
+                    normalize = recitation_cells if variants else normalize_gap
+                    if exact is not None and normalize(item["answer"]) not in {
+                        normalize(answer) for answer in [exact, *variants]
+                    }:
                         add(item["number"],"fatal","all.solution","盲答与填空键不一致，须逐空核对","comparison")
             if role=="pedagogy":
                 require(all(i.get("comparison") and i.get("steps") and i.get("concepts") for i in items),"教研员缺同题位比较与推理证据")

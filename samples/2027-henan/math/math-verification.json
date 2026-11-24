@@ -1,0 +1,949 @@
+[
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共1个有序结果，其中0个满足目标事件，故概率为\\(0\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共1个有序结果，其中1个满足目标事件，故概率为\\(1\\)。",
+          "与所给概率比较，该命题成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共6个有序结果，其中1个满足目标事件，故概率为\\(\\frac{1}{6}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共6个有序结果，其中1个满足目标事件，故概率为\\(\\frac{1}{6}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:math:hn27-math-pu:q01",
+    "math_spec_sha256": "54e313a314c9556060260bd9fece40c33cd2d6b713fc02c4a96d1eec2c41d291",
+    "writing_sha256": "2e19bd06ad022ad814475b1993c3e48d83b2ddb1f822ec2788f69d575c70f305"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "I*(-1 + I)/2",
+        "steps": [
+          "代入题设条件，化简 \\(- \\frac{i \\left(1 - i\\right)}{2}\\)，得到 \\(\\frac{i \\left(-1 + i\\right)}{2}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:math:hn27-math-pu:q02",
+    "math_spec_sha256": "528869f996f48175bdd5cd8fcab7dee4252a7eec824f31d3704d928d504d6666",
+    "writing_sha256": "ebb41930703a968a6b4fbbc093380b4a7c2f60a07390ecd4f3188119c87a0056"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "6/7",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "6/7"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:math:hn27-math-pu:q03",
+    "math_spec_sha256": "49f123e2ddeb68587ee732bb03aa891ccbdf7cfe271e2de35015ae76a88ac52c",
+    "writing_sha256": "333ab171546f94847af34f511bfd10787b2b7de8af42eaa0f98f3bb11f3d04d8"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "2",
+        "steps": [
+          "样本量为5，先排序或求均值\\(2\\)，依照统计量定义得到\\(2\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "C",
+    "id": "orig:math:hn27-math-pu:q04",
+    "math_spec_sha256": "29666162ec34b16e017a275ed1b78ef025a6e373e98d96587a7e7625af7d54c3",
+    "writing_sha256": "bc3ace5ebf89ca7a47b60be987e6034c2cf470a3cfc612b24b866f1b6667a3cd"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "5/6",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "t": "5/6"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "D",
+    "id": "orig:math:hn27-math-pu:q05",
+    "math_spec_sha256": "51b5edd2183efa82d435f9998b4d6af37fd8e92fe1daee8b5f7a36fe34b09cda",
+    "writing_sha256": "43f758468ff29018a85fae92b614c469169c8358b6affb23ef20679927af6106"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "33",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "2"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "A",
+    "id": "orig:math:hn27-math-pu:q06",
+    "math_spec_sha256": "4ffe768778fb6c9f4696a8a917e697eb66bab557e2668fc74b13421c841a227a",
+    "writing_sha256": "752d3060a2736d124c7e9e23f2a2439c4ad4a4d7304a6d384e44bb91e79fc675"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "91/5",
+        "steps": [
+          "定义域内连续，导数为\\(2 \\left(5 x - 13\\right)\\)，驻点为\\(\\left\\{\\frac{13}{5}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left[\\frac{13}{5}, 4\\right]\\)，为负的区间为\\(\\left[1, \\frac{13}{5}\\right]\\)。",
+          "逐一比较驻点值、端点值与开端点极限。91/5"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:math:hn27-math-pu:q07",
+    "math_spec_sha256": "6b14ccab53c9d35bbf7d0fa47591ffe0fcafa7edd98d97e6bca47a0300c72764",
+    "writing_sha256": "7e27a1243eb360ae90586e6ccdb7bda0b1f8a31603cd2df73ae7b019c86f8124"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "9",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "-2",
+              "y": "4"
+            },
+            {
+              "x": "2",
+              "y": "-4"
+            }
+          ]
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 1,
+      "complete_tasks": 1,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "B",
+    "id": "orig:math:hn27-math-pu:q08",
+    "math_spec_sha256": "4cb0a388d23563303c13b0f01a87706762d68bc63dda9226fb52647843007f72",
+    "writing_sha256": "ef6c57f7585436e040e25500578effaa3f3b53cab304fbc46b6a12335eb350a0"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共16个有序结果，其中4个满足目标事件，故概率为\\(\\frac{1}{4}\\)。",
+          "与所给概率比较，该命题成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共4个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{2}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共16个有序结果，其中16个满足目标事件，故概率为\\(1\\)。",
+          "与所给概率比较，该命题成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共16个有序结果，其中2个满足目标事件，故概率为\\(\\frac{1}{8}\\)。",
+          "与所给概率比较，该命题不成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "AC",
+    "id": "orig:math:hn27-math-pu:q09",
+    "math_spec_sha256": "830948c77bb26250cc1305f081bb977410c68e2910f301025ae0cf511c0c86f4",
+    "writing_sha256": "b22b0d6915bc201c43c0459019e749526f63ceedcd6d02fd07fedc89c8cb8046"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "steps": [
+          "将左减右，通分或使用恒等式得到\\(0\\)，故恒等式成立。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "9/8",
+            "steps": [
+              "定义域内连续，导数为\\(1 - 4 x\\)，驻点为\\(\\left\\{\\frac{1}{4}\\right\\}\\)。",
+              "导数为正的区间为\\(\\left[-1, \\frac{1}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{1}{4}, 1\\right]\\)。",
+              "逐一比较驻点值、端点值与开端点极限。9/8"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "steps": [
+          "逐项代入条件计算命题真值。False"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": 3,
+            "steps": [
+              "将条件移项并因式分解为 \\(- \\left(\\sin{\\left(x \\right)} - 1\\right) \\left(2 \\sin{\\left(x \\right)} + 1\\right)\\)=0，限制在题设区间内，得到 \\(\\left\\{\\frac{\\pi}{2}, \\frac{7 \\pi}{6}, \\frac{11 \\pi}{6}\\right\\}\\)。"
+            ],
+            "status": "已完成符号与数值交叉验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": true,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "ABD",
+    "id": "orig:math:hn27-math-pu:q10",
+    "math_spec_sha256": "1e6d916a7d1972072bb9a851eb07fe60ee0b4ddc9f6c1e6c9ef93ba4a2b7b713",
+    "writing_sha256": "8facab4853c6169bcb6f5a0ca845180b2c4341db1d834e008c6cb6d4c6c3fc9c"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "-3",
+            "complete": true,
+            "facts": {
+              "solutions": [
+                {
+                  "x": "-3"
+                }
+              ]
+            },
+            "formal_proof": false
+          }
+        },
+        "formal_proof": false
+      },
+      {
+        "result": false,
+        "steps": [
+          "逐项代入条件计算命题真值。False"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": false,
+        "steps": [
+          "逐项代入条件计算命题真值。False"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": true,
+        "complete": true,
+        "facts": {
+          "calculation": {
+            "result": "1",
+            "steps": [
+              "代入题设条件，化简 \\(1\\)，得到 \\(1\\)。"
+            ],
+            "status": "已完成程序验证",
+            "programmatically_verified": true,
+            "formal_proof": false,
+            "cross_checked": false,
+            "scope": "exact",
+            "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+            "complete": true
+          }
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 4,
+      "complete_tasks": 4,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "answer_key": "AD",
+    "id": "orig:math:hn27-math-pu:q11",
+    "math_spec_sha256": "836f438d433a78c579a21abc861e7440bc5f14dd6b7c7b15e08f6ef60152b05c",
+    "writing_sha256": "8e8a9b08af0f52d6552744faa5f380047037f813eacde678be2a5a747ecfcad9"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "3*exp(2)",
+        "steps": [
+          "在题设定义域内求导并因式分解，得到 \\(\\left(x + 1\\right) e^{x}\\)。",
+          "代入指定横坐标，得到\\(3 e^{2}\\)。"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "4/3",
+        "steps": [
+          "代入题设条件，化简 \\(\\frac{4}{3}\\)，得到 \\(\\frac{4}{3}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 2,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q12",
+    "math_spec_sha256": "da0fe1e40e28b283c5739b24e422b9444d0b3568c63dc02f7c9c1e23fe8d9c57",
+    "writing_sha256": "a24398c5f1a9ed2b85d504bbc97f77ce849349b3e29e9aa942e6cab959a85cd2"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "14",
+        "steps": [
+          "逐个计入满足条件的有序结果，计算数量，得到\\(14\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "84",
+        "steps": [
+          "代入题设条件，化简 \\(84\\)，得到 \\(84\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 2,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q13",
+    "math_spec_sha256": "dcc30ec13cd501cf7129b123ed8204bf273283279ce6fcf1c1e37c25ebfd2cd1",
+    "writing_sha256": "e5e8a6cd53883b11df0178ad766f31577a8299a87f62b2668ad06ec2077d1377"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "9/4",
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{\\left(x - 2\\right) \\left(x + 2\\right)}{4 x^{2}}\\)，驻点为\\(\\emptyset\\)。",
+          "导数为正的区间为\\(\\emptyset\\)，为负的区间为\\(\\left(0, 1\\right)\\)。",
+          "逐一比较驻点值、端点值与开端点极限。9/4"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "endpoint": "x*(a - 2)"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 1,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q14",
+    "math_spec_sha256": "3c5d0e55978982e6a99c3578e7f60b4733f3670e030b12c48ae25e449ffd08b0",
+    "writing_sha256": "df241e28841cecc198993a4a352ba8c0000aa7799924b2dcedf3743e8e897d9c"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "1/2",
+        "steps": [
+          "代入题设条件，化简 \\(\\frac{1}{2}\\)，得到 \\(\\frac{1}{2}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": "2*sqrt(3)",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "4",
+              "y": "2"
+            }
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "median_square": "x**2/4 + x*y/4 + y**2/4",
+          "bound_difference": "x**2 - 5*x*y/2 + y**2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 3,
+      "complete_tasks": 2,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q15",
+    "math_spec_sha256": "27286ce2b6f35d26f1a3219a0a59564b83f9bdd6f84538ae0e586463e5c6e71a",
+    "writing_sha256": "60594c009b365039df51986fdc104b1364e655eabc3f2395df19f44089193937"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": "3/4",
+        "complete": true,
+        "facts": {
+          "solutions": [
+            {
+              "x": "3/4"
+            }
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "4*sqrt(82)/41",
+        "complete": true,
+        "facts": {
+          "normal_one": [
+            "0",
+            "0",
+            "16"
+          ],
+          "normal_two": [
+            "3",
+            "-3",
+            "8"
+          ]
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "normal_x": "12*x - 6",
+          "normal_z": "16*x - 4"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 3,
+      "complete_tasks": 2,
+      "partial_tasks": 1,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q16",
+    "math_spec_sha256": "6b2e9df551e4f4eadad8e07286e474d893cec3396ca7d463894412983e4707e7",
+    "writing_sha256": "477ae84961cc51586ecfa138e359bec5b0991197cb48cb828f9645899c3ee508"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": {
+          "distribution": {
+            "2": "1/5",
+            "3": "3/10",
+            "4": "1/2"
+          },
+          "expectation": "33/10",
+          "variance": "61/100"
+        },
+        "complete": true,
+        "facts": {
+          "normalisation": "1"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "7/10",
+        "steps": [
+          "按题设等可能样本逐项枚举。条件下共20个有序结果，其中14个满足目标事件，故概率为\\(\\frac{7}{10}\\)。"
+        ],
+        "status": "已完成程序验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": false,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      }
+    ],
+    "all_tasks_program_complete": true,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 2,
+      "partial_tasks": 0,
+      "independent_reasoning_tasks": 0,
+      "status": "complete_spec_checks"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q17",
+    "math_spec_sha256": "9960ea01b1141a33b194538254660d4544cb9b1d20effba06a37f40594b9ce56",
+    "writing_sha256": "6e374a8bc923e36a0a7700481a4f5ac9db72b87e32acaa10f4ae6b9b29cb63cc"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "midpoint_polynomial": "x*(x - 1) + 3*y**2"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": "1/8",
+        "steps": [
+          "定义域内连续，导数为\\(\\frac{4 x \\left(x - 2\\right) \\left(4 x - 3\\right)}{3 \\left(2 x - 3\\right)^{2}}\\)，驻点为\\(\\left\\{\\frac{3}{4}\\right\\}\\)。",
+          "导数为正的区间为\\(\\left(0, \\frac{3}{4}\\right]\\)，为负的区间为\\(\\left[\\frac{3}{4}, 1\\right)\\)。",
+          "逐一比较驻点值、端点值与开端点极限。1/8"
+        ],
+        "status": "已完成符号与数值交叉验证",
+        "programmatically_verified": true,
+        "formal_proof": false,
+        "cross_checked": true,
+        "scope": "exact",
+        "engine": "SymPy 1.14.0 / independent finite difference or enumeration",
+        "complete": true
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "gap_factor": "0"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 3,
+      "complete_tasks": 1,
+      "partial_tasks": 2,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q18",
+    "math_spec_sha256": "31e0b9f3b11807c8a99b3e137f8c303aa53d9f6984990efa05b79694e6356508",
+    "writing_sha256": "0fa408d651bd4126ef640a6a466a3b87f8f885934f937d677deb4e67e62c8623"
+  },
+  {
+    "program_checks_passed": true,
+    "tasks": [
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "-2*x + exp(x) - exp(-x)",
+          "derivative": "(exp(x) - 1)**2*exp(-x)"
+        },
+        "formal_proof": false
+      },
+      {
+        "result": null,
+        "complete": false,
+        "facts": {
+          "scope": "仅支持性符号计算，未求解全部证明，须独立PDF推理",
+          "expression": "x*(exp(x) + 4 + exp(-x)) - 3*exp(x) + 3*exp(-x)",
+          "derivative": "(exp(x) - 1)*(x*exp(x) + x - 2*exp(x) + 2)*exp(-x)",
+          "third_at_zero": "6*a - 2",
+          "mean_factor": "2*cosh(x) - 2"
+        },
+        "formal_proof": false
+      }
+    ],
+    "all_tasks_program_complete": false,
+    "program_coverage": {
+      "total_tasks": 2,
+      "complete_tasks": 0,
+      "partial_tasks": 2,
+      "independent_reasoning_tasks": 0,
+      "status": "partial_support"
+    },
+    "program_scope": "已运行的规格检查无错误；完整性须看program_coverage，题面与推理仍须独立核对",
+    "version": "school-solver-v2",
+    "formal_proof": false,
+    "id": "orig:math:hn27-math-pu:q19",
+    "math_spec_sha256": "75949d369c5ef32266ccc1c3e0eacbbd962feb25b0ec8156d89087e144df0413",
+    "writing_sha256": "e9ffad42d743f1c5a7ec59d3be7145ce47650bcf7e84b1db043f461901067450"
+  }
+]

@@ -1,0 +1,5076 @@
+{
+  "schema_version": 2,
+  "paper": {
+    "mode": "full",
+    "title": "2027年河南新高考模拟试卷　数学",
+    "study_id": "HN27-M150-PU",
+    "minutes": 120,
+    "total_points": 150,
+    "require_scoring": true
+  },
+  "coverage_plan": {
+    "basis": "近年Ⅰ卷各题位对照，主干覆盖与步骤层次双核。",
+    "progression": "单选从基础表征到多根约束，多选以不同证据判项；解答从三角到空间、随机计数、椭圆最值和全域界。 填空首题为基础导数工具，末题再考查全称条件。",
+    "gaps": {},
+    "concentration": {
+      "函数与导数": "三次切线的重根关系、指数切线截距、对数平均值的全称界分别考查不同推理。",
+      "三角函数与解三角形": "和角反求、二次代换检验性质和中线面积最值彼此不同。",
+      "统计与概率": "非线性居中后的方差、二维取数条件关系和不放回截断分别建模。"
+    }
+  },
+  "provenance": {
+    "mode": "ai",
+    "provider": "host_ai",
+    "model_version": "Codex host",
+    "template_calls": 0,
+    "api_calls": 0,
+    "dna_sha256": "63053c23d62014937d0c0e5be490e1b4725ae2ab26bba5bddd9a764086b7fc59",
+    "context_sha256": "b635a44af7f3d654c01e97f83d85d6e423a816655dac9b7d1b1b5e09a08f5e25",
+    "quality_reference_sha256": "94191cc1d109ba56325fe6751258682c11fb242e1026602c6530ec0f8aa27837"
+  },
+  "questions": [
+    {
+      "id": "orig:math:hn27-math-pu:q01",
+      "order": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与逻辑",
+      "math_spec": {
+        "givens": {
+          "statement": "设全集 §U=\\{-2,-1,0,1,2,3\\}§，§A=\\{x\\in U:x^2-x-2<0\\}§，§B=\\{x\\in U:|x-1|=1\\}§，则 §(\\complement_U A)\\cap B=§",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "event": "x==0",
+            "condition": "(x*x-x-2>=0) and abs(x-1)==1",
+            "claimed_probability": "1"
+          },
+          "B": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "event": "x==2",
+            "condition": "(x*x-x-2>=0) and abs(x-1)==1",
+            "claimed_probability": "1"
+          },
+          "C": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "event": "((x*x-x-2>=0) and abs(x-1)==1) != (x==0 or x==2)",
+            "condition": "1==1",
+            "claimed_probability": "0"
+          },
+          "D": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "event": "((x*x-x-2>=0) and abs(x-1)==1) != (x==-1 or x==2)",
+            "condition": "1==1",
+            "claimed_probability": "0"
+          }
+        }
+      },
+      "writing": {
+        "stem": "设全集 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}",
+        "options": {
+          "A": "{{f5}}",
+          "B": "{{f6}}",
+          "C": "{{f7}}",
+          "D": "{{f8}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "54e313a314c9556060260bd9fece40c33cd2d6b713fc02c4a96d1eec2c41d291",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "U=\\{-2,-1,0,1,2,3\\}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "A=\\{x\\in U:x^2-x-2<0\\}"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "B=\\{x\\in U:|x-1|=1\\}"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "(\\complement_U A)\\cap B="
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "\\{0\\}"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\{2\\}"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "\\{0,2\\}"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "\\{-1,2\\}"
+          }
+        },
+        "condition_anchors": [
+          "设全集 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}"
+        ],
+        "request_anchors": [
+          "设全集 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "foundation",
+        "purpose": "补集与两类有限集合的关系",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "分别把两种条件转换成有限集合",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "在指定全集取补再取交",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          3
+        ],
+        "structures": {
+          "model": "补集与两类有限集合的关系",
+          "goal": "补集与两类有限集合的关系",
+          "route": [
+            "分别把两种条件转换成有限集合",
+            "在指定全集取补再取交"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 2,
+        "part_points": [],
+        "points_justification": "补集与两类有限集合的关系",
+        "linked_progression": "在指定全集取补再取交",
+        "dimensions": {
+          "knowledge": "集合与逻辑",
+          "condition_comprehension": "分别把两种条件转换成有限集合",
+          "modeling": "分别把两种条件转换成有限集合",
+          "logical_reasoning": "在指定全集取补再取交",
+          "calculation": "在指定全集取补再取交",
+          "integration": "补集与两类有限集合的关系",
+          "breakthrough_visibility": "在指定全集取补再取交",
+          "source_level_difference": "补集与两类有限集合的关系"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选B。\\(x^2-x-2=(x+1)(x-2)<0\\) 在 \\(U\\) 中仅有 \\(0,1\\)，所以 \\(A=\\{0,1\\}\\)。绝对值条件给出 \\(B=\\{0,2\\}\\)。补去 \\(A\\) 后与 \\(B\\) 相交只余 \\(2\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q02",
+      "order": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "复数",
+      "math_spec": {
+        "givens": {
+          "statement": "设 §i§ 为虚数单位，复数 §z§ 满足 §\\frac{z}{1+z}=i§，则 §\\overline{z}=§",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "conjugate(I/(1-I))"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "(1+I)/2"
+          },
+          "B": {
+            "semantic_value": "(-1+I)/2"
+          },
+          "C": {
+            "semantic_value": "(1-I)/2"
+          },
+          "D": {
+            "semantic_value": "(-1-I)/2"
+          }
+        }
+      },
+      "writing": {
+        "stem": "设 {{f1}} 为虚数单位，复数 {{f2}} 满足 {{f3}}，则 {{f4}}",
+        "options": {
+          "A": "{{f5}}",
+          "B": "{{f6}}",
+          "C": "{{f7}}",
+          "D": "{{f8}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "528869f996f48175bdd5cd8fcab7dee4252a7eec824f31d3704d928d504d6666",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "i"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "z"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\frac{z}{1+z}=i"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "\\overline{z}="
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "\\frac{1+i}{2}"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\frac{-1+i}{2}"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "\\frac{1-i}{2}"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "\\frac{-1-i}{2}"
+          }
+        },
+        "condition_anchors": [
+          "设 {{f1}} 为虚数单位，复数 {{f2}} 满足 {{f3}}，则 {{f4}}"
+        ],
+        "request_anchors": [
+          "设 {{f1}} 为虚数单位，复数 {{f2}} 满足 {{f3}}，则 {{f4}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "foundation",
+        "purpose": "复数分式方程中的符号与共轭",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "把复数分式条件改写为一次关系",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "复除后取共轭",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          3
+        ],
+        "structures": {
+          "model": "复数分式方程中的符号与共轭",
+          "goal": "复数分式方程中的符号与共轭",
+          "route": [
+            "把复数分式条件改写为一次关系",
+            "复除后取共轭"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 2,
+        "part_points": [],
+        "points_justification": "复数分式方程中的符号与共轭",
+        "linked_progression": "复除后取共轭",
+        "dimensions": {
+          "knowledge": "复数",
+          "condition_comprehension": "把复数分式条件改写为一次关系",
+          "modeling": "把复数分式条件改写为一次关系",
+          "logical_reasoning": "复除后取共轭",
+          "calculation": "复除后取共轭",
+          "integration": "复数分式方程中的符号与共轭",
+          "breakthrough_visibility": "复除后取共轭",
+          "source_level_difference": "复数分式方程中的符号与共轭"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选D。\\(z=i(1+z)\\)，所以 \\((1-i)z=i\\)。分子分母同乘 \\(1+i\\)，得 \\(z=\\frac{-1+i}{2}\\)。实部不变、虚部变号，故共轭为 \\(\\frac{-1-i}{2}\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q03",
+      "order": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角函数与解三角形",
+      "math_spec": {
+        "givens": {
+          "statement": "已知 §0<\\alpha,\\beta<\\frac{\\pi}{2}§，§\\tan\\alpha=2§，§\\tan(\\alpha+\\beta)=-4§，则 §\\tan\\beta=§",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x"
+            ],
+            "equations": [
+              "2+x+4*(1-2*x)"
+            ],
+            "conditions": [
+              "x>0",
+              "1-2*x!=0"
+            ],
+            "value": "x",
+            "unique_value": true
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "6/7"
+          },
+          "B": {
+            "semantic_value": "6/11"
+          },
+          "C": {
+            "semantic_value": "2/7"
+          },
+          "D": {
+            "semantic_value": "7/6"
+          }
+        }
+      },
+      "writing": {
+        "stem": "已知 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}",
+        "options": {
+          "A": "{{f5}}",
+          "B": "{{f6}}",
+          "C": "{{f7}}",
+          "D": "{{f8}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "49f123e2ddeb68587ee732bb03aa891ccbdf7cfe271e2de35015ae76a88ac52c",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "0<\\alpha,\\beta<\\frac{\\pi}{2}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "\\tan\\alpha=2"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\tan(\\alpha+\\beta)=-4"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "\\tan\\beta="
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "\\frac67"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\frac6{11}"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "\\frac27"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "\\frac76"
+          }
+        },
+        "condition_anchors": [
+          "已知 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}"
+        ],
+        "request_anchors": [
+          "已知 {{f1}}，{{f2}}，{{f3}}，则 {{f4}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "foundation",
+        "purpose": "和角关系的逆用",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用正切和角公式表示所求量",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "排除零分母并解一次方程",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          3
+        ],
+        "structures": {
+          "model": "和角关系的逆用",
+          "goal": "和角关系的逆用",
+          "route": [
+            "用正切和角公式表示所求量",
+            "排除零分母并解一次方程"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 2,
+        "part_points": [],
+        "points_justification": "和角关系的逆用",
+        "linked_progression": "排除零分母并解一次方程",
+        "dimensions": {
+          "knowledge": "三角函数与解三角形",
+          "condition_comprehension": "用正切和角公式表示所求量",
+          "modeling": "用正切和角公式表示所求量",
+          "logical_reasoning": "排除零分母并解一次方程",
+          "calculation": "排除零分母并解一次方程",
+          "integration": "和角关系的逆用",
+          "breakthrough_visibility": "排除零分母并解一次方程",
+          "source_level_difference": "和角关系的逆用"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选A。记 \\(t=\\tan\\beta\\)。正切和角公式给 \\(\\frac{2+t}{1-2t}=-4\\)，分母非零。移项得 \\(7t=6\\)。所得 \\(t>0\\) 且 \\(1-2t\\ne0\\)，符合题设。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q04",
+      "order": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "统计与概率",
+      "math_spec": {
+        "givens": {
+          "statement": "某传感器五次读数为 §1,2,4,5,8§。以这五个读数的中位数为基准，逐个记录读数与基准的差的绝对值。按 §\\frac1n§ 作为方差公式的系数，所得五个绝对值的方差为",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "statistics",
+            "data": [
+              3,
+              2,
+              0,
+              1,
+              4
+            ],
+            "statistic": "variance"
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "6"
+          },
+          "B": {
+            "semantic_value": "4"
+          },
+          "C": {
+            "semantic_value": "2"
+          },
+          "D": {
+            "semantic_value": "sqrt(2)"
+          }
+        }
+      },
+      "writing": {
+        "stem": "某传感器五次读数为 {{f1}}。以这五个读数的中位数为基准，逐个记录读数与基准的差的绝对值。按 {{f2}} 作为方差公式的系数，所得五个绝对值的方差为",
+        "options": {
+          "A": "{{f3}}",
+          "B": "{{f4}}",
+          "C": "{{f5}}",
+          "D": "{{f6}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "29666162ec34b16e017a275ed1b78ef025a6e373e98d96587a7e7625af7d54c3",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "1,2,4,5,8"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "\\frac1n"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "6"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "4"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "2"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\sqrt2"
+          }
+        },
+        "condition_anchors": [
+          "某传感器五次读数为 {{f1}}"
+        ],
+        "request_anchors": [
+          "按 {{f2}} 作为方差公式的系数，所得五个绝对值的方差为"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "foundation",
+        "purpose": "区分绝对偏差数据的二阶矩和方差",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "中位数居中后取偏差绝对值",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "对新样本作中心化二阶统计",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          2,
+          4
+        ],
+        "structures": {
+          "model": "区分绝对偏差数据的二阶矩和方差",
+          "goal": "区分绝对偏差数据的二阶矩和方差",
+          "route": [
+            "中位数居中后取偏差绝对值",
+            "对新样本作中心化二阶统计"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 3,
+        "part_points": [],
+        "points_justification": "区分绝对偏差数据的二阶矩和方差",
+        "linked_progression": "对新样本作中心化二阶统计",
+        "dimensions": {
+          "knowledge": "统计与概率",
+          "condition_comprehension": "中位数居中后取偏差绝对值",
+          "modeling": "中位数居中后取偏差绝对值",
+          "logical_reasoning": "对新样本作中心化二阶统计",
+          "calculation": "对新样本作中心化二阶统计",
+          "integration": "区分绝对偏差数据的二阶矩和方差",
+          "breakthrough_visibility": "对新样本作中心化二阶统计",
+          "source_level_difference": "区分绝对偏差数据的二阶矩和方差"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选C。基准为 \\(4\\)，转化后的数据为 \\(3,2,0,1,4\\)，均值为 \\(2\\)。偏差平方的和为 \\(1+0+4+1+4=10\\)，方差为 \\(\\frac{10}{5}=2\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q05",
+      "order": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "平面向量",
+      "math_spec": {
+        "givens": {
+          "statement": "在 §\\triangle ABC§ 中，§D§ 为 §BC§ 的中点，§P§ 为线段 §AD§ 上一点，且 §AP>PD§。若 §|\\overrightarrow{PA}+\\overrightarrow{PB}+\\overrightarrow{PC}|=\\frac14|\\overrightarrow{AB}+\\overrightarrow{AC}|§，则 §\\frac{AP}{AD}=§",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "t"
+            ],
+            "equations": [
+              "(2-3*t)**2-1/4"
+            ],
+            "conditions": [
+              "t>1/2",
+              "t<=1"
+            ],
+            "value": "t",
+            "unique_value": true
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "1/6"
+          },
+          "B": {
+            "semantic_value": "1/2"
+          },
+          "C": {
+            "semantic_value": "2/3"
+          },
+          "D": {
+            "semantic_value": "5/6"
+          }
+        }
+      },
+      "writing": {
+        "stem": "在 {{f1}} 中，{{f2}} 为 {{f3}} 的中点，{{f4}} 为线段 {{f5}} 上一点，且 {{f6}}。若 {{f7}}，则 {{f8}}",
+        "options": {
+          "A": "{{f9}}",
+          "B": "{{f10}}",
+          "C": "{{f11}}",
+          "D": "{{f12}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "51b5edd2183efa82d435f9998b4d6af37fd8e92fe1daee8b5f7a36fe34b09cda",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\triangle ABC"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "D"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "BC"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "AD"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "AP>PD"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "|\\overrightarrow{PA}+\\overrightarrow{PB}+\\overrightarrow{PC}|=\\frac14|\\overrightarrow{AB}+\\overrightarrow{AC}|"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "\\frac{AP}{AD}="
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "\\frac16"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "\\frac12"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "\\frac23"
+          },
+          "f12": {
+            "kind": "notation",
+            "latex": "\\frac56"
+          }
+        },
+        "condition_anchors": [
+          "在 {{f1}} 中，{{f2}} 为 {{f3}} 的中点，{{f4}} 为线段 {{f5}} 上一点，且 {{f6}}"
+        ],
+        "request_anchors": [
+          "若 {{f7}}，则 {{f8}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "向量模到一维位置的回译",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用中点合并两个异向向量",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "模长解除正负分支",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "用AP与PD的严格比较排除边界",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ],
+        "structures": {
+          "model": "向量模到一维位置的回译",
+          "goal": "向量模到一维位置的回译",
+          "route": [
+            "用中点合并两个异向向量",
+            "模长解除正负分支",
+            "用AP与PD的严格比较排除边界"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 4,
+        "part_points": [],
+        "points_justification": "向量模到一维位置的回译",
+        "linked_progression": "用AP与PD的严格比较排除边界",
+        "dimensions": {
+          "knowledge": "平面向量",
+          "condition_comprehension": "用中点合并两个异向向量",
+          "modeling": "用中点合并两个异向向量",
+          "logical_reasoning": "用AP与PD的严格比较排除边界",
+          "calculation": "用AP与PD的严格比较排除边界",
+          "integration": "向量模到一维位置的回译",
+          "breakthrough_visibility": "模长解除正负分支",
+          "source_level_difference": "向量模到一维位置的回译"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选D。设 \\(t=AP/AD\\)，则 \\(\\overrightarrow{PB}+\\overrightarrow{PC}=2\\overrightarrow{PD}\\)，而 \\(\\overrightarrow{AB}+\\overrightarrow{AC}=2\\overrightarrow{AD}\\)。向量和为 \\((2-3t)\\overrightarrow{AD}\\)，故 \\(|2-3t|=\\frac12\\)。",
+          "解得 \\(t=\\frac12\\) 或 \\(t=\\frac56\\)。由 \\(AP>PD\\) 取 \\(t=\\frac56\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q06",
+      "order": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "数列",
+      "math_spec": {
+        "givens": {
+          "statement": "数列 §\\{a_n\\}§ 满足 §a_{n+2}=3a_{n+1}-2a_n§（§n=1,2,\\ldots§）。已知 §a_2=3§，§a_5=17§，则 §a_6=§",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x"
+            ],
+            "equations": [
+              "45-14*x-17"
+            ],
+            "conditions": [],
+            "value": "3*17-2*(21-6*x)",
+            "unique_value": true
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "33"
+          },
+          "B": {
+            "semantic_value": "31"
+          },
+          "C": {
+            "semantic_value": "41"
+          },
+          "D": {
+            "semantic_value": "24"
+          }
+        }
+      },
+      "writing": {
+        "stem": "数列 {{f1}} 满足 {{f2}}（{{f3}}）。已知 {{f4}}，{{f5}}，则 {{f6}}",
+        "options": {
+          "A": "{{f7}}",
+          "B": "{{f8}}",
+          "C": "{{f9}}",
+          "D": "{{f10}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "4ffe768778fb6c9f4696a8a917e697eb66bab557e2668fc74b13421c841a227a",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\{a_n\\}"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "a_{n+2}=3a_{n+1}-2a_n"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "n=1,2,\\ldots"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "a_2=3"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "a_5=17"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "a_6="
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "33"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "31"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "41"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "24"
+          }
+        },
+        "condition_anchors": [
+          "数列 {{f1}} 满足 {{f2}}（{{f3}}）"
+        ],
+        "request_anchors": [
+          "已知 {{f4}}，{{f5}}，则 {{f6}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "二阶递推中的差分变换和下标校正",
+        "moves": [
+          {
+            "kind": "invariant",
+            "evidence": "二阶递推化为相邻差的等比不变量",
+            "after": []
+          },
+          {
+            "kind": "compare",
+            "evidence": "用两端数的差确定中间三项差分之和",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "从差分回到a6",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ],
+        "structures": {
+          "model": "二阶递推中的差分变换和下标校正",
+          "goal": "二阶递推中的差分变换和下标校正",
+          "route": [
+            "二阶递推化为相邻差的等比不变量",
+            "用两端数的差确定中间三项差分之和",
+            "从差分回到a6"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 2,
+        "estimated_minutes": 4,
+        "part_points": [],
+        "points_justification": "二阶递推中的差分变换和下标校正",
+        "linked_progression": "从差分回到a6",
+        "dimensions": {
+          "knowledge": "数列",
+          "condition_comprehension": "二阶递推化为相邻差的等比不变量",
+          "modeling": "二阶递推化为相邻差的等比不变量",
+          "logical_reasoning": "从差分回到a6",
+          "calculation": "从差分回到a6",
+          "integration": "二阶递推中的差分变换和下标校正",
+          "breakthrough_visibility": "用两端数的差确定中间三项差分之和",
+          "source_level_difference": "二阶递推中的差分变换和下标校正"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选A。令 \\(d_n=a_{n+1}-a_n\\)，递推式化为 \\(d_{n+1}=2d_n\\)。\\(a_5-a_2=d_2+d_3+d_4=7d_2=14\\)，故 \\(d_2=2\\)。",
+          "\\(d_5=8d_2=16\\)，所以 \\(a_6=a_5+d_5=33\\)。也可从 \\(a_3=9-2a_1\\) 顺次递推并由 \\(a_5\\) 反求首项。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q07",
+      "order": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "立体几何",
+      "math_spec": {
+        "givens": {
+          "statement": "如图，三棱锥 §D-ABC§ 的六条棱等长，§AB=6§。点 §M,N§ 分别在线段 §AB,CD§ 上，且 §AM+2CN=8§。则 §MN^2§ 的最小值为",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "optimum",
+            "which": "minimum",
+            "expression": "18+(5-2*x)**2+(x-3)**2",
+            "domain": [
+              "1",
+              "4"
+            ],
+            "open": [
+              false,
+              false
+            ]
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "18"
+          },
+          "B": {
+            "semantic_value": "91/5"
+          },
+          "C": {
+            "semantic_value": "73/4"
+          },
+          "D": {
+            "semantic_value": "19"
+          }
+        }
+      },
+      "writing": {
+        "stem": "如图，三棱锥 {{f1}} 的六条棱等长，{{f2}}。点 {{f3}} 分别在线段 {{f4}} 上，且 {{f5}}。则 {{f6}} 的最小值为",
+        "options": {
+          "A": "{{f7}}",
+          "B": "{{f8}}",
+          "C": "{{f9}}",
+          "D": "{{f10}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "6b14ccab53c9d35bbf7d0fa47591ffe0fcafa7edd98d97e6bca47a0300c72764",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "D-ABC"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "AB=6"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "M,N"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "AB,CD"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "AM+2CN=8"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "MN^2"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "18"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "\\frac{91}{5}"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "\\frac{73}{4}"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "19"
+          }
+        },
+        "condition_anchors": [
+          "如图，三棱锥 {{f1}} 的六条棱等长，{{f2}}"
+        ],
+        "request_anchors": [
+          "则 {{f6}} 的最小值为"
+        ],
+        "figure": {
+          "type": "wireframe",
+          "vertices": {
+            "A": [
+              0,
+              0,
+              0
+            ],
+            "B": [
+              6,
+              0,
+              0
+            ],
+            "C": [
+              3,
+              5.196152422706632,
+              0
+            ],
+            "D": [
+              3,
+              1.7320508075688772,
+              4.898979485566356
+            ],
+            "M": [
+              3.4,
+              0,
+              0
+            ],
+            "N": [
+              3,
+              3.8682468035704924,
+              1.8779421361337696
+            ]
+          },
+          "edges": [
+            [
+              "A",
+              "M"
+            ],
+            [
+              "M",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "D"
+            ],
+            [
+              "B",
+              "D"
+            ],
+            [
+              "D",
+              "N"
+            ],
+            [
+              "N",
+              "C"
+            ],
+            [
+              "M",
+              "N"
+            ]
+          ],
+          "hidden_edges": [
+            [
+              "A",
+              "C"
+            ],
+            [
+              "M",
+              "N"
+            ]
+          ],
+          "marked_points": [
+            "M",
+            "N"
+          ],
+          "view_angles": [
+            22,
+            -56
+          ],
+          "label_offsets": {
+            "A": [
+              -13,
+              -5
+            ],
+            "B": [
+              7,
+              -5
+            ],
+            "C": [
+              7,
+              -2
+            ],
+            "D": [
+              2,
+              7
+            ],
+            "M": [
+              0,
+              -17
+            ],
+            "N": [
+              8,
+              4
+            ]
+          },
+          "caption_math": "AB=6,\\ AM+2CN=8"
+        },
+        "figure_required": true
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "正四面体对棱正交与约束下的空间距离最值",
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "从两对等距关系建立对棱及其中点连线的垂直结构",
+            "after": []
+          },
+          {
+            "kind": "invariant",
+            "evidence": "把空间距离平方化成固定高与两个独立投影的平方和",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "对两个线段上的参数同时施加限制",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "把关联距离平方配方求全局下界并核实可达",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          7
+        ],
+        "structures": {
+          "model": "正四面体对棱正交与约束下的空间距离最值",
+          "goal": "正四面体对棱正交与约束下的空间距离最值",
+          "route": [
+            "从两对等距关系建立对棱及其中点连线的垂直结构",
+            "把空间距离平方化成固定高与两个独立投影的平方和",
+            "对两个线段上的参数同时施加限制",
+            "把关联距离平方配方求全局下界并核实可达"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "part_points": [],
+        "points_justification": "正四面体对棱正交与约束下的空间距离最值",
+        "linked_progression": "把关联距离平方配方求全局下界并核实可达",
+        "dimensions": {
+          "knowledge": "立体几何",
+          "condition_comprehension": "从两对等距关系建立对棱及其中点连线的垂直结构",
+          "modeling": "从两对等距关系建立对棱及其中点连线的垂直结构",
+          "logical_reasoning": "把关联距离平方配方求全局下界并核实可达",
+          "calculation": "把关联距离平方配方求全局下界并核实可达",
+          "integration": "正四面体对棱正交与约束下的空间距离最值",
+          "breakthrough_visibility": "把空间距离平方化成固定高与两个独立投影的平方和",
+          "source_level_difference": "正四面体对棱正交与约束下的空间距离最值"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选B。设 \\(E,F\\) 分别为 \\(AB,CD\\) 的中点。因 \\(CA=CB,\\ DA=DB\\)，点 \\(C,D,F\\) 均在 \\(AB\\) 的中垂面内，所以 \\(CD\\perp AB,\\ EF\\perp AB\\)。同理 \\(E\\) 在 \\(CD\\) 的中垂面内，故 \\(EF\\perp CD\\)。",
+          "在等边三角形 \\(ABC\\) 中，\\(EC=3\\sqrt3\\)。直角三角形 \\(ECF\\) 给出 \\(EF^2=EC^2-CF^2=27-9=18\\)。由线段 \\(EF,EM,FN\\) 的两两垂直，\\(MN^2=18+(AM-3)^2+(CN-3)^2\\)。",
+          "设 \\(x=CN\\)，由 \\(0\\le AM=8-2x\\le6\\) 和 \\(0\\le CN\\le6\\) 得 \\(x\\in[1,4]\\)。于是 \\(MN^2=18+(5-2x)^2+(x-3)^2=5(x-\\frac{13}{5})^2+\\frac{91}{5}\\)。在 \\(CN=\\frac{13}{5},\\ AM=\\frac{14}{5}\\) 时可以取等。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q08",
+      "order": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {
+          "statement": "曲线 §y=x^3-3x§ 在点 §P§ 处的切线与该曲线还交于另一点 §Q§。若 §P,Q§ 的横坐标的平方和为 §20§，则这条切线的斜率为",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "equations": [
+              "2*x+y",
+              "x*x+y*y-20"
+            ],
+            "conditions": [
+              "x!=y"
+            ],
+            "value": "3*x*x-3",
+            "unique_value": true
+          }
+        ],
+        "options": {
+          "A": {
+            "semantic_value": "3"
+          },
+          "B": {
+            "semantic_value": "9"
+          },
+          "C": {
+            "semantic_value": "12"
+          },
+          "D": {
+            "semantic_value": "17"
+          }
+        }
+      },
+      "writing": {
+        "stem": "曲线 {{f1}} 在点 {{f2}} 处的切线与该曲线还交于另一点 {{f3}}。若 {{f4}} 的横坐标的平方和为 {{f5}}，则这条切线的斜率为",
+        "options": {
+          "A": "{{f6}}",
+          "B": "{{f7}}",
+          "C": "{{f8}}",
+          "D": "{{f9}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "4cb0a388d23563303c13b0f01a87706762d68bc63dda9226fb52647843007f72",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "y=x^3-3x"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "P"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "Q"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "P,Q"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "20"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "3"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "9"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "12"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "17"
+          }
+        },
+        "condition_anchors": [
+          "曲线 {{f1}} 在点 {{f2}} 处的切线与该曲线还交于另一点 {{f3}}"
+        ],
+        "request_anchors": [
+          "若 {{f4}} 的横坐标的平方和为 {{f5}}，则这条切线的斜率为"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "用切触重根控制另一个交点",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "把切线斜率和截距写成切点参数",
+            "after": []
+          },
+          {
+            "kind": "invariant",
+            "evidence": "切点二重根决定另一交点的横坐标",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "排除拐点退化并定位两切点同一斜率",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          7
+        ],
+        "structures": {
+          "model": "用切触重根控制另一个交点",
+          "goal": "用切触重根控制另一个交点",
+          "route": [
+            "把切线斜率和截距写成切点参数",
+            "切点二重根决定另一交点的横坐标",
+            "排除拐点退化并定位两切点同一斜率"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "part_points": [],
+        "points_justification": "用切触重根控制另一个交点",
+        "linked_progression": "排除拐点退化并定位两切点同一斜率",
+        "dimensions": {
+          "knowledge": "函数与导数",
+          "condition_comprehension": "把切线斜率和截距写成切点参数",
+          "modeling": "把切线斜率和截距写成切点参数",
+          "logical_reasoning": "排除拐点退化并定位两切点同一斜率",
+          "calculation": "排除拐点退化并定位两切点同一斜率",
+          "integration": "用切触重根控制另一个交点",
+          "breakthrough_visibility": "切点二重根决定另一交点的横坐标",
+          "source_level_difference": "用切触重根控制另一个交点"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选B。设切点横坐标为 \\(t\\)，则切线为 \\(y=(3t^2-3)x-2t^3\\)。与曲线联立得 \\(x^3-3t^2 x+2t^3=(x-t)^2(x+2t)=0\\)。",
+          "\\(Q\\) 与 \\(P\\) 不同，故 \\(t\\ne 0\\)，而 \\(Q\\) 的横坐标为 \\(-2t\\)。由 \\(5t^2=20\\) 得 \\(t^2=4\\)，斜率 \\(3t^2-3=9\\)。正负两种切点给同一斜率。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q09",
+      "order": 9,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "统计与概率",
+      "math_spec": {
+        "givens": {
+          "statement": "甲、乙独立地从 §1,2,3,4§ 中各等可能随机选取一个整数。设两数之和为 §S§，差的绝对值为 §D§。下列说法正确的是",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "event": "x+y==5",
+            "condition": "1==1",
+            "claimed_probability": "1/4"
+          },
+          "B": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "event": "abs(x-y)==1",
+            "condition": "x+y==5",
+            "claimed_probability": "1/4"
+          },
+          "C": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "event": "(x+y)%2==abs(x-y)%2",
+            "condition": "1==1",
+            "claimed_probability": "1"
+          },
+          "D": {
+            "op": "probability_claim",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "event": "x+y==5 and abs(x-y)==1",
+            "condition": "1==1",
+            "claimed_probability": "(1/4)*(6/16)"
+          }
+        }
+      },
+      "writing": {
+        "stem": "甲、乙独立地从 {{f1}} 中各等可能随机选取一个整数。设两数之和为 {{f2}}，差的绝对值为 {{f3}}。下列说法正确的是",
+        "options": {
+          "A": "{{f4}}",
+          "B": "{{f5}}",
+          "C": "{{f6}} 与 {{f7}} 的奇偶性相同",
+          "D": "事件“{{f8}}”与“{{f9}}”相互独立"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "830948c77bb26250cc1305f081bb977410c68e2910f301025ae0cf511c0c86f4",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "1,2,3,4"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "D"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "P(S=5)=\\frac14"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "P(D=1\\mid S=5)=\\frac14"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "D"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "S=5"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "D=1"
+          }
+        },
+        "condition_anchors": [
+          "甲、乙独立地从 {{f1}} 中各等可能随机选取一个整数"
+        ],
+        "request_anchors": [
+          "下列说法正确的是"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "同一随机取数的条件事件、奇偶和独立性",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "建立包含甲乙次序的16元样本空间",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "在和为五的结果中筛差为一",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "奇偶由和与差只相差偶数决定",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "以事件交和边缘概率乘积判断独立",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          6
+        ],
+        "structures": {
+          "model": "同一随机取数的条件事件、奇偶和独立性",
+          "goal": "同一随机取数的条件事件、奇偶和独立性",
+          "route": [
+            "建立包含甲乙次序的16元样本空间",
+            "在和为五的结果中筛差为一",
+            "奇偶由和与差只相差偶数决定",
+            "以事件交和边缘概率乘积判断独立"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "part_points": [],
+        "points_justification": "同一随机取数的条件事件、奇偶和独立性",
+        "linked_progression": "以事件交和边缘概率乘积判断独立",
+        "dimensions": {
+          "knowledge": "统计与概率",
+          "condition_comprehension": "建立包含甲乙次序的16元样本空间",
+          "modeling": "建立包含甲乙次序的16元样本空间",
+          "logical_reasoning": "以事件交和边缘概率乘积判断独立",
+          "calculation": "以事件交和边缘概率乘积判断独立",
+          "integration": "同一随机取数的条件事件、奇偶和独立性",
+          "breakthrough_visibility": "在和为五的结果中筛差为一",
+          "source_level_difference": "同一随机取数的条件事件、奇偶和独立性"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选AC。共有 \\(16\\) 个等可能有序结果。和为 \\(5\\) 的有 \\((1,4),(2,3),(3,2),(4,1)\\) 四个，故A对。四个中差为 \\(1\\) 的有两个，条件概率为 \\(1/2\\)，B错。",
+          "对任意一对整数，和与差相差其中一个整数的两倍，取绝对值不改变差的奇偶，故C对。差为 \\(1\\) 的有六个，事件交的概率为 \\(2/16\\)，不同于边缘概率乘积 \\((4/16)(6/16)\\)，D错。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q10",
+      "order": 10,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "三角函数与解三角形",
+      "math_spec": {
+        "givens": {
+          "statement": "已知 §f(x)=\\sin x+\\cos 2x§。下列说法正确的是",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "identity",
+            "left": "sin(pi-x)+cos(2*(pi-x))",
+            "right": "sin(x)+cos(2*x)"
+          },
+          "B": {
+            "op": "claim",
+            "calculation": {
+              "op": "optimum",
+              "expression": "1+x-2*x*x",
+              "domain": [
+                "-1",
+                "1"
+              ],
+              "open": [
+                false,
+                false
+              ]
+            },
+            "expected": "9/8"
+          },
+          "C": {
+            "op": "comparison",
+            "claim": "sin(3*pi/2)+cos(3*pi)==sin(pi/2)+cos(pi)"
+          },
+          "D": {
+            "op": "claim",
+            "calculation": {
+              "op": "root_count",
+              "expression": "1+sin(x)-2*sin(x)**2",
+              "domain": [
+                "0",
+                "2*pi"
+              ],
+              "open": [
+                false,
+                true
+              ]
+            },
+            "expected": "3"
+          }
+        }
+      },
+      "writing": {
+        "stem": "已知 {{f1}}。下列说法正确的是",
+        "options": {
+          "A": "{{f2}} 的图象关于直线 {{f3}} 对称",
+          "B": "{{f4}} 的最大值为 {{f5}}",
+          "C": "{{f6}} 是 {{f7}} 的周期",
+          "D": "{{f8}} 在 {{f9}} 内有三个不同的零点"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "1e6d916a7d1972072bb9a851eb07fe60ee0b4ddc9f6c1e6c9ef93ba4a2b7b713",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "f(x)=\\sin x+\\cos 2x"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "x=\\frac{\\pi}{2}"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "\\frac98"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "\\pi"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "f(x)"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "[0,2\\pi)"
+          }
+        },
+        "condition_anchors": [
+          "已知 {{f1}}"
+        ],
+        "request_anchors": [
+          "下列说法正确的是"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "三角函数性质与二次代换的适用范围",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "把二倍角项写成同一变量u的一元二次式",
+            "after": []
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "核对顶点在实际值域可达",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "以两个相差π的角检验周期",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "把两个u的根分别回译为角",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          7
+        ],
+        "structures": {
+          "model": "三角函数性质与二次代换的适用范围",
+          "goal": "三角函数性质与二次代换的适用范围",
+          "route": [
+            "把二倍角项写成同一变量u的一元二次式",
+            "核对顶点在实际值域可达",
+            "以两个相差π的角检验周期",
+            "把两个u的根分别回译为角"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "part_points": [],
+        "points_justification": "三角函数性质与二次代换的适用范围",
+        "linked_progression": "把两个u的根分别回译为角",
+        "dimensions": {
+          "knowledge": "三角函数与解三角形",
+          "condition_comprehension": "把二倍角项写成同一变量u的一元二次式",
+          "modeling": "把二倍角项写成同一变量u的一元二次式",
+          "logical_reasoning": "把两个u的根分别回译为角",
+          "calculation": "把两个u的根分别回译为角",
+          "integration": "三角函数性质与二次代换的适用范围",
+          "breakthrough_visibility": "核对顶点在实际值域可达",
+          "source_level_difference": "三角函数性质与二次代换的适用范围"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选ABD。对任意 \\(x\\)，有 \\(f(\\pi-x)=f(x)\\)，所以A对。令 \\(u=\\sin x\\in[-1,1]\\)，则 \\(f(x)=1+u-2u^2=\\frac98-2(u-\\frac14)^2\\)，且 \\(u=\\frac14\\) 可取，B对。",
+          "\\(f(\\frac{\\pi}{2})=0\\) 而 \\(f(\\frac{3\\pi}{2})=-2\\)，故C错。\\(1+u-2u^2=(1-u)(2u+1)\\)，故 \\(u=1\\) 或 \\(u=-\\frac12\\)，在给定区间分别给出一根与两根，D对。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q11",
+      "order": 11,
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "解析几何",
+      "math_spec": {
+        "givens": {
+          "statement": "已知两圆 §C_1:(x+1)^2+y^2=1§，§C_2:(x-1)^2+y^2=4§，两条公切线交于点 §T§。设 §S§ 为两圆外部的点中，向两圆所引的切线段等长的点的集合。下列说法正确的是",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [],
+        "assertions": {
+          "A": {
+            "op": "claim",
+            "calculation": {
+              "op": "constrained_value",
+              "variables": [
+                "x"
+              ],
+              "equations": [
+                "-x/2-3/2"
+              ],
+              "conditions": [],
+              "value": "x",
+              "unique_value": true
+            },
+            "expected": "-3"
+          },
+          "B": {
+            "op": "comparison",
+            "claim": "(-3/4+1)**2>1"
+          },
+          "C": {
+            "op": "comparison",
+            "claim": "6-(9/4)**2-15/16>0"
+          },
+          "D": {
+            "op": "claim",
+            "calculation": {
+              "op": "evaluate",
+              "expression": "sqrt(7-(9/4)**2-15/16)"
+            },
+            "expected": "1"
+          }
+        }
+      },
+      "writing": {
+        "stem": "已知两圆 {{f1}}，{{f2}}，两条公切线交于点 {{f3}}。设 {{f4}} 为两圆外部的点中，向两圆所引的切线段等长的点的集合。下列说法正确的是",
+        "options": {
+          "A": "{{f5}} 的坐标为 {{f6}}",
+          "B": "{{f7}} 是直线 {{f8}} 上的全体点",
+          "C": "{{f9}} 中恰有两个点到 {{f10}} 的距离为 {{f11}}",
+          "D": "{{f12}} 中到 {{f13}} 的距离为 {{f14}} 的点，向两圆所引的切线段长均为 {{f15}}"
+        },
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "836f438d433a78c579a21abc861e7440bc5f14dd6b7c7b15e08f6ef60152b05c",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "C_1:(x+1)^2+y^2=1"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "C_2:(x-1)^2+y^2=4"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "(-3,0)"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "x=-\\frac34"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "\\sqrt6"
+          },
+          "f12": {
+            "kind": "notation",
+            "latex": "S"
+          },
+          "f13": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f14": {
+            "kind": "notation",
+            "latex": "\\sqrt7"
+          },
+          "f15": {
+            "kind": "notation",
+            "latex": "1"
+          }
+        },
+        "condition_anchors": [
+          "已知两圆 {{f1}}，{{f2}}，两条公切线交于点 {{f3}}"
+        ],
+        "request_anchors": [
+          "下列说法正确的是"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "等切线长点集的定义域与公切线交点距离的联动",
+        "moves": [
+          {
+            "kind": "branch",
+            "evidence": "按圆心相对公切线所在侧分情形并排除异侧",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "由有向距离求交点T，并用勾股表示两切线段平方",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "切线平方差为零给出直线，圆外条件给出严格界",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "把圆外边界传至到T的距离，并由距离回算切线长",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          5,
+          8
+        ],
+        "structures": {
+          "model": "等切线长点集的定义域与公切线交点距离的联动",
+          "goal": "等切线长点集的定义域与公切线交点距离的联动",
+          "route": [
+            "按圆心相对公切线所在侧分情形并排除异侧",
+            "由有向距离求交点T，并用勾股表示两切线段平方",
+            "切线平方差为零给出直线，圆外条件给出严格界",
+            "把圆外边界传至到T的距离，并由距离回算切线长"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "part_points": [],
+        "points_justification": "等切线长点集的定义域与公切线交点距离的联动",
+        "linked_progression": "把圆外边界传至到T的距离，并由距离回算切线长",
+        "dimensions": {
+          "knowledge": "解析几何",
+          "condition_comprehension": "按圆心相对公切线所在侧分情形并排除异侧",
+          "modeling": "按圆心相对公切线所在侧分情形并排除异侧",
+          "logical_reasoning": "把圆外边界传至到T的距离，并由距离回算切线长",
+          "calculation": "把圆外边界传至到T的距离，并由距离回算切线长",
+          "integration": "等切线长点集的定义域与公切线交点距离的联动",
+          "breakthrough_visibility": "由有向距离求交点T，并用勾股表示两切线段平方",
+          "source_level_difference": "等切线长点集的定义域与公切线交点距离的联动"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "选AD。圆心距为 \\(2<1+2\\)。公切线若把两个圆心分在两侧，两圆心的距离至少为半径之和 \\(3\\)，矛盾。设公切线为 \\(ux+vy=t\\)，其中 \\(u^2+v^2=1\\) 且两圆都在其小于等于一侧。由到圆心的带符号距离有 \\(t=-u+1=u+2\\)，得 \\(t=\\frac32,\\ u=-\\frac12,\\ v=\\pm\\frac{\\sqrt3}{2}\\)。两切线交于 \\(T(-3,0)\\)，A正确。",
+          "设 \\(X(x,y)\\) 在两圆外。由直角三角形，向两圆所作的切线段长的平方分别为 \\((x+1)^2+y^2-1\\)、\\((x-1)^2+y^2-4\\)。两式相等给出 \\(x=-\\frac34\\)。在这条直线上，两平方都等于 \\(y^2-\\frac{15}{16}\\)；因此 \\(X\\in S\\) 还须满足 \\(y^2>\\frac{15}{16}\\)。B错误。",
+          "又 \\(XT^2=(x+3)^2+y^2=\\frac{81}{16}+y^2\\)，所以 \\(X\\in S\\) 时 \\(XT^2>6\\)，C错误。若 \\(XT=\\sqrt7\\)，则 \\(y^2=\\frac{31}{16}\\)，两点均在 \\(S\\) 中，切线段长平方为 \\(\\frac{31}{16}-\\frac{15}{16}=1\\)，D正确。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q12",
+      "order": 12,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {
+          "statement": "曲线 §y=xe^x§ 在横坐标为 §2§ 的点处的切线，与 §x§ 轴交点的横坐标为 ________。",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "derivative",
+            "expression": "x*exp(x)",
+            "at": "2"
+          },
+          {
+            "op": "evaluate",
+            "expression": "2-2*exp(2)/(3*exp(2))"
+          }
+        ]
+      },
+      "writing": {
+        "stem": "曲线 {{f1}} 在横坐标为 {{f2}} 的点处的切线，与 {{f3}} 轴交点的横坐标为 ________。",
+        "options": {},
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "da0fe1e40e28b283c5739b24e422b9444d0b3568c63dc02f7c9c1e23fe8d9c57",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "y=xe^x"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "2"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "x"
+          }
+        },
+        "condition_anchors": [
+          "曲线 {{f1}} 在横坐标为 {{f2}} 的点处的切线，与 {{f3}} 轴交点的横坐标为 ________"
+        ],
+        "request_anchors": [
+          "曲线 {{f1}} 在横坐标为 {{f2}} 的点处的切线，与 {{f3}} 轴交点的横坐标为 ________"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "foundation",
+        "purpose": "指数函数切线的横截距",
+        "moves": [
+          {
+            "kind": "routine_calculus",
+            "evidence": "在横坐标2处求乘积函数导数",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "用点斜式写切线",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "令纵坐标为零读取横截距",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          2,
+          4
+        ],
+        "structures": {
+          "model": "指数函数切线的横截距",
+          "goal": "指数函数切线的横截距",
+          "route": [
+            "在横坐标2处求乘积函数导数",
+            "用点斜式写切线",
+            "令纵坐标为零读取横截距"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 3,
+        "part_points": [],
+        "points_justification": "指数函数切线的横截距",
+        "linked_progression": "令纵坐标为零读取横截距",
+        "dimensions": {
+          "knowledge": "函数与导数",
+          "condition_comprehension": "在横坐标2处求乘积函数导数",
+          "modeling": "在横坐标2处求乘积函数导数",
+          "logical_reasoning": "令纵坐标为零读取横截距",
+          "calculation": "令纵坐标为零读取横截距",
+          "integration": "指数函数切线的横截距",
+          "breakthrough_visibility": "用点斜式写切线",
+          "source_level_difference": "指数函数切线的横截距"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "填 \\(\\frac43\\)。由 \\((xe^x)'=(1+x)e^x\\)，切线过 \\((2,2e^2)\\)，斜率为 \\(3e^2\\)。令 \\(2e^2+3e^2(x-2)=0\\)，得 \\(x=\\frac43\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q13",
+      "order": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "排列组合与计数",
+      "math_spec": {
+        "givens": {
+          "statement": "将甲、乙、丙在内的六个不同小组排成一列。甲、乙之间恰有两个小组，且甲、丙不相邻。不同排法共有 ________ 种。",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "count",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "a": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "event": "abs(x-y)==3 and abs(x-a)>1 and a!=y"
+          },
+          {
+            "op": "evaluate",
+            "expression": "14*factorial(3)"
+          }
+        ]
+      },
+      "writing": {
+        "stem": "将甲、乙、丙在内的六个不同小组排成一列。甲、乙之间恰有两个小组，且甲、丙不相邻。不同排法共有 ________ 种。",
+        "options": {},
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "dcc30ec13cd501cf7129b123ed8204bf273283279ce6fcf1c1e37c25ebfd2cd1",
+        "formulae": {},
+        "condition_anchors": [
+          "将甲、乙、丙在内的六个不同小组排成一列"
+        ],
+        "request_anchors": [
+          "不同排法共有 ________ 种"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "固定间隔下给禁邻事件计数",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "按甲所在的槽位确定乙",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "区分端位与中间的相邻槽位",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "从全集活动中扣除禁邻排法",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ],
+        "structures": {
+          "model": "固定间隔下给禁邻事件计数",
+          "goal": "固定间隔下给禁邻事件计数",
+          "route": [
+            "按甲所在的槽位确定乙",
+            "区分端位与中间的相邻槽位",
+            "从全集活动中扣除禁邻排法"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 4,
+        "part_points": [],
+        "points_justification": "固定间隔下给禁邻事件计数",
+        "linked_progression": "从全集活动中扣除禁邻排法",
+        "dimensions": {
+          "knowledge": "排列组合与计数",
+          "condition_comprehension": "按甲所在的槽位确定乙",
+          "modeling": "按甲所在的槽位确定乙",
+          "logical_reasoning": "从全集活动中扣除禁邻排法",
+          "calculation": "从全集活动中扣除禁邻排法",
+          "integration": "固定间隔下给禁邻事件计数",
+          "breakthrough_visibility": "区分端位与中间的相邻槽位",
+          "source_level_difference": "固定间隔下给禁邻事件计数"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "填84。甲的位置从第1位到第6位每取一个，乙的位置都唯一确定，故先不管丙与甲相邻时有 \\(6\\cdot4!=144\\) 种。",
+          "甲在两端各有一个相邻位，在中间四位各有两个，且相邻位都不是乙，所以丙放在这些位置的坏排法有 \\((2+8)\\cdot3!=60\\) 种。相减得 \\(84\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q14",
+      "order": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "module": "集合与逻辑",
+      "math_spec": {
+        "givens": {
+          "statement": "若对任意 §t\\in[0,1]§，方程 §x^2-(t+2)x+at=0§ 的两个实根（可重合）都属于区间 §[0,2]§，则实数 §a§ 的取值范围为 ________。",
+          "requests": []
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "optimum",
+            "expression": "(x+2)**2/(4*x)",
+            "domain": [
+              "0",
+              "1"
+            ],
+            "left_open": true,
+            "which": "minimum"
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "endpoint": "(2**2-(x+2)*2+a*x)"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "stem": "若对任意 {{f1}}，方程 {{f2}} 的两个实根（可重合）都属于区间 {{f3}}，则实数 {{f4}} 的取值范围为 ________。",
+        "options": {},
+        "parts": [],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "3c5d0e55978982e6a99c3578e7f60b4733f3670e030b12c48ae25e449ffd08b0",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "t\\in[0,1]"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "x^2-(t+2)x+at=0"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "[0,2]"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "a"
+          }
+        },
+        "condition_anchors": [
+          "若对任意 {{f1}}，方程 {{f2}} 的两个实根（可重合）都属于区间 {{f3}}，则实数 {{f4}} 的取值范围为 ________"
+        ],
+        "request_anchors": [
+          "若对任意 {{f1}}，方程 {{f2}} 的两个实根（可重合）都属于区间 {{f3}}，则实数 {{f4}} 的取值范围为 ________"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "全称参数下实根存在与落区间的充要拼合",
+        "moves": [
+          {
+            "kind": "branch",
+            "evidence": "单独判别t为0的端点和t大于0的内部",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "由实根、轴与区间边界同时给出上下界",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "判别式与端点非负合起来保证两根均在区间",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          5,
+          8
+        ],
+        "structures": {
+          "model": "全称参数下实根存在与落区间的充要拼合",
+          "goal": "全称参数下实根存在与落区间的充要拼合",
+          "route": [
+            "单独判别t为0的端点和t大于0的内部",
+            "由实根、轴与区间边界同时给出上下界",
+            "判别式与端点非负合起来保证两根均在区间"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 6,
+        "part_points": [],
+        "points_justification": "全称参数下实根存在与落区间的充要拼合",
+        "linked_progression": "判别式与端点非负合起来保证两根均在区间",
+        "dimensions": {
+          "knowledge": "集合与逻辑",
+          "condition_comprehension": "单独判别t为0的端点和t大于0的内部",
+          "modeling": "单独判别t为0的端点和t大于0的内部",
+          "logical_reasoning": "判别式与端点非负合起来保证两根均在区间",
+          "calculation": "判别式与端点非负合起来保证两根均在区间",
+          "integration": "全称参数下实根存在与落区间的充要拼合",
+          "breakthrough_visibility": "由实根、轴与区间边界同时给出上下界",
+          "source_level_difference": "全称参数下实根存在与落区间的充要拼合"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "填 \\([2,\\frac94]\\)。\\(t=0\\) 时两根为 \\(0,2\\)。设 \\(0<t\\le1\\)，两根为实数的条件为 \\(a\\le\\frac{(t+2)^2}{4t}\\)；对称轴 \\(x=\\frac{t+2}{2}\\) 严格位于 \\((0,2)\\)。",
+          "在已有实根的前提下，两根同在 \\([0,2]\\) 当且仅当抛物线在两个端点的值均不小于零，即 \\(at\\ge0,\\ (a-2)t\\ge0\\)，合并为 \\(a\\ge2\\)。",
+          "\\(\\frac{(t+2)^2}{4t}=1+\\frac t4+\\frac1t\\) 在 \\((0,1]\\) 递减，最小值为 \\(\\frac94\\)。所以全称条件恰为 \\(2\\le a\\le\\frac94\\)，两个端值也允许。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q15",
+      "order": 15,
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "三角函数与解三角形",
+      "math_spec": {
+        "givens": {
+          "statement": "在 §\\triangle ABC§ 中，内角 §A,B,C§ 的对边分别为 §a,b,c§，且 §a^2=b^2+c^2-bc§。边 §BC§ 的中点为 §M§。",
+          "requests": [
+            "求角 §A§。",
+            "若 §AM=\\sqrt7§ 且 §b\\ge 2c§，求 §\\triangle ABC§ 面积的最大值，并写出取最大值时的 §b,c§。"
+          ]
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "evaluate",
+            "expression": "1/2"
+          },
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x",
+              "y"
+            ],
+            "equations": [
+              "x*x+y*y+x*y-28",
+              "x-2*y"
+            ],
+            "conditions": [
+              "x>0",
+              "y>0"
+            ],
+            "value": "x*y*sqrt(3)/4",
+            "unique_value": true
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "median_square": "(x*x+y*y+x*y)/4",
+              "bound_difference": "x*x+y*y-(5/2)*x*y"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "stem": "在 {{f1}} 中，内角 {{f2}} 的对边分别为 {{f3}}，且 {{f4}}。边 {{f5}} 的中点为 {{f6}}。",
+        "options": {},
+        "parts": [
+          {
+            "text": "求角 {{f7}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "若 {{f8}} 且 {{f9}}，求 {{f10}} 面积的最大值，并写出取最大值时的 {{f11}}。",
+            "task_refs": [
+              1,
+              2
+            ]
+          }
+        ],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "27286ce2b6f35d26f1a3219a0a59564b83f9bdd6f84538ae0e586463e5c6e71a",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "\\triangle ABC"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "A,B,C"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "a,b,c"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "a^2=b^2+c^2-bc"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "BC"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "A"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "AM=\\sqrt7"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "b\\ge 2c"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "\\triangle ABC"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "b,c"
+          }
+        },
+        "condition_anchors": [
+          "在 {{f1}} 中，内角 {{f2}} 的对边分别为 {{f3}}，且 {{f4}}"
+        ],
+        "request_anchors": [
+          "边 {{f5}} 的中点为 {{f6}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "中线的二次约束与面积的可达最值",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "将三边等式代入余弦定理定角",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "把中线表示为两个边向量的平均",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "利用受限边比确定面积上界的边界",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "核查边界值对应实际三角形",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          7,
+          12
+        ],
+        "structures": {
+          "model": "中线的二次约束与面积的可达最值",
+          "goal": "中线的二次约束与面积的可达最值",
+          "route": [
+            "将三边等式代入余弦定理定角",
+            "把中线表示为两个边向量的平均",
+            "利用受限边比确定面积上界的边界",
+            "核查边界值对应实际三角形"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 10,
+        "part_points": [
+          4,
+          9
+        ],
+        "points_justification": "中线的二次约束与面积的可达最值",
+        "linked_progression": "核查边界值对应实际三角形",
+        "dimensions": {
+          "knowledge": "三角函数与解三角形",
+          "condition_comprehension": "将三边等式代入余弦定理定角",
+          "modeling": "将三边等式代入余弦定理定角",
+          "logical_reasoning": "核查边界值对应实际三角形",
+          "calculation": "核查边界值对应实际三角形",
+          "integration": "中线的二次约束与面积的可达最值",
+          "breakthrough_visibility": "把中线表示为两个边向量的平均",
+          "source_level_difference": "中线的二次约束与面积的可达最值"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）余弦定理给出 \\(\\cos A=(b^2+c^2-a^2)/(2bc)=1/2\\)。因 \\(0<A<\\pi\\)，故 \\(A=\\pi/3\\)。",
+          "（2）\\(\\overrightarrow{AM}=(\\overrightarrow{AB}+\\overrightarrow{AC})/2\\)。因此 \\(4AM^2=b^2+c^2+2bc\\cos A=b^2+c^2+bc=28\\)。",
+          "由 \\(b\\ge2c\\)，得 \\(2(b^2+c^2)-5bc=(2b-c)(b-2c)\\ge0\\)，所以 \\(28\\ge\\frac72bc\\)，即 \\(bc\\le8\\)。面积 \\(S=\\frac12bc\\sin A\\le 2\\sqrt3\\)。",
+          "等号当且仅当 \\(b=2c\\)。代回 \\(b^2+c^2+bc=28\\) 得 \\(c=2,b=4\\)。以角 \\(A\\) 为两边夹角作三角形，满足全部条件，所求最大值可以取得。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q16",
+      "order": 16,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "立体几何",
+      "math_spec": {
+        "givens": {
+          "statement": "如图，在四棱锥 §P-ABCD§ 中，底面 §ABCD§ 为正方形，§PA§ 垂直于底面，§AB=4,\\ PA=3§。点 §M,Q§ 分别为 §PD,AB§ 的中点，点 §N§ 在线段 §PC§ 内部。",
+          "requests": [
+            "若直线 §AC§ 与平面 §MNQ§ 平行，求 §\\frac{PN}{PC}§。",
+            "在（1）的条件下，求平面 §MNQ§ 与平面 §ABCD§ 所成锐二面角的余弦值。"
+          ]
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "constrained_value",
+            "variables": [
+              "x"
+            ],
+            "equations": [
+              "(12*x-6)-3"
+            ],
+            "conditions": [
+              "x>0",
+              "x<1"
+            ],
+            "value": "x",
+            "unique_value": true
+          },
+          {
+            "op": "plane_angle",
+            "plane": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0
+              ]
+            ],
+            "other_plane": [
+              [
+                0,
+                2,
+                "3/2"
+              ],
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                3,
+                3,
+                "3/4"
+              ]
+            ]
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "normal_x": "12*x-6",
+              "normal_z": "16*x-4"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "stem": "如图，在四棱锥 {{f1}} 中，底面 {{f2}} 为正方形，{{f3}} 垂直于底面，{{f4}}。点 {{f5}} 分别为 {{f6}} 的中点，点 {{f7}} 在线段 {{f8}} 内部。",
+        "options": {},
+        "parts": [
+          {
+            "text": "若直线 {{f9}} 与平面 {{f10}} 平行，求 {{f11}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "在（1）的条件下，求平面 {{f12}} 与平面 {{f13}} 所成锐二面角的余弦值。",
+            "task_refs": [
+              1,
+              2
+            ]
+          }
+        ],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "6b2e9df551e4f4eadad8e07286e474d893cec3396ca7d463894412983e4707e7",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "P-ABCD"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "ABCD"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "PA"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "AB=4,\\ PA=3"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "M,Q"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "PD,AB"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "N"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "PC"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "AC"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "MNQ"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "\\frac{PN}{PC}"
+          },
+          "f12": {
+            "kind": "notation",
+            "latex": "MNQ"
+          },
+          "f13": {
+            "kind": "notation",
+            "latex": "ABCD"
+          }
+        },
+        "condition_anchors": [
+          "如图，在四棱锥 {{f1}} 中，底面 {{f2}} 为正方形，{{f3}} 垂直于底面，{{f4}}"
+        ],
+        "request_anchors": [
+          "点 {{f5}} 分别为 {{f6}} 的中点，点 {{f7}} 在线段 {{f8}} 内部"
+        ],
+        "figure": {
+          "type": "wireframe",
+          "vertices": {
+            "A": [
+              0,
+              0,
+              0
+            ],
+            "B": [
+              4,
+              0,
+              0
+            ],
+            "C": [
+              4,
+              4,
+              0
+            ],
+            "D": [
+              0,
+              4,
+              0
+            ],
+            "P": [
+              0,
+              0,
+              3
+            ],
+            "M": [
+              0,
+              2,
+              1.5
+            ],
+            "N": [
+              3,
+              3,
+              0.75
+            ],
+            "Q": [
+              2,
+              0,
+              0
+            ]
+          },
+          "edges": [
+            [
+              "A",
+              "Q"
+            ],
+            [
+              "Q",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "P",
+              "A"
+            ],
+            [
+              "P",
+              "B"
+            ],
+            [
+              "P",
+              "N"
+            ],
+            [
+              "N",
+              "C"
+            ],
+            [
+              "P",
+              "M"
+            ],
+            [
+              "M",
+              "D"
+            ],
+            [
+              "M",
+              "N"
+            ],
+            [
+              "N",
+              "Q"
+            ],
+            [
+              "Q",
+              "M"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "hidden_edges": [
+            [
+              "D",
+              "A"
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "P",
+              "A"
+            ],
+            [
+              "Q",
+              "M"
+            ]
+          ],
+          "marked_points": [
+            "M",
+            "N",
+            "Q"
+          ],
+          "view_angles": [
+            23,
+            -56
+          ],
+          "label_offsets": {
+            "A": [
+              -13,
+              -6
+            ],
+            "B": [
+              9,
+              -8
+            ],
+            "C": [
+              8,
+              -2
+            ],
+            "D": [
+              8,
+              -14
+            ],
+            "P": [
+              -2,
+              6
+            ],
+            "M": [
+              -11,
+              19
+            ],
+            "N": [
+              7,
+              4
+            ],
+            "Q": [
+              0,
+              -13
+            ]
+          },
+          "caption_math": "AB=4,\\ PA=3"
+        },
+        "figure_required": true
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "可动顶点截面满足方向约束后确定二面角",
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "由三条相互垂直的棱建系，用内分参数描述N",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "由平面法向量与AC的数量积零解内分比",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "用A到平面的有向检验排除AC在平面内",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "把同一截面法向量用于二面角余弦",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          10,
+          16
+        ],
+        "structures": {
+          "model": "可动顶点截面满足方向约束后确定二面角",
+          "goal": "可动顶点截面满足方向约束后确定二面角",
+          "route": [
+            "由三条相互垂直的棱建系，用内分参数描述N",
+            "由平面法向量与AC的数量积零解内分比",
+            "用A到平面的有向检验排除AC在平面内",
+            "把同一截面法向量用于二面角余弦"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 13,
+        "part_points": [
+          9,
+          6
+        ],
+        "points_justification": "可动顶点截面满足方向约束后确定二面角",
+        "linked_progression": "把同一截面法向量用于二面角余弦",
+        "dimensions": {
+          "knowledge": "立体几何",
+          "condition_comprehension": "由三条相互垂直的棱建系，用内分参数描述N",
+          "modeling": "由三条相互垂直的棱建系，用内分参数描述N",
+          "logical_reasoning": "把同一截面法向量用于二面角余弦",
+          "calculation": "把同一截面法向量用于二面角余弦",
+          "integration": "可动顶点截面满足方向约束后确定二面角",
+          "breakthrough_visibility": "由平面法向量与AC的数量积零解内分比",
+          "source_level_difference": "可动顶点截面满足方向约束后确定二面角"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）以 \\(A\\) 为原点，分别沿 \\(AB,AD,AP\\) 设三轴正向。则 \\(M(0,2,\\frac32)\\)、\\(Q(2,0,0)\\)。设 \\(t=PN/PC\\in(0,1)\\)，得 \\(N(4t,4t,3-3t)\\)。",
+          "解向量垂直方程可取平面 \\(MNQ\\) 的非零法向量 \\((12t-6,-3,16t-4)\\)。由于 \\(\\overrightarrow{AC}=(4,4,0)\\)，由平行必有 \\(12t-9=0\\)，故 \\(t=3/4\\)。此时法向量为 \\((3,-3,8)\\)，而 \\(\\overrightarrow{QA}=(-2,0,0)\\) 与它的数量积为 \\(-6\\ne0\\)，所以 \\(AC\\) 不在该平面内，确为平行。",
+          "（2）底面的一个法向量为 \\((0,0,1)\\)。所成锐二面角的余弦为两法向量夹角余弦的绝对值，即 \\(\\frac{8}{\\sqrt{3^2+(-3)^2+8^2}}=\\frac8{\\sqrt{82}}\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q17",
+      "order": 17,
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "统计与概率",
+      "math_spec": {
+        "givens": {
+          "statement": "六枚封签顺次随机排成一列，其中恰有三枚带标记，各封签等可能排列。检查员从左至右逐枚读取。首次读到第二枚带标记的封签时立即停止。若到第4次才读到第二枚或第4次读完仍未读到第二枚，均在第4次停止。记 §T§ 为实际读取次数。",
+          "requests": [
+            "求 §T§ 的分布列和数学期望。",
+            "在 §T=4§ 的条件下，从未读的两枚封签中等可能抽一枚，求它带标记的概率。"
+          ]
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "distribution",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "a": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "condition": "x<y and y<a",
+            "value": "2+indicator(y>=3)+indicator(y>=4)"
+          },
+          {
+            "op": "probability",
+            "sample_space": {
+              "x": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "y": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "a": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "p": [
+                5,
+                6
+              ]
+            },
+            "event": "p==x or p==y or p==a",
+            "condition": "x<y and y<a and y>=4"
+          }
+        ]
+      },
+      "writing": {
+        "stem": "六枚封签顺次随机排成一列，其中恰有三枚带标记，各封签等可能排列。检查员从左至右逐枚读取。首次读到第二枚带标记的封签时立即停止。若到第4次才读到第二枚或第4次读完仍未读到第二枚，均在第4次停止。记 {{f1}} 为实际读取次数。",
+        "options": {},
+        "parts": [
+          {
+            "text": "求 {{f2}} 的分布列和数学期望。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "在 {{f3}} 的条件下，从未读的两枚封签中等可能抽一枚，求它带标记的概率。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "9960ea01b1141a33b194538254660d4544cb9b1d20effba06a37f40594b9ce56",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "T"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "T=4"
+          }
+        },
+        "condition_anchors": [
+          "六枚封签顺次随机排成一列，其中恰有三枚带标记，各封签等可能排列"
+        ],
+        "request_anchors": [
+          "记 {{f1}} 为实际读取次数"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "transfer",
+        "purpose": "截断停时与剩余样本的条件交换性",
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "把均匀排列换成三个带标记位置的20种等可能集合",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "按第二个标记首达和第四次停止分类",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "在T=4条件下组三个末位仍可交换",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "用前三位标记数加权未读位置的条件概率",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          9,
+          15
+        ],
+        "structures": {
+          "model": "截断停时与剩余样本的条件交换性",
+          "goal": "截断停时与剩余样本的条件交换性",
+          "route": [
+            "把均匀排列换成三个带标记位置的20种等可能集合",
+            "按第二个标记首达和第四次停止分类",
+            "在T=4条件下组三个末位仍可交换",
+            "用前三位标记数加权未读位置的条件概率"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 3,
+        "estimated_minutes": 12,
+        "part_points": [
+          8,
+          7
+        ],
+        "points_justification": "截断停时与剩余样本的条件交换性",
+        "linked_progression": "用前三位标记数加权未读位置的条件概率",
+        "dimensions": {
+          "knowledge": "统计与概率",
+          "condition_comprehension": "把均匀排列换成三个带标记位置的20种等可能集合",
+          "modeling": "把均匀排列换成三个带标记位置的20种等可能集合",
+          "logical_reasoning": "用前三位标记数加权未读位置的条件概率",
+          "calculation": "用前三位标记数加权未读位置的条件概率",
+          "integration": "截断停时与剩余样本的条件交换性",
+          "breakthrough_visibility": "按第二个标记首达和第四次停止分类",
+          "source_level_difference": "截断停时与剩余样本的条件交换性"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）三枚带标记封签的位置集合在 \\(\\binom63=20\\) 种中等可能。\\(T=2\\) 时前两位带标记，第三个带标记位置有 \\(4\\) 种。",
+          "\\(T=3\\) 时前两位恰一枚且第3位带标记，尚有第三枚在后三位，故有 \\(2\\cdot3=6\\) 种。其余 \\(10\\) 种为 \\(T=4\\)。所以 \\(P(T=2)=\\frac15,\\ P(T=3)=\\frac3{10},\\ P(T=4)=\\frac12\\)。\\(E(T)=2\\cdot\\frac15+3\\cdot\\frac3{10}+4\\cdot\\frac12=\\frac{33}{10}\\)。",
+          "（2）\\(T=4\\) 等价于前三位至多一枚带标记，其十种位置集合中，前三位无标记占一种，前三位恰一枚占九种。前一种后三位全有标记。后一种后三位等可能有两个标记，在后三位中任取一个指定位置有标记的概率为 \\(2/3\\)，因对称性，对第5、6位等可能抽一个也是 \\(2/3\\)。",
+          "故所求为 \\(\\frac1{10}\\cdot1+\\frac9{10}\\cdot\\frac23=\\frac7{10}\\)。也可在 \\(T=4\\) 的十种位置集合上逐一数第5、6位，二十种等可能结果中十四种有标记。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q18",
+      "order": 18,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "解析几何",
+      "math_spec": {
+        "givens": {
+          "statement": "如图，§C:\\ \\frac{x^2}{3}+y^2=1§ 是一椭圆。过点 §P(1,0)§ 的直线 §\\ell§ 与 §C§ 交于 §A,B§ 两点。记 §M§ 为弦 §AB§ 的中点，§H§ 为原点 §O§ 到直线 §\\ell§ 的垂足。",
+          "requests": [
+            "求 §M§ 的轨迹方程，并说明轨迹上哪些点能取到。",
+            "求 §MH§ 的最大值，并写出取得最大值时直线 §\\ell§ 的方程。"
+          ]
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "midpoint_polynomial": "x*(x-1)+3*y*y"
+            }
+          },
+          {
+            "op": "optimum",
+            "expression": "(4/9)*x*x*(1-x)/(1-2*x/3)",
+            "domain": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "op": "reasoning",
+            "algebra_checks": {
+              "gap_factor": "(9-6*x-32*x*x+32*x**3)-(4*x-3)**2*(2*x+1)"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "stem": "如图，{{f1}} 是一椭圆。过点 {{f2}} 的直线 {{f3}} 与 {{f4}} 交于 {{f5}} 两点。记 {{f6}} 为弦 {{f7}} 的中点，{{f8}} 为原点 {{f9}} 到直线 {{f10}} 的垂足。",
+        "options": {},
+        "parts": [
+          {
+            "text": "求 {{f11}} 的轨迹方程，并说明轨迹上哪些点能取到。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求 {{f12}} 的最大值，并写出取得最大值时直线 {{f13}} 的方程。",
+            "task_refs": [
+              1,
+              2
+            ]
+          }
+        ],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "31e0b9f3b11807c8a99b3e137f8c303aa53d9f6984990efa05b79694e6356508",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "C:\\ \\frac{x^2}{3}+y^2=1"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "P(1,0)"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "\\ell"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "C"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "A,B"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "f7": {
+            "kind": "notation",
+            "latex": "AB"
+          },
+          "f8": {
+            "kind": "notation",
+            "latex": "H"
+          },
+          "f9": {
+            "kind": "notation",
+            "latex": "O"
+          },
+          "f10": {
+            "kind": "notation",
+            "latex": "\\ell"
+          },
+          "f11": {
+            "kind": "notation",
+            "latex": "M"
+          },
+          "f12": {
+            "kind": "notation",
+            "latex": "MH"
+          },
+          "f13": {
+            "kind": "notation",
+            "latex": "\\ell"
+          }
+        },
+        "condition_anchors": [
+          "如图，{{f1}} 是一椭圆"
+        ],
+        "request_anchors": [
+          "记 {{f6}} 为弦 {{f7}} 的中点，{{f8}} 为原点 {{f9}} 到直线 {{f10}} 的垂足"
+        ],
+        "figure": {
+          "type": "coordinate",
+          "xlim": [
+            -2.12,
+            2.1
+          ],
+          "ylim": [
+            -1.31,
+            1.55
+          ],
+          "paths": [
+            {
+              "points": [
+                [
+                  1.7320508075688772,
+                  0.0
+                ],
+                [
+                  1.7309956890153528,
+                  0.03489949670250097
+                ],
+                [
+                  1.7278316188542084,
+                  0.0697564737441253
+                ],
+                [
+                  1.7225624520175482,
+                  0.10452846326765346
+                ],
+                [
+                  1.7151946081735094,
+                  0.13917310096006544
+                ],
+                [
+                  1.7057370639048863,
+                  0.17364817766693033
+                ],
+                [
+                  1.6942013417725479,
+                  0.20791169081775931
+                ],
+                [
+                  1.68060149627697,
+                  0.24192189559966773
+                ],
+                [
+                  1.6649540967349936,
+                  0.27563735581699916
+                ],
+                [
+                  1.6472782070926637,
+                  0.3090169943749474
+                ],
+                [
+                  1.6275953626987474,
+                  0.3420201433256687
+                ],
+                [
+                  1.6059295440672285,
+                  0.374606593415912
+                ],
+                [
+                  1.5823071476607464,
+                  0.40673664307580015
+                ],
+                [
+                  1.556756953730571,
+                  0.4383711467890774
+                ],
+                [
+                  1.5293100912523008,
+                  0.4694715627858908
+                ],
+                [
+                  1.5,
+                  0.49999999999999994
+                ],
+                [
+                  1.4688623898049864,
+                  0.5299192642332049
+                ],
+                [
+                  1.4359351970489016,
+                  0.5591929034707469
+                ],
+                [
+                  1.4012585384440734,
+                  0.5877852522924731
+                ],
+                [
+                  1.3648746621574823,
+                  0.6156614753256582
+                ],
+                [
+                  1.3268278963378768,
+                  0.6427876096865393
+                ],
+                [
+                  1.287164595108753,
+                  0.6691306063588582
+                ],
+                [
+                  1.2459330820929957,
+                  0.6946583704589973
+                ],
+                [
+                  1.2031835915379867,
+                  0.7193398003386511
+                ],
+                [
+                  1.1589682071129128,
+                  0.7431448254773941
+                ],
+                [
+                  1.1133407984528387,
+                  0.766044443118978
+                ],
+                [
+                  1.0663569555268528,
+                  0.788010753606722
+                ],
+                [
+                  1.0180739209102543,
+                  0.8090169943749475
+                ],
+                [
+                  0.9685505200432922,
+                  0.8290375725550417
+                ],
+                [
+                  0.9178470895614278,
+                  0.8480480961564261
+                ],
+                [
+                  0.8660254037844388,
+                  0.8660254037844386
+                ],
+                [
+                  0.8131485994539251,
+                  0.8829475928589269
+                ],
+                [
+                  0.7592810988109164,
+                  0.898794046299167
+                ],
+                [
+                  0.7044885311072939,
+                  0.9135454576426009
+                ],
+                [
+                  0.6488376526466564,
+                  0.9271838545667874
+                ],
+                [
+                  0.5923962654520478,
+                  0.9396926207859083
+                ],
+                [
+                  0.535233134659635,
+                  0.9510565162951535
+                ],
+                [
+                  0.4774179047389833,
+                  0.9612616959383189
+                ],
+                [
+                  0.41902101464199837,
+                  0.9702957262759965
+                ],
+                [
+                  0.36011361198391095,
+                  0.9781476007338056
+                ],
+                [
+                  0.3007674663608707,
+                  0.984807753012208
+                ],
+                [
+                  0.24105488190974667,
+                  0.9902680687415703
+                ],
+                [
+                  0.18104860921667287,
+                  0.9945218953682733
+                ],
+                [
+                  0.12082175668166967,
+                  0.9975640502598242
+                ],
+                [
+                  0.060447701447314366,
+                  0.9993908270190958
+                ],
+                [
+                  1.0605752387249068e-16,
+                  1.0
+                ],
+                [
+                  -0.06044770144731376,
+                  0.9993908270190958
+                ],
+                [
+                  -0.12082175668166946,
+                  0.9975640502598242
+                ],
+                [
+                  -0.18104860921667268,
+                  0.9945218953682734
+                ],
+                [
+                  -0.24105488190974608,
+                  0.9902680687415704
+                ],
+                [
+                  -0.3007674663608705,
+                  0.984807753012208
+                ],
+                [
+                  -0.3601136119839104,
+                  0.9781476007338057
+                ],
+                [
+                  -0.4190210146419982,
+                  0.9702957262759965
+                ],
+                [
+                  -0.47741790473898316,
+                  0.9612616959383189
+                ],
+                [
+                  -0.5352331346596347,
+                  0.9510565162951536
+                ],
+                [
+                  -0.5923962654520476,
+                  0.9396926207859084
+                ],
+                [
+                  -0.6488376526466565,
+                  0.9271838545667874
+                ],
+                [
+                  -0.7044885311072937,
+                  0.913545457642601
+                ],
+                [
+                  -0.7592810988109165,
+                  0.8987940462991669
+                ],
+                [
+                  -0.8131485994539245,
+                  0.8829475928589271
+                ],
+                [
+                  -0.8660254037844383,
+                  0.8660254037844387
+                ],
+                [
+                  -0.9178470895614276,
+                  0.8480480961564261
+                ],
+                [
+                  -0.968550520043292,
+                  0.8290375725550417
+                ],
+                [
+                  -1.018073920910254,
+                  0.8090169943749475
+                ],
+                [
+                  -1.0663569555268528,
+                  0.788010753606722
+                ],
+                [
+                  -1.1133407984528387,
+                  0.766044443118978
+                ],
+                [
+                  -1.1589682071129128,
+                  0.7431448254773942
+                ],
+                [
+                  -1.203183591537986,
+                  0.7193398003386514
+                ],
+                [
+                  -1.245933082092996,
+                  0.6946583704589971
+                ],
+                [
+                  -1.287164595108753,
+                  0.6691306063588583
+                ],
+                [
+                  -1.3268278963378766,
+                  0.6427876096865395
+                ],
+                [
+                  -1.364874662157482,
+                  0.6156614753256584
+                ],
+                [
+                  -1.4012585384440732,
+                  0.5877852522924732
+                ],
+                [
+                  -1.4359351970489014,
+                  0.5591929034707469
+                ],
+                [
+                  -1.4688623898049864,
+                  0.5299192642332049
+                ],
+                [
+                  -1.5,
+                  0.49999999999999994
+                ],
+                [
+                  -1.5293100912523003,
+                  0.4694715627858911
+                ],
+                [
+                  -1.556756953730571,
+                  0.4383711467890773
+                ],
+                [
+                  -1.5823071476607462,
+                  0.40673664307580043
+                ],
+                [
+                  -1.6059295440672283,
+                  0.37460659341591224
+                ],
+                [
+                  -1.6275953626987472,
+                  0.3420201433256689
+                ],
+                [
+                  -1.6472782070926637,
+                  0.3090169943749475
+                ],
+                [
+                  -1.6649540967349934,
+                  0.27563735581699966
+                ],
+                [
+                  -1.68060149627697,
+                  0.24192189559966773
+                ],
+                [
+                  -1.6942013417725479,
+                  0.20791169081775931
+                ],
+                [
+                  -1.7057370639048863,
+                  0.17364817766693028
+                ],
+                [
+                  -1.7151946081735092,
+                  0.13917310096006574
+                ],
+                [
+                  -1.7225624520175482,
+                  0.10452846326765373
+                ],
+                [
+                  -1.7278316188542084,
+                  0.06975647374412552
+                ],
+                [
+                  -1.7309956890153528,
+                  0.0348994967025007
+                ],
+                [
+                  -1.7320508075688772,
+                  1.2246467991473532e-16
+                ],
+                [
+                  -1.7309956890153528,
+                  -0.0348994967025009
+                ],
+                [
+                  -1.7278316188542087,
+                  -0.06975647374412483
+                ],
+                [
+                  -1.7225624520175484,
+                  -0.10452846326765305
+                ],
+                [
+                  -1.7151946081735092,
+                  -0.13917310096006552
+                ],
+                [
+                  -1.7057370639048863,
+                  -0.17364817766693047
+                ],
+                [
+                  -1.6942013417725479,
+                  -0.20791169081775907
+                ],
+                [
+                  -1.68060149627697,
+                  -0.2419218955996675
+                ],
+                [
+                  -1.6649540967349936,
+                  -0.275637355816999
+                ],
+                [
+                  -1.6472782070926637,
+                  -0.30901699437494773
+                ],
+                [
+                  -1.6275953626987474,
+                  -0.34202014332566866
+                ],
+                [
+                  -1.6059295440672285,
+                  -0.374606593415912
+                ],
+                [
+                  -1.5823071476607466,
+                  -0.4067366430757998
+                ],
+                [
+                  -1.5567569537305712,
+                  -0.43837114678907707
+                ],
+                [
+                  -1.5293100912523006,
+                  -0.46947156278589086
+                ],
+                [
+                  -1.4999999999999998,
+                  -0.5000000000000001
+                ],
+                [
+                  -1.4688623898049866,
+                  -0.5299192642332048
+                ],
+                [
+                  -1.4359351970489016,
+                  -0.5591929034707467
+                ],
+                [
+                  -1.4012585384440734,
+                  -0.587785252292473
+                ],
+                [
+                  -1.3648746621574828,
+                  -0.6156614753256578
+                ],
+                [
+                  -1.3268278963378768,
+                  -0.6427876096865393
+                ],
+                [
+                  -1.287164595108753,
+                  -0.6691306063588582
+                ],
+                [
+                  -1.2459330820929955,
+                  -0.6946583704589973
+                ],
+                [
+                  -1.203183591537987,
+                  -0.7193398003386509
+                ],
+                [
+                  -1.1589682071129133,
+                  -0.743144825477394
+                ],
+                [
+                  -1.113340798452839,
+                  -0.7660444431189779
+                ],
+                [
+                  -1.0663569555268524,
+                  -0.7880107536067221
+                ],
+                [
+                  -1.0180739209102545,
+                  -0.8090169943749473
+                ],
+                [
+                  -0.9685505200432929,
+                  -0.8290375725550414
+                ],
+                [
+                  -0.9178470895614279,
+                  -0.848048096156426
+                ],
+                [
+                  -0.8660254037844394,
+                  -0.8660254037844385
+                ],
+                [
+                  -0.8131485994539249,
+                  -0.882947592858927
+                ],
+                [
+                  -0.7592810988109169,
+                  -0.8987940462991668
+                ],
+                [
+                  -0.7044885311072937,
+                  -0.913545457642601
+                ],
+                [
+                  -0.6488376526466569,
+                  -0.9271838545667873
+                ],
+                [
+                  -0.5923962654520488,
+                  -0.9396926207859082
+                ],
+                [
+                  -0.5352331346596351,
+                  -0.9510565162951535
+                ],
+                [
+                  -0.4774179047389829,
+                  -0.961261695938319
+                ],
+                [
+                  -0.4190210146419982,
+                  -0.9702957262759965
+                ],
+                [
+                  -0.36011361198391156,
+                  -0.9781476007338056
+                ],
+                [
+                  -0.30076746636087054,
+                  -0.984807753012208
+                ],
+                [
+                  -0.24105488190974536,
+                  -0.9902680687415704
+                ],
+                [
+                  -0.1810486092166727,
+                  -0.9945218953682734
+                ],
+                [
+                  -0.12082175668166989,
+                  -0.9975640502598242
+                ],
+                [
+                  -0.06044770144731535,
+                  -0.9993908270190957
+                ],
+                [
+                  -3.1817257161747205e-16,
+                  -1.0
+                ],
+                [
+                  0.06044770144731471,
+                  -0.9993908270190958
+                ],
+                [
+                  0.12082175668166927,
+                  -0.9975640502598243
+                ],
+                [
+                  0.18104860921667207,
+                  -0.9945218953682734
+                ],
+                [
+                  0.24105488190974628,
+                  -0.9902680687415704
+                ],
+                [
+                  0.30076746636086993,
+                  -0.9848077530122081
+                ],
+                [
+                  0.36011361198390945,
+                  -0.9781476007338058
+                ],
+                [
+                  0.41902101464199754,
+                  -0.9702957262759966
+                ],
+                [
+                  0.4774179047389837,
+                  -0.9612616959383188
+                ],
+                [
+                  0.5352331346596345,
+                  -0.9510565162951536
+                ],
+                [
+                  0.5923962654520467,
+                  -0.9396926207859085
+                ],
+                [
+                  0.6488376526466564,
+                  -0.9271838545667874
+                ],
+                [
+                  0.7044885311072945,
+                  -0.9135454576426008
+                ],
+                [
+                  0.7592810988109163,
+                  -0.898794046299167
+                ],
+                [
+                  0.8131485994539244,
+                  -0.8829475928589271
+                ],
+                [
+                  0.8660254037844388,
+                  -0.8660254037844386
+                ],
+                [
+                  0.9178470895614274,
+                  -0.8480480961564261
+                ],
+                [
+                  0.9685505200432912,
+                  -0.8290375725550421
+                ],
+                [
+                  1.0180739209102538,
+                  -0.8090169943749476
+                ],
+                [
+                  1.0663569555268533,
+                  -0.7880107536067218
+                ],
+                [
+                  1.1133407984528385,
+                  -0.7660444431189781
+                ],
+                [
+                  1.1589682071129122,
+                  -0.7431448254773946
+                ],
+                [
+                  1.2031835915379854,
+                  -0.7193398003386517
+                ],
+                [
+                  1.245933082092995,
+                  -0.6946583704589976
+                ],
+                [
+                  1.287164595108753,
+                  -0.6691306063588581
+                ],
+                [
+                  1.3268278963378763,
+                  -0.6427876096865396
+                ],
+                [
+                  1.3648746621574817,
+                  -0.6156614753256588
+                ],
+                [
+                  1.4012585384440732,
+                  -0.5877852522924734
+                ],
+                [
+                  1.4359351970489012,
+                  -0.5591929034707473
+                ],
+                [
+                  1.4688623898049855,
+                  -0.5299192642332058
+                ],
+                [
+                  1.4999999999999993,
+                  -0.5000000000000004
+                ],
+                [
+                  1.5293100912523008,
+                  -0.4694715627858908
+                ],
+                [
+                  1.5567569537305712,
+                  -0.438371146789077
+                ],
+                [
+                  1.5823071476607464,
+                  -0.40673664307580015
+                ],
+                [
+                  1.6059295440672283,
+                  -0.37460659341591235
+                ],
+                [
+                  1.6275953626987474,
+                  -0.3420201433256686
+                ],
+                [
+                  1.6472782070926637,
+                  -0.3090169943749477
+                ],
+                [
+                  1.6649540967349934,
+                  -0.2756373558169998
+                ],
+                [
+                  1.68060149627697,
+                  -0.24192189559966787
+                ],
+                [
+                  1.6942013417725477,
+                  -0.20791169081775987
+                ],
+                [
+                  1.705737063904886,
+                  -0.17364817766693127
+                ],
+                [
+                  1.7151946081735092,
+                  -0.13917310096006588
+                ],
+                [
+                  1.7225624520175482,
+                  -0.10452846326765342
+                ],
+                [
+                  1.7278316188542087,
+                  -0.06975647374412476
+                ],
+                [
+                  1.7309956890153528,
+                  -0.034899496702500823
+                ],
+                [
+                  1.7320508075688772,
+                  -2.4492935982947064e-16
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  -0.4785702629343851,
+                  -0.9610706709073503
+                ],
+                [
+                  1.5965415970027423,
+                  0.38775203805178254
+                ]
+              ]
+            },
+            {
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0.29701230228471004,
+                  -0.45694200351493847
+                ]
+              ],
+              "dashed": true
+            }
+          ],
+          "labels": [
+            {
+              "at": [
+                -1.97,
+                1.19
+              ],
+              "math": "C:\\ \\frac{x^2}{3}+y^2=1",
+              "offset": [
+                0,
+                5
+              ]
+            },
+            {
+              "at": [
+                -0.4785702629343851,
+                -0.9610706709073503
+              ],
+              "math": "A",
+              "offset": [
+                -10,
+                -10
+              ],
+              "dot": true
+            },
+            {
+              "at": [
+                1.5965415970027423,
+                0.38775203805178254
+              ],
+              "math": "B",
+              "offset": [
+                8,
+                4
+              ],
+              "dot": true
+            },
+            {
+              "at": [
+                1,
+                0
+              ],
+              "math": "P(1,0)",
+              "offset": [
+                -29,
+                11
+              ],
+              "dot": true
+            },
+            {
+              "at": [
+                0.5589856670341786,
+                -0.2866593164277839
+              ],
+              "math": "M",
+              "offset": [
+                3,
+                -15
+              ],
+              "dot": true
+            },
+            {
+              "at": [
+                0.29701230228471004,
+                -0.45694200351493847
+              ],
+              "math": "H",
+              "offset": [
+                1,
+                -16
+              ],
+              "dot": true
+            },
+            {
+              "at": [
+                0,
+                0
+              ],
+              "math": "O",
+              "offset": [
+                -11,
+                5
+              ]
+            },
+            {
+              "at": [
+                -1.02,
+                -1.21
+              ],
+              "math": "\\ell",
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "figure_required": true
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "以弦中点轨迹控制投影偏差的可达最大值",
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "以弦中点为参数原点，将交点对称落实为二次式一次项为零",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "由直线经过P给出中点轨迹，单列竖线",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "用P是内点保证反向构造确有一对交点",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "把MH写成正交投影并用轨迹降为单变量",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "因式分解并检验等号点及直线",
+            "after": [
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          13,
+          21
+        ],
+        "structures": {
+          "model": "以弦中点轨迹控制投影偏差的可达最大值",
+          "goal": "以弦中点轨迹控制投影偏差的可达最大值",
+          "route": [
+            "以弦中点为参数原点，将交点对称落实为二次式一次项为零",
+            "由直线经过P给出中点轨迹，单列竖线",
+            "用P是内点保证反向构造确有一对交点",
+            "把MH写成正交投影并用轨迹降为单变量",
+            "因式分解并检验等号点及直线"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 17,
+        "part_points": [
+          8,
+          9
+        ],
+        "points_justification": "以弦中点轨迹控制投影偏差的可达最大值",
+        "linked_progression": "因式分解并检验等号点及直线",
+        "dimensions": {
+          "knowledge": "解析几何",
+          "condition_comprehension": "以弦中点为参数原点，将交点对称落实为二次式一次项为零",
+          "modeling": "以弦中点为参数原点，将交点对称落实为二次式一次项为零",
+          "logical_reasoning": "因式分解并检验等号点及直线",
+          "calculation": "因式分解并检验等号点及直线",
+          "integration": "以弦中点轨迹控制投影偏差的可达最大值",
+          "breakthrough_visibility": "由直线经过P给出中点轨迹，单列竖线",
+          "source_level_difference": "以弦中点轨迹控制投影偏差的可达最大值"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）设 \\(M(m,n)\\)，直线的方向向量为 \\((u,v)\\)。用 \\(x=m+tu,\\ y=n+tv\\) 代入椭圆方程，两个交点参数相反，故一次项系数为零，即 \\(mu+3nv=0\\)。",
+          "若 \\(M\\ne P\\)，方向可取 \\((m-1,n)\\)，得到 \\((m-\\frac12)^2+3n^2=\\frac14\\)。若 \\(M=P\\)，竖直弦的中点为 \\(P\\)，也在此轨迹上。反过来，轨迹上异于 \\(P\\) 的点以 \\(PM\\) 为割线，代入所得二次式的一次项为零，又因 \\(P\\) 在原椭圆内部，必有两个不同交点，故该点就是弦中点。因此整条轨迹都能取到。",
+          "（2）当 \\(M=P\\) 时直线竖直，\\(H=P\\)，距离为零。其余情形，\\(MH\\) 等于 \\(\\overrightarrow{OM}\\) 在割线方向上的投影长度。用 \\(3n^2=m(1-m)\\) 得",
+          "\\(MH^2=\\frac{[m(m-1)+n^2]^2}{(m-1)^2+n^2}=\\frac{4m^2(1-m)}{9(1-\\frac23m)}\\)，其中 \\(0\\le m<1\\)。",
+          "\\(\\frac18-MH^2=\\frac{(4m-3)^2(2m+1)}{72(1-\\frac23m)}\\ge0\\)。等号在 \\(m=3/4\\) 时取得；由轨迹 \\(n=\\pm1/4\\)，两点都能取到，直线方程为 \\(y=\\pm(x-1)\\)。所求最大值为 \\(\\frac{\\sqrt2}{4}\\)。"
+        ]
+      }
+    },
+    {
+      "id": "orig:math:hn27-math-pu:q19",
+      "order": 19,
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "函数与导数",
+      "math_spec": {
+        "givens": {
+          "statement": "对任意 §0<a<b§，定义 §L(a,b)=\\frac{b-a}{\\ln b-\\ln a}§。",
+          "requests": [
+            "证明 §L(a,b)>\\sqrt{ab}§。",
+            "求所有实数 §\\lambda§，使对任意 §0<a<b§，总有 §L(a,b)\\le\\lambda\\frac{a+b}{2}+(1-\\lambda)\\sqrt{ab}§。"
+          ]
+        },
+        "symbols": [],
+        "tasks": [
+          {
+            "op": "reasoning",
+            "expression": "exp(x)-exp(-x)-2*x",
+            "positive_x": true
+          },
+          {
+            "op": "reasoning",
+            "expression": "x*(exp(x)+exp(-x)+4)-3*(exp(x)-exp(-x))",
+            "algebra_checks": {
+              "third_at_zero": "6*a-2",
+              "mean_factor": "exp(x)+exp(-x)-2"
+            }
+          }
+        ]
+      },
+      "writing": {
+        "stem": "对任意 {{f1}}，定义 {{f2}}。",
+        "options": {},
+        "parts": [
+          {
+            "text": "证明 {{f3}}。",
+            "task_refs": [
+              0
+            ]
+          },
+          {
+            "text": "求所有实数 {{f4}}，使对任意 {{f5}}，总有 {{f6}}。",
+            "task_refs": [
+              1
+            ]
+          }
+        ],
+        "definitions": [],
+        "used_symbols": [],
+        "spec_sha256": "75949d369c5ef32266ccc1c3e0eacbbd962feb25b0ec8156d89087e144df0413",
+        "formulae": {
+          "f1": {
+            "kind": "notation",
+            "latex": "0<a<b"
+          },
+          "f2": {
+            "kind": "notation",
+            "latex": "L(a,b)=\\frac{b-a}{\\ln b-\\ln a}"
+          },
+          "f3": {
+            "kind": "notation",
+            "latex": "L(a,b)>\\sqrt{ab}"
+          },
+          "f4": {
+            "kind": "notation",
+            "latex": "\\lambda"
+          },
+          "f5": {
+            "kind": "notation",
+            "latex": "0<a<b"
+          },
+          "f6": {
+            "kind": "notation",
+            "latex": "L(a,b)\\le\\lambda\\frac{a+b}{2}+(1-\\lambda)\\sqrt{ab}"
+          }
+        },
+        "condition_anchors": [
+          "对任意 {{f1}}，定义 {{f2}}"
+        ],
+        "request_anchors": [
+          "对任意 {{f1}}，定义 {{f2}}"
+        ]
+      },
+      "generation": {
+        "source": "host_ai",
+        "template_calls": 0
+      },
+      "placement": {
+        "role": "challenge",
+        "purpose": "对数平均值全域上界及尖锐权重的两向证明",
+        "moves": [
+          {
+            "kind": "invariant",
+            "evidence": "约去a、b共同比例并用对数比把两个自变量归一",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "把自由权重不等式化为全正半轴的函数符号",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "在临界系数处三阶导符号逐次传回原函数",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "小正区间的反向三阶导构造低权重的失败样本",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          14,
+          22
+        ],
+        "structures": {
+          "model": "对数平均值全域上界及尖锐权重的两向证明",
+          "goal": "对数平均值全域上界及尖锐权重的两向证明",
+          "route": [
+            "约去a、b共同比例并用对数比把两个自变量归一",
+            "把自由权重不等式化为全正半轴的函数符号",
+            "在临界系数处三阶导符号逐次传回原函数",
+            "小正区间的反向三阶导构造低权重的失败样本"
+          ],
+          "objects": []
+        }
+      },
+      "assessment": {
+        "level": 4,
+        "estimated_minutes": 18,
+        "part_points": [
+          5,
+          12
+        ],
+        "points_justification": "对数平均值全域上界及尖锐权重的两向证明",
+        "linked_progression": "小正区间的反向三阶导构造低权重的失败样本",
+        "dimensions": {
+          "knowledge": "函数与导数",
+          "condition_comprehension": "约去a、b共同比例并用对数比把两个自变量归一",
+          "modeling": "约去a、b共同比例并用对数比把两个自变量归一",
+          "logical_reasoning": "小正区间的反向三阶导构造低权重的失败样本",
+          "calculation": "小正区间的反向三阶导构造低权重的失败样本",
+          "integration": "对数平均值全域上界及尖锐权重的两向证明",
+          "breakthrough_visibility": "把自由权重不等式化为全正半轴的函数符号",
+          "source_level_difference": "对数平均值全域上界及尖锐权重的两向证明"
+        },
+        "empirical": false
+      },
+      "solution": {
+        "paragraphs": [
+          "（1）记 \\(g=\\sqrt{ab}\\)，设 \\(t=\\frac12\\ln(b/a)>0\\)，则 \\(a=ge^{-t},\\ b=ge^t\\)，且 \\(\\frac{L}{g}=\\frac{e^t-e^{-t}}{2t}\\)。",
+          "设 \\(K(t)=e^t-e^{-t}-2t\\)，则 \\(K(0)=0\\)，且 \\(K'(t)=e^t+e^{-t}-2=(e^{t/2}-e^{-t/2})^2>0\\)（\\(t>0\\)）。所以 \\(L>g\\)。",
+          "（2）原不等式等价于 \\(H_\\lambda(t)=2t+\\lambda t(e^t+e^{-t}-2)-(e^t-e^{-t})\\ge0\\) 对所有 \\(t>0\\) 成立。",
+          "若 \\(\\lambda=1/3\\)，记 \\(F(t)=3H_{1/3}(t)=t(e^t+e^{-t}+4)-3(e^t-e^{-t})\\)。有 \\(F(0)=F'(0)=F''(0)=0\\)，且 \\(F'''(t)=t(e^t-e^{-t})>0\\)。逐次由导数符号得到 \\(F''(t)>0\\)、\\(F'(t)>0\\)、\\(F(t)>0\\)。又因 \\(t(e^t+e^{-t}-2)>0\\)，所有 \\(\\lambda\\ge1/3\\) 均可。",
+          "若 \\(\\lambda<1/3\\)，则 \\(H_\\lambda(0)=H_\\lambda'(0)=H_\\lambda''(0)=0\\)，而 \\(H_\\lambda'''(0)=6\\lambda-2<0\\)。由连续性，在足够小的 \\(t>0\\) 上三阶导数为负，依次得到 \\(H_\\lambda''<0,H_\\lambda'<0,H_\\lambda<0\\)。",
+          "该 \\(t\\) 由 \\(a=e^{-t}, b=e^t\\) 取得，故不能满足全称条件。所求 \\(\\lambda\\in[\\frac13,+\\infty)\\)。"
+        ]
+      }
+    }
+  ],
+  "quality_benchmarks": {
+    "protocol": "gaokao-editorial-audit-v2",
+    "subject": "math",
+    "series": "cn-new-gaokao-1",
+    "slots": {
+      "1": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q001",
+          "version_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q001",
+          "version_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "2": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q002",
+          "version_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q002",
+          "version_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "3": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q003",
+          "version_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q003",
+          "version_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "4": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q004",
+          "version_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q004",
+          "version_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "5": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q005",
+          "version_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q005",
+          "version_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "6": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q006",
+          "version_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q006",
+          "version_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "7": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q007",
+          "version_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q007",
+          "version_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "8": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q008",
+          "version_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q008",
+          "version_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "single_choice",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "9": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q009",
+          "version_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q009",
+          "version_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "10": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q010",
+          "version_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q010",
+          "version_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "11": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q011",
+          "version_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q011",
+          "version_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "12": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q012",
+          "version_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q012",
+          "version_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "13": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q013",
+          "version_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q013",
+          "version_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "14": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q014",
+          "version_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q014",
+          "version_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "fill_in",
+          "points": 5,
+          "scope": "practice_text"
+        }
+      },
+      "15": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q015",
+          "version_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 13,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q015",
+          "version_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 13,
+          "scope": "practice_text"
+        }
+      },
+      "16": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q016",
+          "version_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q016",
+          "version_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        }
+      },
+      "17": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q017",
+          "version_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q017",
+          "version_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        }
+      },
+      "18": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q018",
+          "version_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q018",
+          "version_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "19": {
+        "2025": {
+          "id": "2025-cn-math-national-1:q019",
+          "version_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+          "source_url": "https://www.jhgk.cn/upload/file/20250610/1749549496776033663.pdf",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-math-national-1:q019",
+          "version_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+          "source_url": "https://1cunzhang.com/index.php?id=5830&p=article",
+          "topic": null,
+          "features": [],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "practice_text"
+        }
+      }
+    },
+    "review_board": "three-readers-v2",
+    "qa_policy": [
+      {
+        "id": "math.stop",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "随机过程须写首次停时及截断",
+        "counterexample": "至第 N 次仍未报警时未定义读取次数"
+      },
+      {
+        "id": "math.modules",
+        "subject": "math",
+        "severity": "major",
+        "check": "查超越函数、常规导数、立几选填、非均值统计",
+        "counterexample": "全卷只计算平均数"
+      },
+      {
+        "id": "math.score",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "核对六分多选的部分分文案",
+        "counterexample": "套用选对但不全得3分"
+      },
+      {
+        "id": "math.notation",
+        "subject": "math",
+        "severity": "major",
+        "check": "核查补集、对立事件课标符号",
+        "counterexample": "U\\setminus A 或 Y^c"
+      },
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      }
+    ],
+    "exam_policy": {
+      "schema_version": 1,
+      "subject": "math",
+      "year": 2027,
+      "region": "河南",
+      "series": "cn-new-gaokao-1",
+      "rules": {
+        "multiple_choice": {
+          "id": "national-19-item-math-multiple-choice",
+          "subject": "math",
+          "kind": "multiple_choice",
+          "series": [
+            "cn-new-gaokao-1",
+            "cn-new-gaokao-2"
+          ],
+          "from_year": 2024,
+          "parameters": {
+            "full_credit": 6,
+            "partial_credit": "variable",
+            "wrong_credit": 0,
+            "instruction": "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+          },
+          "sources": [
+            {
+              "title": "2024年全国新课标Ⅰ卷数学多项选择题栏目",
+              "url": "https://down.jiaoyuwu.com/m00/8d/ac/69593b6f10b58145a8c3d3a9b8abdd88.pdf",
+              "evidence": "paper_facsimile"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

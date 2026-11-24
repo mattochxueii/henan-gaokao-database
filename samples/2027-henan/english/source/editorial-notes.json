@@ -1,0 +1,3554 @@
+{
+  "1": {
+    "answer": "B",
+    "reasoning": "男士本想借平板，女士说平板在工作地点并让他拿旧笔记本电脑。男士答应课后归还。",
+    "evidence": [
+      "Could I borrow your tablet for my sketching class?",
+      "My phone screen is too small.",
+      "My tablet's at work. Take my old laptop.",
+      "Great. I'll bring it back after class."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "识别原本想借的平板和男士已有的手机。",
+        "通过女士提出笔记本电脑及男士答应归还，确定实际借到的物品。"
+      ],
+      "linked_concepts": [
+        "原请求与最终决定",
+        "物品归属"
+      ]
+    },
+    "reading_turn": {
+      "span": "My tablet's at work. Take my old laptop.",
+      "from": "画图课需要更大的屏幕，男士先想到平板",
+      "to": "女士提供旧笔记本电脑，男士接受"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "男子提到借平板来上课",
+        "distortion": "把对话开头的请求当作末尾决定",
+        "misconception": "把对话开头的请求当作末尾决定",
+        "mechanism": "只记住 borrow your tablet，遗漏平板在工作地点和女士提出的替代品。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "男士明确提到手机",
+        "distortion": "把男士自己的物品当成此次借用的设备",
+        "misconception": "把男士自己的物品当成此次借用的设备",
+        "mechanism": "没有区分 My phone 与女士可借的 my old laptop，而且小屏幕正是寻找替代物的缘由。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "熟人间的设备借用对话",
+      "evidence": "用要用的画图程序与课后归还的答复交代借用物品和现场意图。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "分清原请求、替代物品和现有物品。"
+    }
+  },
+  "2": {
+    "answer": "A",
+    "reasoning": "女士想让盒子在周五前到姐姐手中，并询问签收附加费。男士要称箱子并选择能按时送达的服务，符合邮局寄件柜台场景。",
+    "evidence": [
+      "I'd like this to get to my sister by Friday. Does it cost extra for her to sign for it?",
+      "Let me weigh the box first. Then I can tell you which service will get it there in time."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "听出女士关注的是物品到另一人手中的时点和签收。",
+        "把称重与服务送达选项组合，判断地点是邮局。"
+      ],
+      "linked_concepts": [
+        "动作线索",
+        "服务场景推断"
+      ]
+    },
+    "reading_turn": {
+      "span": "Let me weigh the box first. Then I can tell you which service will get it there in time.",
+      "from": "一个包裹要送给姐姐且涉及签收",
+      "to": "这是在称重并比较履约时效的寄件服务"
+    },
+    "distractors": {
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "盒中物品送给家人，可能是礼物",
+        "distortion": "从物品用途反推购买礼物的地点",
+        "misconception": "从物品用途反推购买礼物的地点",
+        "mechanism": "把给姐姐的东西听成刚买的礼品，漏掉计重、送达日和收件人签字的组合。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "柜台人员对盒子称重并询问服务",
+        "distortion": "把寄往第三人的包裹当成旅客的托运行李",
+        "misconception": "把寄往第三人的包裹当成旅客的托运行李",
+        "mechanism": "称重联想到办理登机手续。这里讨论的是姐姐单独签收的送达服务。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "寄件服务对话",
+      "evidence": "服务人员先应答签收收费，再建议称重确定能及时送达的服务，话轮顺序自然。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "对所听内容的推断",
+      "focus": "将寄件动作、签收和时效联系到服务场景。"
+    }
+  },
+  "3": {
+    "answer": "C",
+    "reasoning": "女士询问后排能否看清她演示的投影片，男士指出画面大小问题，同时说能听清。两人讨论的是怎样改善下次演示。",
+    "evidence": [
+      "Could you see my slides from the last row?",
+      "The titles were fine. The photos were too small to see, though. I could hear you just fine.",
+      "I'll put one big picture on each slide next time."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分后排观众看见标题、看不清照片和听清声音三项反馈。",
+        "把下一次放大投影片图片的行动归纳为改进演示。"
+      ],
+      "linked_concepts": [
+        "局部反馈",
+        "主题概括"
+      ]
+    },
+    "reading_turn": {
+      "span": "I'll put one big picture on each slide next time.",
+      "from": "后排听清声音，但看不清投影片中的小图",
+      "to": "他们在用观众的反馈改善下一次展示"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "男士坐在最后一排",
+        "distortion": "把反馈视角变成两人的讨论目的",
+        "misconception": "把反馈视角变成两人的讨论目的",
+        "mechanism": "把 last row 当成在选择观众座位，女士提出的是更换投影片上的图片大小。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "男士说照片看不清",
+        "distortion": "把展示尺寸问题改成照片拍摄清晰度的问题",
+        "misconception": "把展示尺寸问题改成照片拍摄清晰度的问题",
+        "mechanism": "听到 photos 与 too small to see 便推测要改善拍摄。解决方法是放大显示既有图片。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "同伴间的演示反馈",
+      "evidence": "两人采用标题、照片、声音三个简短反馈，结尾有能回应意见的具体动作。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "主旨与要义",
+      "focus": "从两人对投影片和声音的反馈归纳谈话要义。"
+    }
+  },
+  "4": {
+    "answer": "C",
+    "reasoning": "4:30是当天钢琴课开始时间。平常的半小时加上延长的十五分钟，共45分钟，因此应在5:15接莉拉。",
+    "evidence": [
+      "I should pick Lila up at 4:30, right?",
+      "That's when her piano lesson starts today.",
+      "The teacher's adding fifteen minutes to the usual half hour. Could you be there when she's done?"
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "将4:30从男士猜测的接人时点改读为今天的开始时点。",
+        "根据新课时30加15分钟，推到下课接人时点5:15。"
+      ],
+      "linked_concepts": [
+        "时点与时长",
+        "旧规则和今日变更"
+      ]
+    },
+    "reading_turn": {
+      "span": "The teacher's adding fifteen minutes to the usual half hour.",
+      "from": "4:30仍然是有效信息，但指课开始",
+      "to": "总课时45分钟，结束后5:15接人"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "有效时点是4:30",
+        "distortion": "把开课时间当作结束后的接人时间",
+        "misconception": "把开课时间当作结束后的接人时间",
+        "mechanism": "跟随男士开头的猜测，漏听女士指出 That's when her piano lesson starts。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "4:30开课且常规课时为半小时",
+        "distortion": "用平常的时长替换当天时长",
+        "misconception": "用平常的时长替换当天时长",
+        "mechanism": "直接将4:30加半小时，遗漏教师今天再加的十五分钟。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "熟人间的接送安排",
+      "evidence": "常见的 right? 和 That's when 形成改口，时间推算依赖实际新时长。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "从被纠正的起始时间与延长的时长计算接人的时点。"
+    }
+  },
+  "5": {
+    "answer": "B",
+    "reasoning": "女士认可手机支架容易折叠，但抱怨只要碰屏幕支架就倒。男士问能否退货，她希望可以。",
+    "evidence": [
+      "I ordered this phone stand because it folds up easily.",
+      "But every time I touch the screen, the whole thing falls over.",
+      "Can you send it back?",
+      "I hope so. I've only had it since Monday."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分女士最初看重的折叠功能与实际使用后的抱怨。",
+        "用 falls over 及希望退货的回应，确认不满意的是稳定性。"
+      ],
+      "linked_concepts": [
+        "事实描述与评价",
+        "语气及转折"
+      ]
+    },
+    "reading_turn": {
+      "span": "But every time I touch the screen, the whole thing falls over.",
+      "from": "容易折叠是当初购买理由",
+      "to": "实际触屏时不稳，女士考虑退货"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "女士关心能折叠的尺寸便利",
+        "distortion": "把另一个可能的使用问题当成此处抱怨",
+        "misconception": "把另一个可能的使用问题当成此处抱怨",
+        "mechanism": "从折叠联想到节省空间，却没听出她实际指出的故障是碰触手机时翻倒。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "这款支架有折叠功能",
+        "distortion": "把优点误当成她对商品不满的理由",
+        "misconception": "把优点误当成她对商品不满的理由",
+        "mechanism": "从退货意图找产品缺点时记住了 fold，但忽略 easily 的肯定修饰。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "日常用品使用反馈",
+      "evidence": "先交代购买理由，再用手碰屏幕时实际发生的事体现差评。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "说话者意图、观点或态度",
+      "focus": "通过产品实用表现和退货反应判断女士的评价。"
+    }
+  },
+  "6": {
+    "answer": "A",
+    "reasoning": "高级组的人说得很快，泰莎几乎插不上话。换到轮流回答的小组后，她有时间完整讲自己的故事。",
+    "evidence": [
+      "Did you try the advanced group?",
+      "People spoke so quickly that I could barely get a sentence in.",
+      "They pulled questions from a bag and took turns answering them."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "把 spoke so quickly 和 barely get a sentence in 理解为没有合适的发言机会。",
+        "以新小组轮流说话能让她聊五分钟核对，确定困难出在参与发言。"
+      ],
+      "linked_concepts": [
+        "人物初始处境",
+        "语境意译"
+      ]
+    },
+    "reading_turn": {
+      "span": "People spoke so quickly that I could barely get a sentence in.",
+      "from": "高级组说话节奏快，她难以插话",
+      "to": "她遇到的困难是找不到发言机会"
+    },
+    "distractors": {
+      "B": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "换组后有现成的问题可作话题",
+        "distortion": "从后来较顺利的谈话倒推出原先是缺话题",
+        "misconception": "从后来较顺利的谈话倒推出原先是缺话题",
+        "mechanism": "只记住抽问题以后她谈了狗，没有把原先困难定位到速度和插话。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "泰莎确实在活动中回答问题",
+        "distortion": "把另一组的提问方式套到高级组的困难",
+        "misconception": "把另一组的提问方式套到高级组的困难",
+        "mechanism": "把抽问题时的安排与高级组混合，高级组的相关表述为发言太快。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "活动后的熟人对话",
+      "evidence": "用 get a sentence in 表达谈话困难，换组后的回答方式让其含义可推断。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "对所听内容的推断",
+      "focus": "由对话速度和插不上话推知最初遇到的困难。"
+    }
+  },
+  "7": {
+    "answer": "C",
+    "reasoning": "泰莎说会继续留在乔恩的小组，乔恩请她为问题袋写几个问题。",
+    "evidence": [
+      "I ended up talking for five minutes about my grandmother's dog.",
+      "Will you go back to the advanced group next time?",
+      "I'll stay with Jon's group for a while. He's asked me to write a few questions for the bag."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "把男士询问回高级组与泰莎决定留在乔恩组区分。",
+        "找出乔恩新交给她、见面前可准备的写问题任务。"
+      ],
+      "linked_concepts": [
+        "提议与最终决定",
+        "已发生的发言与新任务"
+      ]
+    },
+    "reading_turn": {
+      "span": "He's asked me to write a few questions for the bag.",
+      "from": "第一次参与时她回答袋里抽出的问题",
+      "to": "下一次她要供给袋里的问题"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "男士确实询问她会不会回高级组",
+        "distortion": "把问句中的方案当作她最后的决定",
+        "misconception": "把问句中的方案当作她最后的决定",
+        "mechanism": "听到 go back 和 next time 后不再跟踪回答，漏掉 I'll stay with Jon's group。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "上一次的发言内容有关祖母的狗",
+        "distortion": "把已完成的发言话题当作会前准备任务",
+        "misconception": "把已完成的发言话题当作会前准备任务",
+        "mechanism": "把印象鲜明的五分钟故事延续到下次见面，实际新安排是写供大家抽的问题。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "活动后的熟人对话",
+      "evidence": "下一步行动接上前文小组已实际使用的问题袋，不需听者猜新的规则。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "区分提议、已经讲过的内容和会前任务。"
+    }
+  },
+  "8": {
+    "answer": "B",
+    "reasoning": "原有16人预计到场，4人退出，所以现有12人。每片场地容纳4人，故要预订3片。",
+    "evidence": [
+      "We expected sixteen players on Sunday, but four have pulled out.",
+      "Four players to a court.",
+      "I can put all your courts next to one another upstairs, or there are two downstairs and one upstairs."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用16减去退出的4人，取得实际人数12。",
+        "用12除以每片场地4人，得到3片，并与前台给的两种安排互相核对。"
+      ],
+      "linked_concepts": [
+        "变更后数量",
+        "每单位容量"
+      ]
+    },
+    "reading_turn": {
+      "span": "We expected sixteen players on Sunday, but four have pulled out.",
+      "from": "原报名16人，后来有4人退出",
+      "to": "现有12人，按每片4人需要3片场地"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "工作人员说到楼下有两个场地",
+        "distortion": "把分开安排下的一部分场地当成总订场数",
+        "misconception": "把分开安排下的一部分场地当成总订场数",
+        "mechanism": "只保留 two downstairs，遗漏同时在楼上那一片，且客户后来选全组在一起。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "实际每个场地可用4人，原报名16人",
+        "distortion": "保留原人数计算，忽略退出条件",
+        "misconception": "保留原人数计算，忽略退出条件",
+        "mechanism": "16除以4可得到4片，但预订依据是退出后的12人。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "运动场地预约电话",
+      "evidence": "人数变化放进客户诉求，工作人员给出的备选布局可以用来核对计算。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "更新人数后按每片场地容纳人数换算。"
+    }
+  },
+  "9": {
+    "answer": "C",
+    "reasoning": "工作人员说可把所有场地放在相邻的楼上，也可分为楼下两个楼上一个。男士说要在一起，所以选择的是全部邻近的安排。",
+    "evidence": [
+      "Can we still get courts at 10:00?",
+      "I can put all your courts next to one another upstairs, or there are two downstairs and one upstairs.",
+      "Let's stay together. Do you lend out rackets?"
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "给两种布局配上全部相邻和分层两个特征。",
+        "根据 Let's stay together 对应同层相邻，找出选楼上的理由。"
+      ],
+      "linked_concepts": [
+        "备选布局",
+        "决定的理由"
+      ]
+    },
+    "reading_turn": {
+      "span": "Let's stay together. Do you lend out rackets?",
+      "from": "同一时刻可以选全楼上相邻或上下分配",
+      "to": "全组在一起的偏好决定了选楼上"
+    },
+    "distractors": {
+      "A": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "同一话轮随后询问球拍",
+        "distortion": "把紧跟着提出的另外一件事当成选楼上的原因",
+        "misconception": "把紧跟着提出的另外一件事当成选楼上的原因",
+        "mechanism": "因为借拍话题紧随决定而把两件事连因果，工作人员并未将球拍借用和楼层绑定。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "男士希望订10:00的场次",
+        "distortion": "把两种布局共有的已确认时段当成楼上的独有优点",
+        "misconception": "把两种布局共有的已确认时段当成楼上的独有优点",
+        "mechanism": "前台先用 You can 确认10:00，再给两种楼层组合，选择理由来自相邻条件。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "运动场地预约电话",
+      "evidence": "用 Let's stay together 的简短答复把客户的优先条件置于两种选项之后。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "对所听内容的推断",
+      "focus": "根据备选场地布局推断男士选择楼上的直接原因。"
+    }
+  },
+  "10": {
+    "answer": "A",
+    "reasoning": "工作人员会为新队员留一只球拍。他借用期间须把证件留在接待处。预约号用于进场出示，场地费在到场时支付。",
+    "evidence": [
+      "He'll need to leave an ID at reception while he uses it.",
+      "Can I pay when we turn up?",
+      "I'll text you the booking number now. Just show it when you come in."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用 he 和 while he uses it 把要求绑定到新队员和借用球拍。",
+        "分清 leave 证件、show 预约号、pay 场地费，确定要暂留证件。"
+      ],
+      "linked_concepts": [
+        "代词指称",
+        "场馆手续的对象"
+      ]
+    },
+    "reading_turn": {
+      "span": "He'll need to leave an ID at reception while he uses it.",
+      "from": "预约涉及全队，球拍借给其中一人",
+      "to": "新队员借用期间须把证件留在前台"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "预约号要在到达时给前台看",
+        "distortion": "把出示预约号的进场动作与留下物品的借用动作混为一谈",
+        "misconception": "把出示预约号的进场动作与留下物品的借用动作混为一谈",
+        "mechanism": "注意到场馆要求有号码，却没有核对动词 show 与 leave 分别针对什么。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "客人可以到场再付款",
+        "distortion": "把场地总体费用当成新队员需要留下的借拍押品",
+        "misconception": "把场地总体费用当成新队员需要留下的借拍押品",
+        "mechanism": "用末段的付费信息回答较早的个人借拍条件，漏掉 while he uses it 对证件的限定。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "运动场地预约电话",
+      "evidence": "借用条件、付费安排和进场凭据以相互独立的短话轮交代。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "分清借拍押证、登记预约与支付场地费三项手续。"
+    }
+  },
+  "11": {
+    "answer": "B",
+    "reasoning": "已经提出请求的图书准备好后，图书馆发出一个号码。读者在柜上输入该号码来取书，柜台关门时也可以这样做。",
+    "evidence": [
+      "Did you read the library's note about the lockers by the side door?",
+      "When a book you've requested is ready, they'll send you a number.",
+      "You enter it at a locker and get your book, even if the front desk has closed."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "确认发号码的条件是读者已经提出请求且书已备好。",
+        "按输入号码然后拿到书的动作顺序判断柜的用途是领预约书。"
+      ],
+      "linked_concepts": [
+        "有条件的领取流程",
+        "物品移动方向"
+      ]
+    },
+    "reading_turn": {
+      "span": "You enter it at a locker and get your book, even if the front desk has closed.",
+      "from": "图书馆通知某本申请的书可领取",
+      "to": "读者在柜上凭号码取到这本书"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "柜用于处理图书馆的借阅相关物品",
+        "distortion": "把借阅流程的取书方向颠倒为归还方向",
+        "misconception": "把借阅流程的取书方向颠倒为归还方向",
+        "mechanism": "把 library、book 和 locker 连成常见的还书流程，忽略实际动作是 get，且书已为申请者准备好。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "柜在边门附近，读者会接触它",
+        "distortion": "把图书领取柜当作常见储物柜",
+        "misconception": "把图书领取柜当作常见储物柜",
+        "mechanism": "用 locker 的日常用途猜放包，忽略这组柜要求用预约书的专用号码开启。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "围绕图书服务的朋友对话",
+      "evidence": "新服务由一方在口头转述中用 ready、send、get 说明，听者可跟踪清晰流程。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "听清预约通知、输入号码和取得图书的动作方向。"
+    }
+  },
+  "12": {
+    "answer": "A",
+    "reasoning": "女士说提前关柜台很可惜。她以自己只记得部分书名、却得到馆员帮助为例，说明自助柜适合取已预约的书，找书时仍需要工作人员。",
+    "evidence": [
+      "Sounds as if the library could close the desk earlier, then.",
+      "That would be a shame.",
+      "I only knew part of the title, and the woman at the desk found it for me.",
+      "I'd still want someone to talk to when I'm looking for something."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "先把提前关闭柜台的提议归给男士，再听女士的否定反应。",
+        "用馆员凭部分标题找到书的例子概括她担心失去的帮助。"
+      ],
+      "linked_concepts": [
+        "说话人观点归属",
+        "举例支撑态度"
+      ]
+    },
+    "reading_turn": {
+      "span": "I'd still want someone to talk to when I'm looking for something.",
+      "from": "女士愿使用柜领取已经找到的书",
+      "to": "她不同意因此缩减能为读者找书的人工帮助"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "柜台关门后使用柜仍可取已预约的书",
+        "distortion": "把自助柜的便利性归给把柜台更早关掉的决定",
+        "misconception": "把自助柜的便利性归给把柜台更早关掉的决定",
+        "mechanism": "把两个不同措施合并，女士认可晚间取书，但 That would be a shame 明确回应提前关台的提议。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "女士说愿意自己取已预约的书",
+        "distortion": "把部分情形可自助扩大成没有人工也能应付",
+        "misconception": "把部分情形可自助扩大成没有人工也能应付",
+        "mechanism": "漏读 books I've already requested 限定，只听到了她认可自助柜。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "围绕图书服务的朋友对话",
+      "evidence": "用简短 That would be a shame 先表态，随后自然讲述求助经历。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "说话者意图、观点或态度",
+      "focus": "区分对自助工具的认可和对提前关柜台的态度。"
+    }
+  },
+  "13": {
+    "answer": "C",
+    "reasoning": "男士说馆方到明天还在收意见，建议她交一条。女士答应今晚写意见。",
+    "evidence": [
+      "The library's collecting comments until tomorrow. Want to send that in?",
+      "Good idea. I'll write it this evening."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "定位馆方征求 comments，辨认 send that in 指提交意见。",
+        "用 tonight 对应的 this evening 和 write it，确认今晚要写评论。"
+      ],
+      "linked_concepts": [
+        "代词及先行词",
+        "行动时点"
+      ]
+    },
+    "reading_turn": {
+      "span": "Good idea. I'll write it this evening.",
+      "from": "馆方在收集对服务的看法",
+      "to": "女士今晚把自己的意见写下来"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "女士未来愿使用新的领书柜",
+        "distortion": "把一般使用意向读成今晚的具体安排",
+        "misconception": "把一般使用意向读成今晚的具体安排",
+        "mechanism": "只抓住 I'd use the lockers，遗漏后一句明确给今晚安排的动词 write。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "女士谈过寻找本地建筑书的经历",
+        "distortion": "把上周已在馆员帮助下完成的找书换成今晚预约行动",
+        "misconception": "把上周已在馆员帮助下完成的找书换成今晚预约行动",
+        "mechanism": "听到 book 和 requested 便想到预约，时间指示词 last week 与 this evening 分属两件事情。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "围绕图书服务的朋友对话",
+      "evidence": "用 write it 续接前一句评论，结尾是符合对话语境的短答。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "区分今晚答应做的事与上周和将来的动作。"
+    }
+  },
+  "14": {
+    "answer": "B",
+    "reasoning": "祖父去看祖母时要把拼图收起来，让别人能用桌子。每次进度被打断，所以他几乎从来拼不完。",
+    "evidence": [
+      "He liked doing the puzzle in the hospital waiting room.",
+      "Whenever he left to see my grandmother, he had to put the puzzle away so other people could use the table.",
+      "He hardly ever got to finish it."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "确认祖父拼图地点在候诊室公共桌上，临时离开时要收起。",
+        "将反复收起后的结果定位到 hardly ever got to finish。"
+      ],
+      "linked_concepts": [
+        "条件反复发生",
+        "活动后果"
+      ]
+    },
+    "reading_turn": {
+      "span": "He hardly ever got to finish it.",
+      "from": "爷爷喜欢做拼图，也要为共享桌面让出空间",
+      "to": "打断影响完成整幅拼图"
+    },
+    "distractors": {
+      "A": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "拼图要收起来且常无法完成",
+        "distortion": "用常见的少零件解释没有拼完",
+        "misconception": "用常见的少零件解释没有拼完",
+        "mechanism": "由收纳可能丢小片联想到缺片，访谈明确给的是离开时收起和失去持续操作机会。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "节目后面提到有人可能独自拼每块",
+        "distortion": "把车站使用者最初被预期的行为移给祖父",
+        "misconception": "把车站使用者最初被预期的行为移给祖父",
+        "mechanism": "把单人操作当成祖父遭遇的困难，祖父的问题是常被中断。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "小发明节目访谈",
+      "evidence": "借候诊室桌面给其他人使用的具体状况说明拼图为何没法继续。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "抓住被打断后清空桌面与无法完成拼图的结果。"
+    }
+  },
+  "15": {
+    "answer": "C",
+    "reasoning": "米娅保留原来的总片数。她把同一幅街景分成六小块，每个场景都有一个托盘，可先拼完单块，离开后其余拼图仍可留给别人。",
+    "evidence": [
+      "I kept the same number of pieces.",
+      "I divided the picture into six scenes and put each scene in its own tray.",
+      "You can finish one scene and leave. When you fit the trays together, you get six views of a single street."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "核对整幅的总片数保持不变，场景单位以托盘拆分。",
+        "从拼完一景即可离开、托盘还能组合，推得各部分可单独完成。"
+      ],
+      "linked_concepts": [
+        "部件与整体",
+        "设计改变的作用"
+      ]
+    },
+    "reading_turn": {
+      "span": "I divided the picture into six scenes and put each scene in its own tray.",
+      "from": "整幅拼图的片数没有调整",
+      "to": "操作被拆成可分别完成又能合并的六部分"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "每个托盘有较少的局部拼图块",
+        "distortion": "把局部难度降低误读为整幅片数缩减",
+        "misconception": "把局部难度降低误读为整幅片数缩减",
+        "mechanism": "从单景较易完成倒推出总量变小，忽略 I kept the same number of pieces。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "不同托盘展示不同视角",
+        "distortion": "把同一条街的六个视角当成六条街",
+        "misconception": "把同一条街的六个视角当成六条街",
+        "mechanism": "听到 six views 或 six scenes 就推测整幅设计由不同街道组成，single street 明确限定范围。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "小发明节目访谈",
+      "evidence": "用 tray 具体表示拆分单位，访谈回答也说明它们如何合成一个整体。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "对所听内容的推断",
+      "focus": "从托盘安排和拼合方式推断各部分可独立完成。"
+    }
+  },
+  "16": {
+    "answer": "A",
+    "reasoning": "米娅本以为旅客会安静地各自拼图。实际他们主动问陌生人别的托盘上是什么场景，还有人留下观看托盘拼合。",
+    "evidence": [
+      "What surprised you when you tried it at Hillford Station?",
+      "We thought travelers would work quietly on their own, but they kept asking strangers about the scenes in the other trays.",
+      "Some even stayed to see the trays put together."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用 thought 区分设计者原先设想的安静单独活动。",
+        "在 but 之后听出陌生旅客主动交流，这与预期的落差构成惊喜。"
+      ],
+      "linked_concepts": [
+        "预期与结果",
+        "带情绪的观察"
+      ]
+    },
+    "reading_turn": {
+      "span": "We thought travelers would work quietly on their own, but they kept asking strangers about the scenes in the other trays.",
+      "from": "以为每个人选择单个托盘安静完成",
+      "to": "不同桌面场景促使陌生旅客交流"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "确实有人停留到看见整幅拼成",
+        "distortion": "把旁观组装的人改成独自完成全谜题的人",
+        "misconception": "把旁观组装的人改成独自完成全谜题的人",
+        "mechanism": "听到 see the trays put together 就赋予停留者组装主语，实际只报告他们留下看。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "片段明示安静单独拼图",
+        "distortion": "把设计者的原先预期归为旅客的实际选择",
+        "misconception": "把设计者的原先预期归为旅客的实际选择",
+        "mechanism": "记住 thought 后的内容，漏掉 but 后面实际交流的相反表现。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "小发明节目访谈",
+      "evidence": "主持人问意外，受访者用原预期衬托出亲眼看到的交谈。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "说话者意图、观点或态度",
+      "focus": "根据受访者原有预期与实际反应识别惊喜所在。"
+    }
+  },
+  "17": {
+    "answer": "C",
+    "reasoning": "特纳老师提到下周访谈工厂老员工，本节课由学生伙伴扮演嘉宾。她全段介绍今天的练习安排、追问方式和交作业要求。",
+    "evidence": [
+      "Next week you'll record short interviews with former employees of the old Weston bus factory.",
+      "This afternoon is practice. Your partner will play the guest.",
+      "After your practice interview, listen to the first minute together."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分下周真实采访与本日下午同伴扮演的模拟访谈。",
+        "用整段指导的动作与练习后反思，概括说话者正在给练习做准备。"
+      ],
+      "linked_concepts": [
+        "听话对象",
+        "将来真实任务与当前场合",
+        "主旨"
+      ]
+    },
+    "reading_turn": {
+      "span": "This afternoon is practice. Your partner will play the guest.",
+      "from": "谈到将来采访老工人",
+      "to": "本次在说明如何练习访谈"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "老师来自历史系并用旧工厂照片",
+        "distortion": "把练习所用的主题素材当成整段主讲内容",
+        "misconception": "把练习所用的主题素材当成整段主讲内容",
+        "mechanism": "识别了历史背景，却没有听到任何工厂发展史，话语主体是如何采访。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "下周的采访对象是工厂前员工",
+        "distortion": "把实际听众学生当作被邀请来的前员工",
+        "misconception": "把实际听众学生当作被邀请来的前员工",
+        "mechanism": "混淆计划中的嘉宾和本次指令所面对的学生，Your partner will play the guest 已标明身份。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "教师面向学生的课堂说明",
+      "evidence": "开头将下周任务和本次练习置于相邻句，方便一次听清场合。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "主旨与要义",
+      "focus": "辨认讲话的对象、当前场合和说明目的。"
+    }
+  },
+  "18": {
+    "answer": "A",
+    "reasoning": "学生伙伴说出让人意外的细节时，老师要求先请对方多说一点。印好的问题稍后可以再回到。",
+    "evidence": [
+      "If they mention something that surprises you, ask them to tell you more.",
+      "You can return to the printed questions later.",
+      "After your practice interview, listen to the first minute together."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用 if 识别出现意外信息的触发条件。",
+        "根据 tell you more 与 printed questions later 排出当下先追问、之后再回清单的先后。"
+      ],
+      "linked_concepts": [
+        "条件规则",
+        "现场追问与回放顺序"
+      ]
+    },
+    "reading_turn": {
+      "span": "If they mention something that surprises you, ask them to tell you more.",
+      "from": "受访伙伴说出意外细节",
+      "to": "先请伙伴展开这个细节再返回印好的问题"
+    },
+    "distractors": {
+      "B": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "桌上确有印好的清单",
+        "distortion": "把之后返回清单的动作提前到听见新细节的当刻",
+        "misconception": "把之后返回清单的动作提前到听见新细节的当刻",
+        "mechanism": "以为按问题表顺序是首要要求，遗漏 later 和即时 ask them to tell you more。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "采访录音需要之后回听",
+        "distortion": "把练习完毕后的检听安排提前到受访人说话时",
+        "misconception": "把练习完毕后的检听安排提前到受访人说话时",
+        "mechanism": "抓住声音录制和 listen to 的动作，忽略回听限定在 After your practice interview。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "教师面向学生的课堂说明",
+      "evidence": "条件句直接带出自然的采访追问，随后独立说明何时回来使用问题表。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "听清触发条件并选择正确的即时动作。"
+    }
+  },
+  "19": {
+    "answer": "B",
+    "reasoning": "教师要求开头把旧工厂照片放到中间。她解释，看到那个时期的一件东西可以帮助伙伴想起细节。",
+    "evidence": [
+      "For today, just record the sound.",
+      "Put one of the old factory photos on the table between you before you start.",
+      "Your partner may find it easier to remember details when there's something from that time to look at."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "把放照片动作归到访谈开始前的准备，而非录制媒介。",
+        "接上老师对 remember details 的解释，明确照片用于触发回忆。"
+      ],
+      "linked_concepts": [
+        "动作与用途",
+        "背景物件提供线索"
+      ]
+    },
+    "reading_turn": {
+      "span": "Your partner may find it easier to remember details when there's something from that time to look at.",
+      "from": "练习开始前把年代照片放在桌上",
+      "to": "让扮演受访者的伙伴借助图像想起相关细节"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "老师先回应了学生想拍视频的问题",
+        "distortion": "把展示照片理解成让伙伴适应镜头",
+        "misconception": "把展示照片理解成让伙伴适应镜头",
+        "mechanism": "把 photos 和 taking video 当成同一操作，原稿规定今天仅录声音。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "桌上同时有问题清单和照片",
+        "distortion": "把帮助受访者想起内容换成帮采访者挑印好的问题",
+        "misconception": "把帮助受访者想起内容换成帮采访者挑印好的问题",
+        "mechanism": "感知到两份材料都为访谈服务，却把照片给受访人的记忆功能移到题单的选题功能。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "教师面向学生的课堂说明",
+      "evidence": "put 和 remember 在相邻句中配对，考生可以从口语解释直接听出意图。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "说话者意图、观点或态度",
+      "focus": "以因果说明理解教师摆放照片的目的。"
+    }
+  },
+  "20": {
+    "answer": "A",
+    "reasoning": "回听录音开头一分钟后，写下一项要改进的事，出门时交便条。完整录音留到明天。",
+    "evidence": [
+      "Next to the recorder there's a list of questions.",
+      "Then write down one thing you want to do differently and hand me the note on your way out.",
+      "Save the recording for tomorrow."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "根据 on your way out 将提交时间定位到学生离开时。",
+        "用 hand me the note 与 save the recording 区分当场交的便条和次日用的录音。"
+      ],
+      "linked_concepts": [
+        "结束流程",
+        "交付物和保留物"
+      ]
+    },
+    "reading_turn": {
+      "span": "Then write down one thing you want to do differently and hand me the note on your way out.",
+      "from": "结束后回听开头可发现改进点",
+      "to": "把一项改进写在便条交给老师，留录音次日使用"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "问题清单是课堂桌面上的纸质材料",
+        "distortion": "把印好的清单替换为学生离开前自写的便条",
+        "misconception": "把印好的清单替换为学生离开前自写的便条",
+        "mechanism": "两样都可用纸承载，实际 hand me 的直接对象是 the note。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "整段录音是这节课练习的产物",
+        "distortion": "把明天要使用的材料当成现在上交的作业",
+        "misconception": "把明天要使用的材料当成现在上交的作业",
+        "mechanism": "听到最后的 recording 就把它与上交合并，原句特别说 Save the recording for tomorrow。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "教师面向学生的课堂说明",
+      "evidence": "清晰区分 hand 与 save，分别收束当日和次日要使用的材料。"
+    },
+    "sources": [],
+    "listening_skill": {
+      "category": "事实性具体信息",
+      "focus": "识别结束时交给老师的物品与留待下次的文件。"
+    }
+  },
+  "21": {
+    "answer": "B",
+    "reasoning": "13:00后只有 Bread Shapes 和 Baker at Work。前者让12岁及以上的参与者亲手做面包，后者是观看演示。",
+    "evidence": [
+      "Bread Shapes  |  13:15–14:00  |  $9",
+      "Make a small loaf from dough prepared that morning.",
+      "Ages twelve and up.",
+      "This is a demonstration for all ages, with seats behind the kitchen barrier."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "按时段留下13:00之后的两项活动。",
+        "用年龄和动手制作两个条件筛出 Bread Shapes。"
+      ],
+      "linked_concepts": [
+        "时段筛选",
+        "参加资格及活动性质"
+      ]
+    },
+    "reading_turn": {
+      "span": "Make a small loaf from dough prepared that morning.",
+      "from": "两项下午活动均允许12岁访客到场",
+      "to": "只有 Bread Shapes 允许该访客实际制作食物"
+    },
+    "distractors": {
+      "A": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "15:00开始且不限年龄",
+        "distortion": "把观看演示当成动手活动",
+        "misconception": "把观看演示当成动手活动",
+        "mechanism": "读到面包师制作餐包便把制作行为归给访客，漏看座位在操作区隔栏外。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "可制作午餐且年龄符合",
+        "distortion": "把活动产物当成活动时段",
+        "misconception": "把活动产物当成活动时段",
+        "mechanism": "由 Lunchbox 和午餐联想到下午，忽略条目显示10:45开始。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "可动手做面团且年龄符合",
+        "distortion": "漏掉13:00后的时段要求",
+        "misconception": "漏掉13:00后的时段要求",
+        "mechanism": "筛选时只核对手工制作和年龄，留下9:30的活动。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "社区活动公告",
+      "evidence": "四项先列时间和费用，再用简短祈使句说明活动，符合现场公告的检索习惯。"
+    },
+    "sources": []
+  },
+  "22": {
+    "answer": "D",
+    "reasoning": "Lunchbox Lab 每位参与者收费9美元。这名孩子和父亲都制作午餐，合计18美元。旁观成人免费条款不适用于参加制作的父亲。",
+    "evidence": [
+      "Lunchbox Lab  |  10:45–11:30  |  $9",
+      "Workshop fees are per participant and include ingredients.",
+      "Adults who only watch can come along for free."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "在指定场次核对单人价格9美元。",
+        "依据两人均动手和按参与者计费，计算9加9。"
+      ],
+      "linked_concepts": [
+        "场次价格",
+        "参与者与陪同旁观者"
+      ]
+    },
+    "reading_turn": {
+      "span": "Adults who only watch can come along for free.",
+      "from": "成人陪同可以免费，但免费带有 only watch 限制",
+      "to": "父亲也制作午餐，应按第二位参与者计费"
+    },
+    "distractors": {
+      "A": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "午餐工作坊标价9美元",
+        "distortion": "把陪同成人一律计为免费",
+        "misconception": "把陪同成人一律计为免费",
+        "mechanism": "读到成人免费就只加孩子一人的费用，忽略 only watch 和题干 both。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "两人都应计费",
+        "distortion": "误用 Fresh Pasta 的6美元单价",
+        "misconception": "误用 Fresh Pasta 的6美元单价",
+        "mechanism": "把公告第一项出现的工作坊价格用于指定场次，计算6加6。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "需要按人分别计费且有6美元和9美元两个价格",
+        "distortion": "把不同活动的票价当作年龄档位",
+        "misconception": "把不同活动的票价当作年龄档位",
+        "mechanism": "用低龄可参加的 Fresh Pasta 价格给孩子计费，再用 Lunchbox Lab 价格给父亲计费。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "社区活动公告",
+      "evidence": "Workshop fees are per participant 在总规则里一次交代适用单位，活动条目只列单价。"
+    },
+    "sources": []
+  },
+  "23": {
+    "answer": "A",
+    "reasoning": "工作坊开始前十分钟停止保留未认领的名额。厨房随后把这些名额给在候补名单上的访客。",
+    "evidence": [
+      "Book workshops online and check in at the side desk at least ten minutes before the start.",
+      "After that deadline, we offer any unclaimed places to visitors on the waiting list.",
+      "You can put your name on that list at the side desk on the day of the event."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "划出网上预约、现场签到、到期释放三个环节。",
+        "根据 after that deadline 理解到期释放未认领座位供候补者使用。"
+      ],
+      "linked_concepts": [
+        "时限及后续动作",
+        "预约名额与候补名额"
+      ]
+    },
+    "reading_turn": {
+      "span": "After that deadline, we offer any unclaimed places to visitors on the waiting list.",
+      "from": "至少提前十分钟签到以保留名额",
+      "to": "截止后可以把未签到者的名额给候补访客"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "候补与演示都涉及现场位置",
+        "distortion": "把工作坊名额理解成挑选具体座位",
+        "misconception": "把工作坊名额理解成挑选具体座位",
+        "mechanism": "读到 places 又看到演示有 seats，推成签到期限决定选择座位的顺序。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "工作坊有费用并设有签到台",
+        "distortion": "把现场签到的职责换成售票收款",
+        "misconception": "把现场签到的职责换成售票收款",
+        "mechanism": "把付费和签到并在一起理解，忽略工作坊预约在线办理且针对截止的后续动作是释放名额。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "工作坊按人收费且包括食材",
+        "distortion": "把签到期限看成备料节点",
+        "misconception": "把签到期限看成备料节点",
+        "mechanism": "从谁签到推想厨房按实际人数备料，遗漏正文明确交代的未认领名额转给候补者。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "社区活动公告",
+      "evidence": "公告用时间条件紧接具体处理动作，读者能据此安排行程。"
+    },
+    "sources": []
+  },
+  "24": {
+    "answer": "C",
+    "reasoning": "记分板记录当天每人修好的车数，维加先生在叙述者的五项成绩旁画了星。洗手后特意多走几步经过板子，体现叙述者想再欣赏自己的成绩。",
+    "evidence": [
+      "It showed how many donated bikes each volunteer had repaired that Saturday.",
+      "On my fourth Saturday I counted five marks beside my name.",
+      "Mr. Vega, who ran the shop, drew a star there in chalk.",
+      "I went to wash my hands and came back past the board, although there was a shorter way to the door."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "确认板上的五个记号与星代表已完成的成绩。",
+        "用有近路却再经过板子的选择推断叙述者对星记号的自豪感。"
+      ],
+      "linked_concepts": [
+        "叙事细节",
+        "行为动机"
+      ]
+    },
+    "reading_turn": {
+      "span": "I went to wash my hands and came back past the board, although there was a shorter way to the door.",
+      "from": "值班结束前洗手后再经过记分板",
+      "to": "特意绕路的目的在于再看自己的成绩"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "记分板记录自行车维修",
+        "distortion": "把已完成的数量理解为待修车辆清单",
+        "misconception": "把已完成的数量理解为待修车辆清单",
+        "mechanism": "把 volunteer 和 repaired 当成板上派工的证据，忽视 how many 与 had repaired。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "板上用记号和星记录结果",
+        "distortion": "把回来看板误读成回来补登",
+        "misconception": "把回来看板误读成回来补登",
+        "mechanism": "从 went back 和 chalk 联想到修改记录，叙事只写维加先生加星以及叙述者再经过。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "第五辆车在等领取者且店里另有领取名单",
+        "distortion": "把领取安排理解为这块板的内容",
+        "misconception": "把领取安排理解为这块板的内容",
+        "mechanism": "把第二段的车主等待和第一段的板合并，忽略板上是完成车辆数。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "第一人称叙事",
+      "evidence": "用 chalk star 与绕路两个小动作表现成绩带来的满足感。"
+    },
+    "sources": []
+  },
+  "25": {
+    "answer": "B",
+    "reasoning": "叙述者原准备让伊莱把琴盒背在身上，看到他提起盒时窄肩带绷紧、勒在肩上，因而重新考虑。",
+    "evidence": [
+      "I was about to tell him to carry the case on his back when he lifted it, and I saw the narrow strap pull tight against his shoulder.",
+      "Its rear rack (架子) was long enough to take the case."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "定位即将建议背琴盒的动作与紧接着出现的观察。",
+        "将窄肩带拉紧所示的肩部受力解释为改变携带办法的原因。"
+      ],
+      "linked_concepts": [
+        "时间顺序",
+        "观察线索与行动原因"
+      ]
+    },
+    "reading_turn": {
+      "span": "I was about to tell him to carry the case on his back when he lifted it, and I saw the narrow strap pull tight against his shoulder.",
+      "from": "叙述者即将建议把琴盒背在身上",
+      "to": "提起盒时肩带勒肩，另寻合适的携带方式"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "伊莱后来确实想试骑上坡",
+        "distortion": "把后来试骑的计划提前为改变主意的原因",
+        "misconception": "把后来试骑的计划提前为改变主意的原因",
+        "mechanism": "回忆 hill 便把路况归为犹豫原因，提出上坡发生于车架装好以后。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "qualifier",
+        "subtle": true,
+        "unchanged": "需要辨认琴盒长度与后车架是否相配",
+        "distortion": "把原先未确定的装载条件说成已经不合适",
+        "misconception": "把原先未确定的装载条件说成已经不合适",
+        "mechanism": "将直接背在身上的初步提议推为车架放不下，原文明示红车的后车架足够长。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "伊莱确实提起了琴盒",
+        "distortion": "把提起时肩带受力换成抬上车的困难",
+        "misconception": "把提起时肩带受力换成抬上车的困难",
+        "mechanism": "把 lifted it 理解为尝试往蓝车上放。实际动作只让叙述者看到窄带绷紧。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "第一人称叙事",
+      "evidence": "用身体受力的可见细节解释现场改主意，避免依赖人物内心独白。"
+    },
+    "sources": []
+  },
+  "26": {
+    "answer": "D",
+    "reasoning": "维加先生把第二条带子交给伊莱，让他来试。伊莱把两条带子都拆装，第二次更快，表明他在练习自己固定琴盒。",
+    "evidence": [
+      "When I started to fasten the second one, Mr. Vega handed it to Eli.",
+      "“Give it a try,” he said. Eli took both straps off and put them on again. Then he did it once more, quicker this time."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "把 handed it to Eli 和 Give it a try 对应到让本人完成操作。",
+        "根据相同操作重复且第二次更快，判断目的是形成熟练的独立使用能力。"
+      ],
+      "linked_concepts": [
+        "动作归属",
+        "重复与熟练"
+      ]
+    },
+    "reading_turn": {
+      "span": "“Give it a try,” he said. Eli took both straps off and put them on again. Then he did it once more, quicker this time.",
+      "from": "维加先生让伊莱接手固定带子",
+      "to": "伊莱借重复操作学会独立固定琴盒"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "画面中有两条带子",
+        "distortion": "把同时使用的两条带子当作要比较的备选件",
+        "misconception": "把同时使用的两条带子当作要比较的备选件",
+        "mechanism": "漏读 both，因先后提到第二条就把拆装理解为在两条之间做选择。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "后车架刚转装，带子也刚加上",
+        "distortion": "把伊莱练习使用的带子与检查后车架安装混同",
+        "misconception": "把伊莱练习使用的带子与检查后车架安装混同",
+        "mechanism": "将 take off and put on 的受事物从 straps 换成 rack，或把手部练习误判为稳固性试验。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "琴盒要摆上车架并用带子固定",
+        "distortion": "把操作加快解释为寻找另一个摆放位置",
+        "misconception": "把操作加快解释为寻找另一个摆放位置",
+        "mechanism": "看到重新装带子便相信盒子被移动或改了方向，原文只报告重复同一带子的操作。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "第一人称叙事",
+      "evidence": "引语极短，随后用 quicker this time 让读者从重复动作看出变化。"
+    },
+    "sources": []
+  },
+  "27": {
+    "answer": "A",
+    "reasoning": "作者起初留意修好多少辆车。完成可独立携带琴盒的改装以后，下一次领取时先问使用地点和携带需求，说明修车是否适合实际使用也是重要标准。",
+    "evidence": [
+      "It showed how many donated bikes each volunteer had repaired that Saturday.",
+      "We moved the rack over to the blue bike and added two broad straps.",
+      "When I came in the following Saturday, I put a pencil beside the pickup sheet.",
+      "I asked her where she would ride and what she needed to carry."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "将开头的维修数量与伊莱使用琴盒所需的实际调整区分开。",
+        "依据结尾主动问骑行和携带需求，提炼叙述者改变后的修理标准。"
+      ],
+      "linked_concepts": [
+        "首尾照应",
+        "从事件概括原则"
+      ]
+    },
+    "reading_turn": {
+      "span": "I asked her where she would ride and what she needed to carry.",
+      "from": "修好一辆车原先体现为板上加一个记号",
+      "to": "修得合适还要知道领取者怎样使用车"
+    },
+    "distractors": {
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "记号和星让叙述者对早期成绩感到满足",
+        "distortion": "把叙事开端的激励当成贯穿始终的主旨",
+        "misconception": "把叙事开端的激励当成贯穿始终的主旨",
+        "mechanism": "只利用第一段解释绕路看板，没有解释伊莱事件后主动了解用途的收束。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "伊莱练习独立固定琴盒",
+        "distortion": "把领车人的独立操作推广到志愿者独自维修",
+        "misconception": "把领车人的独立操作推广到志愿者独自维修",
+        "mechanism": "把使用者伊莱混作志愿者，忽略维加先生和叙述者合力移装车架。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "备用件确实使这辆车能加装车架",
+        "distortion": "用一次有效的维修手段代替故事的主要体会",
+        "misconception": "用一次有效的维修手段代替故事的主要体会",
+        "mechanism": "注意到了找到零件的过程，却没有涵盖结尾在连接维修和领车人的需要。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "第一人称叙事",
+      "evidence": "首段记录修好数量，末段记录出行和载物需求，纸笔动作自然承担首尾照应。"
+    },
+    "sources": []
+  },
+  "28": {
+    "answer": "D",
+    "reasoning": "新叶能迅速让人看见地面恢复，却不能告诉人土壤小动物是否回来。研究团队因此探索能否借助录音跟踪地下恢复。",
+    "evidence": [
+      "A woodland can turn green while much of its recovery remains out of sight.",
+      "New leaves are easy to see, but finding out whether small animals have returned to the soil usually involves taking samples and sorting through them by hand.",
+      "Since many of those animals make faint sounds as they move, researchers in South Australia asked whether recordings might offer another way to follow the recovery that takes place underground."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分可观察的地上返绿和通常要取样寻找的地下小动物恢复。",
+        "将动物的微小声音当作可测信号，归纳想监测地下恢复的研究问题。"
+      ],
+      "linked_concepts": [
+        "研究动机",
+        "可观测信号与待测现象"
+      ]
+    },
+    "reading_turn": {
+      "span": "A woodland can turn green while much of its recovery remains out of sight.",
+      "from": "植被复绿可见，地下动物是否回归不易察觉",
+      "to": "需要一种能够追踪地下恢复的办法"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "比较了补种本土植物的地块",
+        "distortion": "将已经实施的补种作为此次选种研究",
+        "misconception": "将已经实施的补种作为此次选种研究",
+        "mechanism": "把方法段的 natives planted 读成要判定哪种植物适合复植，忽略研究对象是土壤动物。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "研究测声音并在不同环境录音",
+        "distortion": "把监测用途改为追查声源",
+        "misconception": "把监测用途改为追查声源",
+        "mechanism": "关注声响从哪里传来，忽略声音用于判断地下动物恢复这一更上位目的。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "存在被清理过和未清理的不同地块",
+        "distortion": "把取样前已知的地块类别变为研究要判定的结果",
+        "misconception": "把取样前已知的地块类别变为研究要判定的结果",
+        "mechanism": "因声音对比能区分若干组便倒推研究是为了定位被清理地块。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "面向普通读者的研究报道",
+      "evidence": "从看得见的新叶转向需要手工寻找的动物，为录音方案建立具体问题。"
+    },
+    "sources": [
+      {
+        "title": "Robinson et al. (2024), Sounds of the underground reflect soil biodiversity dynamics across a grassy woodland restoration chronosequence",
+        "journal": "Journal of Applied Ecology",
+        "url": "https://doi.org/10.1111/1365-2664.14738",
+        "scope": "引言和第2.1节给出比较目的与地点。新叶的开场情境为原创引入。"
+      }
+    ]
+  },
+  "29": {
+    "answer": "C",
+    "reasoning": "研究人员在消音箱录完之后，把土壤翻开并统计动物，得到与声学读数相互独立的一组观察值。",
+    "evidence": [
+      "They recorded at each kind of site by inserting a metal probe (探针) that could pick up vibrations, and they also recorded equal volumes of soil inside a box lined with material that helped keep outside noise out.",
+      "Once they had finished recording in the box, they searched through the soil and counted the animals they found, yielding an independent set of observations for comparison.",
+      "When the team compared the results with the hand counts, they found a link between greater sound variation and a greater variety of animals."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "从动作顺序识别录音完成后的手工寻找和计数是独立步骤。",
+        "用后文明确比较录音与计数的结果还原这一步的验证目的。"
+      ],
+      "linked_concepts": [
+        "两个数据来源",
+        "交叉比较"
+      ]
+    },
+    "reading_turn": {
+      "span": "Once they had finished recording in the box, they searched through the soil and counted the animals they found, yielding an independent set of observations for comparison.",
+      "from": "装置先收集声音，随后手工收集动物信息",
+      "to": "手工计数被用来与声音指标比较"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "不同样品的体积确实一致",
+        "distortion": "把录音前的标准化当成录音后翻样品的目的",
+        "misconception": "把录音前的标准化当成录音后翻样品的目的",
+        "mechanism": "读到 equal volumes，误判排序土样是在核实其大小，忽略实际排序和计数的对象是动物。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "箱内材料确实减少外部声响",
+        "distortion": "把消减箱外噪声的作用归给手工搜查",
+        "misconception": "把消减箱外噪声的作用归给手工搜查",
+        "mechanism": "把箱体的控制功能与箱内录完后的人手计数功能合并。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "研究确实也安排了野外录音地点",
+        "distortion": "把比较用的观察当作决定新野外点位的依据",
+        "misconception": "把比较用的观察当作决定新野外点位的依据",
+        "mechanism": "把独立的地点选择与已经录制完成后的动物统计倒置。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "面向普通读者的研究报道",
+      "evidence": "用 Once they had finished 阐明方法顺序，用 yielding 紧跟数据用途。"
+    },
+    "sources": [
+      {
+        "title": "Robinson et al. (2024), Sounds of the underground reflect soil biodiversity dynamics across a grassy woodland restoration chronosequence",
+        "journal": "Journal of Applied Ecology",
+        "url": "https://doi.org/10.1111/1365-2664.14738",
+        "scope": "第2.2–2.4节记录地下探针、等体积消音箱录音及箱内录音后的动物观察。第3.4节报告比较结果。"
+      }
+    ]
+  },
+  "30": {
+    "answer": "B",
+    "reasoning": "雨后声学分数降低可能来自土壤传播振动方式的变化。这样便难以判断两次录音的差异是否反映动物的变化，因此 muddy 表示使比较变复杂。",
+    "evidence": [
+      "Even in the same patch of woodland, a change in soil moisture could <u>muddy</u> a comparison between two recordings.",
+      "A drop in the score after rain, for instance, could reflect a change in how vibrations travel through the soil, so the score alone gives little reason to conclude that some of the animals have gone."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "根据动词宾语 a comparison 判断需解释词语的抽象用法。",
+        "用雨后同一读数下降存在两种解释推断比较更难解释。"
+      ],
+      "linked_concepts": [
+        "语境词义",
+        "可能的干扰因素"
+      ]
+    },
+    "reading_turn": {
+      "span": "Even in the same patch of woodland, a change in soil moisture could <u>muddy</u> a comparison between two recordings.",
+      "from": "同一地块的两次音频仍可能处在不同含水条件下",
+      "to": "读数差异多了一种成因，使比较复杂化"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "含水变化为比较增加了一个因素",
+        "distortion": "把解释层面的复杂化读成比较范围延长",
+        "misconception": "把解释层面的复杂化读成比较范围延长",
+        "mechanism": "读到 two recordings 和 after rain，误把新增变量当作加长观察范围或时间。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "文中确实提到下雨",
+        "distortion": "把雨对信号传播的影响转为雨延迟测试",
+        "misconception": "把雨对信号传播的影响转为雨延迟测试",
+        "mechanism": "将 rain 与户外工作暂停联系起来，例句实际讨论已经得到的读数该怎样解释。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "inference_boundary",
+        "subtle": true,
+        "unchanged": "同一地块多次测量可以提供比较依据",
+        "distortion": "把影响可比性的变量读成确认结果的证据",
+        "misconception": "把影响可比性的变量读成确认结果的证据",
+        "mechanism": "过度倚重 same patch 带来的控制，漏看含水量仍然变化以及 little reason to conclude。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "面向普通读者的研究报道",
+      "evidence": "muddy 与 soil moisture 形成自然双关，后一整句提供可用于推词义的例子。"
+    },
+    "sources": [
+      {
+        "title": "Robinson et al. (2024), Sounds of the underground reflect soil biodiversity dynamics across a grassy woodland restoration chronosequence",
+        "journal": "Journal of Applied Ecology",
+        "url": "https://doi.org/10.1111/1365-2664.14738",
+        "scope": "论文第4.2节讨论含水量及土壤性质影响声音传播的可能性。雨后分数下降是本题示例，不是原研究测得的结果。"
+      }
+    ]
+  },
+  "31": {
+    "answer": "A",
+    "reasoning": "A。雨改变土壤传振，也可能伴随真实的动物变化。应在含水量相近的条件下比对记录，并实地查找动物提供独立证据。B增录仍把干湿差混在变化里；C换样地引入了不同植被历史；D检验时段但没有把结果同独立动物证据比对。",
+    "evidence": [
+      "A practical use of the technique would be to take repeated readings under comparable conditions and follow up unusual results with direct checks.",
+      "A recording at one location takes only minutes, so listening could help researchers decide where it is worth doing the slower work of looking for animals."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "解释雨后读数变化可能来源于振动传播而非种群本身。",
+        "匹配含水量、对同地取样查动物，以独立观察区分两种解释。"
+      ],
+      "linked_concepts": [
+        "替代解释",
+        "条件匹配",
+        "研究方法交叉验证"
+      ]
+    },
+    "reading_turn": {
+      "span": "A drop in the score after rain, for instance, could reflect a change in how vibrations travel through the soil",
+      "from": "同一地点雨前与雨后声学值不同。",
+      "to": "控制含水量并增加实地动物调查才能独立检验种群解释。"
+    },
+    "distractors": {
+      "B": {
+        "trap": "cause",
+        "unchanged": "重复记录可以减少偶然波动。",
+        "distortion": "比较的是湿土与干土，传振的系统差异仍存在。",
+        "misconception": "比较的是湿土与干土，传振的系统差异仍存在。",
+        "mechanism": "重复记录可以减少偶然波动。 比较的是湿土与干土，传振的系统差异仍存在。",
+        "plausible": true,
+        "subtle": true
+      },
+      "C": {
+        "trap": "scope",
+        "unchanged": "研究比较了相同体积的土样。",
+        "distortion": "在问题追踪同地点变化时，改用不同恢复史地点改变了被比较对象。",
+        "misconception": "在问题追踪同地点变化时，改用不同恢复史地点改变了被比较对象。",
+        "mechanism": "研究比较了相同体积的土样。 在问题追踪同地点变化时，改用不同恢复史地点改变了被比较对象。",
+        "plausible": true,
+        "subtle": true
+      },
+      "D": {
+        "trap": "qualifier",
+        "unchanged": "同地异时可以检验活动时段影响。",
+        "distortion": "没有前后条件匹配和动物现场证据，未分离传振限制。",
+        "misconception": "没有前后条件匹配和动物现场证据，未分离传振限制。",
+        "mechanism": "同地异时可以检验活动时段影响。 没有前后条件匹配和动物现场证据，未分离传振限制。",
+        "plausible": true,
+        "subtle": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "面向普通读者的研究报道",
+      "evidence": "以 practical use 引出具体工作顺序，区分读数与对异常的直接检查。"
+    },
+    "sources": [
+      {
+        "title": "Robinson et al. (2024), Sounds of the underground reflect soil biodiversity dynamics across a grassy woodland restoration chronosequence",
+        "journal": "Journal of Applied Ecology",
+        "url": "https://doi.org/10.1111/1365-2664.14738",
+        "scope": "原论文第5节提出监测前景和继续改进取样的必要性。文末两步用途为本文基于这些局限所作推演。"
+      }
+    ]
+  },
+  "32": {
+    "answer": "B",
+    "reasoning": "两区各有100个大小相近的坑洼，分别只有其中50个和10个获得报修。按收到报告的地点画图会把报得多的区呈现成路况更差，显示报告率差异会误导对真实维修需求的判断。",
+    "evidence": [
+      "Consider two districts, each with one hundred holes of much the same size in its roads.",
+      "Fifty of the holes in one district are reported to the city, while ten in the other district are reported.",
+      "A map based solely on those reports will give the impression that the first district is in much poorer shape, though street crews would find the same number of holes in either place."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "固定两区的坑洼数量和大致严重程度，再比较进入系统的报告数。",
+        "将图上看似路况不同的落差归给报告率差异，确定举例在论证中的作用。"
+      ],
+      "linked_concepts": [
+        "反例法",
+        "现实需求与观测需求"
+      ]
+    },
+    "reading_turn": {
+      "span": "A map based solely on those reports will give the impression that the first district is in much poorer shape, though street crews would find the same number of holes in either place.",
+      "from": "真实问题规模相近，报修数却相差五倍",
+      "to": "单靠报修数量可错误判断路况与维修需求"
+    },
+    "distractors": {
+      "A": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "可由两区数据算出未报的坑洼数",
+        "distortion": "把未报修当成未修完",
+        "misconception": "把未报修当成未修完",
+        "mechanism": "用100减50或10后，把结果当未修数量，漏掉市政队伍可在没有报告时主动维修。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "两个地区真实坑洼数相同且文章讨论维修资源",
+        "distortion": "把说明认识偏差的例子读成派工方案",
+        "misconception": "把说明认识偏差的例子读成派工方案",
+        "mechanism": "从坑洼相等直接推为作者用例教人平均派工，段中强调的是图上得出的错误印象。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "段末提到各地使用报修工具的方便程度",
+        "distortion": "把解决偏差归因于使用同一报修工具",
+        "misconception": "把解决偏差归因于使用同一报修工具",
+        "mechanism": "把渠道便利度这个可能因素当作论证中心，去掉了同样努力仍可能产生不同报告意愿的限制。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "议论性公共事务短文",
+      "evidence": "用两个地区、两个报告数和同一基准直接显示度量误差。两区是原创假设。"
+    },
+    "sources": []
+  },
+  "33": {
+    "answer": "A",
+    "reasoning": "休斯敦数据以片区为单位。它可显示社区之间的差异，却无法用来判断某一居民报修的具体理由。",
+    "evidence": [
+      "A study of Houston compared residents' requests with records of potholes the city had filled on its own initiative.",
+      "Because the records were grouped by area, the researchers could see a pattern across neighborhoods.",
+      "Investigating why a particular person chose to file a request would have required a different kind of evidence."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "确认研究资料按地区归集，其观察单位是社区。",
+        "认出社区间的对比无法替代能够解释个体动机的资料。"
+      ],
+      "linked_concepts": [
+        "数据层级",
+        "个体动机的推断边界"
+      ]
+    },
+    "reading_turn": {
+      "span": "Investigating why a particular person chose to file a request would have required a different kind of evidence.",
+      "from": "地区汇总可以显示街区间的报修与坑洼关系",
+      "to": "片区资料不足以推断单个居民的报修原因"
+    },
+    "distractors": {
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "研究使用居民报修数据",
+        "distortion": "把两套记录缩成居民主动报修一套",
+        "misconception": "把两套记录缩成居民主动报修一套",
+        "mechanism": "漏读 city's own initiative，忽略作者特意对比的主动维修记录。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "按区汇总会限制某一种比较与推理",
+        "distortion": "把个体层面的边界移到街区层面",
+        "misconception": "把个体层面的边界移到街区层面",
+        "mechanism": "认为看不到单个居民等于看不到地区差别，原文明说能够发现跨社区的模式。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "不同地区报修频率存在高低",
+        "distortion": "将报修频率差异误读成只抽取最常报修者的筛选规则",
+        "misconception": "将报修频率差异误读成只抽取最常报修者的筛选规则",
+        "mechanism": "把哪些人被记录的既有差异说成研究者的纳入标准，段中还比较了低频地区。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "议论性公共事务短文",
+      "evidence": "实证段把记录口径、地区关联和需要额外证据的个体理由放在相邻句中。"
+    },
+    "sources": [
+      {
+        "title": "Cook et al. (2024), Potholes, 311 reports, and a theory of heterogeneous resident demand for city services",
+        "journal": "Policy Studies Journal",
+        "url": "https://doi.org/10.1111/psj.12540",
+        "scope": "论文数据部分说明以普查小区为单位比较2016–2020年地区报修与主动维修，且不能识别个体报告者或个体动机。"
+      },
+      {
+        "title": "City of Houston, 2020 Complete Streets Annual Report",
+        "url": "https://www.houstontx.gov/planning/Publications/docs-pdfs/2020-Complete-Streets-Report-Final.pdf",
+        "scope": "第13页分列2016–2020年主动维修和由311报修后维修的数量，印证记录口径。"
+      }
+    ]
+  },
+  "34": {
+    "answer": "D",
+    "reasoning": "D。报修事项处理提速是服务流程指标，未报修道路的变化须从不依赖报修的道路实际普查或抽样确认。A仍是报修样本，B是意愿，C是工作份额，三者都不能单独确认路况改善。",
+    "evidence": [
+      "To see how much work was going unnoticed, it could inspect a sample of streets chosen independently of the requests.",
+      "Crews could visit a rotating set of roads in every district, including districts that rarely send requests.",
+      "The results would help direct repair crews to neglected roads, and officials could still take requests about particular holes as they came in."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分报修后修复速度与整条道路上未报坑洼的存量。",
+        "将文中的独立抽样原则迁移到具体政策结果，排除报告内统计与工作份额。"
+      ],
+      "linked_concepts": [
+        "代理指标的范围",
+        "条件化观察",
+        "抽样与政策效果证据"
+      ]
+    },
+    "reading_turn": {
+      "span": "a city could meet its target for quick repairs while whole streets still waited for somebody to report a hole",
+      "from": "已有改进仅针对进入投诉系统的坑洞。",
+      "to": "要证明少报路段改善，调查实际存量并独立于报修系统。"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "unchanged": "各区报修处理时间可以公开记录。",
+        "distortion": "把覆盖已报修坑洼的时长均衡误当成道路总体好转。",
+        "misconception": "把覆盖已报修坑洼的时长均衡误当成道路总体好转。",
+        "mechanism": "各区报修处理时间可以公开记录。 把覆盖已报修坑洼的时长均衡误当成道路总体好转。",
+        "plausible": true,
+        "subtle": true
+      },
+      "B": {
+        "trap": "cause",
+        "unchanged": "服务改善可能使居民更愿意报告。",
+        "distortion": "意愿变化尚不是少报路段实际坑洼减少的证据。",
+        "misconception": "意愿变化尚不是少报路段实际坑洼减少的证据。",
+        "mechanism": "服务改善可能使居民更愿意报告。 意愿变化尚不是少报路段实际坑洼减少的证据。",
+        "plausible": true,
+        "subtle": true
+      },
+      "C": {
+        "trap": "inference_boundary",
+        "unchanged": "未依托报修的主动维修能覆盖遗漏。",
+        "distortion": "相对维修份额上升并不表明余下坑洼变少。",
+        "misconception": "相对维修份额上升并不表明余下坑洼变少。",
+        "mechanism": "未依托报修的主动维修能覆盖遗漏。 相对维修份额上升并不表明余下坑洼变少。",
+        "plausible": true,
+        "subtle": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "议论性公共事务短文",
+      "evidence": "政策段用 independently 和 rotating 说明办法的实际筛选规则。抽查是作者提出的办法。"
+    },
+    "sources": []
+  },
+  "35": {
+    "answer": "C",
+    "reasoning": "全文用两区假设说明报修数可与真实路况不符，用休斯敦资料呈现实际例子，再提出独立抽查。题名应呈现少报并不等于需求少这条主线。",
+    "evidence": [
+      "A different question arises when officials make a map from those requests and use it to decide which neighborhoods need the largest share of repair work.",
+      "In some areas with fewer economic advantages, the problem of potholes appeared more common on this measure even as requests from residents were less frequent.",
+      "Faster repairs after a call are worth tracking, and the condition of the whole road network deserves a measure of its own."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "从假设例及休斯敦研究提取相同现象，即报告量和维修需求可以错位。",
+        "用结尾快速响应与整体路况的两个量度检查标题能否覆盖完整论证。"
+      ],
+      "linked_concepts": [
+        "标题概括",
+        "论点与举例或对策的关系"
+      ]
+    },
+    "reading_turn": {
+      "span": "In some areas with fewer economic advantages, the problem of potholes appeared more common on this measure even as requests from residents were less frequent.",
+      "from": "热线数字描述已上报的问题",
+      "to": "少报数字可能遮蔽实际较高的维修需求"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "末段确实讨论缩短修复用时",
+        "distortion": "把便于理解的绩效指标当成全文所要解释的问题",
+        "misconception": "把便于理解的绩效指标当成全文所要解释的问题",
+        "mechanism": "只抓住速度和目标，漏掉未获报修的街道，也找不到文中对维修延时原因的探讨。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "首段介绍了报修被转交给维修部门",
+        "distortion": "把开头的背景流程扩为全文",
+        "misconception": "把开头的背景流程扩为全文",
+        "mechanism": "标题可涵盖一个报修进入系统后的处理，却遗漏为何完全依赖报修看不到其他需求。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "作者提到使用工具的门槛",
+        "distortion": "把系统更易用说成作者要阐明的核心解决办法",
+        "misconception": "把系统更易用说成作者要阐明的核心解决办法",
+        "mechanism": "忽视即使渠道同样方便，报告意愿仍有差别，结尾重点是获取独立证据。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "议论性公共事务短文",
+      "evidence": "短文从一个具体服务流程起笔，结合例证提出保留时效并另行掌握路况的主张。"
+    },
+    "sources": [
+      {
+        "title": "Cook et al. (2024), Potholes, 311 reports, and a theory of heterogeneous resident demand for city services",
+        "journal": "Policy Studies Journal",
+        "url": "https://doi.org/10.1111/psj.12540",
+        "scope": "题名所概括的是本文原创论证。文中休斯敦的事实支点来自这项研究。"
+      }
+    ]
+  },
+  "36": {
+    "answer": "E",
+    "reasoning": "前文说来年组织者缺当时的经验。E 用交接便条回应这个困难，也为下句表示篇幅的 It 提供指代对象。",
+    "evidence": [
+      "A year later, a new team may face the same decisions with none of that knowledge.",
+      "It can be short enough to write while the chairs are still being put away."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用前句的来年信息空缺寻找能解释为什么要留下材料的句子。",
+        "用后句的 It 核查前一句是否首次提出可简短写下的便条。"
+      ],
+      "linked_concepts": [
+        "提出问题与给出办法",
+        "跨句指代"
+      ]
+    },
+    "reading_turn": {
+      "span": "A year later, a new team may face the same decisions with none of that knowledge.",
+      "from": "来年的团队没有本届的现场知识",
+      "to": "由本届留下的短便条可以弥补缺口"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "活动有人员和不同工作位置",
+        "distortion": "在引出交接工具之前就介绍观察角度",
+        "misconception": "在引出交接工具之前就介绍观察角度",
+        "mechanism": "把本段的跨年信息缺口误换成同日人员看法差异，且下句 It 无所指。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "活动过程中确实存在可以回顾的安排",
+        "distortion": "把建议所对照的对象提前理解为另一个活动的方案",
+        "misconception": "把建议所对照的对象提前理解为另一个活动的方案",
+        "mechanism": "这里还未提出具体方案文本，下句指单数可写下的便条也没有先行词。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "文本的确会指导怎样标注原计划",
+        "distortion": "把后面的记录步骤提前到交接工具尚未出场的位置",
+        "misconception": "把后面的记录步骤提前到交接工具尚未出场的位置",
+        "mechanism": "理解出要留经验就直接进入画变动，但 It 接不到所需的便条。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "cohesion",
+        "subtle": true,
+        "unchanged": "来年还会面对类似决定",
+        "distortion": "把不懂决策依据的问题直接变成重复某一改动",
+        "misconception": "把不懂决策依据的问题直接变成重复某一改动",
+        "mechanism": "本段尚未展开任何被评价为有效的改动，下句也无法回指一份文件。",
+        "plausible": true
+      },
+      "F": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "选项确实出现 note 并能给 It 提供名词",
+        "distortion": "把最后的保存步骤挪到开头",
+        "misconception": "把最后的保存步骤挪到开头",
+        "mechanism": "被名词指代吸引而忽略 Finally 需要已有若干步骤，前文只提出来年缺少经验。",
+        "plausible": true
+      },
+      "G": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "可把过去经验用于来年",
+        "distortion": "把具体改动的理由提前作为阅读中心",
+        "misconception": "把具体改动的理由提前作为阅读中心",
+        "mechanism": "首段举了两个记忆例，未给一个可迁移理由，下句的 It 也不指这类理由。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "写给校园活动组织者的实用短文",
+      "evidence": "用活动后的椅子描写和可马上写完的短便条保持场景一致。"
+    },
+    "sources": []
+  },
+  "37": {
+    "answer": "C",
+    "reasoning": "段首要求从实际采用的方案出发。下文举了原来只画一条队伍、后来添设第二条的例子，说明怎样把变动标在旧方案页面上。",
+    "evidence": [
+      "Start with the plan you actually followed.",
+      "For example, if the original floor plan showed a single line at the entrance, mark where you ended up making a second one.",
+      "A copy of the plan with a few arrows can tell the next team more than a page of instructions."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "区分实际执行方案和事先准备的平面图。",
+        "根据 For example 后标出第二条队伍，概括为在原方案上显示已做的改动。"
+      ],
+      "linked_concepts": [
+        "总说与举例",
+        "计划稿与实际执行"
+      ]
+    },
+    "reading_turn": {
+      "span": "For example, if the original floor plan showed a single line at the entrance, mark where you ended up making a second one.",
+      "from": "为了留下实际执行过的方案",
+      "to": "用标注使原方案与执行结果的差异可见"
+    },
+    "distractors": {
+      "A": {
+        "trap": "cohesion",
+        "subtle": true,
+        "unchanged": "现场人员确实可能处在不同位置",
+        "distortion": "把方案调整的记录变成比较人的感受",
+        "misconception": "把方案调整的记录变成比较人的感受",
+        "mechanism": "举例给的是一条变两条的平面操作，没有引入各工作人员所看到的现场。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "保留了对照 plan 的概念",
+        "distortion": "把同场活动的原计划和执行改动换成两场活动的计划",
+        "misconception": "把同场活动的原计划和执行改动换成两场活动的计划",
+        "mechanism": "For example 随即说在一张原图上添线，无法举证活动之间的比较。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "改动以后可能有助下一届",
+        "distortion": "把把改动写清变成要求按原样重复",
+        "misconception": "把把改动写清变成要求按原样重复",
+        "mechanism": "本段展示第二条队伍如何标注，尚未判断效果或提出下一次照做。",
+        "plausible": true
+      },
+      "E": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "留下短便条是全篇目的",
+        "distortion": "在记录步骤开始后重新介绍便条用途",
+        "misconception": "在记录步骤开始后重新介绍便条用途",
+        "mechanism": "把泛泛说明用途放在 For example 前，不能解释紧跟的改图属于哪一种记录方式。",
+        "plausible": true
+      },
+      "F": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "计划可以同便条一起保存",
+        "distortion": "把标记执行差异换成保存材料的办法",
+        "misconception": "把标记执行差异换成保存材料的办法",
+        "mechanism": "误将有箭头的副本理解为索引或保存示例，段中没有存放位置。",
+        "plausible": true
+      },
+      "G": {
+        "trap": "cause",
+        "subtle": true,
+        "unchanged": "下一段确实说明摆第二条队伍的理由",
+        "distortion": "把记录实际动作的一段提前读成总结理由",
+        "misconception": "把记录实际动作的一段提前读成总结理由",
+        "mechanism": "下句例子只说添在哪里，还不能演示为何变动及如何在新地点迁移。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "写给校园活动组织者的实用短文",
+      "evidence": "先用简短祈使句定任务，再给读者在现成平面图上能实行的标记方法。"
+    },
+    "sources": []
+  },
+  "38": {
+    "answer": "G",
+    "reasoning": "增设队伍背后的理由是保持楼梯畅通。G 概括交代理由的用途，即下次入口变了也能根据同一目的找到新的必保路线。",
+    "evidence": [
+      "The extra line may have worked because it kept people from blocking the stairs.",
+      "If next year's event uses a different entrance, they will know to check for another route that must stay clear."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "用 because 定位原改动保护通道的目的。",
+        "用 different entrance 和 another route 核查目的是否能转用，筛出 G。"
+      ],
+      "linked_concepts": [
+        "措施与理由",
+        "更换场地时的迁移"
+      ]
+    },
+    "reading_turn": {
+      "span": "The extra line may have worked because it kept people from blocking the stairs.",
+      "from": "加一条队伍使原场地楼梯不被堵住",
+      "to": "写下理由能帮助新团队在不同入口保护另一通道"
+    },
+    "distractors": {
+      "A": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "不同场地方位在活动中确实重要",
+        "distortion": "把场地变化引出的做法迁移换成人员看法差异",
+        "misconception": "把场地变化引出的做法迁移换成人员看法差异",
+        "mechanism": "把 another route 的物理位置误接到 different stations 的观察立场，前句并无多人看法。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "旧方案信息对来年有用",
+        "distortion": "把重复利用理由变成比较两场活动的方案",
+        "misconception": "把重复利用理由变成比较两场活动的方案",
+        "mechanism": "后一句要检查清晰通路，依据来自保通道的原因，没有拿出另一场活动的计划。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "加开的队伍是实际方案变动",
+        "distortion": "把已经完成的改图步骤重复放进解释原因的段落",
+        "misconception": "把已经完成的改图步骤重复放进解释原因的段落",
+        "mechanism": "直接记录路线变更无法说明来年的路线虽不同、要达到的目的却一样。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "cohesion",
+        "subtle": true,
+        "unchanged": "已经谈到一个有效改动和来年应用",
+        "distortion": "把可迁移的目的偷换成原样重复操作",
+        "misconception": "把可迁移的目的偷换成原样重复操作",
+        "mechanism": "原样复制队伍位置会忽略入口可能已变，后句要求识别另一条通道。",
+        "plausible": true
+      },
+      "E": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "短便条确实能帮下一届",
+        "distortion": "重新介绍便条，使上下具体理由被切断",
+        "misconception": "重新介绍便条，使上下具体理由被切断",
+        "mechanism": "看到了来年团队这一主题词，却缺少从避免挡楼梯到检查另一路线的桥接。",
+        "plausible": true
+      },
+      "F": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "交接便条确实要让人找得到",
+        "distortion": "把理由的可复用性转成存放位置",
+        "misconception": "把理由的可复用性转成存放位置",
+        "mechanism": "空后讲的是新入口要检查什么，并未开始谈文件检索。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "写给校园活动组织者的实用短文",
+      "evidence": "给出楼梯这一具体障碍，再用换入口的条件句说明记录原因的实用性。"
+    },
+    "sources": []
+  },
+  "39": {
+    "answer": "A",
+    "reasoning": "不同工作区的人看到的活动情况不同。A 衔接前句向其他岗位的人核对和后句两个岗位对排队情况见闻不同的实例。",
+    "evidence": [
+      "Some details are worth checking with someone who worked in a different part of the event.",
+      "The welcome desk volunteers might have seen a steady flow while those handing out equipment had a line that barely moved.",
+      "Put both observations in the note so next year's team can decide where to provide extra help."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "认出 different part 表示工作岗位差异。",
+        "以 both observations 核对后句迎宾与设备分发岗位的各自见闻，选出对两种视角的概括。"
+      ],
+      "linked_concepts": [
+        "观察主体",
+        "段内总说与分述"
+      ]
+    },
+    "reading_turn": {
+      "span": "The welcome desk volunteers might have seen a steady flow while those handing out equipment had a line that barely moved.",
+      "from": "和在别处工作的同伴核对信息",
+      "to": "并置不同岗位看到的情况，帮助判断哪里缺人"
+    },
+    "distractors": {
+      "B": {
+        "trap": "referent",
+        "subtle": true,
+        "unchanged": "核对不同地方的情况近似比较",
+        "distortion": "把比较对象从同一活动的两类人员换成不同活动的设计文档",
+        "misconception": "把比较对象从同一活动的两类人员换成不同活动的设计文档",
+        "mechanism": "下文呈现同一场活动的两个岗位实况，缺少外场方案。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "走动或排队情况值得留下记录",
+        "distortion": "把补足不同岗位的观察替换为修改原平面图",
+        "misconception": "把补足不同岗位的观察替换为修改原平面图",
+        "mechanism": "迎宾进度与分发堵住均属观察，后文要求同时写入，没有说有两处计划变更。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "文章确实希望下次活动受益",
+        "distortion": "把并列收集经验变成沿用某个被判断成功的调整",
+        "misconception": "把并列收集经验变成沿用某个被判断成功的调整",
+        "mechanism": "本段欢迎处与分发处有不同结果，还未判断应维持哪种做法。",
+        "plausible": true
+      },
+      "E": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "两条观察最后可以进入便条",
+        "distortion": "回到首段的便条引入，缺少承上启下的视角差异",
+        "misconception": "回到首段的便条引入，缺少承上启下的视角差异",
+        "mechanism": "因后文有 note 便提前引入，放弃了说明为何询问在另一位置工作的同伴。",
+        "plausible": true
+      },
+      "F": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "作者终会交代如何保存便条",
+        "distortion": "在收集具体信息时提前以 Finally 开始保存流程",
+        "misconception": "在收集具体信息时提前以 Finally 开始保存流程",
+        "mechanism": "下一句还在提供要写入的不同观察，无法承担存放方法的分述。",
+        "plausible": true
+      },
+      "G": {
+        "trap": "cohesion",
+        "subtle": true,
+        "unchanged": "下一届会根据这些信息作决定",
+        "distortion": "把两个位置观察误读成一项措施的已知缘由",
+        "misconception": "把两个位置观察误读成一项措施的已知缘由",
+        "mechanism": "空后两例均描述排队现象，未说明排得快或慢的原因。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "写给校园活动组织者的实用短文",
+      "evidence": "用迎宾处流动和发设备处堵住的并列场景说明询问其他岗位的必要性。"
+    },
+    "sources": []
+  },
+  "40": {
+    "answer": "F",
+    "reasoning": "最后一段从写入信息转到让下一届方便取用。F 的 make it easy to find 由下文一并存放和按活动及日期命名两条做法具体落实。",
+    "evidence": [
+      "Put both observations in the note so next year's team can decide where to provide extra help.",
+      "Store the note with the plan and the equipment list where next year's organizers will already be looking.",
+      "Give it a name that includes the event and the date, so later teams can find the right version."
+    ],
+    "depth": {
+      "reasoning_steps": [
+        "由上段末的 Put both observations 看出写入内容的步骤已经交代。",
+        "将空后存放位置和命名规则概括为便利未来检索。"
+      ],
+      "linked_concepts": [
+        "篇章收束",
+        "总说与措施"
+      ]
+    },
+    "reading_turn": {
+      "span": "Give it a name that includes the event and the date, so later teams can find the right version.",
+      "from": "需要写哪些信息已交代完",
+      "to": "处理如何保存、命名和找到对应便条"
+    },
+    "distractors": {
+      "A": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "前一段确实讨论各岗位不同视角",
+        "distortion": "把上一段中心再用作最后一段的中心",
+        "misconception": "把上一段中心再用作最后一段的中心",
+        "mechanism": "看到前文两条观察便延续人员视角，无法总括后续位置和命名规则。",
+        "plausible": true
+      },
+      "B": {
+        "trap": "scope",
+        "subtle": true,
+        "unchanged": "note 确实要与 plan 一并归档",
+        "distortion": "把便于找回记录误解为与另一个活动作比较",
+        "misconception": "把便于找回记录误解为与另一个活动作比较",
+        "mechanism": "文件虽同放一处，但句末 right version 强调的是查找方而非横向对照。",
+        "plausible": true
+      },
+      "C": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "原平面图和改动记录最后会保存",
+        "distortion": "把写什么的步骤放在怎样存放一段开头",
+        "misconception": "把写什么的步骤放在怎样存放一段开头",
+        "mechanism": "空后保存与命名都无法充当让改动可见的例子。",
+        "plausible": true
+      },
+      "D": {
+        "trap": "stance",
+        "subtle": true,
+        "unchanged": "便条有助看来年行动",
+        "distortion": "把文件找回方式换成对照做法的要求",
+        "misconception": "把文件找回方式换成对照做法的要求",
+        "mechanism": "存档和日期命名没有指定应重复哪项布置。",
+        "plausible": true
+      },
+      "E": {
+        "trap": "order",
+        "subtle": true,
+        "unchanged": "便条确实能帮下一届，名词也可接 Store the note",
+        "distortion": "重复全篇引入的理由，未领起文档检索",
+        "misconception": "重复全篇引入的理由，未领起文档检索",
+        "mechanism": "上段已说便条有何作用，下段两条都是让它可被找到的操作。",
+        "plausible": true
+      },
+      "G": {
+        "trap": "cohesion",
+        "subtle": true,
+        "unchanged": "明白理由有助在变化的场地中使用经验",
+        "distortion": "把中段的因果迁移作为最后的文件管理总述",
+        "misconception": "把中段的因果迁移作为最后的文件管理总述",
+        "mechanism": "后文的命名和存放规则未再讨论任何一次变动及其缘由。",
+        "plausible": true
+      }
+    },
+    "language_style": {
+      "natural": true,
+      "register": "写给校园活动组织者的实用短文",
+      "evidence": "以实际可执行的同处存档和命名收束，语气与前几段的操作建议一致。"
+    },
+    "sources": []
+  },
+  "41": {
+    "number": 41,
+    "answer": "C",
+    "reasoning": "选C。comparable 表示“可比较的”。相同站位让取景角度相近，读者可以把照片里的差异归到清理活动。A项 balanced。把前后两张照片的可比性移成单张照片内部的构图均衡。B项 realistic。把标记拍摄站位当成保证真实性的操作，忽略同角度用于对照。D项 original。把重复站位误作创造独特画面的办法。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "摄影时会考虑画面是否平衡。",
+        "distortion": "把前后两张照片的可比性移成单张照片内部的构图均衡。",
+        "misconception": "摄影时会考虑画面是否平衡。",
+        "mechanism": "把前后两张照片的可比性移成单张照片内部的构图均衡。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "现场照片应当如实呈现。",
+        "distortion": "把标记拍摄站位当成保证真实性的操作，忽略同角度用于对照。",
+        "misconception": "现场照片应当如实呈现。",
+        "mechanism": "把标记拍摄站位当成保证真实性的操作，忽略同角度用于对照。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "stance",
+        "unchanged": "报刊委托叙述者亲自拍照。",
+        "distortion": "把重复站位误作创造独特画面的办法。",
+        "misconception": "报刊委托叙述者亲自拍照。",
+        "mechanism": "把重复站位误作创造独特画面的办法。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "把两张照片对应到同一清理地点的不同时点。",
+        "将标记站位解释为控制取景条件，进而确定形容词的比较功能。"
+      ],
+      "linked_concepts": [
+        "对比照片的功能",
+        "叙事中动作与目的的对应"
+      ]
+    },
+    "reading_turn": {
+      "span": "To keep the two shots [41] ____, I marked where I stood on the bank.",
+      "from": "报刊要同一处溪流清理前后的两张照片，叙述者记下站位。",
+      "to": "用同一视点减少拍摄条件差异，目标是让两张照片可比较。"
+    }
+  },
+  "42": {
+    "number": 42,
+    "answer": "A",
+    "reasoning": "选A。frame 在这里指镜头取到的画面。挪桶请求发生在拍后景之前，桶挡了画面。B项 print。把现场可以挪动的物件放进已经印好的照片。C项 copy。提前套用后来发出的刊物副本，把拍照现场和读刊现场混在一起。D项 page。把摄影者当前的取景提前当成编辑排好的页面。",
+    "distractors": {
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "照片拍成后可以印成 print。",
+        "distortion": "把现场可以挪动的物件放进已经印好的照片。",
+        "misconception": "照片拍成后可以印成 print。",
+        "mechanism": "把现场可以挪动的物件放进已经印好的照片。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "文末出现 newsletter 的一份 copy。",
+        "distortion": "提前套用后来发出的刊物副本，把拍照现场和读刊现场混在一起。",
+        "misconception": "文末出现 newsletter 的一份 copy。",
+        "mechanism": "提前套用后来发出的刊物副本，把拍照现场和读刊现场混在一起。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "编辑会把照片放入版面。",
+        "distortion": "把摄影者当前的取景提前当成编辑排好的页面。",
+        "misconception": "编辑会把照片放入版面。",
+        "mechanism": "把摄影者当前的取景提前当成编辑排好的页面。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "沿中午回到原处、发现蓝桶、拍摄宽景的顺序定位阶段。",
+        "根据桶在画面中央的影响确定 frame 的取景含义。"
+      ],
+      "linked_concepts": [
+        "事件发生顺序",
+        "frame 的语境义"
+      ]
+    },
+    "reading_turn": {
+      "span": "At noon a blue bucket sat in the middle of my [42] ____. I asked Mina, a volunteer, to move it.",
+      "from": "叙述者回到溪边看到蓝桶，拍宽景之前提出挪桶。",
+      "to": "桶落在即将拍摄的取景范围内，frame 指画面边界之内。"
+    }
+  },
+  "43": {
+    "number": 43,
+    "answer": "D",
+    "reasoning": "选D。assumed 表示未经确认便认定。叙述者凭桶挡在镜头里的样子以为它只是忘记收走的器具。A项 confirmed。把先于观察的推测提升为证据已确认的事实。B项 hoped。把希望挪桶的意愿转成希望桶属于某一类器具。C项 recalled。把初次遇到桶后的新推测误当作回忆已知信息。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "qualifier",
+        "unchanged": "叙述者对桶提出了具体解释。",
+        "distortion": "把先于观察的推测提升为证据已确认的事实。",
+        "misconception": "叙述者对桶提出了具体解释。",
+        "mechanism": "把先于观察的推测提升为证据已确认的事实。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "stance",
+        "unchanged": "叙述者希望桶移出画面。",
+        "distortion": "把希望挪桶的意愿转成希望桶属于某一类器具。",
+        "misconception": "叙述者希望桶移出画面。",
+        "mechanism": "把希望挪桶的意愿转成希望桶属于某一类器具。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "叙述者用过去时回讲当天经过。",
+        "distortion": "把初次遇到桶后的新推测误当作回忆已知信息。",
+        "misconception": "叙述者用过去时回讲当天经过。",
+        "mechanism": "把初次遇到桶后的新推测误当作回忆已知信息。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "用过去完成时和随后倾桶的动作区分观察之前与之后。",
+        "把桶的普通外观和特殊用途对照，确定先前结论是未经核实的推测。"
+      ],
+      "linked_concepts": [
+        "叙事时间层次",
+        "推测与证实的区别"
+      ]
+    },
+    "reading_turn": {
+      "span": "I'd [43] ____ it was just a tool she'd left out. She tipped it toward me.",
+      "from": "叙述者看到桶就请人挪开，随后才看到里面缠好的鱼线。",
+      "to": "叙述者在看到证据之前作了假设，后来新发现修正了原判断。"
+    }
+  },
+  "44": {
+    "number": 44,
+    "answer": "B",
+    "reasoning": "选B。wound around 表示“绕在……上”。整齐缠绕能把根间拾出的鱼线收在纸条上。A项 spread。把线固定在纸条上的关系弱化为散布在纸条四周。C项 stretched。把绕着纸条收线误读成将线拉伸展开。D项 tangled。把有害的无序缠结套到人为整齐收线的结果上。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "鱼线和纸条都在桶里。",
+        "distortion": "把线固定在纸条上的关系弱化为散布在纸条四周。",
+        "misconception": "鱼线和纸条都在桶里。",
+        "mechanism": "把线固定在纸条上的关系弱化为散布在纸条四周。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "collocation",
+        "unchanged": "处理鱼线时可能把一段线拉紧。",
+        "distortion": "把绕着纸条收线误读成将线拉伸展开。",
+        "misconception": "处理鱼线时可能把一段线拉紧。",
+        "mechanism": "把绕着纸条收线误读成将线拉伸展开。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "stance",
+        "unchanged": "引语说 loose line 会发生缠绕。",
+        "distortion": "把有害的无序缠结套到人为整齐收线的结果上。",
+        "misconception": "引语说 loose line 会发生缠绕。",
+        "mechanism": "把有害的无序缠结套到人为整齐收线的结果上。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "从 neatly 和 around 复原线沿纸条绕起的空间关系。",
+        "用散线危害及后来带来纸条的行动检验这种收拢方法。"
+      ],
+      "linked_concepts": [
+        "wind 的不规则过去分词",
+        "空间搭配与行为动机"
+      ]
+    },
+    "reading_turn": {
+      "span": "Inside were bits of fishing line, neatly [44] ____ around strips of cardboard.",
+      "from": "鱼线与纸条呈 neatly 和 around 所描述的规整关系，散线会缠鸟脚。",
+      "to": "纸条约束了鱼线，线绕在纸条上，wound 是 wind 的过去分词。"
+    }
+  },
+  "45": {
+    "number": 45,
+    "answer": "C",
+    "reasoning": "选C。recovering 表示“取回”。志愿者把细小的鱼线从根间找出并收起。A项 sorting。把拾取之后可能发生的整理当成了从根间回收的动作。B项 examining。把完整的取出并收存缩减为查看。D项 measuring。把描述线段大小的措辞读成工作人员测量过长度的记录。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "纸条上整齐的线容易使人想到归类整理。",
+        "distortion": "把拾取之后可能发生的整理当成了从根间回收的动作。",
+        "misconception": "纸条上整齐的线容易使人想到归类整理。",
+        "mechanism": "把拾取之后可能发生的整理当成了从根间回收的动作。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "寻找短鱼线需要仔细看根间。",
+        "distortion": "把完整的取出并收存缩减为查看。",
+        "misconception": "寻找短鱼线需要仔细看根间。",
+        "mechanism": "把完整的取出并收存缩减为查看。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "short lengths 可以使人留意鱼线的长度。",
+        "distortion": "把描述线段大小的措辞读成工作人员测量过长度的记录。",
+        "misconception": "short lengths 可以使人留意鱼线的长度。",
+        "mechanism": "把描述线段大小的措辞读成工作人员测量过长度的记录。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "根据 it 回指 fishing line 并确定 from among the roots 是动作的起点。",
+        "结合桶里的收集结果，把工作识别成取出鱼线。"
+      ],
+      "linked_concepts": [
+        "代词回指和动作来源",
+        "recover 的取回义"
+      ]
+    },
+    "reading_turn": {
+      "span": "Her team had spent the morning [45] ____ short lengths of it from among the roots.",
+      "from": "鱼线原在根间，现在规整地装在桶里。",
+      "to": "从根间搜取原先掉落的鱼线，recovering 指找回、取回。"
+    }
+  },
+  "46": {
+    "number": 46,
+    "answer": "A",
+    "reasoning": "选A。visible 对应从岸上就能看见的袋子消失。鱼线工作需要拉近观察距离。B项 steady。把两个离散时点扩大成连续且平稳的变化过程。C项 seasonal。把同一天志愿者造成的变化换成季节更替。D项 lasting。从上午与中午的两帧照片推出持续时间。",
+    "distractors": {
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "qualifier",
+        "unchanged": "前后两张照片记录状态差别。",
+        "distortion": "把两个离散时点扩大成连续且平稳的变化过程。",
+        "misconception": "前后两张照片记录状态差别。",
+        "mechanism": "把两个离散时点扩大成连续且平稳的变化过程。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "开头的环境与树枝有自然季节联想。",
+        "distortion": "把同一天志愿者造成的变化换成季节更替。",
+        "misconception": "开头的环境与树枝有自然季节联想。",
+        "mechanism": "把同一天志愿者造成的变化换成季节更替。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "inference_boundary",
+        "unchanged": "清理工作的好处可能延续。",
+        "distortion": "从上午与中午的两帧照片推出持续时间。",
+        "misconception": "清理工作的好处可能延续。",
+        "mechanism": "从上午与中午的两帧照片推出持续时间。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "明确树枝上塑料袋消失在首尾照片中怎样体现为变化。",
+        "将可见的大轮廓和需要靠近才看清的鱼线收集工作对照。"
+      ],
+      "linked_concepts": [
+        "举例限定词义",
+        "远近视角与叙事转折"
+      ]
+    },
+    "reading_turn": {
+      "span": "I had been looking for [46] ____ changes, like the disappearance of the bags.",
+      "from": "叙述者拿全景照片比较树上塑料袋的存留，原先容易忽视根间细线。",
+      "to": "叙述者搜寻的是从拍摄点看得见的变化。"
+    }
+  },
+  "47": {
+    "number": 47,
+    "answer": "D",
+    "reasoning": "选D。miss 指“未注意到”。在岸上用广角看显眼变化，容易漏看根间鱼线的回收。A项 guess。把原有视角造成的遗漏改成容易从远处猜出细节。B项 describe。把近看后的说明能力提前安到尚在岸上观察时。C项 repeat。把后文具体示范带来的可重复性归到当时的远处视角。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "stance",
+        "unchanged": "文中从远处使用过推测。",
+        "distortion": "把原有视角造成的遗漏改成容易从远处猜出细节。",
+        "misconception": "文中从远处使用过推测。",
+        "mechanism": "把原有视角造成的遗漏改成容易从远处猜出细节。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "叙述者稍后可以给编辑描述工作。",
+        "distortion": "把近看后的说明能力提前安到尚在岸上观察时。",
+        "misconception": "叙述者稍后可以给编辑描述工作。",
+        "mechanism": "把近看后的说明能力提前安到尚在岸上观察时。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "有人读报后带纸条再来参加清理。",
+        "distortion": "把后文具体示范带来的可重复性归到当时的远处视角。",
+        "misconception": "有人读报后带纸条再来参加清理。",
+        "mechanism": "把后文具体示范带来的可重复性归到当时的远处视角。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "定位 From the bank 限定的是叙述者观察工作的位置。",
+        "结合后来必须靠近才拍到鱼线的动作和前句 visible changes，推出此前有观察盲点。"
+      ],
+      "linked_concepts": [
+        "视角限制",
+        "miss 的感知义"
+      ]
+    },
+    "reading_turn": {
+      "span": "From the bank, what Mina's team did was easy to [47] ____.",
+      "from": "拍照点与清理位置有距离，线段短，还藏在根间。",
+      "to": "原有远处视角很容易漏掉这项工作，miss 在此意为没有注意到。"
+    }
+  },
+  "48": {
+    "number": 48,
+    "answer": "C",
+    "reasoning": "选C。photograph 照应之后要取舍的额外照片。深色手套让鱼线在近景中清晰。A项 draw。把该画面的记录方式换成作画。B项 measure。把用于显色的手套误看成长度测量的一环。D项 identify。把已被 Mina 指明的鱼线当成仍需判定类别的东西。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "线与手套构成了鲜明的视觉画面。",
+        "distortion": "把该画面的记录方式换成作画。",
+        "misconception": "线与手套构成了鲜明的视觉画面。",
+        "mechanism": "把该画面的记录方式换成作画。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "靠近短线可以观察其长度。",
+        "distortion": "把用于显色的手套误看成长度测量的一环。",
+        "misconception": "靠近短线可以观察其长度。",
+        "mechanism": "把用于显色的手套误看成长度测量的一环。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "深色背景有助辨清物体。",
+        "distortion": "把已被 Mina 指明的鱼线当成仍需判定类别的东西。",
+        "misconception": "深色背景有助辨清物体。",
+        "mechanism": "把已被 Mina 指明的鱼线当成仍需判定类别的东西。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "把 then 后的行为与下句 the extra photo 对应。",
+        "根据深色手套是视觉背景，确定新行为继续使用摄影媒介。"
+      ],
+      "linked_concepts": [
+        "同一事件的前后指称",
+        "视觉对比和拍摄目的"
+      ]
+    },
+    "reading_turn": {
+      "span": "I took the wide shot, then stepped closer to [48] ____ the line against Mina's dark glove.",
+      "from": "叙述者已拍全景，之后拿手套作为鱼线对比背景并产生一张额外照片。",
+      "to": "靠近是为了在深色背景上拍出细小鱼线。"
+    }
+  },
+  "49": {
+    "number": 49,
+    "answer": "B",
+    "reasoning": "选B。left out 表示差点把额外一张排除在交稿之外。最初委托的照片只有两张。A项 touched up。把张数限制误当成修图的动机。C项 printed out。把只需两张读成决定额外输出第三张的原因。D项 looked over。把是否纳入交稿的取舍降为单纯查看图像。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "投稿前可以调整照片清晰度。",
+        "distortion": "把张数限制误当成修图的动机。",
+        "misconception": "投稿前可以调整照片清晰度。",
+        "mechanism": "把张数限制误当成修图的动机。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "报刊照片可能需要打印或印刷。",
+        "distortion": "把只需两张读成决定额外输出第三张的原因。",
+        "misconception": "报刊照片可能需要打印或印刷。",
+        "mechanism": "把只需两张读成决定额外输出第三张的原因。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "摄影者在家会检查图像。",
+        "distortion": "把是否纳入交稿的取舍降为单纯查看图像。",
+        "misconception": "摄影者在家会检查图像。",
+        "mechanism": "把是否纳入交稿的取舍降为单纯查看图像。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "由 since 复原数量限制给额外照片带来的取舍。",
+        "根据 Instead 后实际寄出第三张，确认先前行为方向与寄出相反。"
+      ],
+      "linked_concepts": [
+        "原因状语与转折衔接",
+        "leave out 的省略义"
+      ]
+    },
+    "reading_turn": {
+      "span": "At home I nearly [49] ____ the extra photo since I'd been asked for two.",
+      "from": "原委托只有两张，近拍多出第三张，叙述者稍后还是把第三张送给了编辑。",
+      "to": "原先差点遗漏额外照片，leave out 表示省去。"
+    }
+  },
+  "50": {
+    "number": 50,
+    "answer": "B",
+    "reasoning": "选B。sent 保证三张照片及说明进入编辑环节，也完成了 Instead 引出的改变。A项 saved。把动作停留在个人保存，缺少从作者到编辑的交接。C项 compared。把第三张及说明的交稿动作误套为比较照片。D项 matched。把收到图片之后的搭配排版提前给仍在投稿的叙述者。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "可能在家把三张照片保存在一起。",
+        "distortion": "把动作停留在个人保存，缺少从作者到编辑的交接。",
+        "misconception": "可能在家把三张照片保存在一起。",
+        "mechanism": "把动作停留在个人保存，缺少从作者到编辑的交接。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "开头确实有前后两张照片的比较任务。",
+        "distortion": "把第三张及说明的交稿动作误套为比较照片。",
+        "misconception": "开头确实有前后两张照片的比较任务。",
+        "mechanism": "把第三张及说明的交稿动作误套为比较照片。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "三张图之后被并排刊登。",
+        "distortion": "把收到图片之后的搭配排版提前给仍在投稿的叙述者。",
+        "misconception": "三张图之后被并排刊登。",
+        "mechanism": "把收到图片之后的搭配排版提前给仍在投稿的叙述者。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "根据 it 与 the other two 区分额外一张和原定两张。",
+        "由编辑取得三张并排版逆推交送动作。"
+      ],
+      "linked_concepts": [
+        "数量指称",
+        "从后续结果反推行动"
+      ]
+    },
+    "reading_turn": {
+      "span": "Instead, I [50] ____ it with the other two and a note about the line.",
+      "from": "叙述者原本差点省掉照片，后来编辑在一期刊物上并列发表了三张。",
+      "to": "叙述者实际把额外照片与原定两张一并送交，并附说明。"
+    }
+  },
+  "51": {
+    "number": 51,
+    "answer": "D",
+    "reasoning": "选D。ran 在报刊语境中表示“刊登”。读者后来见到实物并按第三张准备材料。A项 reviewed。把印前审阅视为照片已出现在当期刊物上的动作。B项 replaced。把增加一张误写成编辑替换照片，而后来多出来的照片仍被读者看到。C项 cropped。用改变照片范围概括将其并排刊出，少了让读者取得成品的环节。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "编辑收到照片后可以逐张审阅。",
+        "distortion": "把印前审阅视为照片已出现在当期刊物上的动作。",
+        "misconception": "编辑收到照片后可以逐张审阅。",
+        "mechanism": "把印前审阅视为照片已出现在当期刊物上的动作。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "cause",
+        "unchanged": "叙述者曾考虑改变提供的照片。",
+        "distortion": "把增加一张误写成编辑替换照片，而后来多出来的照片仍被读者看到。",
+        "misconception": "叙述者曾考虑改变提供的照片。",
+        "mechanism": "把增加一张误写成编辑替换照片，而后来多出来的照片仍被读者看到。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "照片进入版面可能要裁切。",
+        "distortion": "用改变照片范围概括将其并排刊出，少了让读者取得成品的环节。",
+        "misconception": "照片进入版面可能要裁切。",
+        "mechanism": "用改变照片范围概括将其并排刊出，少了让读者取得成品的环节。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "辨明 editor、issue 和 side by side 指向报刊成品。",
+        "用下一段读者手里的刊物验证图像已经发表。"
+      ],
+      "linked_concepts": [
+        "run 的出版义",
+        "刊物成品与编辑工序"
+      ]
+    },
+    "reading_turn": {
+      "span": "The editor [51] ____ them side by side in that week's issue.",
+      "from": "地点是周刊当期版面，后来新志愿者拿着刊物引用第三张。",
+      "to": "编辑把三张并排刊出，ran 是 run 的出版义。"
+    }
+  },
+  "52": {
+    "number": 52,
+    "answer": "A",
+    "reasoning": "选A。turned up 表示“来到、出现”。她带来复用鱼线收集办法所需的材料。B项 moved on。把新进入现场的人读成结束上一阶段后继续前行。C项 set off。把观察的地点与状态从到场改成出发。D项 stayed behind。给只写了本次到场的读者增加已经在场并留守的经历。",
+    "distractors": {
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "一天活动中人可能转去其他地方或任务。",
+        "distortion": "把新进入现场的人读成结束上一阶段后继续前行。",
+        "misconception": "一天活动中人可能转去其他地方或任务。",
+        "mechanism": "把新进入现场的人读成结束上一阶段后继续前行。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "她必然有过一次出发携带材料的过程。",
+        "distortion": "把观察的地点与状态从到场改成出发。",
+        "misconception": "她必然有过一次出发携带材料的过程。",
+        "mechanism": "把观察的地点与状态从到场改成出发。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "有人做完活动后可能留下。",
+        "distortion": "给只写了本次到场的读者增加已经在场并留守的经历。",
+        "misconception": "有人做完活动后可能留下。",
+        "mechanism": "给只写了本次到场的读者增加已经在场并留守的经历。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "用 The next Saturday 确认进入新的场次。",
+        "结合她携带物资、开口提供的言行，判断移动的到达方向。"
+      ],
+      "linked_concepts": [
+        "时间推进",
+        "短语动词的方向与角色"
+      ]
+    },
+    "reading_turn": {
+      "span": "The next Saturday a woman [52] ____ at our cleanup with a box of cardboard strips.",
+      "from": "下一周清理现场，一位拿着报刊和纸条的读者对志愿者说材料可以用上。",
+      "to": "读者是带物品前来的人，turned up 表示到场。"
+    }
+  },
+  "53": {
+    "number": 53,
+    "answer": "C",
+    "reasoning": "选C。change 可以涵盖用同角度观察到的清理前后差别，而第三张引出参与效果。A项 routine。把隔一段时间取样的结果说成熟悉的、反复展开的工作流程。B项 plan。把已经拍下的状态改变换成活动尚未开展时的计划。D项 difficulty。将后景内容一并归到前景的困难上，漏掉两张之间的进展。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "两幅图取于同一场清理活动。",
+        "distortion": "把隔一段时间取样的结果说成熟悉的、反复展开的工作流程。",
+        "misconception": "两幅图取于同一场清理活动。",
+        "mechanism": "把隔一段时间取样的结果说成熟悉的、反复展开的工作流程。"
+      },
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "叙述者事前订有拍照计划。",
+        "distortion": "把已经拍下的状态改变换成活动尚未开展时的计划。",
+        "misconception": "叙述者事前订有拍照计划。",
+        "mechanism": "把已经拍下的状态改变换成活动尚未开展时的计划。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "第一张拍到了垃圾带来的问题。",
+        "distortion": "将后景内容一并归到前景的困难上，漏掉两张之间的进展。",
+        "misconception": "第一张拍到了垃圾带来的问题。",
+        "mechanism": "将后景内容一并归到前景的困难上，漏掉两张之间的进展。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "回读 before 与 after 给两张照片分配的功能。",
+        "把两张的状态差归类为变化，与第三张提供行动办法区分开。"
+      ],
+      "linked_concepts": [
+        "照应篇首委托",
+        "对比照片的信息范围"
+      ]
+    },
+    "reading_turn": {
+      "span": "My first two pictures had recorded a [53] ____ at the creek.",
+      "from": "前两张同视点，分别是清理前和清理后。",
+      "to": "并列记录溪流的一次状态变化。"
+    }
+  },
+  "54": {
+    "number": 54,
+    "answer": "B",
+    "reasoning": "选B。shown somebody what she could do 表示照片让读者看见一种可实行的参与方式。读者主动带来该物品。A项 promised。把方法的可见性强化成报刊向读者作出的承诺。C项 asked。调换先后和发出行动的人，给第三张照片加上询问意愿的功能。D项 warned。把说明危险的内容移到告诉读者可以怎样行动的功能位。",
+    "distractors": {
+      "A": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "stance",
+        "unchanged": "读者看到了助人的可能。",
+        "distortion": "把方法的可见性强化成报刊向读者作出的承诺。",
+        "misconception": "读者看到了助人的可能。",
+        "mechanism": "把方法的可见性强化成报刊向读者作出的承诺。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "referent",
+        "unchanged": "读者后来主动对参加者开口。",
+        "distortion": "调换先后和发出行动的人，给第三张照片加上询问意愿的功能。",
+        "misconception": "读者后来主动对参加者开口。",
+        "mechanism": "调换先后和发出行动的人，给第三张照片加上询问意愿的功能。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "对鱼线的危险确有一句说明。",
+        "distortion": "把说明危险的内容移到告诉读者可以怎样行动的功能位。",
+        "misconception": "对鱼线的危险确有一句说明。",
+        "mechanism": "把说明危险的内容移到告诉读者可以怎样行动的功能位。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "把新来者带的纸条与之前照片特写中的纸条连起来。",
+        "由她已经采取的行动确定照片提供了具体做法。"
+      ],
+      "linked_concepts": [
+        "物件复现",
+        "视觉示范与行动动机"
+      ]
+    },
+    "reading_turn": {
+      "span": "\"I thought you could use more of these,\" she said, holding up a copy of the newsletter.",
+      "from": "女子看到报刊近景就带了同样的纸条，现场才开口说明来意。",
+      "to": "第三张照片让她看到自己可以怎样帮忙，shown 体现示范作用。"
+    }
+  },
+  "55": {
+    "number": 55,
+    "answer": "A",
+    "reasoning": "选A。continue 表示帮助清理延续。时间标志 The next Saturday 与新带来的纸条共同把影响推到下一场。B项 monitor。把第三张促成后续参与的结果限制在观察活动本身。C项 schedule。把新参加者提供物资的贡献改成替团队安排清理时间。D项 finish。从一次加入的行动推断整个清理项目已经或即将完结。",
+    "distractors": {
+      "B": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "scope",
+        "unchanged": "前后照片能用于观察清理变化。",
+        "distortion": "把第三张促成后续参与的结果限制在观察活动本身。",
+        "misconception": "前后照片能用于观察清理变化。",
+        "mechanism": "把第三张促成后续参与的结果限制在观察活动本身。"
+      },
+      "C": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "order",
+        "unchanged": "确有下一周的清理活动。",
+        "distortion": "把新参加者提供物资的贡献改成替团队安排清理时间。",
+        "misconception": "确有下一周的清理活动。",
+        "mechanism": "把新参加者提供物资的贡献改成替团队安排清理时间。"
+      },
+      "D": {
+        "plausible": true,
+        "subtle": true,
+        "trap": "inference_boundary",
+        "unchanged": "材料有助于完成部分清理工作。",
+        "distortion": "从一次加入的行动推断整个清理项目已经或即将完结。",
+        "misconception": "材料有助于完成部分清理工作。",
+        "mechanism": "从一次加入的行动推断整个清理项目已经或即将完结。"
+      }
+    },
+    "depth": {
+      "reasoning_steps": [
+        "用 it 的回指确定被影响的是清理活动。",
+        "把新读者从了解变成提供材料的因果链连到下一次清理。"
+      ],
+      "linked_concepts": [
+        "结尾回扣叙事起点",
+        "记录与行动的因果影响"
+      ]
+    },
+    "reading_turn": {
+      "span": "I'd meant to record the cleanup. The extra picture, in a small way, helped [55] ____ it.",
+      "from": "清理原本是被报道的既有行动，下一周有人受近景启发带材料加入。",
+      "to": "报道增添了后一次清理的支持，continue 回收活动得以延续的结果。"
+    }
+  },
+  "56": {
+    "number": 56,
+    "answer": "the",
+    "reasoning": "填 the。左边的一张确定后，右边是该对中剩下的那一张，固定结构为 one ... the other。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "由 in pairs 锁定集合只有两张。",
+        "把 one 和 the other 分配给左边、右边各一张。"
+      ],
+      "linked_concepts": [
+        "冠词的特指功能",
+        "成对指称"
+      ]
+    },
+    "reading_turn": {
+      "span": "One picture goes on the left side of a doorway, and [56] ____ other goes on the right.",
+      "from": "首句的 in pairs 和本句 One picture 设定恰好两个成员。",
+      "to": "剩余成员是明确的第二张，使用 one ... the other 结构。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "57": {
+    "number": 57,
+    "answer": "to welcome",
+    "reasoning": "填 to welcome。谓语 is 后的 a way 需要说明这种方式用来做什么，a way to do sth. 中的不定式作后置定语，welcome 与 express 共用 to。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "辨明动名词短语作主语，is 是句子的限定谓语。",
+        "根据 a way 后说明用途的定语结构填不定式，and express 保持同层。"
+      ],
+      "linked_concepts": [
+        "不定式作后置定语",
+        "不定式内并列谓词"
+      ]
+    },
+    "reading_turn": {
+      "span": "For many families, putting up the pictures is a way [57] ____ (welcome) the New Year and express their hopes for a peaceful home.",
+      "from": "way 表示贴画的用途或方式。",
+      "to": "to welcome 补明方式的用途并和 express 并列。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "58": {
+    "number": 58,
+    "answer": "was added",
+    "reasoning": "填 was added。2006 年的列入行为已完成，craft 为单数，主动执行者隐含。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "认定 craft 是动作承受者，推出被动语态。",
+        "根据过去的具体年份和单数主语确定 was 加过去分词。"
+      ],
+      "linked_concepts": [
+        "一般过去时",
+        "主谓一致与被动"
+      ]
+    },
+    "reading_turn": {
+      "span": "The craft itself [58] ____ (add) to China's national list of intangible cultural heritage (非物质文化遗产) in 2006.",
+      "from": "craft 与 add 的关系是一个项目被列入，时间锚为 in 2006。",
+      "to": "过去单数被动 was added 是整句谓语。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "59": {
+    "number": 59,
+    "answer": "blocks",
+    "reasoning": "填 blocks。一幅图需要数块木版，several 后接可数名词复数。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "区分 A single picture 所数的图与 several 所数的版。",
+        "用 several 的数限制选取 blocks，并从后文提到线版与色版的分工核对多版。"
+      ],
+      "linked_concepts": [
+        "名词数",
+        "数量限定词"
+      ]
+    },
+    "reading_turn": {
+      "span": "A single picture takes several wooden [59] ____ (block) to make.",
+      "from": "several 修饰所需的刻板，wooden 是名词前定语。",
+      "to": "可数名词 block 复数为 blocks。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "60": {
+    "number": 60,
+    "answer": "carved",
+    "reasoning": "填 carved。木版刻成之后才印线稿，once carved by hand 对应 once the key block is carved by hand。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "先定位 prints 为主句谓语，识别逗号之间的附加结构。",
+        "用 block 与 carve 的被动关系及 once 所表示的完成条件补出分词。"
+      ],
+      "linked_concepts": [
+        "过去分词和被动关系",
+        "状语从句省略"
+      ]
+    },
+    "reading_turn": {
+      "span": "The key block, once [60] ____ (carve) by hand, prints the dark outlines.",
+      "from": "prints 是句子的限定谓语，once 后为说明先决条件的省略式分句。",
+      "to": "木版承受刻制，补全为 once it is carved by hand，省略主语和 be 后保留 carved。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "61": {
+    "number": 61,
+    "answer": "between",
+    "reasoning": "填 between。两个对象由 and 连在同一个结构中，所比较的是清晰边缘和模糊边缘。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "定位 and 连接的两种线条边缘。",
+        "识别 difference 与两个对照对象之间的介词搭配。"
+      ],
+      "linked_concepts": [
+        "介词搭配",
+        "比较关系"
+      ]
+    },
+    "reading_turn": {
+      "span": "The difference [61] ____ a clean edge and a blurred one can come down to a tiny movement of the paper.",
+      "from": "后面是由 and 相连的两个对照对象，前面是单数 difference。",
+      "to": "difference between A and B 用 between 引出比较的双方。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "62": {
+    "number": 62,
+    "answer": "which",
+    "reasoning": "填 which。which 在从句中作 takes 的主语，指每套颜色都把纸按同样方式定位这项操作。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "标出主句和逗号后缺主语的从句。",
+        "判定先行内容是套色时全程保持纸的位置，选择关系代词 which。"
+      ],
+      "linked_concepts": [
+        "非限制性定语从句",
+        "整句指代"
+      ]
+    },
+    "reading_turn": {
+      "span": "The printer has to position the sheet exactly the same way for each color, [62] ____ takes considerable practice.",
+      "from": "主句已经表达每次都要把纸放在同一位置，逗号后 takes 缺主语。",
+      "to": "which 引导非限制性定语从句，并承接整项叠色对位动作。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "63": {
+    "number": 63,
+    "answer": "carefully",
+    "reasoning": "填 carefully。句首 Look 是祈使句谓语，空格处的副词修饰观察动作。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "识别逗号前是 Look 开头的祈使句，at 引出观察对象。",
+        "将提示形容词转成方式副词，限定观察动作。"
+      ],
+      "linked_concepts": [
+        "形容词转副词",
+        "祈使句谓语与方式状语"
+      ]
+    },
+    "reading_turn": {
+      "span": "Look [63] ____ (careful) at an enlarged image, and you can see how one color meets the next.",
+      "from": "放大图使印版颜色交界成为细看可辨的特征。",
+      "to": "用方式副词 carefully 修饰 Look。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "64": {
+    "number": 64,
+    "answer": "what",
+    "reasoning": "填 what。what the finished picture looks like 表示成品看起来是什么样子，what 在从句内作 like 的宾语。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "定位 shows 后所接从句的外部宾语功能。",
+        "分析从句里已有主谓，补出 like 所需的名词性成分。"
+      ],
+      "linked_concepts": [
+        "宾语从句",
+        "关系用语在从句中的句法角色"
+      ]
+    },
+    "reading_turn": {
+      "span": "A phone image shows [64] ____ the finished picture looks like.",
+      "from": "shows 后为宾语从句，从句中 the finished picture 已作主语，looks like 缺介词宾语。",
+      "to": "what 同时引导宾语从句并补足 like 的宾语。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "65": {
+    "number": 65,
+    "answer": "or",
+    "reasoning": "填 or。whether ... or ... 连接两种初次接触途径，主句的作坊体验对两种情况都成立。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "找到 whether 引出的让步条件和语法地位相同的两个介词短语。",
+        "从主句对两种情形均成立推出二选支的并列连词 or。"
+      ],
+      "linked_concepts": [
+        "whether ... or ... 结构",
+        "并列介词短语"
+      ]
+    },
+    "reading_turn": {
+      "span": "Whether people first see the figures on a door [65] ____ on a phone, they can watch each color fall into place at a workshop in Zhuxian Town.",
+      "from": "句首 Whether 设置首次接触年画的两种途径。",
+      "to": "用 or 并列 on a door 与 on a phone，组成 whether ... or ...。"
+    },
+    "sources": [
+      {
+        "title": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆，朱仙镇木版年画",
+        "url": "https://www.ihchina.cn/project_details/13906/"
+      }
+    ]
+  },
+  "66": {
+    "number": 66,
+    "answer": "开放作答。推荐一种方案，说明其如何帮助交换生选餐并维持取餐效率，写清两名志愿者的分工。",
+    "reasoning": "把交换生初次辨认菜品的需要与原有队伍的流速一起考虑。两种方案都可选，理由应落在菜品信息如何传递以及学生何时得到信息。范文把发菜单和答疑分别放在入口与旁侧，两人各有清楚职责。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "从受众陌生、两名志愿者和队伍不能减速推导可执行的选择标准。",
+        "把所选方案写成两项有位置和时机的职责，并解释职责如何服务选餐与队伍流动。"
+      ],
+      "linked_concepts": [
+        "建议邮件的对象与语气",
+        "人力和现场流线约束"
+      ]
+    },
+    "reading_turn": {
+      "span": "学校只能安排两名志愿者，且不能拖慢原有取餐队伍。",
+      "from": "外教需要在两种信息提供方式中确定一项，接待对象首次使用食堂。",
+      "to": "在维持原有取餐流速的同时，说明怎样让两位志愿者完成信息提供和现场引导。"
+    },
+    "rubric": [
+      {
+        "step": "交代接待交换生用餐的写作目的得1分，清楚选定题给方案之一得1分。",
+        "points": 2
+      },
+      {
+        "step": "说明初次用餐的一项具体信息需要得1分，解释所选方式如何帮助学生作出用餐选择得1分。",
+        "points": 2
+      },
+      {
+        "step": "第一名志愿者职责明确得1分，交代操作地点、时机或具体动作得1分。",
+        "points": 2
+      },
+      {
+        "step": "第二名志愿者职责明确得1分，具体说明其与第一名如何配合得1分。",
+        "points": 2
+      },
+      {
+        "step": "方案符合两人的配置得1分，交代维持原有队伍通畅的措施或因果理由得1分。",
+        "points": 2
+      },
+      {
+        "step": "邮件称呼、结束语及署名合宜得1分，对外教的建议语气得体得1分。",
+        "points": 2
+      },
+      {
+        "step": "行文条理与衔接、语法句式、用词拼写各1分。",
+        "points": 3
+      }
+    ],
+    "sample": "Dear Ms. Taylor,\n\nI'd recommend picture menus for our exchange students' first lunch. With photos, English names, and a list of the main ingredients, students can decide what to order before entering the line. The servers can then take their orders without stopping to explain each dish.\n\nOne volunteer could hand out menus at the cafeteria entrance. The other could stand off to the side, answer questions, and point students to the right counter. A quick check with the kitchen staff that morning would keep the menus accurate.\n\nYours,\nLi Hua",
+    "suggested_minutes": 15,
+    "time_check": "按约15分钟比较两种办法、组织两段、复查称呼与分工。2025年同位是给外教写信比较两项栏目，2026年同位是就三项大学活动排序说明理由。此题工作量为一次选择、一个情境理由和两项职责。范文正文85词。"
+  },
+  "67": {
+    "number": 67,
+    "answer": "开放作答。第一段如实联系两处居民并协调核对幼苗，第二段落实补救和种植安排，交代叙述者与 Alfie 的关系变化。",
+    "reasoning": "第一段借手机联系两处居民暂停种植，认领错送责任，并借 Alfie 的标记分拣与转运。第二段接住 Maple Court 居民等候的状态，写出补救结果，用叙述者当众提及 Alfie 的方案、耐心等其核验来兑现开头的关系转折。其他路线可按标记、时限和两处光照条件自洽展开。",
+    "distractors": {},
+    "depth": {
+      "reasoning_steps": [
+        "连起搬苗避雨、叙述者按旧位置装车、照片标记暴露两处错送的因果。",
+        "按两段首推进拦停、分拣、重新分配及居民反应，回扣叙述者最初没有核对的选择。"
+      ],
+      "linked_concepts": [
+        "物件线索和时钟对补救的限制",
+        "人物关系通过行动发生变化"
+      ]
+    },
+    "reading_turn": {
+      "span": "The shed clock read 9:52. I'd told the residents they could start as soon as the trays arrived.",
+      "from": "照片确认错送，离原约定10:00只有几分钟，居民还可能提前动手。",
+      "to": "先用手机及时止住种植，再让两处依日照需要和木牌分拣，合理推进到第二段的等候与种植安排。"
+    },
+    "rubric": [
+      {
+        "step": "第一段让叙述者用手机及时联系两处得2分，交代自身装车失误得1分，和 Alfie 核对照片或木牌得2分。",
+        "points": 5
+      },
+      {
+        "step": "用太阳与绿叶或等效可靠证据区分两批目标地点得2分，交代分拣与运送如何协调得2分，补救可在原有时间与资源条件下展开得1分。",
+        "points": 5
+      },
+      {
+        "step": "第二段承接 Maple Court 居民等候得1分，交代错送幼苗如何实质转运或重新分配得2分，写清两处正确的栽种进展或合理后续安排得2分。",
+        "points": 5
+      },
+      {
+        "step": "叙述者以行动承担责任并改变对 Alfie 意见的处理方式得2分，Alfie 的发挥与此前参与种苗和标记的事实相符得2分。",
+        "points": 4
+      },
+      {
+        "step": "承接两段段首各1分，段间因果和叙事人称、时态连贯得1分。",
+        "points": 3
+      },
+      {
+        "step": "句法、词汇拼写、表达的自然流畅程度各1分。",
+        "points": 3
+      }
+    ],
+    "sample": "I picked up my phone again and asked Alfie to stay with me. I messaged both groups, admitting I'd delivered some trays to the wrong place and asking them to wait. Alfie suggested sending a photo of each marker so the residents could sort the trays themselves. He took the pictures, then set off for Beech Court to help put the sun trays by the gate. I pushed the empty cart back to Maple Court.\n\nAt 10:00, the residents at Maple Court were still waiting beside their empty beds. They had already sorted the trays. Two residents helped me load the ones with leaves. At Beech Court, Alfie met me with the sun trays. We left the shade plants with two residents waiting by the gate. Then Alfie and I took the other trays back to Maple Court. The first plants were in the ground within minutes. When a woman asked how we had sorted things out, I told her about Alfie's plan. Then I handed him the last tray and asked him to check the marker. This time I waited for his answer.",
+    "suggested_minutes": 25,
+    "time_check": "按约25分钟恢复前因、规划两段、写作和复核。2025年和2026年同位都需用既有关系与行动条件完成两处段首的过渡。本题可用木牌、照片、小车和两组居民完成补救。范文新增157词，连两句段首按英文单词计183词。"
+  }
+}

@@ -80,6 +80,17 @@ def validate_structure(blueprint, candidate):
                     and q["stem"].strip() and q["answer"] not in (None,"",[],{}),"题型、题干或答案不符")
             require(q["id"]==f'orig:{subject}:{candidate["id"]}:q{num:02d}',"原创ID或题序错误")
             require(not any(s in q["stem"] for s in ("参考答案：", "Answer key:", "评分细则：")), "学生题面混入答案")
+            if "answer_variants" in q:
+                primary = q["answer"]
+                variants = q["answer_variants"]
+                require(q["kind"] == "recitation" and isinstance(primary, list)
+                        and all(isinstance(value, str) and value.strip() for value in primary)
+                        and isinstance(variants, list) and variants
+                        and all(isinstance(key, list) and len(key) == len(primary)
+                                and all(isinstance(value, str) and value.strip() for value in key)
+                                for key in variants)
+                        and len({tuple(key) for key in [primary, *variants]}) == len(variants) + 1,
+                        "开放默写备选答案须逐空登记且不得重复")
             if q["kind"] in ("single_choice","gap_match","multiple_choice"):
                 opts=q.get("options") or materials.get(q.get("material"), {}).get("options",{})
                 key=q["answer"]
@@ -135,6 +146,7 @@ def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
     public = student_paper(blueprint, candidate, layout_mode)
     reference = candidate.get("quality_benchmarks")
     scripts = candidate.get("listening", {})
+    variants = {str(q["number"]): q["answer_variants"] for q in candidate["questions"] if q.get("answer_variants")}
     packet={"paper":public,"paper_version":fingerprint(public)}
     output.mkdir(parents=True,exist_ok=False)
     render(public, output/"paper")
@@ -142,6 +154,7 @@ def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
     write_new(output/"listening-review.json",scripts)
     write_new(output/"verification.json",{"paper_version":packet["paper_version"],"paper_sha256":digest(output/"paper.pdf"),
               **({"quality_benchmarks":reference} if reference else {}),
+              **({"exact_key_variants":variants} if variants else {}),
               "expected":[q["answer"] for q in candidate["questions"]],"blueprint_sha256":fingerprint(blueprint),
               "listening_sha256":fingerprint(scripts),"reference_notes":candidate["reference_notes"],
               "reference_scope":candidate["reference_scope"]})
@@ -165,7 +178,8 @@ def review(folder, doc):
         label=q["number"]
         require(result["number"]==label and result.get("ambiguity") is False and result["reasoning"].strip(),
                 f"第{label}题有歧义、错位或无复核依据")
-        require(result["answer"]==expected,f"第{label}题答案复核不一致")
+        variants = verification.get("exact_key_variants", {}).get(str(label), [])
+        require(result["answer"] in [expected, *variants], f"第{label}题答案复核不一致")
         if q["kind"] not in OBJECTIVE:
             rubric=result.get("rubric") or []
             require(rubric and all(type(r["points"]) in (int,float) and r["points"]>0 and r["step"].strip() for r in rubric)

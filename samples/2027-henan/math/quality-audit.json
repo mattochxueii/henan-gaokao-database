@@ -1,0 +1,1200 @@
+{
+  "protocol": "gaokao-editorial-audit-v2",
+  "reviewer": "ped28-isolated；本地逐题证据整理",
+  "paper_version": "eb9eb6cb8148b1c26c2ba6bba318e521d512ffa42a53665af2b43a34fcfdc0ad",
+  "paper_pdf_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+  "reference_sha256": "1f82a2a470c49ee29c19c580a406c27f2e44e01dbdb6ca99b37e2634a8e94bb1",
+  "items": [
+    {
+      "number": 1,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+          "comparison": "2025第1题只需用 i²=−1 乘开并读虚部，本题多出两个条件分别成集并复合运算。"
+        },
+        "2026": {
+          "version_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+          "comparison": "2026第1题排序后取五个数的中间项。本题有额外的 −1、2 边界辨别及集合顺序，仍可短算。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "分别把两种条件转换成有限集合",
+          "在指定全集取补再取交"
+        ],
+        "linked_concepts": [
+          "集合与逻辑",
+          "补集与两类有限集合的关系"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "选B。\\(x^2-x-2=(x+1)(x-2)<0\\) 在 \\(U\\) 中仅有 \\(0,1\\)，所以 \\(A=\\{0,1\\}\\)。绝对值条件给出 \\(B=\\{0,2\\}\\)。补去 \\(A\\) 后与 \\(B\\) 相交只余 \\(2\\)。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "不等式的开区间筛出 A={0,1}，绝对值方程给 B={0,2}，在 U 内取补再与 B 交得 {2}（B）。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 keeps the second-line result expression with the stem. The tall complement C carries a subscript U, and braces, the squared term and intersection marks render distinctly."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "忘记补集，直接求A与B的交",
+          "mechanism": "忘记补集，直接求A与B的交。判定依据：选B。\\(x^2-x-2=(x+1)(x-2)<0\\) 在 \\(U\\) 中仅有 \\(0,1\\)，所以 \\(A=\\{0,1\\}\\)。绝对值条件给出 \\(B=\\{0,2\\}\\)。补去 \\(A\\) 后与 \\(B\\) 相交只余 \\(2\\)。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "得到B后漏掉补集条件",
+          "mechanism": "得到B后漏掉补集条件。判定依据：选B。\\(x^2-x-2=(x+1)(x-2)<0\\) 在 \\(U\\) 中仅有 \\(0,1\\)，所以 \\(A=\\{0,1\\}\\)。绝对值条件给出 \\(B=\\{0,2\\}\\)。补去 \\(A\\) 后与 \\(B\\) 相交只余 \\(2\\)。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "解出补集边界后漏检−1是否属于B",
+          "mechanism": "解出补集边界后漏检−1是否属于B。判定依据：选B。\\(x^2-x-2=(x+1)(x-2)<0\\) 在 \\(U\\) 中仅有 \\(0,1\\)，所以 \\(A=\\{0,1\\}\\)。绝对值条件给出 \\(B=\\{0,2\\}\\)。补去 \\(A\\) 后与 \\(B\\) 相交只余 \\(2\\)。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "因式分解后确定开区间 (−1,2)，再与 U 相交得 A={0,1}。",
+          "x−1=±1，在 U 中得到 B={0,2}。",
+          "从 B 中去掉属于 A 的 0，得到 {2}。"
+        ],
+        "routine_shortcut_rejected": "2025第1题只需用 i²=−1 乘开并读虚部，本题多出两个条件分别成集并复合运算。 2026第1题排序后取五个数的中间项。本题有额外的 −1、2 边界辨别及集合顺序，仍可短算。"
+      }
+    },
+    {
+      "number": 2,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9afbf49298b992757a9308ba35400fe4089745db13f7e76834d63df4d51db3de",
+          "comparison": "2025第2题从给定有限全集删去 A 的三元素并计数。本题需先解出隐式 z，再转成 z 的共轭。"
+        },
+        "2026": {
+          "version_sha256": "bff6391220770a06587933a945d84d8fe814918e6a30589942a947a967869cfe",
+          "comparison": "2026第2题利用不共线性直接匹配两系数。本题同样由关系反求对象，额外用 i²=−1 并辨认共轭。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把复数分式条件改写为一次关系",
+          "复除后取共轭"
+        ],
+        "linked_concepts": [
+          "复数",
+          "复数分式方程中的符号与共轭"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "选D。\\(z=i(1+z)\\)，所以 \\((1-i)z=i\\)。分子分母同乘 \\(1+i\\)，得 \\(z=\\frac{-1+i}{2}\\)。实部不变、虚部变号，故共轭为 \\(\\frac{-1-i}{2}\\)。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "先排除 z=−1。变形为 (1−i)z=i，乘共轭分母有 z=(−1+i)/2，题问共轭，选 D。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 renders the denominator 1+z, the overbar over z, and each of the four compact fractions distinctly."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "移项时写成(1+i)z=i又忘记取共轭",
+          "mechanism": "移项时写成(1+i)z=i又忘记取共轭。判定依据：选D。\\(z=i(1+z)\\)，所以 \\((1-i)z=i\\)。分子分母同乘 \\(1+i\\)，得 \\(z=\\frac{-1+i}{2}\\)。实部不变、虚部变号，故共轭为 \\(\\frac{-1-i}{2}\\)。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "完成复数除法后未取共轭",
+          "mechanism": "完成复数除法后未取共轭。判定依据：选D。\\(z=i(1+z)\\)，所以 \\((1-i)z=i\\)。分子分母同乘 \\(1+i\\)，得 \\(z=\\frac{-1+i}{2}\\)。实部不变、虚部变号，故共轭为 \\(\\frac{-1-i}{2}\\)。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把i乘i误算为1再取共轭",
+          "mechanism": "把i乘i误算为1再取共轭。判定依据：选D。\\(z=i(1+z)\\)，所以 \\((1-i)z=i\\)。分子分母同乘 \\(1+i\\)，得 \\(z=\\frac{-1+i}{2}\\)。实部不变、虚部变号，故共轭为 \\(\\frac{-1-i}{2}\\)。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "分母 1+z 非零。",
+          "解得 z=(−1+i)/2，分母仍非零。",
+          "共轭使虚部变号，实部保留。"
+        ],
+        "routine_shortcut_rejected": "2025第2题从给定有限全集删去 A 的三元素并计数。本题需先解出隐式 z，再转成 z 的共轭。 2026第2题利用不共线性直接匹配两系数。本题同样由关系反求对象，额外用 i²=−1 并辨认共轭。"
+      }
+    },
+    {
+      "number": 3,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "17a21bb203829fc99b1764dc80edae1239a21938874075deed0c61cf6bf9ad55",
+          "comparison": "2025第3题由 b/a=√7 和 c²=a²+b² 直接得双曲线 e。本题要先建立分式，反推未知角的三角值。"
+        },
+        "2026": {
+          "version_sha256": "3e376807c3bb046fea80cf3126d5b4ec17d2ae428685aeac5839fbe24dc2b6bb",
+          "comparison": "2026第3题先逐个计算三特殊角三角值，再取交集。本题计算项较少，难点在正切和角分母与符号。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用正切和角公式表示所求量",
+          "排除零分母并解一次方程"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "和角关系的逆用"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "选A。记 \\(t=\\tan\\beta\\)。正切和角公式给 \\(\\frac{2+t}{1-2t}=-4\\)，分母非零。移项得 \\(7t=6\\)。所得 \\(t>0\\) 且 \\(1-2t\\ne0\\)，符合题设。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "令 t=tanβ，正切和角给 (2+t)/(1−2t)=−4，可得 t=6/7（A），分母非零且 t>0。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 shows the interval bound π/2, the minus in the tangent sum, and the four fractions in one unbroken question."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "misconception": "求未知角时误把系数7增到11",
+          "mechanism": "求未知角时误把系数7增到11。判定依据：选A。记 \\(t=\\tan\\beta\\)。正切和角公式给 \\(\\frac{2+t}{1-2t}=-4\\)，分母非零。移项得 \\(7t=6\\)。所得 \\(t>0\\) 且 \\(1-2t\\ne0\\)，符合题设。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把右端常数和左端常数相减",
+          "mechanism": "把右端常数和左端常数相减。判定依据：选A。记 \\(t=\\tan\\beta\\)。正切和角公式给 \\(\\frac{2+t}{1-2t}=-4\\)，分母非零。移项得 \\(7t=6\\)。所得 \\(t>0\\) 且 \\(1-2t\\ne0\\)，符合题设。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "将7t=6反求为t=7/6",
+          "mechanism": "将7t=6反求为t=7/6。判定依据：选A。记 \\(t=\\tan\\beta\\)。正切和角公式给 \\(\\frac{2+t}{1-2t}=-4\\)，分母非零。移项得 \\(7t=6\\)。所得 \\(t>0\\) 且 \\(1-2t\\ne0\\)，符合题设。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "将角和问题化成关于正数 t=tan β 的分式方程。",
+          "2+t=−4+8t 得 t=6/7。",
+          "6/7 对应唯一锐角，且分母 −5/7 非零，回代成立。"
+        ],
+        "routine_shortcut_rejected": "2025第3题由 b/a=√7 和 c²=a²+b² 直接得双曲线 e。本题要先建立分式，反推未知角的三角值。 2026第3题先逐个计算三特殊角三角值，再取交集。本题计算项较少，难点在正切和角分母与符号。"
+      }
+    },
+    {
+      "number": 4,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e172f59b8d1926f4e7a72a56b6684947407333b6f16e73088d0eab52345138e4",
+          "comparison": "2025第4题用 tan 的中心横坐标 π/3+kπ 结合正数条件找最小值。本题也需辨认统计量作用，另外要重算转换数据的均值。"
+        },
+        "2026": {
+          "version_sha256": "e97bac045684e4d2858fdce0fbb32f40304f5a78bdfd6cb27014e674efe3ecf1",
+          "comparison": "2026第4题一次求导后写点斜式。本题有中位数基准、逐点转换、以新均值计算三步，6和√2可分别检验把均方当方差、把标准差当方差。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "中位数居中后取偏差绝对值",
+          "对新样本作中心化二阶统计"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "区分绝对偏差数据的二阶矩和方差"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "选C。基准为 \\(4\\)，转化后的数据为 \\(3,2,0,1,4\\)，均值为 \\(2\\)。偏差平方的和为 \\(1+0+4+1+4=10\\)，方差为 \\(\\frac{10}{5}=2\\)。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "中位数为4，五个偏离绝对值为3、2、0、1、4。它们的均值为2，平方离差均值为2（C）。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 wraps after 绝对 and resumes with 值. The 1/n variance factor and radical in option D are legible."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把新数据平方平均6当作方差",
+          "mechanism": "把新数据平方平均6当作方差。判定依据：选C。基准为 \\(4\\)，转化后的数据为 \\(3,2,0,1,4\\)，均值为 \\(2\\)。偏差平方的和为 \\(1+0+4+1+4=10\\)，方差为 \\(\\frac{10}{5}=2\\)。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "用均值平方4代替离差平方平均",
+          "mechanism": "用均值平方4代替离差平方平均。判定依据：选C。基准为 \\(4\\)，转化后的数据为 \\(3,2,0,1,4\\)，均值为 \\(2\\)。偏差平方的和为 \\(1+0+4+1+4=10\\)，方差为 \\(\\frac{10}{5}=2\\)。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "算出了标准差而非方差",
+          "mechanism": "算出了标准差而非方差。判定依据：选C。基准为 \\(4\\)，转化后的数据为 \\(3,2,0,1,4\\)，均值为 \\(2\\)。偏差平方的和为 \\(1+0+4+1+4=10\\)，方差为 \\(\\frac{10}{5}=2\\)。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "以中位数 4 为基准转化为绝对差样本 (3,2,0,1,4)。",
+          "以转化后样本均值 2 为中心，代入方差公式得 10/5=2。"
+        ],
+        "routine_shortcut_rejected": "2025第4题用 tan 的中心横坐标 π/3+kπ 结合正数条件找最小值。本题也需辨认统计量作用，另外要重算转换数据的均值。 2026第4题一次求导后写点斜式。本题有中位数基准、逐点转换、以新均值计算三步，6和√2可分别检验把均方当方差、把标准差当方差。"
+      }
+    },
+    {
+      "number": 5,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "14374a02257b0e8e0c7710c7e133327e382a67a78f76534e997ac3fc66f088d3",
+          "comparison": "2025第5题把原自变量通过偶性和周期拉回给定区间。本题同样需选择合法分支，先把模长等式化为标量。"
+        },
+        "2026": {
+          "version_sha256": "81741fa116cbd32b93ced1989f127a1b10c22e2413a6b2c764b423974fb83d0e",
+          "comparison": "2026第5题以共同点定两个抛物线参数，再求焦点间距。本题也有两次表示转换，另有 AP>PD 严格筛选。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "用中点合并两个异向向量",
+          "模长解除正负分支",
+          "用AP与PD的严格比较排除边界"
+        ],
+        "linked_concepts": [
+          "平面向量",
+          "向量模到一维位置的回译"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "解得 \\(t=\\frac12\\) 或 \\(t=\\frac56\\)。由 \\(AP>PD\\) 取 \\(t=\\frac56\\)。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "设 t=AP/AD。三个位移向量之和为 (2−3t)·AD 向量，AB+AC 的向量和为2AD，于是 |2−3t|=1/2。取 t>1/2 的5/6（D）。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 gives the norm relation its own line. The vector arrows, inequality AP>PD and requested AP/AD ratio render coherently."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "所求误换成PD/AD",
+          "mechanism": "所求误换成PD/AD。判定依据：解得 \\(t=\\frac12\\) 或 \\(t=\\frac56\\)。由 \\(AP>PD\\) 取 \\(t=\\frac56\\)。",
+          "plausible": true
+        },
+        "B": {
+          "misconception": "保留绝对值方程的等长端点分支",
+          "mechanism": "保留绝对值方程的等长端点分支。判定依据：解得 \\(t=\\frac12\\) 或 \\(t=\\frac56\\)。由 \\(AP>PD\\) 取 \\(t=\\frac56\\)。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把模长非零条件误作向量和为零",
+          "mechanism": "把模长非零条件误作向量和为零。判定依据：解得 \\(t=\\frac12\\) 或 \\(t=\\frac56\\)。由 \\(AP>PD\\) 取 \\(t=\\frac56\\)。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "取 A 为起点，利用 BC 中点将两组向量分别写成 2AD 和 (2−3t)AD。",
+          "AP>PD 等价于 t>1−t，连同 P 在线段上得到 t∈(1/2,1]。",
+          "|2−3t|=1/2 给 t=1/2 或 5/6，按严格边界排除 1/2。"
+        ],
+        "routine_shortcut_rejected": "2025第5题把原自变量通过偶性和周期拉回给定区间。本题同样需选择合法分支，先把模长等式化为标量。 2026第5题以共同点定两个抛物线参数，再求焦点间距。本题也有两次表示转换，另有 AP>PD 严格筛选。"
+      }
+    },
+    {
+      "number": 6,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9fa6a2cf318826b6be16d615c84e7c5c8091e44e6443ffd56c13df317181c736",
+          "comparison": "2025第6题需从读图取得风速向量、换向求真风，再查表。本题把难点集中在等比差分的识别，计算链同为多步。"
+        },
+        "2026": {
+          "version_sha256": "6ee24515b28443230b12f273f1baeb15e19ee4e21a6565b3e20d5f1a21a2db63",
+          "comparison": "2026第6题从全局最大值等于1反推参数下界及取等，须处理分母。本题以差分归约和等比求和完成，少了存在取等与定义域的分层判断。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "二阶递推化为相邻差的等比不变量",
+          "用两端数的差确定中间三项差分之和",
+          "从差分回到a6"
+        ],
+        "linked_concepts": [
+          "数列",
+          "二阶递推中的差分变换和下标校正"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "\\(d_5=8d_2=16\\)，所以 \\(a_6=a_5+d_5=33\\)。也可从 \\(a_3=9-2a_1\\) 顺次递推并由 \\(a_5\\) 反求首项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "差分 d_n=a_(n+1)−a_n 满足 d_(n+1)=2d_n。a5−a2=7d2=14，故 d5=16、a6=33（A）。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 shows the sequence subscripts, recurrence minus sign and four integers without clipping."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "misconception": "将a5−a2当作下一差直接相加",
+          "mechanism": "将a5−a2当作下一差直接相加。判定依据：\\(d_5=8d_2=16\\)，所以 \\(a_6=a_5+d_5=33\\)。也可从 \\(a_3=9-2a_1\\) 顺次递推并由 \\(a_5\\) 反求首项。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把中间两项差当作全部，从而把公比推进后的差错取24",
+          "mechanism": "把中间两项差当作全部，从而把公比推进后的差错取24。判定依据：\\(d_5=8d_2=16\\)，所以 \\(a_6=a_5+d_5=33\\)。也可从 \\(a_3=9-2a_1\\) 顺次递推并由 \\(a_5\\) 反求首项。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "误认为三个相邻差同为首尾差的一半",
+          "mechanism": "误认为三个相邻差同为首尾差的一半。判定依据：\\(d_5=8d_2=16\\)，所以 \\(a_6=a_5+d_5=33\\)。也可从 \\(a_3=9-2a_1\\) 顺次递推并由 \\(a_5\\) 反求首项。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "以相邻差替代原数列，把二阶递推变为公比为 2 的一阶递推。",
+          "a_5−a_2=7d_2=14 定出 d_2=2。",
+          "代入 d_5=8d_2 和 a_6=a_5+d_5 得 33。"
+        ],
+        "routine_shortcut_rejected": "2025第6题需从读图取得风速向量、换向求真风，再查表。本题把难点集中在等比差分的识别，计算链同为多步。 2026第6题从全局最大值等于1反推参数下界及取等，须处理分母。本题以差分归约和等比求和完成，少了存在取等与定义域的分层判断。"
+      }
+    },
+    {
+      "number": 7,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "787f9387c371fd9cb2866787caad8398df32d22b7e460f709c88641ebe2c8384",
+          "comparison": "2025第7题把等距轨迹化为两条平行线，再按半径1和3判断相切、相交。本题同样要转换几何表示并检查边界，决策由交点计数改为内点最优与可达。"
+        },
+        "2026": {
+          "version_sha256": "d05e7240b419a025f77b422bbe3b7387900feca785a699725801c7cf42f7bc22",
+          "comparison": "2026第7题用和、整数奇偶及配对约束公差后需验证可行。本题也由全局线性限制得到下界，并验证等号处的两点真实存在。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "从两对等距关系建立对棱及其中点连线的垂直结构",
+          "把空间距离平方化成固定高与两个独立投影的平方和",
+          "对两个线段上的参数同时施加限制",
+          "把关联距离平方配方求全局下界并核实可达"
+        ],
+        "linked_concepts": [
+          "立体几何",
+          "正四面体对棱正交与约束下的空间距离最值"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "设 \\(x=CN\\)，由 \\(0\\le AM=8-2x\\le6\\) 和 \\(0\\le CN\\le6\\) 得 \\(x\\in[1,4]\\)。于是 \\(MN^2=18+(5-2x)^2+(x-3)^2=5(x-\\frac{13}{5})^2+\\frac{91}{5}\\)。在 \\(CN=\\frac{13}{5},\\ AM=\\frac{14}{5}\\) 时可以取等。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "令 x=AM、y=CN，约束 x+2y=8，x∈[0,6]、y∈[1,4]。正四面体对棱方向和对棱中点连线互相垂直，中点间距平方18，故 MN²=18+(x−3)²+(y−3)²。由 (x−3)+2(y−3)=−1 和柯西得下界91/5（B），于 x=14/5、y=13/5 达到。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 shows AB=6 and AM+2CN=8 in the stem and under the tetrahedron. The 300 dpi view shows M clear of AB, N clear of CD, and both marked points plus dashed MN distinct."
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "P1 shows AB=6 and AM+2CN=8 in the stem and under the tetrahedron. The 300 dpi view shows M clear of AB, N clear of CD, and both marked points plus dashed MN distinct."
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把两个移动点同时放在中点，误把公共垂线长度的平方作为约束下可取的最小值",
+          "mechanism": "把两个移动点同时放在中点，误把公共垂线长度的平方作为约束下可取的最小值。判定依据：设 \\(x=CN\\)，由 \\(0\\le AM=8-2x\\le6\\) 和 \\(0\\le CN\\le6\\) 得 \\(x\\in[1,4]\\)。于是 \\(MN^2=18+(5-2x)^2+(x-3)^2=5(x-\\frac{13}{5})^2+\\frac{91}{5}\\)。在 \\(CN=\\frac{13}{5},\\ AM=\\frac{14}{5}\\) 时可以取等。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "先把M定在AB的中点，只沿一条棱调整N",
+          "mechanism": "先把M定在AB的中点，只沿一条棱调整N。判定依据：设 \\(x=CN\\)，由 \\(0\\le AM=8-2x\\le6\\) 和 \\(0\\le CN\\le6\\) 得 \\(x\\in[1,4]\\)。于是 \\(MN^2=18+(5-2x)^2+(x-3)^2=5(x-\\frac{13}{5})^2+\\frac{91}{5}\\)。在 \\(CN=\\frac{13}{5},\\ AM=\\frac{14}{5}\\) 时可以取等。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "先把N定在CD的中点，未允许两个投影共同分担偏移",
+          "mechanism": "先把N定在CD的中点，未允许两个投影共同分担偏移。判定依据：设 \\(x=CN\\)，由 \\(0\\le AM=8-2x\\le6\\) 和 \\(0\\le CN\\le6\\) 得 \\(x\\in[1,4]\\)。于是 \\(MN^2=18+(5-2x)^2+(x-3)^2=5(x-\\frac{13}{5})^2+\\frac{91}{5}\\)。在 \\(CN=\\frac{13}{5},\\ AM=\\frac{14}{5}\\) 时可以取等。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "把对棱中点 E、F 连起来。C、D 到 A、B 等距，因而 AB 垂直平面 CDE。又 EC=ED，故 EF⊥CD，得到 ME、EF、FN 三个相互正交的方向。",
+          "勾股关系给 EF²=18，并把原距离拆成 MN²=18+(u−3)²+(v−3)²。",
+          "根据两点的线段端点与 u+2v=8，得到 1≤v≤4，且 (u−3)+2(v−3)=−1。",
+          "对方向 (1,2) 用柯西不等式，得与两个中点的平方偏差之和至少为 1/5，并定位等号条件。",
+          "选 u=14/5、v=13/5，两点均在线段内，达到下界 91/5。"
+        ],
+        "routine_shortcut_rejected": "2025第7题把等距轨迹化为两条平行线，再按半径1和3判断相切、相交。本题同样要转换几何表示并检查边界，决策由交点计数改为内点最优与可达。2026第7题用和、整数奇偶及配对约束公差后需验证可行。本题也由全局线性限制得到下界，并验证等号处的两点真实存在。"
+      },
+      "required_figure_information": "对棱的点位、线段耦合条件及正四面体投影。 图将正文约束对应到不同位置的点、线和投影。",
+      "figure_conditions": {
+        "observation": "P1 shows AB=6 and AM+2CN=8 in the stem and under the tetrahedron. The 300 dpi view shows M clear of AB, N clear of CD, and both marked points plus dashed MN distinct.",
+        "records": [
+          {
+            "anchor": "AB=6",
+            "label": "AB=6,\\ AM+2CN=8",
+            "meaning": "四面体各棱长度。"
+          },
+          {
+            "anchor": "AM+2CN=8",
+            "label": "AB=6,\\ AM+2CN=8",
+            "meaning": "两个移动点的距离约束。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5e67d2e0414340eab918e7e0324a2b85f84c977feca9630fb17c729eaacc414a",
+          "comparison": "2025第8题把三个对数化为同一参数下的幂，再比较不可出现的严格次序，有多阈值。本题同样需重设参数，关键在切点重根，解出后顺序短。"
+        },
+        "2026": {
+          "version_sha256": "260c11400f88e5f329d611dc5b93c7d37bca301c064e30b702614d65de80397a",
+          "comparison": "2026第8题用全集对称求坐标和总和，再减去一点并更换样本量。本题也靠结构化捷径，核心是由切触对应重根而非直接展开求三根。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把切线斜率和截距写成切点参数",
+          "切点二重根决定另一交点的横坐标",
+          "排除拐点退化并定位两切点同一斜率"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "用切触重根控制另一个交点"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "\\(Q\\) 与 \\(P\\) 不同，故 \\(t\\ne 0\\)，而 \\(Q\\) 的横坐标为 \\(-2t\\)。由 \\(5t^2=20\\) 得 \\(t^2=4\\)，斜率 \\(3t^2-3=9\\)。正负两种切点给同一斜率。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "设切点横坐标为 p，曲线减去切线得到 (x−p)²(x+2p)，所以另一横坐标为 −2p。由 5p²=20 得斜率 3p²−3=9（B）。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P1 puts the cubic tangent stem over two lines with all four choices above the footer."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "misconception": "由两交点平方和误用t²+9t²=20",
+          "mechanism": "由两交点平方和误用t²+9t²=20。判定依据：\\(Q\\) 与 \\(P\\) 不同，故 \\(t\\ne 0\\)，而 \\(Q\\) 的横坐标为 \\(-2t\\)。由 \\(5t^2=20\\) 得 \\(t^2=4\\)，斜率 \\(3t^2-3=9\\)。正负两种切点给同一斜率。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "找到t²=4后漏去线性项对导数的贡献",
+          "mechanism": "找到t²=4后漏去线性项对导数的贡献。判定依据：\\(Q\\) 与 \\(P\\) 不同，故 \\(t\\ne 0\\)，而 \\(Q\\) 的横坐标为 \\(-2t\\)。由 \\(5t^2=20\\) 得 \\(t^2=4\\)，斜率 \\(3t^2-3=9\\)。正负两种切点给同一斜率。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "用两个横坐标平方的平均代替切点横坐标",
+          "mechanism": "用两个横坐标平方的平均代替切点横坐标。判定依据：\\(Q\\) 与 \\(P\\) 不同，故 \\(t\\ne 0\\)，而 \\(Q\\) 的横坐标为 \\(-2t\\)。由 \\(5t^2=20\\) 得 \\(t^2=4\\)，斜率 \\(3t^2-3=9\\)。正负两种切点给同一斜率。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用 f′(p)=3p²−3 写出切线。",
+          "将交点方程因式分解为 (x−p)²(x+2p)=0，读出另一根 −2p。",
+          "p²+(−2p)²=20 给 p=±2，两种情形均有不同交点且斜率同为 9。"
+        ],
+        "routine_shortcut_rejected": "2025第8题把三个对数化为同一参数下的幂，再比较不可出现的严格次序，有多阈值。本题同样需重设参数，关键在切点重根，解出后顺序短。 2026第8题用全集对称求坐标和总和，再减去一点并更换样本量。本题也靠结构化捷径，核心是由切触对应重根而非直接展开求三根。"
+      }
+    },
+    {
+      "number": 9,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7f3cd5df85c630b8ba8d264bb7334fac09efcedf13b06b477b9c8fdb55faf43c",
+          "comparison": "2025第9题构建棱柱中面，以两条相交直线推出线面垂直，并辨别直线位于或平行于平面。本题换为条件与总体的分母辨析，易错点同属对象范围。"
+        },
+        "2026": {
+          "version_sha256": "38d2bec169fbff9e8aef75137e56362a686f552ea95b7a538158b2249ad12aed",
+          "comparison": "盲审包未提供2026第9题，无法作同号比较。附近多选第10题处理空间投影和二面角，需以反例排除伪推出。本题用条件概率与边际概率不等否定独立。 同号资料为有限版本证据，按审读的可比题型解释。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "建立包含甲乙次序的16元样本空间",
+          "在和为五的结果中筛差为一",
+          "奇偶由和与差只相差偶数决定",
+          "以事件交和边缘概率乘积判断独立"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "同一随机取数的条件事件、奇偶和独立性"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "对任意一对整数，和与差相差其中一个整数的两倍，取绝对值不改变差的奇偶，故C对。差为 \\(1\\) 的有六个，事件交的概率为 \\(2/16\\)，不同于边缘概率乘积 \\((4/16)(6/16)\\)，D错。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "以16个等可能有序数对计数。S=5有4对，其中2对 D=1，整空间 D=1有6对。S和D同奇偶，故 A、C 对，B、D错。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 keeps the p(S=5) and conditional probability choices separated in a two-column grid. Its section rubric gives all correct six points, some correct partial credit, and any wrong choice zero."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "misconception": "用了全样本概率或遗漏对称的有序点",
+          "mechanism": "用了全样本概率或遗漏对称的有序点。判定依据：对任意一对整数，和与差相差其中一个整数的两倍，取绝对值不改变差的奇偶，故C对。差为 \\(1\\) 的有六个，事件交的概率为 \\(2/16\\)，不同于边缘概率乘积 \\((4/16)(6/16)\\)，D错。",
+          "plausible": true
+        },
+        "D": {
+          "misconception": "把两个选数人独立误传递到同一对数的两种函数",
+          "mechanism": "把两个选数人独立误传递到同一对数的两种函数。判定依据：对任意一对整数，和与差相差其中一个整数的两倍，取绝对值不改变差的奇偶，故C对。差为 \\(1\\) 的有六个，事件交的概率为 \\(2/16\\)，不同于边缘概率乘积 \\((4/16)(6/16)\\)，D错。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "至少需区分甲、乙的位置，样本空间为 16 个等可能有序对。",
+          "分别数出 S=5 有 4 对，D=1 有 6 对，两事件交集有 2 对。",
+          "用 4/16 核 A，用 2/4 核 B，比较 2/4 与 6/16 核 D。",
+          "|x−y|≡x−y≡x+y (mod 2)，验证 C 对所有样本成立。"
+        ],
+        "routine_shortcut_rejected": "2025第9题构建棱柱中面，以两条相交直线推出线面垂直，并辨别直线位于或平行于平面。本题换为条件与总体的分母辨析，易错点同属对象范围。 盲审包未提供2026第9题，无法作同号比较。附近多选第10题处理空间投影和二面角，需以反例排除伪推出。本题用条件概率与边际概率不等否定独立。"
+      }
+    },
+    {
+      "number": 10,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "54b51c1d62c7b11134d9296185e903d6a95607bbe7f6869868482b6aa8c8a255",
+          "comparison": "2025第10题用抛物线焦准性质与焦点弦建模，另证乘积和弦长下界。本题统一成一个一元二次式后较紧凑，独立保留对称、周期和复原根数。"
+        },
+        "2026": {
+          "version_sha256": "9aca88b9cd620fff1ff3b9acd3c267f9f7a586ac92d8de81344652d4a9eb7bf7",
+          "comparison": "2026第10题由空间中点到同一直线的距离及二面角建立投影，再判何时取最小距离、何时垂直。本题用一变量覆盖多个命题，几何构造更少，零点复原是额外分支。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把二倍角项写成同一变量u的一元二次式",
+          "核对顶点在实际值域可达",
+          "以两个相差π的角检验周期",
+          "把两个u的根分别回译为角"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "三角函数性质与二次代换的适用范围"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "\\(f(\\frac{\\pi}{2})=0\\) 而 \\(f(\\frac{3\\pi}{2})=-2\\)，故C错。\\(1+u-2u^2=(1-u)(2u+1)\\)，故 \\(u=1\\) 或 \\(u=-\\frac12\\)，在给定区间分别给出一根与两根，D对。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "化为 1+s−2s²（s=sin x），得最大值9/8及 s=1 或 −1/2 的零点层次。反射 x→π−x 不改变 s，平移 π 会翻转 s，故 A、B、D 对。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 keeps both trig terms, x=π/2 symmetry line, the 9/8 fraction and the half-open interval visible."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "C": {
+          "misconception": "把二倍角项的周期误用到含一次正弦的和函数",
+          "mechanism": "把二倍角项的周期误用到含一次正弦的和函数。判定依据：\\(f(\\frac{\\pi}{2})=0\\) 而 \\(f(\\frac{3\\pi}{2})=-2\\)，故C错。\\(1+u-2u^2=(1-u)(2u+1)\\)，故 \\(u=1\\) 或 \\(u=-\\frac12\\)，在给定区间分别给出一根与两根，D对。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用 cos 2x=1−2sin²x，把 f 表为 s=sin x 的二次式。",
+          "对称变换 x↦π−x 保持 s 不变，验证 A。",
+          "配方给上界 9/8，s=1/4 在正弦值域内，验证 B。",
+          "相差 π 的 π/2、3π/2 给函数值 0、−2，排除 C。",
+          "分别计数 sin x=1 和 sin x=−1/2 在给定半开区间内的 1、2 个解，验证 D。"
+        ],
+        "routine_shortcut_rejected": "2025第10题用抛物线焦准性质与焦点弦建模，另证乘积和弦长下界。本题统一成一个一元二次式后较紧凑，独立保留对称、周期和复原根数。 2026第10题由空间中点到同一直线的距离及二面角建立投影，再判何时取最小距离、何时垂直。本题用一变量覆盖多个命题，几何构造更少，零点复原是额外分支。"
+      }
+    },
+    {
+      "number": 11,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c7c49abba75e169be90cc056838e49a4bbc1e29c90c40b5bb5d7e60eadccf593",
+          "comparison": "2025第11题整合三角积、面积、倍角式逐层推导边角。本题各命题也有共享对象，必须将等距/等切线条件构出的等幂直线再用到外部点和切长。"
+        },
+        "2026": {
+          "version_sha256": "3b02097dffc663d1f0d9f8b21f3de2844d3804fb8e6372afce4ae3b45362ba56",
+          "comparison": "2026第11题检验共享待定直线的斜率可行、等长次数与总弦长。本题换成切线长的取值和点数，C 的截除边界保留了候选存在性，D 需从距离条件回推切线长。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按圆心相对公切线所在侧分情形并排除异侧",
+          "由有向距离求交点T，并用勾股表示两切线段平方",
+          "切线平方差为零给出直线，圆外条件给出严格界",
+          "把圆外边界传至到T的距离，并由距离回算切线长"
+        ],
+        "linked_concepts": [
+          "解析几何",
+          "等切线长点集的定义域与公切线交点距离的联动"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "又 \\(XT^2=(x+3)^2+y^2=\\frac{81}{16}+y^2\\)，所以 \\(X\\in S\\) 时 \\(XT^2>6\\)，C错误。若 \\(XT=\\sqrt7\\)，则 \\(y^2=\\frac{31}{16}\\)，两点均在 \\(S\\) 中，切线段长平方为 \\(\\frac{31}{16}-\\frac{15}{16}=1\\)，D正确。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A、D。两外公切线交于外位似中心 T=(−3,0)。向两圆切线长相等先给等幂线 x=−3/4，再由均在圆外要求 y²>15/16。S 中到 T 的距离平方为81/16+y²>6，故 C 的临界两点被剔除，到 T 为√7 则得到切长平方1。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 shows the revised pair of circle equations, the definition of S on a second line and four choices on separate lines. The stacked −3/4 and square roots are distinct."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "misconception": "只令切线长平方形式相等，漏检两圆外及严格不等式",
+          "mechanism": "只令切线长平方形式相等，漏检两圆外及严格不等式。判定依据：又 \\(XT^2=(x+3)^2+y^2=\\frac{81}{16}+y^2\\)，所以 \\(X\\in S\\) 时 \\(XT^2>6\\)，C错误。若 \\(XT=\\sqrt7\\)，则 \\(y^2=\\frac{31}{16}\\)，两点均在 \\(S\\) 中，切线段长平方为 \\(\\frac{31}{16}-\\frac{15}{16}=1\\)，D正确。",
+          "plausible": true
+        },
+        "C": {
+          "misconception": "把圆的交点也算成可从外部引切线段的点，从而误纳临界值",
+          "mechanism": "把圆的交点也算成可从外部引切线段的点，从而误纳临界值。判定依据：又 \\(XT^2=(x+3)^2+y^2=\\frac{81}{16}+y^2\\)，所以 \\(X\\in S\\) 时 \\(XT^2>6\\)，C错误。若 \\(XT=\\sqrt7\\)，则 \\(y^2=\\frac{31}{16}\\)，两点均在 \\(S\\) 中，切线段长平方为 \\(\\frac{31}{16}-\\frac{15}{16}=1\\)，D正确。",
+          "plausible": true
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "把圆心到公切线的距离写成单位法向量方向的有向距离，绝对值为半径。",
+          "异侧给投影距离差的绝对值为 3，大于圆心距离 2，故所有公切线必须同侧。",
+          "解同侧距离的方程组与单位法向量条件，得到两条候选线 x±√3y+3=0。",
+          "两条候选线互不相同，圆心到各线距离均分别为 1、2，确认都恰为公切线，联立得 T=(−3,0)。",
+          "外点到切点的线段长平方为到圆心的距离平方减半径平方，两个量需相等且为正。",
+          "两式相减得 x=−3/4，代回切线长平方为 y²−15/16，从而 y²>15/16。",
+          "满足 x=−3/4 且 y²>15/16 的每点在两圆外且等长，故精确刻画 S，B 的全体点断言为假。",
+          "以 T 的坐标与 S 的纵坐标写出 |XT|²−l²=6。",
+          "距 T 为 √6 只对应 l=0，即圆的交点，严格外部的限制令此边界不可取，排除 C。",
+          "令距离为 √7，得到 y=±√31/4 且严格在 S，切线长为 1，验证 D。"
+        ],
+        "routine_shortcut_rejected": "2025第11题整合三角积、面积、倍角式逐层推导边角。本题各命题也有共享对象，必须将等距/等切线条件构出的等幂直线再用到外部点和切长。2026第11题检验共享待定直线的斜率可行、等长次数与总弦长。本题换成切线长的取值和点数，C 的截除边界保留了候选存在性，D 需从距离条件回推切线长。"
+      }
+    },
+    {
+      "number": 12,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9ebc0730049f0b9343ac8b5ba45dc54e7823626ad3463cb92e8be541580decc0",
+          "comparison": "2025第12题先由给定斜率反解切点横坐标，再由过点条件反求 a。本题已给横坐标，正向从切点和斜率求交点。"
+        },
+        "2026": {
+          "version_sha256": "1eca741ca7e0ab8b1d2aa45cbee4091a8c202847f6e99caa59a697ba07c821fb",
+          "comparison": "盲审包未提供2026第12题，无法作同号比较。2026第4题同样已给切点并求切线，本题多求横截距，且用积的求导。 同号资料为有限版本证据，按审读的可比题型解释。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "在横坐标2处求乘积函数导数",
+          "用点斜式写切线",
+          "令纵坐标为零读取横截距"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "指数函数切线的横截距"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "在 x=2 处的导数是3e²，点为 (2,2e²)。令切线的纵坐标为0，解得横坐标 4/3。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 places the blank inline after the x-intercept prompt. The exponent and crossing-line notation are legible."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用乘积求导给出 x=2 处的斜率 3e²。",
+          "切线通过 (2,2e²)，令纵坐标为 0 得横截距 4/3。"
+        ],
+        "routine_shortcut_rejected": "2025第12题先由给定斜率反解切点横坐标，再由过点条件反求 a。本题已给横坐标，正向从切点和斜率求交点。 盲审包未提供2026第12题，无法作同号比较。2026第4题同样已给切点并求切线，本题多求横截距，且用积的求导。"
+      }
+    },
+    {
+      "number": 13,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "0d5296eba5d881ad431a3d1ea3a28a38d1567f2fea37f4607dff58c01ffeccc3",
+          "comparison": "2025第13题由两段四项和的倍比立刻得到 q⁴=16，并用正项取正根。本题多了端点分类和补计数。"
+        },
+        "2026": {
+          "version_sha256": "20727c5eb55e871dc7e68cc214e87c6744ca98cfd19fff6cce6329b9d793169d",
+          "comparison": "2026第13题先由偶性定正弦相位，再由单调性限整数频率，最后代值。本题难点同样落在额外条件对候选的筛选，转为排列边界。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "按甲所在的槽位确定乙",
+          "区分端位与中间的相邻槽位",
+          "从全集活动中扣除禁邻排法"
+        ],
+        "linked_concepts": [
+          "排列组合与计数",
+          "固定间隔下给禁邻事件计数"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "甲乙位置差3，有6种有序放法。先排其余得到6×4!。其中甲居端点的2种各禁1个丙位，甲居中间的4种各禁2个丙位，共排除10×3!，得84。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 wraps before the answer blank and leaves enough inline space for a numerical response."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "将中间恰有两组转成甲乙位置差为 3，获得六个有序位置对。",
+          "按甲处在队列端点或内部分类，六种有序位置对共给 2×1+4×2=10 种丙相邻的布局。",
+          "用 6×4! 减去 10×3! 得 84。"
+        ],
+        "routine_shortcut_rejected": "2025第13题由两段四项和的倍比立刻得到 q⁴=16，并用正项取正根。本题多了端点分类和补计数。 2026第13题先由偶性定正弦相位，再由单调性限整数频率，最后代值。本题难点同样落在额外条件对候选的筛选，转为排列边界。"
+      }
+    },
+    {
+      "number": 14,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bb02285742f970233c4ff60e3f0e686acb8af4765f671d73877ce9d783d3e524",
+          "comparison": "2025第14题把不同编号出现数拆为五个指示量，用未出现的补事件求期望。本题同样有等价重构，另有全称参数和重根边界。"
+        },
+        "2026": {
+          "version_sha256": "4d31fe2322390f7fcc86b78564a178d23f3d722711e943a8ff9df7fbe57e8fbf",
+          "comparison": "2026第14题从三项分块和之差取等差规律，再按连续九项起点模3定位各块以论证最大公比。本题有必要充分和端点取等，分类结构较少。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "单独判别t为0的端点和t大于0的内部",
+          "由实根、轴与区间边界同时给出上下界",
+          "判别式与端点非负合起来保证两根均在区间"
+        ],
+        "linked_concepts": [
+          "集合与逻辑",
+          "全称参数下实根存在与落区间的充要拼合"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "两根区间判定用判别式、轴位置和两端函数值。t=0 两根已为0、2。对 t>0，端点要求 a≥2，判别式给 a≤(t+2)²/(4t)，其在 (0,1] 最小值是9/4。故 [2,9/4]。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 shows both closed intervals and keeps the blank with the second line. Quadratic exponents and signs remain legible."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用 t=1 的判别式及 f_1(2)=(2−r_1)(2−r_2)≥0，得到 2≤a≤9/4。",
+          "由 a≤9/4、t≥0 将全区间的判别式下界分解成 (1−t)(4−t)。",
+          "顶点在 [1,3/2]，而 f_t(0)、f_t(2) 非负，实根分别位于端点与顶点之间。",
+          "允许端点根及重根，t=0 的 0、2 和 t=1、a=9/4 的 3/2 都满足。"
+        ],
+        "routine_shortcut_rejected": "2025第14题把不同编号出现数拆为五个指示量，用未出现的补事件求期望。本题同样有等价重构，另有全称参数和重根边界。 2026第14题从三项分块和之差取等差规律，再按连续九项起点模3定位各块以论证最大公比。本题有必要充分和端点取等，分类结构较少。"
+      }
+    },
+    {
+      "number": 15,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+          "comparison": "2025第15题从列联表估计条件概率后再作独立性检验，两个小问的统计任务可分。本题需用首问 A 和中线条件共同约束面积。"
+        },
+        "2026": {
+          "version_sha256": "653cc6342a9d126e1ccef869d6f4fb6e3ef6a284d9c36af7eac1c760eff6ce1f",
+          "comparison": "2026第15题由两中点构造线面平行，再用线面角和高求距离。本题也将中点条件转化并在第二问调用，但新增比值限制和等号验证。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "将三边等式代入余弦定理定角",
+          "把中线表示为两个边向量的平均",
+          "利用受限边比确定面积上界的边界",
+          "核查边界值对应实际三角形"
+        ],
+        "linked_concepts": [
+          "三角函数与解三角形",
+          "中线的二次约束与面积的可达最值"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "余弦定理得 A=60°。中线关系给 b²+c²+bc=28。令 r=b/c≥2，bc=28/(r+1+1/r)≤8，等号 b=4、c=2。面积最大 2√3。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P2 prints the cosine-law relation, both parts, the √7 condition and start of the labeled response area. The Q15 response area is explicitly continued at the top of P3."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用余弦定理比较系数，推出 A=π/3。",
+          "用 AM=(AB+AC)/2 的向量关系把中线长化为 b²+c²+bc=28。",
+          "将 28−(7/2)bc 因式分解，用 b≥2c 判非负并定位取等 b=2c。",
+          "b=4、c=2 和夹角 π/3 确定可行三角形，达到面积界 2√3。"
+        ],
+        "routine_shortcut_rejected": "2025第15题从列联表估计条件概率后再作独立性检验，两个小问的统计任务可分。本题需用首问 A 和中线条件共同约束面积。 2026第15题由两中点构造线面平行，再用线面角和高求距离。本题也将中点条件转化并在第二问调用，但新增比值限制和等号验证。"
+      }
+    },
+    {
+      "number": 16,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "58eac88d4bdb9e2c3330afbe2e291f7a61c6dedf6859dac17175a3ebef66fb00",
+          "comparison": "2025第16题将递推变为 {na_n} 等差，再把系数关系传给多项式导数求和。本题同样首问产出的 t 是次问必需输入，转为三维法向量。"
+        },
+        "2026": {
+          "version_sha256": "2b9a692ed71334a8a6db4fbd7003782a8a1573dc09ada3f944f96c22101496d4",
+          "comparison": "2026第16题先余弦定理计算，再借共线、平行和垂直构建辅助三角关系求 CE。本题同样从已知位置推出隐含比例，再换量求角。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由三条相互垂直的棱建系，用内分参数描述N",
+          "由平面法向量与AC的数量积零解内分比",
+          "用A到平面的有向检验排除AC在平面内",
+          "把同一截面法向量用于二面角余弦"
+        ],
+        "linked_concepts": [
+          "立体几何",
+          "可动顶点截面满足方向约束后确定二面角"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "以底边与高建系，令 t=PN/PC。由 AC 与平面平行，AC方向可由 MN、MQ 线性表出，解得 t=3/4，再检验 AC 本身不在该平面。法向量可取 (3,−3,8)，锐角余弦为8/√82。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P3 prints AB=4 and PA=3 in the stem and under the pyramid. Both parts and the response area follow it. The 300 dpi view confirms that M and D are spaced away from neighboring edges and can be read easily."
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "P3 prints AB=4 and PA=3 in the stem and under the pyramid. Both parts and the response area follow it. The 300 dpi view confirms that M and D are spaced away from neighboring edges and can be read easily."
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "用 A 点和三条互垂棱建系，写出两个平面向量 u、v 以及 AC 方向 w。",
+          "要求 w 为 u、v 的线性组合，比较 y−x 与 z 仅得 t=3/4。",
+          "t=3/4 时 w 在平面方向中，平面与底面交线 x−y=2。含 A 的 AC 严格在平面外，故线面平行成立。",
+          "解法向量与 u、w 两个点积为 0 的方程，取 n=(−3,3,−8)。",
+          "算 n 和底面法向量的夹角余弦绝对值为 8/√82。"
+        ],
+        "routine_shortcut_rejected": "2025第16题将递推变为 {na_n} 等差，再把系数关系传给多项式导数求和。本题同样首问产出的 t 是次问必需输入，转为三维法向量。 2026第16题先余弦定理计算，再借共线、平行和垂直构建辅助三角关系求 CE。本题同样从已知位置推出隐含比例，再换量求角。"
+      },
+      "required_figure_information": "底面边长、垂直棱长和三个截面点各自所在的棱。 图将正文约束对应到不同位置的点、线和投影。",
+      "figure_conditions": {
+        "observation": "P3 prints AB=4 and PA=3 in the stem and under the pyramid. Both parts and the response area follow it. The 300 dpi view confirms that M and D are spaced away from neighboring edges and can be read easily.",
+        "records": [
+          {
+            "anchor": "AB=4,\\ PA=3",
+            "label": "AB=4,\\ PA=3",
+            "meaning": "底面边长、垂直棱长和三个截面点各自所在的棱。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 17,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c5ccdfc7e6620f53bdb3dd4f076855d1538066ee2eb27a28125e6c29acec12dc",
+          "comparison": "2025第17题由线面垂直过渡到外接球球心和斜线夹角，有综合几何链。本题换为三层事件划分、合并停时和条件抽样。"
+        },
+        "2026": {
+          "version_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+          "comparison": "2026第17题同为首次达到即停且上限截断，独立投篮后用尾概率证无记忆。本题改为无放回的第二次命中，必须按前三枚中标记数细分，不能套独立几何分布。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把均匀排列换成三个带标记位置的20种等可能集合",
+          "按第二个标记首达和第四次停止分类",
+          "在T=4条件下组三个末位仍可交换",
+          "用前三位标记数加权未读位置的条件概率"
+        ],
+        "linked_concepts": [
+          "统计与概率",
+          "截断停时与剩余样本的条件交换性"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "20个标记位置三元组等可能，T=2、3、4的频数为4、6、10，E(T)=33/10。T=4等价于前三枚至多一枚带标记，10种中两余位合计有14个标记，次问为7/10。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P3 defines the first second-mark stopping time and an explicit fourth-reading cutoff even if the second mark has not arrived. The complete labeled writing area starts on P4."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "三枚标记的位置组合等可能，样本空间大小为 20。",
+          "把首次读到第二枚的停时 J 映射为截断停时 T=min(J,4)。",
+          "数出 T=2、3、4 的组合数为 4、6、10。",
+          "按分布列计算期望 33/10。",
+          "在前三位至多一枚标记的条件下，后两位有两枚或一枚，组合数分别为 4、6。",
+          "以条件组合的概率加权后两位等可能抽取的命中率 1 和 1/2，得 7/10。"
+        ],
+        "routine_shortcut_rejected": "2025第17题由线面垂直过渡到外接球球心和斜线夹角，有综合几何链。本题换为三层事件划分、合并停时和条件抽样。 2026第17题同为首次达到即停且上限截断，独立投篮后用尾概率证无记忆。本题改为无放回的第二次命中，必须按前三枚中标记数细分，不能套独立几何分布。"
+      }
+    },
+    {
+      "number": 18,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b0193229173d871e5f6f1335ba6c4e1c78d210da745ca8dd6e2b1a12711ae9b5",
+          "comparison": "2025第18题先用离心率和顶点距离定椭圆，再通过射线反比表达 R，结合斜率约束求 PQ 最大值。本题已给椭圆，首问深化到轨迹可达，次问仍有表示与最值两步。"
+        },
+        "2026": {
+          "version_sha256": "72cff7e9bb2b5a28380b4140bf2251042ce75dc86c947a2b79b5bd779cf88e32",
+          "comparison": "盲审包未提供2026第18题，无法作同号比较。2026第11题同样借圆心距转写弦长并考最值。本题将两种投影之差变为方向函数，还须证明轨迹全可达。 同号资料为有限版本证据，按审读的可比题型解释。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "以弦中点为参数原点，将交点对称落实为二次式一次项为零",
+          "由直线经过P给出中点轨迹，单列竖线",
+          "用P是内点保证反向构造确有一对交点",
+          "把MH写成正交投影并用轨迹降为单变量",
+          "因式分解并检验等号点及直线"
+        ],
+        "linked_concepts": [
+          "解析几何",
+          "以弦中点轨迹控制投影偏差的可达最大值"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "相减两交点的椭圆方程得 x(x−1)/3+y²=0。M=P 时另取竖线，其他点取 PM 且 P 在椭圆内部，轨迹全可达。以单位方向参数 s=sin²θ 表示两投影，得 MH=2s√(1−s)/(1+2s)，在 s=1/2 取 √2/4，直线 y=±(x−1)。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P4 prints the ellipse condition, both parts and a labeled writing area. The 300 dpi view shows the equation, P(1,0), B and H clear of the axes, boundary and secant. The response area continues and is labeled on P5."
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "P4 prints the ellipse condition, both parts and a labeled writing area. The 300 dpi view shows the equation, P(1,0), B and H clear of the axes, boundary and secant. The response area continues and is labeled on P5."
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "P 是内点，以中点和方向表示弦两端，消去二次项和常数项得到中点必要条件。",
+          "对与 P 不同的中点取方向 (x−1,y)，得到候选轨迹 x(x−1)+3y²=0。",
+          "候选点有 x²/3+y²=x/3<1；用过 P、M 的线实现，代入椭圆后的参数方程关于 0 偶对称。",
+          "M=P 由 x=1 实现；这时 H=P。M=O 由 y=0 实现。",
+          "斜率模型下用弦中点条件与正交投影分别求 M、H，将距离化为 t=k² 的非负函数。",
+          "把 1/8−MH² 的分子因式分解为 (1−t)²(9t+1)，确定全局上界及唯一取等参数 t=1。",
+          "t=1 对应两条 y=±(x−1)，都是过内点的非退化弦且达到最大值，竖直线无额外等号。"
+        ],
+        "routine_shortcut_rejected": "2025第18题先用离心率和顶点距离定椭圆，再通过射线反比表达 R，结合斜率约束求 PQ 最大值。本题已给椭圆，首问深化到轨迹可达，次问仍有表示与最值两步。 盲审包未提供2026第18题，无法作同号比较。2026第11题同样借圆心距转写弦长并考最值。本题将两种投影之差变为方向函数，还须证明轨迹全可达。"
+      },
+      "required_figure_information": "椭圆、经过P的弦及从原点出发的垂线的空间位置。 图将正文约束对应到不同位置的点、线和投影。",
+      "figure_conditions": {
+        "observation": "P4 prints the ellipse condition, both parts and a labeled writing area. The 300 dpi view shows the equation, P(1,0), B and H clear of the axes, boundary and secant. The response area continues and is labeled on P5.",
+        "records": [
+          {
+            "anchor": "C:\\ \\frac{x^2}{3}+y^2=1",
+            "label": "C:\\ \\frac{x^2}{3}+y^2=1",
+            "meaning": "椭圆、经过P的弦及从原点出发的垂线的空间位置。"
+          },
+          {
+            "anchor": "P(1,0)",
+            "label": "P(1,0)",
+            "meaning": "过定点P的割线，P在椭圆内部。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 19,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+          "comparison": "2025第19题把局部三角最值和短区间余弦性质传入全局相位最优化。本题无相位分段，关键同为将前问的归一变量用于全局界，再证明候选界确实最尖锐。"
+        },
+        "2026": {
+          "version_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+          "comparison": "2026第19题从增量集合定义跨过分段原点，逐层推出 f(0) 界和右侧单调。本题从新定义推出统一参数，逻辑支撑来自相邻端点的必要性和临界参数全局性。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "约去a、b共同比例并用对数比把两个自变量归一",
+          "把自由权重不等式化为全正半轴的函数符号",
+          "在临界系数处三阶导符号逐次传回原函数",
+          "小正区间的反向三阶导构造低权重的失败样本"
+        ],
+        "linked_concepts": [
+          "函数与导数",
+          "对数平均值全域上界及尖锐权重的两向证明"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "学生卷此题以填写、推导或文字作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "以 a=g·e^(−t)、b=g·e^t（g=√ab、t>0）归一化。e^t−e^(−t)>2t 给首问。令 Fλ=t[1−λ+λ(e^t+e^(−t))/2]−(e^t−e^(−t))/2。Fλ及前两阶导在0均为0，三阶导在0为3λ−1，且 λ=1/3 时三阶导在正半轴为正，由此得 λ≥1/3。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "P5 renders the logarithm denominator, inequalities and radicals with two parts and a roomy labeled writing area on the same page."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "本题由题面提供完整文字和符号条件。"
+        }
+      },
+      "math_depth": {
+        "linked_turns": [
+          "以几何平均数和对数比参数化 a,b，归一化后两种平均数只依赖 t>0。",
+          "S′=C，C(t)>1，故 S(t)−t 从 0 严格增加，证（1）。",
+          "把（2）的全称不等式转成 F_λ(t)≥0，并保留 λ 的单调性。",
+          "算出 F_λ、F_λ′、F_λ″ 在 0 为零，F_λ‴(t)=(3λ−1)C(t)+λtS(t)。",
+          "λ=1/3 时三阶导数在 t>0 为正，逐阶传递到 F_λ；较大的 λ 也成立。",
+          "λ<1/3 时 F_λ‴(0)<0，连续性与零初值推出小正 t 的 F_λ(t)<0。",
+          "把小正 t 取为 a=e^(−t)、b=e^t 的参数，确证任何 λ<1/3 都失败。"
+        ],
+        "routine_shortcut_rejected": "2025第19题把局部三角最值和短区间余弦性质传入全局相位最优化。本题无相位分段，关键同为将前问的归一变量用于全局界，再证明候选界确实最尖锐。 2026第19题从增量集合定义跨过分段原点，逐层推出 f(0) 界和右侧单调。本题从新定义推出统一参数，逻辑支撑来自相邻端点的必要性和临界参数全局性。"
+      }
+    }
+  ]
+}

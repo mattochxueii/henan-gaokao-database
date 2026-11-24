@@ -1,0 +1,39 @@
+{
+  "policy": {
+    "schema_version": 1,
+    "subject": "math",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-new-gaokao-1",
+    "rules": {
+      "multiple_choice": {
+        "id": "national-19-item-math-multiple-choice",
+        "subject": "math",
+        "kind": "multiple_choice",
+        "series": [
+          "cn-new-gaokao-1",
+          "cn-new-gaokao-2"
+        ],
+        "from_year": 2024,
+        "parameters": {
+          "full_credit": 6,
+          "partial_credit": "variable",
+          "wrong_credit": 0,
+          "instruction": "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+        },
+        "sources": [
+          {
+            "title": "2024年全国新课标Ⅰ卷数学多项选择题栏目",
+            "url": "https://down.jiaoyuwu.com/m00/8d/ac/69593b6f10b58145a8c3d3a9b8abdd88.pdf",
+            "evidence": "paper_facsimile"
+          }
+        ]
+      }
+    }
+  },
+  "year_source": "bound",
+  "student_instructions": [
+    "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+  ],
+  "invigilator_instructions": {}
+}
