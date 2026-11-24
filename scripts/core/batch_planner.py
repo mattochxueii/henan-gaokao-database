@@ -3,13 +3,23 @@ import re
 from itertools import combinations
 from analysis_db import fingerprint
 from gaokao import require
+from core import physics_corridor
 
 # These are open-ended design briefs. No stem, answer, or question family is selected.
 BRIEFS = {
     "physics": {
         "experiment_1": ["摆长截距|单摆测重力|校正系统偏差|拟合截距","时标误差|滚动影像|差分与帧率|频闪序列","冲量测量|软垫传感器|积分反证|力时图"],
         "experiment_2": ["并联漏导|电容放电|改变负载分离仪表效应|衰减记录","滑线电桥|换臂消去接头阻值|零示比较|桥臂拓扑","电功率标定|量热比较|分离散热截距|温升曲线"],
-        "final": ["反向制动滑板|缓冲平台|相对位移与触界先后|分段运动","电容磁耦合|导轨电荷转移|稳态与撤力能量|电荷回路","双介质光传输|分层测量|到达时间与临界窗口|折射光路"],
+        "mechanics_calculation": [
+            "反向制动滑板|缓冲平台|相对位移与触界先后|分段运动",
+            "绳约束与碰接|货物转接|离绳临界与冲量分配|约束轨迹",
+            "斜台摩擦换向|可倾输送线|边界停驻与返回|速度区间",
+        ],
+        "final": [
+            "磁场分区偏转|离子速度分选|越界条件与轨道拼接|圆弧轨迹",
+            "电容磁耦合|导轨电荷转移|稳态与撤力能量|电荷回路",
+            "交变磁通制动|巡检器线圈|换向区间与能量界限|磁通时序",
+        ],
     },
     "chemistry": {"process":["选择性浸出|废电极|分段保留|流程","结晶分离|盐湖|循环物料衡算|相图","膜分离|废液|离子迁移|膜室"],
         "final":["官能团保护|香料|比较合成次序|路线","环化选择性|功能材料|追踪碳架|键线","官能团定位|医药中间体|鉴别异构体|谱图"]},
@@ -33,6 +43,8 @@ def tag(value):
 def plan(subject, count, pool=None):
     groups=pool if pool is not None else BRIEFS[subject]
     require(type(count) is int and count>0 and groups,"批量卷数或题位组无效")
+    if subject == "physics":
+        require(groups.keys() == physics_corridor.ROLE_SLOTS.keys(), "物理命题池须含两类实验、力学综合和电磁压轴")
     sets=[{} for _ in range(count)]
     for role,values in groups.items():
         chosen=[]
@@ -51,7 +63,17 @@ def plan(subject, count, pool=None):
         require(assign(0),f"{role} 中无足够互斥的命题方向，请增加设计池")
         for paper,entry in zip(sets,chosen,strict=True):
             paper[role]=entry
-    return {"subject":subject,"count":count,"blueprints":sets,"pool_sha256":fingerprint(groups)}
+    result = {"subject":subject,"count":count,"blueprints":sets,"pool_sha256":fingerprint(groups)}
+    if subject == "physics":
+        result["physics_corridor"] = corridor_brief()
+    return result
+
+
+def corridor_brief():
+    return {"limits": {k:list(v) for k,v in physics_corridor.LIMITS.items()},
+            "thermal_max": physics_corridor.THERMAL_MAX,
+            "roles": {k:{"number":n,"group":g} for k,(n,g) in physics_corridor.ROLE_SLOTS.items()},
+            "feasible_slot_example": list(physics_corridor.SLOT_EXAMPLE)}
 
 
 def canonical(text):
@@ -87,9 +109,22 @@ def check(schedule, candidates):
     require(len(candidates)==schedule["count"],"批次数量不符")
     seen=[]
     failures=[]
+    physics = schedule.get("physics_corridor")
+    if physics is not None:
+        require(schedule["subject"] == "physics" and physics == corridor_brief(), "物理蓝图走廊已变化，请重新规划")
+    allocations = []
     for i,(candidate,brief) in enumerate(zip(candidates,schedule["blueprints"],strict=True)):
         require(candidate.get("subject","math" if "paper" in candidate and "schema_version" in candidate else None)==schedule["subject"],"批次学科不匹配")
         roles={}
+        if physics:
+            weights, findings = physics_corridor.allocation(candidate["questions"])
+            allocations.append(weights)
+            planned = physics["feasible_slot_example"]
+            groups = weights["question_groups"]
+            different = [n for n,g in enumerate(planned,1) if groups.get(str(n))!=g]
+            for n,rule,fact in findings:
+                failures.append({"paper":i+1,"number":n,"reason":fact,"rule":rule,
+                                 "repair_numbers":[n] if n else different or [4, 14]})
         for n,q in enumerate(candidate["questions"],1):
             design=q["design"]
             require(all(isinstance(design.get(k),str) and design[k].strip()
@@ -99,6 +134,11 @@ def check(schedule, candidates):
                 roles[role]=True
                 if any(design[k]!=v for k,v in brief[role].items()):
                     failures.append({"paper":i+1,"number":n,"reason":"偏离预留蓝图","role":role})
+                if physics:
+                    slot = physics["roles"][role]
+                    if n != slot["number"] or weights["question_groups"].get(str(n)) != slot["group"]:
+                        failures.append({"paper":i+1,"number":n,"reason":"批量换题须在指定板块和题位内",
+                                         "role":role,"repair_numbers":sorted({n,slot["number"]})})
             text=question_text(q)
             material=candidate.get("materials",{}).get(q.get("material"),{})
             passage=material.get("text","")
@@ -116,4 +156,5 @@ def check(schedule, candidates):
             failures.append({"paper":j,"number":m,"compares_to":[i,n],"matching_fields":sorted(matched),
                              "shared_structures":sorted(semantic_a & semantic_b),"text_jaccard":round(similarity,3),"reason":"跨卷设计或文字撞车"})
     return {"passed":not failures,"issues":failures,"schedule_sha256":fingerprint(schedule),
-            "candidate_sha256":[fingerprint(c) for c in candidates]}
+            "candidate_sha256":[fingerprint(c) for c in candidates],
+            **({"allocations":allocations} if physics else {})}

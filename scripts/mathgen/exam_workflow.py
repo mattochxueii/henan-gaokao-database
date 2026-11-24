@@ -90,6 +90,8 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
     from core.quality_audit import MAIN_VERSION
     if reference.get("protocol") == MAIN_VERSION:
         presentation.update(layout="math_compact", subject="math", standard=mode=="full", edition_rules=REVISION)
+        if mode == "full" and reference.get("exam_policy"):
+            presentation.update(exam_policy=reference["exam_policy"], qa_protocol=reference["review_board"])
         if trend:
             presentation["benchmark_slots"] = reference["benchmark_slots"]
     verification = []
@@ -453,6 +455,10 @@ def publish(output, review_path, comparison_path):
         "formal_proof": False,
         "human_reviewed": False,
     }
+    if student.get("qa_protocol") == "three-readers-v2":
+        from core.review_board import LOCAL_QA_PASSED
+
+        cert["local_qa_status"] = LOCAL_QA_PASSED
     render(solutions, output / "solutions.pdf", solutions=True)
     shutil.copyfile(source, output / "paper.pdf")  # Byte-identical reviewed artifact.
     if student.get("layout") == "math_compact":

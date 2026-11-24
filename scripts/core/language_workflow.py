@@ -1,12 +1,12 @@
 """Evidence-based blueprints and review gates for Chinese and English."""
-from decimal import Decimal, ROUND_HALF_UP
 from itertools import groupby
 from pathlib import Path
 
 from analysis_db import fingerprint
+from core import exam_policy
 from core.paper_intake import PUBLIC, dna, documents
 from forecast_store import write_new
-from gaokao import digest, read_json, require
+from gaokao import ROOT, digest, read_json, require
 
 LANGUAGES = ("chinese", "english")
 ROOT_DATA = Path("data/language-blueprints.json")
@@ -41,8 +41,9 @@ def fulltext_corpus(root, subject):
 def plan(root, subject, region, year):
     evidence = read_json(root / ROOT_DATA)[subject]
     historical = evidence["years"]
-    require(region == "河南" and (str(year) in historical or year == 2027), "缺该地区年度的主科标准蓝图")
-    basis = min(year, 2026)
+    latest = max(map(int, historical))
+    require(region == "河南" and (str(year) in historical or latest < year <= 2200), "缺该地区年度的主科标准蓝图")
+    basis = min(year, latest)
     version = historical[str(basis)]
     features = dna(root,subject)
     corpus = fulltext_corpus(root,subject)
@@ -50,16 +51,16 @@ def plan(root, subject, region, year):
             "series":"cn-new-gaokao-1","minutes":evidence["minutes"],
             "points":150,"sections":version["sections"],"sources":version["sources"],
             "historical_traits":version["traits"],"listening_group_sizes":version.get("listening_group_sizes"),"dna":features,
-            "fulltext_supported":bool(corpus), "language_corpus":corpus}
+            "fulltext_supported":bool(corpus), "language_corpus":corpus,
+            "exam_policy":exam_policy.resolve(root, subject, year, region, exam_policy.NATIONAL_SERIES)}
 
 
-def henan_english_score(written):
-    require(0 <= written <= 120, "笔试原始分满分120")
-    return int((Decimal(str(written)) * Decimal("1.25")).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+def henan_english_score(written, *, year=2026, listening=None, root=ROOT):
+    snapshot = exam_policy.resolve(root, "english", year, "河南", exam_policy.NATIONAL_SERIES)
+    return exam_policy.english_score(snapshot, written, listening)
 
 
-def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
-    from core.language_render import render
+def validate_structure(blueprint, candidate):
     subject = blueprint["subject"]
     require(candidate["subject"] == subject and candidate.get("blueprint_sha256") == fingerprint(blueprint),
             "候选须绑定本学科题位与参考画像")
@@ -102,16 +103,38 @@ def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
     if subject=="english":
         group_ids = [q["material"] for q in questions[:20]]
         sizes=[sum(1 for _ in grp) for _,grp in groupby(group_ids)]
-        require((not blueprint["listening_group_sizes"] or sizes==blueprint["listening_group_sizes"])
+        require(len(sizes) == 10 and sizes[:5] == [1] * 5
+                and (not blueprint["listening_group_sizes"] or sizes==blueprint["listening_group_sizes"])
                 and list(dict.fromkeys(group_ids)) == list(scripts) and all(v.strip() for v in scripts.values()),
                 "缺听力文本或听力次序错配")
-    public = {"subject":subject,"title":candidate["title"],"minutes":blueprint["minutes"],
-              "points":150,"sections":blueprint["sections"],"materials":materials,"layout_mode":layout_mode,
-              "questions":[{k:v for k,v in q.items() if k in {"number","id","points","kind","section","stem","material","options"}}
-                           for q in questions]}
+    else:
+        require(not scripts, "语文片段不应含听力材料")
+
+
+def student_paper(blueprint, candidate, layout_mode):
+    from core.review_board import VERSION
+
+    fields = {"number", "id", "points", "kind", "section", "stem", "material", "options",
+              "grammar_tag", "recitation_sources"}
+    public = {"subject":blueprint["subject"],"title":candidate["title"],"minutes":blueprint["minutes"],
+              "points":150,"sections":blueprint["sections"],"materials":candidate["materials"],"layout_mode":layout_mode,
+              "questions":[{k:v for k,v in q.items() if k in fields} for q in candidate["questions"]],
+              "exam_policy":blueprint["exam_policy"]}
     reference=candidate.get("quality_benchmarks")
     if reference:
         public["quality_reference_sha256"]=fingerprint(reference)
+        if reference.get("review_board") == VERSION:
+            public["qa_protocol"] = VERSION
+    return public
+
+
+def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
+    from core.language_render import render
+
+    validate_structure(blueprint, candidate)
+    public = student_paper(blueprint, candidate, layout_mode)
+    reference = candidate.get("quality_benchmarks")
+    scripts = candidate.get("listening", {})
     packet={"paper":public,"paper_version":fingerprint(public)}
     output.mkdir(parents=True,exist_ok=False)
     render(public, output/"paper")
@@ -119,10 +142,10 @@ def prepare(root, blueprint, candidate, output, *, layout_mode="practice"):
     write_new(output/"listening-review.json",scripts)
     write_new(output/"verification.json",{"paper_version":packet["paper_version"],"paper_sha256":digest(output/"paper.pdf"),
               **({"quality_benchmarks":reference} if reference else {}),
-              "expected":[q["answer"] for q in questions],"blueprint_sha256":fingerprint(blueprint),
+              "expected":[q["answer"] for q in candidate["questions"]],"blueprint_sha256":fingerprint(blueprint),
               "listening_sha256":fingerprint(scripts),"reference_notes":candidate["reference_notes"],
               "reference_scope":candidate["reference_scope"]})
-    return {"state":"await_independent_review","paper_version":packet["paper_version"],"questions":len(questions)}
+    return {"state":"await_independent_review","paper_version":packet["paper_version"],"questions":len(public["questions"])}
 
 
 def review(folder, doc):
@@ -188,5 +211,9 @@ def publish(folder, record):
         from core.quality_audit import publication_quality
 
         result["quality_audit_sha256"]=publication_quality(folder, checked)
+    if packet["paper"].get("qa_protocol") == "three-readers-v2":
+        from core.review_board import LOCAL_QA_PASSED
+
+        result["local_qa_status"] = LOCAL_QA_PASSED
     write_new(folder/"publication.json",result)
     return result

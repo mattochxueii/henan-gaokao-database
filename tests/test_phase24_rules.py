@@ -70,10 +70,15 @@ class EditionRulesTests(unittest.TestCase):
                 _paper_inputs(directory)
 
     def test_scoring_varies_by_subject(self):
+        from core import exam_policy
+        from gaokao import ROOT
+
         items = [question("选择", kind="multiple_choice", points=6)]
+        math = exam_policy.resolve(ROOT, "math", 2027, "河南", exam_policy.NATIONAL_SERIES)
+        physics = exam_policy.resolve(ROOT, "physics", 2027, "河南", exam_policy.PHYSICS_SERIES)
         self.assertIn("全部选对的得6分，部分选对的得部分分，有选错的得0分",
-                      science_section_note("multiple_choice", items, 3, math_mode=True))
-        self.assertIn("选对但不全得3分", science_section_note("multiple_choice", items, 3))
+                      science_section_note("multiple_choice", items, exam_policy=math))
+        self.assertIn("选对但不全得3分", science_section_note("multiple_choice", items, exam_policy=physics))
 
     def test_nonstandard_notation_is_rejected_before_render_in_both_versions(self):
         q = question(r"求 \(U\setminus A\)。")

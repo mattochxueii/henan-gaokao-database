@@ -31,9 +31,7 @@ def cycle(root,folder,inbox,previous=None,repair_slots=(),providers=None):
                 else:missing.append(role)
             if missing:return {"state":"await_isolated_readers","pending":missing,"pdf_sha256":state["pdf_sha256"]}
         result=board.record(root,folder,replies,previous,repair_slots)
-    decision={"state":result["status"],"round":result["round"],"score":result["final_score"],
-              "fatal_count":result["fatal_count"],"rewrite":result["rewrite"],"locked":result["locked"],
-              "deductions":result["deductions"],"pdf_sha256":result["pdf_sha256"]}
+    decision = board.decision_view(result)
     path=folder/"board"/"decision.json"
     if not path.exists():
         write_new(path,decision)
@@ -44,4 +42,9 @@ def cycle(root,folder,inbox,previous=None,repair_slots=(),providers=None):
                 and read_json(path)==read_json(previous/"board"/"decision.json")
                 and result["round"]==read_json(path)["round"]+1,"返工指令与评分不一致")
         atomic_json(path,decision)
+    if result["status"] == board.LOCAL_QA_PASSED:
+        from core.external_review import return_decision
+
+        if returned := return_decision(folder, result, state["rules"]):
+            return returned
     return decision

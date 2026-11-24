@@ -65,6 +65,7 @@ def main(argv=None, *, quality_reference=None):
     action.add_argument("--output", type=Path, required=True)
     action.add_argument("--no-export", action="store_true")
     action.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
+    action.add_argument("--exam-year", type=int, default=2027, help="带审稿上下文的标准卷目标年份")
     action.add_argument("--engine", choices=("template", "ai"), default="template")
     action.add_argument("--candidates", type=Path)
     action.add_argument("--context", type=Path)
@@ -235,9 +236,11 @@ def main(argv=None, *, quality_reference=None):
 
                     require(args.candidates is not None, "整卷审稿上下文须与宿主候选一同提交")
                     quality_reference = validate_authoring_context(root,"math",args.context,read_json(args.candidates))
+                    from core.exam_policy import resolve as exam_policy
                     from core.review_board import VERSION as board_version
                     quality_reference = {**quality_reference,"review_board":board_version,
-                                         "qa_policy":read_json(args.context)["anti_patterns"]}
+                                         "qa_policy":read_json(args.context)["anti_patterns"],
+                                         "exam_policy":exam_policy(root,"math",args.exam_year,"河南",quality_reference["series"])}
                 record = run_ai(
                     root,
                     provider,

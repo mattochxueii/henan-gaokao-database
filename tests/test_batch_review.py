@@ -10,6 +10,7 @@ from gaokao import ROOT
 from core import batch_planner as batch
 from core import exam_qa as qa
 from core import review_board as board
+from core import physics_corridor
 
 
 def question(stem):
@@ -28,6 +29,35 @@ def reports(s):
             "steps":["辨认回路"],"concepts":["电荷守恒"]} for n in range(1,5)]
     return [{"identity":"isolated-"+r,"role":r,"pdf_sha256":s["pdf_sha256"],"items":copy.deepcopy(items),
              "findings":[],"pages":[{"number":1,"note":"核对标签"}]} for r in board.ROLES]
+
+
+def physics_batch(schedule):
+    modules = ["optics_waves","atomic","astronomy","thermodynamics","mechanics","electrostatics_circuits",
+               "magnetic_force","mechanics","induction_ac","optics_waves","mechanics","electrostatics_circuits",
+               "mechanics","mechanics","induction_ac"]
+    contexts = [
+        ["折射棱镜水中排查","遏止电压改变","卫星绕木星","气缸放在晾晒区","惯性座椅安全带","固定电路的阻值",
+         "磁场环路上的转弯","跑道机械能分段变化","电磁感应线圈方向","机械波的小船振动","加速度计插片",
+         "测电阻刻度配置","动力模型车的动能","运动控制轮接近边沿","感应电动势的正负"],
+        ["偏振光发讯速率","核反应的质量亏损","双星绕共同中心","理想气体的活塞比值","踏板产生的反向力与速度",
+         "电势上升梯度图","载流导线磁场定位","闸门冲击的动量变化","交流电配套电压校准","透镜拼接光斑",
+         "用动量测发射方向","电容量程误差界限","轨道交叉时的受力","摩擦换向临界","交变电流变压器的功率曲线"],
+    ]
+    role_slots = {n:role for role,(n,_) in physics_corridor.ROLE_SLOTS.items()}
+    candidates = []
+    for index, (blueprint, texts) in enumerate(zip(schedule["blueprints"],contexts,strict=True)):
+        rows = []
+        for n,(module,text,points) in enumerate(zip(modules,texts,physics_corridor.POINTS,strict=True),1):
+            row = {**question(text),"physics_module":module,"points":points,
+                   "design":{key:f"{key}{text}" for key in ("model","scene","action","representation")}}
+            if n >= 13:
+                row["parts"] = [{"text":"判断转折。"},{"text":"分析末态。"}]
+            if n in role_slots:
+                role = role_slots[n]
+                row.update(batch_role=role,design=blueprint[role])
+            rows.append(row)
+        candidates.append({"subject":"physics","questions":rows})
+    return candidates
 
 
 class QualityTests(unittest.TestCase):
@@ -160,15 +190,14 @@ class BatchTests(unittest.TestCase):
 
     def test_reserves_disjoint_and_checks_content(self):
         p=batch.plan("physics",2)
-        cs=[{"subject":"physics","questions":[{"stem":d["scene"]+d["model"]+d["action"],
-             "batch_role":role,"design":d} for role,d in b.items()]} for b in p["blueprints"]]
+        cs=physics_batch(p)
         self.assertTrue(batch.check(p,cs)["passed"])
-        cs[0]["questions"][0]["stem"]="物体以2米每秒向右运动，求刚到右端时的动量变化"
-        cs[1]["questions"][1]["stem"]=cs[0]["questions"][0]["stem"].replace("2","3")
-        self.assertFalse(batch.check(p,cs)["passed"])
-        cs[1]["questions"][1]["stem"]="完全换一个叙述"
-        cs[1]["questions"][1]["design"]=cs[0]["questions"][1]["design"]
-        self.assertFalse(batch.check(p,cs)["passed"])
+        cs[0]["questions"][7]["stem"]="物体以2米每秒向右运动，求刚到右端时的动量变化"
+        cs[1]["questions"][7]["stem"]=cs[0]["questions"][7]["stem"].replace("2","3")
+        self.assertIn("跨卷设计或文字撞车",[x["reason"] for x in batch.check(p,cs)["issues"]])
+        cs[1]["questions"][7]["stem"]="完全换一个关于运动的叙述"
+        cs[1]["questions"][7]["design"]=cs[0]["questions"][7]["design"]
+        self.assertIn("跨卷设计或文字撞车",[x["reason"] for x in batch.check(p,cs)["issues"]])
 
 class WorkflowTests(unittest.TestCase):
     def test_plan_and_host_resume(self):

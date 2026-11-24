@@ -7,6 +7,7 @@ import re
 import shutil
 
 from analysis_db import fingerprint
+from core import exam_policy
 from core.catalog import catalog, query, use
 from core.science_dna import STANDARD_LAYOUT
 from core.editorial_rules import LAYOUT_MODES, REVISION
@@ -55,7 +56,7 @@ def plan(root, subject, region, year, mode="targeted", topics=()):
                 "缺少可用的同省同卷系卷面结构")
     else:
         require(mode=="targeted", "概率研究使用独立命令")
-    return {
+    result = {
         "workflow":VERSION,"subject":subject,"region":region,"year":year,"mode":mode,
         "mapping":mapping,"curriculum_topics":knowledge,"requested_topics":list(topics),
         "reference_candidates": [{k:q.get(k) for k in ("id","topic","source_url","review_status","version_sha256",
@@ -68,6 +69,9 @@ def plan(root, subject, region, year, mode="targeted", topics=()):
                   "同年同省已见卷面结构，项目原创" if structure_mapping is mapping else
                   f"沿用河南 {structure_mapping['year']} 年已见卷面结构的项目模拟；{year} 年实际卷型待确认"),
     }
+    if mode == "standard":
+        result["exam_policy"] = exam_policy.resolve(root, subject, year, region, mapping["series_id"])
+    return result
 
 
 def normalize_subject_item(item, order, folder):
@@ -171,10 +175,14 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
     seen = set()
     solver = science_verifier(subject)
     standard = blueprint["mode"] == "standard"
+    from core.review_board import VERSION as current_board
+    strict_qa = standard and (candidate.get("quality_benchmarks") or {}).get("review_board") == current_board
     for order,q in enumerate(questions,1):
         public = normalize_subject_item(q,order,figure_root or root)
         if standard:
             public = standard_presentation(public)
+        if strict_qa and subject == "physics":
+            public.update({key: q[key] for key in ("physics_module", "pi_checks") if key in q})
         figure_models = {"physics": {"velocity_graph", "terminal_data"},
                          "chemistry": {"iodine_evidence"}}
         normalized = re.sub(r"\W","",public["stem"])
@@ -215,6 +223,9 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
     points = sum(q["points"] for q in visible)
     require(len({q["topic"] for q in questions})>1 or blueprint["mode"]!="standard", "整卷主题覆盖不足")
     if standard:
+        paper["exam_policy"] = blueprint["exam_policy"]
+        if strict_qa:
+            paper["qa_protocol"] = current_board
         sections = blueprint["structure"]["sections"]
         by_kind = Counter()
         for q in visible:
@@ -248,9 +259,9 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
             paper.update(quality_reference_sha256=fingerprint(reference), standard=True, edition_rules=REVISION)
         paper["layout"] = "science"
         paper["layout_rules"] = rules
-        paper["partial_credit"] = next(
-            (s.get("partial_correct_points") for s in blueprint["structure"]["source_details"]
-             if s["kind"] == "multiple_choice"), None)
+        # Only other series lack a policy record and use their archived scoring note.
+        paper["partial_credit"] = next((s.get("partial_correct_points")
+            for s in blueprint["structure"]["source_details"] if s["kind"] == "multiple_choice"), None)
     output.mkdir(parents=True,exist_ok=False)
     for q, view in zip(questions,visible,strict=True):
         if view["figure"]:
@@ -358,6 +369,10 @@ def publication_record(folder, visual):
         "review_sha256":fingerprint(review),"verification_sha256":pending["verification_sha256"],"visual":visual,
         "scope":"学科程序只覆盖明确模型。另有独立推理和PDF审题记录，教师与实测另行记录。",
     }
+    if packet["paper"].get("qa_protocol") == "three-readers-v2":
+        from core.review_board import LOCAL_QA_PASSED
+
+        record["local_qa_status"] = LOCAL_QA_PASSED
     return record
 
 

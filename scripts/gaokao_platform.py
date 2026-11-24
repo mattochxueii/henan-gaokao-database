@@ -8,7 +8,7 @@ import bootstrap  # noqa: F401
 from core.catalog import import_science, query, rebuild, science_evidence, use
 from core.science_forecast import forecast, score
 from core.science_workflow import adjudicate, plan, prepare, publish
-from core import board_cli, language_workflow, paper_intake
+from core import board_cli, exam_policy, language_workflow, paper_intake
 from forecast_store import write_new
 from gaokao import ROOT, dumps, read_json
 from subjects import SCIENCES, SUBJECTS
@@ -67,13 +67,27 @@ def main(argv=None):
     listen=sub.add_parser("attach-listening")
     listen.add_argument("paper_id")
     listen.add_argument("packet",type=Path)
+    policy = sub.add_parser("exam-policy", help="查看地区、年份、卷系对应的政策与来源")
+    policy.add_argument("subject",choices=SUBJECTS)
+    policy.add_argument("year",type=int)
+    policy.add_argument("--region",default="河南")
+    policy.add_argument("--series")
+    merge = sub.add_parser("merge-sections",help="校验并合并语文或英语的三个创作片段")
+    merge.add_argument("subject",choices=language_workflow.LANGUAGES)
+    merge.add_argument("year",type=int)
+    merge.add_argument("output",type=Path)
+    merge.add_argument("parts",type=Path,nargs=3)
+    merge.add_argument("--context",type=Path,required=True)
     check=sub.add_parser("workbook-review")
     check.add_argument("output",type=Path)
     check.add_argument("review",type=Path)
     docx = sub.add_parser("docx")
     docx.add_argument("markdown", type=Path)
     docx.add_argument("output", type=Path)
-    sub.add_parser("english-score").add_argument("written", type=float)
+    english_score = sub.add_parser("english-score")
+    english_score.add_argument("written", type=float)
+    english_score.add_argument("--year",type=int,default=2026)
+    english_score.add_argument("--listening",type=float)
     sub.add_parser("math").add_argument("args",nargs=argparse.REMAINDER)
     sub.add_parser("index").add_argument("output",type=Path)
     sub.add_parser("import").add_argument("bundle",type=Path)
@@ -127,7 +141,8 @@ def main(argv=None):
     root = args.root.resolve()
     command = args.command
     try:
-        if command in ("batch-plan","batch-run","batch-check","exam-qa","board-packet","board-score","board-cycle"):
+        if command in ("batch-plan","batch-run","batch-check","exam-qa","board-packet","board-score","board-cycle",
+                       "export-external-review","import-external-review"):
             result=board_cli.run(root,args)
             print(dumps(result))
             return int(result.get("passed") is False or result.get("status",result.get("state")) in ("returned","rejected"))
@@ -159,6 +174,14 @@ def main(argv=None):
         elif command=="attach-listening":
             from core.paper_listening import attach
             result=attach(root,args.paper_id,read_json(args.packet))
+        elif command=="exam-policy":
+            series = args.series or (f"cn-ha-{args.subject}-selective" if args.subject in SCIENCES and args.region == "河南"
+                                     else exam_policy.NATIONAL_SERIES)
+            result=exam_policy.resolve(root,args.subject,args.year,args.region,series)
+        elif command=="merge-sections":
+            from core.language_sections import merge
+
+            result=merge(root,args.subject,args.year,args.parts,args.context,args.output)
         elif command=="quality-audit":
             from core.quality_audit import submit
 
@@ -182,7 +205,9 @@ def main(argv=None):
             candidate=read_json(args.candidate)
             quality_reference=validate_authoring_context(root,args.subject,args.context,candidate)
             from core.review_board import VERSION as board_version
-            quality_reference={**quality_reference,"review_board":board_version,"qa_policy":read_json(args.context)["anti_patterns"]}
+            snapshot=exam_policy.resolve(root,args.subject,args.year,"河南",quality_reference["series"])
+            quality_reference={**quality_reference,"review_board":board_version,
+                               "qa_policy":read_json(args.context)["anti_patterns"],"exam_policy":snapshot}
             if any((args.batch_plan,args.batch_candidates,args.slot)):
                 if not all((args.batch_plan,args.batch_candidates,args.slot)):
                     raise ValueError("批量模拟须同时提供计划、整批候选和卷序")
@@ -212,7 +237,9 @@ def main(argv=None):
             export_docx(args.markdown,args.output)
             result={"output":str(args.output)}
         elif command=="english-score":
-            result={"written":args.written,"henan_score":language_workflow.henan_english_score(args.written)}
+            result={"written":args.written,"listening":args.listening,"year":args.year,
+                    "henan_score":language_workflow.henan_english_score(args.written,year=args.year,
+                                                                     listening=args.listening,root=root)}
         elif command=="research" and (args.subject in language_workflow.LANGUAGES or args.adaptation or args.include_incomplete):
             if args.official_only or args.strict:
                 raise ValueError("此查询通道不支持官方原页或历史理科摘要过滤")

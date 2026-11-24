@@ -74,7 +74,7 @@ def option_grid(options, width, compact=False):
             )
 
 
-def science_section_note(kind, group, partial_credit, math_mode=False):
+def science_section_note(kind, group, partial_credit=None, *, exam_policy=None):
     total = sum(q["points"] for q in group)
     scores = {q["points"] for q in group}
     each = f"每小题{next(iter(scores))}分，" if len(scores) == 1 and kind.endswith("choice") else ""
@@ -82,12 +82,15 @@ def science_section_note(kind, group, partial_credit, math_mode=False):
     if kind == "single_choice":
         return text + "在每小题给出的四个选项中，只有一项是符合题目要求的。"
     if kind == "multiple_choice":
-        if math_mode and scores == {6}:
-            scoring = "全部选对的得6分，部分选对的得部分分，有选错的得0分"
-        else:
+        from core.exam_policy import parameters
+
+        rule = parameters(exam_policy, "multiple_choice")
+        if rule and scores == {rule["full_credit"]}:
+            scoring = rule["instruction"]
+        else:  # Older editions and exercises may define individual scoring.
             partial = "部分选对得部分分" if partial_credit is None else f"选对但不全得{partial_credit}分"
-            scoring = f"全部选对得满分，{partial}，有选错的得0分"
-        return text + "在每小题给出的四个选项中，有多项符合题目要求。" + scoring + "。"
+            scoring = f"全部选对得满分，{partial}，有选错的得0分。"
+        return text + "在每小题给出的四个选项中，有多项符合题目要求。" + scoring
     return text + "按题意填写或作答。计算题须写出必要的文字说明、方程式和演算步骤。"
 
 
@@ -267,6 +270,12 @@ def draw_figure(data, image):
 
 
 def render(paper, path, solutions=False, *, layout_mode=None):
+    from core.exam_policy import guess_snapshot
+    from gaokao import ROOT
+
+    policy = paper.get("exam_policy")
+    if not policy and paper.get("subject") in ("math", "physics"):
+        policy = guess_snapshot(ROOT, paper["subject"], paper.get("title",""))
     mode = layout_mode or paper.get("layout_mode", "practice")
     require(mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
     practice = not solutions and mode == "practice"
@@ -396,7 +405,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     previous = None
     section_titles = {
         "single_choice": "单项选择题",
-        "multiple_choice": "多项选择题（全部选对得满分，部分选对得部分分，有选错得0分）",
+        "multiple_choice": "多项选择题",
         "fill_in": "填空题",
         "constructed_response": "解答题",
     }
@@ -422,7 +431,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             )
             label = prefix + section_titles[q["kind"]]
             section.append(para(label, heading))
-            if compact:
+            if compact or q["kind"] == "multiple_choice":
                 if math_compact and q["kind"] in ("fill_in", "constructed_response"):
                     group = groups[q["kind"]]
                     prompt = ("请将答案填在横线上。" if q["kind"] == "fill_in"
@@ -430,7 +439,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
                     instructions = f"本大题共{len(group)}小题，共{sum(item['points'] for item in group)}分。" + prompt
                 else:
                     instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"),
-                                                        math_mode=not science_layout)
+                                                        exam_policy=policy)
                 section.append(para(instructions, note))
                 md.extend([f"## {label}", "", instructions, ""])
             previous = q["kind"]

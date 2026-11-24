@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "entries": [
     {
       "id": "math.stop",
@@ -175,6 +175,83 @@
       "severity": "fatal",
       "check": "独立检查唯一解、单位、边界与评分",
       "counterexample": "漏掉可行的第二种解，或选择题多解"
+    },
+    {
+      "id": "exam.policy",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+      "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+    },
+    {
+      "id": "physics.weight",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "每卷逐题按主考模块独立计分，计算题兼有力学综合和电磁",
+      "counterexample": "A卷配置力学压轴，B卷配置电磁压轴后只检查两卷合计覆盖"
+    },
+    {
+      "id": "physics.rounding",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "按空位复算两种常用π近似的最终进位",
+      "counterexample": "3.118π保留三位有效数字时分别给出9.79与9.80"
+    },
+    {
+      "id": "chinese.volume",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "计数时只统计各阅读材料一次，核对信息、文学、文言篇幅",
+      "counterexample": "以题干与选项凑足信息类阅读的正文下限"
+    },
+    {
+      "id": "chinese.classical",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "查文言主材料是否直接采用熟文，核对第12、15题设问方向",
+      "counterexample": "以整篇《日喻》或《庖丁解牛》代替陌生文言阅读"
+    },
+    {
+      "id": "chinese.recitation",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "三小题分别核对作者、篇目与明示的作品来源",
+      "counterexample": "第17题连续两小题考苏轼，或以苏东坡为名重复计算作者"
+    },
+    {
+      "id": "chinese.quotes",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "中文正文、题干、选项的一级引用使用全角双引号",
+      "counterexample": "把‘守拙’直接印为一级引用"
+    },
+    {
+      "id": "english.volume",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "A至D只计正文词数，单独核对C、D各自平均句长",
+      "counterexample": "四篇正文仅1000词，或用短句堆砌研究类文章"
+    },
+    {
+      "id": "english.grammar",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "逐空对照原文、提示词和答案形态，查细类集中与四项必含类型",
+      "counterexample": "把三个-ing答案分别改写标签以免触发上限"
+    },
+    {
+      "id": "english.typography",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "听力及正文钟点用冒号，英文一级引文用双引号",
+      "counterexample": "听力稿把13:45写成13.45"
+    },
+    {
+      "id": "chemistry.structure_depth",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "查前五题STSE和基础操作、选必2的多角度覆盖、非选择题空位数",
+      "counterexample": "全卷选必2只考一次常规晶胞，非选择题每题两个作答空"
     }
   ]
 }

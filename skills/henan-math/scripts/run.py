@@ -16,7 +16,8 @@ def locate(explicit=None):
         roots = [Path(os.environ["HENAN_MATH_DB"])]
     elif (skill / "database-link.json").exists():
         link = json.loads((skill / "database-link.json").read_text(encoding="utf-8"))
-        roots = [skill / link["relative_database_root"]]
+        roots = [Path(link["absolute_database_root"])] if "absolute_database_root" in link else [
+            skill / link["relative_database_root"]]
     else:
         roots = [Path.cwd(), *Path.cwd().parents, skill, *skill.parents]
     for root in roots:

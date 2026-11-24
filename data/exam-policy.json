@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "henan-english-written-conversion",
+      "subject": "english",
+      "kind": "english_score",
+      "region": "河南",
+      "from_year": 2025,
+      "through_year": 2026,
+      "parameters": {
+        "method": "written_conversion",
+        "written_points": 120,
+        "listening_points": 30,
+        "written_multiplier": "1.25",
+        "rounding": "half_up",
+        "header": "听力30分、笔试120分。听力成绩单列。笔试原始分乘以1.25，四舍五入后计入河南高考文化总成绩。"
+      },
+      "sources": [
+        {
+          "title": "河南省2026年普通高等学校招生工作规定",
+          "url": "https://xcoss.henan.gov.cn/typtfile/20260427/cc9d5c1a332341f0a7d9223f54f0cf62.pdf",
+          "evidence": "official_policy"
+        },
+        {
+          "title": "河南省深化普通高等学校考试招生综合改革实施方案",
+          "url": "https://www.xiangcheng.gov.cn/sitesources/xcs/page_pc/xxgk/jcxxgk/zcjd/articlef6ef57536b614c1ebb70641901df76b3.html",
+          "evidence": "official_policy"
+        }
+      ]
+    },
+    {
+      "id": "henan-english-combined",
+      "subject": "english",
+      "kind": "english_score",
+      "region": "河南",
+      "from_year": 2027,
+      "parameters": {
+        "method": "listening_plus_written",
+        "written_points": 120,
+        "listening_points": 30,
+        "header": "听力30分、笔试120分，两项原始分合计150分，直接计入河南高考文化总成绩。"
+      },
+      "sources": [
+        {
+          "title": "河南省深化普通高等学校考试招生综合改革实施方案",
+          "url": "https://www.xiangcheng.gov.cn/sitesources/xcs/page_pc/xxgk/jcxxgk/zcjd/articlef6ef57536b614c1ebb70641901df76b3.html",
+          "evidence": "official_policy"
+        },
+        {
+          "title": "河南省教育考试院高考综合改革政策解读",
+          "url": "https://news.haeea.cn/attach/file/20250526/20250526151948_0983_74fe03ee.pdf",
+          "evidence": "official_policy"
+        }
+      ]
+    },
+    {
+      "id": "national-english-listening-through-2025",
+      "subject": "english",
+      "kind": "listening",
+      "series": ["cn-new-gaokao-1", "cn-new-gaokao-2"],
+      "through_year": 2025,
+      "parameters": {
+        "sections": [
+          {"first_number": 1, "recordings": 5, "repeats": 1, "scope": "short_dialogues", "read_seconds_per_item": 0, "answer_seconds_per_item": 10},
+          {"first_number": 6, "recordings": 5, "repeats": 2, "scope": "dialogues_or_monologues", "read_seconds_per_item": 5, "answer_seconds_per_item": 5}
+        ]
+      },
+      "sources": [
+        {
+          "title": "2025年全国一卷英语卷面第一、二节",
+          "url": "https://static-gkcx.gaokao.cn/upload/zhenti/20250611/1749605734_7546.pdf",
+          "evidence": "paper_facsimile"
+        },
+        {
+          "title": "武汉招考办2026年听力调整说明",
+          "url": "https://3g.wuhan.gov.cn/hdjl/rdhy/202605/t20260530_2771182.shtml",
+          "evidence": "official_notice"
+        }
+      ]
+    },
+    {
+      "id": "national-english-listening-from-2026",
+      "subject": "english",
+      "kind": "listening",
+      "series": ["cn-new-gaokao-1", "cn-new-gaokao-2"],
+      "from_year": 2026,
+      "parameters": {
+        "sections": [
+          {"first_number": 1, "recordings": 5, "repeats": 2, "scope": "short_dialogues", "read_seconds_per_item": 0, "answer_seconds_per_item": 10},
+          {"first_number": 6, "recordings": 5, "repeats": 2, "scope": "dialogues_or_monologues", "read_seconds_per_item": 5, "answer_seconds_per_item": 5}
+        ]
+      },
+      "sources": [
+        {
+          "title": "武汉招考办2026年听力调整说明",
+          "url": "https://3g.wuhan.gov.cn/hdjl/rdhy/202605/t20260530_2771182.shtml",
+          "evidence": "official_notice"
+        },
+        {
+          "title": "汉阴县教育体育局2026年普通高考温馨提示",
+          "url": "https://www.hanyin.gov.cn/Content-2920634.html",
+          "evidence": "official_notice"
+        }
+      ]
+    },
+    {
+      "id": "national-19-item-math-multiple-choice",
+      "subject": "math",
+      "kind": "multiple_choice",
+      "series": ["cn-new-gaokao-1", "cn-new-gaokao-2"],
+      "from_year": 2024,
+      "parameters": {
+        "full_credit": 6,
+        "partial_credit": "variable",
+        "wrong_credit": 0,
+        "instruction": "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+      },
+      "sources": [
+        {
+          "title": "2024年全国新课标Ⅰ卷数学多项选择题栏目",
+          "url": "https://down.jiaoyuwu.com/m00/8d/ac/69593b6f10b58145a8c3d3a9b8abdd88.pdf",
+          "evidence": "paper_facsimile"
+        }
+      ]
+    },
+    {
+      "id": "henan-selective-physics-multiple-choice",
+      "subject": "physics",
+      "kind": "multiple_choice",
+      "region": "河南",
+      "series": ["cn-ha-physics-selective"],
+      "from_year": 2025,
+      "parameters": {
+        "full_credit": 6,
+        "partial_credit": 3,
+        "wrong_credit": 0,
+        "instruction": "全部选对得满分，选对但不全得3分，有选错的得0分。"
+      },
+      "sources": [
+        {
+          "title": "2025年河南物理选择性考试原卷多项选择题栏目",
+          "url": "https://www.jhgk.cn/upload/file/20250612/1749723303810089980.pdf",
+          "evidence": "paper_facsimile"
+        }
+      ]
+    }
+  ]
+}

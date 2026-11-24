@@ -4,11 +4,13 @@ from gaokao import digest, read_json, require
 from analysis_db import fingerprint
 from core.batch_planner import check
 from core.board_cycle import cycle
+from core.review_board import successful
 
 
 def run(root, schedule_file, year, context, job, invoke, providers=None):
     schedule=read_json(schedule_file)
     subject=schedule["subject"]
+    require(subject != "physics" or schedule.get("physics_corridor"), "物理批次须重新规划各卷独立的分值走廊")
     slots=list(range(1,schedule["count"]+1))
     accepted={}
     previous={}
@@ -34,7 +36,8 @@ def run(root, schedule_file, year, context, job, invoke, providers=None):
             next_paths=[]
             for s,c in zip(slots,candidates,strict=True):
                 if s not in active:continue
-                targets={i["number"] for i in cross["issues"] if i["paper"]==s}
+                targets={n for issue in cross["issues"] if issue["paper"]==s
+                         for n in issue.get("repair_numbers",[issue["number"]])}
                 targets.update(i["compares_to"][1] for i in cross["issues"]
                                if i["paper"] not in active and i.get("compares_to",[0])[0]==s)
                 path=job/f"paper-{s}"/f"round{number+1}"/"candidate.json"
@@ -66,7 +69,7 @@ def run(root, schedule_file, year, context, job, invoke, providers=None):
             requested=work[s]/"repair-slots.json"
             decision=cycle(root,folder,work[s]/"inbox",previous.get(s),
                            read_json(requested) if requested.is_file() else (),providers=providers)
-            if decision["state"]=="eligible":
+            if successful(decision["state"]):
                 accepted[s]=(files[s],folder)
             elif decision["state"]=="returned":
                 previous[s]=folder

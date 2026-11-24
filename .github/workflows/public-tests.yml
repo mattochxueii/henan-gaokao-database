@@ -52,13 +52,15 @@ jobs:
         run: python -m unittest discover -s tests -p test_batch_review.py -v
       - name: Nonchoice illustrations, Chinese labels and response spaces
         run: python -m unittest discover -s tests -p test_phase26_print.py -v
+      - name: Dated policy, science allocation, section merge and offline review
+        run: python -m unittest discover -s tests -p 'test_phase27*.py' -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"
           cd "$RUNNER_TEMP/gaokao-public"
           python scripts/local_data.py init
           python scripts/install_math_skill.py
-          python scripts/install_math_skill.py --skill gaokao-platform
+          python scripts/install_skill.py
           python .agents/skills/gaokao-platform/scripts/run.py subjects
           python .agents/skills/henan-math/scripts/run.py research --series project-original --limit 1
           python -m unittest discover -s tests -v

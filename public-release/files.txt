@@ -60,6 +60,7 @@ scripts/local_data.py
 scripts/math_skill.py
 scripts/math_trends.py
 scripts/install_math_skill.py
+scripts/install_skill.py
 scripts/mathgen/__init__.py
 scripts/mathgen/ai_provider.py
 scripts/mathgen/ai_spec.py
@@ -119,6 +120,7 @@ scripts/core/language_workflow.py
 scripts/core/language_render.py
 scripts/core/science_intake.py
 data/language-blueprints.json
+data/exam-policy.json
 scripts/core/science_forecast.py
 scripts/core/science_workflow.py
 scripts/subjects/__init__.py
@@ -129,6 +131,7 @@ scripts/subjects/physics.py
 skills/gaokao-platform/SKILL.md
 skills/gaokao-platform/references/practice.md
 skills/gaokao-platform/references/quality-audit.md
+skills/gaokao-platform/references/standard.md
 skills/gaokao-platform/scripts/run.py
 national/multisubject/catalog.json
 national/multisubject/README.md
@@ -196,6 +199,11 @@ experiments/phase15/chemistry/titration.png
 experiments/phase15/chemistry/verification.json
 experiments/phase15/chemistry/visual-pending.json
 scripts/core/exam_qa.py
+scripts/core/exam_policy.py
+scripts/core/physics_corridor.py
+scripts/core/language_corridor.py
+scripts/core/language_sections.py
+scripts/core/external_review.py
 scripts/core/review_board.py
 scripts/core/board_cli.py
 scripts/core/board_cycle.py

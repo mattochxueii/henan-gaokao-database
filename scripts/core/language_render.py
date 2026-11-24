@@ -7,6 +7,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.platypus import Flowable, Image, KeepTogether, Paragraph, Spacer, SimpleDocTemplate
 from gaokao import atomic_write, require
 from core.editorial_rules import LAYOUT_MODES, inline_response_only
+from core.exam_policy import listening_notes, parameters
 
 
 class ManuscriptLines(Flowable):
@@ -61,10 +62,17 @@ def render(paper, output, answers=None, *, listening=None):
             marker={"h1":"# ","h2":"## ","h3":"### ","text":""}[kind]
             md.append(marker+line)
     put(title,"h1")
+    policy = paper.get("exam_policy")
     if listening:
-        if not paper.get("archive_practice"):
-            put("监考用。第一节每段对话读一遍，读后留10秒。第二节每段材料读两遍，读前按每题5秒读题，读后按每题5秒作答。")
-        for label,text in listening.items():
+        by_recording = {}
+        offset = 0
+        for note, section in zip(listening_notes(policy, invigilator=True).values(),
+                                 parameters(policy, "listening").get("sections", []), strict=True):
+            by_recording[offset] = note
+            offset += section["recordings"]
+        for index,(label,text) in enumerate(listening.items()):
+            if note := by_recording.get(index):
+                put(note, "h2")
             put(paper["materials"][label]["title"],"h2")
             put(text)
     else:
@@ -72,8 +80,9 @@ def render(paper, output, answers=None, *, listening=None):
             put("项目参考评分。开放性试题允许依据合理、表达准确的不同答案。")
         else:
             put(f'满分{paper["points"]}分　考试时间{paper["minutes"]}分钟')
-            if paper["subject"]=="english" and not paper.get("archive_practice"):
-                put("听力30分，笔试120分。河南计入高考文化成绩的外语分为笔试原始分 × 1.25 后四舍五入。")
+            if note := parameters(policy, "english_score").get("header"):
+                put(note)
+        listening_instructions = listening_notes(policy)
         seen_sections, seen_materials=set(),set()
         sections={key["id"]:key for key in paper["sections"]}
         for q in paper["questions"]:
@@ -94,6 +103,8 @@ def render(paper, output, answers=None, *, listening=None):
                     put(sample)
                 continue
             block=[]
+            if q["section"] == "listening" and n in listening_instructions:
+                put(listening_instructions[n], "text", block)
             if (name:=q.get("material")) and name not in seen_materials:
                 material=paper["materials"][name]
                 # Keep a short listening label with the first question in its group.

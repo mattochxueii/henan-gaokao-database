@@ -17,8 +17,11 @@ def main():
         if args.database:
             root = args.database.resolve()
         elif link.is_file():
-            relative = json.loads(link.read_text(encoding="utf-8"))["relative_database_root"]
-            root = (skill / relative).resolve()
+            data = json.loads(link.read_text(encoding="utf-8"))
+            if "absolute_database_root" in data:
+                root = Path(data["absolute_database_root"]).resolve()
+            else:
+                root = (skill / data["relative_database_root"]).resolve()
         else:
             root = skill.parents[1]
         entry = root / "scripts/gaokao_platform.py"

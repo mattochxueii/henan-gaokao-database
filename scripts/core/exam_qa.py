@@ -7,6 +7,7 @@ import re
 
 from analysis_db import fingerprint
 from gaokao import digest, read_json, relative_path, require
+from core import exam_policy, language_corridor, physics_corridor
 from core.editorial_rules import coverage, item_text, notation_issues
 from core.science_dna import STANDARD_LAYOUT
 
@@ -117,8 +118,54 @@ def printed_constant_errors(text):
         if unit not in expected_unit or abs(value/CONSTANTS[key]-1)>0.01+1e-12:
             yield f"题面标称 {match[0]} 与约定单位或常量超出1%容差"
 
-def inspect(root, subject, paper, answers, *, header="", observations=(), policy_snapshot=None,
-            figure_folder=None):
+
+CHEM_STRUCTURE = {
+    "晶体": r"晶胞|晶格|晶体结构",
+    "原子": r"电子排布|电子云|能级|电离能|电子跃迁",
+    "成键": r"杂化|分子构型|价层电子对|键角|[σπ]键|配位|共价键|范德华|氢键|分子间作用",
+}
+CHEM_FRONT = {
+    "STSE": r"绿色化学|资源化|社会生产|节能减排|再生利用|材料回收|废水|污染|食品|低碳|新能源|碳排放",
+    "基础实验操作": r"实验装置|实验操作|分液|洗涤|蒸馏|容量瓶|量筒|滴定管|气密性|过滤|称量|检漏|洗气",
+}
+CHEM_BLANK_LIMITS = (4, 12)
+
+
+def corridor_findings(subject, paper, answers, fields):
+    rows = paper["questions"]
+    evidence = {}
+    findings = []
+    if subject == "physics":
+        evidence, findings = physics_corridor.allocation(rows)
+        for n, (question, answer) in enumerate(zip(rows,answers,strict=True), 1):
+            findings.extend((n, "physics_pi", note) for note in physics_corridor.pi_findings(question,answer))
+    elif subject == "chinese":
+        findings.extend(language_corridor.chinese_findings(paper, fields))
+    elif subject == "english":
+        findings.extend(language_corridor.english_findings(paper, answers, fields))
+    elif subject == "chemistry":
+        structure = {module: [n for n,q in enumerate(rows, 1) if re.search(pattern, item_text(q))]
+                     for module,pattern in CHEM_STRUCTURE.items()}
+        front = {module: [n for n,q in enumerate(rows[:5], 1) if re.search(pattern, item_text(q))]
+                 for module,pattern in CHEM_FRONT.items()}
+        if not {"原子", "成键"}.intersection(k for k, v in structure.items() if v):
+            findings.append((0, "chemistry_structure", "选必2须有晶胞以外的原子或成键知识"))
+        elif len({n for hits in structure.values() for n in hits}) < 2:
+            findings.append((0, "chemistry_structure", "选必2须有至少两道实质题目"))
+        for module,hits in front.items():
+            if not hits:
+                findings.append((0, "chemistry_front", f"前五题缺{module}设问"))
+        low, high = CHEM_BLANK_LIMITS
+        blanks = {n:len(re.findall(r"_{3,}", item_text(q))) for n,q in enumerate(rows,1) if 15<=n<=18}
+        for n, count in blanks.items():
+            if not low <= count <= high:
+                findings.append((n, "chemistry_blanks", f"第{n}题有 {count} 个嵌入空，要求 {low}–{high} 个"))
+        evidence = {"structure":structure,"first_five":front,"nonchoice_blanks":{str(n):c for n,c in blanks.items()}}
+    return evidence, findings
+
+
+def inspect(root, subject, paper, answers, *, header=None, observations=(), policy_snapshot=None,
+            figure_folder=None, listening=None, enforce_corridors=False):
     rows = paper["questions"]
     require(rows and len(rows) == len(answers), "答案和题目须逐项对应")
     issues, warnings, wrong, absolutes, abstract = [], [], 0, 0, 0
@@ -187,8 +234,40 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
             issue(n,"missing_blank","指定题位没有嵌入式答位")
     if scoped and len(illustrated)<STANDARD_LAYOUT[subject]["choice_figures_minimum"]:
         issue(0,"figures",f"配图选择题仅 {illustrated}")
-    if subject=="math" and re.search(r"(?:选对但不全|部分选对)(?:的)?得\s*3\s*分",header):
+    if subject=="math" and re.search(r"(?:选对但不全|部分选对)(?:的)?得\s*3\s*分",header or ""):
         issue(0,"scoring","数学卷出现旧物理计分文案")
+    snapshot = paper.get("exam_policy")
+    fields = list(language_corridor.student_fields(paper))
+    listen_slots = {}
+    for n, row in enumerate(rows[:20],1):
+        if row.get("material"):
+            listen_slots.setdefault(row["material"],n)
+    fields.extend((listen_slots.get(key,0),text) for key,text in (listening or {}).items())
+    if snapshot:
+        expected = exam_policy.resolve(root, subject, snapshot["year"], snapshot["region"], snapshot["series"])
+        if snapshot != expected:
+            issue(0, "policy_conflict", "卷面绑定的考制与当前政策表不同")
+        title_year = re.match(r"\s*(20\d{2})\s*年", paper.get("title",""))
+        if title_year and int(title_year[1]) != snapshot["year"]:
+            issue(0, "policy_conflict", "标题年份与送审目标年份不同")
+        instructions = list(fields)
+        if header is not None:
+            instructions.append((0, header))
+            printed = exam_policy.compact(header)
+            for note in exam_policy.student_instructions(expected):
+                if exam_policy.compact(note) not in printed:
+                    issue(0, "policy_conflict", "学生PDF缺本年度标准文案：" + note)
+        for n, reason in dict.fromkeys(exam_policy.conflicts(expected, instructions)):
+            issue(n, "policy_conflict", reason)
+    elif enforce_corridors:
+        issue(0, "policy_conflict", "标准卷缺按目标年份、地区及卷系绑定的考制")
+    corridor = {}
+    if enforce_corridors:
+        corridor, violations = corridor_findings(subject, paper, answers, fields)
+        for n, rule, fact in violations:
+            issue(n, rule, fact)
+        if subject == "english":
+            warnings.extend(language_corridor.spelling_warnings(fields))
     measured={obs["number"] for obs in observations}
     if subject=="physics":
         for n,q in enumerate(rows,1):
@@ -206,7 +285,8 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
             "coverage":result["coverage"],"choice_figures":illustrated,"nonchoice_figures":nonchoice,
             "wrong_options":wrong,"absolute_wrong_options":absolutes,"abstract_mentions":abstract,
             "absolute_wrong_fraction":absolutes/wrong if wrong else None,
-            "abstract_per_question":abstract/len(rows),"passed":not issues}
+            "abstract_per_question":abstract/len(rows),"passed":not issues,
+            **({"corridor":corridor,"exam_policy_sha256":fingerprint(snapshot)} if enforce_corridors else {})}
 
 
 def figure_collisions(fig, tolerance_px=1):

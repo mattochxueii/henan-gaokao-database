@@ -1,58 +1,37 @@
 ---
 name: gaokao-platform
-description: 六科真题检索与拼卷、同构改编、目标卷系整卷模拟与专项训练。命题读取版本绑定的真题和画像，学生卷与答案独立核对。
+description: 本仓库唯一官方六科命题入口。使用高考真题研究、拼卷、改编或专项训练，按目标年份模拟整卷，分块创作语英，批量避免模型重复，组织本地和外部盲审。
 ---
 
-# 全国高考真题研究与出题
+# 高考真题研究与模拟命题
 
-统一入口为项目根目录的 `python scripts/gaokao_platform.py`。安装后的入口为同目录结构下的 `scripts/run.py --database <项目目录>`。以下命令都接在统一入口后。
+在仓库根目录使用 `python scripts/gaokao_platform.py`。用 `python scripts/install_skill.py` 安装到项目的 `.agents/skills/gaokao-platform`，或用 `--destination <宿主技能目录>` 指定其他宿主。安装后用 `scripts/run.py` 转发同一套命令，也可用 `--database <项目根目录>` 定位真题库。
 
-## 单卷打分与批量防重复
+## 单卷
 
-每份新标准卷在发布前执行硬安检、三个独立角色盲审与 100 分扣分卡。通过统一入口运行 `exam-qa` 和 `board-cycle`。批量使用 `batch-plan`、`batch-check`、`batch-run`，模型方向及实验题材提前分配。局部修订锁定零扣分题，最多三轮，零否决且达到 85 分后再完成学科签字。角色输入、文件格式和实际样本见[单卷与批量发布](references/batch.md)。
+1. 用 `authoring-context <学科> --limit 100 --output context.json` 读取真实题面、命题画像及两年同题位依据。用 `exam-policy <学科> <年份>` 取卷头、计分与听力规则，语英、理科用 `plan <学科> <年份> --mode standard` 取标准蓝图。
+2. 创作独立于参考原题的新推理任务，写明同题位深度、错项误区和图件提供的条件。数学分离内部规格与中文题面，理科使用 `program` 或 `independent_review` 通道。物理逐题声明主考模块，语文默写逐小题登记作者和作品，英语语填逐空标考点。阅读 [标准卷约束与分块格式](references/standard.md)。
+3. 运行 `simulate <学科> <年份> <候选.json> <新目录> --context context.json`。默认 practice 留书写区，纯嵌入式填空使用题内横线。用 `--layout-mode exam` 排紧凑卷。政策说明由程序排印。卷面替换后重新验算并逐页核查。
+4. 用 `exam-qa <卷目录>` 查硬门禁，再执行 `board-cycle <卷目录> <分离审稿邮箱>`。求解、教研、印刷角色各自只看白名单材料。普通对外状态为 `LOCAL_QA_PASSED`，逐笔扣分保留在本地评分卡。题位失败则锁定其余题目，另存新目录修订。
+5. 用最终学生 PDF 做独立重解，完成 [逐题质量审稿](references/quality-audit.md) 和视觉签核。语英、理科使用 `review <卷目录> <核对.json>` 和 `publish <卷目录> <逐页复核.json>`。数学用 `math publish <卷目录> --student-review <核对.json> --math-comparison <数学核对.json>`。学生卷、答案、英语朗读稿分开；`docx <Markdown> <Word>` 导出文字版。
 
-## 真题检索与拼卷
+## 语文、英语分块
 
-- `research physics --region 河南 --year 2026 --topic 电场` 读取题面、原题位置和参考答案。主三科与物理、化学、生物学使用相同接口。演练卷加 `--adaptation`，要查缺图、缺答或隔离状态再加 `--include-incomplete`。隔离题不参与默认选题。
-- `assemble chinese <新目录> --year 2024 --topic 信息类阅读 --limit 5` 生成独立学生卷 PDF 和 Markdown。可用多个 `--question-id` 固定题单，或用 `--kind` 筛题型。完形、七选五和听力按完整题组展开。
-- 独立从学生 PDF 作答，检查图件与材料，再用 `workbook-review <目录> <逐题核对.json>` 对照档案答案并生成分离的答案 PDF。听力文字通过单独的朗读稿提供。保持原题年份、题号和版本可追溯。
-- `import-electronic <试卷.json> --images <题图目录> --track` 从透明的来源材料追加私有明文档案。理科题图必要却缺失时保留题面和单题缺图标注。运行 `python scripts/audit_core_papers.py --write-profiles` 更新画像。
+三个独立创作任务共用同一目标年份、卷 ID 和真题上下文。语文分现代文双阅读、文言古诗默写、语用作文。英语分十段听力、阅读与七选五、完形语填写作。用 `merge-sections <chinese|english> <年份> <候选.json> <part1.json> <part2.json> <part3.json> --context context.json` 校验合并，再进入单卷流程。材料与答案按题号在片段内配对。
 
-## 真题同构改编
+## 批量
 
-1. `authoring-context english --source-id 2025-cn-english-national-1:q021 --output <对照.json>` 获取题面和版本绑定的命题依据。
-2. 新题复用原题的核心推理，不复用原句或仅换数字。说明保留的考查动作、条件或情境的实质变化，以及难度依据。候选格式见 [改编与核对](references/practice.md)。
-3. `adapt english <改编候选.json> <新目录>` 生成改编学生卷。另行求解，运行 `workbook-review`。
-4. 理科改编候选应按理科的结构提供 `topic` 和 `verification_mode`。可计算题提交 `problem.op`，其余提供逐问独立核对要点。生成学生版后使用 `review` 与 `publish`。
+用 `batch-plan <学科> plan.json --count N` 预留互斥的实验、情境和压轴模型。物理各卷独立达到三大板块分值范围，再在同板块换模型。用 `batch-check` 比较实际候选，可用 `batch-run plan.json <年份> context.json <工作目录>` 恢复批量生产。各轮仍执行单卷安检与独立审阅。文件布局及修订约定见 [批量与盲审](references/batch.md)。
 
-## AI 高仿真完整模拟
+## 外部盲审
 
-1. 先运行 `authoring-context math --output <真题上下文.json>`，读取其中三个年份的真实题面和 `data/dna/math.json` 的题位、条件及推理层次。其他学科更换学科名。
-2. 数学候选遵循 `scripts/math_skill.py` 的内部规格与写作分层，答案子问与分步评分分别保留。立体几何解答题须提供标清关键点、线和条件的三维示意图。引用图形的解析几何或函数题须附参与解题的图。第 7–11、14–19 题的评审记录须给出相连的数学推理并说明常见捷径在哪一步失效。
-3. 语文、英语各读取 `language_corpus` 所列的 2024–2026 年Ⅰ卷与 2025 河南演练卷以及相关 DNA。正式正文、演练样本分列。再用 `plan <学科> <年份> --mode standard` 获取结构与蓝图哈希。所有客观干扰项要能指向材料中仅一处有意义的偏差，例如量词范围、指代、因果、搭配或推断边界。阅读题须定位真实原句及由此产生的推理拐点。文言材料查体例与词句，阅读材料查自然语体与真实行文逻辑。
-4. 宿主 AI 生成候选后，运行 `simulate <学科> <年份> <候选.json> <新目录> --context <真题上下文.json>`。理科使用 2025、2026 年河南正式选择性考试的正文与画像，沿用 `plan <学科> <年份> --mode standard` 的 100 分蓝图和两种核对通道。2027 年模拟的卷型依据在蓝图中列明。
-5. 理科命题读上下文的 `paper_layout`。物理至少 6 道配图选择题，建议 6–8 道，第 11–12 题嵌入填空、第 13–15 题保留演算。化学至少 7 道配图选择题，建议 8–10 道，第 15–18 题嵌入填空。生物学至少 5 道配图选择题，第 17–21 题嵌入填空，因果解释和实验设计预留较长答位。题干须指向参与求解的图，组别和计分说明由栏目统一印出。用至少三个连续下划线写空位，可按题内顺序显式加 ①、②，排版会自动补全圈号。
-6. 起草前逐题阅读上下文中的 `quality_benchmarks`。用 `--limit 100` 查看两年同学科的可用正文，候选的 `provenance.quality_reference_sha256` 绑定该字段的规范 JSON 指纹。正式卷与演练卷分开。只有部分图或正文的真题可说明题位，比较时写明限制。
-7. 新标准卷须提交逐题 `quality-audit.json`。每题写两年同题位实质比较、处理信息的步骤、相互关联的概念，以及精炼后的设问。物理第4–10、15题和化学第8–14、18题至少体现两种相关概念与两步实质推理。图题应说明删图后会失去什么条件或数据。
-8. 逐一说明每个干扰项由哪一种具体误算、误读或漏判得来。一眼可排除的常识错误、同题位深度不足、题图只重复文字、题面泄露解法或啰嗦时填 `return`。留存初稿，运行 `quality-audit <初稿目录> <初稿审稿单.json>` 记录退回。改写后另建目录，附 `--previous-rejection <初稿目录/quality-result.json>`，逐题说明如何处理原退回理由。审稿字段见 [整卷命题质量审稿](references/quality-audit.md)。
-9. 数学用 `math publish <目录> --student-review <核对.json> --math-comparison <数学核对.json>`。语英与理科用 `review <目录> <核对.json>`，逐页验收后用 `publish <目录> <视觉核对.json>`。通过质量审稿前须对最终学生 PDF 完成独立求解。数学送审时加 `--blind-review <核对.json>`，其余学科由工具读取 `review` 已登记的重解。理科标准卷的重解记录应绑定学生 PDF 的校验值，包括配图选择题的 `figure_reading` 和所有空位的 `blank_answers`，按题内圈号排列。交付前核查题图标签、每根横线与后接单位、公式后标点及分页。
+用 `export-external-review <卷目录> <新目录>` 生成学生 PDF、Markdown、政策表、两年题位摘要、提示词和回执模板。英语另有只供播放的朗读文本。外部模型使用导出目录材料独立挑错。收到 JSON 后运行 `import-external-review <卷目录> <回执.json>`，查看承接题号并从新的试卷目录用 `board-cycle <修订卷目录> <新邮箱> --previous <原卷目录>` 复核。模型身份、PDF、缺陷证据与修订均需绑定版本。
 
-## 标准卷的印刷与质量铁律
+## 真题与专项
 
-物理 11–15 和化学 15–18 每题须有独立可核的实验、数据、流程或模型图；生物 17–21 至少三题有图。立体几何与依赖几何图像的选填、解答题也须配图。横线足以完成的实验题只保留题内答位，计算、证明及开放作答保留书写区。中文卷图上用“空气”“液体”“磁通量”“光敏电阻”，国际单位、公式与物理量符号按规范保留。绘制新图用 `save_figure(fig,path,subject=...)` 检查文字碰撞并将实际标签写入 PNG；第三方图缺少文字层时，由印刷评审逐图核读。英语第一节对话读一遍，第二节材料读两遍。
+- `research <学科> --region 河南 --year <年份> [--topic <主题>]` 查题面、版本与来源。演练卷加 `--adaptation`，排查缺图或隔离加 `--include-incomplete`。
+- `assemble <学科> <新目录> [--year <年份>]` 拼卷，`train <学科> <新目录> --topic <弱项>` 抽题训练。带材料题按组输出，完成独立核对后用 `workbook-review` 生成分离答案。
+- 用 `authoring-context <学科> --source-id <原题ID> --output <对照.json>` 研究同构改编，再运行 `adapt <学科> <改编候选.json> <新目录>`。保留核心推理，实质改变条件、情境或设问。[改编与核对](references/practice.md)
+- 数学趋势专题只在明确需要时使用 `trend-pack`，逐题绑定冻结证据与题位。正式标准卷按目标蓝图、真题和 DNA 创作。趋势卡在项目根目录的 `forecast/preregistered/2027-math-trends.md`。
 
-1. 模拟默认为 `--layout-mode practice`。选填紧凑，长答按题型和分值留白，10–13 分长答约 7 cm，15–17 分长答约 9.6–10.4 cm。纸内填空与长句解释仍保留横线。用 `simulate <学科> <年份> <候选.json> <新目录> --context <上下文.json> --layout-mode exam` 输出配答题卡的紧凑版。学生 PDF 换版后重新审查与发布，答案独立生成。
-2. 送审前查整卷覆盖。数学须有 \(e^x\) 或 \(\ln x\) 等指对数超越函数、常规导数工具、立体几何选填及平均数以外的统计量。物理查力学、天体、静电电路、磁场、感应与交变、热学、光波与机械波、原子物理八类。缺三类退回，典型器具超过两题退回。化学前五题覆盖 STSE 和基础装置辨析，实验大题连接仪器、分离、现象和定量误差。
-3. 19 题制数学多选统一印「全部选对的得6分，部分选对的得部分分，有选错的得0分」。河南物理多选沿用部分选对得 3 分。数学题面和解析的补集写 `\complement_U A`，对立事件写 `\overline{Y}`。
-4. 关键数值、长度、方程、朝向与可调器具在题文和图上都能找到。审稿单逐项登记文字锚点、图上标签及量的含义，再看最终学生页。图展示连接、过程或关系，图中数字与语义不得冲突。
-5. 涉及实际溶液的离子反应、沉淀与除杂还要审目标 pH、竞争物种、处理与过滤顺序和定量收支。需要时登记碳酸氢根去质子化收支及分段溶解态留量。含两性离子须审高 pH 再溶解。
-
-## 数学趋势研判专题
-
-单独走 `trend-pack <候选.json> <新目录> --context <数学上下文.json>`。题面注明趋势研判，限定为 4–5 题，需涵盖多选、填空与两道解答题。每题候选须绑定冻结版本、题位对照、证据编号、表层套路与实质推理差异。答案解析逐题印出命题依据卡。标准模拟仍只用目标蓝图、DNA 和正式真题研究。查看证据与考后判据参见 [数学趋势卡](../../forecast/preregistered/2027-math-trends.md)。
-
-## 专项训练
-
-`train english <新目录> --year 2025 --topic 阅读理解 --limit 3` 为指定弱项抽真实题。需要新题时，从同一考点的对照材料选取参考，走改编流程；数学也可用 `math generate --engine ai --mode sequence|derivative --candidates <候选.json> --output <新目录>` 完成原创专项并沿用数学独立核对。
-
-原有理科、数学预测和试做工具仍由同一入口转发。版式可编辑稿保留为 Markdown，语文、英语文本可用 `docx <Markdown> <Word>` 转换。
+真题导入用 `import-electronic <试卷.json> --images <题图目录> --track`。理科必要图缺失时保留文字并登记单题缺图。导入后用 `python scripts/audit_core_papers.py --write-profiles` 更新画像。

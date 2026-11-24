@@ -22,6 +22,7 @@
 
 ```sh
 python -m pip install -r requirements.txt
+python scripts/install_skill.py
 python scripts/gaokao_platform.py assemble chinese work/reading --year 2024 --topic 信息类阅读 --limit 5
 python scripts/gaokao_platform.py train english work/english-reading --year 2025 --topic 阅读理解 --limit 3
 python scripts/math_trends.py
@@ -31,6 +32,7 @@ python scripts/math_trends.py
 
 ```sh
 python scripts/gaokao_platform.py authoring-context physics --limit 100 --output context.json
+python scripts/gaokao_platform.py exam-policy english 2027
 python scripts/gaokao_platform.py simulate physics 2027 candidate.json work/simulation --context context.json --layout-mode practice
 python scripts/gaokao_platform.py board-cycle work/simulation work/simulation-inbox
 python scripts/gaokao_platform.py batch-plan physics plan.json --count 2
@@ -40,5 +42,7 @@ python scripts/gaokao_platform.py adapt english adaptation.json work/adapted
 ```
 
 `practice` 在长答题后留书写空间，实验填空在横线上作答；`--layout-mode exam` 供另配答题卡。可向[排雷库](data/qa/anti-patterns.json)追加唯一编号、学科、严重度、检测要点与反例。详细操作见[统一命题入口](skills/gaokao-platform/SKILL.md)、[独立审稿与批量工作流](skills/gaokao-platform/references/batch.md)和[完整开发历史](docs/DEVELOPMENT-HISTORY.md)。
+
+语英分三段创作后用 `merge-sections` 合卷。按 `export-external-review` 生成可交给独立模型的学生材料，用 `import-external-review` 把缺陷绑定到原 PDF 和返工题号。[标准卷与分块格式](skills/gaokao-platform/references/standard.md)
 
 本项目归档用于个人学习与教研。题目版本、来源及可用范围以各卷记录为准。模拟卷编辑评分与考生实测成绩分别记录。
