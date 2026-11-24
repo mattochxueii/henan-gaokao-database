@@ -195,13 +195,15 @@ def render(paper, output, answers=None, *, listening=None):
 
 
 def export_docx(markdown, output):
+    from io import BytesIO
     from docx import Document
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.enum.table import WD_ROW_HEIGHT_RULE
     from docx.shared import Cm, Pt, RGBColor
-    from gaokao import read_json
+    from gaokao import read_json, relative_path
+    from core.science_dna import STANDARD_LAYOUT
     doc=Document()
     section=doc.sections[0]
     section.page_width, section.page_height = Cm(21), Cm(29.7)
@@ -226,9 +228,22 @@ def export_docx(markdown, output):
     source=Path(markdown)
     packet=source.parent/"blind-packet.json"
     paper=read_json(packet)["paper"] if packet.is_file() else {}
+    science=paper.get("subject") in STANDARD_LAYOUT
+    markers=r"</?(?:u|em|strong|sub|sup)>"
+    if science:
+        from PIL import Image as PillowImage
+        from mathgen.student_pdf import answer_height, formula_image, normalise_tex
+
+        markers+=r"|\\\(.*?\\\)"
+    inline_markup=re.compile(f"({markers})")
     if source.name=="paper.md" and paper:
         if paper.get("layout_mode")=="practice":
             for q in paper["questions"]:
+                if science:
+                    if q.get("parts") and (height := answer_height(q)):
+                        last=q["parts"][-1]
+                        prompts[last["label"]+" "+last["text"].splitlines()[-1]]=round(height/.67)
+                    continue
                 first,*rest=q["stem"].strip().splitlines()
                 last=(rest[-1] if rest else f'{q["number"]}.（{q["points"]:g}分）{first}').strip()
                 if q.get("options"):
@@ -248,6 +263,14 @@ def export_docx(markdown, output):
         heading=sep and lead in ("#","##","###")
         content=text if heading else line
         following = lines[index+1] if index+1<len(lines) else ""
+        if science and (image := re.fullmatch(r"!\[题图\]\(([^)]+)\)",content)):
+            path=relative_path(source.parent,image[1])
+            with PillowImage.open(path) as picture:
+                w,h=picture.size
+            para=doc.add_paragraph()
+            para.alignment=WD_ALIGN_PARAGRAPH.CENTER
+            para.add_run().add_picture(str(path),width=Cm(min(16.4,4.9*w/h)))
+            continue
         if heading:
             short_example = (content=="范文" and source.name=="solutions.md"
                              and paper.get("subject")=="english")
@@ -255,11 +278,20 @@ def export_docx(markdown, output):
         if heading and lead=="#":para.alignment=WD_ALIGN_PARAGRAPH.CENTER
         active=set()
         printable = NUMBERED_BLANK.sub(r"\1" + "\N{NO-BREAK SPACE}" + r"\2",content)
-        for fragment in re.split(r"(</?(?:u|em|strong|sub|sup)>)",printable):
+        for fragment in inline_markup.split(printable):
             if re.fullmatch(r"</?(?:u|em|strong|sub|sup)>",fragment):
                 tag=fragment.strip("</>")
                 if fragment.startswith("</"):active.discard(tag)
                 else:active.add(tag)
+            elif science and fragment.startswith(r"\(") and fragment.endswith(r"\)"):
+                png=BytesIO()
+                formula=normalise_tex(fragment[2:-2].replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
+                formula_image(formula,png)
+                png.seek(0)
+                with PillowImage.open(png) as picture:
+                    width=picture.width
+                png.seek(0)
+                para.add_run().add_picture(png,width=Pt(min(width*72/240,452)))
             else:
                 run=para.add_run(fragment)
                 run.underline="u" in active
@@ -268,10 +300,12 @@ def export_docx(markdown, output):
                 run.font.subscript="sub" in active
                 run.font.superscript="sup" in active
         line_count=prompts.get(content,0)
-        option_chain = re.match(r"^[A-G]\. ",content) and re.match(r"^[A-G]\. ",following)
+        option_chain = re.match(r"^[A-G](?:\. |．)",content) and re.match(r"^[A-G](?:\. |．)",following)
         passage_label = re.fullmatch(r"材料[一二三][:：]?|听第\s*\d+\s*段材料.*",content)
         if line_count or content in keep_with_options or option_chain or passage_label or (
                 short_example and following and not following.startswith("#")):
+            para.paragraph_format.keep_with_next=True
+        if science and following.startswith("![题图]("):
             para.paragraph_format.keep_with_next=True
         if short_example:
             para.paragraph_format.keep_together=True
@@ -279,7 +313,7 @@ def export_docx(markdown, output):
             p=doc.add_paragraph()
             p.paragraph_format.space_after=Pt(0)
             p.paragraph_format.line_spacing=Pt(21)
-            p.paragraph_format.keep_with_next=idx+1 < line_count
+            p.paragraph_format.keep_with_next=not science and idx+1 < line_count
         if content in grid:
             table=doc.add_table(rows=36,cols=25)
             table.autofit=False

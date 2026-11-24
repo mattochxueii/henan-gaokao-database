@@ -157,7 +157,7 @@ def formula_image(formula, filename):
             "$" + formula + "$", dpi=240, prop=FontProperties(size=12)
         )
     ink = PILImage.fromarray(np.asarray(parsed.image))
-    ImageOps.invert(ink).save(filename)
+    ImageOps.invert(ink).save(filename, format="PNG")
 
 
 def normalise_tex(text):
@@ -333,7 +333,9 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         spaceAfter=5 if compact else 8,
     )
 
-    response_line = ParagraphStyle("response-blank", parent=body, leading=18.5 if dense_chemistry else 20, spaceAfter=5)
+    response_line = ParagraphStyle("response-blank", parent=body,
+                                   leading=18.5 if dense_chemistry else 20, spaceAfter=5,
+                                   allowOrphans=0, allowWidows=0)
 
     def para(text, style=body):
         chunks = []

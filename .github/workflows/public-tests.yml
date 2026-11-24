@@ -54,6 +54,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_phase26_print.py -v
       - name: Dated policy, science allocation, section merge and offline review
         run: python -m unittest discover -s tests -p 'test_phase27*.py' -v
+      - name: Standard science simulation and editable handouts
+        run: python -m unittest discover -s tests -p test_science_publication.py -v
       - name: Build and test the isolated public candidate
         run: |
           python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"

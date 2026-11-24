@@ -223,9 +223,6 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
     points = sum(q["points"] for q in visible)
     require(len({q["topic"] for q in questions})>1 or blueprint["mode"]!="standard", "整卷主题覆盖不足")
     if standard:
-        paper["exam_policy"] = blueprint["exam_policy"]
-        if strict_qa:
-            paper["qa_protocol"] = current_board
         sections = blueprint["structure"]["sections"]
         by_kind = Counter()
         for q in visible:
@@ -255,6 +252,9 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
     paper = {"subject":subject,"title":candidate.get("title") or SUBJECTS[subject]+("原创专项练习" if blueprint["mode"]=="targeted" else "原创模拟卷"),
              "minutes":minutes,"total_points":points,"questions":visible,"layout_mode":layout_mode}
     if standard:
+        paper["exam_policy"] = blueprint["exam_policy"]
+        if strict_qa:
+            paper["qa_protocol"] = current_board
         if reference := candidate.get("quality_benchmarks"):
             paper.update(quality_reference_sha256=fingerprint(reference), standard=True, edition_rules=REVISION)
         paper["layout"] = "science"

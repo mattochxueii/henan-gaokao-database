@@ -1,0 +1,247 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 1,
+  "subject": "biology",
+  "ids": [
+    "orig:biology:hn27-folio:q01",
+    "orig:biology:hn27-folio:q02",
+    "orig:biology:hn27-folio:q03",
+    "orig:biology:hn27-folio:q04",
+    "orig:biology:hn27-folio:q05",
+    "orig:biology:hn27-folio:q06",
+    "orig:biology:hn27-folio:q07",
+    "orig:biology:hn27-folio:q08",
+    "orig:biology:hn27-folio:q09",
+    "orig:biology:hn27-folio:q10",
+    "orig:biology:hn27-folio:q11",
+    "orig:biology:hn27-folio:q12",
+    "orig:biology:hn27-folio:q13",
+    "orig:biology:hn27-folio:q14",
+    "orig:biology:hn27-folio:q15",
+    "orig:biology:hn27-folio:q16",
+    "orig:biology:hn27-folio:q17",
+    "orig:biology:hn27-folio:q18",
+    "orig:biology:hn27-folio:q19",
+    "orig:biology:hn27-folio:q20",
+    "orig:biology:hn27-folio:q21"
+  ],
+  "pdf_sha256": "977e0c808876d20c9bafd40f1b35ee3e97ecdd0bd6cec7ab3268f0e2cf626abd",
+  "item_versions": {
+    "1": "2d025a2b22679345f7b50bdc6b193719438d9d1b61531e161b031ef461550d57",
+    "2": "9e5ec6d14e064bd357f06a38e0be853e48cb1c1d02bdbf93522a278583bf1665",
+    "3": "e2bc1b543d5898c5efe5a14595755169a4458d7548602708cd7ddac939370685",
+    "4": "9b5b0e55a84972cfed7329be803e64035d4e696545a1b2497e2ea4bd3c877111",
+    "5": "5c7e00a418e02ac27891df9ac74761db6c3dfecf4d3e5a8ba2b07fa93435099f",
+    "6": "82d4b08710fc8b572ad8a8e4632ade6aa11b5b5297b90544beea29e256734113",
+    "7": "12378d07986990d1b58f0801ebdf87a6e6759f2f0546e34cd49de3ca57ef25cf",
+    "8": "2d1525f9afb205843b0c2a6c306b3f346c6ae9110e8f511f10a30a5f72715a42",
+    "9": "eac88dcc87acd96618ebb75cbef6f63929b25d307adc4b2afaac9b6f11fd0e03",
+    "10": "eafa7770cac5200394e70bef1b1c87e9cd5c72c3a1389988ec887bfc19a9146c",
+    "11": "f9c7d0dd13454c53c738566148d8fea33d91f2ed94ad24ac7f6a960ebc816448",
+    "12": "585b6bbb57b63c9e58571f6e0a2eb0f679b9d114e9321e02d1a7dd3c05b5d819",
+    "13": "16cb12c0659d5ccd3a8071d76f7cc6d63ae1e7122393c83863f98acceedcc62d",
+    "14": "32bc292b55e28d03da852dedffecdaa9103273ec0c26f3b1a1aadb2f6c8cd4ad",
+    "15": "35fbd139df6a93d5fc403a583e079e4322b9f2a3e2fbfe3c7bf3d2a19f049307",
+    "16": "6668174a3ada5fc03d2d60291f044257615d49ddd4ee93a539bf6545ad818a34",
+    "17": "6294533219a23313ac77244173661634cd9451ac140cb321efa52ed242ed825a",
+    "18": "a6f082d350300464ac774dcd881cc92f17de5dcebd9b4a4973b821060876ca8d",
+    "19": "c1102a49ce14a5ff493c837919377e6888e784abd8486279aa7f4941cb5f8c52",
+    "20": "06213b9ea24a572759306c2075cbe98357e7474166fb54ee56c9a1fab238a883",
+    "21": "d5675eb3dd00ca3d3885f8b80657664171a09168efff621dcb76b4ceafab2857"
+  },
+  "fatal_count": 1,
+  "final_score": 0,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 1,
+      "category": "weak",
+      "rule": "all.solution",
+      "points": 3,
+      "evidence": "第 1 题明确游离色素对照恢复到室温后判色，却仅写叶片浸泡液在 10 min 后比较深浅，未统一说明叶片浸液判色温度。现有对照能支持排除处理留下的持续显色差异，若叶片浸液是在不同温度读色，它不能充分排除可逆显色差异。B 的「有助于」仍有支持。",
+      "reader": "solver"
+    },
+    {
+      "number": 4,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 1 页的净吸收速率纵轴标题上下均被截，顶部单位只清楚到 μmol·m 附近且指数和后半单位不可读。两曲线标签都在曲线上方，第 2 个没有线型标记或引线直接对应虚线。各测量阶段和数值可读，强光净值加各自黑暗释放值都约为 8。",
+      "reader": "solver"
+    },
+    {
+      "number": 1,
+      "category": "weak",
+      "rule": "all.solution",
+      "points": 3,
+      "evidence": "两份色素溶液明确冷却到室温后读色，叶圆片的浸泡液只说20、55 ℃处理10 min后比较，可能在不同温度读数。游离色素对照无法排除加热液趁热显色的可逆差别。两类浸泡液均在室温读，或把B的结论限于冷却后留存的显色变化。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 2,
+      "category": "weak",
+      "rule": "all.absolute",
+      "points": 3,
+      "evidence": "B「所有吸收的硝酸根先在幼叶被同化」与D「都不再含标记」由强量词即可排除，A「硝酸根以原形进入核糖体」与蛋白质原料直冲，余下C甚至无需追本实验的取样链。可把一项替换为在根部同化或以含氮有机物运输的可判别推断。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 4,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第1页第4题纵轴标题上下均被截。变量开头缺字，单位仅见「μmol·m…」，指数和时间单位均不可辨；数据刻度未损。将纵轴物理量缩排或把变量、完整单位横置到图外。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 6,
+      "category": "weak",
+      "rule": "all.absolute",
+      "points": 3,
+      "evidence": "A的「每一个」与D的「均」可直接和50%、83%冲突；D又写成细胞「与该外液相同的失水量」，未定义外液的可比失水量。建议以细胞阈值或失水分布作真正有竞争的干扰。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 8,
+      "category": "weak",
+      "rule": "all.absolute",
+      "points": 3,
+      "evidence": "A写作胰高血糖素直接转化为葡萄糖，C用同给药量推出所有时刻升幅相同，D把残余血糖变化直接等同肝糖原分解相同，均以明显过度推断表述。改用两种均有一定生理依据的解释，要求实读图形或必要条件。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 10,
+      "category": "depth",
+      "rule": "all.absolute",
+      "points": 4,
+      "evidence": "A几乎直接复述「切去根冠后仍伸长但弯曲很少」，B否认题干明示的伸长，D跳到激素实际浓度。2025/26同位均需以两个定量指标或多个处理曲线实体作推断；这里应增加与切除对照相区分的表型或机制证据。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 16,
+      "category": "weak",
+      "rule": "all.solution",
+      "points": 3,
+      "evidence": "题干说两组用同批酿酒酵母、等质量面粉，只规定酵母同批来源，未限定接入量等同。A读成处理相关性尚成立，如归因为补糖须排除起始细胞数这一混杂。写明「等量同批酿酒酵母」。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 17,
+      "category": "fatal",
+      "rule": "all.solution",
+      "points": 0,
+      "evidence": "第17题（1）②要求唯一「用于检验照光影响…的对照」，保留全穗照光可作常规未处理对照，遮光可作阴性对照。第三组又只标「标记时遮光」，未声明是否保留全穗。单空据现题面存在合理两解并缺单变量条件。明确第三组保留全穗，把题干改为「应比较哪两组」。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 1,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "55 于第一行末，单位 °C 在下一行首。将数值与单位作为同一不可拆分的印刷组可消除跨行。",
+      "reader": "visual"
+    },
+    {
+      "number": 4,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "200 ppi 预览显示纵轴题名底端的中文起始部分被裁，量纲上端只显出 (μmol·m…，面积与时间指数残缺。缩短或水平放置纵轴量名及完整单位。",
+      "reader": "visual"
+    },
+    {
+      "number": 4,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "短时失水组标签处于右上空白，明显远离低处的虚线方点。浇水平衡组标签也无任何线型标志。采用实线圆点和虚线方点各自对应的图例可明确区分。",
+      "reader": "visual"
+    },
+    {
+      "number": 17,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "①、②与④需写具体部位、对照名称和运输方向，三个横线在 A4 上均约 15 mm。⑦要求结合 5 min 数据说明比较，仅约 85 mm。可加长短语横线并给理由一整行以上。",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第（4）问的起句在第 5 页底部，机制提供的证据及横线⑦独占第 6 页第一行。应使该小问完整留在一个页面。",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "⑥需写新增对照的处理条件，横线约 15 mm。⑤需要解释受体和肾功能，⑦需要说明新增对照支持的证据，现各仅约 85–93 mm。可给条件短语更宽空间，并为两处机制解释给足整行。",
+      "reader": "visual"
+    },
+    {
+      "number": 19,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "⑥同时要求具体观测对象与判定作用，横线约 85 mm，按 4–5 mm 手写字宽只能放约 17–21 字。使用整行或续行以容纳两方面文字。",
+      "reader": "visual"
+    },
+    {
+      "number": 20,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "两列标题 甲：双杂合为雌蝇 和 乙：双杂合为雄蝇 的相邻端间距约 1 mm，加上无竖分隔，使读者易连为一个标题。可分别缩短标题或给每列两行。",
+      "reader": "visual"
+    },
+    {
+      "number": 20,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "⑥要求用实验结果写可辨识的直接证据，答线约 46 mm，只放约 9–11 个手写汉字，列出两个表型名称与计数空间不足。",
+      "reader": "visual"
+    },
+    {
+      "number": 21,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "⑦同时要求写一种测量或对照以及用途，只有约 85 mm 单行。该页余量足以安排一整行或两行题内横线。",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 43,
+  "rewrite": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "locked": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cycle_round": 1,
+  "paper_version": "96581225c70a0e4728ed08c8448b707bcdb6fc308523f695257620b5bd5642ee",
+  "prior_sha256": null,
+  "inputs_sha256": "c4300229364b70357da2fff09659171e98d93c7bd2ca0411b080f3c26b2d57f3"
+}

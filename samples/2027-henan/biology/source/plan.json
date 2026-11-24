@@ -1,0 +1,102 @@
+{
+  "workflow": "science-workflow-v1",
+  "subject": "biology",
+  "region": "河南",
+  "year": 2027,
+  "mode": "standard",
+  "mapping": {
+    "subject": "biology",
+    "year": 2027,
+    "paper_id": "2027-cn-ha-biology-selective",
+    "series_id": "cn-ha-biology-selective",
+    "curriculum_id": "biology-2017-2020",
+    "region": "河南",
+    "exam_system_id": "new-3+1+2",
+    "role": "reselection",
+    "authoring_body": "河南省统一命题",
+    "status": "system_announced",
+    "points": null,
+    "minutes": null,
+    "evidence": [
+      "hn-2027",
+      "hn-reform"
+    ],
+    "structure": null
+  },
+  "curriculum_topics": [
+    "细胞结构与功能",
+    "细胞代谢",
+    "细胞分裂",
+    "遗传与变异",
+    "生物进化",
+    "稳态与调节",
+    "生态系统",
+    "生物技术",
+    "实验设计与结果分析"
+  ],
+  "requested_topics": [],
+  "reference_candidates": [
+    {
+      "id": "2026-cn-ha-biology-selective:q002",
+      "topic": "生物技术与工程·异源细胞融合鉴别",
+      "source_url": "https://zy.21cnjy.com/25959270",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "11dad3cdc4533506e7dfa9f6f75c384f8c926b0747f73a4a9097ca72a9d5f523",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    },
+    {
+      "id": "2026-cn-ha-biology-selective:q007",
+      "topic": "遗传与进化·自然选择和基因频率",
+      "source_url": "https://zy.21cnjy.com/25959270",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "b3f3348ee443f20e8ec3b9330808f9f71eb50d6c858926c33a3f4e6250e0010c",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    }
+  ],
+  "structure": {
+    "sections": [
+      {
+        "kind": "single_choice",
+        "count": 16,
+        "points": 48
+      },
+      {
+        "kind": "constructed_response",
+        "count": 5,
+        "points": 52
+      }
+    ],
+    "source_urls": [
+      "https://zy.21cnjy.com/25959270"
+    ],
+    "status": "observed_third_party_paper",
+    "source_details": [
+      {
+        "kind": "single_choice",
+        "questions": 16,
+        "points": 48,
+        "each": 3
+      },
+      {
+        "kind": "constructed_response",
+        "questions": 5,
+        "points": 52
+      }
+    ]
+  },
+  "structure_minutes": 75,
+  "structure_year": 2026,
+  "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认",
+  "exam_policy": {
+    "schema_version": 1,
+    "subject": "biology",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-ha-biology-selective",
+    "rules": {}
+  }
+}

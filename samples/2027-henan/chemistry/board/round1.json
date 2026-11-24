@@ -1,0 +1,227 @@
+{
+  "state": {
+    "subject": "chemistry",
+    "version": "378d3e064883596ffdb605f4f9a378df570087c73488de520ea5fc7cb5a96e2c",
+    "pdf_sha256": "4301ca5a67644d12dba4a565b5ebac5187fae7f73645891c6769b95c1639395b",
+    "pages": 6,
+    "item_versions": {
+      "1": "8b64063bb79e1ded23aaa53863ce0547ae79219e266e3fd1789f8901cdf4624f",
+      "2": "e772018f2d619ca1d63d9103527eae9f9fc5db2a835b8f194baf9edbee72ae57",
+      "3": "c33b8a632577a32bf2dfde3eafea2d6dcbebe644cb041dd417e7fd977cbba6ce",
+      "4": "c8a22bccba3aa9f533d198f577542d05935f30370979bf4ecad6d757b3a89e61",
+      "5": "f3ac876ba7c607e40dd7dd917829319ef926fd2c47cced2a4416aa2c3de8383b",
+      "6": "4339dd7b4788ea48b2914c7e9176d8d51afdbb869f35c26576a6a6cbe7bef3a8",
+      "7": "531acd536b9db4c3a08183a10599852fca2177ad45e95a3f3d3bfc1cd12cd334",
+      "8": "2cdd7192ec97d3b51806960a80d99347df42754b2c316c6af999691efa9c5fec",
+      "9": "634fc88d779c821e0c5a5b5c90313808f147f26ffcb131d304936c5faec96d47",
+      "10": "2952794acf2678aa4199682e3a8968a93e8671140b930eae50a6cf00637eed33",
+      "11": "11263b8609b1d4fe56ede4d237843c7869b2e08114363e0fdf1cf93977fedf00",
+      "12": "95e5454878f57e8509931cfdd9e2a75a5d97877568d3752718c59c2f0c95f8c7",
+      "13": "ca8fd0da5aac1ac3a2bdedac37e3031f2ab294c2d0cf2a386e2e808b9ece01f0",
+      "14": "260654f01527f2b5dd86dcd3384f1d94079e99daea52be62ffcc66530469574b",
+      "15": "a4ff69322217aae031af87aea092ee6df38aa8e532ea3027ec3213f5662095ef",
+      "16": "83b908df93d0b895d14f33d29c6159b509fbaca63e941e52e0420f53fa8fcf57",
+      "17": "5cfc1a6723522bf5f1cc5876e1f6c86a869bb8afac23f1c8880dafcb3a667143",
+      "18": "0e4361359d59e65dc2d74b992dac1a45b204215e7e2f7018b508aa56203ea46b"
+    },
+    "ids": [
+      "orig:chemistry:hn27-folio:q01",
+      "orig:chemistry:hn27-folio:q02",
+      "orig:chemistry:hn27-folio:q03",
+      "orig:chemistry:hn27-folio:q04",
+      "orig:chemistry:hn27-folio:q05",
+      "orig:chemistry:hn27-folio:q06",
+      "orig:chemistry:hn27-folio:q07",
+      "orig:chemistry:hn27-folio:q08",
+      "orig:chemistry:hn27-folio:q09",
+      "orig:chemistry:hn27-folio:q10",
+      "orig:chemistry:hn27-folio:q11",
+      "orig:chemistry:hn27-folio:q12",
+      "orig:chemistry:hn27-folio:q13",
+      "orig:chemistry:hn27-folio:q14",
+      "orig:chemistry:hn27-folio:q15",
+      "orig:chemistry:hn27-folio:q16",
+      "orig:chemistry:hn27-folio:q17",
+      "orig:chemistry:hn27-folio:q18"
+    ],
+    "choice_keys": {
+      "1": "D",
+      "2": "B",
+      "3": "A",
+      "4": "C",
+      "5": "D",
+      "6": "A",
+      "7": "C",
+      "8": "B",
+      "9": "C",
+      "10": "D",
+      "11": "A",
+      "12": "B",
+      "13": "C",
+      "14": "A"
+    },
+    "rules": [
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "chemistry.competition",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "核查实际 pH 下先后或并行的酸碱反应",
+        "counterexample": "强碱中假定过量碳酸氢根仍保留"
+      },
+      {
+        "id": "chemistry.amphoteric",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "核查除杂真实可行区间",
+        "counterexample": "用忽略两性溶解凑沉淀范围"
+      },
+      {
+        "id": "chemistry.coverage",
+        "subject": "chemistry",
+        "severity": "major",
+        "check": "查 STSE、基础实验及物质结构",
+        "counterexample": "实验只算滴定浓度而无装置或操作"
+      },
+      {
+        "id": "chemistry.sequence",
+        "subject": "chemistry",
+        "severity": "major",
+        "check": "写明操作顺序、待判断的实测对象",
+        "counterexample": "误差题只问结果会怎样"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      },
+      {
+        "id": "chemistry.structure_depth",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "查前五题STSE和基础操作、选必2的多角度覆盖、非选择题空位数",
+        "counterexample": "全卷选必2只考一次常规晶胞，非选择题每题两个作答空"
+      }
+    ],
+    "preflight": {
+      "policy_sha256": "00893ff6a98959d78fe5ba925420949a16c6e657bbb17597045a0160356bfc7f",
+      "issues": [
+        {
+          "number": 0,
+          "rule": "coverage",
+          "evidence": "未在题干或设问中检出：综合实验"
+        },
+        {
+          "number": 0,
+          "rule": "chemistry_structure",
+          "evidence": "选必2须有晶胞以外的原子或成键知识"
+        },
+        {
+          "number": 0,
+          "rule": "chemistry_front",
+          "evidence": "前五题缺STSE设问"
+        },
+        {
+          "number": 0,
+          "rule": "chemistry_front",
+          "evidence": "前五题缺基础实验操作设问"
+        }
+      ],
+      "warnings": [],
+      "coverage": {
+        "STSE前段": [
+          4
+        ],
+        "实验装置辨析": [
+          3
+        ],
+        "综合实验": [],
+        "物质结构": [
+          9
+        ]
+      },
+      "choice_figures": [
+        3,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "nonchoice_figures": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wrong_options": 42,
+      "absolute_wrong_options": 0,
+      "abstract_mentions": 0,
+      "absolute_wrong_fraction": 0.0,
+      "abstract_per_question": 0.0,
+      "passed": false,
+      "corridor": {
+        "structure": {
+          "晶体": [
+            9
+          ],
+          "原子": [],
+          "成键": []
+        },
+        "first_five": {
+          "STSE": [],
+          "基础实验操作": []
+        },
+        "nonchoice_blanks": {
+          "15": 7,
+          "16": 8,
+          "17": 9,
+          "18": 7
+        }
+      },
+      "exam_policy_sha256": "423f4671d812e285ab6a71322685a10ba7b0d993e6526812d32d3cb8fb8dc068"
+    },
+    "reference_sha256": "bc90750bef8bd46267dda024815d8dac809b2f7d4d8d1b94a95aee157fcc1729",
+    "protocol": "three-readers-v2",
+    "repair_slots": [
+      16,
+      5,
+      1,
+      3
+    ]
+  },
+  "reports": []
+}

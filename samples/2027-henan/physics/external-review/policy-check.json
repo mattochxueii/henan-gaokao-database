@@ -1,0 +1,39 @@
+{
+  "policy": {
+    "schema_version": 1,
+    "subject": "physics",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-ha-physics-selective",
+    "rules": {
+      "multiple_choice": {
+        "id": "henan-selective-physics-multiple-choice",
+        "subject": "physics",
+        "kind": "multiple_choice",
+        "region": "河南",
+        "series": [
+          "cn-ha-physics-selective"
+        ],
+        "from_year": 2025,
+        "parameters": {
+          "full_credit": 6,
+          "partial_credit": 3,
+          "wrong_credit": 0,
+          "instruction": "全部选对得满分，选对但不全得3分，有选错的得0分。"
+        },
+        "sources": [
+          {
+            "title": "2025年河南物理选择性考试原卷多项选择题栏目",
+            "url": "https://www.jhgk.cn/upload/file/20250612/1749723303810089980.pdf",
+            "evidence": "paper_facsimile"
+          }
+        ]
+      }
+    }
+  },
+  "year_source": "bound",
+  "student_instructions": [
+    "全部选对得满分，选对但不全得3分，有选错的得0分。"
+  ],
+  "invigilator_instructions": {}
+}

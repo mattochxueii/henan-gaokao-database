@@ -1,0 +1,82 @@
+{
+  "questions": 21,
+  "points": 100,
+  "minutes": 75,
+  "layout": "practice",
+  "paper_pages": 7,
+  "solutions_pages": 2,
+  "word_inline_shapes": {
+    "student": 40,
+    "answers": 12
+  },
+  "figures": {
+    "choice": [
+      4,
+      5,
+      8,
+      9,
+      11,
+      15
+    ],
+    "nonchoice": [
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "figure_collisions": 0,
+  "blanks": {
+    "17": 9,
+    "18": 7,
+    "19": 6,
+    "20": 7,
+    "21": 7
+  },
+  "qa_issues": 0,
+  "qa_warnings": 0,
+  "corridor": {},
+  "rounds": [
+    {
+      "round": 1,
+      "final_score": 0,
+      "fatal_count": 1,
+      "status": "returned",
+      "rewrite": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "pdf_sha256": "977e0c808876d20c9bafd40f1b35ee3e97ecdd0bd6cec7ab3268f0e2cf626abd"
+    },
+    {
+      "round": 2,
+      "final_score": 100,
+      "fatal_count": 0,
+      "status": "LOCAL_QA_PASSED",
+      "rewrite": [],
+      "pdf_sha256": "01d0fc5ad897b6622352008ca5267b4efa017b0dd0b2b172cf57ad28b303925d"
+    }
+  ],
+  "final_board_status": "LOCAL_QA_PASSED",
+  "final_board_score": 100,
+  "independently_solved": 21,
+  "program_operator_count": 0,
+  "answer_areas": [],
+  "artifacts": {
+    "paper.pdf": "01d0fc5ad897b6622352008ca5267b4efa017b0dd0b2b172cf57ad28b303925d",
+    "solutions.pdf": "84c9525b695930d4fcce41ebddbcf4769d50d966335f0e77123a14bc06483689",
+    "paper.docx": "57c1f3ac690e2536da1de51026c9d75112690f6b561a654c1f663e54d7cbde07",
+    "solutions.docx": "8956d2c0fd863e3fceecbd0ab383945f0ea9290c21765b67260e1b1f5a9269fd"
+  }
+}

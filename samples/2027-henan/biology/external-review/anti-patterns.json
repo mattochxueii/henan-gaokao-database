@@ -1,0 +1,57 @@
+{
+  "entries": [
+    {
+      "id": "all.figure-condition",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "关键数值和必要部件须在图文中可定位且一致",
+      "counterexample": "间距改变为 2d 只印在图上"
+    },
+    {
+      "id": "biology.endocrine",
+      "subject": "biology",
+      "severity": "fatal",
+      "check": "区分交感神经—髓质和垂体—皮质调节",
+      "counterexample": "写成交感神经直接指令皮质释放糖皮质激素"
+    },
+    {
+      "id": "biology.abstract",
+      "subject": "biology",
+      "severity": "major",
+      "check": "统计无必要的匿名对象",
+      "counterexample": "满篇某物质、激素 C，难以区分对象"
+    },
+    {
+      "id": "all.absolute",
+      "subject": "all",
+      "severity": "major",
+      "check": "集中出现绝对词的错项应查能否不读题即排除",
+      "counterexample": "在弱对照中声称所有浓度均如此"
+    },
+    {
+      "id": "all.graphic",
+      "subject": "all",
+      "severity": "major",
+      "check": "检查文本、图例和刻度的渲染像素",
+      "counterexample": "柱顶 76 与图例重叠"
+    },
+    {
+      "id": "all.solution",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "独立检查唯一解、单位、边界与评分",
+      "counterexample": "漏掉可行的第二种解，或选择题多解"
+    },
+    {
+      "id": "exam.policy",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+      "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+    }
+  ],
+  "additional_rules": [
+    "all.graphic",
+    "exam.policy"
+  ]
+}

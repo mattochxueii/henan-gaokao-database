@@ -1,0 +1,110 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 1,
+  "subject": "chemistry",
+  "ids": [
+    "orig:chemistry:hn27-folio:q01",
+    "orig:chemistry:hn27-folio:q02",
+    "orig:chemistry:hn27-folio:q03",
+    "orig:chemistry:hn27-folio:q04",
+    "orig:chemistry:hn27-folio:q05",
+    "orig:chemistry:hn27-folio:q06",
+    "orig:chemistry:hn27-folio:q07",
+    "orig:chemistry:hn27-folio:q08",
+    "orig:chemistry:hn27-folio:q09",
+    "orig:chemistry:hn27-folio:q10",
+    "orig:chemistry:hn27-folio:q11",
+    "orig:chemistry:hn27-folio:q12",
+    "orig:chemistry:hn27-folio:q13",
+    "orig:chemistry:hn27-folio:q14",
+    "orig:chemistry:hn27-folio:q15",
+    "orig:chemistry:hn27-folio:q16",
+    "orig:chemistry:hn27-folio:q17",
+    "orig:chemistry:hn27-folio:q18"
+  ],
+  "pdf_sha256": "4301ca5a67644d12dba4a565b5ebac5187fae7f73645891c6769b95c1639395b",
+  "item_versions": {
+    "1": "8b64063bb79e1ded23aaa53863ce0547ae79219e266e3fd1789f8901cdf4624f",
+    "2": "e772018f2d619ca1d63d9103527eae9f9fc5db2a835b8f194baf9edbee72ae57",
+    "3": "c33b8a632577a32bf2dfde3eafea2d6dcbebe644cb041dd417e7fd977cbba6ce",
+    "4": "c8a22bccba3aa9f533d198f577542d05935f30370979bf4ecad6d757b3a89e61",
+    "5": "f3ac876ba7c607e40dd7dd917829319ef926fd2c47cced2a4416aa2c3de8383b",
+    "6": "4339dd7b4788ea48b2914c7e9176d8d51afdbb869f35c26576a6a6cbe7bef3a8",
+    "7": "531acd536b9db4c3a08183a10599852fca2177ad45e95a3f3d3bfc1cd12cd334",
+    "8": "2cdd7192ec97d3b51806960a80d99347df42754b2c316c6af999691efa9c5fec",
+    "9": "634fc88d779c821e0c5a5b5c90313808f147f26ffcb131d304936c5faec96d47",
+    "10": "2952794acf2678aa4199682e3a8968a93e8671140b930eae50a6cf00637eed33",
+    "11": "11263b8609b1d4fe56ede4d237843c7869b2e08114363e0fdf1cf93977fedf00",
+    "12": "95e5454878f57e8509931cfdd9e2a75a5d97877568d3752718c59c2f0c95f8c7",
+    "13": "ca8fd0da5aac1ac3a2bdedac37e3031f2ab294c2d0cf2a386e2e808b9ece01f0",
+    "14": "260654f01527f2b5dd86dcd3384f1d94079e99daea52be62ffcc66530469574b",
+    "15": "a4ff69322217aae031af87aea092ee6df38aa8e532ea3027ec3213f5662095ef",
+    "16": "83b908df93d0b895d14f33d29c6159b509fbaca63e941e52e0420f53fa8fcf57",
+    "17": "5cfc1a6723522bf5f1cc5876e1f6c86a869bb8afac23f1c8880dafcb3a667143",
+    "18": "0e4361359d59e65dc2d74b992dac1a45b204215e7e2f7018b508aa56203ea46b"
+  },
+  "fatal_count": 3,
+  "final_score": 0,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 16,
+      "category": "coverage",
+      "rule": "coverage",
+      "points": 6,
+      "evidence": "未在题干或设问中检出：综合实验",
+      "reader": "machine"
+    },
+    {
+      "number": 5,
+      "category": "fatal",
+      "rule": "chemistry_structure",
+      "points": 0,
+      "evidence": "选必2须有晶胞以外的原子或成键知识",
+      "reader": "machine"
+    },
+    {
+      "number": 1,
+      "category": "fatal",
+      "rule": "chemistry_front",
+      "points": 0,
+      "evidence": "前五题缺STSE设问",
+      "reader": "machine"
+    },
+    {
+      "number": 3,
+      "category": "fatal",
+      "rule": "chemistry_front",
+      "points": 0,
+      "evidence": "前五题缺基础实验操作设问",
+      "reader": "machine"
+    }
+  ],
+  "charged_points": 6,
+  "rewrite": [
+    1,
+    3,
+    5,
+    16
+  ],
+  "locked": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18
+  ],
+  "cycle_round": 1,
+  "paper_version": "378d3e064883596ffdb605f4f9a378df570087c73488de520ea5fc7cb5a96e2c",
+  "prior_sha256": null,
+  "inputs_sha256": "5f5285537ea10d5be786b6ded5068ad39c0e9e85e48aab784f42ceca43416921"
+}

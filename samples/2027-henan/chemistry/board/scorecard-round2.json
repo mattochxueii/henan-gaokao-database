@@ -1,0 +1,318 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 2,
+  "subject": "chemistry",
+  "ids": [
+    "orig:chemistry:hn27-folio:q01",
+    "orig:chemistry:hn27-folio:q02",
+    "orig:chemistry:hn27-folio:q03",
+    "orig:chemistry:hn27-folio:q04",
+    "orig:chemistry:hn27-folio:q05",
+    "orig:chemistry:hn27-folio:q06",
+    "orig:chemistry:hn27-folio:q07",
+    "orig:chemistry:hn27-folio:q08",
+    "orig:chemistry:hn27-folio:q09",
+    "orig:chemistry:hn27-folio:q10",
+    "orig:chemistry:hn27-folio:q11",
+    "orig:chemistry:hn27-folio:q12",
+    "orig:chemistry:hn27-folio:q13",
+    "orig:chemistry:hn27-folio:q14",
+    "orig:chemistry:hn27-folio:q15",
+    "orig:chemistry:hn27-folio:q16",
+    "orig:chemistry:hn27-folio:q17",
+    "orig:chemistry:hn27-folio:q18"
+  ],
+  "pdf_sha256": "47d499f9cb49a41784016e3b2a9f71ecba815a925a632e5916547a7af8ced14f",
+  "item_versions": {
+    "1": "f317ddd2256c17c85891b697e188ddd39325917a057b32605bbbc5bc00bff0e3",
+    "2": "e772018f2d619ca1d63d9103527eae9f9fc5db2a835b8f194baf9edbee72ae57",
+    "3": "7ff40bae3db4917ddfe78b1808623ddc15e888ec566f463aec831217f643cd63",
+    "4": "c8a22bccba3aa9f533d198f577542d05935f30370979bf4ecad6d757b3a89e61",
+    "5": "10f381cde6fbbf6dfdd3ccda405409989d5bb0c72fdbf7e09fc8c68868125bf8",
+    "6": "4339dd7b4788ea48b2914c7e9176d8d51afdbb869f35c26576a6a6cbe7bef3a8",
+    "7": "531acd536b9db4c3a08183a10599852fca2177ad45e95a3f3d3bfc1cd12cd334",
+    "8": "2cdd7192ec97d3b51806960a80d99347df42754b2c316c6af999691efa9c5fec",
+    "9": "634fc88d779c821e0c5a5b5c90313808f147f26ffcb131d304936c5faec96d47",
+    "10": "2952794acf2678aa4199682e3a8968a93e8671140b930eae50a6cf00637eed33",
+    "11": "11263b8609b1d4fe56ede4d237843c7869b2e08114363e0fdf1cf93977fedf00",
+    "12": "95e5454878f57e8509931cfdd9e2a75a5d97877568d3752718c59c2f0c95f8c7",
+    "13": "ca8fd0da5aac1ac3a2bdedac37e3031f2ab294c2d0cf2a386e2e808b9ece01f0",
+    "14": "260654f01527f2b5dd86dcd3384f1d94079e99daea52be62ffcc66530469574b",
+    "15": "a4ff69322217aae031af87aea092ee6df38aa8e532ea3027ec3213f5662095ef",
+    "16": "1eca83802eba2b28f430837a91e8f8ae116df16dd75a0ae484a340b2a83780a1",
+    "17": "5cfc1a6723522bf5f1cc5876e1f6c86a869bb8afac23f1c8880dafcb3a667143",
+    "18": "0e4361359d59e65dc2d74b992dac1a45b204215e7e2f7018b508aa56203ea46b"
+  },
+  "fatal_count": 5,
+  "final_score": 0,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 9,
+      "category": "weak",
+      "rule": "all.figure-condition",
+      "points": 3,
+      "evidence": "题干仅说两幅图各画落在相应平面上的粒子，上、下底面相同，没有说晶胞的全部粒子只占 z=0、1/2、1 三个平面。按真实金红石结构和卷面可得 C，但从供给的截面定义本身无法排除未画出的高度处还有粒子。",
+      "reader": "solver"
+    },
+    {
+      "number": 10,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 3 页能量图的实线从「反应物 0」穿过数字 0，并在右侧贴到「产物乙」开头。能量差和支路仍可判读。",
+      "reader": "solver"
+    },
+    {
+      "number": 11,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "第 3 页左侧标为己内酯的单体结构图中，C=O 的环内碳与环氧之间有一个未标为杂原子的环顶点，因而羰基碳与环氧没有直接成键。实际己内酯是环状酯，必须含相邻 C(=O)−O。现有图画成环内独立醚键与酮羰基，与题干和给出的聚酯链节直接矛盾。按正确链节仍可选 A，但被要求结合的单体图确有化学结构错误。",
+      "reader": "solver"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 3 页的 CH₃COO⁻ 标签跨越阴离子膜及两个工作室边框，H⁺ 的 H 和 Na⁺、OH⁻ 的上标与竖向工作室边框重叠。箭头、题干和膜名称仍能确定离子。",
+      "reader": "solver"
+    },
+    {
+      "number": 13,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 4 页初速率纵轴的单位尾端在图形边界被截断，顶部只能清楚读到 L·mi 附近，末尾字母与括号不完整。题目实际比较速率之比，数值可读。",
+      "reader": "solver"
+    },
+    {
+      "number": 16,
+      "category": "weak",
+      "rule": "chemistry.sequence",
+      "points": 3,
+      "evidence": "第 16 题②仅说「准确量取加入盐酸体积」，同题有加到反应瓶的足量盐酸和滴定用标准盐酸，所问操作未直接限定。结合后文的滴定用量，酸式滴定管是最自然的预期。",
+      "reader": "solver"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 5 页装置图的「无二氧化碳氮气」长于矩形标签，矩形边框压字，连接气路的水平线穿过「气」。题干同时说明气源。",
+      "reader": "solver"
+    },
+    {
+      "number": 17,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 5 页乙烯和水蒸气的分子式直接压着各自平台线，C₂H₄ 及 H₂O 的下标与线条相接。可读且平台归属仍明确。",
+      "reader": "solver"
+    },
+    {
+      "number": 3,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第1页标注「可控水浴」的图元仅是紧贴烧瓶底部的扁平矩形，未画盛水容器、液面或浸入，图形表现成直接置于加热台。正确操作选项A与D的区分仍可据回流规则；应补画水浴容器和液面以示间接加热。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 8,
+      "category": "depth",
+      "rule": "chemistry.structure_depth",
+      "points": 4,
+      "evidence": "给定两个已画清的平面配合物，干扰C与D分别读相对位置和直接数四键即可否定。2025同位需按连续实验反推配体结合能力和相态，2026同位需由轨道条件反演五种元素才比较性质，此处推理层次明显偏低。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 9,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "题干先限定两图只画落在z=0或1/2的粒子，又说上底面与下底面相同，但屡次限定的是图中数据，并未说三个高度包含晶胞全部粒子。仅凭给定截面不能排除其他高度上的未绘粒子，选C的均摊默认了这一必要条件。补写「晶胞中全部粒子均位于z=0、1/2或1平面」。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 11,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "第3页己内酯左图的羰基碳沿环左上方先连一个未标记的骨架碳，再到环内O；羰基碳两侧实际都连骨架碳，得到环状酮和醚，未画出内酯的C(=O)−O键。与题干名称、右侧酯链节和所问水解化学相冲突。应让环O直接与羰基碳成键并保留五个亚甲基。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 13,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第4页第13题y轴的纵排速率单位在图像上边界被切掉，末尾的min及括号不全。速率与浓度刻度仍看得清、比值可算；扩大绘图区顶部的纵排标签留白。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 13,
+      "category": "depth",
+      "rule": "chemistry.structure_depth",
+      "points": 4,
+      "evidence": "选C需读取两对现成速率并求4/2、6/4。与2026同位从浓度极大值反演生成、消耗速率关系及2025同位分析多步骤催化机理相比，本题没有新的实验推理步骤。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 16,
+      "category": "weak",
+      "rule": "chemistry.sequence",
+      "points": 3,
+      "evidence": "第②空写的是「准确量取加入盐酸体积」，图中反应瓶有足量盐酸，正式滴定又以另一盐酸为标准溶液，未指定所测体积。建议明写「滴定时用于准确测量盐酸标准溶液用量的玻璃仪器」。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第5页气源框内「无二氧化碳氮气」宽于框，右边输入线穿过末字，左边文本伸出框。加宽气源框或把文字移到管线之上；气流方向和后两个气瓶的液面关系仍可读。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 17,
+      "category": "depth",
+      "rule": "chemistry.structure_depth",
+      "points": 4,
+      "evidence": "此题的耦合反应和瞬时反应商能承接第17题计算，但2025、2026同位均以原子、VSEPR或配位、晶胞再连到反应原理。学生卷选必2当前由第5、8、9题提供三类证据，第17题仅作热化学和气相平衡，不具同位题的结构跨度。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 3,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "烧瓶下标示为可控水浴的部件在印图上只有一块水平浅色扁板，烧瓶不在槽内，没有液面没过瓶底的示意，视觉上像电热板。用围住瓶底的浴槽壁和液面表达水浴装置。",
+      "reader": "visual"
+    },
+    {
+      "number": 9,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "两幅 z 截面为 a×a 方向，在 150 ppi 下外框约 161×109 像素，呈明显长方形。等轴方框可与题干的两个 a 边长一致。",
+      "reader": "visual"
+    },
+    {
+      "number": 10,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "能量图首段实线贯穿反应物 0 标签的右部。200 ppi 局部可见实线靠近物字下方并越过 0。应将标签移离上升曲线，保持与起点的视觉联系。",
+      "reader": "visual"
+    },
+    {
+      "number": 11,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "左侧环中羰基线的顶点连着两个碳顶点。通往环内 O 的连线先经过左上未标注折点，该点在线式中是碳。己内酯须在环内画出 O 与羰基碳的直接连接，现图不具备酯键。",
+      "reader": "visual"
+    },
+    {
+      "number": 12,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "碱室进口离子 OH 的上标负横线与碱室右边框叠成一个加号，印图读作 OH⁺，与题干的 OH⁻ 冲突。把整个离子移离边框即可显出正确电荷。",
+      "reader": "visual"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "H⁺ 的 H 压在酸室左边框，CH₃COO⁻ 同时跨越酸室右边框、阴离子膜及原料室左边框，Na⁺ 的上标又靠在原料室右边框。将离子文字缩短或偏移到各自的空白区域。",
+      "reader": "visual"
+    },
+    {
+      "number": 13,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "纵轴的初速率单位在图形上边被裁剪，200 ppi 局部只呈现 v/(mmol/(L·mi… 的起始部分。缩短轴标题写法或给它增加图形上边距。",
+      "reader": "visual"
+    },
+    {
+      "number": 15,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第（4）小问题文留在第 4 页最下方，下一页第一行只有 可得晶体⑦及单位和保留位数说明。让该小问题文与⑦跟在同一页。",
+      "reader": "visual"
+    },
+    {
+      "number": 15,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "①和⑤均问手写离子方程式，两处横线各约 90 像素，即 A4 打印约 15 mm。需给多项反应物、生成物、箭头和离子电荷整行或更宽的题内空间。",
+      "reader": "visual"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "无二氧化碳氮气标签超出矩形两端，右侧气字被输入管横穿。应扩大框或把整条标签移到管路上方。",
+      "reader": "visual"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "④要求写完整的离子反应，只有约 15 mm 横线。①需要写继续通气的作用，同宽也只容约三四个常规手写汉字。两空需使用更长的题内横线。",
+      "reader": "visual"
+    },
+    {
+      "number": 17,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "H₂O 标签的 2 下标紧贴水蒸气平台的虚线，C₂H₄ 下标也与实线非常近。将两个分子标签略微上移可给下标留出空隙。",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "①、②要求写芳香族结构简式，两横线各约 15 mm。⑦明确要求三步合成及中间体、每步试剂，只有约 84 mm 单行。第 6 页尚有大块留白，可加宽前两空并为⑦提供整行或多行题内作答空间。",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 56,
+  "rewrite": [
+    3,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18
+  ],
+  "locked": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    14
+  ],
+  "cycle_round": 2,
+  "paper_version": "34f6c4ddebb31e372aa9351cd782e0ca5b23eed82b81f76e90f74dbc04325b57",
+  "prior_sha256": "ce47b364dcb7dc6526acb3423ecfe1a8642dbef634ef54aab47d0b4fa1c4d393",
+  "inputs_sha256": "8d379d3c738233a0433bb2c28f3bc241c02b5099ce04980a72ba564c5f1eb5ec"
+}
