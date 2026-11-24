@@ -7,6 +7,10 @@ description: 六科真题检索与拼卷、同构改编、目标卷系整卷模�
 
 统一入口为项目根目录的 `python scripts/gaokao_platform.py`。安装后的入口为同目录结构下的 `scripts/run.py --database <项目目录>`。以下命令都接在统一入口后。
 
+## 单卷打分与批量防重复
+
+每份新标准卷在发布前执行硬安检、三个独立角色盲审与 100 分扣分卡。通过统一入口运行 `exam-qa` 和 `board-cycle`。批量使用 `batch-plan`、`batch-check`、`batch-run`，模型方向及实验题材提前分配。局部修订锁定零扣分题，最多三轮，零否决且达到 85 分后再完成学科签字。角色输入、文件格式和实际样本见[单卷与批量发布](references/batch.md)。
+
 ## 真题检索与拼卷
 
 - `research physics --region 河南 --year 2026 --topic 电场` 读取题面、原题位置和参考答案。主三科与物理、化学、生物学使用相同接口。演练卷加 `--adaptation`，要查缺图、缺答或隔离状态再加 `--include-incomplete`。隔离题不参与默认选题。

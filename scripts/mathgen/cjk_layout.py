@@ -13,13 +13,27 @@ CLOSE = "，。；：、？！）》〉】〕”’］％%）)]"
 LATIN_RUN = re.compile(r"[A-Za-z0-9./+\-_=·]+\Z")
 
 
+UNIT = r"(?:kg/m³|m/s²|km/s|m/s|rad/s|s²/m|kΩ|kPa|MHz|kW|cm|mm|ms|ns|μs|μF|μWb|mWb|eV|kg|Ω|Pa|W|N|K|V|A|T|s|m|g|L|F)(?![A-Za-z])"
+MEASUREMENT = re.compile(r"(?<![A-Za-z0-9.])([+-]?\d+(?:\.\d+)?)[ ]+("+UNIT+")")
+
+
+def measured_markup(text):
+    pieces=[]
+    last=0
+    for match in MEASUREMENT.finditer(text):
+        pieces.append(formatted_plain(text[last:match.start()]))
+        pieces.append("<nobr>"+formatted_plain(match[1])+"&nbsp;"+formatted_plain(match[2])+"</nobr>")
+        last=match.end()
+    return "".join(pieces)+formatted_plain(text[last:])
+
+
 def plain_markup(text):
     """Draw one continuous rule with base-font spaces, independent of underscore glyphs."""
     chunks = re.split(r"(_{3,})", text)
     return "".join(
         '<nobr><u width="0.65" offset="-1.8">' + "&nbsp;" * len(chunk)
         + '</u><font size="1">&nbsp;</font></nobr>'
-        if i % 2 else formatted_plain(chunk)
+        if i % 2 else measured_markup(chunk.lstrip(" ") if i and re.match(r" +(?:Ω|μ|cm|mm|m/s|kPa|[AVNJW])",chunk) else chunk)
         for i, chunk in enumerate(chunks)
     )
 

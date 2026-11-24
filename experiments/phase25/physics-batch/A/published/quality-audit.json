@@ -1,0 +1,941 @@
+{
+  "reviewer": "隔离教研、印刷评审；按原始逐题记录登记",
+  "protocol": "gaokao-editorial-audit-v1",
+  "reference_sha256": "8088bd36955297eb5111728cb315490caa7aab9e7b661eb2f5717d674668485a",
+  "paper_pdf_sha256": "a1938056b8eea0c9afd10c4ac2e19f65d8a5d3921cdaa92540b5546d72c2e46d",
+  "paper_version": "7c942bd70036a464df3dfa11efd1e89f02ee281b3069600d4a20b67d7d2235d3",
+  "items": [
+    {
+      "number": 1,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判B。能级差可相加，等价于光子频率可相加，适合开篇；给出的三个能量数值甚至不必代入。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判B。能级差可相加，等价于光子频率可相加，适合开篇；给出的三个能量数值甚至不必代入。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "左侧从上到下为5.0、2.0、0.0 eV，三条水平线间有一长两短的向下箭头。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "三行题干后接能级图。四个选项在图下两列排列，配对清楚。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "把直接跃迁能量拆为5→2和2→0两次能量差",
+          "以E=hν把能量相加转成频率相加"
+        ],
+        "linked_concepts": [
+          "定态能级",
+          "光子能量",
+          "波长与频率"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "2a5754cefca6ad9db45c0d7d5c6055d3c8844e4af648cf4851cb34c9f21dbadc",
+          "comparison": "2025从斜绳与水平运动区分力、速度和势能；2026须同时判断摆幅与周期。这里集中检查一条能量关系，略浅。"
+        },
+        "2026": {
+          "version_sha256": "2b2a0e90654a908cf3223c8fb723619836191554ab5615beb83879954c23cc06",
+          "comparison": "2025从斜绳与水平运动区分力、速度和势能；2026须同时判断摆幅与周期。这里集中检查一条能量关系，略浅。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "把能量可加直接移到与能量成反比的波长。",
+          "mechanism": "把能量可加直接移到与能量成反比的波长。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把能级之差误作两个波长之差，未把关系换为倒数。",
+          "mechanism": "把能级之差误作两个波长之差，未把关系换为倒数。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "将一次跃迁取能级差的规则重复套在两次已算出的频率上。",
+          "mechanism": "将一次跃迁取能级差的规则重复套在两次已算出的频率上。"
+        }
+      },
+      "remaining_editorial_findings": [],
+      "required_figure_information": "箭头展示两条路径，数值和跃迁路线均已在题干给足，图仅帮助识别。",
+      "figure_conditions": {
+        "observation": "左侧从上到下为5.0、2.0、0.0 eV，三条水平线间有一长两短的向下箭头。",
+        "records": [
+          {
+            "anchor": "2.0、5.0 eV",
+            "label": "左侧从上到下为5.0、2.0、0.0 eV，三条水平线间有一长两短的向下箭头。",
+            "meaning": "图有5、2、0 eV三条能级，给出5→0以及5→2→0的箭头。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判C。需区分由周期定出的平均密度与仍缺尺度的线性量，含量纲检验。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判C。需区分由周期定出的平均密度与仍缺尺度的线性量，含量纲检验。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。周期 T 与轨道半径4倍关系在题干。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "两列四个长选项均在页内。题干末行单独排“定”字，仍可接读。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "近表面轨道取r≈R，导出ρ≈3π/(GT²)",
+          "同一天体用开普勒定律得外轨周期8T",
+          "绝对尺度未给，M、R及速率和加速度分别随尺度而变"
+        ],
+        "linked_concepts": [
+          "引力提供向心力",
+          "开普勒第三定律",
+          "平均密度"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "2c6c3dc31a215b549eb66ba596527f9adde7e5c694f89158e9a6140e4330155b",
+          "comparison": "2025同位须作两界面折射几何，2026须结合力图的方向及零点判断电荷；本题有尺度识别，省去了图形转换。"
+        },
+        "2026": {
+          "version_sha256": "94c8539114aedbae1af5834291ab0703298b521849de262881443e98f32700a5",
+          "comparison": "2025同位须作两界面折射几何，2026须结合力图的方向及零点判断电荷；本题有尺度识别，省去了图形转换。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "将GM/R³已知误解为M或外轨线速度已知。",
+          "mechanism": "将GM/R³已知误解为M或外轨线速度已知。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "把相对轨道半径当作天体绝对半径，进而误求g。",
+          "mechanism": "把相对轨道半径当作天体绝对半径，进而误求g。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "误以为周期可确定两条轨道中有长度量纲的运动量。",
+          "mechanism": "误以为周期可确定两条轨道中有长度量纲的运动量。"
+        }
+      },
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 3,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判B。第一次由同样厚度的空气替换为液体反求折射率，第二次另外计入探头上移造成的空气往返光程。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判B。第一次由同样厚度的空气替换为液体反求折射率，第二次另外计入探头上移造成的空气往返光程。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "上下实线和中间虚线可辨；6.0 cm 在实线液面和虚线之间，竖直双程分画为向下、向上两支箭。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "第三行写探头再上移3.0 cm，图下四对数值均给出折射率与时间增量，时间单位印在对应数字后。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "一程增加液体Δh同时少走等长空气，故0.20 ns=2(n−1)Δh/c，解得n=1.50",
+          "探头再升0.030 m增加的单独回波延时为2×0.030/c=0.20 ns",
+          "与已测液面效应相加，对初态总共延迟0.40 ns"
+        ],
+        "linked_concepts": [
+          "介质中光速",
+          "往返测量",
+          "光程差",
+          "控制变量"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "23d96d9553a3343f2218b3943a1f7c31ef577d1c4af0cf80f8711fb0b6d518df",
+          "comparison": "2025同位比较行星轨道尺度，2026同位要由两折射界面的法线恢复光路。本题用两次观测中改变的光程分离两个效应，几何负担低于2026。"
+        },
+        "2026": {
+          "version_sha256": "81168b70b605880063699b1a92e8e6fc7a26ea24158c3229b983623a5329d277",
+          "comparison": "2025同位比较行星轨道尺度，2026同位要由两折射界面的法线恢复光路。本题用两次观测中改变的光程分离两个效应，几何负担低于2026。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "第一次分析在往返因子外又把时间折半，得1.25；第二个数可由已测时差直接相加。",
+          "mechanism": "第一次分析在往返因子外又把时间折半，得1.25；第二个数可由已测时差直接相加。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "两次均按单程计算，第一次得到2.00，第二次只增加3 cm/c，得到0.30 ns。",
+          "mechanism": "两次均按单程计算，第一次得到2.00，第二次只增加3 cm/c，得到0.30 ns。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "第一次正确计入往返，第二次只计探头上移的去程。",
+          "mechanism": "第一次正确计入往返，第二次只计探头上移的去程。"
+        }
+      },
+      "remaining_editorial_findings": [],
+      "required_figure_information": "图展示替换空气的液层和往返两束箭头；探头另向上平移3.0 cm由反事实设问给出。",
+      "figure_conditions": {
+        "observation": "上下实线和中间虚线可辨；6.0 cm 在实线液面和虚线之间，竖直双程分画为向下、向上两支箭。",
+        "records": [
+          {
+            "anchor": "6.0 cm",
+            "label": "上下实线和中间虚线可辨；6.0 cm 在实线液面和虚线之间，竖直双程分画为向下、向上两支箭。",
+            "meaning": "图示固定槽底与两液面6.0 cm的高差，光束垂直往返。第二种情况下的探头位移3.0 cm由题干给出。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判A。刚性容器先定量升温，开启后在定容定压下失去气体，冷却又回到定量过程。要明确哪一段可以用p/T为定值。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判A。刚性容器先定量升温，开启后在定容定压下失去气体，冷却又回到定量过程。要明确哪一段可以用p/T为定值。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "横轴T/K标300、360、450，纵轴p/kPa标90、108。三点由上升线段和水平线段连接。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "三行题干里第一行以初态压强90结尾，单位kPa单独移至第二行起首。四个选项的kPa与百分数均可读。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "开阀温度为300×108/90=360 K",
+          "开阀后容器内气体的量降为初始的360/450=0.80，排出20%",
+          "关阀后p终=108×300/450=72 kPa"
+        ],
+        "linked_concepts": [
+          "理想气体",
+          "定容变质量",
+          "阀门开闭"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "d30032d8f07166822c4e40ea973c5000200aa9bc94e8c5eeb7fbf694973a7914",
+          "comparison": "2025须从三角形顶点电势重建等势线，2026须从电压变化识别变压器匝数。此题由阀的开启与关闭选择状态方程的条件，有可比的模型切换。"
+        },
+        "2026": {
+          "version_sha256": "0ba3aaddde60810f748e40b7c4e9cd674a167fb3e3a15df84795cb04d6c6da1e",
+          "comparison": "2025须从三角形顶点电势重建等势线，2026须从电压变化识别变压器匝数。此题由阀的开启与关闭选择状态方程的条件，有可比的模型切换。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "用排出量除以剩余量，20/80=25%，分母错。",
+          "mechanism": "用排出量除以剩余量，20/80=25%，分母错。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把温度回到初值误当成压强也回初值，忽略开阀失气。",
+          "mechanism": "把温度回到初值误当成压强也回初值，忽略开阀失气。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "同时忽略开阀后物质的量改变，又以剩余量为分母计算排出比例。",
+          "mechanism": "同时忽略开阀后物质的量改变，又以剩余量为分母计算排出比例。"
+        }
+      },
+      "remaining_editorial_findings": [
+        {
+          "number": 4,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "points": 2,
+          "evidence": "第1页第4题第一行末是“90”，第二行以“kPa，压强达到……”起首。给90与kPa之间使用不可断行空格即可。",
+          "reader": "visual"
+        }
+      ],
+      "required_figure_information": "图给出开阀时的360 K，学生可直接读取该温度；其余端点与平台在题干也能定位。",
+      "figure_conditions": {
+        "observation": "横轴T/K标300、360、450，纵轴p/kPa标90、108。三点由上升线段和水平线段连接。",
+        "records": [
+          {
+            "anchor": "108 kPa",
+            "label": "横轴T/K标300、360、450，纵轴p/kPa标90、108。三点由上升线段和水平线段连接。",
+            "meaning": "p–T实线从(300 K,90 kPa)升到(360 K,108 kPa)，再水平至(450 K,108 kPa)。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判A。先用同速的半圆峰距测出两离子的质荷比之比，再在同电压加速的条件下重新计算峰距。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判A。先用同速的半圆峰距测出两离子的质荷比之比，再在同电压加速的条件下重新计算峰距。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "大小两个半圆共用左端，P 4 cm和Q 6 cm位于各半圆右端基线下方，入口向上箭头可见。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "文字分述同速及同电压两次条件。四个选项均为带cm的长度值，A、B中的根号完整。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "同速下峰距D∝m/q，(m/q)Q/(m/q)P=6/4",
+          "同电压加速下D∝√(m/q)，P仍为4 cm",
+          "Q的新峰距为4√(6/4)=2√6 cm"
+        ],
+        "linked_concepts": [
+          "磁偏转",
+          "质荷比",
+          "电场加速",
+          "实验控制条件"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "57da1f19fc72a1940f97d57fc17b556d5343d1f01b91305783f4f2eafb4dc9a5",
+          "comparison": "2025要从薄片进出磁场部分判涡流，2026需由照片比例消去天体尺度。本题也要从原峰图识别一个无法直接测出的比例，并转用于不同条件，符合中段单选。"
+        },
+        "2026": {
+          "version_sha256": "cfa441bdcca04a0c8ea6a64e20d3fe52ea3c37a92a13e43a2e48f8619c3ac09a",
+          "comparison": "2025要从薄片进出磁场部分判涡流，2026需由照片比例消去天体尺度。本题也要从原峰图识别一个无法直接测出的比例，并转用于不同条件，符合中段单选。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "3√2 cm等于原Q峰距除以√2，相当于把控制P峰时的速率换算错用为1/√2；由题给4.0和6.0无法自然得到这一步。",
+          "mechanism": "3√2 cm等于原Q峰距除以√2，相当于把控制P峰时的速率换算错用为1/√2；由题给4.0和6.0无法自然得到这一步。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "沿用等速测量的旧峰距，忽略同电压后两种离子速度不同。",
+          "mechanism": "沿用等速测量的旧峰距，忽略同电压后两种离子速度不同。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把一次正比的峰距比再乘一次，4×(6/4)²，混淆半径与质荷比间的新标度。",
+          "mechanism": "把一次正比的峰距比再乘一次，4×(6/4)²，混淆半径与质荷比间的新标度。"
+        }
+      },
+      "remaining_editorial_findings": [
+        {
+          "number": 5,
+          "category": "weak",
+          "rule": "physics.algebra",
+          "points": 3,
+          "evidence": "B项3√2 cm相当于把6.0 cm缩为1/√2，而已测质荷比给出的缩放是√(2/3)。C项体现误沿用等速模型、D项体现误用平方；B项的具体常见错误依据较弱。",
+          "reader": "pedagogy"
+        }
+      ],
+      "required_figure_information": "图表现两条半圆与位置对应，直接展示的是第一轮测量；新谱峰须由学生推断。",
+      "figure_conditions": {
+        "observation": "大小两个半圆共用左端，P 4 cm和Q 6 cm位于各半圆右端基线下方，入口向上箭头可见。",
+        "records": [
+          {
+            "anchor": "4.0 cm、6.0 cm",
+            "label": "大小两个半圆共用左端，P 4 cm和Q 6 cm位于各半圆右端基线下方，入口向上箭头可见。",
+            "meaning": "两轨迹在同一边界有共同入口，P、Q两峰距该入口分别为4、6 cm；图示距离是直径。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判C。要同时区分电荷量依赖磁通量变化量，发热还依赖变化时间。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判C。要同时区分电荷量依赖磁通量变化量，发热还依赖变化时间。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "横轴 t/ms 标0、20、30；纵轴 Flux/mWb 标0.0、0.3、0.6，峰顶在(20,0.6)，两段落点明确。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "题干中的两个时段与折线图相邻；四个选项均独立成行列。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "两段|ΔΦ|相同，第二段用时减半，故电流加倍",
+          "|I|Δt不变而I²RΔt加倍"
+        ],
+        "linked_concepts": [
+          "法拉第电磁感应定律",
+          "电荷量",
+          "焦耳热"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bc2ebff198119ce3cddc021bb53e4a78bde363339724c60c93551937a5b8b6dd",
+          "comparison": "2025要用相差悬殊的半衰期分离两种成分，2026要用相反磁场的圆弧拼接。本题区分面积和变化率，有物理转折，空间负担较低。"
+        },
+        "2026": {
+          "version_sha256": "0c1a19e0f773a2c286a0411d41615951aa8073415535ac17fc2787d733ee7904",
+          "comparison": "2025要用相差悬殊的半衰期分离两种成分，2026要用相反磁场的圆弧拼接。本题区分面积和变化率，有物理转折，空间负担较低。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "将电流加倍误当输运总电荷加倍。",
+          "mechanism": "将电流加倍误当输运总电荷加倍。"
+        },
+        "B": {
+          "plausible": true,
+          "misconception": "认为时间减半使电流也减半，颠倒变化率。",
+          "mechanism": "认为时间减半使电流也减半，颠倒变化率。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "认为等量电荷流过定值电阻产生相同热量。",
+          "mechanism": "认为等量电荷流过定值电阻产生相同热量。"
+        }
+      },
+      "remaining_editorial_findings": [],
+      "required_figure_information": "斜率变化在图上明显；两段斜率和端点均可由文字得到。与B7同为两段恒定感应电压的线圈。",
+      "figure_conditions": {
+        "observation": "横轴 t/ms 标0、20、30；纵轴 Flux/mWb 标0.0、0.3、0.6，峰顶在(20,0.6)，两段落点明确。",
+        "records": [
+          {
+            "anchor": "0.60 mWb",
+            "label": "横轴 t/ms 标0、20、30；纵轴 Flux/mWb 标0.0、0.3、0.6，峰顶在(20,0.6)，两段落点明确。",
+            "meaning": "每匝磁通量的折线从(0,0)到(20 ms,0.60 mWb)后降至(30 ms,0)。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判B。把两个小盒作为系统给出必要上界，再检查临界时张力非负和两处摩擦均可实现。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判B。把两个小盒作为系统给出必要上界，再检查临界时张力非负和两处摩擦均可实现。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。轴距与绳的状态在文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "题干三行列明 r、2r、μ，四个含分母的选项同一行，均在多选标题之上。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "合并两盒径向方程得3mω²r≤2μmg",
+          "等号时两盒摩擦均向内且达μmg",
+          "内盒绳向外，取T=μmg/3可实现上界"
+        ],
+        "linked_concepts": [
+          "向心力",
+          "静摩擦力极限",
+          "整体与隔离"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "0ed352781a00ec91a9bc6f9550765abd26775b856b946f71d1098bf466db73eb",
+          "comparison": "2025要联合两张碰撞图判断质量次序，2026要从网面投影还原速度。本题由整体上界回到单体可达性，符合单选末位要求。"
+        },
+        "2026": {
+          "version_sha256": "cbf8267169b674afda20e7ee3210ec03430771f17d258e6f72be7651aed0f528",
+          "comparison": "2025要联合两张碰撞图判断质量次序，2026要从网面投影还原速度。本题由整体上界回到单体可达性，符合单选末位要求。"
+        }
+      },
+      "distractors": {
+        "A": {
+          "plausible": true,
+          "misconception": "按外盒单独达到摩擦极限计算，忽略绳的向内拉力。",
+          "mechanism": "按外盒单独达到摩擦极限计算，忽略绳的向内拉力。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "先给两只互不相连的小盒分别求出μg/r和μg/(2r)，再取两个角速度平方上限的算术平均；该结果超过允许的总摩擦。",
+          "mechanism": "先给两只互不相连的小盒分别求出μg/r和μg/(2r)，再取两个角速度平方上限的算术平均；该结果超过允许的总摩擦。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "只按内盒半径列摩擦上限，遗漏外盒所需的向心力。",
+          "mechanism": "只按内盒半径列摩擦上限，遗漏外盒所需的向心力。"
+        }
+      },
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 8,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判AD。电表内阻为实际并联负载，暗、明两态要分别化简；功率比从端电压比平方得到。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判AD。电表内阻为实际并联负载，暗、明两态要分别化简；功率比从端电压比平方得到。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "电源在左，R在上边，LDR在中段竖直支路，圆形V表在右支路，两支共用上下节点。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "题干、分压电路、四个选项顺次出现，A与B间留有较大间距，左右栏可辨。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "并联等效值由R变为2R/3",
+          "表示数由U/2变为2U/5，总电流增大",
+          "同一表内阻下功率比(4/5)²=16/25"
+        ],
+        "linked_concepts": [
+          "电表的分流",
+          "串并联电路",
+          "电功率"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "3485792aedce70c5eb7d9f6e2675f494026924e7c54cea83e3a548f267cafb2d",
+          "comparison": "2025比较两音在不同介质中的波长和频率，2026比较材料逸出功及两种照射条件。本题同样要保持条件切换的一致性。"
+        },
+        "2026": {
+          "version_sha256": "da01c74361b9bed08304d77da2e4a546824d6ba537a34b9d02946c8e7b7dc31c",
+          "comparison": "2025比较两音在不同介质中的波长和频率，2026比较材料逸出功及两种照射条件。本题同样要保持条件切换的一致性。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把光敏电阻变小后支路电压下降误推为串联定值电阻电流下降。",
+          "mechanism": "把光敏电阻变小后支路电压下降误推为串联定值电阻电流下降。"
+        },
+        "C": {
+          "plausible": true,
+          "misconception": "把给定有限内阻的电表当成理想表，忽略测量对电路的影响。",
+          "mechanism": "把给定有限内阻的电表当成理想表，忽略测量对电路的影响。"
+        }
+      },
+      "remaining_editorial_findings": [],
+      "required_figure_information": "电路拓扑可读，但文字已直接说明并联位置；与本卷12再次考查并联电压记录器的负载效应。",
+      "figure_conditions": {
+        "observation": "电源在左，R在上边，LDR在中段竖直支路，圆形V表在右支路，两支共用上下节点。",
+        "records": [
+          {
+            "anchor": "电压表并联在光敏电阻两端",
+            "label": "电源在左，R在上边，LDR在中段竖直支路，圆形V表在右支路，两支共用上下节点。",
+            "meaning": "定值电阻串在上边，光敏电阻与有限内阻电压表并联在其后。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判AC。承载上限在检修前由右索决定，检修后改由左索决定。单根索额定值减半时整梁承载有不同的变化比例。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判AC。承载上限在检修前由右索决定，检修后改由左索决定。单根索额定值减半时整梁承载有不同的变化比例。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。左右索与水平的夹角、载荷作用线位置均在文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "题干三行列出检修前后的允许拉力，30°、60°及F/2均可读，四个选项分列于同页。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "水平、竖直平衡合得T左=W/2，T右=√3W/2",
+          "原来W最大值是2F/√3，右索先达限",
+          "检修后须同时满足W≤F和W≤2F/√3，取较小值F"
+        ],
+        "linked_concepts": [
+          "力的分解",
+          "共点力平衡",
+          "承载上限"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "aa2bd39b14aff8c8c5fc784ccef98921eb4199a336123fdc8a8cea8056afe441",
+          "comparison": "2025第9题需按两个线圈分解防抖力，2026第9题需结合呼吸与线圈响应反推极性。此题从分力到限制部件更替，也有跨状态的实质判断。"
+        },
+        "2026": {
+          "version_sha256": "6f19536f9a0348eeb2b2139872e5023a102caed3c45659fa942a75f10eeafbf9",
+          "comparison": "2025第9题需按两个线圈分解防抖力，2026第9题需结合呼吸与线圈响应反推极性。此题从分力到限制部件更替，也有跨状态的实质判断。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "当W=F时右索拉力仅为√3F/2，把总重直接当成右索拉力。",
+          "mechanism": "当W=F时右索拉力仅为√3F/2，把总重直接当成右索拉力。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "把左索额定值的变化比例直接套在系统最大载荷上，漏掉限制索已交换。",
+          "mechanism": "把左索额定值的变化比例直接套在系统最大载荷上，漏掉限制索已交换。"
+        }
+      },
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 10,
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "盲判AC。移动边界同时改变每秒撞上水板的质量及每千克水的速度改变量，推力因而含两个2/3。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "盲判AC。移动边界同时改变每秒撞上水板的质量及每千克水的速度改变量，推力因而含两个2/3。"
+        },
+        "figure": {
+          "verdict": "pass",
+          "evidence": "竖挡板左侧的6 m/s入射箭向右，其下返回箭向左；挡板顶部的2 m/s箭向右。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "示意图下的A、B均折为两行，两项续行可按列跟读；C、D与非选择题标题有留白分隔。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "对板的来流速度由6降至4 m/s，质量流率比为2/3",
+          "移动时反射水对地速度为2−4=−2 m/s，每千克水动量改变量之比为8/12",
+          "推力比=(2/3)²=4/9"
+        ],
+        "linked_concepts": [
+          "相对运动",
+          "冲量与动量",
+          "质量流率"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "275d1f8245ede8c4a8f9829fd06829ef3ca8ccf584f8eaba942c33614c722478",
+          "comparison": "2025在两种约束下判断活塞移动，2026从相对距离数据识别变速阶段。本题也要求改变参考系并重新核算两个物理量。"
+        },
+        "2026": {
+          "version_sha256": "533e5edf6a31504e9baebf5fbff65e8023ac7f0351d2da31d4ab4c4c1357bd30",
+          "comparison": "2025在两种约束下判断活塞移动，2026从相对距离数据识别变速阶段。本题也要求改变参考系并重新核算两个物理量。"
+        }
+      },
+      "distractors": {
+        "B": {
+          "plausible": true,
+          "misconception": "把反射后对地速率2/6当作每千克水动量改变量比。",
+          "mechanism": "把反射后对地速率2/6当作每千克水动量改变量比。"
+        },
+        "D": {
+          "plausible": true,
+          "misconception": "将板系中碰前后等速误解为地面系中等速。",
+          "mechanism": "将板系中碰前后等速误解为地面系中等速。"
+        }
+      },
+      "remaining_editorial_findings": [],
+      "required_figure_information": "图标注入射及板的速度，回流箭头帮助识别方向；箭头和速度均由文字重复给出。",
+      "figure_conditions": {
+        "observation": "竖挡板左侧的6 m/s入射箭向右，其下返回箭向左；挡板顶部的2 m/s箭向右。",
+        "records": [
+          {
+            "anchor": "2 m/s",
+            "label": "竖挡板左侧的6 m/s入射箭向右，其下返回箭向左；挡板顶部的2 m/s箭向右。",
+            "meaning": "来水与板速度箭头均向右，返回水箭头向左。"
+          }
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "21次通过平衡位置跨20个半周期，20.0 s内完成10个振动，周期为2.00 s。若把相邻标记间隔作周期，则估计g放大4倍。拟合给r=1.00 cm，g=9.80 m/s²。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "21次通过平衡位置跨20个半周期，20.0 s内完成10个振动，周期为2.00 s。若把相邻标记间隔作周期，则估计g放大4倍。拟合给r=1.00 cm，g=9.80 m/s²。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。题干列20.0 s、4.03 s²/m及0.0403 s²。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "第（1）问的①后有s，②后有倍。第（2）问的③接cm，④接m/s²。四空与下方作答框同页。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "区分计数次数和间隔数，20个间隔等于10T，故T=20.0/10 s",
+          "同一摆长下把T减半使g估算放大为4倍",
+          "T²=(4π²/g)(L+r)，截距除以斜率得r，再由斜率求g"
+        ],
+        "linked_concepts": [
+          "光电计时",
+          "单摆等时性",
+          "有效摆长",
+          "线性拟合"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "4d41116840f28382414f805d4a4cffd3d131e198cbf2ab92b6ea927e0df3fb2e",
+          "comparison": "2025同位要读电阻与温度曲线、触点和旋钮，2026同位要读卡尺并把过门时间换成速度。本题用传感器事件定义周期，又把拟合截距对应到球心几何，形成两项独立测量判断。B卷11用位置差分与成像标尺，实验方法不同。"
+        },
+        "2026": {
+          "version_sha256": "94770bd7fb9a13a7273b7e3ed8bb233effd089a3a73f971a245e0e3663f717d4",
+          "comparison": "2025同位要读电阻与温度曲线、触点和旋钮，2026同位要读卡尺并把过门时间换成速度。本题用传感器事件定义周期，又把拟合截距对应到球心几何，形成两项独立测量判断。B卷11用位置差分与成像标尺，实验方法不同。"
+        }
+      },
+      "distractors": {},
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 12,
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "固定电压比可获得相同计时；高档时间常数1.20 s。理想时间比为2，实测为1.5，要接近理想值应选内阻更大的记录器。已给τ与总放电电阻的定量关系，可从两个档位消去电表内阻，求C=12 μF。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "固定电压比可获得相同计时；高档时间常数1.20 s。理想时间比为2，实测为1.5，要接近理想值应选内阻更大的记录器。已给τ与总放电电阻的定量关系，可从两个档位消去电表内阻，求C=12 μF。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。两档电阻与先后减半的0.56 s、0.84 s在题干中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "三问有五个独立水平填空。第（2）问指定记录器内阻并给出“更大”与“更小”，第（3）问的⑤后是μF。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "同档8→4与4→2 V压差不同、比值相同且耗时相同，故选固定电压比",
+          "由t半=τln2得τ₁=0.80 s，τ₂=1.20 s，理想情况下二者之比为电阻比2",
+          "并联电表内阻越大，对高档等效电阻的相对影响越小，实测时间比越接近2",
+          "由1/τ=(1/R+1/Rv)/C，两档相减得C=12 μF"
+        ],
+        "linked_concepts": [
+          "指数放电",
+          "控制电压比",
+          "等效电阻",
+          "时间常数"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1d5a4d81c6835bdad78db071dc53b38401617dd7ff93c4be9c4fd86e0a922144",
+          "comparison": "2025同位要自主安排步骤、读点、求斜率和检验误差；2026样本缺第12题。此题能用同档计时选择读数标准，并以换档后的偏离识别分流；B12则用仪表偏转找零点，再识别回路线长，实验决策已有实质差异。"
+        },
+        "2026": {
+          "version_sha256": "5e42665fe8699e0c9291d860212a8396f8679eb69fe2b6eaf705cf5b70b79ba5",
+          "comparison": "2025同位要自主安排步骤、读点、求斜率和检验误差；2026样本缺第12题。此题能用同档计时选择读数标准，并以换档后的偏离识别分流；B12则用仪表偏转找零点，再识别回路线长，实验决策已有实质差异。"
+        }
+      },
+      "distractors": {},
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 13,
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "漂浮露出0.060 m，刚释放时a=5.0 m/s²向上。上升过程中浮力由36 N线性降至30 N，跨界速度1.50 m/s，不能将刚释放时的加速度用完整段。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "漂浮露出0.060 m，刚释放时a=5.0 m/s²向上。上升过程中浮力由36 N线性降至30 N，跨界速度1.50 m/s，不能将刚释放时的加速度用完整段。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。上下液层、界面与初始浮标方位用文字指明。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "两问和书写区都在第4页。题干将“高0.30”与下一行起首m拆开，还将g=10的单位m/s²。单列末行。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由ρ淡gS浸深=mg求淡水漂浮露出高度",
+          "初态全没在盐水，a=(36−24)/2.4",
+          "上升s时浮力为gS[ρ盐(H−s)+ρ淡s]=36−20s N（s以m计）",
+          "平均净力9 N在0.30 m上作功2.7 J，v=1.50 m/s"
+        ],
+        "linked_concepts": [
+          "浮力",
+          "分层液体",
+          "变力功",
+          "动能定理"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "269052bdcfd887ace82f84c7ab0a898ad70f41fc2fe2352b3edcddd26cfc0744",
+          "comparison": "2025同位把电场偏转接到出场后的匀速漂移，2026同位从定质量排油切为补气。本题须自行建立浸入两种液体的体积分配，再识别变力做功；与两年同位相比略重，但设问有物理依托。"
+        },
+        "2026": {
+          "version_sha256": "c2885245d64524e9128914d92b5e039c7b560129056a51013a202bd6651ac702",
+          "comparison": "2025同位把电场偏转接到出场后的匀速漂移，2026同位从定质量排油切为补气。本题须自行建立浸入两种液体的体积分配，再识别变力做功；与两年同位相比略重，但设问有物理依托。"
+        }
+      },
+      "distractors": {},
+      "remaining_editorial_findings": [
+        {
+          "number": 13,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "points": 2,
+          "evidence": "第4页第13题题干的0.30与m跨行；第三行末印g=10，第四行只剩m/s²和句号。应让每组数值与单位整体换行。",
+          "reader": "visual"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "初态Em=2.0 V，P外=0.375 W。转速翻倍后外功率0.72 W对应两个正电阻1/9 Ω与9 Ω；绕组耗散分别为6.48 W与0.080 W，故仅9 Ω可连续使用。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "初态Em=2.0 V，P外=0.375 W。转速翻倍后外功率0.72 W对应两个正电阻1/9 Ω与9 Ω；绕组耗散分别为6.48 W与0.080 W，故仅9 Ω可连续使用。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。线圈轴与磁场的方向关系、内外电阻由题文给出。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "题干之下分成两问。目标功率0.72 W与线圈允许发热功率1.0 W印在第二问，作答框同页。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "由BSω得到峰值，再换有效值求外功率",
+          "转速翻倍后令8R/(1+R)²=0.72，求出9与1/9两负载（以Ω计）",
+          "逐一算内阻平均热功率8/(1+R)²，与1.0 W上限比较"
+        ],
+        "linked_concepts": [
+          "发电机",
+          "有效值",
+          "功率匹配",
+          "绕组热限"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1326f7e9e2d45ef0909d4649e02ad8007055cf5962753f7a3b5ad34a9251ac23",
+          "comparison": "2025同位要判断经过防滑带的次数，2026同位要证明不同离子出射同点并提取时间标度。此题由输出功率的双根跨到绕组热限复核，两个数学解对应不同的实际运行状态。"
+        },
+        "2026": {
+          "version_sha256": "a671794f710376790231e72b068b9314f6686c899cf944ceaecbc31779215eb0",
+          "comparison": "2025同位要判断经过防滑带的次数，2026同位要证明不同离子出射同点并提取时间标度。此题由输出功率的双根跨到绕组热限复核，两个数学解对应不同的实际运行状态。"
+        }
+      },
+      "distractors": {},
+      "remaining_editorial_findings": []
+    },
+    {
+      "number": 15,
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "首次共速v/3，包相对板前进v²/(3μg)。驱动后板速为−2v/3，第二次共速为−v/3。板长与墙距各有真实的临界值，两种失败情形可独立发生。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "首次共速v/3，包相对板前进v²/(3μg)。驱动后板速为−2v/3，第二次共速为−v/3。板长与墙距各有真实的临界值，两种失败情形可独立发生。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "无图。墙、包、板和外部供能的反向驱动器以文字描述。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "三问均在第5页上方，第（3）问题尾跨行，“距离”末字在次行。下方整个答题区可见。"
+        }
+      },
+      "depth": {
+        "reasoning_steps": [
+          "初段由相对加速度3μg/2算t₁=2v/(3μg)，相对滑程v²/(3μg)，板右行v²/(9μg)",
+          "外部供能的反向驱动器保留包速v/3，使板速成为−2v/3。由第二段动量守恒得共同速度−v/3",
+          "第二段初相对速v，历时2v/(3μg)，相对滑程再增v²/(3μg)，板向左行v²/(3μg)",
+          "两段包均相对板向右，第二段板全程向左；两种停止事件均须严格滞后，故L>2v²/(3μg)、d>2v²/(9μg)"
+        ],
+        "linked_concepts": [
+          "动量守恒",
+          "分段摩擦动力学",
+          "相对位移",
+          "事件先后"
+        ]
+      },
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e51113347a936287275cbd89750af2c6b4ada480e16ca96fc9a9d7e478553ab0",
+          "comparison": "2025末题须在电、磁两区间重建周期漂移，2026要辨清多次壳球碰撞与落地先后。本题以外部驱动冲量、相对位移及对地位移核查两种先后条件；B15是电流、磁冲量与能量暂存，实质不同。"
+        },
+        "2026": {
+          "version_sha256": "9c40b944d264d901fdd803ed9c9fd48d53877320ed706a51a742696115183312",
+          "comparison": "2025末题须在电、磁两区间重建周期漂移，2026要辨清多次壳球碰撞与落地先后。本题以外部驱动冲量、相对位移及对地位移核查两种先后条件；B15是电流、磁冲量与能量暂存，实质不同。"
+        }
+      },
+      "distractors": {},
+      "remaining_editorial_findings": []
+    }
+  ]
+}

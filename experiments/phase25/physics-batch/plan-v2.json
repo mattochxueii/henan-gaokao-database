@@ -1,0 +1,47 @@
+{
+  "subject": "physics",
+  "count": 2,
+  "blueprints": [
+    {
+      "experiment_1": {
+        "model": "摆长截距",
+        "scene": "单摆测重力",
+        "action": "校正系统偏差",
+        "representation": "拟合截距"
+      },
+      "experiment_2": {
+        "model": "并联漏导",
+        "scene": "电容放电",
+        "action": "改变负载分离仪表效应",
+        "representation": "衰减记录"
+      },
+      "final": {
+        "model": "反向制动滑板",
+        "scene": "缓冲平台",
+        "action": "相对位移与触界先后",
+        "representation": "分段运动"
+      }
+    },
+    {
+      "experiment_1": {
+        "model": "视差标定",
+        "scene": "滚动影像",
+        "action": "等时差分与标尺共面",
+        "representation": "频闪序列"
+      },
+      "experiment_2": {
+        "model": "电桥比例定位",
+        "scene": "电缆碰壳定位",
+        "action": "沿回路判别两条线长",
+        "representation": "滑线平衡"
+      },
+      "final": {
+        "model": "电容磁耦合",
+        "scene": "导轨电荷转移",
+        "action": "稳态与撤力能量",
+        "representation": "电荷回路"
+      }
+    }
+  ],
+  "pool_sha256": "81c253345eb553f9fdfb77c2d3e5b5c79873470b9293cb0bbdc41f81ce47bdd1"
+}

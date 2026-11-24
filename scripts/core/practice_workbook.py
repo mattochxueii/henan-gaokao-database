@@ -51,6 +51,8 @@ def authoring_context(root, subject, *, topic=None, source_id=None, limit=12):
     if not topic and not source_id:
         from core.quality_audit import position_reference
 
+        from core.exam_qa import policies
+        result["anti_patterns"] = policies(root, subject)
         result["quality_benchmarks"] = position_reference(root, subject)
         if subject in ("chinese","english"):
             from core.language_workflow import fulltext_corpus

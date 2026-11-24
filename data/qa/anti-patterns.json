@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "math.stop",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "随机过程须写首次停时及截断",
+      "counterexample": "至第 N 次仍未报警时未定义读取次数"
+    },
+    {
+      "id": "math.modules",
+      "subject": "math",
+      "severity": "major",
+      "check": "查超越函数、常规导数、立几选填、非均值统计",
+      "counterexample": "全卷只计算平均数"
+    },
+    {
+      "id": "math.score",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "核对六分多选的部分分文案",
+      "counterexample": "套用选对但不全得3分"
+    },
+    {
+      "id": "math.notation",
+      "subject": "math",
+      "severity": "major",
+      "check": "核查补集、对立事件课标符号",
+      "counterexample": "U\\setminus A 或 Y^c"
+    },
+    {
+      "id": "all.figure-condition",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "关键数值和必要部件须在图文中可定位且一致",
+      "counterexample": "间距改变为 2d 只印在图上"
+    },
+    {
+      "id": "physics.breadth",
+      "subject": "physics",
+      "severity": "major",
+      "check": "标准卷逐查八块，光学独立于机械波",
+      "counterexample": "机械波代替全部光学"
+    },
+    {
+      "id": "physics.device",
+      "subject": "physics",
+      "severity": "major",
+      "check": "同一器具最多占两题",
+      "counterexample": "三题使用弹簧连接物体"
+    },
+    {
+      "id": "physics.constant",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "由标称数据验算可认定的常量，相对误差不超过1%",
+      "counterexample": "光电拟合斜率偏离 h/e 达3%"
+    },
+    {
+      "id": "physics.adjust",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "核查回路可调元件、空间距离及边界",
+      "counterexample": "要求扫电流却只有固定电源与负载"
+    },
+    {
+      "id": "physics.algebra",
+      "subject": "physics",
+      "severity": "major",
+      "check": "寻找物理建模与推理转折",
+      "counterexample": "靠两组未知量联立即可作答"
+    },
+    {
+      "id": "chemistry.competition",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核查实际 pH 下先后或并行的酸碱反应",
+      "counterexample": "强碱中假定过量碳酸氢根仍保留"
+    },
+    {
+      "id": "chemistry.amphoteric",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核查除杂真实可行区间",
+      "counterexample": "用忽略两性溶解凑沉淀范围"
+    },
+    {
+      "id": "chemistry.coverage",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "查 STSE、基础实验及物质结构",
+      "counterexample": "实验只算滴定浓度而无装置或操作"
+    },
+    {
+      "id": "chemistry.sequence",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "写明操作顺序、待判断的实测对象",
+      "counterexample": "误差题只问结果会怎样"
+    },
+    {
+      "id": "biology.endocrine",
+      "subject": "biology",
+      "severity": "fatal",
+      "check": "区分交感神经—髓质和垂体—皮质调节",
+      "counterexample": "写成交感神经直接指令皮质释放糖皮质激素"
+    },
+    {
+      "id": "biology.abstract",
+      "subject": "biology",
+      "severity": "major",
+      "check": "统计无必要的匿名对象",
+      "counterexample": "满篇某物质、激素 C，难以区分对象"
+    },
+    {
+      "id": "all.absolute",
+      "subject": "all",
+      "severity": "major",
+      "check": "集中出现绝对词的错项应查能否不读题即排除",
+      "counterexample": "在弱对照中声称所有浓度均如此"
+    },
+    {
+      "id": "chinese.distractor",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "逐项判断范围、因果等微偏",
+      "counterexample": "靠常识排除未涉及的离题说法"
+    },
+    {
+      "id": "chinese.voice",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "核查文体和语感",
+      "counterexample": "把白话叙述用几个古词串成拟古文"
+    },
+    {
+      "id": "chinese.turn",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "识别论证、叙述的转折",
+      "counterexample": "整段改写同一句鸡汤断言"
+    },
+    {
+      "id": "english.distractor",
+      "subject": "english",
+      "severity": "major",
+      "check": "干扰项须对应原文中具体的误读",
+      "counterexample": "选项常识上荒谬"
+    },
+    {
+      "id": "english.voice",
+      "subject": "english",
+      "severity": "major",
+      "check": "核查角色语域和具体语境",
+      "counterexample": "读后续写用套话代替人物行动"
+    },
+    {
+      "id": "english.turn",
+      "subject": "english",
+      "severity": "major",
+      "check": "研究结论与观察须有可考的推断边界",
+      "counterexample": "所有段落顺序重述首句"
+    },
+    {
+      "id": "all.graphic",
+      "subject": "all",
+      "severity": "major",
+      "check": "检查文本、图例和刻度的渲染像素",
+      "counterexample": "柱顶 76 与图例重叠"
+    },
+    {
+      "id": "all.solution",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "独立检查唯一解、单位、边界与评分",
+      "counterexample": "漏掉可行的第二种解，或选择题多解"
+    }
+  ]
+}

@@ -195,7 +195,14 @@ def evaluate(reference, paper, version, pdf_sha, document, *, review=None, prior
     keys = _answers(paper, review) if review is not None else None
     require(keys is None or len(keys) == len(items), "独立核对题数不符")
     current_edition = paper.get("edition_rules") == REVISION
-    failures = [{"number":0,"rule":"coverage","reason":reason} for reason in paper_issues(subject, paper)]
+    whole_paper_issues = paper_issues(subject, paper)
+    if subject == "physics" and reference.get("review_board"):
+        # The board inspects all eight modules using current physical terminology.
+        from core.exam_qa import inspect
+        from gaokao import ROOT
+        machine = inspect(ROOT, subject, paper, keys or [None]*len(questions))
+        whole_paper_issues = [entry["evidence"] for entry in machine["issues"]]
+    failures = [{"number":0,"rule":"coverage","reason":reason} for reason in whole_paper_issues]
     for n, (q, row) in enumerate(zip(questions, items, strict=True), 1):
         def reject(rule, evidence):
             failures.append({"number": n, "rule": rule, "reason": evidence})
@@ -336,4 +343,8 @@ def publication_quality(folder, review):
                       prior=read_json(prior_path) if prior_path.is_file() else None)
     require(result["status"] == "accepted" and result == read_json(folder / "quality-result.json"),
             "质量审稿未通过或审稿证据改变，禁止发布")
+    if bound[0].get("review_board"):
+        from core.review_board import authorize
+        from gaokao import ROOT
+        return fingerprint([result["audit_sha256"], authorize(ROOT, folder)])
     return result["audit_sha256"]

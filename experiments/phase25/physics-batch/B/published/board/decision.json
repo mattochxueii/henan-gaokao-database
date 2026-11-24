@@ -1,0 +1,44 @@
+{
+  "state": "eligible",
+  "round": 3,
+  "score": 94,
+  "fatal_count": 0,
+  "rewrite": [
+    4,
+    12
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "deductions": [
+    {
+      "number": 4,
+      "category": "weak",
+      "rule": "physics.algebra",
+      "points": 3,
+      "evidence": "19.0 cm虽落在18和22 cm之间，却不能由直接取平均、压差符号用反等常见单一误读得出。比起20.0 cm的算术平均陷阱，A项区分的错误路径较弱。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 12,
+      "category": "weak",
+      "rule": "physics.algebra",
+      "points": 3,
+      "evidence": "第一小问三个空中，30.0、35.0两端及平衡时电流计指零均已在题干出现，可以整组填入。极性变化夹逼零点仍有实验价值，但三个空只覆盖一个决策；后两问另有独立推理。",
+      "reader": "pedagogy"
+    }
+  ],
+  "pdf_sha256": "7ae03dbdd1a7b756061912d12479c599397cb990d41decc85d5050ccd5b15582"
+}

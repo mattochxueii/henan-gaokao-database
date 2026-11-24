@@ -1,0 +1,52 @@
+{
+  "state": "eligible",
+  "round": 3,
+  "score": 93,
+  "fatal_count": 0,
+  "rewrite": [
+    4,
+    5,
+    13
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15
+  ],
+  "deductions": [
+    {
+      "number": 5,
+      "category": "weak",
+      "rule": "physics.algebra",
+      "points": 3,
+      "evidence": "B项3√2 cm相当于把6.0 cm缩为1/√2，而已测质荷比给出的缩放是√(2/3)。C项体现误沿用等速模型、D项体现误用平方；B项的具体常见错误依据较弱。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 4,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第1页第4题第一行末是“90”，第二行以“kPa，压强达到……”起首。给90与kPa之间使用不可断行空格即可。",
+      "reader": "visual"
+    },
+    {
+      "number": 13,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第4页第13题题干的0.30与m跨行；第三行末印g=10，第四行只剩m/s²和句号。应让每组数值与单位整体换行。",
+      "reader": "visual"
+    }
+  ],
+  "pdf_sha256": "a1938056b8eea0c9afd10c4ac2e19f65d8a5d3921cdaa92540b5546d72c2e46d"
+}

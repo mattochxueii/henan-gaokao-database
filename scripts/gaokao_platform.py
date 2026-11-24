@@ -8,7 +8,7 @@ import bootstrap  # noqa: F401
 from core.catalog import import_science, query, rebuild, science_evidence, use
 from core.science_forecast import forecast, score
 from core.science_workflow import adjudicate, plan, prepare, publish
-from core import language_workflow, paper_intake
+from core import board_cli, language_workflow, paper_intake
 from forecast_store import write_new
 from gaokao import ROOT, dumps, read_json
 from subjects import SCIENCES, SUBJECTS
@@ -18,6 +18,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root",type=Path,default=ROOT)
     sub = parser.add_subparsers(dest="command",required=True)
+    board_cli.arguments(sub)
     sub.add_parser("subjects")
     sub.add_parser("dna").add_argument("subject", choices=paper_intake.PAPER_SUBJECTS)
     context = sub.add_parser("authoring-context", help="读取命题画像和目标卷系近年真题")
@@ -50,6 +51,9 @@ def main(argv=None):
     simulate.add_argument("output",type=Path)
     simulate.add_argument("--context",required=True,type=Path)
     simulate.add_argument("--layout-mode", choices=("practice","exam"), default="practice")
+    simulate.add_argument("--batch-plan",type=Path)
+    simulate.add_argument("--batch-candidates",type=Path,nargs="+")
+    simulate.add_argument("--slot",type=int)
     trend = sub.add_parser("trend-pack", help="按冻结研判制作独立的数学专题审阅稿")
     trend.add_argument("candidate", type=Path)
     trend.add_argument("output", type=Path)
@@ -123,6 +127,10 @@ def main(argv=None):
     root = args.root.resolve()
     command = args.command
     try:
+        if command in ("batch-plan","batch-run","batch-check","exam-qa","board-packet","board-score","board-cycle"):
+            result=board_cli.run(root,args)
+            print(dumps(result))
+            return int(result.get("passed") is False or result.get("status",result.get("state")) in ("returned","rejected"))
         if command=="math":
             from subjects.math import run
             return run(root,args.args)
@@ -173,6 +181,14 @@ def main(argv=None):
 
             candidate=read_json(args.candidate)
             quality_reference=validate_authoring_context(root,args.subject,args.context,candidate)
+            from core.review_board import VERSION as board_version
+            quality_reference={**quality_reference,"review_board":board_version,"qa_policy":read_json(args.context)["anti_patterns"]}
+            if any((args.batch_plan,args.batch_candidates,args.slot)):
+                if not all((args.batch_plan,args.batch_candidates,args.slot)):
+                    raise ValueError("批量模拟须同时提供计划、整批候选和卷序")
+                quality_reference["batch"]=board_cli.batch_binding(args.subject,args.candidate,args.batch_plan,args.batch_candidates,args.slot)
+            if candidate.get("constant_observations"):
+                quality_reference["constant_observations"]=candidate["constant_observations"]
             candidate={**candidate,"quality_benchmarks":quality_reference}
             if args.subject=="math":
                 from math_skill import main as math_main

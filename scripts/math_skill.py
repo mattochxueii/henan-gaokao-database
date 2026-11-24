@@ -235,6 +235,9 @@ def main(argv=None, *, quality_reference=None):
 
                     require(args.candidates is not None, "整卷审稿上下文须与宿主候选一同提交")
                     quality_reference = validate_authoring_context(root,"math",args.context,read_json(args.candidates))
+                    from core.review_board import VERSION as board_version
+                    quality_reference = {**quality_reference,"review_board":board_version,
+                                         "qa_policy":read_json(args.context)["anti_patterns"]}
                 record = run_ai(
                     root,
                     provider,

@@ -501,7 +501,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             parts = [para(part["label"] + " " + part["text"],
                           response_line if practice and "___" in part["text"] else body)
                      for part in q["parts"]]
-            keep_response = physics_layout and height >= 7 and q["points"] >= 12
+            keep_response = physics_layout and height > 0
             if compact and not choice and not keep_response:
                 # The figure and first subquestion stay with their stem.
                 story.append(KeepTogether(block + parts[:1]))

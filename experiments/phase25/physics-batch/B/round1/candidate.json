@@ -1,0 +1,556 @@
+{
+  "subject": "physics",
+  "title": "河南普通高中学业水平选择性考试 · 物理模拟 B 卷",
+  "questions": [
+    {
+      "id": "orig:physics:batch25-b-01",
+      "topic": "原子核与反冲",
+      "stem": "静止的氡原子核在真空中发生一次 α 衰变，仅生成 α 粒子和一个子核。忽略相对论效应。已知子核质量约为 α 粒子的 54 倍，此次释放的能量中转化为子核动能的比例约为",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "1/54",
+        "B": "1/55",
+        "C": "1/2916",
+        "D": "54/55"
+      },
+      "figure": null,
+      "design": {
+        "model": "衰变反冲",
+        "scene": "氡子核",
+        "action": "分配反冲动能",
+        "representation": "矢量"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "B",
+      "independent_check": {
+        "checks": {
+          "derivation": "原子核与反冲：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 B"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-02",
+      "topic": "恒星视向运动",
+      "stem": "双星系统中两星视为质点，绕共同的圆心以相同角速度做圆周运动，外力忽略。观测方向平行于轨道平面。图中甲、乙相对系统质心的视向速度振幅为 24 km/s、36 km/s。两星的质量比与轨道半径比分别为",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "2∶3，2∶3",
+        "B": "3∶2，3∶2",
+        "C": "3∶2，2∶3",
+        "D": "2∶3，3∶2"
+      },
+      "figure": {
+        "path": "figures/B02.png",
+        "sha256": "1666eec1a4d95e82a49c01ff1339eeaa419aed9cd654ef74622ea4dcd244dfb4"
+      },
+      "design": {
+        "model": "质心圆运动",
+        "scene": "双星光谱",
+        "action": "由视向振幅反推质量比",
+        "representation": "双曲线"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "C",
+      "independent_check": {
+        "checks": {
+          "derivation": "恒星视向运动：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 C"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-03",
+      "topic": "光纤传感",
+      "stem": "一束光在平直透明棒内传播，在棒与外介质交界面的入射角为 55°，如图。棒的折射率为 1.50，外介质先为空气、后换作折射率 1.33 的水。取 \\(\\sin55^\\circ=0.82\\)。下列说法正确的是",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "两次均发生全反射，反射角相同",
+        "B": "空气中发生全反射，换水后有光折入水中",
+        "C": "水中发生全反射，空气中有光折出",
+        "D": "换水后折射角小于 55°"
+      },
+      "figure": {
+        "path": "figures/B03.png",
+        "sha256": "e362b2acf6e463ff1accbf9fe6493f31491bbc15cca7bb17847a268c3713c619"
+      },
+      "design": {
+        "model": "临界角变化",
+        "scene": "光纤探头",
+        "action": "辨识界面切换",
+        "representation": "界面"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "B",
+      "independent_check": {
+        "checks": {
+          "derivation": "光纤传感：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 B"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-04",
+      "topic": "气体温标",
+      "stem": "一端封闭的等截面细管内有一小段水银柱，将一定量理想气体与大气隔开。图示管口向上、管口向下时，气柱长度分别为 18 cm、22 cm，温度和外界大气压均相同，水银未流出。保持温度不变把管水平放置，气柱长度最接近",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "19.0 cm",
+        "B": "19.8 cm",
+        "C": "20.0 cm",
+        "D": "20.2 cm"
+      },
+      "figure": {
+        "path": "figures/B04.png",
+        "sha256": "77456b707a7864a12ae56d938f3a7f4a8dc93e916ea8fafb64fc07193ccf144c"
+      },
+      "design": {
+        "model": "压力对称",
+        "scene": "水银温标",
+        "action": "排除大气压",
+        "representation": "液柱"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "B",
+      "independent_check": {
+        "checks": {
+          "derivation": "气体温标：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 B"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-05",
+      "topic": "电势与偏转",
+      "stem": "静电透镜入口处，一负电荷由静止释放，沿 x 轴从 x=0 运动。图示电势随 x 的变化，在 0、a、2a 三处电势依次为 1 V、4 V、2 V，区间内由直线连接。忽略重力，关于第一次到达这些位置时的运动，下列说法正确的是",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "在两段内所受电场力大小之比为 2∶3",
+        "B": "在第二段折返，不能到达 2a",
+        "C": "在 2a 处速率与在 a 处速率之比为 \\(1/\\sqrt3\\)",
+        "D": "在 a 处加速度方向改变，速度方向也同时改变"
+      },
+      "figure": {
+        "path": "figures/B05.png",
+        "sha256": "10e4698bf19a7411095c04ced8e85225463a14b50c03316805cafbc70eafa8fd"
+      },
+      "design": {
+        "model": "势能边界",
+        "scene": "静电透镜",
+        "action": "计算转折可达性",
+        "representation": "电势折线"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "C",
+      "independent_check": {
+        "checks": {
+          "derivation": "电势与偏转：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 C"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-06",
+      "topic": "转速记录",
+      "stem": "转轮上有一个标记，照相机每隔 0.040 s 曝光一次。从同一侧看，三次曝光的标记如图，每次都相对上一次沿顺时针转过表观角 60°。独立测量表明实际转向为逆时针、实际转速小于每秒 30 转。实际转速约为",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "4.17 转/秒",
+        "B": "16.7 转/秒",
+        "C": "20.8 转/秒",
+        "D": "29.2 转/秒"
+      },
+      "figure": {
+        "path": "figures/B06.png",
+        "sha256": "c9db2257091c059edb6d71aff38b2a47e876058befb5ebeffade9244d40420b4"
+      },
+      "design": {
+        "model": "频闪混叠",
+        "scene": "转轮",
+        "action": "处理方向与整周",
+        "representation": "角序列"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "C",
+      "independent_check": {
+        "checks": {
+          "derivation": "转速记录：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 C"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-07",
+      "topic": "感应与传感",
+      "stem": "铁芯上的检测线圈有 200 匝，另一个激励绕组通以周期性电流。忽略漏磁。某次检测得到线圈开路电压如图，一个周期内先为 +3.0 V（持续 2.0 ms），再为 −2.0 V（持续 3.0 ms）。取 \\(u=-N\\,\\mathrm d\\Phi/\\mathrm dt\\)。若周期起点的每匝磁通量为 10 μWb，则",
+      "kind": "single_choice",
+      "points": 4,
+      "parts": [],
+      "options": {
+        "A": "每周期结束时磁通量减少 30 μWb",
+        "B": "磁通量最小值为 −20 μWb",
+        "C": "电压有效值为 2.4 V",
+        "D": "磁通量在第一个区间内保持恒定"
+      },
+      "figure": {
+        "path": "figures/B07.png",
+        "sha256": "44edc6262f950f7265aeb92b4e554640015180374126c7bddf9f10719af2ae8b"
+      },
+      "design": {
+        "model": "伏秒平衡",
+        "scene": "检测绕组",
+        "action": "积分并判极性",
+        "representation": "阶梯波"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "B",
+      "independent_check": {
+        "checks": {
+          "derivation": "感应与传感：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 B"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-08",
+      "topic": "机械波测量",
+      "stem": "水槽中两探头 P、Q 相距 0.45 m，简谐行波从 P 传向 Q。图中 P、Q 稳态记录周期均为 0.40 s，Q 的波峰比 P 最近的前一波峰晚 0.10 s。另测得波速在 0.75 m/s 至 2.0 m/s 之间。下列说法正确的是",
+      "kind": "multiple_choice",
+      "points": 6,
+      "parts": [],
+      "options": {
+        "A": "同一波峰从 P 传到 Q 用时 0.10 s",
+        "B": "波速为 0.90 m/s",
+        "C": "波长为 0.36 m",
+        "D": "同一时刻 P、Q 两点的位移之和恒为零"
+      },
+      "figure": {
+        "path": "figures/B08.png",
+        "sha256": "b9920ae57e28612054b5a6ce067fd11faa8717b206354ca53f0fd23a29a785cc"
+      },
+      "design": {
+        "model": "延迟辨识",
+        "scene": "水波探头",
+        "action": "用波速区间排除周期数",
+        "representation": "双相曲线"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "BC",
+      "independent_check": {
+        "checks": {
+          "derivation": "机械波测量：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 BC"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-09",
+      "topic": "洛伦兹力与选择器",
+      "stem": "正离子经速度选择器后沿直线通过狭缝，再垂直进入另一均匀磁场发生偏转。图示选择区电场方向向下、磁场方向垂直纸面向里，离子向右运动。保持选择区磁场与偏转区磁场不变，把选择区电场强度加倍。对同种离子，两次均选出直线通过者，则",
+      "kind": "multiple_choice",
+      "points": 6,
+      "parts": [],
+      "options": {
+        "A": "后一次通过狭缝的速率是前一次的两倍",
+        "B": "后一次进入偏转区的动能是前一次的两倍",
+        "C": "偏转区的轨道半径不变",
+        "D": "两次在偏转区转过同一圆心角所需时间相同"
+      },
+      "figure": {
+        "path": "figures/B09.png",
+        "sha256": "9ea17e6d0690c42ff1a749c1d2898341d8e1bedf9f0ff0d51601e0b44fbf5ebc"
+      },
+      "design": {
+        "model": "速度选择",
+        "scene": "离子束狭缝",
+        "action": "分离半径与周期",
+        "representation": "双场"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "AD",
+      "independent_check": {
+        "checks": {
+          "derivation": "洛伦兹力与选择器：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 AD"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-10",
+      "topic": "振动输送台",
+      "stem": "颗粒置于竖直振动的水平托盘上，盘面高度变化为 \\(y=A\\cos(\\omega t)\\)，向上为正。在最低点颗粒已与盘同速，且在此后首次失去接触前与盘同步。已知 \\(A\\omega^2=2g\\)。关于从最低点向上运动的这一段，下列判断正确的是",
+      "kind": "multiple_choice",
+      "points": 6,
+      "parts": [],
+      "options": {
+        "A": "到达平衡位置时支持力等于重力",
+        "B": "开始脱离时颗粒速度为零",
+        "C": "首次脱离处在平衡位置上方 A/2",
+        "D": "在最低点颗粒所受支持力为 2mg"
+      },
+      "figure": null,
+      "design": {
+        "model": "接触失效",
+        "scene": "振动托盘",
+        "action": "确定支持力消失位置",
+        "representation": "简谐"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": "AC",
+      "independent_check": {
+        "checks": {
+          "derivation": "振动输送台：按条件独立求解"
+        },
+        "parts": {
+          "overall": "候选选项 AC"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-11",
+      "topic": "滚动影像实验",
+      "stem": "在水平桌面上跟踪沿直线滚动的小球中心，帧间隔 0.050 s。连续四帧的位置为 0、4.8、9.2、13.2 cm。认为水平加速度恒定。",
+      "kind": "constructed_response",
+      "points": 6,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "以运动方向为正，第二帧瞬时速度为 ________ m/s，加速度为 ________ m/s²。"
+        },
+        {
+          "label": "（2）",
+          "text": "若镜头记录帧率实际低于所采用的标称帧率，位置标尺准确，以上计算所得加速度的绝对值比实际值 ________（填“偏大”或“偏小”）。"
+        }
+      ],
+      "options": {},
+      "figure": null,
+      "design": {
+        "model": "时标误差",
+        "scene": "滚动影像",
+        "action": "差分与帧率",
+        "representation": "频闪序列"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": {
+        "（1）": "0.92；−1.6",
+        "（2）": "偏大"
+      },
+      "independent_check": {
+        "checks": {
+          "derivation": "滚动影像实验：按条件独立求解"
+        },
+        "parts": {
+          "（1）": "0.92；−1.6",
+          "（2）": "偏大"
+        }
+      },
+      "batch_role": "experiment_1"
+    },
+    {
+      "id": "orig:physics:batch25-b-12",
+      "topic": "比较法测电阻",
+      "stem": "实验小组用同一根阻值与长度成正比的均匀电阻丝作滑线电桥。电源连接 A、B 两端，电流计连接两支路中点，电阻丝长 100.0 cm。左桥臂接待测电阻 X，右桥臂接电阻箱 30.0 Ω；与 X 串联的左侧接头电阻为 r，右侧接头电阻忽略。第一次平衡时左段丝长 60.0 cm。仅将 X 与电阻箱对调，接头仍在左侧，第二次平衡时左段丝长为 \\(700/17\\) cm。",
+      "kind": "constructed_response",
+      "points": 9,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "平衡时电流计两端的电势差为 ________；第一次平衡给出 X+r= ________ Ω。"
+        },
+        {
+          "label": "（2）",
+          "text": "第二次平衡时，左、右两段电阻丝的阻值之比为 ________；由两次数据求得 X= ________ Ω。"
+        },
+        {
+          "label": "（3）",
+          "text": "若只用第一次数据且忽略 r，测得 X 将 ________（填“偏大”或“偏小”）。"
+        }
+      ],
+      "options": {},
+      "figure": null,
+      "design": {
+        "model": "滑线电桥",
+        "scene": "换臂消去接头阻值",
+        "action": "零示比较",
+        "representation": "桥臂拓扑"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": {
+        "（1）": "0；45.0",
+        "（2）": "7∶10；750/17",
+        "（3）": "偏大"
+      },
+      "independent_check": {
+        "checks": {
+          "derivation": "比较法测电阻：按条件独立求解"
+        },
+        "parts": {
+          "（1）": "0；45.0",
+          "（2）": "7∶10；750/17",
+          "（3）": "偏大"
+        }
+      },
+      "batch_role": "experiment_2"
+    },
+    {
+      "id": "orig:physics:batch25-b-13",
+      "topic": "电梯应急供电",
+      "stem": "质量为 500 kg 的设备在竖直导轨内下行。发电装置提供向上、大小可控的制动力，另有恒定摩擦阻力 500 N。设备由静止开始匀加速下行 4.0 m 后达 4.0 m/s，随即在接下来的 2.0 m 内匀减速至静止。取 g=10 m/s²。",
+      "kind": "constructed_response",
+      "points": 10,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求两个阶段的制动力。"
+        },
+        {
+          "label": "（2）",
+          "text": "若两段中发电装置从机械能到电能的转化效率均为 80%，求储存的总电能。"
+        }
+      ],
+      "options": {},
+      "figure": null,
+      "design": {
+        "model": "分段制动力",
+        "scene": "电梯",
+        "action": "分离摩擦与回收",
+        "representation": "分段动能"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": {
+        "（1）": "3500 N；6500 N",
+        "（2）": "21600 J"
+      },
+      "independent_check": {
+        "checks": {
+          "derivation": "电梯应急供电：按条件独立求解"
+        },
+        "parts": {
+          "（1）": "3500 N；6500 N",
+          "（2）": "21600 J"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-14",
+      "topic": "热力学循环",
+      "stem": "温差试验台中的一定量单原子理想气体由 A 经 B、C 返回 A。A 的状态为 \\((V_0,p_0)\\)，B 为 \\((V_0,2p_0)\\)，C 为 \\((2V_0,p_0)\\)。A→B 等容，B→C 在 p–V 图上为直线，C→A 等压。已知气体内能 \\(U=3pV/2\\)。",
+      "kind": "constructed_response",
+      "points": 12,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求每个循环气体对外做的净功，以及 A→B 的吸热量。"
+        },
+        {
+          "label": "（2）",
+          "text": "在 B→C 的直线段上，气体经过 \\(V=1.6V_0\\) 后是否仍继续吸热？确定热量由流入变为流出时的体积，并说明判据。可以取极短一段，用该段平均压强计算所做的功。"
+        }
+      ],
+      "options": {},
+      "figure": null,
+      "design": {
+        "model": "热流换向",
+        "scene": "温差试验台",
+        "action": "定位段内热交换变号",
+        "representation": "热力路径"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": {
+        "（1）": "p₀V₀/2；3p₀V₀/2",
+        "（2）": "仍吸热；15V₀/8"
+      },
+      "independent_check": {
+        "checks": {
+          "derivation": "热力学循环：按条件独立求解"
+        },
+        "parts": {
+          "（1）": "p₀V₀/2；3p₀V₀/2",
+          "（2）": "仍吸热；15V₀/8"
+        }
+      }
+    },
+    {
+      "id": "orig:physics:batch25-b-15",
+      "topic": "水平导轨上的电荷转移",
+      "stem": "光滑水平面上，两根平行理想导轨相距 l，左端跨接电容器 C；质量 m、电阻 R 的金属棒垂直横跨在导轨上。匀强磁场 B 竖直向上，电容器初始不带电。忽略回路自感与其他电阻。水平恒力 F 从静止起向右拉棒，直至电流首次达到最终稳定电流的一半，此刻撤去拉力。棒和导轨保持良好接触，电容器不击穿。以下取拉动阶段的电流方向为正，q 表示电容器正极板所带电荷量。",
+      "kind": "constructed_response",
+      "points": 17,
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "写出棒速 v、充电电流 I 和电荷量 q 的回路关系；设拉力作用时间为 t，写出从开始到 t 时刻系统的动量关系。"
+        },
+        {
+          "label": "（2）",
+          "text": "拉力长期作用时电流趋于恒定。用一小段时间内电压和速度的增量，求此稳定电流 \\(I_s\\) 以及稳定阶段的加速度。"
+        },
+        {
+          "label": "（3）",
+          "text": "撤力时的速度为 \\(v_1\\)。当回路电流再次趋于零，求棒的速度；说明撤力后电流是否会反向，并给出此段电阻所耗电能的求法（结果可用 \\(I_s,v_1\\) 及题给量表示）。"
+        }
+      ],
+      "options": {},
+      "figure": null,
+      "design": {
+        "model": "电容磁耦合",
+        "scene": "导轨电荷转移",
+        "action": "稳态与撤力能量",
+        "representation": "电荷回路"
+      },
+      "verification_mode": "independent_review",
+      "proposed_answer": {
+        "（1）": "Blv=q/C+IR；mv=Ft−Blq",
+        "（2）": "Is=CBlF/(m+CB²l²)；a=F/(m+CB²l²)",
+        "（3）": "v∞=v₁−CBlRIs/[2(m+CB²l²)]；不反向；动能和电容电能的初末差"
+      },
+      "independent_check": {
+        "checks": {
+          "derivation": "水平导轨上的电荷转移：按条件独立求解"
+        },
+        "parts": {
+          "（1）": "Blv=q/C+IR；mv=Ft−Blq",
+          "（2）": "Is=CBlF/(m+CB²l²)；a=F/(m+CB²l²)",
+          "（3）": "v∞=v₁−CBlRIs/[2(m+CB²l²)]；不反向；动能和电容电能的初末差"
+        }
+      },
+      "batch_role": "final"
+    }
+  ],
+  "provenance": {
+    "author": "宿主 AI 原创",
+    "dna_sha256": "955f6858b00cf3706661459a0209734b27dc2ea52a9529a50cf8b205cb29b23f",
+    "context_sha256": "29276df21e7cefb6c293473de760ed69a10d7a15137dcc3c2c96c820826da580",
+    "quality_reference_sha256": "e22c02a5eece9ff4062d4767a247566a50b940187290c6739b1e0abf1bd5f201"
+  }
+}
