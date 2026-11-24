@@ -130,6 +130,10 @@ def check_standard_layout(questions, rules):
     require(len(figured_choices) >= rules["choice_figures_minimum"],
             f'选择题须至少有 {rules["choice_figures_minimum"]} 道使用题图')
     require(all("图" in q["stem"] for q in figured_choices), "选择题题干须指向参与解题的图件")
+    nonchoice = {n for n,q in enumerate(questions,1) if q["kind"] not in KINDS[:2] and q.get("figure")}
+    missing = set(rules.get("required_figure_positions", ())) - nonchoice
+    require(not missing and len(nonchoice) >= rules.get("nonchoice_figures_minimum", 0),
+            f"非选择题配图不足，已配图 {sorted(nonchoice)}，必配题位缺图 {sorted(missing)}")
     require(all(blank_numbers(questions[n-1]) for n in rules["embedded_blanks"]),
             "指定非选择题须提供嵌入式填空横线")
     require(all(not blank_numbers(questions[n-1]) for n in rules.get("extended_calculations", ())),

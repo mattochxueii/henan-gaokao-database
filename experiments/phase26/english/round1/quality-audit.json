@@ -1,0 +1,5080 @@
+{
+  "reviewer": "英语命题席，按真实教研与求解记录复核",
+  "protocol": "gaokao-editorial-audit-v2",
+  "paper_version": "b456197c6883f9508751ff5e84e5e37526adedd06d83c69292894d29d2109f40",
+  "paper_pdf_sha256": "50d961e54eeed473a3eb171748c44cd2f691ccda8967267d732e63b6112e3add",
+  "reference_sha256": "a7617709fa56c5dc2bdfeb77c5ed98d1d6470f63b1aecfc968bc282097b0b562",
+  "items": [
+    {
+      "number": 1,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5c17b31c51b082ee9815e9df28be1b876af4e730975b3b0af6cf1ba940613b56",
+          "reference_number": 1,
+          "comparison": "2025年同题位「What will the man do next?」。25题1也问下一步，26题1问身份；这里需要以对话结尾更新意图。 本题取证：她先提议贴海报，得知新版待打印后改为去办公室拿纸；没有要修改设计日期。"
+        },
+        "2026": {
+          "version_sha256": "39eb6edbf77d4b9f6de4511930f9fcbe995d10db439bee7f6e738b4d59112d5f",
+          "reference_number": 1,
+          "comparison": "2026年同题位「Who is the man?」。25题1也问下一步，26题1问身份；这里需要以对话结尾更新意图。 本题取证：她先提议贴海报，得知新版待打印后改为去办公室拿纸；没有要修改设计日期。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "女士最初提议贴旧海报，得知新稿等纸后才决定到办公室拿纸。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "她先提议贴海报，得知新版待打印后改为去办公室拿纸；没有要修改设计日期。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Old posters have the wrong date, the new design is ready, and she offers to fetch paper."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。她先提议贴海报，得知新版待打印后改为去办公室拿纸；没有要修改设计日期。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。她先提议贴海报，得知新版待打印后改为去办公室拿纸；没有要修改设计日期。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把尚未见旧日期时的提议当作最后行动",
+          "mechanism": "选项 A「Put up a poster.」保留“女士确实主动提出贴海报”，却把尚未见旧日期时的提议当作最后行动。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "女士确实主动提出贴海报",
+          "distortion": "把尚未见旧日期时的提议当作最后行动"
+        },
+        "B": {
+          "misconception": "把处理印纸问题改成修改已经完成的新版设计",
+          "mechanism": "选项 B「Change a date.」保留“海报日期的确已过”，却把处理印纸问题改成修改已经完成的新版设计。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "海报日期的确已过",
+          "distortion": "把处理印纸问题改成修改已经完成的新版设计"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "77166d827e3a6d15ed384a844711ecaccea76ad7ef170f68585b4d6134a688dc",
+          "reference_number": 2,
+          "comparison": "2025年同题位「What does Sarah plan to do after graduation?」。两年同位查计划或地点，本题须区分会面、发车与音乐会开场。 本题取证：a quarter to eleven 是会合时刻；十一点是发车，十二点是音乐会。"
+        },
+        "2026": {
+          "version_sha256": "0cafc87004e33712a21bb144ebf806629ea9fa2390ec92939dc6a07c65e3cffa",
+          "reference_number": 2,
+          "comparison": "2026年同题位「Where does the conversation probably take place?」。两年同位查计划或地点，本题须区分会面、发车与音乐会开场。 本题取证：a quarter to eleven 是会合时刻；十一点是发车，十二点是音乐会。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "约在十一点开车前一刻钟见，故10:45。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "a quarter to eleven 是会合时刻；十一点是发车，十二点是音乐会。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A quarter to eleven is 10:45, fifteen minutes before the train."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。a quarter to eleven 是会合时刻；十一点是发车，十二点是音乐会。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。a quarter to eleven 是会合时刻；十一点是发车，十二点是音乐会。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把发车时刻当作提前见面的时刻",
+          "mechanism": "选项 B「At 11.00.」保留“十一点是下一班列车的时刻”，却把发车时刻当作提前见面的时刻。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "十一点是下一班列车的时刻",
+          "distortion": "把发车时刻当作提前见面的时刻"
+        },
+        "C": {
+          "misconception": "把目的地活动时间当作站台碰面时间",
+          "mechanism": "选项 C「At 12.00.」保留“音乐会定于十二点”，却把目的地活动时间当作站台碰面时间。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "音乐会定于十二点",
+          "distortion": "把目的地活动时间当作站台碰面时间"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "b02ae57fc707eebf8ddc3bd54bd69a0d7f3c71f702421a6dbeba49f0cc4a9c9c",
+          "reference_number": 3,
+          "comparison": "2025年同题位「What are the speakers talking about?」。两年题3都问谈话主题，此题做一步原因推断。 本题取证：办卡只需要脸部照片；work 是女士穿夹克的去处，没有另借的安排。"
+        },
+        "2026": {
+          "version_sha256": "7ba2ac9565b051929454461e62909f508fed7731a592290b1607702294cd4d12",
+          "reference_number": 3,
+          "comparison": "2026年同题位「What are the speakers talking about?」。两年题3都问谈话主题，此题做一步原因推断。 本题取证：办卡只需要脸部照片；work 是女士穿夹克的去处，没有另借的安排。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "证件照只要面部，男士决定照原样去。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "办卡只需要脸部照片；work 是女士穿夹克的去处，没有另借的安排。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Only the man's face is needed for a card."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。办卡只需要脸部照片；work 是女士穿夹克的去处，没有另借的安排。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。办卡只需要脸部照片；work 是女士穿夹克的去处，没有另借的安排。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把 work 的所属人物及目的移给去拍证件照的男子",
+          "mechanism": "选项 A「He will take the picture at work.」保留“女士要穿蓝夹克上班”，却把 work 的所属人物及目的移给去拍证件照的男子。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "女士要穿蓝夹克上班",
+          "distortion": "把 work 的所属人物及目的移给去拍证件照的男子"
+        },
+        "C": {
+          "misconception": "以为放弃这件就必然另借一件，忽略 go as I am",
+          "mechanism": "选项 C「He can borrow another one for the picture.」保留“男子本想借衣服”，却以为放弃这件就必然另借一件，忽略 go as I am。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "男子本想借衣服",
+          "distortion": "以为放弃这件就必然另借一件，忽略 go as I am"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1675657ea9037d8f0e4f08b6b49561fc3d167e2ac269f656e417a05277bb2de1",
+          "reference_number": 4,
+          "comparison": "2025年同题位「What does the woman think of the ski area?」。所给基准缺此题位原题；属首节短对话中的动机判断。 本题取证：暗河水衬托亮船，优先引导视线到船上。问句提到缺蓝色，女士明确说颜料充足。"
+        },
+        "2026": {
+          "version_sha256": "2ef6c1ec21552c931110639ca13637d84474f45a799b41d5334956de37d36bcd",
+          "reference_number": 4,
+          "comparison": "2026年同题位「What does the woman suggest Max do?」。所给基准缺此题位原题；属首节短对话中的动机判断。 本题取证：暗河水衬托亮船，优先引导视线到船上。问句提到缺蓝色，女士明确说颜料充足。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "她让背景水面变暗，是想让亮色小船成为注视中心。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "暗河水衬托亮船，优先引导视线到船上。问句提到缺蓝色，女士明确说颜料充足。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Dark water makes the little bright boat stand out."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。暗河水衬托亮船，优先引导视线到船上。问句提到缺蓝色，女士明确说颜料充足。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。暗河水衬托亮船，优先引导视线到船上。问句提到缺蓝色，女士明确说颜料充足。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把暗色作用推成表现河深，未接上 bright little boat",
+          "mechanism": "选项 A「To make the bend look deeper.」保留“提问者注意到暗色的河湾”，却把暗色作用推成表现河深，未接上 bright little boat。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "提问者注意到暗色的河湾",
+          "distortion": "把暗色作用推成表现河深，未接上 bright little boat"
+        },
+        "B": {
+          "misconception": "把引导目光误作忠实还原河色",
+          "mechanism": "选项 B「To show the colour of the river.」保留“河水颜色是两人讨论的画面细节”，却把引导目光误作忠实还原河色。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "河水颜色是两人讨论的画面细节",
+          "distortion": "把引导目光误作忠实还原河色"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "961dda4d8ee9a04c3a6c207cb7f740cbdfd17188a91c190e265e9c0a29a912df",
+          "reference_number": 5,
+          "comparison": "2025年同题位「Where are the speakers heading?」。25题5问目的地、26题5问打电话意图，这里由角色动作推断客服情境。 本题取证：另一条线上有等他核查预订的女士；预订属于来电者，送别聚会已经开始。"
+        },
+        "2026": {
+          "version_sha256": "f81745e792ddaf2209606bb7d30a8808702b26066702fee956dc42ad3d5cbb83",
+          "reference_number": 5,
+          "comparison": "2026年同题位「Why does Sarah make the phone call?」。25题5问目的地、26题5问打电话意图，这里由角色动作推断客服情境。 本题取证：另一条线上有等他核查预订的女士；预订属于来电者，送别聚会已经开始。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "他让同事留一块蛋糕，因为电话另一端的女士等他查她的预订。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "另一条线上有等他核查预订的女士；预订属于来电者，送别聚会已经开始。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A customer on the other line is waiting for him to check her booking."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。另一条线上有等他核查预订的女士；预订属于来电者，送别聚会已经开始。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。另一条线上有等他核查预订的女士；预订属于来电者，送别聚会已经开始。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把 booking 的所有者从等候的来电者移成男子本人",
+          "mechanism": "选项 B「Making a booking for himself.」保留“通话中确实在核查预订”，却把 booking 的所有者从等候的来电者移成男子本人。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "通话中确实在核查预订",
+          "distortion": "把 booking 的所有者从等候的来电者移成男子本人"
+        },
+        "C": {
+          "misconception": "把将要参加误作此刻正在筹办",
+          "mechanism": "选项 C「Arranging a party for Ben.」保留“同事正邀请男子为 Ben 送别”，却把将要参加误作此刻正在筹办。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "同事正邀请男子为 Ben 送别",
+          "distortion": "把将要参加误作此刻正在筹办"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "2755c9ae3403299d56ba33b122b04bd99dfcb63e58f4a187cd716b61b3bc9e9a",
+          "reference_number": 6,
+          "comparison": "2025年同题位「What did the woman do?」。与25题6从对话辨认实际事件相近，辨初疑和最终诊断。 本题取证：页纸只是粘住；标题与春季舞者文章吻合，冬季照片才是错配。"
+        },
+        "2026": {
+          "version_sha256": "228d24711a6f29d01c0657f3ad93ede1190493b7c5ce239dd511d6c78115aec1",
+          "reference_number": 6,
+          "comparison": "2026年同题位「What makes Copenhagen different from London in Lisa’s eyes?」。与25题6从对话辨认实际事件相近，辨初疑和最终诊断。 本题取证：页纸只是粘住；标题与春季舞者文章吻合，冬季照片才是错配。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "页被粘住并未遗失，标题与春季舞者的文章一致，错误在照片是冬季音乐会。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "页纸只是粘住；标题与春季舞者文章吻合，冬季照片才是错配。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Stuck pages explain the false alarm. A winter-concert photograph appears with a spring-dance article."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。页纸只是粘住；标题与春季舞者文章吻合，冬季照片才是错配。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。页纸只是粘住；标题与春季舞者文章吻合，冬季照片才是错配。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "忽略原页已经找到，仍认定文章缺失",
+          "mechanism": "选项 A「An article is missing.」保留“两页粘住一度像少了一页”，却忽略原页已经找到，仍认定文章缺失。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "两页粘住一度像少了一页",
+          "distortion": "忽略原页已经找到，仍认定文章缺失"
+        },
+        "C": {
+          "misconception": "未联系春季舞者的正文，把冬季照片的问题归到标题上",
+          "mechanism": "选项 C「A heading names the wrong season.」保留“标题与季节都在版面上”，却未联系春季舞者的正文，把冬季照片的问题归到标题上。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "标题与季节都在版面上",
+          "distortion": "未联系春季舞者的正文，把冬季照片的问题归到标题上"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "4e7289cd2bb331a7d2b1d1c3c3bd9c1c76accd03d190789ae4390e52190ca85a",
+          "reference_number": 7,
+          "comparison": "2025年同题位「What time does school finish on Wednesdays?」。两年题7问时间或最初目的；此题考请求与行动者。 本题取证：Nia 要原尺寸照片，裁边她来做，舞者已给出姓名。"
+        },
+        "2026": {
+          "version_sha256": "33248b3f23be57735c587a07a60d9c55c5942f3c49b8f71836be06921a88f945",
+          "reference_number": 7,
+          "comparison": "2026年同题位「Why did Lisa originally come to Copenhagen?」。两年题7问时间或最初目的；此题考请求与行动者。 本题取证：Nia 要原尺寸照片，裁边她来做，舞者已给出姓名。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "Nia要求原尺寸传照片，边缘由她裁，舞者名字已齐。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "Nia 要原尺寸照片，裁边她来做，舞者已给出姓名。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Nia will crop the photograph herself and asks Sam to send its original size."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。Nia 要原尺寸照片，裁边她来做，舞者已给出姓名。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。Nia 要原尺寸照片，裁边她来做，舞者已给出姓名。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "忽略姓名已由舞者提供，误指为 Sam 的任务",
+          "mechanism": "选项 A「List the dancers' names.」保留“照片需要舞者姓名”，却忽略姓名已由舞者提供，误指为 Sam 的任务。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "照片需要舞者姓名",
+          "distortion": "忽略姓名已由舞者提供，误指为 Sam 的任务"
+        },
+        "B": {
+          "misconception": "将 Nia 接手的操作交给了 Sam",
+          "mechanism": "选项 B「Cut the edges off his photo.」保留“照片的边缘需要剪裁”，却将 Nia 接手的操作交给了 Sam。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "照片的边缘需要剪裁",
+          "distortion": "将 Nia 接手的操作交给了 Sam"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "8c66e08abda10fd6d69597f222659dbe22af0a287805880442c93ccaf2e4e226",
+          "reference_number": 8,
+          "comparison": "2025年同题位「What is the relationship between the speakers?」。基准未列题8，以第二节长对话中区分问题与既有解决条件为参照。 本题取证：她说明 narrow door 后询问可否拆腿；哥哥有车，网上售货及房屋地址属于卖家。"
+        },
+        "2026": {
+          "version_sha256": "db95f91ed47ddc56a44c3b8e25488a25ed61afe0b554b09a807b06c1a71320c1",
+          "reference_number": 8,
+          "comparison": "2026年同题位「What is the total budget for the dinner?」。基准未列题8，以第二节长对话中区分问题与既有解决条件为参照。 本题取证：她说明 narrow door 后询问可否拆腿；哥哥有车，网上售货及房屋地址属于卖家。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "她哥哥有车，她担心的是桌子能否穿过窄门，所以问桌腿能否拆。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "她说明 narrow door 后询问可否拆腿；哥哥有车，网上售货及房屋地址属于卖家。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Her brother has a car; the narrow doorway worries her."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。她说明 narrow door 后询问可否拆腿；哥哥有车，网上售货及房屋地址属于卖家。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。她说明 narrow door 后询问可否拆腿；哥哥有车，网上售货及房屋地址属于卖家。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把哥哥已经提供的车当作尚未解决的困难",
+          "mechanism": "选项 B「Finding a car for the journey.」保留“搬桌确实需要车辆”，却把哥哥已经提供的车当作尚未解决的困难。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "搬桌确实需要车辆",
+          "distortion": "把哥哥已经提供的车当作尚未解决的困难"
+        },
+        "C": {
+          "misconception": "把卖家提供的信息当作买家搬运时的难处",
+          "mechanism": "选项 C「Putting the right address online.」保留“卖家网上登出桌子并解释地址”，却把卖家提供的信息当作买家搬运时的难处。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "卖家网上登出桌子并解释地址",
+          "distortion": "把卖家提供的信息当作买家搬运时的难处"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e3c092315b9dd10e15b5e4b27a6e0bbe7416e1cd2e4c0703153bf21107257032",
+          "reference_number": 9,
+          "comparison": "2025年同题位「Who will Grace have dinner with?」。两年题9问晚餐参与者或场合；这里需将价格与交付条件匹配。 本题取证：自行取货四十，五十含送货，差额十英镑。"
+        },
+        "2026": {
+          "version_sha256": "38fbdeaa13abf9380a08a3cea5381b043a3a57ec0e1752b84f1d2e17a06662fc",
+          "reference_number": 9,
+          "comparison": "2026年同题位「What occasion is the dinner for?」。两年题9问晚餐参与者或场合；这里需将价格与交付条件匹配。 本题取证：自行取货四十，五十含送货，差额十英镑。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "她自行提货，末句明确带40英镑现金。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "自行取货四十，五十含送货，差额十英镑。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "They will collect the table themselves, avoiding the ten-pound delivery fee."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。自行取货四十，五十含送货，差额十英镑。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。自行取货四十，五十含送货，差额十英镑。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把附加运费当作商品的成交价",
+          "mechanism": "选项 A「Ten pounds.」保留“送货价比自取价高十镑”，却把附加运费当作商品的成交价。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "送货价比自取价高十镑",
+          "distortion": "把附加运费当作商品的成交价"
+        },
+        "C": {
+          "misconception": "未根据哥哥开车取货排除送货服务",
+          "mechanism": "选项 C「Fifty pounds.」保留“含送货一共五十镑”，却未根据哥哥开车取货排除送货服务。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "含送货一共五十镑",
+          "distortion": "未根据哥哥开车取货排除送货服务"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a12dfdd7b86ecadafcfa36cd87f69adcf052d76232e5aee6ce30def6d91f2bc6",
+          "reference_number": 10,
+          "comparison": "2025年同题位「What is Kevin going to do next?」。25、26题10均问将做何事，同样要根据最终约定作答。 本题取证：取货从房屋后方蓝门走，绿门是正门；房屋在 King Street 的岔道。"
+        },
+        "2026": {
+          "version_sha256": "d0f087a3a10ff939490b46627b94e20c60b2d82b9122cb377d7d981ef8cff7a6",
+          "reference_number": 10,
+          "comparison": "2026年同题位「What is the woman going to do for Mr. Lee?」。25、26题10均问将做何事，同样要根据最终约定作答。 本题取证：取货从房屋后方蓝门走，绿门是正门；房屋在 King Street 的岔道。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "约定开到蓝色大门，卖家会把桌子搬到那里。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "取货从房屋后方蓝门走，绿门是正门；房屋在 King Street 的岔道。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The seller will bring the table to the blue gate behind the house."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。取货从房屋后方蓝门走，绿门是正门；房屋在 King Street 的岔道。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。取货从房屋后方蓝门走，绿门是正门；房屋在 King Street 的岔道。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把前门误作约定交割地点",
+          "mechanism": "选项 A「By the green door.」保留“绿门的确在这栋房子上”，却把前门误作约定交割地点。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "绿门的确在这栋房子上",
+          "distortion": "把前门误作约定交割地点"
+        },
+        "B": {
+          "misconception": "把进入岔路前的街名误作最后会合点",
+          "mechanism": "选项 B「On King Street.」保留“King Street 可作寻找房屋的路标”，却把进入岔路前的街名误作最后会合点。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "King Street 可作寻找房屋的路标",
+          "distortion": "把进入岔路前的街名误作最后会合点"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "d4d498064834fbb3881479bc324d0eb37017f6d18ffc424d6a24e265b3685adc",
+          "reference_number": 11,
+          "comparison": "2025年同题位「What does the woman say about news programs?」。与26题11识别职业角色相近，本题区分节目体裁和剧情地点。 本题取证：录制的是广播剧，酒店是故事场景，女演员在剧中说台词。"
+        },
+        "2026": {
+          "version_sha256": "4a6d9c1e1588e024b1f735ee8266d642c5b5f1b433262d50b49246d33ea2eba5",
+          "reference_number": 11,
+          "comparison": "2026年同题位「What does Jenny do?」。与26题11识别职业角色相近，本题区分节目体裁和剧情地点。 本题取证：录制的是广播剧，酒店是故事场景，女演员在剧中说台词。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "广播台为一部广播剧配楼梯脚步声。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "录制的是广播剧，酒店是故事场景，女演员在剧中说台词。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "She is supplying footsteps for a radio drama."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。录制的是广播剧，酒店是故事场景，女演员在剧中说台词。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。录制的是广播剧，酒店是故事场景，女演员在剧中说台词。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "将剧情地点当作广播节目的题材",
+          "mechanism": "选项 B「A programme about a hotel.」保留“广播剧中的台阶位于酒店”，却将剧情地点当作广播节目的题材。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "广播剧中的台阶位于酒店",
+          "distortion": "将剧情地点当作广播节目的题材"
+        },
+        "C": {
+          "misconception": "将她演角色说台词误作受访",
+          "mechanism": "选项 C「An interview with an actress.」保留“女演员确实参与录音”，却将她演角色说台词误作受访。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "女演员确实参与录音",
+          "distortion": "将她演角色说台词误作受访"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "af32330a8da5bbd3cbfdb52440659b0b1e229985542da6ba8b89a2149b790e31",
+          "reference_number": 12,
+          "comparison": "2025年同题位「What is the man's attitude toward reality shows?」。此题位未给对照正文，任务属长对话中由声音差别推原因。 本题取证：运动鞋听起来像走在地毯上，与设定的裸木楼梯不符；声音听得见，问题是质感。"
+        },
+        "2026": {
+          "version_sha256": "ad944ef6c44285c9782e9723403649515ad6be033f609a935381871336ce99a2",
+          "reference_number": 12,
+          "comparison": "2026年同题位「How does the woman feel about what Jenny has done?」。此题位未给对照正文，任务属长对话中由声音差别推原因。 本题取证：运动鞋听起来像走在地毯上，与设定的裸木楼梯不符；声音听得见，问题是质感。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "运动鞋听起来像在地毯上走，木楼梯要用硬底鞋和板。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "运动鞋听起来像走在地毯上，与设定的裸木楼梯不符；声音听得见，问题是质感。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Trainers sound as though she is on carpet rather than bare wooden stairs."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。运动鞋听起来像走在地毯上，与设定的裸木楼梯不符；声音听得见，问题是质感。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。运动鞋听起来像走在地毯上，与设定的裸木楼梯不符；声音听得见，问题是质感。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将更换的原因推成穿着舒适度",
+          "mechanism": "选项 A「Her own pair was uncomfortable.」保留“运动鞋确实被一双硬鞋替换”，却将更换的原因推成穿着舒适度。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "运动鞋确实被一双硬鞋替换",
+          "distortion": "将更换的原因推成穿着舒适度"
+        },
+        "B": {
+          "misconception": "把木地板与地毯的音色区别误作可听见的音量区别",
+          "mechanism": "选项 B「The first recording was too quiet to hear.」保留“第一次录下的脚步声需要改变”，却把木地板与地毯的音色区别误作可听见的音量区别。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "第一次录下的脚步声需要改变",
+          "distortion": "把木地板与地毯的音色区别误作可听见的音量区别"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "f1c02eab2011566c4be5c7c0570db19f4f435806153e505db8628cac7b5ae734",
+          "reference_number": 13,
+          "comparison": "2025年同题位「What does the woman expect TV programs to be?」。25题13问节目期待、26题13问后续行动；此处追踪实际怎样解决节奏问题。 本题取证：演员每希望出现一步就抬一下手指；男子提供鞋和木板，没有示范速度。"
+        },
+        "2026": {
+          "version_sha256": "e890974ceb14224b56dd7cad6e1333f86f3163d1bd8e65ecc74129ceb7603935",
+          "reference_number": 13,
+          "comparison": "2026年同题位「What will the man do next?」。25题13问节目期待、26题13问后续行动；此处追踪实际怎样解决节奏问题。 本题取证：演员每希望出现一步就抬一下手指；男子提供鞋和木板，没有示范速度。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "女演员每想要一个脚步便举手指，她按照这个信号走。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "演员每希望出现一步就抬一下手指；男子提供鞋和木板，没有示范速度。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The actress raises a finger to cue each footstep."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。演员每希望出现一步就抬一下手指；男子提供鞋和木板，没有示范速度。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。演员每希望出现一步就抬一下手指；男子提供鞋和木板，没有示范速度。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把观察演员手势误作自己数台词",
+          "mechanism": "选项 A「By counting the lines in the script.」保留“台词时长影响应走几步”，却把观察演员手势误作自己数台词。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "台词时长影响应走几步",
+          "distortion": "把观察演员手势误作自己数台词"
+        },
+        "C": {
+          "misconception": "将器材协助推成示范走路节奏",
+          "mechanism": "选项 C「By matching the man's walking speed.」保留“男工作人员给了鞋和木板”，却将器材协助推成示范走路节奏。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "男工作人员给了鞋和木板",
+          "distortion": "将器材协助推成示范走路节奏"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "50b1d78b630fc6744cedfc9927cb9456191c9205cc88b2d5508dac6aae61ecab",
+          "reference_number": 14,
+          "comparison": "2025年同题位「Who is Cathy?」。同位基准是身份或陈述细节；本题同时带时间和书桌位置两个条件。 本题取证：左桌降至一镑，右桌维持原价，童书多数在右桌。"
+        },
+        "2026": {
+          "version_sha256": "dcf36a91c0e5883409424277882d9b1ee1298e0eca9ab4f0ca16bfd3167dae1e",
+          "reference_number": 14,
+          "comparison": "2026年同题位「What does Evans say about ancient Babylonia?」。同位基准是身份或陈述细节；本题同时带时间和书桌位置两个条件。 本题取证：左桌降至一镑，右桌维持原价，童书多数在右桌。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "十一点后左桌全场一镑，右桌维持原价。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "左桌降至一镑，右桌维持原价，童书多数在右桌。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "After eleven the left table drops to one pound; prices on the right stay put."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。左桌降至一镑，右桌维持原价，童书多数在右桌。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。左桌降至一镑，右桌维持原价，童书多数在右桌。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把左桌降价误听为儿童读物移到左桌",
+          "mechanism": "选项 B「Children's books move to the left.」保留“多数儿童读物在右桌”，却把左桌降价误听为儿童读物移到左桌。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "多数儿童读物在右桌",
+          "distortion": "把左桌降价误听为儿童读物移到左桌"
+        },
+        "C": {
+          "misconception": "忽略十一点后只有左桌统一降价",
+          "mechanism": "选项 C「Hardbacks cost the same on both tables.」保留“精装书最初有统一标价”，却忽略十一点后只有左桌统一降价。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "精装书最初有统一标价",
+          "distortion": "忽略十一点后只有左桌统一降价"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1568d286a5fcddd78addd221071dde594d3ab4716fb2c74fc25d467951cafe6d",
+          "reference_number": 15,
+          "comparison": "2025年同题位「What can the visiting adults do in the school?」。与26题15辨初始解释相近，须辨预留待看和已成交。 本题取证：受托挑海洋图书后留给老师查看；老师还没见到，没有付款信息。"
+        },
+        "2026": {
+          "version_sha256": "f87f6f2ecd294966ffad45df3c8f06d8dfb59b437d3f8270c61bf903a1d905b1",
+          "reference_number": 15,
+          "comparison": "2026年同题位「What did people initially think the ancient texts were about?」。与26题15辨初始解释相近，须辨预留待看和已成交。 本题取证：受托挑海洋图书后留给老师查看；老师还没见到，没有付款信息。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "老师想看海洋书，Mr Reed暂替她挑出六本，等她来决定。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "受托挑海洋图书后留给老师查看；老师还没见到，没有付款信息。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A teacher has requested sea books but has still to inspect the six selected for her."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。受托挑海洋图书后留给老师查看；老师还没见到，没有付款信息。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。受托挑海洋图书后留给老师查看；老师还没见到，没有付款信息。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把留给老师查看的六册理解成等待定价",
+          "mechanism": "选项 A「They still need to be priced.」保留“摊位在谈不同时间和装帧的价格”，却把留给老师查看的六册理解成等待定价。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "摊位在谈不同时间和装帧的价格",
+          "distortion": "把留给老师查看的六册理解成等待定价"
+        },
+        "B": {
+          "misconception": "把暂留供看误作学校已付款",
+          "mechanism": "选项 B「They have been paid for by a school.」保留“六册书是按学校老师的要求选的”，却把暂留供看误作学校已付款。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "六册书是按学校老师的要求选的",
+          "distortion": "把暂留供看误作学校已付款"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "5a94c4720d30d668aa72e8e85a5488f7daa2ecc00b82c67e21107ac2458f8641",
+          "reference_number": 16,
+          "comparison": "2025年同题位「How can the students benefit from the school program?」。基准缺同号题，本题以card的一词多义设同一谈话内的误读。 本题取证：卡背是收书地址，给想捐书的人；银行卡支付找 Mr Reed。"
+        },
+        "2026": {
+          "version_sha256": "72618e152dc21aa296c8abdb0a46d89bef96de28fae1ed53aadf64754fae3d0f",
+          "reference_number": 16,
+          "comparison": "2026年同题位「What do we know about the French author Jean Bottéro?」。基准缺同号题，本题以card的一词多义设同一谈话内的误读。 本题取证：卡背是收书地址，给想捐书的人；银行卡支付找 Mr Reed。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "印小卡供询问捐书地点的人取用，背面印仓库地址。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "卡背是收书地址，给想捐书的人；银行卡支付找 Mr Reed。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The card gives the store's address to prospective donors."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。卡背是收书地址，给想捐书的人；银行卡支付找 Mr Reed。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。卡背是收书地址，给想捐书的人；银行卡支付找 Mr Reed。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把银行卡的 card 与印地址的纸卡混为一谈",
+          "mechanism": "选项 A「A buyer who wants to pay by card.」保留“刷卡付账确实要找摊主”，却把银行卡的 card 与印地址的纸卡混为一谈。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "刷卡付账确实要找摊主",
+          "distortion": "把银行卡的 card 与印地址的纸卡混为一谈"
+        },
+        "C": {
+          "misconception": "把买方与主动送书给书摊的捐赠方混淆",
+          "mechanism": "选项 C「A teacher who orders books for a class.」保留“老师确实为学生选书”，却把买方与主动送书给书摊的捐赠方混淆。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "老师确实为学生选书",
+          "distortion": "把买方与主动送书给书摊的捐赠方混淆"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "20c8505390cd8e14967a7dfac1956b85705432e691f7ff9e74dbad917c0c358e",
+          "reference_number": 17,
+          "comparison": "2025年同题位「What is the goal of the school program?」。两年题17从独白提取目标或要求，此题追问改变判断的证据。 本题取证：反复出现相同号码且无泳者姓名使她怀疑奖牌解释；铜质和铁盒是外观背景。"
+        },
+        "2026": {
+          "version_sha256": "39613c39797b8d0ed9eaf10b221060ba06eeacb7c6e73cb3295c8ecc0f7245c9",
+          "reference_number": 17,
+          "comparison": "2026年同题位「What must the students wear when doing the experiment?」。两年题17从独白提取目标或要求，此题追问改变判断的证据。 本题取证：反复出现相同号码且无泳者姓名使她怀疑奖牌解释；铜质和铁盒是外观背景。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "号码反复出现且没有姓名，June从中怀疑黄铜圆片并非奖章。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "return",
+          "evidence": "B说金属很轻，脚本未谈重量；C说盒子上有俱乐部名字，也没有相应描述。两个干扰项均不考对原对白理由的区分，可用‘相片里有人交还铜牌’等真实但发生较晚的细节替换一项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The repeated numbers, coupled with the absence of names, made the medal theory doubtful."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。反复出现相同号码且无泳者姓名使她怀疑奖牌解释；铜质和铁盒是外观背景。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。反复出现相同号码且无泳者姓名使她怀疑奖牌解释；铜质和铁盒是外观背景。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "选项却只说金属很轻，材料没有提到重量",
+          "mechanism": "选项 B「Their metal was very light.」保留“材料说筹码用铜制成”，却选项却只说金属很轻，材料没有提到重量。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": false,
+          "unchanged": "材料说筹码用铜制成",
+          "distortion": "选项却只说金属很轻，材料没有提到重量"
+        },
+        "C": {
+          "misconception": "选项另说盒上有俱乐部名，原文没有铭文线索",
+          "mechanism": "选项 C「Their box had a club name on it.」保留“物件在收藏盒中找到”，却选项另说盒上有俱乐部名，原文没有铭文线索。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": false,
+          "unchanged": "物件在收藏盒中找到",
+          "distortion": "选项另说盒上有俱乐部名，原文没有铭文线索"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "30abe5bac42181cd98eefb50fcceb4b398ee2edaf50641a894485c5e75b4963e",
+          "reference_number": 18,
+          "comparison": "2025年同题位「Where is the speaker's city located?」。与两年同位独白事实/操作题相当，需理解编号用途。 本题取证：照片与老会员的解释将筹码号码对应到衣篮，凭筹码取回衣物。"
+        },
+        "2026": {
+          "version_sha256": "8afd23157d238b0ee9f18171543749a8b4ed1ec2eb4b684208aee00ab60431c4",
+          "reference_number": 18,
+          "comparison": "2026年同题位「What should the students do if they knock over a chemical container?」。与两年同位独白事实/操作题相当，需理解编号用途。 本题取证：照片与老会员的解释将筹码号码对应到衣篮，凭筹码取回衣物。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "圆片编号和篮子对应，游泳者凭号领回衣服。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "照片与老会员的解释将筹码号码对应到衣篮，凭筹码取回衣物。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Discs identified the numbered baskets that held swimmers’ clothes."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。照片与老会员的解释将筹码号码对应到衣篮，凭筹码取回衣物。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。照片与老会员的解释将筹码号码对应到衣篮，凭筹码取回衣物。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把凭号码取回衣服的功能误作入池许可",
+          "mechanism": "选项 A「Entering the pool.」保留“筹码在游泳俱乐部使用”，却把凭号码取回衣服的功能误作入池许可。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "筹码在游泳俱乐部使用",
+          "distortion": "把凭号码取回衣服的功能误作入池许可"
+        },
+        "B": {
+          "misconception": "把篮筐编号误解为比赛用的时间记录",
+          "mechanism": "选项 B「Recording a race time.」保留“筹码上印着数字，游泳可以计时”，却把篮筐编号误解为比赛用的时间记录。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "筹码上印着数字，游泳可以计时",
+          "distortion": "把篮筐编号误解为比赛用的时间记录"
+        }
+      }
+    },
+    {
+      "number": 19,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "151dd5c405a749b249324bb9f9a1c857ad61af358cdad5a6817c09f25449b305",
+          "reference_number": 19,
+          "comparison": "2025年同题位「What do the numbers on the signs stand for?」。25、26题19均从长材料中辨别信息用途或原因；此处区分已知未知。 本题取证：男孩的姓名已知，现在寻找按快门的人以便展示照片。"
+        },
+        "2026": {
+          "version_sha256": "f6541cc0e1ae12ef951cc0d22581c97c6a6fae537563b51314f747e903111467",
+          "reference_number": 19,
+          "comparison": "2026年同题位「Why should the students switch roles?」。25、26题19均从长材料中辨别信息用途或原因；此处区分已知未知。 本题取证：男孩的姓名已知，现在寻找按快门的人以便展示照片。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "照片里男孩的姓名已有答案，June还想知道拍摄者是谁。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "男孩的姓名已知，现在寻找按快门的人以便展示照片。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The boy has already been identified; the speaker wants the photographer’s name."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。男孩的姓名已知，现在寻找按快门的人以便展示照片。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。男孩的姓名已知，现在寻找按快门的人以便展示照片。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把追查照片作者误作追查俱乐部创立年代",
+          "mechanism": "选项 A「When the club first opened.」保留“照片可追溯至二十世纪七十年代”，却把追查照片作者误作追查俱乐部创立年代。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "照片可追溯至二十世纪七十年代",
+          "distortion": "把追查照片作者误作追查俱乐部创立年代"
+        },
+        "C": {
+          "misconception": "把已解答的身份问题当作当前问题",
+          "mechanism": "选项 C「What the boy in the picture was called.」保留“大家已说出照片中男孩是谁”，却把已解答的身份问题当作当前问题。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "大家已说出照片中男孩是谁",
+          "distortion": "把已解答的身份问题当作当前问题"
+        }
+      }
+    },
+    {
+      "number": 20,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "0e165cbef1779bb9560f538e80202ea6e01df5e4eebac1cf07de33faa11f8e1f",
+          "reference_number": 20,
+          "comparison": "2025年同题位「What does the success of the project indicate?」。所给基准缺此题位；属独白结尾的行动安排。 本题取证：现场复制，当天取回原件；计划在门厅展出的特指早先提到的更衣室照片。"
+        },
+        "2026": {
+          "version_sha256": "02df4234420952b0bf0f3ea465a109c368f2d7940391b5ea5b8188409f5cd9de",
+          "reference_number": 20,
+          "comparison": "2026年同题位「What should the students do if they finish early?」。所给基准缺此题位；属独白结尾的行动安排。 本题取证：现场复制，当天取回原件；计划在门厅展出的特指早先提到的更衣室照片。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "先区分说话者与事件顺序",
+          "开放日当场复制，原件当天交还。"
+        ],
+        "linked_concepts": [
+          "听力关键信息",
+          "意图与语境"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "现场复制，当天取回原件；计划在门厅展出的特指早先提到的更衣室照片。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The club will copy photographs on the spot and return them that day."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。现场复制，当天取回原件；计划在门厅展出的特指早先提到的更衣室照片。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "日常对话、工作协商及游泳俱乐部的口头通知",
+        "evidence": "日常对话、工作协商及游泳俱乐部的口头通知。现场复制，当天取回原件；计划在门厅展出的特指早先提到的更衣室照片。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把复制后当场归还推迟到下一次会面",
+          "mechanism": "选项 B「They will be kept until the next meeting.」保留“大家在本次聚会获知下月活动”，却把复制后当场归还推迟到下一次会面。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "大家在本次聚会获知下月活动",
+          "distortion": "把复制后当场归还推迟到下一次会面"
+        },
+        "C": {
+          "misconception": "把一张已选照片的去向扩大到所有来件",
+          "mechanism": "选项 C「They will be put straight on the hall wall.」保留“门厅拟展出那一张旧更衣室照片”，却把一张已选照片的去向扩大到所有来件。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "门厅拟展出那一张旧更衣室照片",
+          "distortion": "把一张已选照片的去向扩大到所有来件"
+        }
+      }
+    },
+    {
+      "number": 21,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "06d86171dcf70896b5e91f2639b27e2364162898f8f5c97bf8c9ce768d4656e1",
+          "reference_number": 21,
+          "comparison": "2025年同题位「What percentage of global transport emissions did road vehicles account for in 2018?」。25题21取数据、26题21读日程，本题同样定位活动条款。 本题取证：Flour Lab 在现场桌旁登记。导览需提前网上预约，电影按空位入场，果园野餐没有报名程序。"
+        },
+        "2026": {
+          "version_sha256": "397f5110111ae3e76ecc76cb52bd8d456652e4ff9cf1487f8b44bde42d06a74b",
+          "reference_number": 21,
+          "comparison": "2026年同题位「Which team will play the most games at the stadium this month」。25题21取数据、26题21读日程，本题同样定位活动条款。 本题取证：Flour Lab 在现场桌旁登记。导览需提前网上预约，电影按空位入场，果园野餐没有报名程序。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "Flour Lab要求周六早晨直接把名字写在桌旁名单上。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "Flour Lab 在现场桌旁登记。导览需提前网上预约，电影按空位入场，果园野餐没有报名程序。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Flour Lab takes names at the yard table on Saturday morning."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。",
+        "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "忽略其必须在星期五晚以前网上预约",
+          "mechanism": "选项 A「Meet the Millers.」保留“导览也要求登记席位”，却忽略其必须在星期五晚以前网上预约。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "导览也要求登记席位",
+          "distortion": "忽略其必须在星期五晚以前网上预约"
+        },
+        "C": {
+          "misconception": "把先到先坐误作当日在活动处报名",
+          "mechanism": "选项 C「Mill on Film.」保留“影片也须在放映室门口入场”，却把先到先坐误作当日在活动处报名。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "影片也须在放映室门口入场",
+          "distortion": "把先到先坐误作当日在活动处报名"
+        },
+        "D": {
+          "misconception": "把开放进入误作需到场登记",
+          "mechanism": "选项 D「A picnic in the orchard.」保留“野餐者也可在当日去果园”，却把开放进入误作需到场登记。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "野餐者也可在当日去果园",
+          "distortion": "把开放进入误作需到场登记"
+        }
+      },
+      "reading_turn": {
+        "span": "Put your name on the list at the table on Saturday morning.",
+        "from": "Put your name on the list at the table on Saturday morning.",
+        "to": "Flour Lab 在现场桌旁登记。导览需提前网上预约，电影按空位入场，果园野餐没有报名程序。"
+      }
+    },
+    {
+      "number": 22,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a32f826abecea86bfd923c8d82fbbdb5a5ceaa808da7d86ce1f04d5345b13a4c",
+          "reference_number": 22,
+          "comparison": "2025年同题位「Which mode of transport can go green comparatively easily?」。与26题22从场地信息择便利方案较近，另需整合可达性和时间。 本题取证：影片拍摄楼上流程，放映室在一楼且无台阶；14点前五分钟开门。其余时段对应须爬楼的导览或院内磨粉活动。"
+        },
+        "2026": {
+          "version_sha256": "e34606ae295a771c7d9d16771796cecb8b56acb546f93cffbd044d772968b6f9",
+          "reference_number": 22,
+          "comparison": "2026年同题位「Which hotel is nearest to the stadium」。与26题22从场地信息择便利方案较近，另需整合可达性和时间。 本题取证：影片拍摄楼上流程，放映室在一楼且无台阶；14点前五分钟开门。其余时段对应须爬楼的导览或院内磨粉活动。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "电影从无台阶的底层放映上层房间，14:00场提前五分钟开门。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "影片拍摄楼上流程，放映室在一楼且无台阶；14点前五分钟开门。其余时段对应须爬楼的导览或院内磨粉活动。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The ground-floor cinema shows the upstairs rooms and admits people five minutes before the 14:00 showing."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。",
+        "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "漏看要爬两段楼梯",
+          "mechanism": "选项 A「Reach the gate by 9.35.」保留“首场导览确需9.35前抵达”，却漏看要爬两段楼梯。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "首场导览确需9.35前抵达",
+          "distortion": "漏看要爬两段楼梯"
+        },
+        "B": {
+          "misconception": "它展示院内体验而非楼上房间",
+          "mechanism": "选项 B「Wait by the cart shed at 10.30.」保留“10.30有可平地抵达的磨粉项目”，却它展示院内体验而非楼上房间。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "10.30有可平地抵达的磨粉项目",
+          "distortion": "它展示院内体验而非楼上房间"
+        },
+        "C": {
+          "misconception": "忽略来访者无法爬梯的限制",
+          "mechanism": "选项 C「Follow the miller at 13.45.」保留“13.45可跟磨坊师傅看楼上”，却忽略来访者无法爬梯的限制。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "13.45可跟磨坊师傅看楼上",
+          "distortion": "忽略来访者无法爬梯的限制"
+        }
+      },
+      "reading_turn": {
+        "span": "Our film follows one sack of grain through the upper rooms.",
+        "from": "Our film follows one sack of grain through the upper rooms.",
+        "to": "影片拍摄楼上流程，放映室在一楼且无台阶；14点前五分钟开门。其余时段对应须爬楼的导览或院内磨粉活动。"
+      }
+    },
+    {
+      "number": 23,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "3e03049ee34c9cb0e8c5c3f08a685809e69caa72b9d1da71071ae8b96fd3aa9e",
+          "reference_number": 23,
+          "comparison": "2025年同题位「What does Wipke suggest regarding energy transition?」。与26题23停车须遵守的要求相近，读条件句即可。 本题取证：果园在院外，回到院内须验原票。平面图在最初入场时领取，文中没有凭票预留野餐位或延时开放的规定。"
+        },
+        "2026": {
+          "version_sha256": "947bbdafd81e1e81c22b42a75da88c139ed34befacd358affd4ed0b0dbc34421",
+          "reference_number": 23,
+          "comparison": "2026年同题位「What do you need to do if you want to park at the stadium」。与26题23停车须遵守的要求相近，读条件句即可。 本题取证：果园在院外，回到院内须验原票。平面图在最初入场时领取，文中没有凭票预留野餐位或延时开放的规定。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "门票用于从果园再次穿过院门。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "果园在院外，回到院内须验原票。平面图在最初入场时领取，文中没有凭票预留野餐位或延时开放的规定。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The entrance ticket lets a visitor come back through the yard gate."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。",
+        "evidence": "周六参观磨坊的分项活动说明，时刻、入场和预约措辞具体。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把重返院子的验票误解为可领第二份图",
+          "mechanism": "选项 B「To collect a second plan.」保留“入院时确实可领取纸制平面图”，却把重返院子的验票误解为可领第二份图。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "入院时确实可领取纸制平面图",
+          "distortion": "把重返院子的验票误解为可领第二份图"
+        },
+        "C": {
+          "misconception": "把回场查票扩大成野餐位预约",
+          "mechanism": "选项 C「To reserve a picnic place.」保留“持票参观者可以去果园野餐”，却把回场查票扩大成野餐位预约。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "持票参观者可以去果园野餐",
+          "distortion": "把回场查票扩大成野餐位预约"
+        },
+        "D": {
+          "misconception": "把留票误解为延长开放时间的许可",
+          "mechanism": "选项 D「To stay beyond closing time.」保留“果园有15时的结束时间”，却把留票误解为延长开放时间的许可。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "果园有15时的结束时间",
+          "distortion": "把留票误解为延长开放时间的许可"
+        }
+      },
+      "reading_turn": {
+        "span": "you will need it to come back through the gate",
+        "from": "you will need it to come back through the gate",
+        "to": "果园在院外，回到院内须验原票。平面图在最初入场时领取，文中没有凭票预留野餐位或延时开放的规定。"
+      }
+    },
+    {
+      "number": 24,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "21eeb4f7a7a8ab6621d670c31dc7d4505dd2c294052917c88a74131b4d0aa916",
+          "reference_number": 24,
+          "comparison": "2025年同题位「Who are the people mentioned at the beginning of paragraph 1?」。基准未附题24，两年B篇题位的叙事理解，此题立足起始行为。 本题取证：首段以裂纹和细绿线说明逐砖细描。到后排查看是午后，货架的痕迹由设计师启发，深色块是远观效果。"
+        },
+        "2026": {
+          "version_sha256": "fbae6d97bb0aa2d300a35f3668e761c8d4a6b42c2672f6e0d1f90fa68536243e",
+          "reference_number": 24,
+          "comparison": "2026年同题位「What does Kevin usually do to get the meaning of a word」。基准未附题24，两年B篇题位的叙事理解，此题立足起始行为。 本题取证：首段以裂纹和细绿线说明逐砖细描。到后排查看是午后，货架的痕迹由设计师启发，深色块是远观效果。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "每块砖分别画细裂纹，还画上绿色细线。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "首段以裂纹和细绿线说明逐砖细描。到后排查看是午后，货架的痕迹由设计师启发，深色块是远观效果。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The writer paints separate cracks and details into about thirty individual bricks."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。",
+        "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把午后学习新方法错置在午前",
+          "mechanism": "选项 A「By checking how the wall looked from each row.」保留“在后排比较画面确实发生过”，却把午后学习新方法错置在午前。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "在后排比较画面确实发生过",
+          "distortion": "把午后学习新方法错置在午前"
+        },
+        "B": {
+          "misconception": "把结尾新认识提前当作开工作法",
+          "mechanism": "选项 B「By finding out how the bakery had been used.」保留“旧面包房的过往后来成为想象对象”，却把结尾新认识提前当作开工作法。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "旧面包房的过往后来成为想象对象",
+          "distortion": "把结尾新认识提前当作开工作法"
+        },
+        "D": {
+          "misconception": "把远观效果当成最先画的目标",
+          "mechanism": "选项 D「By filling in the darkest areas of the cloth first.」保留“远看可见一个深色块”，却把远观效果当成最先画的目标。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "远看可见一个深色块",
+          "distortion": "把远观效果当成最先画的目标"
+        }
+      },
+      "reading_turn": {
+        "span": "Each had its own tiny cracks.",
+        "from": "Each had its own tiny cracks.",
+        "to": "首段以裂纹和细绿线说明逐砖细描。到后排查看是午后，货架的痕迹由设计师启发，深色块是远观效果。"
+      }
+    },
+    {
+      "number": 25,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "4664f4ca25c5e2ab3cb18ed6a9401f6a2091a1d27cede003d8fbd0b4e2daef35",
+          "reference_number": 25,
+          "comparison": "2025年同题位「Why did the students perform poorly in writing their first essay?」。25、26题25也从学习或查词事件追溯当事人的原因/感受。 本题取证：作者用带刺的语气问是否要在茶点时间前完成，误把换刷理解为催进度。Vera 随后用剧场距离解释真正用意。"
+        },
+        "2026": {
+          "version_sha256": "49e6b2b557b5033ce24f69d68902b17a4e367b7c5f6e34f8665fe01d43e98ce1",
+          "reference_number": 25,
+          "comparison": "2026年同题位「How did Kevin feel while looking up the word in the dictionary」。25、26题25也从学习或查词事件追溯当事人的原因/感受。 本题取证：作者用带刺的语气问是否要在茶点时间前完成，误把换刷理解为催进度。Vera 随后用剧场距离解释真正用意。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "作者听到大刷子的建议就讥问是不是喝茶前要完工，表明以为Vera在催进度。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "作者用带刺的语气问是否要在茶点时间前完成，误把换刷理解为催进度。Vera 随后用剧场距离解释真正用意。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "‘Done by tea?’ treats the large brush as a way of saving time."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。",
+        "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把变更观看位置误作必须移动木框",
+          "mechanism": "选项 A「The frame had been put in the wrong place.」保留“设计师和作者搬过椅子”，却把变更观看位置误作必须移动木框。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "设计师和作者搬过椅子",
+          "distortion": "把变更观看位置误作必须移动木框"
+        },
+        "C": {
+          "misconception": "把处理大片纹理误作要加深原有裂纹",
+          "mechanism": "选项 C「The cracks needed a darker colour.」保留“大刷子确实蘸了棕漆”，却把处理大片纹理误作要加深原有裂纹。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "大刷子确实蘸了棕漆",
+          "distortion": "把处理大片纹理误作要加深原有裂纹"
+        },
+        "D": {
+          "misconception": "扩写成必须重画整面墙",
+          "mechanism": "选项 D「The whole wall had to be repainted.」保留“大刷子改变了部分大面积效果”，却扩写成必须重画整面墙。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "大刷子改变了部分大面积效果",
+          "distortion": "扩写成必须重画整面墙"
+        }
+      },
+      "reading_turn": {
+        "span": "I suppose you'd like it done by tea?",
+        "from": "I suppose you'd like it done by tea?",
+        "to": "作者用带刺的语气问是否要在茶点时间前完成，误把换刷理解为催进度。Vera 随后用剧场距离解释真正用意。"
+      }
+    },
+    {
+      "number": 26,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "83eda2401c99b84bf93292fa139a2ef0ef3fef803eb6b06c369b163008752428",
+          "reference_number": 26,
+          "comparison": "2025年同题位「What does the underlined word “staggering” in paragraph 3 mean?」。与26题26从旧词典叙述还原信息相近，本题考含义推断。 本题取证：从后排能看出架子和罐子的痕迹；作者知道小裂纹在，是因为自己画过，而非从那里看得见。"
+        },
+        "2026": {
+          "version_sha256": "6c3042c4a12d46e1066acfa99cca23a16e6af94ab84db974a5ffbaf2800983f3",
+          "reference_number": 26,
+          "comparison": "2026年同题位「What can we learn about the author’s first dictionary」。与26题26从旧词典叙述还原信息相近，本题考含义推断。 本题取证：从后排能看出架子和罐子的痕迹；作者知道小裂纹在，是因为自己画过，而非从那里看得见。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "他之所以知道裂纹仍在，是因为自己画过；坐在后排已辨不出。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "从后排能看出架子和罐子的痕迹；作者知道小裂纹在，是因为自己画过，而非从那里看得见。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "From the back, the writer knows about the fine cracks only because of having painted them."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。",
+        "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把显出罐子淡影的灯光效果移到小裂纹",
+          "mechanism": "选项 A「The new lighting made them look deeper.」保留“舞台灯光打开了”，却把显出罐子淡影的灯光效果移到小裂纹。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "舞台灯光打开了",
+          "distortion": "把显出罐子淡影的灯光效果移到小裂纹"
+        },
+        "B": {
+          "misconception": "无根据地让裂纹承担定位货架的作用",
+          "mechanism": "选项 B「The designer had used them to locate the shelf.」保留“后来可看见货架的长痕”，却无根据地让裂纹承担定位货架的作用。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "后来可看见货架的长痕",
+          "distortion": "无根据地让裂纹承担定位货架的作用"
+        },
+        "C": {
+          "misconception": "把此效果移给早先细刷所画的裂纹",
+          "mechanism": "选项 C「The brush had given them the right shape.」保留“大刷子确实能塑造醒目的痕迹”，却把此效果移给早先细刷所画的裂纹。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "大刷子确实能塑造醒目的痕迹",
+          "distortion": "把此效果移给早先细刷所画的裂纹"
+        }
+      },
+      "reading_turn": {
+        "span": "I knew because I had painted them.",
+        "from": "I knew because I had painted them.",
+        "to": "从后排能看出架子和罐子的痕迹；作者知道小裂纹在，是因为自己画过，而非从那里看得见。"
+      }
+    },
+    {
+      "number": 27,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "95f211fd9b8e046f6c97f12c1f7a6f74b5ed651bb389042e7ccaac9edbef5161",
+          "reference_number": 27,
+          "comparison": "2025年同题位「What does the author’s experience show?」。25、26题27同样从亲历中提炼作者的新认识。 本题取证：女孩从空架想出面包，作者也开始想象发生过什么，用 we 进入场景。剧本并无面包，也没有在指自己的一小块。"
+        },
+        "2026": {
+          "version_sha256": "ff660007e1454a0b07a2d6a785ac066cfb024d5e5e87e3667219c9702738ca47",
+          "reference_number": 27,
+          "comparison": "2026年同题位「What has the author come to realize about learning」。25、26题27同样从亲历中提炼作者的新认识。 本题取证：女孩从空架想出面包，作者也开始想象发生过什么，用 we 进入场景。剧本并无面包，也没有在指自己的一小块。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "“We had a shelf there once”把虚构舞台当作有过去的厨房，呼应女孩说面包拿走了。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "女孩从空架想出面包，作者也开始想象发生过什么，用 we 进入场景。剧本并无面包，也没有在指自己的一小块。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "‘We had a shelf there once’ treats the painted traces as evidence of an imagined past."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。",
+        "evidence": "舞台绘景者回忆初入行时的误解，人物含蓄对话与观看距离推动转折。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把观众想象误作演员忘演的剧本细节",
+          "mechanism": "选项 B「The actors had left out an important detail about the shelf.」保留“观众想起了并未真放在台上的面包”，却把观众想象误作演员忘演的剧本细节。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "观众想起了并未真放在台上的面包",
+          "distortion": "把观众想象误作演员忘演的剧本细节"
+        },
+        "C": {
+          "misconception": "把虚构房间中货架的缺席误作布景设计摆错",
+          "mechanism": "选项 C「The shelf had been put in the wrong place by the designer.」保留“设计师画出的货架痕迹在场”，却把虚构房间中货架的缺席误作布景设计摆错。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "设计师画出的货架痕迹在场",
+          "distortion": "把虚构房间中货架的缺席误作布景设计摆错"
+        },
+        "D": {
+          "misconception": "把最终指向较长淡带误作介绍自绘区域边界",
+          "mechanism": "选项 D「The writer's own square reached the edge of the shelf.」保留“作者曾仔细画过一块方形区域”，却把最终指向较长淡带误作介绍自绘区域边界。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "作者曾仔细画过一块方形区域",
+          "distortion": "把最终指向较长淡带误作介绍自绘区域边界"
+        }
+      },
+      "reading_turn": {
+        "span": "We had a shelf there once",
+        "from": "We had a shelf there once",
+        "to": "女孩从空架想出面包，作者也开始想象发生过什么，用 we 进入场景。剧本并无面包，也没有在指自己的一小块。"
+      }
+    },
+    {
+      "number": 28,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a0f8b2c5d2cf670a381308cd1f5a12d2e7e2ddcf3851b3617ad5d3b20a0f2a59",
+          "reference_number": 28,
+          "comparison": "2025年同题位「What phenomenon does the author point out in paragraph 1?」。基准缺28题，属对研究设计的目的推断。 本题取证：录制的是屏幕，第二人被动看到相同画面及暂停，排除了时长和暂停位置不同。没有录制学习者的手，也没有请同伴纠错。"
+        },
+        "2026": {
+          "version_sha256": "0e19e6e755edb16f47841e227ed373d9ebc1c1aba9b0e83318293db24d83ffe7",
+          "reference_number": 28,
+          "comparison": "2026年同题位「What does the new study imply regarding oaks and sweetgums」。基准缺28题，属对研究设计的目的推断。 本题取证：录制的是屏幕，第二人被动看到相同画面及暂停，排除了时长和暂停位置不同。没有录制学习者的手，也没有请同伴纠错。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "录屏保证配对者所见画面、暂停位置和总时完全相同，区别在自主控制。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "录制的是屏幕，第二人被动看到相同画面及暂停，排除了时长和暂停位置不同。没有录制学习者的手，也没有请同伴纠错。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The recording gives the second learner the same sequence, every pause included."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。",
+        "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把记录画面改为记录、纠正同伴错误",
+          "mechanism": "选项 A「To let the second learner correct the first one's mistakes.」保留“后手看到前手所看的录像”，却把记录画面改为记录、纠正同伴错误。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "后手看到前手所看的录像",
+          "distortion": "把记录画面改为记录、纠正同伴错误"
+        },
+        "B": {
+          "misconception": "把解释新手暂停的背景当作实验控制目的",
+          "mechanism": "选项 B「To check how often the instructor's hands hid the knot.」保留“指导者的手确会短暂遮挡部分绳子”，却把解释新手暂停的背景当作实验控制目的。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "指导者的手确会短暂遮挡部分绳子",
+          "distortion": "把解释新手暂停的背景当作实验控制目的"
+        },
+        "D": {
+          "misconception": "将录屏误认为拍摄学习者如何拿绳",
+          "mechanism": "选项 D「To show each learner how a partner had handled the rope.」保留“前手的屏幕画面被记录”，却将录屏误认为拍摄学习者如何拿绳。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "前手的屏幕画面被记录",
+          "distortion": "将录屏误认为拍摄学习者如何拿绳"
+        }
+      },
+      "reading_turn": {
+        "span": "exactly what had appeared on the first learner's screen, including every pause",
+        "from": "exactly what had appeared on the first learner's screen, including every pause",
+        "to": "录制的是屏幕，第二人被动看到相同画面及暂停，排除了时长和暂停位置不同。没有录制学习者的手，也没有请同伴纠错。"
+      }
+    },
+    {
+      "number": 29,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a616e7c68520acdf28bf0ce1778701339aee4fa6f78f10b5402b66403270617d",
+          "reference_number": 29,
+          "comparison": "2025年同题位「What were the Canadian journalist and other campaigners trying to do?」。两年题29分别推断运动意图或研究建议，本题从操作变化推能力测量目标。 本题取证：同向摆放时几乎人人都会模仿，换方向后才可比较能否把动作关系用于新起始条件。没有计时或考察利手。"
+        },
+        "2026": {
+          "version_sha256": "24c06ffc2af977bd5a1466af4bf9e5128901a2e2ca37feff99cfb5bb65c22f8a",
+          "reference_number": 29,
+          "comparison": "2026年同题位「Which of the following may Commane suggest based on their study」。两年题29分别推断运动意图或研究建议，本题从操作变化推能力测量目标。 本题取证：同向摆放时几乎人人都会模仿，换方向后才可比较能否把动作关系用于新起始条件。没有计时或考察利手。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "红端换边检验起始位置变化后能否迁移所学，而非照原样模仿。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "同向摆放时几乎人人都会模仿，换方向后才可比较能否把动作关系用于新起始条件。没有计时或考察利手。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Moving the red end to the right tests transfer to a new arrangement."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。",
+        "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把考查改向后是否会打结误作测量辨色速度",
+          "mechanism": "选项 A「How quickly the beginners recognised the rope.」保留“换了红色绳端的方向”，却把考查改向后是否会打结误作测量辨色速度。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "换了红色绳端的方向",
+          "distortion": "把考查改向后是否会打结误作测量辨色速度"
+        },
+        "C": {
+          "misconception": "将绳端所在侧误为参与者慣用手",
+          "mechanism": "选项 C「Which hand the beginners preferred to use.」保留“新摆法确实涉及左右”，却将绳端所在侧误为参与者慣用手。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "新摆法确实涉及左右",
+          "distortion": "将绳端所在侧误为参与者慣用手"
+        },
+        "D": {
+          "misconception": "把录像清晰度当成摆绳方向改变后要观察的变量",
+          "mechanism": "选项 D「Whether the film showed the finished knot clearly.」保留“两组先看相同的示范”，却把录像清晰度当成摆绳方向改变后要观察的变量。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两组先看相同的示范",
+          "distortion": "把录像清晰度当成摆绳方向改变后要观察的变量"
+        }
+      },
+      "reading_turn": {
+        "span": "a rope with the red end on the right",
+        "from": "a rope with the red end on the right",
+        "to": "同向摆放时几乎人人都会模仿，换方向后才可比较能否把动作关系用于新起始条件。没有计时或考察利手。"
+      }
+    },
+    {
+      "number": 30,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "e3eb7edaaf6be91e458762f96b63bd86b9826aae027f7893ad61c8c2d15314f3",
+          "reference_number": 30,
+          "comparison": "2025年同题位「What can be inferred about the campaigns in Australia in the late 1960s and 1970s?」。近25题30根据事例推义，作者只用一个配对展示一种解释。 本题取证：一人等着观察绳头去向，另一人当时在整理绳头。共同停顿的时间相同，却只回应一人的当前疑问；两人在不同房间。"
+        },
+        "2026": {
+          "version_sha256": "39dd3b5bf5d6aa94eecfd50457974be1cc09af04b8a44ecf467996e168a4990d",
+          "reference_number": 30,
+          "comparison": "2026年同题位「What does the underlined phrase “oblivious to” in paragraph 5 mean」。近25题30根据事例推义，作者只用一个配对展示一种解释。 本题取证：一人等着观察绳头去向，另一人当时在整理绳头。共同停顿的时间相同，却只回应一人的当前疑问；两人在不同房间。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "同一次暂停，一人正在追踪将消失的绳端，一人在理顺绳端，说明暂停和眼前难题是否契合很重要。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "一人等着观察绳头去向，另一人当时在整理绳头。共同停顿的时间相同，却只回应一人的当前疑问；两人在不同房间。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "One learner needs to inspect a disappearing end, while the other spends the same pause straightening a rope."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。",
+        "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把某个学习者的即时需求推广为整段影片都该放慢",
+          "mechanism": "选项 B「To identify which movement the film should show more slowly.」保留“两人在同一特定动作处看到暂停”，却把某个学习者的即时需求推广为整段影片都该放慢。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两人在同一特定动作处看到暂停",
+          "distortion": "把某个学习者的即时需求推广为整段影片都该放慢"
+        },
+        "C": {
+          "misconception": "把一个人的眼前困难当成研究结论",
+          "mechanism": "选项 C「To suggest that a straight rope is easier to work with.」保留“后手当时在理顺散端”，却把一个人的眼前困难当成研究结论。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "后手当时在理顺散端",
+          "distortion": "把一个人的眼前困难当成研究结论"
+        },
+        "D": {
+          "misconception": "把分室练习误作当时面对面帮助",
+          "mechanism": "选项 D「To show how partners can help each other during practice.」保留“两人按配对安排参加试验”，却把分室练习误作当时面对面帮助。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两人按配对安排参加试验",
+          "distortion": "把分室练习误作当时面对面帮助"
+        }
+      },
+      "reading_turn": {
+        "span": "Her partner had spent the same long pause trying to pull his loose end straight.",
+        "from": "Her partner had spent the same long pause trying to pull his loose end straight.",
+        "to": "一人等着观察绳头去向，另一人当时在整理绳头。共同停顿的时间相同，却只回应一人的当前疑问；两人在不同房间。"
+      }
+    },
+    {
+      "number": 31,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "3bb645dd7b0bca580dc754915e46756106c0cea49a266accbbb93278d5842e44",
+          "reference_number": 31,
+          "comparison": "2025年同题位「What can be a suitable title for the text?」。26题31问作者会主张什么，25题31选标题，本题在同位要求限定结论。 本题取证：最后一段提出另一机制：拥有控制权本身可能促使人在不暂停时预测。其余三项在程序中均已明确。"
+        },
+        "2026": {
+          "version_sha256": "b98c8778e524bf8404079fcc10d508643292846990e2e563ce8089e446866b26",
+          "reference_number": 31,
+          "comparison": "2026年同题位「What would Auyeung probably advocate」。26题31问作者会主张什么，25题31选标题，本题在同位要求限定结论。 本题取证：最后一段提出另一机制：拥有控制权本身可能促使人在不暂停时预测。其余三项在程序中均已明确。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "末段提出拥有按钮也许诱发持续预测；试验未分离实际暂停和观看片段之间的注意方式。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "最后一段提出另一机制：拥有控制权本身可能促使人在不暂停时预测。其余三项在程序中均已明确。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The paragraph raises an untested prediction effect while the film is running."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。",
+        "evidence": "配对打结试验的程序、对照和解释，较强推论配有 might 限定。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把已经明示只有前手能独立控制误作待答问题",
+          "mechanism": "选项 A「Could the second learner pause the film independently?」保留“不同学习者对暂停有不同权限”，却把已经明示只有前手能独立控制误作待答问题。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "不同学习者对暂停有不同权限",
+          "distortion": "把已经明示只有前手能独立控制误作待答问题"
+        },
+        "B": {
+          "misconception": "把已经说明的程序条件误作未解决机制",
+          "mechanism": "选项 B「Had both learners practised before the rope was turned round?」保留“两组都拿到绳子练习”，却把已经说明的程序条件误作未解决机制。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "两组都拿到绳子练习",
+          "distortion": "把已经说明的程序条件误作未解决机制"
+        },
+        "C": {
+          "misconception": "把完全相同的停顿出现位置误作仍不清楚",
+          "mechanism": "选项 C「Did the pairs see the pauses at different points in the film?」保留“录像中有多处停顿”，却把完全相同的停顿出现位置误作仍不清楚。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "录像中有多处停顿",
+          "distortion": "把完全相同的停顿出现位置误作仍不清楚"
+        }
+      },
+      "reading_turn": {
+        "span": "Just knowing that she could stop the film might have encouraged the first learner to predict the next move",
+        "from": "Just knowing that she could stop the film might have encouraged the first learner to predict the next move",
+        "to": "最后一段提出另一机制：拥有控制权本身可能促使人在不暂停时预测。其余三项在程序中均已明确。"
+      }
+    },
+    {
+      "number": 32,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9364f21bb609998ebd03f392d5adae6043d8aa2242932b87f0cf7feb52ccf872",
+          "reference_number": 32,
+          "comparison": "2025年同题位「How does the author present the issue in the first paragraph?」。基准缺32题，按D篇首问定位写作触发事件。 本题取证：周五在包底发现两个没吃的面包卷才引起疑问；优惠解释作者愿意购买，货架起初使作者信服。"
+        },
+        "2026": {
+          "version_sha256": "4a94bd215409986cc755b1231c433cec8ca6dae0ff3de1dfb886f55a1bfae639",
+          "reference_number": 32,
+          "comparison": "2026年同题位「What was the beauty group asked to do with the clay objects」。基准缺32题，按D篇首问定位写作触发事件。 本题取证：周五在包底发现两个没吃的面包卷才引起疑问；优惠解释作者愿意购买，货架起初使作者信服。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "周五在自己袋底发现两只没吃的面包，促成对告示的重新理解。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "周五在包底发现两个没吃的面包卷才引起疑问；优惠解释作者愿意购买，货架起初使作者信服。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Two uneaten rolls in the writer’s bag call the claimed waste reduction into question."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。",
+        "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把支持购买的理由误作质疑公告的触发点",
+          "mechanism": "选项 A「A change in the price of the bags.」保留“便宜的袋子是作者支持继续售卖的理由”，却把支持购买的理由误作质疑公告的触发点。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "便宜的袋子是作者支持继续售卖的理由",
+          "distortion": "把支持购买的理由误作质疑公告的触发点"
+        },
+        "B": {
+          "misconception": "把后面的抽样建议提前当作柜台现场提问",
+          "mechanism": "选项 B「A customer's question at the till.」保留“结尾确实谈到应追问顾客”，却把后面的抽样建议提前当作柜台现场提问。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "结尾确实谈到应追问顾客",
+          "distortion": "把后面的抽样建议提前当作柜台现场提问"
+        },
+        "D": {
+          "misconception": "把最初增强信服的观察误作动摇信服的观察",
+          "mechanism": "选项 D「A difference between two shop displays.」保留“作者确实看到过接近空掉的货架”，却把最初增强信服的观察误作动摇信服的观察。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "作者确实看到过接近空掉的货架",
+          "distortion": "把最初增强信服的观察误作动摇信服的观察"
+        }
+      },
+      "reading_turn": {
+        "span": "Then, on Friday, I found two of those rolls at the bottom of my bag.",
+        "from": "Then, on Friday, I found two of those rolls at the bottom of my bag.",
+        "to": "周五在包底发现两个没吃的面包卷才引起疑问；优惠解释作者愿意购买，货架起初使作者信服。"
+      }
+    },
+    {
+      "number": 33,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9746bcea63d99b7ddc966306c268b796f7f6bb2783dc6bc75b30617620203d91",
+          "reference_number": 33,
+          "comparison": "2025年同题位「What determines the effectiveness of trapping microplastics in water?」。同25题33辨实验条件、26题33比参与者得分一样要界定对象，此题考隐喻指代。 本题取证：waste 从店内丢弃量被读成最终没人吃掉的总量，描述的是指标含义的扩大。面包的实际移动只是引出这个解释。"
+        },
+        "2026": {
+          "version_sha256": "22e6ea703ba757786a8c1b4262c917da059efea5601e1037101cda193806c000",
+          "reference_number": 33,
+          "comparison": "2026年同题位「Which participants got the highest score on average in the test」。同25题33辨实验条件、26题33比参与者得分一样要界定对象，此题考隐喻指代。 本题取证：waste 从店内丢弃量被读成最终没人吃掉的总量，描述的是指标含义的扩大。面包的实际移动只是引出这个解释。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "waste从店方丢弃量在读者心中变成无人吃掉的总量，测量范围变了。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "waste 从店内丢弃量被读成最终没人吃掉的总量，描述的是指标含义的扩大。面包的实际移动只是引出这个解释。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The number means discarded at the shop, though the writer heard discarded anywhere."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。",
+        "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "弄反移动方向，并把指标含义当成实物路程",
+          "mechanism": "选项 A「Bread going back to the shop.」保留“面包确实在商店和家庭之间移动”，却弄反移动方向，并把指标含义当成实物路程。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "面包确实在商店和家庭之间移动",
+          "distortion": "弄反移动方向，并把指标含义当成实物路程"
+        },
+        "C": {
+          "misconception": "只取字面上的旅程，未解释 waste 的所指扩大",
+          "mechanism": "选项 C「Customers carrying their purchases home.」保留“顾客实际把纸袋提回家”，却只取字面上的旅程，未解释 waste 的所指扩大。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "顾客实际把纸袋提回家",
+          "distortion": "只取字面上的旅程，未解释 waste 的所指扩大"
+        },
+        "D": {
+          "misconception": "把两个统计范围误作记账延迟",
+          "mechanism": "选项 D「A delay in recording an evening's sales.」保留“同晚销售和月度记录都是商业过程”，却把两个统计范围误作记账延迟。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "同晚销售和月度记录都是商业过程",
+          "distortion": "把两个统计范围误作记账延迟"
+        }
+      },
+      "reading_turn": {
+        "span": "By the time I read the card I had understood it to mean bread that nobody ate.",
+        "from": "By the time I read the card I had understood it to mean bread that nobody ate.",
+        "to": "waste 从店内丢弃量被读成最终没人吃掉的总量，描述的是指标含义的扩大。面包的实际移动只是引出这个解释。"
+      }
+    },
+    {
+      "number": 34,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "7158766ef8370244f7849041a570c8138ad89b6a835c1c517cb66627c156e4ca",
+          "reference_number": 34,
+          "comparison": "2025年同题位「What does the author try to illustrate by mentioning bottled water in paragraph 4?」。直接对位25题34的例子作用，也与26题34的测量目的相近。 本题取证：好经历更愿意被分享，乐于反馈的人与沉默的人可能系统性不同；作者没有质疑这个人是否如实作答。"
+        },
+        "2026": {
+          "version_sha256": "6afd65a712190bd36236f9d0777bddf7324db39d4ae0764780578549861d1b19",
+          "reference_number": 34,
+          "comparison": "2026年同题位「Why were the participants’ emotional states measured」。直接对位25题34的例子作用，也与26题34的测量目的相近。 本题取证：好经历更愿意被分享，乐于反馈的人与沉默的人可能系统性不同；作者没有质疑这个人是否如实作答。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "用剩面包做成甜点的人更愿意主动填写问卷，说明自愿应答会筛选成功例子。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "好经历更愿意被分享，乐于反馈的人与沉默的人可能系统性不同；作者没有质疑这个人是否如实作答。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A cook with a successful pudding may volunteer a reply more readily than someone who wasted a loaf."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。",
+        "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把样本中谁会回应错读成不同面包带来不同节约额",
+          "mechanism": "选项 A「His savings may depend on the kind of bread he buys.」保留“布丁做成体现旧面包的使用价值”，却把样本中谁会回应错读成不同面包带来不同节约额。",
+          "plausible": true,
+          "trap": "referent",
+          "subtle": true,
+          "unchanged": "布丁做成体现旧面包的使用价值",
+          "distortion": "把样本中谁会回应错读成不同面包带来不同节约额"
+        },
+        "B": {
+          "misconception": "把自选回复的例证误作作者在推荐食谱",
+          "mechanism": "选项 B「His recipe could teach others how to use an old loaf.」保留“这位顾客确实有可分享的食谱”，却把自选回复的例证误作作者在推荐食谱。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "这位顾客确实有可分享的食谱",
+          "distortion": "把自选回复的例证误作作者在推荐食谱"
+        },
+        "C": {
+          "misconception": "将受访者构成的偏差转为这个人的报告失真",
+          "mechanism": "选项 C「His account may be less accurate than he thinks.」保留“自愿回答的资料可能误导”，却将受访者构成的偏差转为这个人的报告失真。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "自愿回答的资料可能误导",
+          "distortion": "将受访者构成的偏差转为这个人的报告失真"
+        }
+      },
+      "reading_turn": {
+        "span": "more eager to tell his story",
+        "from": "more eager to tell his story",
+        "to": "好经历更愿意被分享，乐于反馈的人与沉默的人可能系统性不同；作者没有质疑这个人是否如实作答。"
+      }
+    },
+    {
+      "number": 35,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "cd25bcbdc371460987e9a47e0b2dc1765e718a5bd16c935b0cfc76ffba366777",
+          "reference_number": 35,
+          "comparison": "2025年同题位「What is Gauchotte-Lindsay’s suggestion about?」。给定基准未附同号，作为D篇收束题把文章边界应用于新公告。 本题取证：店内记录支持只限定店内的结论；家庭去向仍待抽样追访。自愿回复不能推出一半，材料也不支持销量翻倍。"
+        },
+        "2026": {
+          "version_sha256": "2f1fcecfd41dd70c6edbbdcd664c5ff1cfed390dfb1420c8fd618b21a600ca69",
+          "reference_number": 35,
+          "comparison": "2026年同题位「What is the major finding of the study regarding the appreciation of art」。给定基准未附同号，作为D篇收束题把文章边界应用于新公告。 本题取证：店内记录支持只限定店内的结论；家庭去向仍待抽样追访。自愿回复不能推出一半，材料也不支持销量翻倍。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "定位本题对应段落及叙述对象",
+          "公告应将减少一半限定在商店所扔的量，并说明家庭去向待查。"
+        ],
+        "linked_concepts": [
+          "文本证据",
+          "语篇推断"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "店内记录支持只限定店内的结论；家庭去向仍待抽样追访。自愿回复不能推出一半，材料也不支持销量翻倍。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The claim is limited to waste at the shop and mentions that household outcomes remain under investigation."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。",
+        "evidence": "面向烘焙店顾客的第一人称评论，用旧面包和自愿卡片落实统计范围。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "移植成一半旧面包在顾客家变成另一餐",
+          "mechanism": "选项 B「Our customers' replies show that half of yesterday's bread now becomes another meal.」保留“店内记录确实出现一半这一比例”，却移植成一半旧面包在顾客家变成另一餐。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "店内记录确实出现一半这一比例",
+          "distortion": "移植成一半旧面包在顾客家变成另一餐"
+        },
+        "C": {
+          "misconception": "省掉店内这个统计边界，随即用自愿建议掩盖流向",
+          "mechanism": "选项 C「Our surprise bags cut waste in half. Tell us your favourite way to use the contents.」保留“从店内资料得出的数字确是减半”，却省掉店内这个统计边界，随即用自愿建议掩盖流向。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "从店内资料得出的数字确是减半",
+          "distortion": "省掉店内这个统计边界，随即用自愿建议掩盖流向"
+        },
+        "D": {
+          "misconception": "将废弃量减半换成未测量的销量翻倍",
+          "mechanism": "选项 D「Sales of our surprise bags have doubled. A survey will explain why customers buy them.」保留“商店销量与销售活动有关”，却将废弃量减半换成未测量的销量翻倍。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "商店销量与销售活动有关",
+          "distortion": "将废弃量减半换成未测量的销量翻倍"
+        }
+      },
+      "reading_turn": {
+        "span": "invite customers chosen by chance to keep a brief record of what happens at home",
+        "from": "invite customers chosen by chance to keep a brief record of what happens at home",
+        "to": "店内记录支持只限定店内的结论；家庭去向仍待抽样追访。自愿回复不能推出一半，材料也不支持销量翻倍。"
+      }
+    },
+    {
+      "number": 36,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "23c2e835ce82e2c4f29e78ddce3c511608317791d8bf9aea1f6305311e63a840",
+          "reference_number": 36,
+          "comparison": "2025年同题位「orning? The College Cafe has just that, and more. _____16_____ Catherine Murphy, a cafe worker in a green shirt and black hat, makes」。两年同号均为七选五第一空，概括前文反差后引出做法。 本题取证：开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+        },
+        "2026": {
+          "version_sha256": "0eda9b84fc674b8c1b5f549ff41c4fbce33d1f3631b378be21cb14285aed0cab",
+          "reference_number": 36,
+          "comparison": "2026年同题位「delicate collections, and revealing hidden stories.    36 AI transforms a standard museum trip into a personalized and interactive a」。两年同号均为七选五第一空，概括前文反差后引出做法。 本题取证：开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "核对空前空后指代和语义",
+          "开头能列熟路上的地点，却说不清窗形；D概括认得和看清的区别，过渡到随身画笔。"
+        ],
+        "linked_concepts": [
+          "语篇衔接",
+          "指代"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Familiarity contrasts with failure to describe the window; D turns to close observation."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "写给步行者的轻量速写指南，使用第二人称和具体动作",
+        "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将“路人离开画面与用几个词速记”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 A「There is no need to chase them with your pencil.」保留“路人离开画面与用几个词速记”，却将“路人离开画面与用几个词速记”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "路人离开画面与用几个词速记",
+          "distortion": "将“路人离开画面与用几个词速记”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        },
+        "B": {
+          "misconception": "将“心目中的标准门形与比较实际边缘”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 B「Set that ready-made picture aside and compare two edges.」保留“心目中的标准门形与比较实际边缘”，却将“心目中的标准门形与比较实际边缘”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "心目中的标准门形与比较实际边缘",
+          "distortion": "将“心目中的标准门形与比较实际边缘”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        },
+        "C": {
+          "misconception": "将“向店主打听门的历史”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 C「The shopkeeper may be able to tell you how old the door is.」保留“向店主打听门的历史”，却将“向店主打听门的历史”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "向店主打听门的历史",
+          "distortion": "将“向店主打听门的历史”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        },
+        "E": {
+          "misconception": "将“先后两张速写并排找差异”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 E「With the two drawings side by side, small differences begin to show.」保留“先后两张速写并排找差异”，却将“先后两张速写并排找差异”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "先后两张速写并排找差异",
+          "distortion": "将“先后两张速写并排找差异”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        },
+        "F": {
+          "misconception": "将“用两根柱子限定小取景框”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 F「It might take in just what you can see between two posts of a fence.」保留“用两根柱子限定小取景框”，却将“用两根柱子限定小取景框”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "用两根柱子限定小取景框",
+          "distortion": "将“用两根柱子限定小取景框”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        },
+        "G": {
+          "misconception": "将“把已经完成的画送给没走过此路的人”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。",
+          "mechanism": "选项 G「Give the completed sketch to someone who has never taken that walk.」保留“把已经完成的画送给没走过此路的人”，却将“把已经完成的画送给没走过此路的人”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "把已经完成的画送给没走过此路的人",
+          "distortion": "将“把已经完成的画送给没走过此路的人”插到此处。此空需概括能列地标却不能描述形状，尚未展开取景、绘门、速记或重访步骤。"
+        }
+      },
+      "reading_turn": {
+        "span": "[36] _____ Next time you take a familiar walk, try carrying a pencil and a small piece of paper.",
+        "from": "[36] _____ Next time you take a familiar walk, try carrying a pencil and a small piece of paper.",
+        "to": "开头说得出沿途物件却说不出橱窗形状，概括熟悉与看清的差别，引出带纸笔再走。"
+      }
+    },
+    {
+      "number": 37,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "6b145c88683bce1ce522fd5a91b827d126b6bb1e7a29904feb2e4aa70482ac6e",
+          "reference_number": 37,
+          "comparison": "2025年同题位「ck and forth between machines to make the drinks. _____17_____ As the customer grabs the drink from her hand, she smiles and says, “」。两年同位考指代，本空承上段的边界并引出方框。 本题取证：It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+        },
+        "2026": {
+          "version_sha256": "72612d73f390028b58211bc239c3a63c8ca802e260e7c0098141c2a5415b63d4",
+          "reference_number": 37,
+          "comparison": "2026年同题位「nd events, making each visit unique and surprising.    37    These digital assistants engage visitors in dynamic conversations and o」。两年同位考指代，本空承上段的边界并引出方框。 本题取证：It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+        }
+      },
+      "answer_key": "F",
+      "depth": {
+        "reasoning_steps": [
+          "核对空前空后指代和语义",
+          "it指拟好的取景框，两根栅栏柱把取景范围具体化，与后句little square承接。"
+        ],
+        "linked_concepts": [
+          "语篇衔接",
+          "指代"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The fence posts supply the boundary and explain ‘that little square’."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "写给步行者的轻量速写指南，使用第二人称和具体动作",
+        "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将“路人离开画面与用几个词速记”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 A「There is no need to chase them with your pencil.」保留“路人离开画面与用几个词速记”，却将“路人离开画面与用几个词速记”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "路人离开画面与用几个词速记",
+          "distortion": "将“路人离开画面与用几个词速记”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        },
+        "B": {
+          "misconception": "将“心目中的标准门形与比较实际边缘”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 B「Set that ready-made picture aside and compare two edges.」保留“心目中的标准门形与比较实际边缘”，却将“心目中的标准门形与比较实际边缘”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "心目中的标准门形与比较实际边缘",
+          "distortion": "将“心目中的标准门形与比较实际边缘”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        },
+        "C": {
+          "misconception": "将“向店主打听门的历史”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 C「The shopkeeper may be able to tell you how old the door is.」保留“向店主打听门的历史”，却将“向店主打听门的历史”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "向店主打听门的历史",
+          "distortion": "将“向店主打听门的历史”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        },
+        "D": {
+          "misconception": "将“认出一条街却说不出窗形的反差”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 D「Recognising a place, it seems, is a good deal easier than seeing it.」保留“认出一条街却说不出窗形的反差”，却将“认出一条街却说不出窗形的反差”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "认出一条街却说不出窗形的反差",
+          "distortion": "将“认出一条街却说不出窗形的反差”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        },
+        "E": {
+          "misconception": "将“先后两张速写并排找差异”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 E「With the two drawings side by side, small differences begin to show.」保留“先后两张速写并排找差异”，却将“先后两张速写并排找差异”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "先后两张速写并排找差异",
+          "distortion": "将“先后两张速写并排找差异”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        },
+        "G": {
+          "misconception": "将“把已经完成的画送给没走过此路的人”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。",
+          "mechanism": "选项 G「Give the completed sketch to someone who has never taken that walk.」保留“把已经完成的画送给没走过此路的人”，却将“把已经完成的画送给没走过此路的人”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "把已经完成的画送给没走过此路的人",
+          "distortion": "将“把已经完成的画送给没走过此路的人”插到此处。It 和下文 little square 须共同承接 boundary，此时没有门形比较、离去的人或第二张画。"
+        }
+      },
+      "reading_turn": {
+        "span": "[37] _____ Everything outside that little square can wait for another day.",
+        "from": "[37] _____ Everything outside that little square can wait for another day.",
+        "to": "It 回指刚划定的观察范围，栅栏两柱给出实际取景方法，后句 little square 承接。"
+      }
+    },
+    {
+      "number": 38,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "de904093e030359c6e5e2867cfcaa8593e6e376793e6bd79697bd967ef28ea5b",
+          "reference_number": 38,
+          "comparison": "2025年同题位「 thirty minutes every day to get to work on time. _____18_____ “I do so because I like to make coffee for the students. I know they 」。两年同题位考语篇衔接，本空同时有向前和向后两重指向。 本题取证：that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+        },
+        "2026": {
+          "version_sha256": "582b24f5556e043648f9e488750da952a0f08e0172a3a71187801b182aa10ea9",
+          "reference_number": 38,
+          "comparison": "2026年同题位「ration, which are often invisible to the human eye.    38    Moreover, by predicting future decay patterns, AI helps museums take pr」。两年同题位考语篇衔接，本空同时有向前和向后两重指向。 本题取证：that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "核对空前空后指代和语义",
+          "that ready-made picture回指脑中的长方形门，后面的水平边比较落实compare two edges。"
+        ],
+        "linked_concepts": [
+          "语篇衔接",
+          "指代"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "A ready-made idea of a door must be set aside before comparing edges."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "写给步行者的轻量速写指南，使用第二人称和具体动作",
+        "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将“路人离开画面与用几个词速记”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 A「There is no need to chase them with your pencil.」保留“路人离开画面与用几个词速记”，却将“路人离开画面与用几个词速记”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "路人离开画面与用几个词速记",
+          "distortion": "将“路人离开画面与用几个词速记”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        },
+        "C": {
+          "misconception": "将“向店主打听门的历史”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 C「The shopkeeper may be able to tell you how old the door is.」保留“向店主打听门的历史”，却将“向店主打听门的历史”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "向店主打听门的历史",
+          "distortion": "将“向店主打听门的历史”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        },
+        "D": {
+          "misconception": "将“认出一条街却说不出窗形的反差”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 D「Recognising a place, it seems, is a good deal easier than seeing it.」保留“认出一条街却说不出窗形的反差”，却将“认出一条街却说不出窗形的反差”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "认出一条街却说不出窗形的反差",
+          "distortion": "将“认出一条街却说不出窗形的反差”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        },
+        "E": {
+          "misconception": "将“先后两张速写并排找差异”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 E「With the two drawings side by side, small differences begin to show.」保留“先后两张速写并排找差异”，却将“先后两张速写并排找差异”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "先后两张速写并排找差异",
+          "distortion": "将“先后两张速写并排找差异”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        },
+        "F": {
+          "misconception": "将“用两根柱子限定小取景框”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 F「It might take in just what you can see between two posts of a fence.」保留“用两根柱子限定小取景框”，却将“用两根柱子限定小取景框”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "用两根柱子限定小取景框",
+          "distortion": "将“用两根柱子限定小取景框”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        },
+        "G": {
+          "misconception": "将“把已经完成的画送给没走过此路的人”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。",
+          "mechanism": "选项 G「Give the completed sketch to someone who has never taken that walk.」保留“把已经完成的画送给没走过此路的人”，却将“把已经完成的画送给没走过此路的人”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "把已经完成的画送给没走过此路的人",
+          "distortion": "将“把已经完成的画送给没走过此路的人”插到此处。需要同时回指脑中现成的门形并引出门顶与窗底比较，取景框已在上段确定。"
+        }
+      },
+      "reading_turn": {
+        "span": "[38] _____ Does its top actually run level with the bottom of the window beside it?",
+        "from": "[38] _____ Does its top actually run level with the bottom of the window beside it?",
+        "to": "that ready-made picture 回指脑中的标准长方形，compare two edges 又引出门顶和窗底的比较。"
+      }
+    },
+    {
+      "number": 39,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a5af3eb478c8799b9487e9a90006a254b1fb663228a17399dd98bf7e56e048ca",
+          "reference_number": 39,
+          "comparison": "2025年同题位「ee and goes to the cafe at least six days a week. _____19_____ “Catherine always has a huge smile on her face, which always puts me 」。基准未附39，依靠代词回指和动作替代两条线索。 本题取证：them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+        },
+        "2026": {
+          "version_sha256": "5f3e25bd77ebf37f3e292cfd10ff429e0f048aebf4116097493e3ede6c4f3ab5",
+          "reference_number": 39,
+          "comparison": "2026年同题位「of museums, particularly for children and families.    39    For instance, interactive exhibits powered by AI can adjust their conte」。基准未附39，依靠代词回指和动作替代两条线索。 本题取证：them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "核对空前空后指代和语义",
+          "前面的人已经走远；them单数泛指这个人，记下袖子与钥匙代替追着画。"
+        ],
+        "linked_concepts": [
+          "语篇衔接",
+          "指代"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The person is already moving away; make a verbal note instead of following with the pencil."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "写给步行者的轻量速写指南，使用第二人称和具体动作",
+        "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "将“心目中的标准门形与比较实际边缘”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 B「Set that ready-made picture aside and compare two edges.」保留“心目中的标准门形与比较实际边缘”，却将“心目中的标准门形与比较实际边缘”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "心目中的标准门形与比较实际边缘",
+          "distortion": "将“心目中的标准门形与比较实际边缘”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        },
+        "C": {
+          "misconception": "将“向店主打听门的历史”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 C「The shopkeeper may be able to tell you how old the door is.」保留“向店主打听门的历史”，却将“向店主打听门的历史”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "向店主打听门的历史",
+          "distortion": "将“向店主打听门的历史”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        },
+        "D": {
+          "misconception": "将“认出一条街却说不出窗形的反差”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 D「Recognising a place, it seems, is a good deal easier than seeing it.」保留“认出一条街却说不出窗形的反差”，却将“认出一条街却说不出窗形的反差”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "认出一条街却说不出窗形的反差",
+          "distortion": "将“认出一条街却说不出窗形的反差”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        },
+        "E": {
+          "misconception": "将“先后两张速写并排找差异”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 E「With the two drawings side by side, small differences begin to show.」保留“先后两张速写并排找差异”，却将“先后两张速写并排找差异”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "先后两张速写并排找差异",
+          "distortion": "将“先后两张速写并排找差异”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        },
+        "F": {
+          "misconception": "将“用两根柱子限定小取景框”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 F「It might take in just what you can see between two posts of a fence.」保留“用两根柱子限定小取景框”，却将“用两根柱子限定小取景框”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "用两根柱子限定小取景框",
+          "distortion": "将“用两根柱子限定小取景框”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        },
+        "G": {
+          "misconception": "将“把已经完成的画送给没走过此路的人”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。",
+          "mechanism": "选项 G「Give the completed sketch to someone who has never taken that walk.」保留“把已经完成的画送给没走过此路的人”，却将“把已经完成的画送给没走过此路的人”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "把已经完成的画送给没走过此路的人",
+          "distortion": "将“把已经完成的画送给没走过此路的人”插到此处。前有离开的人、后有衣袖钥匙的速记，所填句须解释为何改写文字，其他动作打断这条因果链。"
+        }
+      },
+      "reading_turn": {
+        "span": "[39] _____ A note such as \"green sleeve, a bunch of keys\" can bring the moment back later.",
+        "from": "[39] _____ A note such as \"green sleeve, a bunch of keys\" can bring the moment back later.",
+        "to": "them 回指 person；路人已走远，无须赶着把人画完，下一句改用文字记衣袖和钥匙。"
+      }
+    },
+    {
+      "number": 40,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "78655e44e58675510dcefae308cbdacdd5731a29a49a6ebdc2426a40e0b195be",
+          "reference_number": 40,
+          "comparison": "2025年同题位「said. “I enjoy working in the cafe,” Murphy said. _____20_____ She has every intention of staying and continuing doing what she love」。两年同位收束七选五，本空用比较承前启后。 本题取证：先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+        },
+        "2026": {
+          "version_sha256": "43e17e11ba94c1064e479088bff6dc4f709bbb7b13036adca4c94492553d3c06",
+          "reference_number": 40,
+          "comparison": "2026年同题位「ether with AI ethicists to develop fair algorithms.    40    Strict policies should be established to protect visitors’ information.」。两年同位收束七选五，本空用比较承前启后。 本题取证：先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+        }
+      },
+      "answer_key": "E",
+      "depth": {
+        "reasoning_steps": [
+          "核对空前空后指代和语义",
+          "另一天先画，再展开旧画，side by side承接两幅，后句探究门变窄的视觉原因。"
+        ],
+        "linked_concepts": [
+          "语篇衔接",
+          "指代"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The fresh sketch is already made; compare the two side by side."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "写给步行者的轻量速写指南，使用第二人称和具体动作",
+        "evidence": "写给步行者的轻量速写指南，使用第二人称和具体动作。先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将“路人离开画面与用几个词速记”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 A「There is no need to chase them with your pencil.」保留“路人离开画面与用几个词速记”，却将“路人离开画面与用几个词速记”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "路人离开画面与用几个词速记",
+          "distortion": "将“路人离开画面与用几个词速记”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        },
+        "B": {
+          "misconception": "将“心目中的标准门形与比较实际边缘”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 B「Set that ready-made picture aside and compare two edges.」保留“心目中的标准门形与比较实际边缘”，却将“心目中的标准门形与比较实际边缘”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "心目中的标准门形与比较实际边缘",
+          "distortion": "将“心目中的标准门形与比较实际边缘”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        },
+        "C": {
+          "misconception": "将“向店主打听门的历史”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 C「The shopkeeper may be able to tell you how old the door is.」保留“向店主打听门的历史”，却将“向店主打听门的历史”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "向店主打听门的历史",
+          "distortion": "将“向店主打听门的历史”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        },
+        "D": {
+          "misconception": "将“认出一条街却说不出窗形的反差”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 D「Recognising a place, it seems, is a good deal easier than seeing it.」保留“认出一条街却说不出窗形的反差”，却将“认出一条街却说不出窗形的反差”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "认出一条街却说不出窗形的反差",
+          "distortion": "将“认出一条街却说不出窗形的反差”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        },
+        "F": {
+          "misconception": "将“用两根柱子限定小取景框”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 F「It might take in just what you can see between two posts of a fence.」保留“用两根柱子限定小取景框”，却将“用两根柱子限定小取景框”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "用两根柱子限定小取景框",
+          "distortion": "将“用两根柱子限定小取景框”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        },
+        "G": {
+          "misconception": "将“把已经完成的画送给没走过此路的人”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。",
+          "mechanism": "选项 G「Give the completed sketch to someone who has never taken that walk.」保留“把已经完成的画送给没走过此路的人”，却将“把已经完成的画送给没走过此路的人”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。。",
+          "plausible": true,
+          "trap": "cohesion",
+          "subtle": true,
+          "unchanged": "把已经完成的画送给没走过此路的人",
+          "distortion": "将“把已经完成的画送给没走过此路的人”插到此处。必须联结刚完成的第二张和刚展开的第一张，接下来的问题本身就是在并排比较。"
+        }
+      },
+      "reading_turn": {
+        "span": "[40] _____ Is the doorway narrower today, or did the bicycle leaning beside it make you draw it differently?",
+        "from": "[40] _____ Is the doorway narrower today, or did the bicycle leaning beside it make you draw it differently?",
+        "to": "先画第二幅才展开第一幅，两幅可以并排；接下来的宽窄比较为并排观察举例。"
+      }
+    },
+    {
+      "number": 41,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "32b2cee6eedcb373cbac48588b1cdc217c606b156e0d0e78c6be704d48c7f58a",
+          "reference_number": 41,
+          "comparison": "2025年同题位「band and I had just sold our house and we were busy ___21___ the beloved home our family had spent 23 years filling up. We had decid」。两年同题位完形首空；须呼应上一句唯一空格。 本题取证：唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+        },
+        "2026": {
+          "version_sha256": "ef7989880e4aab6f4fdd546ad46b18ef6f35d7a5ca5745fa5ac4439ffe7959cf",
+          "reference_number": 41,
+          "comparison": "2026年同题位「I grew up in a little town in northeast Ohio. The   41   of how little people knew about Ohio came quickly after I went to school」。两年同题位完形首空；须呼应上一句唯一空格。 本题取证：唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "成绩表只有一格没填，叙事者去找没有报分的那场棋。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The last unfilled score square identifies the missing game."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把开赛日期误作缺报的棋局就是开局赛",
+          "mechanism": "选项 A「opening」保留“这是比赛第一天”，却把开赛日期误作缺报的棋局就是开局赛。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "这是比赛第一天",
+          "distortion": "把开赛日期误作缺报的棋局就是开局赛"
+        },
+        "B": {
+          "misconception": "把作者去找的漏报正式局替换成后来的练习局",
+          "mechanism": "选项 B「practice」保留“后来两人确实在练习复盘”，却把作者去找的漏报正式局替换成后来的练习局。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "后来两人确实在练习复盘",
+          "distortion": "把作者去找的漏报正式局替换成后来的练习局"
+        },
+        "D": {
+          "misconception": "把他在成绩表上定位棋局错成主客场标签",
+          "mechanism": "选项 D「home」保留“比赛确实安排了一个场馆”，却把他在成绩表上定位棋局错成主客场标签。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "比赛确实安排了一个场馆",
+          "distortion": "把他在成绩表上定位棋局错成主客场标签"
+        }
+      },
+      "reading_turn": {
+        "span": "I went looking for the [41] _____ game.",
+        "from": "I went looking for the [41] _____ game.",
+        "to": "唯一空着的成绩格引出寻找未登记的那盘棋。opening 对应赛程，practice 是之后的复盘。"
+      }
+    },
+    {
+      "number": 42,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "d030b46032be31f42172a6e048bb2bb7b633dab86384e340468936591471e2a4",
+          "reference_number": 42,
+          "comparison": "2025年同题位「ars filling up. We had decided on key items for the ___22___ we were moving to in town, donated what we could, and rented a place to」。同位考上下文形容词；empty由下一句人数直接印证，silent只是可能伴随。 本题取证：午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+        },
+        "2026": {
+          "version_sha256": "9b911d20cc89bf067f0d6e977a9ff522e6d5c6ab41489aa3d69268733f84ac0a",
+          "reference_number": 42,
+          "comparison": "2026年同题位「nt to school in central Pennsylvania. Though I lived   42   three and a half hours away, most of my classmates thought of Ohio as a 」。同位考上下文形容词；empty由下一句人数直接印证，silent只是可能伴随。 本题取证：午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "其余棋手都上楼吃午饭，厅内只剩两人，说明场地几乎空了。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Everyone else has gone upstairs, so the hall is nearly empty."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把场地随后变得可用误作当时的人员状况",
+          "mechanism": "选项 B「ready」保留“场地要为下一轮腾桌”，却把场地随后变得可用误作当时的人员状况。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "场地要为下一轮腾桌",
+          "distortion": "把场地随后变得可用误作当时的人员状况"
+        },
+        "C": {
+          "misconception": "忽略其他选手都已上楼才适合 although 句的对比",
+          "mechanism": "选项 C「silent」保留“下棋的人常保持安静”，却忽略其他选手都已上楼才适合 although 句的对比。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "下棋的人常保持安静",
+          "distortion": "忽略其他选手都已上楼才适合 although 句的对比"
+        },
+        "D": {
+          "misconception": "把空荡误推成灯光熄灭，忽略午餐时间",
+          "mechanism": "选项 D「dark」保留“大厅很少有人”，却把空荡误推成灯光熄灭，忽略午餐时间。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "大厅很少有人",
+          "distortion": "把空荡误推成灯光熄灭，忽略午餐时间"
+        }
+      },
+      "reading_turn": {
+        "span": "Two boys were still at their board, although the hall was almost [42] _____.",
+        "from": "Two boys were still at their board, although the hall was almost [42] _____.",
+        "to": "午间其他棋手已散，只剩这桌未报分；棋局安静是常态，although 强调人已散仍在场。"
+      }
+    },
+    {
+      "number": 43,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "6c8fef546f35b3be516e797f6f90674f1f57f24490de44c0cad7eca152e5fc76",
+          "reference_number": 43,
+          "comparison": "2025年同题位「re busy ___21___ the beloved home our family had spent 23 years filling up. We had decided on key items for the ___22___ we were mov」。未给43同号，考局部动词搭配和后文恢复局面的照应。 本题取证：两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+        },
+        "2026": {
+          "version_sha256": "e5c7c4381785f3c011b4b8e02b8c0c2e6b2862e966124fe86b4a116f6ad2dbfa",
+          "reference_number": 43,
+          "comparison": "2026年同题位「Do you have to fly home  Do you live on a farm ” The   43   were never-ending. I was a   44   in their eyes. As I grow older, I’m mo」。未给43同号，考局部动词搭配和后文恢复局面的照应。 本题取证：两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "把王立起来，将此前吃掉的棋子放回先前位置以复盘。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Pieces are put back in their earlier positions."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "错选把棋子放到一旁，方向与复原盘面相反",
+          "mechanism": "选项 A「aside」保留“棋子此前确实被吃下”，却错选把棋子放到一旁，方向与复原盘面相反。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "棋子此前确实被吃下",
+          "distortion": "错选把棋子放到一旁，方向与复原盘面相反"
+        },
+        "B": {
+          "misconception": "将恢复各自位置误解为放在一起",
+          "mechanism": "选项 B「together」保留“两枚被吃的棋子都被处理”，却将恢复各自位置误解为放在一起。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两枚被吃的棋子都被处理",
+          "distortion": "将恢复各自位置误解为放在一起"
+        },
+        "C": {
+          "misconception": "套用收棋动作而与紧接着重开对局冲突",
+          "mechanism": "选项 C「away」保留“对局似乎已经结束”，却套用收棋动作而与紧接着重开对局冲突。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "对局似乎已经结束",
+          "distortion": "套用收棋动作而与紧接着重开对局冲突"
+        }
+      },
+      "reading_turn": {
+        "span": "Then the other boy stood the king up and put two captured pieces [43] _____ where they had been.",
+        "from": "Then the other boy stood the king up and put two captured pieces [43] _____ where they had been.",
+        "to": "两枚已被吃掉的棋子又回到各自原来的格子，put ... back where they had been 表示复原。aside 和 away 指收起，together 只指并置。"
+      }
+    },
+    {
+      "number": 44,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "4d1cbfc7cfc46fa2e332703a8deb6445b6ea45d2b0d05a62c7d096dd7444db15",
+          "reference_number": 44,
+          "comparison": "2025年同题位「pposedly important objects. That left a house still ___24___ with 学科 网（北 京）股 份有限 公司 things that, while not particularly ___25___, di」。两年同号完形，本空用已经决定输赢和仍在继续的动作对照。 本题取证：胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+        },
+        "2026": {
+          "version_sha256": "1de260dd52172547b4861a612d393f971b7cff6cc51f652939326a1860334d85",
+          "reference_number": 44,
+          "comparison": "2026年同题位「ve on a farm ” The   43   were never-ending. I was a   44   in their eyes. As I grow older, I’m more and more   45   for my small to」。两年同号完形，本空用已经决定输赢和仍在继续的动作对照。 本题取证：胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "比赛早已决出胜者，两人仍在playing复盘。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "They keep playing after the official winner has been established."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "忽略双方认可胜负，此刻活动只是继续走棋",
+          "mechanism": "选项 A「competing」保留“现场是正式赛事”，却忽略双方认可胜负，此刻活动只是继续走棋。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "现场是正式赛事",
+          "distortion": "忽略双方认可胜负，此刻活动只是继续走棋"
+        },
+        "C": {
+          "misconception": "把计分员的工作移到仍坐在棋盘前的两人",
+          "mechanism": "选项 C「counting」保留“比赛的结果确实需要登记”，却把计分员的工作移到仍坐在棋盘前的两人。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "比赛的结果确实需要登记",
+          "distortion": "把计分员的工作移到仍坐在棋盘前的两人"
+        },
+        "D": {
+          "misconception": "将尝试两种还原方案扩大成争论胜负",
+          "mechanism": "选项 D「arguing」保留“两人对旧局面的记忆不同”，却将尝试两种还原方案扩大成争论胜负。",
+          "plausible": true,
+          "trap": "scope",
+          "subtle": true,
+          "unchanged": "两人对旧局面的记忆不同",
+          "distortion": "将尝试两种还原方案扩大成争论胜负"
+        }
+      },
+      "reading_turn": {
+        "span": "So why were they still [44] _____?",
+        "from": "So why were they still [44] _____?",
+        "to": "胜负已明而仍在走棋，后文解释这是复盘。双方已一致指出赢家，并非比赛还在继续或争执胜负。"
+      }
+    },
+    {
+      "number": 45,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "48f81a6aa7142b89e6d9b694c3b7f417c84429cc1ff9dd57db20435a60b80b1d",
+          "reference_number": 45,
+          "comparison": "2025年同题位「 网（北 京）股 份有限 公司 things that, while not particularly ___25___, didn’t belong in a landfill (垃圾填埋场). I took a picture of the vase and 」。两年该位完形，此处靠下句he wanted to find out区分猜想与承认。 本题取证：他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+        },
+        "2026": {
+          "version_sha256": "ec4907f89a7ff3e8989197dfa4d7bfd5fa4b2929210c98b700d540714d2e14da",
+          "reference_number": 45,
+          "comparison": "2026年同题位「   in their eyes. As I grow older, I’m more and more   45   for my small town roots. Sure, my friends and I loved to   46   about ho」。两年该位完形，此处靠下句he wanted to find out区分猜想与承认。 本题取证：他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "or so he believed 表明小男孩以为自己曾差一步获胜，想再验证。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The smaller boy thinks he nearly had a win and wants to test that belief."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "将对局势的主观估计误当给人的承诺",
+          "mechanism": "选项 A「promised」保留“小棋手愿再试一局”，却将对局势的主观估计误当给人的承诺。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "小棋手愿再试一局",
+          "distortion": "将对局势的主观估计误当给人的承诺"
+        },
+        "B": {
+          "misconception": "把他认为可能取胜改为一项外部要求",
+          "mechanism": "选项 B「required」保留“比赛有规则”，却把他认为可能取胜改为一项外部要求。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "比赛有规则",
+          "distortion": "把他认为可能取胜改为一项外部要求"
+        },
+        "D": {
+          "misconception": "把尚待检验的优势改成他承认的既成事实",
+          "mechanism": "选项 D「admitted」保留“他实际上输掉了棋”，却把尚待检验的优势改成他承认的既成事实。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "他实际上输掉了棋",
+          "distortion": "把尚待检验的优势改成他承认的既成事实"
+        }
+      },
+      "reading_turn": {
+        "span": "The smaller boy had been one move from a win himself, or so he [45] _____.",
+        "from": "The smaller boy had been one move from a win himself, or so he [45] _____.",
+        "to": "他觉得自己差一步可赢，于是想验证；这不是承诺、规则或认错。"
+      }
+    },
+    {
+      "number": 46,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "826e3e6c76de69f797b1f1e904d327b07c773a398634ee034c9d745678c80a80",
+          "reference_number": 46,
+          "comparison": "2025年同题位「 couple of messages came in, one wanting additional ___26___, another asking for a price cut. As our ___27___ day drew near, I settl」。两年同号完形，本题由后续行为逆推当时态度。 本题取证：对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+        },
+        "2026": {
+          "version_sha256": "a4f7f29898d8bc1bf2d963ae301fbdf0d7e51e64467a62e50c475268d5e7ae12",
+          "reference_number": 46,
+          "comparison": "2026年同题位「my small town roots. Sure, my friends and I loved to   46   about how bored we were in the middle of nowhere;   47  , as I finish up」。两年同号完形，本题由后续行为逆推当时态度。 本题取证：对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "对手主动提出把棋子复原，后来继续找地方研究，可见其愿意配合。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "His opponent offers to set up the position for the test."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "以偶然发生替代主动帮忙，并忽略继续协助的行为",
+          "mechanism": "选项 B「happened」保留“对手确实摆回棋子”，却以偶然发生替代主动帮忙，并忽略继续协助的行为。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "对手确实摆回棋子",
+          "distortion": "以偶然发生替代主动帮忙，并忽略继续协助的行为"
+        },
+        "C": {
+          "misconception": "把对棋子位置记不清误作忘记执行还原",
+          "mechanism": "选项 C「forgotten」保留“两人确有记忆分歧”，却把对棋子位置记不清误作忘记执行还原。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两人确有记忆分歧",
+          "distortion": "把对棋子位置记不清误作忘记执行还原"
+        },
+        "D": {
+          "misconception": "由无需再赛推出拒绝帮助，与已动手复原相反",
+          "mechanism": "选项 D「refused」保留“棋局已分出胜负”，却由无需再赛推出拒绝帮助，与已动手复原相反。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "棋局已分出胜负",
+          "distortion": "由无需再赛推出拒绝帮助，与已动手复原相反"
+        }
+      },
+      "reading_turn": {
+        "span": "His opponent had [46] _____ to put the pieces where they had been just before the mistake.",
+        "from": "His opponent had [46] _____ to put the pieces where they had been just before the mistake.",
+        "to": "对手帮助还原局面，并继续陪他尝试两种版本；主动相助呼应后文阻止收棋。"
+      }
+    },
+    {
+      "number": 47,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bea9cad831d26c7c6d8079da934d5d7dee625b9d897142feca2fd8d94cedab87",
+          "reference_number": 47,
+          "comparison": "2025年同题位「al ___26___, another asking for a price cut. As our ___27___ day drew near, I settled on a new price ($0) and reposted it. The ___28」。未给47同号，后文对两个版本提供明确复核。 本题取证：下一句说尝试 both versions，意味着记忆有分歧。"
+        },
+        "2026": {
+          "version_sha256": "0c9a75a1cfb445afea76c68546a26f211fcb1e4c1e3e37cd0c6b13c036c5c7b9",
+          "reference_number": 47,
+          "comparison": "2026年同题位「   about how bored we were in the middle of nowhere;   47  , as I finish up my junior year of college, I’m convinced that it took   」。未给47同号，后文对两个版本提供明确复核。 本题取证：下一句说尝试 both versions，意味着记忆有分歧。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "后句both versions说明二人记忆中的位置略有差别。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "下一句说尝试 both versions，意味着记忆有分歧。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "They are trying two versions because their memories differ."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。下一句说尝试 both versions，意味着记忆有分歧。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。下一句说尝试 both versions，意味着记忆有分歧。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把事发生不久误作有两种版本的原因",
+          "mechanism": "选项 A「recently」保留“原局刚结束二十分钟”，却把事发生不久误作有两种版本的原因。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "原局刚结束二十分钟",
+          "distortion": "把事发生不久误作有两种版本的原因"
+        },
+        "B": {
+          "misconception": "把场地公共性误套到两人的记忆差异",
+          "mechanism": "选项 B「publicly」保留“比赛在公共大厅举行”，却把场地公共性误套到两人的记忆差异。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "比赛在公共大厅举行",
+          "distortion": "把场地公共性误套到两人的记忆差异"
+        },
+        "C": {
+          "misconception": "把能回忆误解为记得十分清楚，未解释两个版本",
+          "mechanism": "选项 C「clearly」保留“两人都能回忆旧局”，却把能回忆误解为记得十分清楚，未解释两个版本。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "两人都能回忆旧局",
+          "distortion": "把能回忆误解为记得十分清楚，未解释两个版本"
+        }
+      },
+      "reading_turn": {
+        "span": "But each remembered the position a little [47] _____.",
+        "from": "But each remembered the position a little [47] _____.",
+        "to": "下一句说尝试 both versions，意味着记忆有分歧。"
+      }
+    },
+    {
+      "number": 48,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "db29cf9b39ba08e0df0108242daedb76a19df01834fb4d4b4697385f5865cee4",
+          "reference_number": 48,
+          "comparison": "2025年同题位「 I settled on a new price ($0) and reposted it. The ___28___: “I hate this vase. Maybe you won’t.” In an instant, a woman raced into」。两年同号考短语辨析，本题需顺接让桌和阻止。 本题取证：比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+        },
+        "2026": {
+          "version_sha256": "eedd82555fc098a8a6f35c5bfd67b353478b7e8388291a7cdffb0a04d18249a2",
+          "reference_number": 48,
+          "comparison": "2026年同题位「y junior year of college, I’m convinced that it took   48   our small town to realize how much we actually loved it and what exactly」。两年同号考短语辨析，本题需顺接让桌和阻止。 本题取证：比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "被告知桌子须让给下轮后，孩子开始收棋，对手制止并寻另一张桌。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "He starts to pack up when the organiser asks for the table."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把先前指出位置延续到裁判要求腾桌后",
+          "mechanism": "选项 A「point at」保留“复盘时两人关注棋子位置”，却把先前指出位置延续到裁判要求腾桌后。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "复盘时两人关注棋子位置",
+          "distortion": "把先前指出位置延续到裁判要求腾桌后"
+        },
+        "C": {
+          "misconception": "误以为腾桌须把棋子分发给别人",
+          "mechanism": "选项 C「hand out」保留“场地有人等待下一轮”，却误以为腾桌须把棋子分发给别人。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "场地有人等待下一轮",
+          "distortion": "误以为腾桌须把棋子分发给别人"
+        },
+        "D": {
+          "misconception": "把倚仗棋子的意思误套到准备清桌的具体动作",
+          "mechanism": "选项 D「count on」保留“小棋手对自己能赢有信心”，却把倚仗棋子的意思误套到准备清桌的具体动作。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "小棋手对自己能赢有信心",
+          "distortion": "把倚仗棋子的意思误套到准备清桌的具体动作"
+        }
+      },
+      "reading_turn": {
+        "span": "The little boy began to [48] _____ the pieces.",
+        "from": "The little boy began to [48] _____ the pieces.",
+        "to": "比赛桌要腾给下一轮，于是准备收起棋子，对手拦住他另找桌子。"
+      }
+    },
+    {
+      "number": 49,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "fd58735986f71f7ce9e00dbe347937e6f913a5afe4b15df9484ae9fe39dd7713",
+          "reference_number": 49,
+          "comparison": "2025年同题位「raced into my house and left happily with the vase. ___29___, I posted more. My daily posts and the ___30___ I received became a pre」。两年同号考语境词义，本处由银杯原位置印证桌子的用途。 本题取证：桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+        },
+        "2026": {
+          "version_sha256": "4175a7babf5105c6b200685cffbeca8d2d594390779184f1fbf7773f7414d99e",
+          "reference_number": 49,
+          "comparison": "2026年同题位「 loved about it. The pace of life is slow and people   49   connecting to each other. You do more than just talk to your neighbors —」。两年同号考语境词义，本处由银杯原位置印证桌子的用途。 本题取证：桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "桌子本要放奖品，银杯后来被移到窗台。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The small table is meant to hold the cups."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把本来用来展示奖杯的用途反成隐藏奖杯",
+          "mechanism": "选项 A「hide」保留“移走奖杯能暂时腾出桌面”，却把本来用来展示奖杯的用途反成隐藏奖杯。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "移走奖杯能暂时腾出桌面",
+          "distortion": "把本来用来展示奖杯的用途反成隐藏奖杯"
+        },
+        "B": {
+          "misconception": "把陈放多个物品误作专门分类",
+          "mechanism": "选项 B「sort」保留“桌上原有多只奖杯”，却把陈放多个物品误作专门分类。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "桌上原有多只奖杯",
+          "distortion": "把陈放多个物品误作专门分类"
+        },
+        "D": {
+          "misconception": "把可能的打包流程错当这张桌子的既定用途",
+          "mechanism": "选项 D「wrap」保留“奖品最终会颁发”，却把可能的打包流程错当这张桌子的既定用途。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "奖品最终会颁发",
+          "distortion": "把可能的打包流程错当这张桌子的既定用途"
+        }
+      },
+      "reading_turn": {
+        "span": "It was meant to [49] _____ the prizes.",
+        "from": "It was meant to [49] _____ the prizes.",
+        "to": "桌上本摆奖杯，移到窗台后原桌腾空，故 hold the prizes。"
+      }
+    },
+    {
+      "number": 50,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c4e22b78411f03ecf2a39ebfc64e6896b03259038ff41e578d0051ca39e70122",
+          "reference_number": 50,
+          "comparison": "2025年同题位「se. ___29___, I posted more. My daily posts and the ___30___ I received became a precious ray of light in the chaos of my house. Eac」。两年同号完形，本题将搬运动作和已重构的具体局面相连。 本题取证：小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+        },
+        "2026": {
+          "version_sha256": "f9aa8bfd96bd5634fae2831586029fea4ef100a182dc16e68da5cc08c160949a",
+          "reference_number": 50,
+          "comparison": "2026年同题位「your neighbors — in a lot of cases, they’re truly an   50   of your family. Much of this   51   centers around being outside and kno」。两年同号完形，本题将搬运动作和已重构的具体局面相连。 本题取证：小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "缓慢抬棋盘是为了使棋子保持原位。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The boys walk slowly to keep the pieces in place."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "把看得见当作用慢动作维持的目标，未联系复盘所需的原盘位",
+          "mechanism": "选项 B「sight」保留“端着棋盘时能看见棋子”，却把看得见当作用慢动作维持的目标，未联系复盘所需的原盘位。",
+          "plausible": true,
+          "trap": "cause",
+          "subtle": true,
+          "unchanged": "端着棋盘时能看见棋子",
+          "distortion": "把看得见当作用慢动作维持的目标，未联系复盘所需的原盘位"
+        },
+        "C": {
+          "misconception": "把要端平的棋盘与须保留格位的棋子混为一谈",
+          "mechanism": "选项 C「balance」保留“端着棋盘需要平衡”，却把要端平的棋盘与须保留格位的棋子混为一谈。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "端着棋盘需要平衡",
+          "distortion": "把要端平的棋盘与须保留格位的棋子混为一谈"
+        },
+        "D": {
+          "misconception": "把对棋步的疑问移给正在搬运的棋子",
+          "mechanism": "选项 D「doubt」保留“旧局中走法一度存疑”，却把对棋步的疑问移给正在搬运的棋子。",
+          "plausible": true,
+          "trap": "referent",
+          "subtle": true,
+          "unchanged": "旧局中走法一度存疑",
+          "distortion": "把对棋步的疑问移给正在搬运的棋子"
+        }
+      },
+      "reading_turn": {
+        "span": "The boys carried their board across the room, slowly enough to keep the pieces in [50] _____.",
+        "from": "The boys carried their board across the room, slowly enough to keep the pieces in [50] _____.",
+        "to": "小心端着棋盘是为保住原来的棋子位置；in sight 不解释缓慢平稳搬动的目的。"
+      }
+    },
+    {
+      "number": 51,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "70205ab02cc4687a635b007b870fe76f5ff7bf57f6e74f0562d3be58f0666779",
+          "reference_number": 51,
+          "comparison": "2025年同题位「aos of my house. Each exchange provided a chance to ___31___ the landfill and to please another person I might not otherwise have __」。未给51同号，语境在地点介词around和排队等候。 本题取证：已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+        },
+        "2026": {
+          "version_sha256": "6a367f775bf20995524b696cd076032dcf7607037312f3d163d7b2c0ecca3b77",
+          "reference_number": 51,
+          "comparison": "2026年同题位「they’re truly an   50   of your family. Much of this   51   centers around being outside and knowing the ins and outs of the town; b」。未给51同号，语境在地点介词around和排队等候。 本题取证：已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "结束比赛的棋手聚在桌边，等着再试一步。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Finished players gather round to take turns."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把转向这一瞬间误作已在桌边等候的聚集状态",
+          "mechanism": "选项 A「turning」保留“更多选手转向复盘桌”，却把转向这一瞬间误作已在桌边等候的聚集状态。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "更多选手转向复盘桌",
+          "distortion": "把转向这一瞬间误作已在桌边等候的聚集状态"
+        },
+        "B": {
+          "misconception": "把正在等待的参与者理解为猜测的旁观者",
+          "mechanism": "选项 B「guessing」保留“大家要尝试不同的棋步”，却把正在等待的参与者理解为猜测的旁观者。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "大家要尝试不同的棋步",
+          "distortion": "把正在等待的参与者理解为猜测的旁观者"
+        },
+        "C": {
+          "misconception": "把好奇进一步推成匆忙奔跑，没有解释围桌候场",
+          "mechanism": "选项 C「hurrying」保留“选手对复盘表现出兴趣”，却把好奇进一步推成匆忙奔跑，没有解释围桌候场。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "选手对复盘表现出兴趣",
+          "distortion": "把好奇进一步推成匆忙奔跑，没有解释围桌候场"
+        }
+      },
+      "reading_turn": {
+        "span": "By afternoon, players who had finished their games were [51] _____ around the small table, waiting for a turn to try a move again.",
+        "from": "By afternoon, players who had finished their games were [51] _____ around the small table, waiting for a turn to try a move again.",
+        "to": "已赛完的棋手围到小桌旁排队尝试，gathering around 与 waiting for a turn 衔接。"
+      }
+    },
+    {
+      "number": 52,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "ba6cf1376b4956b659889a3a33704cdb975b4dc26e0848da3291a3001737b6df",
+          "reference_number": 52,
+          "comparison": "2025年同题位「to please another person I might not otherwise have ___32___. I sit in my apartment today, loving each of the ___33___ that share ou」。两年同号完形，本空用前段报分和后段无领先者呼应。 本题取证：与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+        },
+        "2026": {
+          "version_sha256": "3f8a99c72fe39e44f09f636f521cf0e7dcdca3da9131ee014a59aee1836ba1de",
+          "reference_number": 52,
+          "comparison": "2026年同题位「 outs of the town; being present and mindful of your   52   is a critical part of the culture. As I move through my college years, I」。两年同号完形，本空用前段报分和后段无领先者呼应。 本题取证：与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+        }
+      },
+      "answer_key": "B",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "复盘没有人要叙事者记分，与正式成绩台区别开。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "These are replays for learning; no one asks for an official score."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把记分员没有工作误作没人邀请他下棋",
+          "mechanism": "选项 A「join」保留“作者确实在复盘桌旁”，却把记分员没有工作误作没人邀请他下棋。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "作者确实在复盘桌旁",
+          "distortion": "把记分员没有工作误作没人邀请他下棋"
+        },
+        "C": {
+          "misconception": "把原来的时间管理移到自由重下的小桌",
+          "mechanism": "选项 C「shorten」保留“上午曾要正式比赛及时腾桌”，却把原来的时间管理移到自由重下的小桌。",
+          "plausible": true,
+          "trap": "order",
+          "subtle": true,
+          "unchanged": "上午曾要正式比赛及时腾桌",
+          "distortion": "把原来的时间管理移到自由重下的小桌"
+        },
+        "D": {
+          "misconception": "把分配空间误作需要为每场复盘组织对阵",
+          "mechanism": "选项 D「arrange」保留“作者确实安排了桌子”，却把分配空间误作需要为每场复盘组织对阵。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "作者确实安排了桌子",
+          "distortion": "把分配空间误作需要为每场复盘组织对阵"
+        }
+      },
+      "reading_turn": {
+        "span": "Nobody asked me to [52] _____ those games.",
+        "from": "Nobody asked me to [52] _____ those games.",
+        "to": "与记分员原本职责、家长随后询问领先者相照应，不需登记复盘的胜负。"
+      }
+    },
+    {
+      "number": 53,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "9b5f65279bf270d049f2e06d0a2e7336653ddda49b79d264c773c3e073515035",
+          "reference_number": 53,
+          "comparison": "2025年同题位「__. I sit in my apartment today, loving each of the ___33___ that share our small space. I take ___34___ in knowing that, somewhere 」。两年同号完形，本题与前空score共同构成主题线索。 本题取证：没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+        },
+        "2026": {
+          "version_sha256": "7618083eac81d9a0d524e2f3649b176476bcbd761929242f8db55f5143fa97fc",
+          "reference_number": 53,
+          "comparison": "2026年同题位「f the culture. As I move through my college years, I   53   the visits to my little hometown. I am grateful for the   54   that I ha」。两年同号完形，本题与前空score共同构成主题线索。 本题取证：没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+        }
+      },
+      "answer_key": "C",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "家长问谁领先，而这里没有记比赛分，因此答不上。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The organiser cannot report a leader in the unofficial replays."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把交流学习误作由固定的人讲授",
+          "mechanism": "选项 A「teaching」保留“孩子能从复盘中学习”，却把交流学习误作由固定的人讲授。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "孩子能从复盘中学习",
+          "distortion": "把交流学习误作由固定的人讲授"
+        },
+        "B": {
+          "misconception": "把最初的问题移到家长看到的小桌",
+          "mechanism": "选项 B「missing」保留“开篇确实在寻找漏报棋局”，却把最初的问题移到家长看到的小桌。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "开篇确实在寻找漏报棋局",
+          "distortion": "把最初的问题移到家长看到的小桌"
+        },
+        "D": {
+          "misconception": "将记分员职责或别的球类发球混同为家长问的胜负问题",
+          "mechanism": "选项 D「serving」保留“作者在服务赛事”，却将记分员职责或别的球类发球混同为家长问的胜负问题。",
+          "plausible": true,
+          "trap": "referent",
+          "subtle": true,
+          "unchanged": "作者在服务赛事",
+          "distortion": "将记分员职责或别的球类发球混同为家长问的胜负问题"
+        }
+      },
+      "reading_turn": {
+        "span": "When a parent asked who was [53] _____ at my new table, I couldn't tell her.",
+        "from": "When a parent asked who was [53] _____ at my new table, I couldn't tell her.",
+        "to": "没有为复盘计分，故无法告诉家长谁领先；小桌旁活动本身显然可见。"
+      }
+    },
+    {
+      "number": 54,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "4f48f46dd7de2654b8649dd65d18faf219228f7fa63ab420a780ddb6e11bba2f",
+          "reference_number": 54,
+          "comparison": "2025年同题位「 of the ___33___ that share our small space. I take ___34___ in knowing that, somewhere nearby, someone is ___35___ something that c」。两年同号完形应由句法与叙事共同约束；此处场地与表格指称交叉，语义证据不足。 本题取证：赛场布局专门留桌，成绩表却不列这张桌子；leave it off the chart 表示从表上略去。"
+        },
+        "2026": {
+          "version_sha256": "057a058a90ff1e953c918bee572e86a6b8a64ded23bee7c827a28610d439c6c6",
+          "reference_number": 54,
+          "comparison": "2026年同题位「 visits to my little hometown. I am grateful for the   54   that I had growing up and know that wherever my next adventure takes me,」。两年同号完形应由句法与叙事共同约束；此处场地与表格指称交叉，语义证据不足。 本题取证：赛场布局专门留桌，成绩表却不列这张桌子；leave it off the chart 表示从表上略去。"
+        }
+      },
+      "answer_key": "A",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "leave it open on the results chart可指把表格位置空着，然而it承上指厅里预留的空间；若要说不列入记分表，应为leave it off the results chart。A代入成off on。D marked语法可通，亦可理解为标有位置但不记分。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "return",
+          "evidence": "上下文暗示把非正式复盘桌排除在成绩表之外，但原句为‘I left it [54] ___ on the results chart.’，A代入成‘left it off on the results chart’，不同于正常的‘left it off the results chart’；C代入‘left it open on the results chart’语法通顺并可能理解为留空。空后的on削弱唯一性。改为‘I left that table [54] ___ the results chart.’可保留A作正解。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "上下文意为不把复盘桌列入成绩表，推测拟填off；卷面原句形成leave it off on the results chart，C项open又可形成不同意思的通顺句，详见问题记录。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。赛场布局专门留桌，成绩表却不列这张桌子；leave it off the chart 表示从表上略去。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。赛场布局专门留桌，成绩表却不列这张桌子；leave it off the chart 表示从表上略去。"
+      },
+      "distractors": {
+        "B": {
+          "misconception": "将空间留位接为 left it up on the chart",
+          "mechanism": "选项 B「up」保留“桌子在平面图上留位”，却将空间留位接为 left it up on the chart。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "桌子在平面图上留位",
+          "distortion": "将空间留位接为 left it up on the chart"
+        },
+        "C": {
+          "misconception": "选项 open 可以和残留的 on the chart 成句，破坏唯一性",
+          "mechanism": "选项 C「open」保留“该桌没有登记结果”，却选项 open 可以和残留的 on the chart 成句，破坏唯一性。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": false,
+          "unchanged": "该桌没有登记结果",
+          "distortion": "选项 open 可以和残留的 on the chart 成句，破坏唯一性"
+        },
+        "D": {
+          "misconception": "把平面图上的标记移到成绩表",
+          "mechanism": "选项 D「marked」保留“场地图标了空位”，却把平面图上的标记移到成绩表。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "场地图标了空位",
+          "distortion": "把平面图上的标记移到成绩表"
+        }
+      },
+      "reading_turn": {
+        "span": "I left it [54] _____ on the results chart.",
+        "from": "I left it [54] _____ on the results chart.",
+        "to": "赛场布局专门留桌，成绩表却不列这张桌子；leave it off the chart 表示从表上略去。"
+      }
+    },
+    {
+      "number": 55,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "1f7a4bbdafb1f905d344993945cbdf515b89f596edd04194ab6cd50b101f1355",
+          "reference_number": 55,
+          "comparison": "2025年同题位「34___ in knowing that, somewhere nearby, someone is ___35___ something that couldn’t come with us.」。未给55同号，是完形末句回扣记分员身份与复盘主题。 本题取证：正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+        },
+        "2026": {
+          "version_sha256": "2094beb4dfdfb658c3d38c8d7dcf3316484ca37587aed0dcf7824d363bc79a45",
+          "reference_number": 55,
+          "comparison": "2026年同题位「know that wherever my next adventure takes me, I can   55   my small town roots to lead me in the right direction.」。未给55同号，是完形末句回扣记分员身份与复盘主题。 本题取证：正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+        }
+      },
+      "answer_key": "D",
+      "depth": {
+        "reasoning_steps": [
+          "通读所在句，再用上下文复核搭配",
+          "赛事成绩登记后，研究棋局仍可以继续。"
+        ],
+        "linked_concepts": [
+          "完形词义",
+          "同篇照应"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "pass",
+          "evidence": "正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The score is recorded, yet the players continue to explore the game."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "比赛记分员以第一人称回忆棋手复盘的经历",
+        "evidence": "比赛记分员以第一人称回忆棋手复盘的经历。正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+      },
+      "distractors": {
+        "A": {
+          "misconception": "把成绩表以后可比较的功能错当作者刚完成的登记",
+          "mechanism": "选项 A「compared」保留“不同选手的分数确实可比较”，却把成绩表以后可比较的功能错当作者刚完成的登记。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "不同选手的分数确实可比较",
+          "distortion": "把成绩表以后可比较的功能错当作者刚完成的登记"
+        },
+        "B": {
+          "misconception": "把复盘中的推测移到比赛正式结果上",
+          "mechanism": "选项 B「predicted」保留“小棋手曾预测另一种结局”，却把复盘中的推测移到比赛正式结果上。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "小棋手曾预测另一种结局",
+          "distortion": "把复盘中的推测移到比赛正式结果上"
+        },
+        "C": {
+          "misconception": "把局面回忆争议误作正式得分遭争议，双方对赢家一致",
+          "mechanism": "选项 C「disputed」保留“棋步的具体位置有分歧”，却把局面回忆争议误作正式得分遭争议，双方对赢家一致。",
+          "plausible": true,
+          "trap": "inference_boundary",
+          "subtle": true,
+          "unchanged": "棋步的具体位置有分歧",
+          "distortion": "把局面回忆争议误作正式得分遭争议，双方对赢家一致"
+        }
+      },
+      "reading_turn": {
+        "span": "A good game, I had discovered, doesn't always end when the score is [55] _____.",
+        "from": "A good game, I had discovered, doesn't always end when the score is [55] _____.",
+        "to": "正式比分登记后，棋手仍可从同一局面学东西，与开头成绩格呼应。"
+      }
+    },
+    {
+      "number": 56,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "144b7a6bb50335607e242c4c56a0d96fe92ca1bab8a87c66e9ee7cad5a092d98",
+          "reference_number": 56,
+          "comparison": "2025年同题位「uring artwork inspired by Go, or weiqi in Chinese, ____36____ originated in China more than 4,000 years ago. Go is one of ____37____」。与两年同号语法填空题位一致。本题检查主谓齐全后再判断分词。 本题取证：each carrying ... 构成独立主格结构，block 与 carry 是主动关系，无并列连词再接谓语。"
+        },
+        "2026": {
+          "version_sha256": "c479a4f0f0c0e13dfde0768638555ee8eb48f782aa35610fd5cdfb99a2198845",
+          "reference_number": 56,
+          "comparison": "2026年同题位「 seven as the last digit. It is also common for them   56   (hold) during traditional Chinese holidays such as the Spring Festival a」。与两年同号语法填空题位一致。本题检查主谓齐全后再判断分词。 本题取证：each carrying ... 构成独立主格结构，block 与 carry 是主动关系，无并列连词再接谓语。"
+        }
+      },
+      "answer_key": "carrying",
+      "depth": {
+        "reasoning_steps": [
+          "定位主句倒装谓语are",
+          "判断各活字主动承载字母"
+        ],
+        "linked_concepts": [
+          "独立结构",
+          "现在分词"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "each carrying introduces a non-finite supplement with active meaning."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。each carrying ... 构成独立主格结构，block 与 carry 是主动关系，无并列连词再接谓语。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。each carrying ... 构成独立主格结构，block 与 carry 是主动关系，无并列连词再接谓语。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Inside it are rows of tiny wooden blocks, each [56] _____ (carry) a single letter.",
+        "from": "Inside it are rows of tiny wooden blocks, each [56] _____ (carry) a single letter.",
+        "to": "each carrying ... 构成独立主格结构，block 与 carry 是主动关系，无并列连词再接谓语。"
+      }
+    },
+    {
+      "number": 57,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "01d367e71ba73c6bff82c127d489f55145379696003c6c25a5d8da316bbb5b78",
+          "reference_number": 57,
+          "comparison": "2025年同题位「d in China more than 4,000 years ago. Go is one of ____37____ earliest binary-based (基于二元的) games. The movements of the black and wh」。两年同题位均属语法填空，此处以时间状语锁定过去时。 本题取证：Last winter 给出已结束的过去时间，museum 作主语，received 为全句谓语。"
+        },
+        "2026": {
+          "version_sha256": "54137b4f625ae085a0a629f12ef8c5b4525b56a8925a6e214c10007baac9241f",
+          "reference_number": 57,
+          "comparison": "2026年同题位「s well as other local festivals. The exact dates and   57   (frequent) of daji vary from region to region. Daji originated from the 」。两年同题位均属语法填空，此处以时间状语锁定过去时。 本题取证：Last winter 给出已结束的过去时间，museum 作主语，received 为全句谓语。"
+        }
+      },
+      "answer_key": "received",
+      "depth": {
+        "reasoning_steps": [
+          "找时间标记",
+          "选择主动一般过去时"
+        ],
+        "linked_concepts": [
+          "时态",
+          "主谓搭配"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Last winter and when its owner retired place the receipt in the past."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。Last winter 给出已结束的过去时间，museum 作主语，received 为全句谓语。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。Last winter 给出已结束的过去时间，museum 作主语，received 为全句谓语。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Last winter, the museum [57] _____ (receive) the drawer from a family printing business when its owner retired.",
+        "from": "Last winter, the museum [57] _____ (receive) the drawer from a family printing business when its owner retired.",
+        "to": "Last winter 给出已结束的过去时间，museum 作主语，received 为全句谓语。"
+      }
+    },
+    {
+      "number": 58,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "d3d32f2fa31ec03e480d150794760ed4f061328d3ff5b93078eca1a3b87ddaaf",
+          "reference_number": 58,
+          "comparison": "2025年同题位「echnology and contemporary art,” says Tu. “We hope ____38____ (present)the rather abstract Go game and AI in a visual context, and i」。两年同位语法填空，本题同时检验可数名词引入与发音。 本题取证：第一次引入单数可数名词 question mark；unusually 以元音音素开头，用 an。"
+        },
+        "2026": {
+          "version_sha256": "2fd08d496ce88024f7615b59ecb0b4d99b8c85702d9585bff022d6991fbd9109",
+          "reference_number": 58,
+          "comparison": "2026年同题位「nt folk custom of trading goods, which dates back to   58   Han Dynasty. As transportation and communication   59   (be) underdevelo」。两年同位语法填空，本题同时检验可数名词引入与发音。 本题取证：第一次引入单数可数名词 question mark；unusually 以元音音素开头，用 an。"
+        }
+      },
+      "answer_key": "an",
+      "depth": {
+        "reasoning_steps": [
+          "确认名词单数泛指",
+          "看紧随冠词的读音"
+        ],
+        "linked_concepts": [
+          "冠词",
+          "元音音素"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Unusually begins with a vowel sound."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。第一次引入单数可数名词 question mark；unusually 以元音音素开头，用 an。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。第一次引入单数可数名词 question mark；unusually 以元音音素开头，用 an。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Among the blocks was [58] _____ unusually large question mark.",
+        "from": "Among the blocks was [58] _____ unusually large question mark.",
+        "to": "第一次引入单数可数名词 question mark；unusually 以元音音素开头，用 an。"
+      }
+    },
+    {
+      "number": 59,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "099ef8ed4d1408fd6581d18342a57a6e04479c3e1038b353856ebf1027f6f1f8",
+          "reference_number": 59,
+          "comparison": "2025年同题位「nent into your trap and force them to follow your ‘____39____ (guide)’ till they lose,” explains Wang Wei, a Go player among the vis」。基准未列59同号，按语法填空题型核对定语从句中的缺位。 本题取证：关系从句缺少 name 的定语；姓名属于先行词 actor，故用 whose。"
+        },
+        "2026": {
+          "version_sha256": "ef0b355988867f9ad5f5e8494107724db82daad758fcdc584a555e7b4e603b37",
+          "reference_number": 59,
+          "comparison": "2026年同题位「8   Han Dynasty. As transportation and communication   59   (be) underdeveloped at that time, it was very difficult for households t」。基准未列59同号，按语法填空题型核对定语从句中的缺位。 本题取证：关系从句缺少 name 的定语；姓名属于先行词 actor，故用 whose。"
+        }
+      },
+      "answer_key": "whose",
+      "depth": {
+        "reasoning_steps": [
+          "识别定语从句",
+          "补所属而非主语"
+        ],
+        "linked_concepts": [
+          "关系限定词",
+          "所属关系"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The relative pronoun marks possession of the actor’s name."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。关系从句缺少 name 的定语；姓名属于先行词 actor，故用 whose。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。关系从句缺少 name 的定语；姓名属于先行词 actor，故用 whose。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "The actor [59] _____ name appeared below the mark was the owner's grandfather.",
+        "from": "The actor [59] _____ name appeared below the mark was the owner's grandfather.",
+        "to": "关系从句缺少 name 的定语；姓名属于先行词 actor，故用 whose。"
+      }
+    },
+    {
+      "number": 60,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bf8b457bcd25846527bcbb2d99b8e9c40212f02c35c0acffe5ba537e1fe1b36d",
+          "reference_number": 60,
+          "comparison": "2025年同题位「ors to the exhibition. “The players’ personalities ____40____ (reveal) during the game, and one’s weaknesses are exposed to the oppo」。与两年同号语法填空相同；此处是直接数形匹配。 本题取证：three 限定可数名词复数，故 word 加 s。"
+        },
+        "2026": {
+          "version_sha256": "6e0d1b20ccff3cd6c44969dab5ce514e9311b48defefbd67c8c73a393ec95992",
+          "reference_number": 60,
+          "comparison": "2026年同题位「it was very difficult for households to obtain daily   60   (necessity). As a solution, people gathered at specific locations on set」。与两年同号语法填空相同；此处是直接数形匹配。 本题取证：three 限定可数名词复数，故 word 加 s。"
+        }
+      },
+      "answer_key": "words",
+      "depth": {
+        "reasoning_steps": [
+          "定位数词",
+          "改可数名词为复数"
+        ],
+        "linked_concepts": [
+          "名词复数",
+          "数词搭配"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Three requires the plural count noun."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。three 限定可数名词复数，故 word 加 s。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。three 限定可数名词复数，故 word 加 s。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "They choose three [60] _____ (word) and set them in a frame.",
+        "from": "They choose three [60] _____ (word) and set them in a frame.",
+        "to": "three 限定可数名词复数，故 word 加 s。"
+      }
+    },
+    {
+      "number": 61,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "a229ac2250a8f8eb7b5f7229724b193c455cb5ec239db3e445dd06045c1b13c6",
+          "reference_number": 61,
+          "comparison": "2025年同题位「o the opponent,” she adds. “A decent winner always ____41____ (try) to beat the opponent ____42____ no more than one or two points a」。两年同题位均语法填空，需分辨完整从句与介词短语。 本题取证：before 在此接动词作介词宾语，其逻辑主语是 they，故填 adding。"
+        },
+        "2026": {
+          "version_sha256": "fb2febfd9954a4c13fdd41923284d80fdaf35c411c78c42ec63f702affabd475",
+          "reference_number": 61,
+          "comparison": "2026年同题位「tions on set days to trade their surplus (剩余的) items   61   what they needed. In addition to being venues for buying and selling, da」。两年同题位均语法填空，需分辨完整从句与介词短语。 本题取证：before 在此接动词作介词宾语，其逻辑主语是 they，故填 adding。"
+        }
+      },
+      "answer_key": "adding",
+      "depth": {
+        "reasoning_steps": [
+          "识别before后没有独立主语",
+          "选动名词形式"
+        ],
+        "linked_concepts": [
+          "非谓语",
+          "介词宾语"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Before as a preposition takes an -ing form."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。before 在此接动词作介词宾语，其逻辑主语是 they，故填 adding。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。before 在此接动词作介词宾语，其逻辑主语是 they，故填 adding。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Before [61] _____ (add) ink, they check the letters in a mirror.",
+        "from": "Before [61] _____ (add) ink, they check the letters in a mirror.",
+        "to": "before 在此接动词作介词宾语，其逻辑主语是 they，故填 adding。"
+      }
+    },
+    {
+      "number": 62,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "c9471cb843a71a83ec3ca5286d6be8075039d51516c8ec82425148832a33be2c",
+          "reference_number": 62,
+          "comparison": "2025年同题位「inner always ____41____ (try) to beat the opponent ____42____ no more than one or two points as a gesture (姿态) of respect for the ot」。与两年同位题型相同，本题由句法功能直接确定。 本题取证：修饰动词 wait，patient 的副词形式为 patiently。"
+        },
+        "2026": {
+          "version_sha256": "2c03a504739e6e78f86d2fb109dc5871328b943e52134f860c4a3f3e64d5899c",
+          "reference_number": 62,
+          "comparison": "2026年同题位「 near and far crowd into these markets on daji days.   62   (draw) by the aroma (香味) of street food, they line up in front of stands」。与两年同位题型相同，本题由句法功能直接确定。 本题取证：修饰动词 wait，patient 的副词形式为 patiently。"
+        }
+      },
+      "answer_key": "patiently",
+      "depth": {
+        "reasoning_steps": [
+          "判断修饰wait",
+          "用副词表示等待方式"
+        ],
+        "linked_concepts": [
+          "词性转换",
+          "副词"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "An adverb modifies wait."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。修饰动词 wait，patient 的副词形式为 patiently。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。修饰动词 wait，patient 的副词形式为 patiently。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Even a short message takes time, and the guides wait [62] _____ (patient) while a visitor works.",
+        "from": "Even a short message takes time, and the guides wait [62] _____ (patient) while a visitor works.",
+        "to": "修饰动词 wait，patient 的副词形式为 patiently。"
+      }
+    },
+    {
+      "number": 63,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "d889c4413336dae21766c6d3bd40822c561b40453e925cc3b8422e08abf560d5",
+          "reference_number": 63,
+          "comparison": "2025年同题位「ween the black and white pieces, the beauty in the ____43____ (strategy) placement of the pieces, ____44____ the energy flow followi」。基准欠63同位，考语法填空中的固定介词。 本题取证：take pride in sth. 是固定搭配，后接令人自豪的具体对象。"
+        },
+        "2026": {
+          "version_sha256": "314dd404d957c6c79a6118aa0fab99a342ed1887bebf1c63cf4e2edeae4b91f6",
+          "reference_number": 63,
+          "comparison": "2026年同题位「(香味) of street food, they line up in front of stands   63   serve steaming dumplings and hot noodle soup. While eating and enjoying 」。基准欠63同位，考语法填空中的固定介词。 本题取证：take pride in sth. 是固定搭配，后接令人自豪的具体对象。"
+        }
+      },
+      "answer_key": "in",
+      "depth": {
+        "reasoning_steps": [
+          "定位take pride",
+          "识别其后宾语为感到自豪的对象"
+        ],
+        "linked_concepts": [
+          "介词",
+          "固定搭配"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The construction is take pride in."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。take pride in sth. 是固定搭配，后接令人自豪的具体对象。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。take pride in sth. 是固定搭配，后接令人自豪的具体对象。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "Many visitors take pride [63] _____ the little differences between their prints.",
+        "from": "Many visitors take pride [63] _____ the little differences between their prints.",
+        "to": "take pride in sth. 是固定搭配，后接令人自豪的具体对象。"
+      }
+    },
+    {
+      "number": 64,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "bdfd639e32070cadbd84db53dbbafda6503d1a1e9b7219f814159cd142af0515",
+          "reference_number": 64,
+          "comparison": "2025年同题位「the ____43____ (strategy) placement of the pieces, ____44____ the energy flow following each move inspired artists to create oil pai」。两年同位语法填空，此处比较标志清楚；宜采用对印色结果的常用说法。 本题取证：than the rest 形成比较，a little 修饰比较级 darker。"
+        },
+        "2026": {
+          "version_sha256": "cc6d1a000593cac1bccb785a39a1ada50d28aa2a17e2f78cd042f0eb7b2fda99",
+          "reference_number": 64,
+          "comparison": "2026年同题位「other and share stories of their daily lives. Before   64   (head) home, they fill their shopping bags with fresh fruit and vegetabl」。两年同位语法填空，此处比较标志清楚；宜采用对印色结果的常用说法。 本题取证：than the rest 形成比较，a little 修饰比较级 darker。"
+        }
+      },
+      "answer_key": "darker",
+      "depth": {
+        "reasoning_steps": [
+          "找than引出的比较对象",
+          "根据印出的字色选比较级"
+        ],
+        "linked_concepts": [
+          "比较级",
+          "结果描述"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "Than introduces the comparison of the printed results."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。than the rest 形成比较，a little 修饰比较级 darker。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。than the rest 形成比较，a little 修饰比较级 darker。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "The letters may be straight, but one may print a little [64] _____ (dark) than the rest.",
+        "from": "The letters may be straight, but one may print a little [64] _____ (dark) than the rest.",
+        "to": "than the rest 形成比较，a little 修饰比较级 darker。"
+      }
+    },
+    {
+      "number": 65,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "701d13e5750d9f35cbf664eaa39bdfd6e2db2263184db89d320f4c72e2045cb5",
+          "reference_number": 65,
+          "comparison": "2025年同题位「pired artists to create oil paintings, sculptures, ____45____ (digital) generated pictures and silk-screen prints for the exhibition」。两年该位均为语法填空结尾，题面设置固定搭配。 本题取证：worth 后用动名词，the card is worth keeping 表示卡片值得保留。"
+        },
+        "2026": {
+          "version_sha256": "d73f51647b0580ad91a0b5db30b1cc7c97c8974436cda929c5a0bd78f693a517",
+          "reference_number": 65,
+          "comparison": "2026年同题位「getables from local farmers, at prices significantly   65   (cheap) than those found in supermarkets.」。两年该位均为语法填空结尾，题面设置固定搭配。 本题取证：worth 后用动名词，the card is worth keeping 表示卡片值得保留。"
+        }
+      },
+      "answer_key": "keeping",
+      "depth": {
+        "reasoning_steps": [
+          "识别worth结构",
+          "核对作为受事的card"
+        ],
+        "linked_concepts": [
+          "非谓语",
+          "worth doing"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "The idiom is worth doing with passive sense."
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "印刷室物件与游客体验的说明性短文。worth 后用动名词，the card is worth keeping 表示卡片值得保留。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "印刷室物件与游客体验的说明性短文",
+        "evidence": "印刷室物件与游客体验的说明性短文。worth 后用动名词，the card is worth keeping 表示卡片值得保留。"
+      },
+      "distractors": {},
+      "reading_turn": {
+        "span": "For many visitors, that small difference is precisely what makes the card worth [65] _____ (keep).",
+        "from": "For many visitors, that small difference is precisely what makes the card worth [65] _____ (keep).",
+        "to": "worth 后用动名词，the card is worth keeping 表示卡片值得保留。"
+      }
+    },
+    {
+      "number": 66,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "ca673c3068d9cc34c22cdaac4f2866b4b25d9ef844ffe5fd887be9ffd25ad008",
+          "reference_number": 66,
+          "comparison": "2025年同题位「46. 假定你是李华，你班的英语报要增设一个栏目。外教 Jenny 提出“Fun at my school”和“Guess who I\nam”两个选项供大家选择。请给 Jenny 写一封邮件，内容包括：\n(1)你的选择；\n(2)说明理由。\n注意：\n(1)写作词数应为 8」。本位为应用文，所给基准未收66原题。校园广播需要用听得见的特征而非物体外观落实第二个交际任务。 本题取证：围绕广播听众能听到什么安排信息。范文用翻书、转轮、盖章和还书期限把陌生声音落到具体校园物品上。"
+        },
+        "2026": {
+          "version_sha256": "834f9bdd31790ee4b60c412baf20e69a28ef13f8bd603e1d837fc83895c6c22d",
+          "reference_number": 66,
+          "comparison": "2026年同题位「你校英文报“Opinion”栏目正在征稿，请同学们对未来大学生活中的学习（Study）、社交（Socialize）、睡眠（Sleep）这三件事按重要性进行排序，并阐述理由。\n请你写一篇短文向该栏目投稿。\n注意：\n（1）写作词数应为 80 个左右。\n（2）请按如下格式在答」。本位为应用文，所给基准未收66原题。校园广播需要用听得见的特征而非物体外观落实第二个交际任务。 本题取证：围绕广播听众能听到什么安排信息。范文用翻书、转轮、盖章和还书期限把陌生声音落到具体校园物品上。"
+        }
+      },
+      "answer_key": "开放作答",
+      "depth": {
+        "reasoning_steps": [
+          "选有校园用途的物件",
+          "让音响与使用场景依时间展开"
+        ],
+        "linked_concepts": [
+          "应用文",
+          "受众与语域"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "一次简短的推荐须同时让Jo理解物品意义和听众能借什么声音认出它。可接受其他能在校园实录和辨认的物品。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "学生对外教的简短回信，须照顾广播听众。围绕广播听众能听到什么安排信息。范文用翻书、转轮、盖章和还书期限把陌生声音落到具体校园物品上。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "学生对外教的简短回信，须照顾广播听众",
+        "evidence": "学生对外教的简短回信，须照顾广播听众。围绕广播听众能听到什么安排信息。范文用翻书、转轮、盖章和还书期限把陌生声音落到具体校园物品上。"
+      },
+      "distractors": {}
+    },
+    {
+      "number": 67,
+      "benchmarks": {
+        "2025": {
+          "version_sha256": "461f74927084775134d6ff74f8a4ec4bc089eb896c8d34296d69bc1908c589a1",
+          "reference_number": 67,
+          "comparison": "2025年同题位「47. 阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\nMy wife and I wanted to share our new home with family and friends by hosting a small gatheri」。两年题67均依给定两段开头接续具体行动并完成情感转折。本题的原尺寸、纸卷、胶带和父亲回家构成可复用的叙事线索。 本题取证：第一段从纸卷、胶带、有限时间和 May 无法站在手机照片旁展开；第二段落实新家厨房以及父亲与兄妹的反应。可以采用其他自洽情节。"
+        },
+        "2026": {
+          "version_sha256": "b2353675dae9bd97a9c9ae94e29e94f6410499cbf2a44f3b8f878769812d4ba0",
+          "reference_number": 67,
+          "comparison": "2026年同题位「阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\nEmily Sanders, a 25-year-old from Detroit, Michigan, set out on December 23rd with high hopes of 」。两年题67均依给定两段开头接续具体行动并完成情感转折。本题的原尺寸、纸卷、胶带和父亲回家构成可复用的叙事线索。 本题取证：第一段从纸卷、胶带、有限时间和 May 无法站在手机照片旁展开；第二段落实新家厨房以及父亲与兄妹的反应。可以采用其他自洽情节。"
+        }
+      },
+      "answer_key": "开放作答",
+      "depth": {
+        "reasoning_steps": [
+          "接住纸卷与胶带并保留原门",
+          "转入新家依实高安置，父亲补写新记号收束"
+        ],
+        "linked_concepts": [
+          "叙事续写",
+          "线索回收",
+          "代际情感"
+        ]
+      },
+      "findings": {
+        "distractors": {
+          "verdict": "not_applicable",
+          "evidence": "本题根据开放作答或词形填入评分，无备选项。"
+        },
+        "depth": {
+          "verdict": "pass",
+          "evidence": "原照缩小不能重现身高；真人等高、以地面为共同基准的解决办法解释她为何接受纸卷，并承接门不可带走、原有材料和当晚时空。"
+        },
+        "figure": {
+          "verdict": "not_applicable",
+          "evidence": "题面条件均在语篇、对话或设问文字中。"
+        },
+        "language": {
+          "verdict": "pass",
+          "evidence": "第一人称家庭叙事，以搬家前后两处厨房承接。第一段从纸卷、胶带、有限时间和 May 无法站在手机照片旁展开；第二段落实新家厨房以及父亲与兄妹的反应。可以采用其他自洽情节。"
+        }
+      },
+      "language_style": {
+        "natural": true,
+        "register": "第一人称家庭叙事，以搬家前后两处厨房承接",
+        "evidence": "第一人称家庭叙事，以搬家前后两处厨房承接。第一段从纸卷、胶带、有限时间和 May 无法站在手机照片旁展开；第二段落实新家厨房以及父亲与兄妹的反应。可以采用其他自洽情节。"
+      },
+      "distractors": {}
+    }
+  ]
+}

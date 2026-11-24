@@ -1,0 +1,44 @@
+{
+  "state": "eligible",
+  "round": 1,
+  "score": 94,
+  "fatal_count": 0,
+  "rewrite": [
+    1,
+    12
+  ],
+  "locked": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "deductions": [
+    {
+      "number": 1,
+      "category": "depth",
+      "rule": "physics.algebra",
+      "points": 4,
+      "evidence": "三条箭头直接给出能量相加，只需E=hν一次代换；作为起始基础题可保留，不能单独表明近代物理推理深度。",
+      "reader": "solver"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第12题第（1）问在第3页末，第（2）（3）问在第4页页首。后两问依赖第3页的100/200 kΩ和减半时间；第4页没有任何题号续题标记，宜在页首标“第12题（续）”。",
+      "reader": "visual"
+    }
+  ],
+  "pdf_sha256": "69d3d7c05e9dfda610dc25daa558a7c1895f4e0999cf2caf225d57d8108ed4f7"
+}

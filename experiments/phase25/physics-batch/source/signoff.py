@@ -31,7 +31,7 @@ ANCHORS={
      7:"−2.0 V",8:"0.10 s",9:"电场向下、磁场垂直纸面向里"}}
 
 
-def signoff(folder,label,binding):
+def signoff(folder,label,binding,*,edition_edits=None,rubric_steps=None):
     score=replay(folder/"board")
     require(score["status"]=="eligible","未获得三角色放行")
     raw=read_json(folder/"board"/f"round{score['round']}.json")
@@ -59,7 +59,7 @@ def signoff(folder,label,binding):
         reasoning=("选 "+key+"。 " if choice else "")+sol["reasoning"]
         if not choice:
             reasoning+="\n"+"　".join(i+a for i,a in zip(labels,sol["answer"],strict=True))
-        reasoning=paragraphs[n-1].strip()
+        reasoning=(edition_edits or {}).get(n,paragraphs[n-1].strip())
         if choice:require(reasoning.startswith("选 "+key+"。"),"排印稿选择键不符")
         j={"id":q["id"],"approved":True,"answer":key,"independent_answer_verbatim":sol["answer"],
            "reasoning":reasoning,"science_review":teacher["reasoning"],
@@ -68,6 +68,9 @@ def signoff(folder,label,binding):
            "figure_reading":sol["figure_reading"]}
         if not choice:
             j["rubric"]=sol["rubric"]
+            if n in (rubric_steps or {}):
+                j["rubric"]=[{**part,"step":caption} for part,caption in
+                            zip(sol["rubric"],rubric_steps[n],strict=True)]
             j["equivalence_basis"]=EQUIVALENCE[label][n]
         if marks:=blank_numbers(q):j["blank_answers"]=dict(zip(marks,sol["blanks"],strict=True))
         review["items"].append(j)
@@ -87,6 +90,9 @@ def signoff(folder,label,binding):
             row["figure_conditions"]={"observation":printer["figure_reading"],"records":[
                 {"anchor":ANCHORS[label][n],"label":printer["figure_reading"],"meaning":sol["figure_reading"]}]}
         audit["items"].append(row)
+    from core.quality_audit import _paper_inputs, evaluate
+    preflight=evaluate(*_paper_inputs(folder),audit,review=review)
+    require(preflight["status"]=="accepted",str(preflight["failures"]))
     adjudicate(folder,review)
     result=submit(folder,audit,review=review)
     require(result["status"]=="accepted",str(result["failures"]))

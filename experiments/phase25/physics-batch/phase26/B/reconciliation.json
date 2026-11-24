@@ -1,0 +1,139 @@
+{
+  "solver_sha256": "b347d998c445c5ca040709665aac2c56901c37ffe86342b6471121167c1c8514",
+  "paper_version": "cfdd572eb64a0c8836be8c812f5dcf3910740113911c1e1d975aec371a86f3cd",
+  "candidate_sha256": "e695a985d8b54a162255c8b7c2f446144472d1a05c40e282c234072a3a850d71",
+  "paper_sha256": "0e5eeab312d4283895704659040771b72daaf93f98a89c3e8129bb0909ac193f",
+  "comparisons": [
+    {
+      "number": 1,
+      "candidate": "B",
+      "independent": "B"
+    },
+    {
+      "number": 2,
+      "candidate": "C",
+      "independent": "C"
+    },
+    {
+      "number": 3,
+      "candidate": "B",
+      "independent": "B"
+    },
+    {
+      "number": 4,
+      "candidate": "B",
+      "independent": "B"
+    },
+    {
+      "number": 5,
+      "candidate": "C",
+      "independent": "C"
+    },
+    {
+      "number": 6,
+      "candidate": "C",
+      "independent": "C"
+    },
+    {
+      "number": 7,
+      "candidate": "B",
+      "independent": "B"
+    },
+    {
+      "number": 8,
+      "candidate": "BC",
+      "independent": "BC"
+    },
+    {
+      "number": 9,
+      "candidate": "AD",
+      "independent": "AD"
+    },
+    {
+      "number": 10,
+      "candidate": "AC",
+      "independent": "AC"
+    },
+    {
+      "number": 11,
+      "candidate": {
+        "（1）": "−0.4；0.84",
+        "（2）": "偏大；球心轨迹"
+      },
+      "independent": [
+        "−0.4 cm，0.84 m/s",
+        "偏大；球心轨迹"
+      ],
+      "part_checks": [
+        "相邻段差为−0.4 cm；中心差分(13.2−4.8)cm/0.100 s=0.84 m/s。",
+        "较远标尺的像偏小，反算加速度幅值偏大；标尺应与球心轨迹共面。"
+      ]
+    },
+    {
+      "number": 12,
+      "candidate": {
+        "（1）": "30.0；35.0；指零",
+        "（2）": "200−x；64.0",
+        "（3）": "偏小"
+      },
+      "independent": [
+        "30.0 cm，35.0 cm，指零",
+        "200−x；64.0 m",
+        "偏小"
+      ],
+      "part_checks": [
+        "A端0向B端100增大，在30.0、35.0 cm之间细调至指零。",
+        "由B经远端为100+(100−x)=200−x，A侧32.0 cm给x/(200−x)=32/68，得64.0 m。",
+        "完好端新增电阻使A侧平衡长度占比变小，按理想关系反算的距离偏小。"
+      ]
+    },
+    {
+      "number": 13,
+      "candidate": {
+        "（1）": "3500 N；6500 N",
+        "（2）": "21600 J"
+      },
+      "independent": [
+        "3500 N、6500 N，均向上",
+        "21600 J"
+      ],
+      "part_checks": [
+        "两段加速度向下分别2、−4 m/s²，扣除500 N摩擦后制动力为3500、6500 N，均向上。",
+        "两段发电装置的制动功合计27000 J，乘80%为21600 J。"
+      ]
+    },
+    {
+      "number": 14,
+      "candidate": {
+        "（1）": "p₀V₀/2；3p₀V₀/2",
+        "（2）": "仍吸热；15V₀/8"
+      },
+      "independent": [
+        "W净=p₀V₀/2；QAB=3p₀V₀/2",
+        "1.6V₀后仍有一段吸热；V=15V₀/8时转为放热。"
+      ],
+      "part_checks": [
+        "循环净功为顺时针三角形面积p₀V₀/2，等容段吸热为内能增量3p₀V₀/2。",
+        "在B至C段，热量增量系数15/2−4V/V₀在1.6时为正，至15/8时变号，故先吸热后放热。"
+      ]
+    },
+    {
+      "number": 15,
+      "candidate": {
+        "（1）": "Blv=q/C+IR；mv=Ft−Blq",
+        "（2）": "Is=CBlF/(m+CB²l²)；a=F/(m+CB²l²)",
+        "（3）": "v∞=v₁−CBlRIs/[2(m+CB²l²)]；不反向；动能和电容电能的初末差"
+      },
+      "independent": [
+        "记k=Bℓ，kv=q/C+IR，Ft−kq=mv。",
+        "记D=m+Ck²，Is=CkF/D；a=F/D。",
+        "vf=v₁−CkRIs/(2D)，电流同向衰减，电阻耗能Q=mCR²Is²/(8D)。"
+      ],
+      "part_checks": [
+        "独立稿记k=Bℓ，其kv=q/C+IR、Ft−kq=mv即原回路和动量式。",
+        "D=m+Ck²时Iₛ=CkF/D、a=F/D即原式。",
+        "以k=Bℓ、D=m+Ck²代回可得同一末速。电流同向衰减至零；电阻热mCR²Iₛ²/(8D)等于撤力初末机械能及电容储能之差。"
+      ]
+    }
+  ]
+}

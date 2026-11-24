@@ -1,11 +1,12 @@
 """Deterministic preflight. Warnings measure wording, not correctness or student difficulty."""
 from itertools import combinations
+import json
 import math
 from pathlib import Path
 import re
 
 from analysis_db import fingerprint
-from gaokao import read_json, require
+from gaokao import digest, read_json, relative_path, require
 from core.editorial_rules import coverage, item_text, notation_issues
 from core.science_dna import STANDARD_LAYOUT
 
@@ -14,6 +15,55 @@ ABSTRACT = re.compile(r"某(?:种)?(?:植物|物质|激素|林地)|(?:物质|激
 OPTICS = r"折射|光纤|全反射|光程|干涉条纹|衍射|透镜成像|光路"
 CONSTANTS = {"h": 6.62607015e-34, "e": 1.602176634e-19, "c": 299792458,
              "k_B": 1.380649e-23, "N_A": 6.02214076e23}
+
+# Match prose labels, not unit substrings, chemical formulae or variable letters.
+ENGLISH_LABELS = re.compile(
+    r"(?<![a-zA-Z])(?:air|liquids?|flux|LDR|water|voltage|current|ground|switch|"
+    r"input|output|sensor|source|detector|resistor|capacitor|legend)(?![a-zA-Z])", re.I)
+LABEL_KEY = "gaokao.figure_labels"
+
+
+def label_hits(labels, subject):
+    if subject == "english":
+        return []
+    return sorted({word for label in labels for word in ENGLISH_LABELS.findall(label)})
+
+
+def required_figure_issues(subject, questions):
+    """Count actual nonchoice slots, independently of illustrated choice slots."""
+    nonchoice = [n for n,q in enumerate(questions, 1)
+                 if q["kind"] not in ("single_choice","multiple_choice") and q.get("figure")]
+    issues = []
+    rules = STANDARD_LAYOUT.get(subject)
+    if rules:
+        for n in rules["required_figure_positions"]:
+            if n not in nonchoice:
+                issues.append((n, "nonchoice_figure", f"第{n}题缺必配非选择题图"))
+        if len(nonchoice) < rules["nonchoice_figures_minimum"]:
+            issues.append((0, "nonchoice_figure_count",
+                           f"非选择配图位置 {nonchoice}，要求至少 {rules['nonchoice_figures_minimum']} 题"))
+    elif subject == "math":
+        for n,q in enumerate(questions, 1):
+            text = item_text(q)
+            solid = q.get("module") == "立体几何" or re.search(r"棱锥|棱柱|正方体|四面体|二面角|外接球",text)
+            referenced = re.search(r"如图|图中|图示|见图|读图|所示图像",text)
+            if (q.get("figure_required") or solid or referenced) and not q.get("figure"):
+                issues.append((n, "geometry_figure", f"第{n}题的空间关系或图示条件缺少示意图"))
+    return nonchoice, issues
+
+
+def printed_figure_labels(figure, folder):
+    """Read the artist strings embedded in the very PNG referenced by the student packet."""
+    from PIL import Image
+    path = relative_path(folder, figure["path"])
+    require(path.is_file() and digest(path) == figure["sha256"], "送审题图缺失或哈希已改变")
+    with Image.open(path) as im:
+        encoded = im.info.get(LABEL_KEY)
+    if encoded is None:
+        return None
+    labels = json.loads(encoded)
+    require(isinstance(labels, list) and all(isinstance(x,str) for x in labels), "图中文字清单损坏")
+    return labels
 
 
 def policies(root, subject):
@@ -67,7 +117,8 @@ def printed_constant_errors(text):
         if unit not in expected_unit or abs(value/CONSTANTS[key]-1)>0.01+1e-12:
             yield f"题面标称 {match[0]} 与约定单位或常量超出1%容差"
 
-def inspect(root, subject, paper, answers, *, header="", observations=(), policy_snapshot=None):
+def inspect(root, subject, paper, answers, *, header="", observations=(), policy_snapshot=None,
+            figure_folder=None):
     rows = paper["questions"]
     require(rows and len(rows) == len(answers), "答案和题目须逐项对应")
     issues, warnings, wrong, absolutes, abstract = [], [], 0, 0, 0
@@ -79,7 +130,7 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
         result["coverage"].pop("光学与机械波",None)
         for n,q in enumerate(rows,1):
             t=item_text(q)
-            if re.search(r"原子核|α 衰变|原子能级|能级跃迁|发射光谱",t) and n not in result["coverage"]["原子物理"]:
+            if re.search(r"原子核|α 衰变|原子能级|能级跃迁|发射光谱|逸出功|光电子|能级.{0,12}跃迁",t) and n not in result["coverage"]["原子物理"]:
                 result["coverage"]["原子物理"].append(n)
             if re.search(r"洛伦兹|偏转区|离子.{0,30}速度选择器|均匀磁场.{0,28}半周",t) and n not in result["coverage"]["磁场与洛伦兹力"]:
                 result["coverage"]["磁场与洛伦兹力"].append(n)
@@ -96,6 +147,9 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
         for n in ns[2:]:
             issue(n,"device",f"{name} 实际出现在题号 {ns}")
     scoped = subject in STANDARD_LAYOUT
+    nonchoice, missing = required_figure_issues(subject,rows)
+    for number, rule, fact in missing:
+        issue(number,rule,fact)
     illustrated = []
     for n,(q,answer) in enumerate(zip(rows,answers,strict=True),1):
         stem=item_text(q)
@@ -115,6 +169,20 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
                         warnings.append({"number":n,"rule":"absolute","option":key,"evidence":t})
         if opts and q.get("figure"):
             illustrated.append(n)
+        figure = q.get("figure")
+        if isinstance(figure,dict) and figure.get("type") in ("coordinate","wireframe"):
+            labels = [entry.get("math","") for entry in figure.get("labels",[])]
+            labels.extend(figure.get("vertices",{}))
+            labels.append(figure.get("caption_math",""))
+            if words := label_hits(labels,subject):
+                issue(n,"figure_language","示意图标注需中文化："+"、".join(words))
+        if isinstance(figure,dict) and figure_folder and figure.get("path") and figure.get("sha256"):
+            labels = printed_figure_labels(figure, figure_folder)
+            if labels is None:
+                warnings.append({"number":n,"rule":"figure_labels_unavailable",
+                                 "evidence":"原图无导出文字层，须在独立印刷审稿中逐图核读"})
+            elif words := label_hits(labels,subject):
+                issue(n,"figure_language","题图中须改写的英文标签："+"、".join(words))
         if scoped and n in STANDARD_LAYOUT[subject]["embedded_blanks"] and not re.search(r"_{3,}",stem):
             issue(n,"missing_blank","指定题位没有嵌入式答位")
     if scoped and len(illustrated)<STANDARD_LAYOUT[subject]["choice_figures_minimum"]:
@@ -135,7 +203,7 @@ def inspect(root, subject, paper, answers, *, header="", observations=(), policy
         if not math.isfinite(value) or abs(value/CONSTANTS[obs["symbol"]]-1)>0.01+1e-12:
             issue(n,"constant",f"{obs['symbol']}={value}，超过标准值的 1% 容差")
     return {"policy_sha256":fingerprint(policy_snapshot if policy_snapshot is not None else policies(root,subject)),"issues":issues,"warnings":warnings,
-            "coverage":result["coverage"],"choice_figures":illustrated,
+            "coverage":result["coverage"],"choice_figures":illustrated,"nonchoice_figures":nonchoice,
             "wrong_options":wrong,"absolute_wrong_options":absolutes,"abstract_mentions":abstract,
             "absolute_wrong_fraction":absolutes/wrong if wrong else None,
             "abstract_per_question":abstract/len(rows),"passed":not issues}
@@ -179,9 +247,16 @@ def figure_collisions(fig, tolerance_px=1):
     return findings
 
 
-def save_figure(fig,path):
+def save_figure(fig,path,*,subject=None):
+    from matplotlib.text import Text
     collisions=figure_collisions(fig)
     require(not collisions,"图件文字交叠："+str(collisions))
+    labels = [t.get_text() for t in fig.findobj(Text) if t.get_visible() and t.get_text().strip()
+              and (t.axes is None or t.axes.get_visible())]
+    if subject:
+        bad = label_hits(labels,subject)
+        require(not bad,"题图中须改写的英文标签："+"、".join(bad))
     path=Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
-    fig.savefig(path,dpi=fig.dpi,facecolor="white")
+    metadata = {LABEL_KEY:json.dumps(labels,ensure_ascii=False)} if path.suffix.lower()==".png" else None
+    fig.savefig(path,dpi=fig.dpi,facecolor="white",metadata=metadata)

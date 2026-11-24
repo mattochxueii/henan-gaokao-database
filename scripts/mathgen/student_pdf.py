@@ -26,7 +26,7 @@ from matplotlib.figure import Figure
 from mpl_toolkits.mplot3d import proj3d
 from analysis_db import fingerprint
 from gaokao import require, atomic_write, digest
-from core.editorial_rules import LAYOUT_MODES, REVISION, item_text, notation_issues
+from core.editorial_rules import LAYOUT_MODES, REVISION, inline_response_only, item_text, notation_issues
 from storage import atomic_json
 from .cjk_layout import ExamParagraph, plain_markup
 from .export import chinese_font, MathParagraph, formatted_plain
@@ -135,8 +135,9 @@ def answer_height(q):
     if q["kind"] not in ("constructed_response","response","writing"):
         return 0
     points = q["points"]
-    if re.search(r"_{3,}", item_text(q)):
-        return 2 if points <= 9 else 3.6
+    # A blank in just one part must not suppress the workspace for a later proof.
+    if inline_response_only(q):
+        return 0
     if points <= 9:
         return 4
     if points <= 13:
@@ -501,7 +502,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             parts = [para(part["label"] + " " + part["text"],
                           response_line if practice and "___" in part["text"] else body)
                      for part in q["parts"]]
-            keep_response = physics_layout and height > 0
+            keep_response = physics_layout and (height > 0 or (not choice and bool(parts)))
             if compact and not choice and not keep_response:
                 # The figure and first subquestion stay with their stem.
                 story.append(KeepTogether(block + parts[:1]))

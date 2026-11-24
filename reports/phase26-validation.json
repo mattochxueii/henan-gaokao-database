@@ -1,0 +1,226 @@
+{
+  "base_commit": "afc1feaae1e3364eab3919f56a8949ff7132105a",
+  "corpus": {
+    "chinese": {
+      "papers": 8,
+      "questions": 183
+    },
+    "math": {
+      "papers": 23,
+      "questions": 496
+    },
+    "english": {
+      "papers": 8,
+      "questions": 456
+    },
+    "physics": {
+      "papers": 3,
+      "questions": 45
+    },
+    "chemistry": {
+      "papers": 3,
+      "questions": 54
+    },
+    "biology": {
+      "papers": 3,
+      "questions": 63
+    }
+  },
+  "unchanged_frozen_artifacts": {
+    "forecast/frozen/henan-2027-math-v3.json": "33c20281a81ddc747189bc251564b90fc725ad86f540ad068c767ea0ee185931",
+    "forecast/preregistered/2027-math-trends.json": "0d7d54bd820d4f572aba59f3e6e7e5346ae55cad0e55696d55ebad0b955ed8a0"
+  },
+  "papers": {
+    "physics-A": {
+      "publication_status": "project_practice_independently_reviewed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "eligible",
+          "final_score": 94,
+          "fatal_count": 0,
+          "rewrite": [
+            1,
+            12
+          ]
+        },
+        {
+          "round": 2,
+          "status": "returned",
+          "final_score": 94,
+          "fatal_count": 0,
+          "rewrite": [
+            1
+          ]
+        },
+        {
+          "round": 3,
+          "status": "eligible",
+          "final_score": 100,
+          "fatal_count": 0,
+          "rewrite": []
+        }
+      ],
+      "pdfs": {
+        "experiments/phase25/physics-batch/phase26/A/final/paper.pdf": {
+          "sha256": "9c85da085f5770304aa8838ea8e591d4603e419e3f0994b5cb9655c757dcbe45",
+          "pages": 6
+        },
+        "experiments/phase25/physics-batch/phase26/A/final/solutions.pdf": {
+          "sha256": "471a700e4602acd01c48452cc4dd54ea60cf6e1cdf057d74fa3c49ea8b4f39e3",
+          "pages": 2
+        }
+      }
+    },
+    "physics-B": {
+      "publication_status": "project_practice_independently_reviewed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "eligible",
+          "final_score": 96,
+          "fatal_count": 0,
+          "rewrite": [
+            12
+          ]
+        },
+        {
+          "round": 2,
+          "status": "eligible",
+          "final_score": 100,
+          "fatal_count": 0,
+          "rewrite": []
+        }
+      ],
+      "pdfs": {
+        "experiments/phase25/physics-batch/phase26/B/final/paper.pdf": {
+          "sha256": "0e5eeab312d4283895704659040771b72daaf93f98a89c3e8129bb0909ac193f",
+          "pages": 7
+        },
+        "experiments/phase25/physics-batch/phase26/B/final/solutions.pdf": {
+          "sha256": "dff7a4a5f9980c2a88c2d97e9ea0fe07d0d707b41d3a3fbfe1154e6c0772d2e9",
+          "pages": 2
+        }
+      }
+    },
+    "chinese": {
+      "publication_status": "reviewed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "eligible",
+          "final_score": 92,
+          "fatal_count": 0,
+          "rewrite": [
+            6,
+            11,
+            22
+          ]
+        },
+        {
+          "round": 2,
+          "status": "eligible",
+          "final_score": 98,
+          "fatal_count": 0,
+          "rewrite": [
+            15
+          ]
+        },
+        {
+          "round": 3,
+          "status": "eligible",
+          "final_score": 100,
+          "fatal_count": 0,
+          "rewrite": []
+        }
+      ],
+      "pdfs": {
+        "experiments/phase26/chinese/final/paper.pdf": {
+          "sha256": "070cbbcb090426d2d0d830082dc154bcfce28e75ab66cd7edac60cb0fc762ab1",
+          "pages": 10
+        },
+        "experiments/phase26/chinese/final/solutions.pdf": {
+          "sha256": "ee0a9235af1eaafe8f67e19e318faa654bedf9dddb509bfa6184173b73fdf21d",
+          "pages": 6
+        }
+      }
+    },
+    "english": {
+      "publication_status": "reviewed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "returned",
+          "final_score": 0,
+          "fatal_count": 3,
+          "rewrite": [
+            1,
+            17,
+            50,
+            54,
+            66
+          ]
+        },
+        {
+          "round": 2,
+          "status": "eligible",
+          "final_score": 91,
+          "fatal_count": 0,
+          "rewrite": [
+            58,
+            62,
+            64
+          ]
+        },
+        {
+          "round": 3,
+          "status": "eligible",
+          "final_score": 100,
+          "fatal_count": 0,
+          "rewrite": []
+        }
+      ],
+      "pdfs": {
+        "experiments/phase26/english/final/listening-script.pdf": {
+          "sha256": "6913c3f7664997e859f1d1aa79a82eb238bcd4f1b302482dbb562a9efcbb4b20",
+          "pages": 3
+        },
+        "experiments/phase26/english/final/paper.pdf": {
+          "sha256": "c281d6a99388448714f8893c38f57d6076b32c282a7d07f5b47b863286aecfe8",
+          "pages": 14
+        },
+        "experiments/phase26/english/final/solutions.pdf": {
+          "sha256": "7c67c9f65a46e134bd2dcc3e2a4bda7c7127c8ed0af8bfe859e11a77a51d9015",
+          "pages": 8
+        }
+      }
+    }
+  },
+  "archived_readme_verified": true,
+  "readme_lines": 44,
+  "word_reviews": "experiments/phase26/word-visual-review.json",
+  "local_tests": 316,
+  "local_test_seconds": 43.856,
+  "real_teacher_reviews": 0,
+  "real_student_attempts": 0,
+  "precommit_hygiene": {
+    "checked_at_utc": "2026-11-24T07:14:29.417235+00:00",
+    "head": "afc1feaae1e3364eab3919f56a8949ff7132105a",
+    "worktree_files": 2292,
+    "reachable_blobs": 2173,
+    "checks": [
+      "private_key_header",
+      "github_token",
+      "openai_key",
+      "aws_key_id",
+      "slack_token",
+      "credential_in_url",
+      "assigned_secret"
+    ],
+    "findings": [],
+    "ignored_private_filename_count": 0,
+    "ignored_private_filename_types": {},
+    "scope": "工作树及本地所有可达 Git 对象，忽略目录仅查敏感文件名；不读取或输出私人恢复密钥。",
+    "pass": true
+  }
+}

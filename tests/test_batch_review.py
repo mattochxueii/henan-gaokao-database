@@ -85,6 +85,24 @@ class QualityTests(unittest.TestCase):
 
 
 class BoardTests(unittest.TestCase):
+    def test_revision_of_shared_passage_keeps_other_questions_locked(self):
+        before=state()
+        before["local_versions"]={str(n):f"body{n}" for n in (1,2,3)}
+        before["material_groups"]={"1":"cloze","2":"cloze","3":"article"}
+        rs=reports(before)
+        rs[0]["findings"]=[{"number":2,"category":"fatal","rule":"all.solution","evidence":"缺少介词"}]
+        prior=board.score_exam(before,rs)
+        revised=copy.deepcopy(before)
+        revised["item_versions"].update({"1":"passage-v2-1","2":"passage-v2-2"})
+        self.assertEqual(board.score_exam(revised,reports(revised),prior)["status"],"eligible")
+        revised["local_versions"]["1"]="modified-locked-question"
+        with self.assertRaisesRegex(ValueError,"锁定"):
+            board.score_exam(revised,reports(revised),prior)
+        revised["local_versions"]["1"]="body1"
+        revised["item_versions"]["3"]="unrelated-passage"
+        with self.assertRaisesRegex(ValueError,"锁定"):
+            board.score_exam(revised,reports(revised),prior)
+
     def test_fatal_veto_even_if_only_one(self):
         s=state();rs=reports(s)
         rs[0]["findings"]=[{"number":2,"category":"fatal","rule":"all.solution","evidence":"两个独立正确选项"}]

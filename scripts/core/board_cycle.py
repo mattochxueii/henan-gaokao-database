@@ -35,6 +35,13 @@ def cycle(root,folder,inbox,previous=None,repair_slots=(),providers=None):
               "fatal_count":result["fatal_count"],"rewrite":result["rewrite"],"locked":result["locked"],
               "deductions":result["deductions"],"pdf_sha256":result["pdf_sha256"]}
     path=folder/"board"/"decision.json"
-    if not path.exists():write_new(path,decision)
-    else:require(read_json(path)==decision,"返工指令与评分不一致")
+    if not path.exists():
+        write_new(path,decision)
+    elif read_json(path)!=decision:
+        # Older versions copied the previous round's convenience pointer with the immutable cards.
+        from storage import atomic_json
+        require(previous and (previous/"board"/"decision.json").is_file()
+                and read_json(path)==read_json(previous/"board"/"decision.json")
+                and result["round"]==read_json(path)["round"]+1,"返工指令与评分不一致")
+        atomic_json(path,decision)
     return decision

@@ -4,11 +4,14 @@ from collections import Counter
 
 STANDARD_LAYOUT = {
     "physics": {"choice_figures_minimum": 6, "choice_figures_target": [6, 8],
+                "nonchoice_figures_minimum": 5, "required_figure_positions": [11,12,13,14,15],
                 "embedded_blanks": [11, 12], "extended_calculations": [13, 14, 15]},
     "chemistry": {"choice_figures_minimum": 7, "choice_figures_target": [8, 10],
+                  "nonchoice_figures_minimum": 4, "required_figure_positions": [15,16,17,18],
                   "embedded_blanks": [15, 16, 17, 18]},
     "biology": {"choice_figures_minimum": 4, "choice_figures_target": [4, 5],
-                "embedded_blanks": [17, 18, 19, 20, 21]},
+                "nonchoice_figures_minimum": 3, "nonchoice_figures_target": [3, 5],
+                "required_figure_positions": [], "embedded_blanks": [17, 18, 19, 20, 21]},
 }
 
 
@@ -74,7 +77,9 @@ def science_profile(subject,papers):
         {"year": paper["year"], "paper_id": paper["paper_id"],
          "choice_count": sum(q["kind"] in ("single_choice","multiple_choice") for q in paper["items"]),
          "figured_choice_numbers": [q["number"] for q in paper["items"]
-                                    if q["kind"] in ("single_choice","multiple_choice") and q["figures"]]}
+                                    if q["kind"] in ("single_choice","multiple_choice") and q["figures"]],
+         "figured_nonchoice_numbers": [q["number"] for q in paper["items"]
+                                       if q["kind"] not in ("single_choice","multiple_choice") and q["figures"]]}
         for paper in formal
     ]
     layout = {

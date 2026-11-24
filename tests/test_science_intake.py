@@ -146,7 +146,7 @@ class ScienceLayoutTests(unittest.TestCase):
 
         questions = [
             {"kind": "single_choice" if i <= 7 else "multiple_choice" if i <= 10 else "constructed_response",
-             "figure": {"path": "drawn.png"} if i <= 6 else None,
+             "figure": {"path": "drawn.png"} if i <= 6 or i >= 11 else None,
              "stem": "如图判断。" if i <= 6 else "阅读题干\n完成任务。",
              "options": {}, "parts": [{"label": "（1）", "text": r"取____\(\mathrm{m/s}\)，再求____。"}]
              if i in (11, 12) else []} for i in range(1, 16)

@@ -37,6 +37,11 @@ def item_text(question, *, options=False):
     return " ".join(stem)
 
 
+def inline_response_only(question):
+    prompts = [part["text"] for part in question.get("parts", [])] or [question["stem"]]
+    return question["kind"] != "writing" and all(re.search(r"_{3,}", part) for part in prompts)
+
+
 def normal(text):
     return "".join(text.translate(str.maketrans(GLYPHS)).split()).casefold()
 

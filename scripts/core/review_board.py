@@ -45,14 +45,34 @@ def evidence(root, folder, rule_snapshot=None):
     header="".join("".join((p.extract_text() or "").split()) for p in doc.pages)
     rules=rule_snapshot if rule_snapshot is not None else ref.get("qa_policy") or policies(root,subj)
     gate=inspect(root,subj,paper,answers,header=header,observations=ref.get("constant_observations",()),
-                 policy_snapshot=rules)
+                 policy_snapshot=rules,figure_folder=folder)
     # Lock printed stems, options, parts, content-bound figures and any shared passage.
-    versions={str(n):fingerprint([q,paper.get("materials",{}).get(q.get("material")),
-                                   answers[n-1]]) for n,q in enumerate(paper["questions"],1)}
+    listening_file = folder/"listening-review.json"
+    listening = read_json(listening_file) if listening_file.is_file() else {}
+    if listening:
+        require(fingerprint(listening) == spec["listening_sha256"], "听力文本版本错误")
+    versions = {}
+    local_versions = {}
+    material_groups = {}
+    choice_keys = {}
+    exact_keys = {}
+    for n,q in enumerate(paper["questions"],1):
+        material = paper.get("materials",{}).get(q.get("material"))
+        parts = [q, material, answers[n-1]]
+        if q.get("material") in listening:
+            parts.append(listening[q["material"]])
+        versions[str(n)] = fingerprint(parts)
+        if material is not None:
+            local_versions[str(n)] = fingerprint([q,answers[n-1]])
+            material_groups[str(n)] = q["material"]
+        if (q.get("options") or (material or {}).get("options")) and isinstance(answers[n-1],str):
+            choice_keys[str(n)] = answers[n-1]
+        if q.get("kind") in ("grammar_gap","recitation"):
+            exact_keys[str(n)] = answers[n-1]
     return {"subject":subj,"version":version,"pdf_sha256":pdf_sha,"pages":len(doc.pages),
             "item_versions":versions,"ids":[q.get("id",q.get("number",n)) for n,q in enumerate(paper["questions"],1)],
-            "choice_keys":{str(n):ans for n,(q,ans) in enumerate(zip(paper["questions"],answers),1)
-                            if q.get("options") and isinstance(ans,str)},
+            "choice_keys":choice_keys, **({"exact_keys":exact_keys} if exact_keys else {}),
+            **({"local_versions":local_versions,"material_groups":material_groups} if local_versions else {}),
             "rules":rules,"preflight":gate,"reference_sha256":fingerprint(ref)}
 
 
@@ -84,6 +104,18 @@ def export_blind(root,folder,role,target):
     return {"role":role,"pdf_sha256":digest(target/"student.pdf")}
 
 
+def normalize_gap(value):
+    """Ignore punctuation around a supplied response; preserve spelling, case and word order."""
+    import re
+    import unicodedata
+    if isinstance(value, list):
+        value = "；".join(value)
+    text = unicodedata.normalize("NFC",str(value)).strip()
+    if re.search(r"[A-Za-z]",text):
+        return " ".join(text.split())
+    return re.sub(r"[\s，,。；;、]+", "", text)
+
+
 def score_exam(state, reports, previous=None):
     pre=state["preflight"]
     versions=state["item_versions"]
@@ -97,7 +129,16 @@ def score_exam(state, reports, previous=None):
                 "与此前试卷身份或题序不符")
         changed={int(k) for k,v in versions.items() if previous["item_versions"][k]!=v}
         allowed=set(previous["rewrite"])
-        require(changed<=allowed and bool(changed),"零扣分题已锁定，或没有任何修订")
+        # A corrected cloze passage must be reread by every affected item. Their individual
+        # wording, answer, and passage assignment remain locked unless separately returned.
+        groups = previous.get("material_groups",{})
+        affected = {groups[str(n)] for n in allowed if str(n) in groups}
+        old_local, new_local = previous.get("local_versions",{}), state.get("local_versions",{})
+        for n in changed-allowed:
+            k = str(n)
+            require(k in old_local and old_local[k]==new_local.get(k) and groups[k] in affected
+                    and state.get("material_groups",{}).get(k)==groups[k],"零扣分题已锁定")
+        require(bool(changed & allowed),"没有针对退回题位的修订")
     charges=[]
     def add(n,category,rule,fact,reader,points=None):
         require(type(n) is int and (n in numbers or (reader=="machine" and n==0))
@@ -133,6 +174,9 @@ def score_exam(state, reports, previous=None):
                     key=state.get("choice_keys",{}).get(str(item["number"]))
                     if key is not None and sorted(str(item["answer"]))!=sorted(key):
                         add(item["number"],"fatal","all.solution","独立选项 "+str(item["answer"])+" 与提交键 "+key+" 不一致","comparison")
+                    exact = state.get("exact_keys",{}).get(str(item["number"]))
+                    if exact is not None and normalize_gap(item["answer"]) != normalize_gap(exact):
+                        add(item["number"],"fatal","all.solution","盲答与填空键不一致，须逐空核对","comparison")
             if role=="pedagogy":
                 require(all(i.get("comparison") and i.get("steps") and i.get("concepts") for i in items),"教研员缺同题位比较与推理证据")
             if role=="visual":
@@ -156,6 +200,7 @@ def score_exam(state, reports, previous=None):
             "pdf_sha256":state["pdf_sha256"],"item_versions":dict(versions),"fatal_count":fatal,"final_score":score,
             "status":status,"deductions":charges,"charged_points":sum(booked.values()),
             "rewrite":rewrite,"locked":sorted(numbers-set(rewrite)),
+            **({k:state[k] for k in ("local_versions","material_groups")} if state.get("local_versions") else {}),
             "prior_sha256":fingerprint(previous) if previous else None,
             "inputs_sha256":fingerprint([state,reports])}
 
@@ -194,7 +239,8 @@ def record(root,folder,reports,previous_folder=None,repair_slots=()):
     result=score_exam(state,reports,prior)
     with TemporaryDirectory(dir=folder) as scratch:
         target=Path(scratch)/"board"
-        if previous_folder:shutil.copytree(previous_folder/"board",target)
+        if previous_folder:
+            shutil.copytree(previous_folder/"board",target,ignore=shutil.ignore_patterns("decision.json"))
         write_new(target/f"round{result['round']}.json",{"state":state,"reports":reports})
         write_new(target/f"scorecard-round{result['round']}.json",result)
         target.rename(folder/"board")

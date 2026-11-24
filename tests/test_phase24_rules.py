@@ -41,7 +41,7 @@ class EditionRulesTests(unittest.TestCase):
             self.assertEqual(sizes["paper_sha256"], digest(practice))
             actual = {i: sum(row["height_cm"] for row in sizes["answer_areas"] if row["number"] == i)
                       for i in (1, 2, 3)}
-            for i, expected in enumerate((7, 10.4, 2), 1):
+            for i, expected in enumerate((7, 10.4, 0), 1):
                 self.assertAlmostEqual(actual[i], expected, places=1)
             self.assertEqual(read_json(exam.with_suffix(".layout.json"))["answer_areas"], [])
             text = "".join(page.extract_text() for page in PdfReader(exam).pages)

@@ -1,0 +1,189 @@
+{
+  "state": {
+    "subject": "physics",
+    "version": "f36832545e581c5b0a80960d6f97ab50805de80f0b608a63d2ce45f8e6ac35e9",
+    "pdf_sha256": "df02e0e54cb92b009020a3c1c9eb7c6735b0a3e20fa249a3f04364da97a5d005",
+    "pages": 6,
+    "item_versions": {
+      "1": "ad003d80c8a515ca6a0ff38ea5bf0ef93b81d2432a81c97835ae86e72ec6831b",
+      "2": "588fb4b39ee8b60066fe07aceb8f5d7a42c7c0ac46565d36d10e0d6aa17f2e7e",
+      "3": "bdf74968388e564b69b08a0dafadcec13734d5f2b0fb6ff3df828ec97d69bad4",
+      "4": "6c05ca763b8547b42b90d6dc1c9fb1df5b18ea8a79844b79d8c5264220369d14",
+      "5": "7b2ddb01b2cddf120cbef33198f15a79331e3a08d0ee4bbe3c93a94df2909cec",
+      "6": "33a2249956fbd2441d667fd0a615051fe162d5d297710bb1982811e4c375cca7",
+      "7": "3c8c575b3b00b9ce790225537666dcbb71d94793cc121c93bb753794a70dd6f8",
+      "8": "3be6e1099bc2075207a2e9bf1274e899b7a96527f30f2d92d6417c809320fbf1",
+      "9": "d95a08a81535130d569241738bf9ea206a3331dae060077a861baa9abbf54287",
+      "10": "e106c898c97c41f475d899402c390841e5ad8de86e476481d21f3c6d12e64007",
+      "11": "29b6788b170a05472ebc8bc2098122f2d6cd32112b5b1f5b79069ed43ac2637f",
+      "12": "965f4305944f108d6a82e8e35e7d94fbe8a6e519ffb0ec4bfe56d288e4a5c282",
+      "13": "0ead762c5301cf437124b7fc64ff866cfbf6f2ba77e5b111809e8955e0b9a2b7",
+      "14": "45b52393db644b04426540c1afde67fedd853ee664da292d500b30e12f38c506",
+      "15": "be1b52009cacb9b5f5bbba28cdc0fa91ecd167039749338a6d219b1dd3ff0c3d"
+    },
+    "ids": [
+      "orig:physics:batch25-a-01",
+      "orig:physics:batch25-a-02",
+      "orig:physics:batch25-a-03",
+      "orig:physics:batch25-a-04",
+      "orig:physics:batch25-a-05",
+      "orig:physics:batch25-a-06",
+      "orig:physics:batch25-a-07",
+      "orig:physics:batch25-a-08",
+      "orig:physics:batch25-a-09",
+      "orig:physics:batch25-a-10",
+      "orig:physics:batch25-a-11",
+      "orig:physics:batch25-a-12",
+      "orig:physics:batch25-a-13",
+      "orig:physics:batch25-a-14",
+      "orig:physics:batch25-a-15"
+    ],
+    "choice_keys": {
+      "1": "B",
+      "2": "C",
+      "3": "B",
+      "4": "A",
+      "5": "A",
+      "6": "C",
+      "7": "B",
+      "8": "AD",
+      "9": "AC",
+      "10": "AC"
+    },
+    "rules": [
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "physics.breadth",
+        "subject": "physics",
+        "severity": "major",
+        "check": "标准卷逐查八块，光学独立于机械波",
+        "counterexample": "机械波代替全部光学"
+      },
+      {
+        "id": "physics.device",
+        "subject": "physics",
+        "severity": "major",
+        "check": "同一器具最多占两题",
+        "counterexample": "三题使用弹簧连接物体"
+      },
+      {
+        "id": "physics.constant",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "由标称数据验算可认定的常量，相对误差不超过1%",
+        "counterexample": "光电拟合斜率偏离 h/e 达3%"
+      },
+      {
+        "id": "physics.adjust",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "核查回路可调元件、空间距离及边界",
+        "counterexample": "要求扫电流却只有固定电源与负载"
+      },
+      {
+        "id": "physics.algebra",
+        "subject": "physics",
+        "severity": "major",
+        "check": "寻找物理建模与推理转折",
+        "counterexample": "靠两组未知量联立即可作答"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      }
+    ],
+    "preflight": {
+      "policy_sha256": "f293518344080fa62a677be22dbf654748f3516af92d74bf1984979fd4121e60",
+      "issues": [
+        {
+          "number": 0,
+          "rule": "coverage",
+          "evidence": "未在题干或设问中检出：原子物理"
+        }
+      ],
+      "warnings": [],
+      "coverage": {
+        "力学": [
+          7,
+          11,
+          13,
+          14,
+          15
+        ],
+        "天体与引力": [
+          2
+        ],
+        "静电与电路": [
+          6,
+          8,
+          12,
+          14
+        ],
+        "磁场与洛伦兹力": [
+          5
+        ],
+        "电磁感应与交变": [
+          6,
+          14
+        ],
+        "热学": [
+          4
+        ],
+        "原子物理": [],
+        "光学": [
+          3
+        ]
+      },
+      "choice_figures": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      "nonchoice_figures": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "wrong_options": 27,
+      "absolute_wrong_options": 0,
+      "abstract_mentions": 0,
+      "absolute_wrong_fraction": 0.0,
+      "abstract_per_question": 0.0,
+      "passed": false
+    },
+    "reference_sha256": "b26d6db0d33d218bf959471d62dceaf9c99c4417531c75f86c4830f62a4a7b9e",
+    "repair_slots": [
+      1
+    ]
+  },
+  "reports": []
+}
