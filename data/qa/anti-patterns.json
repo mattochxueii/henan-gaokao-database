@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "entries": [
     {
       "id": "math.stop",
@@ -385,6 +385,48 @@
       "severity": "fatal",
       "check": "C/D 篇进阶长词兼查频率与去重后的占比",
       "counterexample": "重复使用同一长词伪造词汇复杂度"
+    },
+    {
+      "id": "math.solid-projection",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "空间几何须用三维线框并检查投影顶点与非相连棱间距",
+      "counterexample": "用平面坐标手绘立体图，或顶点投影与背后棱重叠"
+    },
+    {
+      "id": "math.school-notation",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "检查题干、答案、评分中的程序符号、组合数、补集和直线字母",
+      "counterexample": "k=1..n-1、<=、\\binom、\\mathbb{C}_U、直线1恒过"
+    },
+    {
+      "id": "math.auxiliary-points",
+      "subject": "math",
+      "severity": "major",
+      "check": "对照解析与评分中明确命名的辅助交点",
+      "counterexample": "解析设交点K，评分写交点M"
+    },
+    {
+      "id": "math.repeat-method",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "检查填空专题、切线方法和定义同构的跨题型模型",
+      "counterexample": "选择和解答仅换系数重复同一函数模型"
+    },
+    {
+      "id": "math.numeric-choice-order",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "纯数值选项按升序或降序排列",
+      "counterexample": "四个选项依次是 2、1、4、3"
+    },
+    {
+      "id": "math.unused-function",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "引入的函数或导函数符号须在后续题面使用",
+      "counterexample": "题干引入导函数符号，随后的设问完全不使用"
     }
   ]
 }

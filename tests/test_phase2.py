@@ -346,7 +346,7 @@ class PrivateStorageTests(unittest.TestCase):
             self.assertIn("5i",row["stem"])
             self.assertEqual(row["year"],2025)
             self.assertFalse((checkout/".private").exists())
-            made=command(runner,"math","generate","--mode","sequence","--seed",20261123,
+            made=command(runner,"math","generate","--engine","template","--allow-legacy-template","--mode","sequence","--seed",20261123,
                          "--no-export","--output","scratch/sequence")
             self.assertEqual(made["structure"]["questions"],5)
             verified=command(runner,"math","verify","scratch/sequence/run.json")

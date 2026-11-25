@@ -465,10 +465,15 @@ def publish(output, review_path, comparison_path, *, root=None):
                               answer_keys=answer_keys)
     if student.get("release_rules"):
         from core.marking_standards import grading_findings
+        import logging
+        from core.release_checks import math_notation_findings, math_point_warnings
 
         rendered = {q["order"]:"\n".join(q["solution_paragraphs"]) for q in solutions["questions"]}
         defects = list(grading_findings("math",solutions["questions"],{},rendered))
+        defects.extend(issue for n,text in rendered.items() for issue in math_notation_findings(n,text))
         require(not defects,"数学解析评分格式错误："+str(defects))
+        for n,_,warning in math_point_warnings(solutions["questions"],rendered):
+            logging.warning("第 %s 题：%s",n,warning)
     cert = {
         **manifest,
         **({"quality_audit_sha256": quality} if quality else {}),

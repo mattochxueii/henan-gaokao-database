@@ -13,6 +13,8 @@ description: 本仓库唯一官方六科命题入口。使用高考真题研究�
 
 ## 单卷
 
+原创模拟必须走 simulate 与后续安检、盲审和发布。禁止以 assemble、train 导出的真题或 template 备用模板冒充原创卷。
+
 1. 用 `authoring-context <学科> --limit 100 --output context.json` 读取真实题面、命题画像及两年同题位依据。用 `exam-policy <学科> <年份>` 取卷头、计分与听力规则，语英、理科用 `plan <学科> <年份> --mode standard` 取标准蓝图。
 2. 创作独立于参考原题的新推理任务，写明同题位深度、错项误区和图件提供的条件。数学分离内部规格与中文题面，理科使用 `program` 或 `independent_review` 通道。物理逐题声明主考模块，语文默写逐小题登记作者和作品，英语语填逐空标考点。阅读 [标准卷约束与分块格式](references/standard.md)。
 3. 运行 `simulate <学科> <年份> <候选.json> <新目录> --context context.json`。默认 `exam` 按紧凑考场版排印。用 `--layout-mode practice` 给语英文字长答印书写横线，给语文作文印千格稿纸，数学、物理演算及化学结构式或路线使用纯空白。化学需要附加演算区时在该非选择题登记 `response_area: calculation`。命题会话沿用同一任务凭据，普通终端可用 `--session <凭据.json>` 显式绑定。政策说明由程序排印。纯嵌入式填空使用题内横线。

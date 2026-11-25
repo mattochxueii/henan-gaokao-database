@@ -87,6 +87,12 @@ def render_edition(source, edition, output):
         keys=[q.get("answer_key") for q in reviewed["questions"]]
         keys=["".join(key) if isinstance(key,list) else key for key in keys]
     book = solution_book(visible, raw, revisions, edition, answer_keys=keys)
+    if visible.get("release_rules"):
+        from core.release_checks import math_notation_findings
+
+        defects = [issue for q in book["questions"] for issue in math_notation_findings(
+            q["order"],"\n".join(q["solution_paragraphs"]))]
+        require(not defects,"数学解析评分格式错误："+str(defects))
     output.mkdir(parents=True)
     pdf = render(book, output / "solutions.pdf", solutions=True)
     result = {

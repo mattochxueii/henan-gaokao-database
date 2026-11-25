@@ -66,7 +66,8 @@ def main(argv=None, *, quality_reference=None):
     action.add_argument("--no-export", action="store_true")
     action.add_argument("--layout-mode", choices=("practice","exam"), default="exam")
     action.add_argument("--exam-year", type=int, default=2027, help="带审稿上下文的标准卷目标年份")
-    action.add_argument("--engine", choices=("template", "ai"), default="template")
+    action.add_argument("--engine", choices=("template", "ai"))
+    action.add_argument("--allow-legacy-template", action="store_true", help="显式允许旧模板兼容测试")
     action.add_argument("--candidates", type=Path)
     action.add_argument("--context", type=Path)
     action.add_argument("--model")
@@ -208,6 +209,10 @@ def main(argv=None, *, quality_reference=None):
             atomic_json(args.output, packet)
             result = {"output": str(args.output), "split_sha256": split["sha256"]}
         elif args.action == "generate":
+            guidance = "正式原创模拟请走 gaokao_platform.py simulate math ..."
+            require(args.engine is not None, "须显式指定 --engine。"+guidance)
+            require(not (args.engine=="template" or args.allow_template_fallback) or args.allow_legacy_template,
+                    "旧模板及模板回退须显式传 --allow-legacy-template，仅供兼容测试。"+guidance)
             require((args.forecast_snapshot is not None) == (args.study_mode=="forecast-research"),
                     "预测研究须显式指定 --study-mode forecast-research 和 --forecast-snapshot")
             forecast_context = None

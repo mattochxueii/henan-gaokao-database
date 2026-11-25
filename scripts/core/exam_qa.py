@@ -46,10 +46,13 @@ def required_figure_issues(subject, questions):
     elif subject == "math":
         for n,q in enumerate(questions, 1):
             text = item_text(q)
-            solid = q.get("module") == "立体几何" or re.search(r"棱锥|棱柱|正方体|四面体|二面角|外接球",text)
+            solid = q.get("module") == "立体几何" or re.search(r"棱锥|棱柱|正方体|长方体|四面体|二面角|异面直线|外接球|两平面夹角",text)
             referenced = re.search(r"如图|图中|图示|见图|读图|所示图像",text)
-            if (q.get("figure_required") or solid or referenced) and not q.get("figure"):
+            figure = q.get("figure")
+            if (q.get("figure_required") or solid or referenced) and not figure:
                 issues.append((n, "geometry_figure", f"第{n}题的空间关系或图示条件缺少示意图"))
+            elif solid and (not isinstance(figure,dict) or figure.get("type")!="wireframe"):
+                issues.append((n, "solid_wireframe", "立体几何须用 3D wireframe，不能使用平面坐标图"))
     return nonchoice, issues
 
 
@@ -217,6 +220,13 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
         if opts and q.get("figure"):
             illustrated.append(n)
         figure = q.get("figure")
+        if subject=="math" and isinstance(figure,dict) and figure.get("type")=="wireframe":
+            from mathgen.student_pdf import draw_figure
+
+            try:
+                draw_figure(figure)
+            except (ValueError,KeyError,TypeError) as error:
+                issue(n,"wireframe_projection",str(error))
         if isinstance(figure,dict) and figure.get("type") in ("coordinate","wireframe"):
             labels = [entry.get("math","") for entry in figure.get("labels",[])]
             labels.extend(figure.get("vertices",{}))
@@ -282,11 +292,14 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
         if not math.isfinite(value) or abs(value/CONSTANTS[obs["symbol"]]-1)>0.01+1e-12:
             issue(n,"constant",f"{obs['symbol']}={value}，超过标准值的 1% 容差")
     if release_artifacts is not None:
-        from core.release_checks import findings
+        from core.release_checks import findings, math_point_warnings
 
         for number, rule, fact in findings(subject,paper,answers,header=header or "",
                                            listening=listening,artifacts=release_artifacts):
             issue(number,rule,fact)
+        if subject=="math":
+            warnings.extend({"number":n,"rule":rule,"evidence":fact}
+                            for n,rule,fact in math_point_warnings(rows,release_artifacts.get("solutions",{})))
     return {"policy_sha256":fingerprint(policy_snapshot if policy_snapshot is not None else policies(root,subject)),"issues":issues,"warnings":warnings,
             "coverage":result["coverage"],"choice_figures":illustrated,"nonchoice_figures":nonchoice,
             "wrong_options":wrong,"absolute_wrong_options":absolutes,"abstract_mentions":abstract,

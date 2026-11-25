@@ -31,8 +31,8 @@ def plain_markup(text):
     """Draw one continuous rule with base-font spaces, independent of underscore glyphs."""
     chunks = re.split(r"(_{3,})", text)
     return "".join(
-        '<nobr><u width="0.65" offset="-1.8">' + "&nbsp;" * len(chunk)
-        + '</u><font size="1">&nbsp;</font></nobr>'
+        '<nobr><font size="14"><u width="0.65" offset="-1.8">' + "&nbsp;" * 8
+        + '</u></font><font size="1">&nbsp;</font></nobr>'
         if i % 2 else measured_markup(chunk.lstrip(" ") if i and re.match(r" +(?:Ω|μ|cm|mm|m/s|kPa|[AVNJW])",chunk) else chunk)
         for i, chunk in enumerate(chunks)
     )
