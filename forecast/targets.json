@@ -1,0 +1,140 @@
+{
+  "version": "math-targets-v1",
+  "subject": "math",
+  "targets_defined_before_initial_backtest": true,
+  "models": {
+    "recent_half_life_years": 3,
+    "beta_prior": [
+      1,
+      1
+    ],
+    "min_years": 2,
+    "curriculum_effective_slots": 6,
+    "policy_pseudo_years": 1,
+    "secondary_series_weight": 0.5,
+    "pre_break_format_weight": 0.25,
+    "max_unknown_fraction": 0.2
+  },
+  "topics": {
+    "foundations": "预备知识",
+    "functions": "函数主线",
+    "geometry": "几何与代数",
+    "probability": "概率与统计"
+  },
+  "targets": [
+    {
+      "id": "module.foundations",
+      "layer": "module",
+      "title": "预备知识",
+      "event": "至少一题的主模块为该主题",
+      "share": "按题目原始满分计主模块；未归类分值保留上下界",
+      "score": [
+        "brier",
+        "log_loss",
+        "share_mae_exact_outcome"
+      ]
+    },
+    {
+      "id": "module.functions",
+      "layer": "module",
+      "title": "函数主线",
+      "event": "至少一题的主模块为该主题",
+      "share": "按题目原始满分计主模块；未归类分值保留上下界",
+      "score": [
+        "brier",
+        "log_loss",
+        "share_mae_exact_outcome"
+      ]
+    },
+    {
+      "id": "module.geometry",
+      "layer": "module",
+      "title": "几何与代数",
+      "event": "至少一题的主模块为该主题",
+      "share": "按题目原始满分计主模块；未归类分值保留上下界",
+      "score": [
+        "brier",
+        "log_loss",
+        "share_mae_exact_outcome"
+      ]
+    },
+    {
+      "id": "module.probability",
+      "layer": "module",
+      "title": "概率与统计",
+      "event": "至少一题的主模块为该主题",
+      "share": "按题目原始满分计主模块；未归类分值保留上下界",
+      "score": [
+        "brier",
+        "log_loss",
+        "share_mae_exact_outcome"
+      ]
+    },
+    {
+      "id": "method.proof",
+      "layer": "method",
+      "title": "解答题显式证明",
+      "event": "至少一个解答题题面明确要求证明或求证；不含选择题真值推断",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    },
+    {
+      "id": "method.linked",
+      "layer": "method",
+      "title": "显式跨问依赖",
+      "event": "题面明确引用前一问的结果或条件；不估计隐含递进",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    },
+    {
+      "id": "method.context",
+      "layer": "method",
+      "title": "实质实际情境",
+      "event": "现实活动、数据或物理约束被用于求解；机器代理须用人工/独立核对区分",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    },
+    {
+      "id": "structure.conditional",
+      "layer": "structure",
+      "title": "给定已发生事件的概率",
+      "event": "求解明确依赖已观察事件，排除只在文字中说条件和单纯二项概率",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    },
+    {
+      "id": "structure.midpoint",
+      "layer": "structure",
+      "title": "圆锥曲线的弦中点",
+      "event": "弦中点是要求确定或证明的关键关系，不含附带垂足",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    },
+    {
+      "id": "paper.compact",
+      "layer": "structure",
+      "title": "卷面不足22题",
+      "event": "整卷实际题数少于22；作为可按同期文件复核的格式目标，与具体数学结构分开",
+      "share": null,
+      "score": [
+        "brier",
+        "log_loss"
+      ]
+    }
+  ]
+}

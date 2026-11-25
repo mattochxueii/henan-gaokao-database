@@ -1,0 +1,114 @@
+{
+  "strict_question_records": 294,
+  "independently_audited": 33,
+  "review_records_by_sample": {
+    "systematic_endpoints": 28,
+    "purposive_structural": 6
+  },
+  "pre_adjudication": {
+    "systematic_endpoints": {
+      "primary_topic": {
+        "comparable": 19,
+        "matches": 17,
+        "agreement": 0.8947368421052632,
+        "kappa": 0.8509803921568629,
+        "reviewer_positives": 0
+      },
+      "method.proof": {
+        "comparable": 28,
+        "matches": 27,
+        "agreement": 0.9642857142857143,
+        "kappa": 0.9263157894736842,
+        "reviewer_positives": 12
+      },
+      "method.context": {
+        "comparable": 11,
+        "matches": 11,
+        "agreement": 1.0,
+        "kappa": null,
+        "reviewer_positives": 0
+      },
+      "structure.conditional": {
+        "comparable": 24,
+        "matches": 24,
+        "agreement": 1.0,
+        "kappa": null,
+        "reviewer_positives": 0
+      },
+      "structure.midpoint": {
+        "comparable": 28,
+        "matches": 28,
+        "agreement": 1.0,
+        "kappa": null,
+        "reviewer_positives": 0
+      }
+    },
+    "purposive_structural": {
+      "primary_topic": {
+        "comparable": 6,
+        "matches": 5,
+        "agreement": 0.8333333333333334,
+        "kappa": 0.6666666666666667,
+        "reviewer_positives": 0
+      },
+      "method.proof": {
+        "comparable": 6,
+        "matches": 6,
+        "agreement": 1.0,
+        "kappa": 1.0,
+        "reviewer_positives": 2
+      },
+      "method.context": {
+        "comparable": 3,
+        "matches": 3,
+        "agreement": 1.0,
+        "kappa": 1.0,
+        "reviewer_positives": 2
+      },
+      "structure.conditional": {
+        "comparable": 2,
+        "matches": 2,
+        "agreement": 1.0,
+        "kappa": null,
+        "reviewer_positives": 0
+      },
+      "structure.midpoint": {
+        "comparable": 6,
+        "matches": 6,
+        "agreement": 1.0,
+        "kappa": null,
+        "reviewer_positives": 0
+      }
+    }
+  },
+  "scope": {
+    "source": "national_db.rows 当前在用档案。仅以题干、选项和子问题面作为标注依据。题号、版本哈希及严格资格只用于抽样和绑定。",
+    "selection": "2020–2026 年新高考Ⅰ、Ⅱ卷，每卷按题号抽取第一道和最后一道具备严格资格的题。",
+    "strict_gate": "math_calibration.grade == source_and_solution_reviewed 且 research_eligible。",
+    "paper_count": 14,
+    "sample_count": 28,
+    "independence": "未查阅自动标签器、提议标签或题目答案、解析及深度分析。证据为题面简述。",
+    "rules": {
+      "primary": "根据整题的主要数学任务判定。四个标签中，概率兼收计数与描述统计，几何兼收复数。综合题只在无可辨主轴时标 null。",
+      "proof": "仅解答题的设问明示证或证明才记真。",
+      "applied_context": "具体情境必须提供问题所用数量或约束。裸样本数据不算应用情境。",
+      "conditional_probability": "必须询问在给定已发生事件下的概率。固定试验次数、参数条件及无放回规则本身不满足。",
+      "conic_midpoint": "题目需要圆锥曲线弦中点作为核心几何关系。仅出现弦、垂足或对称关系不满足。"
+    },
+    "limits": "首尾抽样只支持对这 28 条的独立复核，不能估计全库标签比例。条件概率与弦中点两个字段在此样本中均无阳性。"
+  },
+  "labels_available_on": "2026-11-10",
+  "targeted_scope": {
+    "selection": "独立目的性复核。六道指定的严格在用题，单独覆盖条件概率正例、相关边界例及圆锥曲线负例。",
+    "source": "只依据题干、选项及全部子问。题号、当前版本哈希和严格资格仅用于绑定。",
+    "independence": "未查阅自动标签、预测、题目答案或解析。",
+    "definitions": {
+      "conditional_probability": "有设问直接求或证明给定已发生事件下的条件概率即为真。题面以群体分层等价表述条件时也计入。单纯的参数约束、赛制条件或中间事件不计入。",
+      "conic_midpoint": "题目需要圆锥曲线弦中点作为核心几何关系。只出现弦、对称轴、焦点或区间组中值不计入。",
+      "other_fields": "采用首尾独立复核的口径。仅解答题明确要求证或证明时记 proof 为真。"
+    },
+    "sample_count": 6,
+    "limits": "目的性检查不并入首尾抽样一致率。六题覆盖条件概率正例，但没有圆锥曲线弦中点正例。"
+  },
+  "human_verified": false
+}

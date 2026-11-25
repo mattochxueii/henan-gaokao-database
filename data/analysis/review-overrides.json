@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "version": "phase4-reviewed-module-overrides-v1",
+  "reviewed_at": "2026-11-08",
+  "purpose": "保留原始38分析，对完全匹配的候选与分析版本应用可追溯复核覆盖",
+  "overrides": [
+    {
+      "question_id": "2025-cn-math-national-1:q015",
+      "candidate_sha256": "6e70fbcd24a27df64af2a637361dbd01975d9cf3077a0db1cff6d6909c626e6f",
+      "analysis_sha256": "05315ff6cd3a546d0107c3a79c2ef86d9fee0626eb3518319738f9f4307d0c9d",
+      "field": "knowledge.module",
+      "original_value": "集合与复数",
+      "reviewed_value": "概率统计",
+      "evidence": {
+        "topic_summary": "人群抽样、二维列联表、独立性检验；属于统计推断，不属于集合或复数运算",
+        "original_primary_knowledge": [
+          "独立性检验"
+        ],
+        "source_id": "jin-2025-math-paper",
+        "pages": [
+          2,
+          3
+        ],
+        "source_files": [
+          {
+            "path": "2025-jin-reference.pdf",
+            "sha256": "4c181e4ff3bfd3022d124d65144074457a9241f484809f92e454905f1c3da70a"
+          }
+        ]
+      },
+      "reviewer": "independent_host_AI_editorial_audit",
+      "model_version": "not_exposed_by_host",
+      "human_reviewed": false,
+      "review_status": "ai_reviewed_version_bound",
+      "application_rule": "候选哈希、分析哈希与原字段值必须全部匹配才可应用；不回写或删除原始分析"
+    }
+  ]
+}

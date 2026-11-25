@@ -1,0 +1,77 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 1,
+  "subject": "physics",
+  "ids": [
+    "orig:physics:hn27-folio:q01",
+    "orig:physics:hn27-folio:q02",
+    "orig:physics:hn27-folio:q03",
+    "orig:physics:hn27-folio:q04",
+    "orig:physics:hn27-folio:q05",
+    "orig:physics:hn27-folio:q06",
+    "orig:physics:hn27-folio:q07",
+    "orig:physics:hn27-folio:q08",
+    "orig:physics:hn27-folio:q09",
+    "orig:physics:hn27-folio:q10",
+    "orig:physics:hn27-folio:q11",
+    "orig:physics:hn27-folio:q12",
+    "orig:physics:hn27-folio:q13",
+    "orig:physics:hn27-folio:q14",
+    "orig:physics:hn27-folio:q15"
+  ],
+  "pdf_sha256": "ee31c626e90d613df96ee79c88f6ba804c62342b2bf685e0eda6bf32211348aa",
+  "item_versions": {
+    "1": "2c61c0b3ce1d5fdcabe1905cda7be77d0f925e14968f102c5128f104386df4d1",
+    "2": "dd2ebef00d72024b728330c58be04124d589de9d15f0366c47451dcab563c5da",
+    "3": "e6144cd2ba3830a676cef00f3c8ac100d6a5796db08dee89fd7015e1d3b7abb4",
+    "4": "04837c0396b8a20fc918701aa30facbddbd6e4907b0810279c221e8c2279b349",
+    "5": "d6a0e4877aaa88d5190c9754a5d3c80cfb2d5cb4e4c90610dc7df5f8a619a424",
+    "6": "f32d53305c9e60a465aa070f512f7db9dd203156d096a539281aa7bb12f6829b",
+    "7": "ba65b6089edcb9fb9a60f7e7fa2d24d161e435baa88c7f8592d16445ae6dd41c",
+    "8": "01e47c519114d4a3596601ef33f8f942aad28b19c4ee1598878f9faf73ddff8f",
+    "9": "89c2aa33846442619b4d96a57fc0bfee0d9ba11b6971de045f9c7b044df2e058",
+    "10": "812fae312ffaadb284647981569b4f1b3b5b02e511085a170f54313eb680b26f",
+    "11": "0a7648ea44f3772974874a5e4e1d395c718a72af5e823cd32bf264daad1a1725",
+    "12": "f1887fecf78782dedbe539320cc18a7ca370add089d4f924294a164c55ec1964",
+    "13": "5d461077949fd7c116144061428c3c676d558ef755b5a8e5b382a0c81dc6660a",
+    "14": "5d274e3e5d2f900dadd839a6a4a8fb2da2214365a4aae05510e56e5145c5b5c0",
+    "15": "2241d20ec1652d18995650188e74e07b0c0deeb39f539b76319458ac1675fef6"
+  },
+  "fatal_count": 0,
+  "final_score": 94,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 9,
+      "category": "coverage",
+      "rule": "coverage",
+      "points": 6,
+      "evidence": "未在题干或设问中检出：磁场与洛伦兹力",
+      "reader": "machine"
+    }
+  ],
+  "charged_points": 6,
+  "rewrite": [
+    9
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cycle_round": 1,
+  "paper_version": "b0177233b2e53cdb2c0a4be457b227bc0c24fde47253defbc2ffd10ce2069974",
+  "prior_sha256": null,
+  "inputs_sha256": "609e6db3263a8078b73f279ade82e40e56baad317b81e1006139074a640d1657"
+}

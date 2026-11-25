@@ -1,0 +1,359 @@
+{
+  "3": {
+    "path": "figures/q03.png",
+    "sha256": "b6bf124ab3cc931c21c11a2c4b7eb14938a45ac8493aead06f6f282386e4cdf0",
+    "pixels": [
+      1961,
+      604
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "接口 甲",
+      "乙",
+      "可控水浴",
+      "竖直冷凝管"
+    ],
+    "information": "图中甲接口低、乙接口高，上端敞开，沿气相与水套分别判断流向。",
+    "conditions": []
+  },
+  "5": {
+    "path": "figures/q05.png",
+    "sha256": "27bb13bf9c74bcef1d61921cc5b0e215f4195300d08161c32a0c99c5523137c1",
+    "pixels": [
+      2054,
+      445
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "$\\mathrm{B}$",
+      "$\\mathrm{B}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "与水作用"
+    ],
+    "information": "确定成键方向数由三变四，区分 O 的配位和 B 的价态。",
+    "conditions": []
+  },
+  "7": {
+    "path": "figures/q07.png",
+    "sha256": "60b523fee148301abf693b08da9b951988605fbffee16a6be6c5fc1944a531a8",
+    "pixels": [
+      2120,
+      445
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "$\\mathrm{OH}$"
+    ],
+    "information": "由分支和两个双键读结构、判断羟基碳的相邻基团。",
+    "conditions": []
+  },
+  "8": {
+    "path": "figures/q08.png",
+    "sha256": "ac8e07aa7d4f95129efbf3f29b9920b0494f8b914b223c161cafc486999d4902",
+    "pixels": [
+      2027,
+      506
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "氯",
+      "氯",
+      "氨",
+      "氨",
+      "$\\mathrm{Pt}$",
+      "甲",
+      "氯",
+      "氨",
+      "氯",
+      "氨",
+      "$\\mathrm{Pt}$",
+      "乙"
+    ],
+    "information": "只凭图中两个氯的相对位置判断哪一种有两个可同时占据的位点。",
+    "conditions": []
+  },
+  "9": {
+    "path": "figures/q09.png",
+    "sha256": "44bcd0261a14f3bf422b415a9276730774cc87ec2e6df115366bc1b300a39ed8",
+    "pixels": [
+      2120,
+      551
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "$z=0$",
+      "$z=1/2$",
+      "钛",
+      "氧"
+    ],
+    "information": "由图中分层与均摊读出每晶胞的钛位和氧位数，据价态变化反推空位。",
+    "conditions": [
+      [
+        "z=0",
+        "$z=0$",
+        "上下端面内氧原子各为两个"
+      ],
+      [
+        "z=1/2",
+        "$z=1/2$",
+        "中间截面中两个氧和一个钛均在晶胞内"
+      ]
+    ]
+  },
+  "10": {
+    "path": "figures/q10.png",
+    "sha256": "4fafb8d661837d360f6444e8efaf6a9d34dcbfb1f5cb1eb057e5ee9d30565584",
+    "pixels": [
+      2027,
+      628
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "反应物 0",
+      "28",
+      "中间体 -20",
+      "25",
+      "12",
+      "甲 -65",
+      "产物乙 -40",
+      "反应历程",
+      "能量 / $(\\mathrm{kJ/mol})$",
+      "-60",
+      "-40",
+      "-20",
+      "0",
+      "20",
+      "40"
+    ],
+    "information": "中间体谷底与两峰、两终态读数分别决定两分支能垒和总反应放热。",
+    "conditions": []
+  },
+  "11": {
+    "path": "figures/q11.png",
+    "sha256": "ff7631787b5b43f3417984e99a77f6e4dfc41f6117d52bb5e00418319853f292",
+    "pixels": [
+      2040,
+      501
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "$\\mathrm{O}$",
+      "$\\mathrm{O}$",
+      "开环聚合",
+      "$[\\!-\\!\\mathrm{O}(\\mathrm{CH_2})_5\\mathrm{C}(=\\mathrm{O})\\!-\\!]_n$"
+    ],
+    "information": "追踪内酯氧在聚合链中的位置，判断水解端基与产物的碳数。",
+    "conditions": []
+  },
+  "12": {
+    "path": "figures/q12.png",
+    "sha256": "f82657e7028744bf71663810fa77d3afee58390684605934b652bf2ff4b3114a",
+    "pixels": [
+      2186,
+      538
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "阳极室",
+      "酸室",
+      "原料室",
+      "碱室",
+      "阴极室",
+      "双极膜",
+      "阴离子膜",
+      "阳离子膜",
+      "双极膜",
+      "$\\mathrm{CH_3COONa}$",
+      "$\\mathrm{H}^+$",
+      "$\\mathrm{CH_3COO}^-$",
+      "$\\mathrm{Na}^+$",
+      "$\\mathrm{OH}^-$"
+    ],
+    "information": "必须沿图中四个离子箭头定位产生酸、碱的两个室及各自的水解离位置。",
+    "conditions": []
+  },
+  "13": {
+    "path": "figures/q13.png",
+    "sha256": "8c90066913e5eb9279b02f42be125a32e0bf83aa8d64057900b1cda3e79a3158",
+    "pixels": [
+      2027,
+      689
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "加入催化剂",
+      "不加催化剂",
+      "速率单位：$\\mathrm{mmol/(L\\cdot min)}$",
+      "初始浓度 $c/(\\mathrm{mmol/L})$",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "初速率 $v$",
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "information": "由两条曲线的同浓度差分读出催化专属速率，加抑制剂后仅这一分量改变。",
+    "conditions": []
+  },
+  "14": {
+    "path": "figures/q14.png",
+    "sha256": "d8a1fdbc1425808e7776187357d37999d392d5bc21e020a643f2b65d0bd3aa3b",
+    "pixels": [
+      2054,
+      623
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "0.60",
+      "0.20",
+      "0.10",
+      "0.90",
+      "测定波长",
+      "430 纳米",
+      "610 纳米",
+      "吸光度 $A$",
+      "0.0",
+      "0.2",
+      "0.4",
+      "0.6",
+      "0.8",
+      "1.0",
+      "酸式",
+      "碱式"
+    ],
+    "information": "输出四个不同的吸光度，缺任一项均无法建立正确的等吸收方程。",
+    "conditions": []
+  },
+  "15": {
+    "path": "figures/q15.png",
+    "sha256": "7132db389b502f534db5830e69e53743237471017ab74950ac8816ce1dd3c76f",
+    "pixels": [
+      2332,
+      702
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "酸性浸出液",
+      "氧化除铁",
+      "滤液置换",
+      "浓缩、冷却结晶",
+      "$\\mathrm{H_2O_2}$、调酸碱度、过滤",
+      "加入锌粉、过滤",
+      "终点 pH",
+      "2.5",
+      "3.6",
+      "6.5",
+      "液相残余铁 / %",
+      "8.0",
+      "0.50",
+      "0.20",
+      "液相保留锌 / %",
+      "99.9",
+      "99.8",
+      "82.0"
+    ],
+    "information": "用工序先后和同批物料 pH—Fe、Zn 残留表确定分离窗口。",
+    "conditions": [
+      [
+        "99.0%",
+        "液相保留锌 / %",
+        "保锌阈值独立于残铁阈值"
+      ]
+    ]
+  },
+  "16": {
+    "path": "figures/q16.png",
+    "sha256": "d9c2ece502d095f4b9f37e617003c858f1fc85098ac55b8aba507565ddb72551",
+    "pixels": [
+      2266,
+      657
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "氮气",
+      "样品和足量盐酸",
+      "防倒吸空瓶",
+      "$\\mathrm{NaOH}$ 吸收液",
+      "滴定前取出瓶中的全部吸收液"
+    ],
+    "information": "沿图确认氮气清扫方向、空瓶隔断和待滴定吸收液位置。",
+    "conditions": []
+  },
+  "17": {
+    "path": "figures/q17.png",
+    "sha256": "4a2ccbe4d6b093ecbf543c953db820074fad00241ca4f931151730c60fecdda0",
+    "pixels": [
+      2120,
+      596
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "$\\mathrm{C_2H_4}$",
+      "$\\mathrm{H_2O}$",
+      "反应时间 $t/\\mathrm{min}$",
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "物质的量 $n/\\mathrm{mol}$",
+      "0.0",
+      "0.2",
+      "0.4",
+      "0.6"
+    ],
+    "information": "乙烯、H₂O 两平台给出两个独立反应进度，约束各气体分压和常数。",
+    "conditions": []
+  },
+  "18": {
+    "path": "figures/q18.png",
+    "sha256": "272e87baeb598d6258a715fa040e935773e36cb60fc10ab2aced9043ed6cec25",
+    "pixels": [
+      2306,
+      843
+    ],
+    "collision_count": 0,
+    "figure_labels": [
+      "A",
+      "$\\mathrm{C_6H_5COCH_3}$",
+      "B",
+      "C",
+      "$m\\!-\\!\\mathrm{H_2NC_6H_4COCH_3}$",
+      "D",
+      "E",
+      "$m\\!-\\!\\mathrm{CH_3OC_6H_4COCH_3}$",
+      "F",
+      "G",
+      "1",
+      "2",
+      "3",
+      "5",
+      "6",
+      "4",
+      "式中间位由 m– 标出"
+    ],
+    "information": "箭头序号对应中间体，图独有 A、C、E 结构和转向，固定间位沿线传递。",
+    "conditions": [
+      [
+        "间位",
+        "式中间位由 m– 标出",
+        "芳环取代位置跨步骤守恒"
+      ]
+    ]
+  }
+}

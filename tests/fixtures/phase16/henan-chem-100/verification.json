@@ -1,0 +1,599 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "chemistry",
+    "region": "河南",
+    "year": 2027,
+    "mode": "standard",
+    "mapping": {
+      "subject": "chemistry",
+      "year": 2027,
+      "paper_id": "2027-cn-ha-chemistry-selective",
+      "series_id": "cn-ha-chemistry-selective",
+      "curriculum_id": "chemistry-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "system_announced",
+      "points": null,
+      "minutes": null,
+      "evidence": [
+        "hn-2027",
+        "hn-reform"
+      ],
+      "structure": null
+    },
+    "curriculum_topics": [
+      "物质结构与性质",
+      "离子反应",
+      "氧化还原",
+      "化学反应原理",
+      "化学平衡",
+      "电化学",
+      "水溶液离子平衡",
+      "化学实验",
+      "无机物推断",
+      "有机化学",
+      "工业流程",
+      "基本概念与物质性质",
+      "物质结构与性质",
+      "化学反应原理",
+      "实验与探究",
+      "有机化学",
+      "化学综合应用"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-chemistry-selective:q001",
+        "topic": "物质变化的分类",
+        "source_url": "https://zy.21cnjy.com/25976018",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "bb8775e200a24a360d1682383ebb4f5feaef28cd9b1df71e21e946b9aa563ef7",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q006",
+        "topic": "用物种形态、原子数和电荷校验离子方程式",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "ad11be66c9543333f2dca2fb84542e88e15e1f18ceb810438c6901f54393f3ec",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q010",
+        "topic": "以晶体结构、分子间力、极性和电子壳层解释性质",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "cd18c9a82b5ce3c3d06dcc8860ec7682e0f6f6a207897f3e19b7e7ca5331bcb0",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      }
+    ],
+    "structure": {
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58
+        }
+      ],
+      "source_urls": [
+        "https://www.51jiaoxi.com/doc-18504525.html",
+        "https://zy.21cnjy.com/25976018",
+        "https://zy.21cnjy.com/25959272"
+      ],
+      "status": "observed_third_party_paper",
+      "source_details": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42,
+          "points_each": 3
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58,
+          "individual_points": [
+            14,
+            14,
+            15,
+            15
+          ]
+        }
+      ]
+    },
+    "structure_minutes": 75,
+    "structure_year": 2026,
+    "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认"
+  },
+  "questions": [
+    {
+      "id": "orig:chemistry:hn16-100-q01",
+      "topic": "化学与生活",
+      "version_sha256": "e819640b617049fbd040c1adcd72ec8aba0ec35eae2d48f59bc60891e211d6b8",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "吸附、氧化还原与酸碱反应分开判别。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q02",
+      "topic": "微粒与物质结构",
+      "version_sha256": "1a60a9cc563744561de7f0212d581af38e78c4ca9cb4e9e7a43e210abac4c365",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "取质量数减质子数；区分原子与离子电子数。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q03",
+      "topic": "实验操作",
+      "version_sha256": "ca2d3950a85abe379fb761e868aadb2e1771809ec2921b5865b373c335b61c0e",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "冷却结晶依赖硝酸钾溶解度随温度变化显著。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q04",
+      "topic": "酸碱定量",
+      "version_sha256": "b1e892ddd044305e1b24a935176e25781f7c20a5060546591e6647d29a25df81",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "酸过量，使用混合液总体积。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q05",
+      "topic": "化学平衡",
+      "version_sha256": "65c4d8a5634486044190b7c785db13c42c42893ce687c20e6014db5c3d9d52f6",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "比较两浓度的同比放大与化学计量指数。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q06",
+      "topic": "元素周期律",
+      "version_sha256": "21b7f9564b746f5bcafb3fbfa020d5bd266f168d0531d9f0626583e74bf1ab3b",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "等电子微粒按核电荷比较有效吸引。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q07",
+      "topic": "晶胞计数",
+      "version_sha256": "81ccb92c844896aad693e029ffd53ed660465c85eca20f33624c42336a14450b",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "顶点、面心和体心的共享数不同。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q08",
+      "topic": "有机官能团",
+      "version_sha256": "cee674991ec2e6b15a965a0148fcdea0cc3a6045c5084e4e49df29e594f73715",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "同时识别碳碳双键和伯醇羟基。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q09",
+      "topic": "原电池",
+      "version_sha256": "00b5d789f92325a42131c0a6185aa706347779188859eb1ad666ec23e069ad50",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "区分外电路电子和盐桥阴离子的迁移。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q10",
+      "topic": "速率与因果",
+      "version_sha256": "1b2d2f0196ea80b3e6ae34d4bb069a0856986a8daae96efff8d1c7e9e6285e8d",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "两次只改变一个浓度，各取倍率。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q11",
+      "topic": "沉淀平衡",
+      "version_sha256": "d64162c95fc41f6769f3e1bba57ebe7aec99162d2da5e348369453e54b41fdc9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "先比较起沉阈值，再用共存平衡计算残余。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q12",
+      "topic": "有机同分异构体",
+      "version_sha256": "eb24843df9ac192077bb127edc7503e12fe3239cd7ba9975e19ed6f3b10e0644",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "构造异构和顺反异构应分别核对。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q13",
+      "topic": "氧化还原计量",
+      "version_sha256": "9c566b0cd5f1c4c1884609fcc2464ee9fc59d4289dfd135a0cec48411069afe3",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "额外还原剂造成滴定剂正干扰。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q14",
+      "topic": "弱酸分布",
+      "version_sha256": "a60459f0c6b6d9ae288f880def8466acc42d2ecd09a903a307487f485c7509fd",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "由电离平衡与已知酸度反推物种比，不把酸碱性与物种多少混同。"
+          },
+          "parts": {
+            "overall": "区分正项和三项干扰条件。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q15",
+      "topic": "反应原理",
+      "version_sha256": "570a1d43cdb45c7a3a97b582d19ece437dd82696b6027ac58232ca9aaacadf3c",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "K1=3; K2=1",
+          "（2）": "I逆向; II瞬时无净反应",
+          "（3）": "0.280 mol/L; 增大",
+          "（4）": "放热; 不能; c(B)/c(C)=3"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "conservation": "三个物种的转化均为一比一；分别核对补料前后物质的量。",
+            "derivation": "根据两个独立平衡约束讨论可达到的组成。"
+          },
+          "parts": {
+            "（1）": "确定物种或依据。",
+            "（2）": "建立与题意一致的关系。",
+            "（3）": "应用条件得到结果。",
+            "（4）": "复查结论适用范围。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q16",
+      "topic": "工业流程",
+      "version_sha256": "39c07ffcbe7c261cfdd431f8f19e67d14a2311dbdd93f7960908ee485596e82f",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "Fe2O3+6H+=2Fe3++3H2O; SiO2",
+          "（2）": "4.0; Fe3++3OH-=Fe(OH)3",
+          "（3）": "Cu2++2e-=Cu; 2H2O=O2+4H++4e-",
+          "（4）": "9650 s"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "reaction_conditions": "按所给操作区间控制沉淀，电极反应按酸性介质。",
+            "conservation": "核对铁和铜的物质的量及电荷。"
+          },
+          "parts": {
+            "（1）": "确定物种或依据。",
+            "（2）": "建立与题意一致的关系。",
+            "（3）": "应用条件得到结果。",
+            "（4）": "复查结论适用范围。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q17",
+      "topic": "实验探究",
+      "version_sha256": "a1f6a398a29f06196c8973627aba4398dd76f040f85cb192046c7e4207158156",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "SO3^2-+I2+H2O=SO4^2-+2I-+2H+",
+          "（2）": "0.00100 mol/(L min)",
+          "（3）": "B/D; 不能; 硫酸根增量同步增加",
+          "（4）": "回收固体并核查组成或性质及复用活性; 与鲜样和空白比较"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "experimental_controls": "把供氧和固体两个因素分别设置，区分产物证据与浓度下降。",
+            "conservation": "独立比较耗碘计量与硫酸根生成。"
+          },
+          "parts": {
+            "（1）": "确定物种或依据。",
+            "（2）": "建立与题意一致的关系。",
+            "（3）": "应用条件得到结果。",
+            "（4）": "复查结论适用范围。"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn16-100-q18",
+      "topic": "有机推断",
+      "version_sha256": "a0a8e5d26b8ea33dca2f06da82e9e539d9e4696bdd51e000267293e4d4d10ba9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "60 g/mol; CH3COOH; CH2=C(CH3)2",
+          "（2）": "(CH3)2CHCH2OH; CH3COOCH2CH(CH3)2; 叔醇不能温和氧化为醛",
+          "（3）": "CH3COOCH2CH2CH2CH3; 无第三种",
+          "（4）": "(CH3)2CHCOOH+(CH3)2CHCH2OH⇌(CH3)2CHCOOCH2CH(CH3)2+H2O; C8H16O2"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "reaction_conditions": "氧化、消去和酯化区分官能团与反应条件。",
+            "derivation": "碳骨架、羟基位置以及异构体枚举分别复核。"
+          },
+          "parts": {
+            "（1）": "确定物种或依据。",
+            "（2）": "建立与题意一致的关系。",
+            "（3）": "应用条件得到结果。",
+            "（4）": "复查结论适用范围。"
+          }
+        }
+      }
+    }
+  ],
+  "answers": [
+    "B",
+    "C",
+    "A",
+    "A",
+    "D",
+    "B",
+    "C",
+    "D",
+    "C",
+    "A",
+    "C",
+    "D",
+    "B",
+    "A",
+    {
+      "（1）": "K1=3; K2=1",
+      "（2）": "I逆向; II瞬时无净反应",
+      "（3）": "0.280 mol/L; 增大",
+      "（4）": "放热; 不能; c(B)/c(C)=3"
+    },
+    {
+      "（1）": "Fe2O3+6H+=2Fe3++3H2O; SiO2",
+      "（2）": "4.0; Fe3++3OH-=Fe(OH)3",
+      "（3）": "Cu2++2e-=Cu; 2H2O=O2+4H++4e-",
+      "（4）": "9650 s"
+    },
+    {
+      "（1）": "SO3^2-+I2+H2O=SO4^2-+2I-+2H+",
+      "（2）": "0.00100 mol/(L min)",
+      "（3）": "B/D; 不能; 硫酸根增量同步增加",
+      "（4）": "回收固体并核查组成或性质及复用活性; 与鲜样和空白比较"
+    },
+    {
+      "（1）": "60 g/mol; CH3COOH; CH2=C(CH3)2",
+      "（2）": "(CH3)2CHCH2OH; CH3COOCH2CH(CH3)2; 叔醇不能温和氧化为醛",
+      "（3）": "CH3COOCH2CH2CH2CH3; 无第三种",
+      "（4）": "(CH3)2CHCOOH+(CH3)2CHCH2OH⇌(CH3)2CHCOOCH2CH(CH3)2+H2O; C8H16O2"
+    }
+  ],
+  "candidate_sha256": "d1d5ce1bd56bc6f4f3ca334f66d9968d1c49d0ed9a7d23c513ff5d58cead2023",
+  "paper_version": "8e4f20dfad9cc56b8756d81bc050209da46f42fdd50b66285fdcc6d063ebea31",
+  "paper_pdf_sha256": "dcaf8324e784752c6823657007f4c1648fd9e439381aae13454533c575084889"
+}

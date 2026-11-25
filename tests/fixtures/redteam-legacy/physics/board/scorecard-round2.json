@@ -1,0 +1,261 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 2,
+  "subject": "physics",
+  "ids": [
+    "orig:physics:hn27-folio:q01",
+    "orig:physics:hn27-folio:q02",
+    "orig:physics:hn27-folio:q03",
+    "orig:physics:hn27-folio:q04",
+    "orig:physics:hn27-folio:q05",
+    "orig:physics:hn27-folio:q06",
+    "orig:physics:hn27-folio:q07",
+    "orig:physics:hn27-folio:q08",
+    "orig:physics:hn27-folio:q09",
+    "orig:physics:hn27-folio:q10",
+    "orig:physics:hn27-folio:q11",
+    "orig:physics:hn27-folio:q12",
+    "orig:physics:hn27-folio:q13",
+    "orig:physics:hn27-folio:q14",
+    "orig:physics:hn27-folio:q15"
+  ],
+  "pdf_sha256": "b0940a465e4f0e6fdba177e7a480a49888b5a591fe320a6f30b367c6f17db7ae",
+  "item_versions": {
+    "1": "2c61c0b3ce1d5fdcabe1905cda7be77d0f925e14968f102c5128f104386df4d1",
+    "2": "dd2ebef00d72024b728330c58be04124d589de9d15f0366c47451dcab563c5da",
+    "3": "e6144cd2ba3830a676cef00f3c8ac100d6a5796db08dee89fd7015e1d3b7abb4",
+    "4": "04837c0396b8a20fc918701aa30facbddbd6e4907b0810279c221e8c2279b349",
+    "5": "d6a0e4877aaa88d5190c9754a5d3c80cfb2d5cb4e4c90610dc7df5f8a619a424",
+    "6": "f32d53305c9e60a465aa070f512f7db9dd203156d096a539281aa7bb12f6829b",
+    "7": "ba65b6089edcb9fb9a60f7e7fa2d24d161e435baa88c7f8592d16445ae6dd41c",
+    "8": "01e47c519114d4a3596601ef33f8f942aad28b19c4ee1598878f9faf73ddff8f",
+    "9": "c614ccaafca13ae32b01da5549ed22ed070582c8fa423f0fd049df7a9beed3ee",
+    "10": "812fae312ffaadb284647981569b4f1b3b5b02e511085a170f54313eb680b26f",
+    "11": "0a7648ea44f3772974874a5e4e1d395c718a72af5e823cd32bf264daad1a1725",
+    "12": "f1887fecf78782dedbe539320cc18a7ca370add089d4f924294a164c55ec1964",
+    "13": "5d461077949fd7c116144061428c3c676d558ef755b5a8e5b382a0c81dc6660a",
+    "14": "5d274e3e5d2f900dadd839a6a4a8fb2da2214365a4aae05510e56e5145c5b5c0",
+    "15": "2241d20ec1652d18995650188e74e07b0c0deeb39f539b76319458ac1675fef6"
+  },
+  "fatal_count": 5,
+  "final_score": 0,
+  "status": "returned",
+  "deductions": [
+    {
+      "number": 8,
+      "category": "weak",
+      "rule": "physics.breadth",
+      "points": 3,
+      "evidence": "全卷有折射光学（第 2 题）、热学（第 8 题）、原子能级（第 1 题）、力学、电磁及实验。第 1 至 15 题均未考查机械振动或机械波，机械波模块无分值。",
+      "reader": "solver"
+    },
+    {
+      "number": 2,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 1 页折射图的入射光线穿过 45° 标签的数字 4，图中相邻光段的微小转折也难识别。题干给出 45° 和全部计算数据。",
+      "reader": "solver"
+    },
+    {
+      "number": 3,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 1 页光变图的 2.0 小时时间标线落在两段过渡斜边中部，整段低于基线的图示区间起止于更外侧的两处折点。题干给出持续 2.0 h 和可忽略行星半径的模型。",
+      "reader": "solver"
+    },
+    {
+      "number": 11,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 3 页距离双向箭头的右箭头与「乙门」的「乙」重叠。由题干和图中其余标注可定位两门的 0.300 m 距离及各自的计时。",
+      "reader": "solver"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 4 页「电容」穿过电容极板，「漏电支路」穿过支路竖线、矩形与电压引线。漏电电阻矩形内部有一条连续纵向实线接至两端，按普通电路图的导线读法会把漏电端短接。题干和 4.0 V 稳态曲线共同锁定预期的并联漏电电阻电路。",
+      "reader": "solver"
+    },
+    {
+      "number": 14,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 5 页 x=L 边界仅在通窗的两个高度之间画了粗黑实线，窗外为虚线，且图内未标明粗段为开口。粗线容易被读成实体挡板。题干明示通窗范围 L/4≤y≤L/2 且端点可通过。",
+      "reader": "solver"
+    },
+    {
+      "number": 15,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第 6 页粗斜面线穿过「沿斜面距接头」的多个字。0.200 m 数字和题干中的沿斜面距离可读。",
+      "reader": "solver"
+    },
+    {
+      "number": 2,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "第1页折射图在空气—甲、甲—乙和乙—空气三处都把光路画成一条直线。题干数据给甲层30°、乙层arctan(1/2)≈26.6°；画成甲、乙层内同角度会让读图考生推出n甲=n乙，恰为错误选项B。须按三段折角重画并保持7.0 mm仍标两端的水平投影。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 6,
+      "category": "depth",
+      "rule": "physics.algebra",
+      "points": 4,
+      "evidence": "已给两边B的比例、磁场和电流方向、其余力相抵。代两项正向安培力后用3BIL/2+3BIL/4即得结果，未出现2026同位题的回原点跨区边界或2025同位题需判断哪种衰变可忽略的前置转折。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 8,
+      "category": "coverage",
+      "rule": "physics.breadth",
+      "points": 6,
+      "evidence": "逐题核查全卷未找到机械振动或机械波的小题。第2题只考几何光学折射，第1题只考光子能量及能级，不提供机械波或振动覆盖；2025年第8题和2026年第1题分别验到了这两个内容。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 9,
+      "category": "depth",
+      "rule": "physics.algebra",
+      "points": 4,
+      "evidence": "两者均走半周、击中同一边界在题干直接给出，求解沿直径比→质量比→运动量比一条链推进。两年同位题各有从镜头约束或传感器极性反推未明示方向的步骤，本题增加的U缩放仍为同一比例关系。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 11,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "第3页光电门图中甲在低处、乙在高处，按题干沿轨下滑的顺序为乙→甲。然而同一遮光条的计时给v乙=2.00 m/s、v甲=1.00 m/s，按图则为下滑匀减速，与小问（1）明确的匀加速模型相冲突。交换导轨倾斜方向，并标甲→乙运动箭头可一致化。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 15,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第6页斜面黑线横穿探头的距离文字「沿斜面距接头」，破坏标注字形；正文给0.200 m，因此数据仍可读取。把整条距离标注移至无重叠位置。",
+      "reader": "pedagogy"
+    },
+    {
+      "number": 2,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "图中光线由空气穿过甲、乙材料直至射出为一条共线直线。题干规定斜入射和甲层折射率 √2，空气与甲层界面处就必须有可见折转。甲乙接口也应画出折线。",
+      "reader": "visual"
+    },
+    {
+      "number": 2,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "图中 45° 的 4 字与入射线直接叠印，约 150 ppi 的预览可见。把角标移入入射线与法线之间的空白，避免压线。",
+      "reader": "visual"
+    },
+    {
+      "number": 3,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "题干为恒星视圆盘，图中投影在 150 ppi 预览约为 132×104 像素的椭圆。改为等轴圆形可与题意一致。",
+      "reader": "visual"
+    },
+    {
+      "number": 9,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "题干给出匀强磁场中的半周运动。图中外轨迹从入射边界最远向右约 212 像素，其直径上下约 133 像素，内轨迹也同向拉长。使用等比例半圆轨迹能避免误读。",
+      "reader": "visual"
+    },
+    {
+      "number": 11,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "题干写滑块沿导轨下滑，乙门遮光时间 0.0100 s 短于甲门 0.0200 s。图中乙门位于升高的右端，按图向下滑却先经过更快的乙门。应让标有乙门的右端降低，同时保留各门数据。",
+      "reader": "visual"
+    },
+    {
+      "number": 11,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "标示 0.300 m 的水平双箭线的右箭头穿过乙门的乙字。上移箭线或下移门名，给乙字留出空隙。",
+      "reader": "visual"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "电路图的电容文字叠在电容极板的左缘，漏电支路文字穿过竖向漏电电阻的边框及右侧节点虚线。需要在空白中放出元件标签。",
+      "reader": "visual"
+    },
+    {
+      "number": 12,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第（3）小问⑥要求填理由，所给横线在 150 ppi 下约 91 像素，打印宽约 15.5 mm，只容约三到四个手写汉字。应给理由足够长的题内横线。",
+      "reader": "visual"
+    },
+    {
+      "number": 14,
+      "category": "fatal",
+      "rule": "all.figure-condition",
+      "points": 0,
+      "evidence": "正文规定 x＝L 挡板仅在 L/4≤y≤L/2 处开通窗，图中恰在该区间画粗实条，其余边界为虚线，容易将粗实条看作堵住唯一通窗的挡板。应明确画出缺口与剩余实体挡板。",
+      "reader": "visual"
+    },
+    {
+      "number": 14,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "图中 x＝L 的 x 与左界虚线相交，x＝2L 的等号叠在右界实线，右界也穿过检测点标签中的检、测附近。沿边界横向错开标签，保留实心检测点。",
+      "reader": "visual"
+    },
+    {
+      "number": 15,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "斜面粗实线穿过沿斜面距接头标签的中部。0.200 m 数字可读，但距离定义文字应挪到斜面线一侧的空白中。",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 47,
+  "rewrite": [
+    2,
+    3,
+    6,
+    8,
+    9,
+    11,
+    12,
+    14,
+    15
+  ],
+  "locked": [
+    1,
+    4,
+    5,
+    7,
+    10,
+    13
+  ],
+  "cycle_round": 2,
+  "paper_version": "21b5957f467c9fbba018fa8de3ef68bbccf642ee2967dbf39dc38d0183bff8d9",
+  "prior_sha256": "c86f1516d962f353ee3a59826e4c0733464fdb7ee03b6009611166758a9df1e0",
+  "inputs_sha256": "8cdceb3a652b9f8fd62de894e4c6931979ab4599dc7b0944eb0587aec968beee"
+}

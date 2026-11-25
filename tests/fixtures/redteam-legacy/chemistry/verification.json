@@ -1,0 +1,1149 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "chemistry",
+    "region": "河南",
+    "year": 2027,
+    "mode": "standard",
+    "mapping": {
+      "subject": "chemistry",
+      "year": 2027,
+      "paper_id": "2027-cn-ha-chemistry-selective",
+      "series_id": "cn-ha-chemistry-selective",
+      "curriculum_id": "chemistry-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "system_announced",
+      "points": null,
+      "minutes": null,
+      "evidence": [
+        "hn-2027",
+        "hn-reform"
+      ],
+      "structure": null
+    },
+    "curriculum_topics": [
+      "物质结构与性质",
+      "离子反应",
+      "氧化还原",
+      "化学反应原理",
+      "化学平衡",
+      "电化学",
+      "水溶液离子平衡",
+      "化学实验",
+      "无机物推断",
+      "有机化学",
+      "工业流程",
+      "基本概念与物质性质",
+      "物质结构与性质",
+      "化学反应原理",
+      "实验与探究",
+      "有机化学",
+      "化学综合应用"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-chemistry-selective:q001",
+        "topic": "物质变化的分类",
+        "source_url": "https://zy.21cnjy.com/25976018",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "bb8775e200a24a360d1682383ebb4f5feaef28cd9b1df71e21e946b9aa563ef7",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q006",
+        "topic": "用物种形态、原子数和电荷校验离子方程式",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "ad11be66c9543333f2dca2fb84542e88e15e1f18ceb810438c6901f54393f3ec",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-chemistry-selective:q010",
+        "topic": "以晶体结构、分子间力、极性和电子壳层解释性质",
+        "source_url": "https://www.renrendoc.com/paper/536700548.html",
+        "review_status": "source_and_solution_reviewed",
+        "version_sha256": "cd18c9a82b5ce3c3d06dcc8860ec7682e0f6f6a207897f3e19b7e7ca5331bcb0",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      }
+    ],
+    "structure": {
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58
+        }
+      ],
+      "source_urls": [
+        "https://www.51jiaoxi.com/doc-18504525.html",
+        "https://zy.21cnjy.com/25976018",
+        "https://zy.21cnjy.com/25959272"
+      ],
+      "status": "observed_third_party_paper",
+      "source_details": [
+        {
+          "kind": "single_choice",
+          "count": 14,
+          "points": 42,
+          "points_each": 3
+        },
+        {
+          "kind": "constructed_response",
+          "count": 4,
+          "points": 58,
+          "individual_points": [
+            14,
+            14,
+            15,
+            15
+          ]
+        }
+      ]
+    },
+    "structure_minutes": 75,
+    "structure_year": 2026,
+    "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认",
+    "exam_policy": {
+      "schema_version": 1,
+      "subject": "chemistry",
+      "year": 2027,
+      "region": "河南",
+      "series": "cn-ha-chemistry-selective",
+      "rules": {}
+    }
+  },
+  "questions": [
+    {
+      "id": "orig:chemistry:hn27-folio:q01",
+      "topic": "化学与生活 STSE 固碳材料",
+      "version_sha256": "f47ac3bea5e2a5893d0dd378c5e9634e1b5fe4db661c1bf6142a956568fceb26",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "氧化物与酸性气体反应",
+            "derivation": "比较碳化前后的碳元素价态；由产物辨认二氧化碳的固定"
+          },
+          "parts": {
+            "overall": "比较碳化前后的碳元素价态"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q02",
+      "topic": "阿伏加德罗常数 同位素示踪",
+      "version_sha256": "cbe476a26988bf9e78b1e9b6d0a087e28244a1222cdece0debe5927ccfa5b086",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "同位素",
+            "derivation": "按分子比求两种氧气物质的量；由双原子分子换算原子数"
+          },
+          "parts": {
+            "overall": "按分子比求两种氧气物质的量"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q03",
+      "topic": "基础实验操作 乙酸乙酯回流装置安全",
+      "version_sha256": "ea2c9a97e08595aebd04ecbb4ba38e688afca3e6bdb4cb0740a5db74b90f5e33",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "回流原理",
+            "derivation": "从图辨认冷凝夹套的低位接口；结合回流气体去向选择加热和通气方式"
+          },
+          "parts": {
+            "overall": "从图辨认冷凝夹套的低位接口"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q04",
+      "topic": "氧化还原反应 尿素脱硝与电子守恒",
+      "version_sha256": "9bd13004e7b4c383c351593c2b68c2d98c499111defea1e9eeeea7961d23702b",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "还原剂",
+            "derivation": "由尿素分子中氮原子数计算供氨量；判断氨、NO 和氧气的电子流向"
+          },
+          "parts": {
+            "overall": "由尿素分子中氮原子数计算供氨量"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q05",
+      "topic": "物质结构与性质 硼中心成键和构型",
+      "version_sha256": "e933942d0d271fda1545c03fd1da763ec6a355b6586616fda772b78b5a61b3f7",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "价层电子对互斥",
+            "derivation": "读图比较硼的成键方向数；按价层电子对互斥判断空间构型；确认配位电子对从氧给到硼"
+          },
+          "parts": {
+            "overall": "读图比较硼的成键方向数"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q06",
+      "topic": "反应热 醋酸电离焓",
+      "version_sha256": "267346c5bc73346523d53e618361eb8985ff56cc93c4d83b07c93183013be696",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "热量传递",
+            "derivation": "按等物质的量比较两组量热结果；将热量差归于电离并按一摩尔换算"
+          },
+          "parts": {
+            "overall": "按等物质的量比较两组量热结果"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q07",
+      "topic": "芳樟醇键线式 官能团与手性",
+      "version_sha256": "f0c5a73fa30b06cf0ae0a64921ed063ecc7a45926456ab46b0e21d34b43484d1",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "键线式",
+            "derivation": "从键线式追踪三个不同碳基团；数碳碳双键并排除平面碳"
+          },
+          "parts": {
+            "overall": "从键线式追踪三个不同碳基团"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q08",
+      "topic": "配合物 顺反构型与氨的配位",
+      "version_sha256": "1391a9150062c14c91da58ef679104eed68a3d605c4c8c8ac43af93af415ece2",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "双齿配位",
+            "derivation": "由几何条件选择发生双位取代的构型；把游离氯离子换算成发生反应的甲；将两个阴离子离去与配合离子电荷联系"
+          },
+          "parts": {
+            "overall": "由几何条件选择发生双位取代的构型"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q09",
+      "topic": "物质结构 氧空位与平均价态",
+      "version_sha256": "852783df8408dfc89ac3ef0ac30b47ae1c4b11bd12fda7344e8e49e0315cbec1",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "晶胞均摊",
+            "derivation": "由两个分层示意计每晶胞的 Ti 和氧位总数；比较 Ti 价态变化和少一个氧离子对应的形式电荷；从空位数换算占位率"
+          },
+          "parts": {
+            "overall": "由两个分层示意计每晶胞的 Ti 和氧位总数"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q10",
+      "topic": "共享中间体的两条催化分支",
+      "version_sha256": "289ee78ca617716fdb0efd9e76e04445ba442026667c60dd2f124f8467eb0215",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "化学动力学",
+            "derivation": "识别共同中间体后分岔；对两个峰各自扣除同一中间体能量；用反应物与产物的能量差比较放热"
+          },
+          "parts": {
+            "overall": "识别共同中间体后分岔"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q11",
+      "topic": "可降解高分子 聚己内酯",
+      "version_sha256": "6b18d2db0a2cfcfaa2fa86e81ecde17d7fc2857c314eb8efc323bcd1d9f83c38",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "内酯开环聚合",
+            "derivation": "确定环内的氧和羰基；沿主链识别酯键并补回水解端基；由羰基碳连入六碳主链"
+          },
+          "parts": {
+            "overall": "确定环内的氧和羰基"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q12",
+      "topic": "双膜电解装置 双极膜分解水与电量衡算",
+      "version_sha256": "08d3823d997a441349c2ffe6113b9d9909da48e20d6bf9892961e7341348322e",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "膜迁移",
+            "derivation": "逐室检查两道选择透过膜的离子和电荷；分清双极膜内解离的水与电极反应；在同一串联系统按 1F 算物料"
+          },
+          "parts": {
+            "overall": "逐室检查两道选择透过膜的离子和电荷"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q13",
+      "topic": "两路径反应初速率 图像读数与非线性",
+      "version_sha256": "1ff953078f7e2f1c47d03426380d30315761d1b114655de6b4439e86886e9cde",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "并行反应",
+            "derivation": "分别读取同浓度两组初速率；从总速率中分离出两条反应通道；改变其中一路速率、重组并判断首次达到阈值"
+          },
+          "parts": {
+            "overall": "分别读取同浓度两组初速率"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q14",
+      "topic": "酸碱指示剂 双波长吸光度与分布",
+      "version_sha256": "781052a2df563f5e0512b2e863f162f09a0173d0a4644f7b0188201e2609f69e",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "两种吸收的叠加",
+            "derivation": "按图读取两波长、两形态的四个系数；以两波长读数相等反求酸碱形态比；以 Ka 换算 pH"
+          },
+          "parts": {
+            "overall": "按图读取两波长、两形态的四个系数"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q15",
+      "topic": "湿法冶金 酸洗锌溶液铁铜分离与结晶",
+      "version_sha256": "0b420b57385bd4e40c4d3903928df54bf134c04fc2eaf1946323259113b557a9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "\\(\\mathrm{H_2O_2}+2\\mathrm{Fe}^{2+}+2\\mathrm H^+\\longrightarrow 2\\mathrm{Fe}^{3+}+2\\mathrm{H_2O}\\)；0.0600。",
+          "（2）": "3.6；Fe(OH)₃。",
+          "（3）": "Zn + Cu²⁺ → Zn²⁺ + Cu；溶液酸性过强时，H⁺竞争消耗锌粉并产生 H₂。",
+          "（4）": "46.6。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "氧化调价",
+            "derivation": "在酸性条件下按电子、物料和电荷守恒配平；将残铁和保锌要求同时匹配图表；用锌置换铜并解释过高酸度引发的副反应；从滴定取样放大到全液并乘结晶收率"
+          },
+          "parts": {
+            "（1）": "在酸性条件下按电子、物料和电荷守恒配平",
+            "（2）": "将残铁和保锌要求同时匹配图表",
+            "（3）": "用锌置换铜并解释过高酸度引发的副反应",
+            "（4）": "从滴定取样放大到全液并乘结晶收率"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q16",
+      "topic": "双指示剂滴定 填料有效成分与气体转移",
+      "version_sha256": "448c817f4e5bf85e342abf3258c8b5cb8eb3871076dcd295c0dcf1bf4b73dbdc",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "排去装置内原有的空气并将生成的 CO₂充分赶入吸收瓶；酸式滴定管。",
+          "（2）": "无色；第二阶段 HCO₃⁻ 与 H⁺ 1∶1 反应。",
+          "（3）": "0.00800 mol；80.0%。",
+          "（4）": "偏低；残留在装置中的 CO₂ 未被测到，第二阶段耗酸量偏小。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "分离与转移",
+            "derivation": "区分载气置换、吸收与滴定边界；识别第一、第二终点的反应对象；用第二阶段体积计算碳酸根与样品含量；根据残余气体推断被测质量分数误差"
+          },
+          "parts": {
+            "（1）": "区分载气置换、吸收与滴定边界",
+            "（2）": "识别第一、第二终点的反应对象",
+            "（3）": "用第二阶段体积计算碳酸根与样品含量",
+            "（4）": "根据残余气体推断被测质量分数误差"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q17",
+      "topic": "热化学与并行平衡 乙烷脱氢与逆水煤气变换",
+      "version_sha256": "5e6c094e2960a99c91cd9c71614710074435adfb35fd0893d18392c2d5f1f0ab",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "吸热；+178 kJ/mol。",
+          "（2）": "0.400 mol；0.200 mol。",
+          "（3）": "40.0 kPa；0.200；0.800。",
+          "（4）": "逆向；无净反应。",
+          "（5）": "移走 CO 使反应Ⅱ的反应商下降，Ⅱ正向消耗氢气，驱动Ⅰ向生成乙烯的方向移动。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "反应热",
+            "derivation": "利用盖斯定律消去中间生成的氢气；由平台逆推两条反应进度和气体总量；由分压计算两个无量纲平衡常数；压缩瞬间对各反应商分别判断"
+          },
+          "parts": {
+            "（1）": "利用盖斯定律消去中间生成的氢气",
+            "（2）": "由平台逆推两条反应进度和气体总量",
+            "（3）": "由分压计算两个无量纲平衡常数",
+            "（4）": "压缩瞬间对各反应商分别判断",
+            "（5）": "压缩瞬间对各反应商分别判断"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:chemistry:hn27-folio:q18",
+      "topic": "含芳环官能团定向转化 六步合成与异构",
+      "version_sha256": "624c55259f11a0942d60ee991d8589e43566a6fa3789c579de846b5b5278974a",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "\\(m\\!-\\!\\mathrm{O_2NC_6H_4COCH_3}\\)；\\(m\\!-\\!\\mathrm{HOC_6H_4COCH_3}\\)。",
+          "（2）": "还原反应；1。",
+          "（3）": "C₁₁H₁₄O₃；6。",
+          "（4）": "对羟基苯甲醛先以碘甲烷／碳酸钾转化为对甲氧基苯甲醛，再以硼氢化钠还原为对甲氧基苄醇，最后用乙酸酐酰化。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "芳香亲电取代定位",
+            "derivation": "利用定位效应和图中各箭头固定取代位置；逐步辨认氨基、酚、醚、醇、酯的实际变化；清点手性碳、分子式并穷尽位置与碳链异构；优先对酚做保护，再还原和酰化"
+          },
+          "parts": {
+            "（1）": "利用定位效应和图中各箭头固定取代位置",
+            "（2）": "逐步辨认氨基、酚、醚、醇、酯的实际变化",
+            "（3）": "清点手性碳、分子式并穷尽位置与碳链异构",
+            "（4）": "优先对酚做保护，再还原和酰化"
+          }
+        }
+      }
+    }
+  ],
+  "answers": [
+    "D",
+    "B",
+    "A",
+    "C",
+    "D",
+    "A",
+    "C",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "C",
+    "A",
+    {
+      "（1）": "\\(\\mathrm{H_2O_2}+2\\mathrm{Fe}^{2+}+2\\mathrm H^+\\longrightarrow 2\\mathrm{Fe}^{3+}+2\\mathrm{H_2O}\\)；0.0600。",
+      "（2）": "3.6；Fe(OH)₃。",
+      "（3）": "Zn + Cu²⁺ → Zn²⁺ + Cu；溶液酸性过强时，H⁺竞争消耗锌粉并产生 H₂。",
+      "（4）": "46.6。"
+    },
+    {
+      "（1）": "排去装置内原有的空气并将生成的 CO₂充分赶入吸收瓶；酸式滴定管。",
+      "（2）": "无色；第二阶段 HCO₃⁻ 与 H⁺ 1∶1 反应。",
+      "（3）": "0.00800 mol；80.0%。",
+      "（4）": "偏低；残留在装置中的 CO₂ 未被测到，第二阶段耗酸量偏小。"
+    },
+    {
+      "（1）": "吸热；+178 kJ/mol。",
+      "（2）": "0.400 mol；0.200 mol。",
+      "（3）": "40.0 kPa；0.200；0.800。",
+      "（4）": "逆向；无净反应。",
+      "（5）": "移走 CO 使反应Ⅱ的反应商下降，Ⅱ正向消耗氢气，驱动Ⅰ向生成乙烯的方向移动。"
+    },
+    {
+      "（1）": "\\(m\\!-\\!\\mathrm{O_2NC_6H_4COCH_3}\\)；\\(m\\!-\\!\\mathrm{HOC_6H_4COCH_3}\\)。",
+      "（2）": "还原反应；1。",
+      "（3）": "C₁₁H₁₄O₃；6。",
+      "（4）": "对羟基苯甲醛先以碘甲烷／碳酸钾转化为对甲氧基苯甲醛，再以硼氢化钠还原为对甲氧基苄醇，最后用乙酸酐酰化。"
+    }
+  ],
+  "quality_benchmarks": {
+    "protocol": "gaokao-editorial-audit-v1",
+    "subject": "chemistry",
+    "series": "cn-ha-chemistry-selective",
+    "slots": {
+      "1": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q001",
+          "version_sha256": "b68b6ae932a357a33815480ef7e0d385d1e5b9b1a6e3b6d66eafdcb1fb49606d",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "材料",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q001",
+          "version_sha256": "6334039b8999d36c9215d4a07e3ce758f94bad195889227c4c95ab66cbf45056",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "化学变化",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "2": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q002",
+          "version_sha256": "0a3bb19c4842df859c0e600244733adb10b96cdb4159c4bad3cd9816baa13954",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "化学用语",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "limited_position_evidence"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q002",
+          "version_sha256": "be83cb85685b845350f580a8a0d22ee6818dbd0da384546415b25817c9c5d289",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "化学用语",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "3": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q003",
+          "version_sha256": "2c0ad2e4d418cec4724d8ade60512c85b8eaf16eff49bc468023bdc4b28206a0",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "实验操作",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q003",
+          "version_sha256": "1d8c898895ee6f81bc7c60722257833c784ac74e6abaf976f364d4eb3639db6f",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "实验操作",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "4": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q004",
+          "version_sha256": "a306be26fdc821bf77df766771a3cbf6c5a77c39c5d6594edc4bc44742912b8b",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "无机转化",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q004",
+          "version_sha256": "6e2e37495624bd8f68845585a0d6236057da7d719a7db6e12c27b97208f03ba6",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "无机转化",
+          "features": [
+            "同元素追踪"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "5": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q005",
+          "version_sha256": "7a62aca943729729a0e33894e2f29d1b9aa45929d6fd25093cf1258bc0dc8256",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "离子方程式",
+          "features": [
+            "按反应物与介质写离子式"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q005",
+          "version_sha256": "3bfe52d0b4242dbd6776c8ae11e338afb8a486ba56d5fdb91a6d85e19d47ad1e",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "化学史",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "6": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q006",
+          "version_sha256": "319ed20ae317b799f0999374ee2d2935559f56f9670210664f1c687b6e6e07de",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "元素周期律",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q006",
+          "version_sha256": "7a7bb8f613005422074e8198b94f82d432d0ba7f6a10831df3f3c8159e3c9370",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "离子方程式",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "7": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q007",
+          "version_sha256": "a75f52e82573e631658133834bc9b51777a052c4af6b986b923f366200278d56",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "有机结构",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q007",
+          "version_sha256": "f621f330a0453cdbb7b1d79e62c1dc52b282d47ae7a94d71f55c6b0b7e35a297",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "有机结构",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "8": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q008",
+          "version_sha256": "50262fb6e76ad05a7bc16fc3fdfbc5038d710bea894be37e77c6dc8de969f824",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "配合物",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q008",
+          "version_sha256": "412eb32d52e2146a1b8bc318152dfa3b292e6621b5766e9ea7f7c580dda85d50",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "元素周期律",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "9": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q009",
+          "version_sha256": "620732f8b75c703c52fe386da3bb7ff84e1ba83bab5dd42caffbf0780759c5b0",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "物质结构",
+          "features": [
+            "热重曲线"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q009",
+          "version_sha256": "9eb1aa2dfe9b00dc8856bee3cda5774a4e25ee77083437402e5f61199dcc99f4",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "实验探究",
+          "features": [
+            "试管对照",
+            "配位与水解"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "10": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q010",
+          "version_sha256": "189c7df635db8ac45af71d07a3db6fd7210b017aed60f1fa867c418033db0d08",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "反应原理",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q010",
+          "version_sha256": "07e2db9a356279b67da9b3061f313dc588f053116b22d22be8a76d9fe87e41aa",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "物质结构",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "11": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q011",
+          "version_sha256": "ca22a7cd605368d1cfd5dcc3aa672a5df17299584b9d9dc15d7cd351901ed12f",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "有机合成",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q011",
+          "version_sha256": "6c775f98ab97f3e0d7bda050b6bab65d85496c3f7f3c4cacab03ca091360668b",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "高分子",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "12": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q012",
+          "version_sha256": "5e6873308d42023e4eaac771875243f5c432b372debb314f361300d2d3c7e6f4",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "电化学",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q012",
+          "version_sha256": "33113920a0dc88a128b3463ee7cd8bd7d6621d3cafbe64bdc6f2cc81fe69ef35",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "电化学",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "13": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q013",
+          "version_sha256": "2819fc803a61d3af93a097333a4cd67e50c55edfec76999e12cbb42a6e6b9e5b",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "反应原理",
+          "features": [
+            "机理与决速步"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q013",
+          "version_sha256": "3f3d7339a6b00bbcd18790ca28998adc375b4bd9f9d4454e2084d1849a4cdb59",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "反应速率",
+          "features": [
+            "速率图像"
+          ],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        }
+      },
+      "14": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q014",
+          "version_sha256": "b6028dc0c76f6f45ac8f791fdb859f70c0acbdc24bbec81d3cb7036126d3ba7c",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "水溶液平衡",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q014",
+          "version_sha256": "13acef7bdb690275ac3068cc70175e0a784f70789dedd371c7d5fd8ab3beb0f9",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "水溶液平衡",
+          "features": [],
+          "kind": "single_choice",
+          "points": 3,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "15": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q015",
+          "version_sha256": "68c7965255ab5ee935a926cecbe22f6c68c442040235c6cdf62f7644296725c0",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "工艺流程",
+          "features": [
+            "分离与铑回收",
+            "控制酸度",
+            "价态转化"
+          ],
+          "kind": "constructed_response",
+          "points": 14,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q015",
+          "version_sha256": "556a6993afe5d23f7f6837527b0160b8d0ce05316e53e5cc03873bc9d4786b93",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "工艺流程",
+          "features": [
+            "废芯片流程",
+            "母液回流",
+            "电解再生"
+          ],
+          "kind": "constructed_response",
+          "points": 14,
+          "scope": "practice_text"
+        }
+      },
+      "16": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q016",
+          "version_sha256": "e4cf590443eb32156483da6e518e3cd8335bb1427edb38ecc500a52bb345adcd",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "实验探究",
+          "features": [
+            "空白对照",
+            "滴定衡算"
+          ],
+          "kind": "constructed_response",
+          "points": 14,
+          "scope": "limited_position_evidence"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q016",
+          "version_sha256": "fb8f30cd3d620c80e07f5543791f370f86e9a43174c7d34b0fb79e9915e5b7fc",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "实验探究",
+          "features": [
+            "萃取可逆",
+            "滴定定量",
+            "多次萃取"
+          ],
+          "kind": "constructed_response",
+          "points": 14,
+          "scope": "practice_text"
+        }
+      },
+      "17": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q017",
+          "version_sha256": "904b85acf1841bf41adb03a33a85de5164eee8b707d909ccac208b125112e991",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "反应原理",
+          "features": [
+            "偶合平衡",
+            "晶胞计数"
+          ],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q017",
+          "version_sha256": "24e198eaf3a2263217cbd1ad90dd14a67a50e0c579c297f76f2528016002a55e",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "反应原理",
+          "features": [
+            "晶胞投影",
+            "恒压分压"
+          ],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "practice_text"
+        }
+      },
+      "18": {
+        "2025": {
+          "id": "2025-cn-ha-chemistry-selective:q018",
+          "version_sha256": "bcb410080668fb52ab524eb37e8c5c7f05ee49d05a4e5cd0f305e9c75341b38d",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-chemistry-paper/",
+          "topic": "有机推断",
+          "features": [
+            "反应顺序",
+            "同分异构与有机推断"
+          ],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "limited_position_evidence"
+        },
+        "2026": {
+          "id": "2026-cn-ha-chemistry-selective:q018",
+          "version_sha256": "8d43c6b66c7498812454a251d40d287656f71be82215e3b670ebe7ef0b13fd99",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-chemistry-henan-paper/",
+          "topic": "有机推断",
+          "features": [
+            "合成路线",
+            "官能团",
+            "引入与脱去基团"
+          ],
+          "kind": "constructed_response",
+          "points": 15,
+          "scope": "limited_position_evidence"
+        }
+      }
+    },
+    "review_board": "three-readers-v2",
+    "qa_policy": [
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "chemistry.competition",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "核查实际 pH 下先后或并行的酸碱反应",
+        "counterexample": "强碱中假定过量碳酸氢根仍保留"
+      },
+      {
+        "id": "chemistry.amphoteric",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "核查除杂真实可行区间",
+        "counterexample": "用忽略两性溶解凑沉淀范围"
+      },
+      {
+        "id": "chemistry.coverage",
+        "subject": "chemistry",
+        "severity": "major",
+        "check": "查 STSE、基础实验及物质结构",
+        "counterexample": "实验只算滴定浓度而无装置或操作"
+      },
+      {
+        "id": "chemistry.sequence",
+        "subject": "chemistry",
+        "severity": "major",
+        "check": "写明操作顺序、待判断的实测对象",
+        "counterexample": "误差题只问结果会怎样"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      },
+      {
+        "id": "chemistry.structure_depth",
+        "subject": "chemistry",
+        "severity": "fatal",
+        "check": "查前五题STSE和基础操作、选必2的多角度覆盖、非选择题空位数",
+        "counterexample": "全卷选必2只考一次常规晶胞，非选择题每题两个作答空"
+      }
+    ],
+    "exam_policy": {
+      "schema_version": 1,
+      "subject": "chemistry",
+      "year": 2027,
+      "region": "河南",
+      "series": "cn-ha-chemistry-selective",
+      "rules": {}
+    }
+  },
+  "candidate_sha256": "224832496b51e187dbce453ed503e6a84d697cc853dc3d9a7c46257162337fe3",
+  "paper_version": "b4259ba3bb0bef660be85d61f626718afd9f03717321cd5280927026c7520718",
+  "paper_pdf_sha256": "99b21b590a36f918bc30684a46fb5e12960da7460194563c970d32301187f3cd"
+}

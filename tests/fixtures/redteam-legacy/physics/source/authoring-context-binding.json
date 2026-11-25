@@ -1,0 +1,383 @@
+{
+  "sha256": "8c2866bf38b47a1704480ca52253bc8aa1d05fe03b09ba984e0f307ef9b0a06b",
+  "dna_sha256": "1995bf271e0f04aecc6634915522adca439215739a4ea0264f862ab3e15a8a4c",
+  "subject": "physics",
+  "year": 2027,
+  "context_limit": 100,
+  "basis": "2025、2026 河南同科正式选择性考试，data/dna/physics.json",
+  "same_position_references": {
+    "1": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q001",
+        "version_sha256": "2a5754cefca6ad9db45c0d7d5c6055d3c8844e4af648cf4851cb34c9f21dbadc",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "动力学",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q001",
+        "version_sha256": "2b2a0e90654a908cf3223c8fb723619836191554ab5615beb83879954c23cc06",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "振动",
+        "features": [
+          "周期与振幅分别比较"
+        ],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "2": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q002",
+        "version_sha256": "2c6c3dc31a215b549eb66ba596527f9adde7e5c694f89158e9a6140e4330155b",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "光学",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q002",
+        "version_sha256": "94c8539114aedbae1af5834291ab0703298b521849de262881443e98f32700a5",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "电场",
+        "features": [
+          "由力图反推电荷符号"
+        ],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "3": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q003",
+        "version_sha256": "23d96d9553a3343f2218b3943a1f7c31ef577d1c4af0cf80f8711fb0b6d518df",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "万有引力",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q003",
+        "version_sha256": "81168b70b605880063699b1a92e8e6fc7a26ea24158c3229b983623a5329d277",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "光学",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "4": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q004",
+        "version_sha256": "d30032d8f07166822c4e40ea973c5000200aa9bc94e8c5eeb7fbf694973a7914",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电场",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q004",
+        "version_sha256": "0ba3aaddde60810f748e40b7c4e9cd674a167fb3e3a15df84795cb04d6c6da1e",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "变压器",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "5": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q005",
+        "version_sha256": "57da1f19fc72a1940f97d57fc17b556d5343d1f01b91305783f4f2eafb4dc9a5",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电磁感应",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q005",
+        "version_sha256": "cfa441bdcca04a0c8ea6a64e20d3fe52ea3c37a92a13e43a2e48f8619c3ac09a",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "万有引力",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "6": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q006",
+        "version_sha256": "bc2ebff198119ce3cddc021bb53e4a78bde363339724c60c93551937a5b8b6dd",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "原子核",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q006",
+        "version_sha256": "0c1a19e0f773a2c286a0411d41615951aa8073415535ac17fc2787d733ee7904",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "磁场",
+        "features": [],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "7": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q007",
+        "version_sha256": "0ed352781a00ec91a9bc6f9550765abd26775b856b946f71d1098bf466db73eb",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "动量",
+        "features": [
+          "碰撞分段",
+          "速度图取量"
+        ],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q007",
+        "version_sha256": "cbf8267169b674afda20e7ee3210ec03430771f17d258e6f72be7651aed0f528",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "平抛",
+        "features": [
+          "速度投影"
+        ],
+        "kind": "single_choice",
+        "points": 4,
+        "scope": "practice_text"
+      }
+    },
+    "8": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q008",
+        "version_sha256": "3485792aedce70c5eb7d9f6e2675f494026924e7c54cea83e3a548f267cafb2d",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "波",
+        "features": [],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q008",
+        "version_sha256": "da01c74361b9bed08304d77da2e4a546824d6ba537a34b9d02946c8e7b7dc31c",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "光电效应",
+        "features": [],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      }
+    },
+    "9": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q009",
+        "version_sha256": "aa2bd39b14aff8c8c5fc784ccef98921eb4199a336123fdc8a8cea8056afe441",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电磁感应",
+        "features": [
+          "力与磁场方向"
+        ],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q009",
+        "version_sha256": "6f19536f9a0348eeb2b2139872e5023a102caed3c45659fa942a75f10eeafbf9",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "电磁感应",
+        "features": [
+          "楞次定律与图像极性"
+        ],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      }
+    },
+    "10": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q010",
+        "version_sha256": "275d1f8245ede8c4a8f9829fd06829ef3ca8ccf584f8eaba942c33614c722478",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "热学",
+        "features": [],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q010",
+        "version_sha256": "533e5edf6a31504e9baebf5fbff65e8023ac7f0351d2da31d4ab4c4c1357bd30",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "多阶段动力学",
+        "features": [
+          "相对运动",
+          "分段加速度"
+        ],
+        "kind": "multiple_choice",
+        "points": 6,
+        "scope": "practice_text"
+      }
+    },
+    "11": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q011",
+        "version_sha256": "4d41116840f28382414f805d4a4cffd3d131e198cbf2ab92b6ea927e0df3fb2e",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电路实验",
+        "features": [
+          "读电阻量程",
+          "比较阈值"
+        ],
+        "kind": "constructed_response",
+        "points": 6,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q011",
+        "version_sha256": "94770bd7fb9a13a7273b7e3ed8bb233effd089a3a73f971a245e0e3663f717d4",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "力学实验",
+        "features": [
+          "光电门读数",
+          "理论与实测速率"
+        ],
+        "kind": "constructed_response",
+        "points": 6,
+        "scope": "practice_text"
+      }
+    },
+    "12": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q012",
+        "version_sha256": "1d5a4d81c6835bdad78db071dc53b38401617dd7ff93c4be9c4fd86e0a922144",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "力学实验",
+        "features": [
+          "打点数据",
+          "估计系统误差"
+        ],
+        "kind": "constructed_response",
+        "points": 9,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q012",
+        "version_sha256": "5e42665fe8699e0c9291d860212a8396f8679eb69fe2b6eaf705cf5b70b79ba5",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "电路实验",
+        "features": [
+          "接线",
+          "RC斜率和截距"
+        ],
+        "kind": "constructed_response",
+        "points": 9,
+        "scope": "limited_position_evidence"
+      }
+    },
+    "13": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q013",
+        "version_sha256": "269052bdcfd887ace82f84c7ab0a898ad70f41fc2fe2352b3edcddd26cfc0744",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电场",
+        "features": [
+          "类平抛分段"
+        ],
+        "kind": "constructed_response",
+        "points": 10,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q013",
+        "version_sha256": "c2885245d64524e9128914d92b5e039c7b560129056a51013a202bd6651ac702",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "热学",
+        "features": [
+          "气体状态与质量比"
+        ],
+        "kind": "constructed_response",
+        "points": 10,
+        "scope": "practice_text"
+      }
+    },
+    "14": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q014",
+        "version_sha256": "1326f7e9e2d45ef0909d4649e02ad8007055cf5962753f7a3b5ad34a9251ac23",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "多阶段动力学",
+        "features": [
+          "碰撞与摩擦分段"
+        ],
+        "kind": "constructed_response",
+        "points": 12,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q014",
+        "version_sha256": "a671794f710376790231e72b068b9314f6686c899cf944ceaecbc31779215eb0",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "电场",
+        "features": [
+          "分区运动",
+          "比荷与飞行时间"
+        ],
+        "kind": "constructed_response",
+        "points": 12,
+        "scope": "practice_text"
+      }
+    },
+    "15": {
+      "2025": {
+        "id": "2025-cn-ha-physics-selective:q015",
+        "version_sha256": "e51113347a936287275cbd89750af2c6b4ada480e16ca96fc9a9d7e478553ab0",
+        "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+        "topic": "电磁复合场",
+        "features": [
+          "电磁分区",
+          "运动周期与漂移"
+        ],
+        "kind": "constructed_response",
+        "points": 17,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-physics-selective:q015",
+        "version_sha256": "9c40b944d264d901fdd803ed9c9fd48d53877320ed706a51a742696115183312",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+        "topic": "多阶段动力学",
+        "features": [
+          "弹性碰撞",
+          "逐次运动状态"
+        ],
+        "kind": "constructed_response",
+        "points": 17,
+        "scope": "practice_text"
+      }
+    }
+  }
+}

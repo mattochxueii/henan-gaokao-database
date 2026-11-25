@@ -1,0 +1,516 @@
+{
+  "payload": {
+    "model_version": "math-probability-v1",
+    "target_version": "math-targets-v1",
+    "as_of": "2026-11-10",
+    "target_year": 2027,
+    "series": "I",
+    "input_sha256": "990f246e71c118ee9ea1d9bb33a5253c649df4d525742053fe20374ee31f9880",
+    "evidence_sha256": "eb54e45d8aefc75dc64b15686368d37cd583de746fbc78f6a82fd09aa96b2bc2",
+    "visible_policy_evidence": [
+      "curriculum-2020",
+      "curriculum-2025-edition",
+      "evaluation-2020",
+      "henan-2027-registration",
+      "henan-reform-2022",
+      "national-plan-2025"
+    ],
+    "retrospective_features_allowed": true,
+    "predictions": [
+      {
+        "target": "module.foundations",
+        "layer": "module",
+        "title": "预备知识",
+        "probabilities": {
+          "frequency": 0.8888888888888888,
+          "recent": 0.8300906581855765,
+          "curriculum": 0.3840368507392722,
+          "policy_experiment": 0.7653089643156243
+        },
+        "primary_score_share_bounds": [
+          0.028571428571428574,
+          0.31428571428571433
+        ],
+        "curriculum_share_reference": 0.07758620689655173,
+        "policy_score_share_bounds": [
+          0.034698275862068965,
+          0.284698275862069
+        ],
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-national-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.875,
+          0.875
+        ],
+        "used_prior_evidence": [
+          "curriculum-2020"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "module.functions",
+        "layer": "module",
+        "title": "函数主线",
+        "probabilities": {
+          "frequency": 0.8888888888888888,
+          "recent": 0.8300906581855765,
+          "curriculum": 0.9269500967645151,
+          "policy_experiment": 0.8441578366149224
+        },
+        "primary_score_share_bounds": [
+          0.31333333333333335,
+          0.599047619047619
+        ],
+        "curriculum_share_reference": 0.35344827586206895,
+        "policy_score_share_bounds": [
+          0.3183477011494253,
+          0.5683477011494253
+        ],
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-national-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-national-1",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.875,
+          0.875
+        ],
+        "used_prior_evidence": [
+          "curriculum-2020"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "module.geometry",
+        "layer": "module",
+        "title": "几何与代数",
+        "probabilities": {
+          "frequency": 0.8888888888888888,
+          "recent": 0.8300906581855765,
+          "curriculum": 0.9378860389535939,
+          "policy_experiment": 0.8457460953569076
+        },
+        "primary_score_share_bounds": [
+          0.26285714285714284,
+          0.5485714285714286
+        ],
+        "curriculum_share_reference": 0.3706896551724138,
+        "policy_score_share_bounds": [
+          0.2763362068965517,
+          0.5263362068965518
+        ],
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-national-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-national-1",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.875,
+          0.875
+        ],
+        "used_prior_evidence": [
+          "curriculum-2020"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "module.probability",
+        "layer": "module",
+        "title": "概率与统计",
+        "probabilities": {
+          "frequency": 0.8888888888888888,
+          "recent": 0.8300906581855765,
+          "curriculum": 0.7344478903575076,
+          "policy_experiment": 0.8162001803937045
+        },
+        "primary_score_share_bounds": [
+          0.10952380952380951,
+          0.3952380952380952
+        ],
+        "curriculum_share_reference": 0.19827586206896552,
+        "policy_score_share_bounds": [
+          0.12061781609195402,
+          0.370617816091954
+        ],
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-national-1",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.875,
+          0.875
+        ],
+        "used_prior_evidence": [
+          "curriculum-2020"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "method.proof",
+        "layer": "method",
+        "title": "解答题显式证明",
+        "probabilities": {
+          "frequency": 0.8888888888888888,
+          "recent": 0.8300906581855765,
+          "curriculum": null,
+          "policy_experiment": 0.811197212925762
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-national-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-national-1",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.875,
+          0.875
+        ],
+        "used_prior_evidence": [
+          "national-plan-2025"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "method.linked",
+        "layer": "method",
+        "title": "显式跨问依赖",
+        "probabilities": {
+          "frequency": 0.18518518518518517,
+          "recent": 0.2148617198036636,
+          "curriculum": null,
+          "policy_experiment": 0.3315667535325976
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.125,
+          0.20833333333333331
+        ],
+        "used_prior_evidence": [
+          "evaluation-2020",
+          "national-plan-2025"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "method.context",
+        "layer": "method",
+        "title": "实质实际情境",
+        "probabilities": {
+          "frequency": 0.875,
+          "recent": 0.8204832656024801,
+          "curriculum": null,
+          "policy_experiment": 0.794536538254
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 6,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.8571428571428571,
+          0.8571428571428571
+        ],
+        "used_prior_evidence": [
+          "evaluation-2020"
+        ],
+        "support": "estimated"
+      },
+      {
+        "target": "structure.conditional",
+        "layer": "structure",
+        "title": "给定已发生事件的概率",
+        "probabilities": {
+          "frequency": null,
+          "recent": null,
+          "curriculum": null,
+          "policy_experiment": null
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 1,
+        "training_papers": [
+          "2025-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2025
+        ],
+        "frequency_leave_one_block_range": null,
+        "used_prior_evidence": [],
+        "support": "insufficient_dated_observations"
+      },
+      {
+        "target": "structure.midpoint",
+        "layer": "structure",
+        "title": "圆锥曲线的弦中点",
+        "probabilities": {
+          "frequency": 0.1111111111111111,
+          "recent": 0.16990934181442352,
+          "curriculum": null,
+          "policy_experiment": 0.16990934181442352
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.125,
+          0.125
+        ],
+        "used_prior_evidence": [],
+        "support": "estimated"
+      },
+      {
+        "target": "paper.compact",
+        "layer": "structure",
+        "title": "卷面不足22题",
+        "probabilities": {
+          "frequency": 0.4444444444444444,
+          "recent": 0.5817119957594549,
+          "curriculum": null,
+          "policy_experiment": 0.7148833173807984
+        },
+        "primary_score_share_bounds": null,
+        "curriculum_share_reference": null,
+        "policy_score_share_bounds": null,
+        "effective_year_blocks": 7,
+        "training_papers": [
+          "2020-cn-math-new-gaokao-1",
+          "2020-cn-math-new-gaokao-2",
+          "2021-cn-math-new-gaokao-1",
+          "2021-cn-math-new-gaokao-2",
+          "2022-cn-math-new-gaokao-1",
+          "2022-cn-math-new-gaokao-2",
+          "2023-cn-math-new-gaokao-1",
+          "2023-cn-math-new-gaokao-2",
+          "2024-cn-math-new-gaokao-1",
+          "2024-cn-math-new-gaokao-2",
+          "2025-cn-math-national-1",
+          "2025-cn-math-new-gaokao-2",
+          "2026-cn-math-national-1",
+          "2026-cn-math-new-gaokao-2"
+        ],
+        "training_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "frequency_leave_one_block_range": [
+          0.375,
+          0.5
+        ],
+        "used_prior_evidence": [
+          "review-2024"
+        ],
+        "support": "estimated"
+      }
+    ],
+    "run_id": "henan-2027-math-v1",
+    "model_files_sha256": {
+      "forecast_model.py": "a5c5939b747f83565a448f25327588403eba3597545fc7ef3c592c7e3f3a9812",
+      "forecast_features.py": "5acaa4486abf704dcce64bef367d66dab7b6bf4733c7422af6b45f3263285f0d",
+      "forecast_store.py": "05188b087c9c04c1ae68393054f2eac66be94b0fad5b158ea449498b006d2308"
+    },
+    "target_spec_sha256": "72c41c0c9571d92b0a18d8de073714e96a26f74ad6d1a067c7be838fa1925880",
+    "registry_sha256": "4d15dcdf6900de1cec930fe6ae8ffd08b011d55f79f31a27ab7f365f5d83a001",
+    "target_identity": {
+      "region": "河南",
+      "subject": "math",
+      "exam_system": "3+1+2",
+      "series_status": "全国Ⅰ卷为条件性研究设定，须待实际适用卷确认",
+      "confirmed_system_evidence": "henan-2027-registration"
+    },
+    "prospective_grade": {
+      "status": "await_official_paper_and_independent_feature_audit",
+      "binary_metrics": [
+        "brier",
+        "log_loss"
+      ],
+      "share_metric": "绝对误差区间；只有实际完整且同口径才给点值",
+      "missing": "无证据和不明卷型不评分，不当作0",
+      "identity_rule": "河南实际适用卷与冻结卷系不同，则本卷系条件预测不可计分"
+    },
+    "timestamp_status": "append_only_sha256; no_independent_timestamp_token",
+    "probability_scope": "互不排斥的纸卷级事件；无高考分数、考生难度或原题命中预测",
+    "features_sha256": "23dc41e346da549ec0a664010ac6ee7b5613a4c5a2ffb37d4efb31007ef988c9",
+    "independent_labels_sha256": "6e53da424d1a317bacb9f03fcb4501f79b86a979e26aab686aab5def7c583292"
+  },
+  "payload_sha256": "1608b8253b8e7f7eb5a086d79be6ed84d9921026d9dd811d1b508e9b23a5e2b1"
+}

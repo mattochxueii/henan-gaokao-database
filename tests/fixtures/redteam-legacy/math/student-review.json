@@ -1,0 +1,1545 @@
+{
+  "pdf_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+  "input_scope": "pdf_only",
+  "reference_answers_read": false,
+  "internal_spec_read": false,
+  "proposer_design_read": false,
+  "overall_pass": true,
+  "reviewer": "solve28-independent",
+  "pages": [
+    {
+      "number": 1,
+      "sha256": "c11d71274de26e84f88057060abd79a9c53a34821373678ce65da1a1f94fe669",
+      "note": "Eight complete single-choice questions plus title and the 150-point, 120-minute notice. Q7 labels are separated from diagram strokes and both dimensions agree with the stem."
+    },
+    {
+      "number": 2,
+      "sha256": "d4552c109055024bb4b3bbad552f9a42a7813ed2449b699fdf3fb85f41366930",
+      "note": "Multi-choice scoring rubric, revised tangent-lengths item and three in-line answer blanks are visible. Q15 starts its writing space at the bottom."
+    },
+    {
+      "number": 3,
+      "sha256": "0806132aa3f78ab9d2b019233a61cb69954d523fbeac65fdeadc1da614f27a19",
+      "note": "Q15 continuation is visibly labeled. Q16's pyramid labels and dimensions are clear, and ample writing space follows. Both Q17 parts are visible below."
+    },
+    {
+      "number": 4,
+      "sha256": "8f6b2823d6c473104c30da22faedc235c78c69821de097f0f221fd3979ae8cca",
+      "note": "Q17 has a complete writing area. Q18's ellipse diagram, equation, P label, both tasks and the start of its writing region fit cleanly."
+    },
+    {
+      "number": 5,
+      "sha256": "66362540925b6dde73a7641c74b85e592fdbe25ff481174fc96095cbba43061d",
+      "note": "Q18 response continuation is labeled. Q19's logarithmic mean statement and both parts are readable above a substantial response region. No answers or worked steps appear in the student paper."
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "因式分解后确定开区间 (−1,2)，再与 U 相交得 A={0,1}。",
+      "request_understood": "补集与两类有限集合的关系。独立结论为 B",
+      "independent_solution": "不等式化为 (x+1)(x−2)<0，故 −1<x<2。在全集 U 中 A={0,1}。绝对值方程给 B={0,2}，其中只剩 2 不在 A 中，交集为 {2}。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "因式分解后确定开区间 (−1,2)，再与 U 相交得 A={0,1}。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "x−1=±1，在 U 中得到 B={0,2}。",
+          "after": []
+        },
+        {
+          "kind": "compare",
+          "evidence": "从 B 中去掉属于 A 的 0，得到 {2}。",
+          "after": [
+            1,
+            2
+          ]
+        }
+      ],
+      "answer_key": "B"
+    },
+    {
+      "number": 2,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "分母 1+z 非零。",
+      "request_understood": "复数分式方程中的符号与共轭。独立结论为 D",
+      "independent_solution": "原式要求 z≠−1。由 z=i(1+z) 得 z=i/(1−i)=(−1+i)/2，满足定义域条件。取共轭得 (−1−i)/2。",
+      "moves": [
+        {
+          "kind": "restrict_domain",
+          "evidence": "分母 1+z 非零。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "解得 z=(−1+i)/2，分母仍非零。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "recall",
+          "evidence": "共轭使虚部变号，实部保留。",
+          "after": [
+            2
+          ]
+        }
+      ],
+      "answer_key": "D"
+    },
+    {
+      "number": 3,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "将角和问题化成关于正数 t=tan β 的分式方程。",
+      "request_understood": "和角关系的逆用。独立结论为 A",
+      "independent_solution": "记 t=tan β>0。正切和角公式给出 (2+t)/(1−2t)=−4，且题设要求分母非零。解得 t=6/7。此值为正，1−2t=−5/7，代回确得 −4。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "将角和问题化成关于正数 t=tan β 的分式方程。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "2+t=−4+8t 得 t=6/7。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "6/7 对应唯一锐角，且分母 −5/7 非零，回代成立。",
+          "after": [
+            2
+          ]
+        }
+      ],
+      "answer_key": "A"
+    },
+    {
+      "number": 4,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "以中位数 4 为基准转化为绝对差样本 (3,2,0,1,4)。",
+      "request_understood": "区分绝对偏差数据的二阶矩和方差。独立结论为 C",
+      "independent_solution": "五数中位数为 4，依题意得到绝对差 3,2,0,1,4。它们的均值为 2，离差平方和为 1+0+4+1+4=10，按 1/5 计算方差得 2。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "以中位数 4 为基准转化为绝对差样本 (3,2,0,1,4)。",
+          "after": []
+        },
+        {
+          "kind": "substitute",
+          "evidence": "以转化后样本均值 2 为中心，代入方差公式得 10/5=2。",
+          "after": [
+            1
+          ]
+        }
+      ],
+      "answer_key": "C"
+    },
+    {
+      "number": 5,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "取 A 为起点，利用 BC 中点将两组向量分别写成 2AD 和 (2−3t)AD。",
+      "request_understood": "向量模到一维位置的回译。独立结论为 D",
+      "independent_solution": "设 t=AP/AD，由 P 在线段 AD 上且 AP>PD 得 1/2<t≤1。向量 AB+AC=2AD，PA+PB+PC=AB+AC−3AP=(2−3t)AD。两边长度除以 AD 得 |2−3t|=1/2，两个代数根为 1/2、5/6，只有 5/6 在所需范围。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "取 A 为起点，利用 BC 中点将两组向量分别写成 2AD 和 (2−3t)AD。",
+          "after": []
+        },
+        {
+          "kind": "restrict_domain",
+          "evidence": "AP>PD 等价于 t>1−t，连同 P 在线段上得到 t∈(1/2,1]。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "|2−3t|=1/2 给 t=1/2 或 5/6，按严格边界排除 1/2。",
+          "after": [
+            1,
+            2
+          ]
+        }
+      ],
+      "answer_key": "D"
+    },
+    {
+      "number": 6,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "以相邻差替代原数列，把二阶递推变为公比为 2 的一阶递推。",
+      "request_understood": "二阶递推中的差分变换和下标校正。独立结论为 A",
+      "independent_solution": "令 d_n=a_{n+1}−a_n，题给递推式推出 d_{n+1}=2d_n。17−3=a_5−a_2=d_2+d_3+d_4=7d_2，故 d_2=2。于是 d_5=8d_2=16，a_6=17+16=33。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "以相邻差替代原数列，把二阶递推变为公比为 2 的一阶递推。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "a_5−a_2=7d_2=14 定出 d_2=2。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "代入 d_5=8d_2 和 a_6=a_5+d_5 得 33。",
+          "after": [
+            2
+          ]
+        }
+      ],
+      "answer_key": "A"
+    },
+    {
+      "number": 7,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "把对棱中点 E、F 连起来。C、D 到 A、B 等距，因而 AB 垂直平面 CDE。又 EC=ED，故 EF⊥CD，得到 ME、EF、FN 三个相互正交的方向。",
+      "request_understood": "正四面体对棱正交与约束下的空间距离最值。独立结论为 B",
+      "independent_solution": "取 E、F 分别为 AB、CD 的中点。因 C、D 到 A、B 等距，C、D、F 在过 E 且垂直 AB 的中垂面上，故 AB⊥CD 且 AB⊥EF。又 CE=DE，所以 CD⊥EF。从直角三角形 AEC 和 EFC 依次得 EC²=6²−3²=27、EF²=27−3²=18。向量 MN=ME+EF+FN 的三个分量两两正交。令 u=AM、v=CN，便有 MN²=18+(u−3)²+(v−3)²。端点限制和 u+2v=8 等价于 1≤v≤4 且 u=8−2v。由 (u−3)+2(v−3)=−1，柯西不等式给 (u−3)²+(v−3)²≥1/5。等号要求 (u−3,v−3) 与 (1,2) 成比例，得 u=14/5、v=13/5，确在线段上。因而最小值为 18+1/5=91/5。",
+      "moves": [
+        {
+          "kind": "invariant",
+          "evidence": "把对棱中点 E、F 连起来。C、D 到 A、B 等距，因而 AB 垂直平面 CDE。又 EC=ED，故 EF⊥CD，得到 ME、EF、FN 三个相互正交的方向。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "勾股关系给 EF²=18，并把原距离拆成 MN²=18+(u−3)²+(v−3)²。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "restrict_domain",
+          "evidence": "根据两点的线段端点与 u+2v=8，得到 1≤v≤4，且 (u−3)+2(v−3)=−1。",
+          "after": []
+        },
+        {
+          "kind": "optimality",
+          "evidence": "对方向 (1,2) 用柯西不等式，得与两个中点的平方偏差之和至少为 1/5，并定位等号条件。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "选 u=14/5、v=13/5，两点均在线段内，达到下界 91/5。",
+          "after": [
+            3,
+            4
+          ]
+        }
+      ],
+      "answer_key": "B"
+    },
+    {
+      "number": 8,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用 f′(p)=3p²−3 写出切线。",
+      "request_understood": "用切触重根控制另一个交点。独立结论为 B",
+      "independent_solution": "令 p 为 P 的横坐标，切线斜率为 3p²−3。三次函数减去在 p 处的切线，得 x³−3p²x+2p³=(x−p)²(x+2p)。另一交点横坐标为 −2p，要求 p≠0。由 p²+4p²=20 得 p=±2，二者都给斜率 9。",
+      "moves": [
+        {
+          "kind": "routine_calculus",
+          "evidence": "用 f′(p)=3p²−3 写出切线。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "将交点方程因式分解为 (x−p)²(x+2p)=0，读出另一根 −2p。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "p²+(−2p)²=20 给 p=±2，两种情形均有不同交点且斜率同为 9。",
+          "after": [
+            1,
+            2
+          ]
+        }
+      ],
+      "answer_key": "B"
+    },
+    {
+      "number": 9,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "至少需区分甲、乙的位置，样本空间为 16 个等可能有序对。",
+      "request_understood": "同一随机取数的条件事件、奇偶和独立性。独立结论为 AC",
+      "independent_solution": "16 个有序数对等可能。S=5 有 (1,4)、(2,3)、(3,2)、(4,1) 共 4 对，因此 A 真。其中 D=1 的有两对，条件概率 1/2，因此 B 假。由于 |x−y| 和 x−y 同奇偶，且 (x+y)−(x−y)=2y，故 C 真。无条件下 D=1 有 6 对，概率 3/8 与 1/2 不同，因此 D 假。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "至少需区分甲、乙的位置，样本空间为 16 个等可能有序对。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "分别数出 S=5 有 4 对，D=1 有 6 对，两事件交集有 2 对。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "compare",
+          "evidence": "用 4/16 核 A，用 2/4 核 B，比较 2/4 与 6/16 核 D。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "invariant",
+          "evidence": "|x−y|≡x−y≡x+y (mod 2)，验证 C 对所有样本成立。",
+          "after": [
+            1
+          ]
+        }
+      ],
+      "answer_key": "AC"
+    },
+    {
+      "number": 10,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用 cos 2x=1−2sin²x，把 f 表为 s=sin x 的二次式。",
+      "request_understood": "三角函数性质与二次代换的适用范围。独立结论为 ABD",
+      "independent_solution": "令 s=sin x，f(x)=1+s−2s²=9/8−2(s−1/4)²。sin(π−x)=sin x，故 A 真。s=1/4 可取到，故 B 真。f(π/2)=0 而 f(3π/2)=−2，故 C 假。零点条件为 (1−s)(2s+1)=0，在 [0,2π) 中 s=1 产生 π/2，s=−1/2 产生 7π/6、11π/6，共三点，故 D 真。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "用 cos 2x=1−2sin²x，把 f 表为 s=sin x 的二次式。",
+          "after": []
+        },
+        {
+          "kind": "invariant",
+          "evidence": "对称变换 x↦π−x 保持 s 不变，验证 A。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "配方给上界 9/8，s=1/4 在正弦值域内，验证 B。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "counterexample",
+          "evidence": "相差 π 的 π/2、3π/2 给函数值 0、−2，排除 C。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "分别计数 sin x=1 和 sin x=−1/2 在给定半开区间内的 1、2 个解，验证 D。",
+          "after": [
+            1
+          ]
+        }
+      ],
+      "answer_key": "ABD"
+    },
+    {
+      "number": 11,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "把圆心到公切线的距离写成单位法向量方向的有向距离，绝对值为半径。",
+      "request_understood": "等切线长点集的定义域与公切线交点距离的联动。独立结论为 AD",
+      "independent_solution": "先求 T。设公切线的归一化方程为 ux+vy+w=0，u²+v²=1。若圆心在异侧，则圆心有向距离相差 1+2=3，超过圆心距 2，故只能同侧。定向使两圆心有向距离为 1、2，解 −u+w=1、u+w=2 得 u=1/2、w=3/2、v=±√3/2，所得两线 x±√3y+3=0 各自满足距离条件，确为公切线，T=(−3,0)，A 真。再设 X=(x,y) 在两圆外部，其切线段长的平方分别为 (x+1)²+y²−1 与 (x−1)²+y²−4。等长要求二者相等且均严格为正，故 S={(−3/4,y): y²>15/16}，线上两交点及两交点之间的点均不在 S，B 假。对 X∈S，把相等切线段长记为 l，则 |XT|²=81/16+y²=6+l²>6，C 假。距 T 为 √7 时 y²=31/16，两个点皆在 S，且 l²=1，D 真。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "把圆心到公切线的距离写成单位法向量方向的有向距离，绝对值为半径。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "异侧给投影距离差的绝对值为 3，大于圆心距离 2，故所有公切线必须同侧。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "解同侧距离的方程组与单位法向量条件，得到两条候选线 x±√3y+3=0。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "两条候选线互不相同，圆心到各线距离均分别为 1、2，确认都恰为公切线，联立得 T=(−3,0)。",
+          "after": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "外点到切点的线段长平方为到圆心的距离平方减半径平方，两个量需相等且为正。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "两式相减得 x=−3/4，代回切线长平方为 y²−15/16，从而 y²>15/16。",
+          "after": [
+            5
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "满足 x=−3/4 且 y²>15/16 的每点在两圆外且等长，故精确刻画 S，B 的全体点断言为假。",
+          "after": [
+            5,
+            6
+          ]
+        },
+        {
+          "kind": "invariant",
+          "evidence": "以 T 的坐标与 S 的纵坐标写出 |XT|²−l²=6。",
+          "after": [
+            4,
+            7
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "距 T 为 √6 只对应 l=0，即圆的交点，严格外部的限制令此边界不可取，排除 C。",
+          "after": [
+            7,
+            8
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "令距离为 √7，得到 y=±√31/4 且严格在 S，切线长为 1，验证 D。",
+          "after": [
+            7,
+            8
+          ]
+        }
+      ],
+      "answer_key": "AD"
+    },
+    {
+      "number": 12,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用乘积求导给出 x=2 处的斜率 3e²。",
+      "request_understood": "指数函数切线的横截距。独立结论为 4/3",
+      "independent_solution": "y′=(x+1)e^x。在 x=2 处，纵坐标 2e²，斜率 3e²。切线 y−2e²=3e²(x−2) 与 x 轴相交时 y=0，故 x=4/3。",
+      "moves": [
+        {
+          "kind": "routine_calculus",
+          "evidence": "用乘积求导给出 x=2 处的斜率 3e²。",
+          "after": []
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "切线通过 (2,2e²)，令纵坐标为 0 得横截距 4/3。",
+          "after": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "将中间恰有两组转成甲乙位置差为 3，获得六个有序位置对。",
+      "request_understood": "固定间隔下给禁邻事件计数。独立结论为 84",
+      "independent_solution": "甲、乙位置之差为 3，故无序位置对为 (1,4)、(2,5)、(3,6)。先选位置对和甲乙顺序，再排其余四组，共 6×4!=144。要减去甲丙相邻的排法。甲在 1、6 时各有一个相邻位置，其余四种甲位置各有两个，且乙距甲三位，不占这些位置。于是 10 种甲乙丙布局，每种剩余三组有 3! 种排法。所求 144−10×3!=84。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "将中间恰有两组转成甲乙位置差为 3，获得六个有序位置对。",
+          "after": []
+        },
+        {
+          "kind": "branch",
+          "evidence": "按甲处在队列端点或内部分类，六种有序位置对共给 2×1+4×2=10 种丙相邻的布局。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "用 6×4! 减去 10×3! 得 84。",
+          "after": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用 t=1 的判别式及 f_1(2)=(2−r_1)(2−r_2)≥0，得到 2≤a≤9/4。",
+      "request_understood": "全称参数下实根存在与落区间的充要拼合。独立结论为 [2,9/4]",
+      "independent_solution": "只取 t=1 即有必要条件 9−4a≥0。由于两实根均不大于 2，代入 2 的多项式值是两个非负数的乘积，故 a−2≥0。反之，取 2≤a≤9/4，对每个 t∈[0,1] 有 Δ=(t+2)²−4at≥(t+2)²−9t=(1−t)(4−t)≥0，且抛物线顶点的横坐标在 [1,3/2]。又有 f_t(0)=at≥0、f_t(2)=t(a−2)≥0。抛物线在顶点两侧分别递减、递增，每侧的根都落在两端之间，重根也允许。t=0 给 0、2，在 t=1、a=9/4 时给重根 3/2。",
+      "moves": [
+        {
+          "kind": "necessity",
+          "evidence": "用 t=1 的判别式及 f_1(2)=(2−r_1)(2−r_2)≥0，得到 2≤a≤9/4。",
+          "after": []
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "由 a≤9/4、t≥0 将全区间的判别式下界分解成 (1−t)(4−t)。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "顶点在 [1,3/2]，而 f_t(0)、f_t(2) 非负，实根分别位于端点与顶点之间。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "允许端点根及重根，t=0 的 0、2 和 t=1、a=9/4 的 3/2 都满足。",
+          "after": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用余弦定理比较系数，推出 A=π/3。",
+      "request_understood": "中线的二次约束与面积的可达最值。独立结论为 （1）A=π/3。（2）面积最大值 2√3，此时 b=4、c=2。",
+      "independent_solution": "（1）余弦定理给 a²=b²+c²−2bc cos A。与已知式比较并用 b,c>0 得 cos A=1/2，故 A=π/3。（2）中点向量给 4AM²=b²+c²+2bc cos A=b²+c²+bc=28。因 b≥2c，有 28−(7/2)bc=b²+c²−(5/2)bc=(b−2c)(b−c/2)≥0。于是 bc≤8，面积为 (√3/4)bc，至多为 2√3。取等必须 b=2c，再由中线等式得 c=2、b=4。按两边及其夹角 π/3 构造三角形，可验证 a=2√3 且 AM=√7，故上界取到。",
+      "moves": [
+        {
+          "kind": "routine_algebra",
+          "evidence": "用余弦定理比较系数，推出 A=π/3。",
+          "after": []
+        },
+        {
+          "kind": "representation",
+          "evidence": "用 AM=(AB+AC)/2 的向量关系把中线长化为 b²+c²+bc=28。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "将 28−(7/2)bc 因式分解，用 b≥2c 判非负并定位取等 b=2c。",
+          "after": [
+            2
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "b=4、c=2 和夹角 π/3 确定可行三角形，达到面积界 2√3。",
+          "after": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "用 A 点和三条互垂棱建系，写出两个平面向量 u、v 以及 AC 方向 w。",
+      "request_understood": "可动顶点截面满足方向约束后确定二面角。独立结论为 （1）PN/PC=3/4。（2）余弦值 8/√82。",
+      "independent_solution": "把 A 作原点，以 AB、AD、AP 为坐标轴，则 M=(0,2,3/2)、Q=(2,0,0)，令 t=PN/PC∈(0,1)，N=(4t,4t,3−3t)。记 u=QM=(−2,2,3/2)、v=QN=(4t−2,4t,3−3t)。若 AC 平行平面，方向 w=(1,1,0) 可写为 αu+βv。比较该式的 y−x 和 z 分量，得 4α+2β=0、(3/2)α+(3−3t)β=0。α 非零，故 6t−9/2=0，t=3/4。代入可验 v−u/2=2w，且 u 不水平，平面与底面的交线为过 Q、方向 w 的直线 x−y=2、z=0，A 不在这条线上，故条件满足。此时平面的法向量 (−3,3,−8) 与 w、u 都正交，再与底面法向量 (0,0,1) 求夹角余弦的绝对值为 8/√82。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "用 A 点和三条互垂棱建系，写出两个平面向量 u、v 以及 AC 方向 w。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "要求 w 为 u、v 的线性组合，比较 y−x 与 z 仅得 t=3/4。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "t=3/4 时 w 在平面方向中，平面与底面交线 x−y=2。含 A 的 AC 严格在平面外，故线面平行成立。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "解法向量与 u、w 两个点积为 0 的方程，取 n=(−3,3,−8)。",
+          "after": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "routine_algebra",
+          "evidence": "算 n 和底面法向量的夹角余弦绝对值为 8/√82。",
+          "after": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "三枚标记的位置组合等可能，样本空间大小为 20。",
+      "request_understood": "截断停时与剩余样本的条件交换性。独立结论为 （1）P(T=2)=1/5，P(T=3)=3/10，P(T=4)=1/2，E(T)=33/10。（2）7/10。",
+      "independent_solution": "记 J 为第二枚带标记封签所在位置，则 T=min(J,4)。三枚标记的位置组合有 C(6,3)=20 种且等可能。J=2 时前两位有标记，第三枚选位有 4 种。J=3 时第 3 位有标记，另在前两位选一位、后三位选一位，有 2×3=6 种。故 T=4 的组合还有 10 种，分布列为 1/5、3/10、1/2，期望为 2/5+9/10+2=33/10。T=4 等价于前三位最多一枚标记。若后两位都有标记，前四位仅一枚，有 4 种。若后两位恰一枚，则第 4 位必有标记，并在前三位选一位，有 3×2=6 种。后两位都无标记时前三位至少两枚，违背 T=4。条件下等可能的 10 种组合中，前类抽中概率 1，后类为 1/2，合计 (4+6/2)/10=7/10。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "三枚标记的位置组合等可能，样本空间大小为 20。",
+          "after": []
+        },
+        {
+          "kind": "model",
+          "evidence": "把首次读到第二枚的停时 J 映射为截断停时 T=min(J,4)。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "数出 T=2、3、4 的组合数为 4、6、10。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "substitute",
+          "evidence": "按分布列计算期望 33/10。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "branch",
+          "evidence": "在前三位至多一枚标记的条件下，后两位有两枚或一枚，组合数分别为 4、6。",
+          "after": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "以条件组合的概率加权后两位等可能抽取的命中率 1 和 1/2，得 7/10。",
+          "after": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "P 是内点，以中点和方向表示弦两端，消去二次项和常数项得到中点必要条件。",
+      "request_understood": "以弦中点轨迹控制投影偏差的可达最大值。独立结论为 （1）(x−1/2)²+3y²=1/4，整条椭圆均可取到。（2）最大值 √2/4，直线为 y=x−1 或 y=1−x。",
+      "independent_solution": "（1）P 在给定椭圆内部，过 P 的直线均与椭圆交于两个不同点。令 M=(x,y)，以 M±h(u,v) 表示弦端点，椭圆等式相减得 xu/3+yv=0。当 M≠P 时，可选方向 (u,v)=(x−1,y)，得 x(x−1)+3y²=0。M=P 也满足式子，并可由直线 x=1 取得。反过来，对候选椭圆上 M≠P 的任一点，0≤x≤1，且 x²/3+y²=x/3<1。在 P、M 所在直线上以 M 为参数零点，原椭圆方程的一次项为零、二次项系数为正、常数项为负，故两端点关于 M 对称。包括 M=P 在内，整条候选椭圆都可取到。（2）若直线竖直，则 M=H=P。否则设 y=k(x−1)，用 xu/3+yv=0 和垂足条件分别得 M=(3k²/(1+3k²),−k/(1+3k²))、H=(k²/(1+k²),−k/(1+k²))。二点在斜率 k 的同一直线上，令 t=k²≥0，有 MH=2t/[(1+3t)√(1+t)]。比较平方，有 1/8−MH²=(1−t)²(9t+1)/[8(1+3t)²(1+t)]≥0，等号仅在 t=1。两条有斜率 +1、−1 的直线均过椭圆内点 P，故达到最大距离 √2/4，水平与竖直线均给距离 0。",
+      "moves": [
+        {
+          "kind": "model",
+          "evidence": "P 是内点，以中点和方向表示弦两端，消去二次项和常数项得到中点必要条件。",
+          "after": []
+        },
+        {
+          "kind": "necessity",
+          "evidence": "对与 P 不同的中点取方向 (x−1,y)，得到候选轨迹 x(x−1)+3y²=0。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "候选点有 x²/3+y²=x/3<1；用过 P、M 的线实现，代入椭圆后的参数方程关于 0 偶对称。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "endpoint",
+          "evidence": "M=P 由 x=1 实现；这时 H=P。M=O 由 y=0 实现。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "representation",
+          "evidence": "斜率模型下用弦中点条件与正交投影分别求 M、H，将距离化为 t=k² 的非负函数。",
+          "after": [
+            1,
+            4
+          ]
+        },
+        {
+          "kind": "optimality",
+          "evidence": "把 1/8−MH² 的分子因式分解为 (1−t)²(9t+1)，确定全局上界及唯一取等参数 t=1。",
+          "after": [
+            5
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "t=1 对应两条 y=±(x−1)，都是过内点的非退化弦且达到最大值，竖直线无额外等号。",
+          "after": [
+            4,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "readability_pass": true,
+      "mathematical_pass": true,
+      "points_appropriate": true,
+      "conditions_understood": "以几何平均数和对数比参数化 a,b，归一化后两种平均数只依赖 t>0。",
+      "request_understood": "对数平均值全域上界及尖锐权重的两向证明。独立结论为 （1）对所有 0<a<b，L(a,b)>√ab。（2）λ∈[1/3,+∞)。",
+      "independent_solution": "令 g=√ab、t=(1/2)ln(b/a)>0，则 a=ge^(−t)、b=ge^t。定义 S(t)=(e^t−e^(−t))/2、C(t)=(e^t+e^(−t))/2，满足 S′=C、C′=S，且 L/g=S(t)/t、(a+b)/(2g)=C(t)。（1）C(t)>1，因为 2(C(t)−1)=(e^(t/2)−e^(−t/2))²>0。故 (S(t)−t)′>0，且 S(0)−0=0，有 L/g>1。（2）所求等价于 F_λ(t)=t[1+λ(C(t)−1)]−S(t)≥0 对一切 t>0 成立。直接求导得 F_λ(0)=F_λ′(0)=F_λ″(0)=0，且 F_λ‴(t)=(3λ−1)C(t)+λtS(t)。在 λ=1/3 时三阶导数对 t>0 为正，连续三次由单调性和零初值得 F_{1/3}(t)>0。C(t)>1 意味着增大 λ 只会增大 F_λ。若 λ<1/3，则 F_λ‴(0)=3λ−1<0，由连续性，其在某个右邻域为负。连续三次用单调性得到邻域内 F_λ(t)<0，取任一这样的 t 以及 a=e^(−t)、b=e^t 即违背要求。",
+      "moves": [
+        {
+          "kind": "representation",
+          "evidence": "以几何平均数和对数比参数化 a,b，归一化后两种平均数只依赖 t>0。",
+          "after": []
+        },
+        {
+          "kind": "routine_calculus",
+          "evidence": "S′=C，C(t)>1，故 S(t)−t 从 0 严格增加，证（1）。",
+          "after": [
+            1
+          ]
+        },
+        {
+          "kind": "model",
+          "evidence": "把（2）的全称不等式转成 F_λ(t)≥0，并保留 λ 的单调性。",
+          "after": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "routine_calculus",
+          "evidence": "算出 F_λ、F_λ′、F_λ″ 在 0 为零，F_λ‴(t)=(3λ−1)C(t)+λtS(t)。",
+          "after": [
+            3
+          ]
+        },
+        {
+          "kind": "sufficiency",
+          "evidence": "λ=1/3 时三阶导数在 t>0 为正，逐阶传递到 F_λ；较大的 λ 也成立。",
+          "after": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "necessity",
+          "evidence": "λ<1/3 时 F_λ‴(0)<0，连续性与零初值推出小正 t 的 F_λ(t)<0。",
+          "after": [
+            4
+          ]
+        },
+        {
+          "kind": "construct",
+          "evidence": "把小正 t 取为 a=e^(−t)、b=e^t 的参数，确证任何 λ<1/3 都失败。",
+          "after": [
+            1,
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "position_review": {
+    "pdf_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+    "student_review_independent": true,
+    "empirical": false,
+    "questions": [
+      {
+        "number": 1,
+        "moves": [
+          {
+            "kind": "restrict_domain",
+            "evidence": "因式分解后确定开区间 (−1,2)，再与 U 相交得 A={0,1}。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "x−1=±1，在 U 中得到 B={0,2}。",
+            "after": []
+          },
+          {
+            "kind": "compare",
+            "evidence": "从 B 中去掉属于 A 的 0，得到 {2}。",
+            "after": [
+              1,
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 2,
+        "moves": [
+          {
+            "kind": "restrict_domain",
+            "evidence": "分母 1+z 非零。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "解得 z=(−1+i)/2，分母仍非零。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "recall",
+            "evidence": "共轭使虚部变号，实部保留。",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 3,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "将角和问题化成关于正数 t=tan β 的分式方程。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "2+t=−4+8t 得 t=6/7。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "6/7 对应唯一锐角，且分母 −5/7 非零，回代成立。",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 4,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "以中位数 4 为基准转化为绝对差样本 (3,2,0,1,4)。",
+            "after": []
+          },
+          {
+            "kind": "substitute",
+            "evidence": "以转化后样本均值 2 为中心，代入方差公式得 10/5=2。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          3
+        ]
+      },
+      {
+        "number": 5,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "取 A 为起点，利用 BC 中点将两组向量分别写成 2AD 和 (2−3t)AD。",
+            "after": []
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "AP>PD 等价于 t>1−t，连同 P 在线段上得到 t∈(1/2,1]。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "|2−3t|=1/2 给 t=1/2 或 5/6，按严格边界排除 1/2。",
+            "after": [
+              1,
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          2,
+          4
+        ]
+      },
+      {
+        "number": 6,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "以相邻差替代原数列，把二阶递推变为公比为 2 的一阶递推。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "a_5−a_2=7d_2=14 定出 d_2=2。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "代入 d_5=8d_2 和 a_6=a_5+d_5 得 33。",
+            "after": [
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          2,
+          3
+        ]
+      },
+      {
+        "number": 7,
+        "moves": [
+          {
+            "kind": "invariant",
+            "evidence": "把对棱中点 E、F 连起来。C、D 到 A、B 等距，因而 AB 垂直平面 CDE。又 EC=ED，故 EF⊥CD，得到 ME、EF、FN 三个相互正交的方向。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "勾股关系给 EF²=18，并把原距离拆成 MN²=18+(u−3)²+(v−3)²。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "restrict_domain",
+            "evidence": "根据两点的线段端点与 u+2v=8，得到 1≤v≤4，且 (u−3)+2(v−3)=−1。",
+            "after": []
+          },
+          {
+            "kind": "optimality",
+            "evidence": "对方向 (1,2) 用柯西不等式，得与两个中点的平方偏差之和至少为 1/5，并定位等号条件。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "选 u=14/5、v=13/5，两点均在线段内，达到下界 91/5。",
+            "after": [
+              3,
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          5,
+          8
+        ]
+      },
+      {
+        "number": 8,
+        "moves": [
+          {
+            "kind": "routine_calculus",
+            "evidence": "用 f′(p)=3p²−3 写出切线。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "将交点方程因式分解为 (x−p)²(x+2p)=0，读出另一根 −2p。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "p²+(−2p)²=20 给 p=±2，两种情形均有不同交点且斜率同为 9。",
+            "after": [
+              1,
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 9,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "至少需区分甲、乙的位置，样本空间为 16 个等可能有序对。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "分别数出 S=5 有 4 对，D=1 有 6 对，两事件交集有 2 对。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "compare",
+            "evidence": "用 4/16 核 A，用 2/4 核 B，比较 2/4 与 6/16 核 D。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "|x−y|≡x−y≡x+y (mod 2)，验证 C 对所有样本成立。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 10,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用 cos 2x=1−2sin²x，把 f 表为 s=sin x 的二次式。",
+            "after": []
+          },
+          {
+            "kind": "invariant",
+            "evidence": "对称变换 x↦π−x 保持 s 不变，验证 A。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "配方给上界 9/8，s=1/4 在正弦值域内，验证 B。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "counterexample",
+            "evidence": "相差 π 的 π/2、3π/2 给函数值 0、−2，排除 C。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "分别计数 sin x=1 和 sin x=−1/2 在给定半开区间内的 1、2 个解，验证 D。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 11,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "把圆心到公切线的距离写成单位法向量方向的有向距离，绝对值为半径。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "异侧给投影距离差的绝对值为 3，大于圆心距离 2，故所有公切线必须同侧。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "解同侧距离的方程组与单位法向量条件，得到两条候选线 x±√3y+3=0。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "两条候选线互不相同，圆心到各线距离均分别为 1、2，确认都恰为公切线，联立得 T=(−3,0)。",
+            "after": [
+              1,
+              3
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "外点到切点的线段长平方为到圆心的距离平方减半径平方，两个量需相等且为正。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "两式相减得 x=−3/4，代回切线长平方为 y²−15/16，从而 y²>15/16。",
+            "after": [
+              5
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "满足 x=−3/4 且 y²>15/16 的每点在两圆外且等长，故精确刻画 S，B 的全体点断言为假。",
+            "after": [
+              5,
+              6
+            ]
+          },
+          {
+            "kind": "invariant",
+            "evidence": "以 T 的坐标与 S 的纵坐标写出 |XT|²−l²=6。",
+            "after": [
+              4,
+              7
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "距 T 为 √6 只对应 l=0，即圆的交点，严格外部的限制令此边界不可取，排除 C。",
+            "after": [
+              7,
+              8
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "令距离为 √7，得到 y=±√31/4 且严格在 S，切线长为 1，验证 D。",
+            "after": [
+              7,
+              8
+            ]
+          }
+        ],
+        "minutes": [
+          5,
+          8
+        ]
+      },
+      {
+        "number": 12,
+        "moves": [
+          {
+            "kind": "routine_calculus",
+            "evidence": "用乘积求导给出 x=2 处的斜率 3e²。",
+            "after": []
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "切线通过 (2,2e²)，令纵坐标为 0 得横截距 4/3。",
+            "after": [
+              1
+            ]
+          }
+        ],
+        "minutes": [
+          1,
+          2
+        ]
+      },
+      {
+        "number": 13,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "将中间恰有两组转成甲乙位置差为 3，获得六个有序位置对。",
+            "after": []
+          },
+          {
+            "kind": "branch",
+            "evidence": "按甲处在队列端点或内部分类，六种有序位置对共给 2×1+4×2=10 种丙相邻的布局。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "用 6×4! 减去 10×3! 得 84。",
+            "after": [
+              1,
+              2
+            ]
+          }
+        ],
+        "minutes": [
+          3,
+          5
+        ]
+      },
+      {
+        "number": 14,
+        "moves": [
+          {
+            "kind": "necessity",
+            "evidence": "用 t=1 的判别式及 f_1(2)=(2−r_1)(2−r_2)≥0，得到 2≤a≤9/4。",
+            "after": []
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "由 a≤9/4、t≥0 将全区间的判别式下界分解成 (1−t)(4−t)。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "顶点在 [1,3/2]，而 f_t(0)、f_t(2) 非负，实根分别位于端点与顶点之间。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "允许端点根及重根，t=0 的 0、2 和 t=1、a=9/4 的 3/2 都满足。",
+            "after": [
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          4,
+          7
+        ]
+      },
+      {
+        "number": 15,
+        "moves": [
+          {
+            "kind": "routine_algebra",
+            "evidence": "用余弦定理比较系数，推出 A=π/3。",
+            "after": []
+          },
+          {
+            "kind": "representation",
+            "evidence": "用 AM=(AB+AC)/2 的向量关系把中线长化为 b²+c²+bc=28。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "将 28−(7/2)bc 因式分解，用 b≥2c 判非负并定位取等 b=2c。",
+            "after": [
+              2
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "b=4、c=2 和夹角 π/3 确定可行三角形，达到面积界 2√3。",
+            "after": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "minutes": [
+          5,
+          8
+        ]
+      },
+      {
+        "number": 16,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "用 A 点和三条互垂棱建系，写出两个平面向量 u、v 以及 AC 方向 w。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "要求 w 为 u、v 的线性组合，比较 y−x 与 z 仅得 t=3/4。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "t=3/4 时 w 在平面方向中，平面与底面交线 x−y=2。含 A 的 AC 严格在平面外，故线面平行成立。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "解法向量与 u、w 两个点积为 0 的方程，取 n=(−3,3,−8)。",
+            "after": [
+              1,
+              3
+            ]
+          },
+          {
+            "kind": "routine_algebra",
+            "evidence": "算 n 和底面法向量的夹角余弦绝对值为 8/√82。",
+            "after": [
+              4
+            ]
+          }
+        ],
+        "minutes": [
+          7,
+          11
+        ]
+      },
+      {
+        "number": 17,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "三枚标记的位置组合等可能，样本空间大小为 20。",
+            "after": []
+          },
+          {
+            "kind": "model",
+            "evidence": "把首次读到第二枚的停时 J 映射为截断停时 T=min(J,4)。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "数出 T=2、3、4 的组合数为 4、6、10。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "substitute",
+            "evidence": "按分布列计算期望 33/10。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "branch",
+            "evidence": "在前三位至多一枚标记的条件下，后两位有两枚或一枚，组合数分别为 4、6。",
+            "after": [
+              2,
+              3
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "以条件组合的概率加权后两位等可能抽取的命中率 1 和 1/2，得 7/10。",
+            "after": [
+              5
+            ]
+          }
+        ],
+        "minutes": [
+          6,
+          10
+        ]
+      },
+      {
+        "number": 18,
+        "moves": [
+          {
+            "kind": "model",
+            "evidence": "P 是内点，以中点和方向表示弦两端，消去二次项和常数项得到中点必要条件。",
+            "after": []
+          },
+          {
+            "kind": "necessity",
+            "evidence": "对与 P 不同的中点取方向 (x−1,y)，得到候选轨迹 x(x−1)+3y²=0。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "候选点有 x²/3+y²=x/3<1；用过 P、M 的线实现，代入椭圆后的参数方程关于 0 偶对称。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "endpoint",
+            "evidence": "M=P 由 x=1 实现；这时 H=P。M=O 由 y=0 实现。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "representation",
+            "evidence": "斜率模型下用弦中点条件与正交投影分别求 M、H，将距离化为 t=k² 的非负函数。",
+            "after": [
+              1,
+              4
+            ]
+          },
+          {
+            "kind": "optimality",
+            "evidence": "把 1/8−MH² 的分子因式分解为 (1−t)²(9t+1)，确定全局上界及唯一取等参数 t=1。",
+            "after": [
+              5
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "t=1 对应两条 y=±(x−1)，都是过内点的非退化弦且达到最大值，竖直线无额外等号。",
+            "after": [
+              4,
+              5,
+              6
+            ]
+          }
+        ],
+        "minutes": [
+          10,
+          16
+        ]
+      },
+      {
+        "number": 19,
+        "moves": [
+          {
+            "kind": "representation",
+            "evidence": "以几何平均数和对数比参数化 a,b，归一化后两种平均数只依赖 t>0。",
+            "after": []
+          },
+          {
+            "kind": "routine_calculus",
+            "evidence": "S′=C，C(t)>1，故 S(t)−t 从 0 严格增加，证（1）。",
+            "after": [
+              1
+            ]
+          },
+          {
+            "kind": "model",
+            "evidence": "把（2）的全称不等式转成 F_λ(t)≥0，并保留 λ 的单调性。",
+            "after": [
+              1,
+              2
+            ]
+          },
+          {
+            "kind": "routine_calculus",
+            "evidence": "算出 F_λ、F_λ′、F_λ″ 在 0 为零，F_λ‴(t)=(3λ−1)C(t)+λtS(t)。",
+            "after": [
+              3
+            ]
+          },
+          {
+            "kind": "sufficiency",
+            "evidence": "λ=1/3 时三阶导数在 t>0 为正，逐阶传递到 F_λ；较大的 λ 也成立。",
+            "after": [
+              3,
+              4
+            ]
+          },
+          {
+            "kind": "necessity",
+            "evidence": "λ<1/3 时 F_λ‴(0)<0，连续性与零初值推出小正 t 的 F_λ(t)<0。",
+            "after": [
+              4
+            ]
+          },
+          {
+            "kind": "construct",
+            "evidence": "把小正 t 取为 a=e^(−t)、b=e^t 的参数，确证任何 λ<1/3 都失败。",
+            "after": [
+              1,
+              6
+            ]
+          }
+        ],
+        "minutes": [
+          10,
+          17
+        ]
+      }
+    ],
+    "intentional_links": []
+  }
+}

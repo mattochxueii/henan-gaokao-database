@@ -1,0 +1,243 @@
+{
+  "state": {
+    "subject": "physics",
+    "version": "b0177233b2e53cdb2c0a4be457b227bc0c24fde47253defbc2ffd10ce2069974",
+    "pdf_sha256": "ee31c626e90d613df96ee79c88f6ba804c62342b2bf685e0eda6bf32211348aa",
+    "pages": 6,
+    "item_versions": {
+      "1": "2c61c0b3ce1d5fdcabe1905cda7be77d0f925e14968f102c5128f104386df4d1",
+      "2": "dd2ebef00d72024b728330c58be04124d589de9d15f0366c47451dcab563c5da",
+      "3": "e6144cd2ba3830a676cef00f3c8ac100d6a5796db08dee89fd7015e1d3b7abb4",
+      "4": "04837c0396b8a20fc918701aa30facbddbd6e4907b0810279c221e8c2279b349",
+      "5": "d6a0e4877aaa88d5190c9754a5d3c80cfb2d5cb4e4c90610dc7df5f8a619a424",
+      "6": "f32d53305c9e60a465aa070f512f7db9dd203156d096a539281aa7bb12f6829b",
+      "7": "ba65b6089edcb9fb9a60f7e7fa2d24d161e435baa88c7f8592d16445ae6dd41c",
+      "8": "01e47c519114d4a3596601ef33f8f942aad28b19c4ee1598878f9faf73ddff8f",
+      "9": "89c2aa33846442619b4d96a57fc0bfee0d9ba11b6971de045f9c7b044df2e058",
+      "10": "812fae312ffaadb284647981569b4f1b3b5b02e511085a170f54313eb680b26f",
+      "11": "0a7648ea44f3772974874a5e4e1d395c718a72af5e823cd32bf264daad1a1725",
+      "12": "f1887fecf78782dedbe539320cc18a7ca370add089d4f924294a164c55ec1964",
+      "13": "5d461077949fd7c116144061428c3c676d558ef755b5a8e5b382a0c81dc6660a",
+      "14": "5d274e3e5d2f900dadd839a6a4a8fb2da2214365a4aae05510e56e5145c5b5c0",
+      "15": "2241d20ec1652d18995650188e74e07b0c0deeb39f539b76319458ac1675fef6"
+    },
+    "ids": [
+      "orig:physics:hn27-folio:q01",
+      "orig:physics:hn27-folio:q02",
+      "orig:physics:hn27-folio:q03",
+      "orig:physics:hn27-folio:q04",
+      "orig:physics:hn27-folio:q05",
+      "orig:physics:hn27-folio:q06",
+      "orig:physics:hn27-folio:q07",
+      "orig:physics:hn27-folio:q08",
+      "orig:physics:hn27-folio:q09",
+      "orig:physics:hn27-folio:q10",
+      "orig:physics:hn27-folio:q11",
+      "orig:physics:hn27-folio:q12",
+      "orig:physics:hn27-folio:q13",
+      "orig:physics:hn27-folio:q14",
+      "orig:physics:hn27-folio:q15"
+    ],
+    "choice_keys": {
+      "1": "D",
+      "2": "C",
+      "3": "D",
+      "4": "C",
+      "5": "B",
+      "6": "C",
+      "7": "A",
+      "8": "BC",
+      "9": "AC",
+      "10": "ACD"
+    },
+    "rules": [
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "physics.breadth",
+        "subject": "physics",
+        "severity": "major",
+        "check": "标准卷逐查八块，光学独立于机械波",
+        "counterexample": "机械波代替全部光学"
+      },
+      {
+        "id": "physics.device",
+        "subject": "physics",
+        "severity": "major",
+        "check": "同一器具最多占两题",
+        "counterexample": "三题使用弹簧连接物体"
+      },
+      {
+        "id": "physics.constant",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "由标称数据验算可认定的常量，相对误差不超过1%",
+        "counterexample": "光电拟合斜率偏离 h/e 达3%"
+      },
+      {
+        "id": "physics.adjust",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "核查回路可调元件、空间距离及边界",
+        "counterexample": "要求扫电流却只有固定电源与负载"
+      },
+      {
+        "id": "physics.algebra",
+        "subject": "physics",
+        "severity": "major",
+        "check": "寻找物理建模与推理转折",
+        "counterexample": "靠两组未知量联立即可作答"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      },
+      {
+        "id": "physics.weight",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "每卷逐题按主考模块独立计分，计算题兼有力学综合和电磁",
+        "counterexample": "A卷配置力学压轴，B卷配置电磁压轴后只检查两卷合计覆盖"
+      },
+      {
+        "id": "physics.rounding",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "按空位复算两种常用π近似的最终进位",
+        "counterexample": "3.118π保留三位有效数字时分别给出9.79与9.80"
+      }
+    ],
+    "preflight": {
+      "policy_sha256": "a0a87bc077e6d28ac62f9270657f664b0c24659db633b8e8b81cd30721cacf8a",
+      "issues": [
+        {
+          "number": 0,
+          "rule": "coverage",
+          "evidence": "未在题干或设问中检出：磁场与洛伦兹力"
+        }
+      ],
+      "warnings": [],
+      "coverage": {
+        "力学": [
+          7,
+          11,
+          15
+        ],
+        "天体与引力": [
+          3
+        ],
+        "静电与电路": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "磁场与洛伦兹力": [],
+        "电磁感应与交变": [
+          5
+        ],
+        "热学": [
+          8
+        ],
+        "原子物理": [
+          1
+        ],
+        "光学": [
+          2
+        ]
+      },
+      "choice_figures": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "nonchoice_figures": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "wrong_options": 26,
+      "absolute_wrong_options": 0,
+      "abstract_mentions": 0,
+      "absolute_wrong_fraction": 0.0,
+      "abstract_per_question": 0.0,
+      "passed": false,
+      "corridor": {
+        "groups": {
+          "mechanics": 37,
+          "electromagnetism": 49,
+          "other": 14
+        },
+        "modules": {
+          "atomic": 4,
+          "optics_waves": 4,
+          "astronomy": 4,
+          "electrostatics_circuits": 23,
+          "induction_ac": 4,
+          "magnetic_force": 22,
+          "mechanics": 33,
+          "thermodynamics": 6
+        },
+        "question_groups": {
+          "1": "other",
+          "2": "other",
+          "3": "mechanics",
+          "4": "electromagnetism",
+          "5": "electromagnetism",
+          "6": "electromagnetism",
+          "7": "mechanics",
+          "8": "other",
+          "9": "electromagnetism",
+          "10": "mechanics",
+          "11": "mechanics",
+          "12": "electromagnetism",
+          "13": "electromagnetism",
+          "14": "electromagnetism",
+          "15": "mechanics"
+        }
+      },
+      "exam_policy_sha256": "fde9ea395907066f6060837b785b2574a7f283b2ed7eb7f5d9580e5a510c7be3"
+    },
+    "reference_sha256": "b71f7f96438d4d95cf04511c082becbb331132371ec6bf81c96d1f98b567b077",
+    "protocol": "three-readers-v2",
+    "repair_slots": [
+      9
+    ]
+  },
+  "reports": []
+}

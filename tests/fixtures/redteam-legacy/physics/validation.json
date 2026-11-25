@@ -1,0 +1,139 @@
+{
+  "questions": 15,
+  "points": 100,
+  "minutes": 75,
+  "layout": "practice",
+  "paper_pages": 7,
+  "solutions_pages": 2,
+  "word_inline_shapes": {
+    "student": 122,
+    "answers": 131
+  },
+  "figures": {
+    "choice": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "nonchoice": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "figure_collisions": 0,
+  "blanks": {
+    "11": 4,
+    "12": 6
+  },
+  "qa_issues": 0,
+  "qa_warnings": 0,
+  "corridor": {
+    "groups": {
+      "mechanics": 37,
+      "electromagnetism": 49,
+      "other": 14
+    },
+    "modules": {
+      "atomic": 4,
+      "optics_waves": 4,
+      "astronomy": 4,
+      "electrostatics_circuits": 23,
+      "induction_ac": 4,
+      "magnetic_force": 22,
+      "mechanics": 33,
+      "thermodynamics": 6
+    },
+    "question_groups": {
+      "1": "other",
+      "2": "other",
+      "3": "mechanics",
+      "4": "electromagnetism",
+      "5": "electromagnetism",
+      "6": "electromagnetism",
+      "7": "mechanics",
+      "8": "other",
+      "9": "electromagnetism",
+      "10": "mechanics",
+      "11": "mechanics",
+      "12": "electromagnetism",
+      "13": "electromagnetism",
+      "14": "electromagnetism",
+      "15": "mechanics"
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "final_score": 94,
+      "fatal_count": 0,
+      "status": "returned",
+      "rewrite": [
+        9
+      ],
+      "pdf_sha256": "ee31c626e90d613df96ee79c88f6ba804c62342b2bf685e0eda6bf32211348aa"
+    },
+    {
+      "round": 2,
+      "final_score": 0,
+      "fatal_count": 5,
+      "status": "returned",
+      "rewrite": [
+        2,
+        3,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15
+      ],
+      "pdf_sha256": "b0940a465e4f0e6fdba177e7a480a49888b5a591fe320a6f30b367c6f17db7ae"
+    },
+    {
+      "round": 3,
+      "final_score": 100,
+      "fatal_count": 0,
+      "status": "LOCAL_QA_PASSED",
+      "rewrite": [],
+      "pdf_sha256": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade"
+    }
+  ],
+  "final_board_status": "LOCAL_QA_PASSED",
+  "final_board_score": 100,
+  "independently_solved": 15,
+  "program_operator_count": 0,
+  "answer_areas": [
+    {
+      "number": 13,
+      "page": 5,
+      "height_cm": 7.0,
+      "continuation": false
+    },
+    {
+      "number": 14,
+      "page": 6,
+      "height_cm": 7.0,
+      "continuation": false
+    },
+    {
+      "number": 15,
+      "page": 7,
+      "height_cm": 10.4,
+      "continuation": false
+    }
+  ],
+  "artifacts": {
+    "paper.pdf": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade",
+    "solutions.pdf": "c7df50360ee158e69dd687102a7bdc30a63d24e14b700fcf1e09e182fa04805a",
+    "paper.docx": "50cff6239ceea8923bde974f4acf702094a65b8b6f8157f2b3d36352ae4d90bb",
+    "solutions.docx": "cf50dff1d91da8c5fa72e774bc60e369d1232fbf587e2cd0569c090f0525a0d0"
+  }
+}

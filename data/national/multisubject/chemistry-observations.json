@@ -1,0 +1,41 @@
+{
+  "subject": "chemistry",
+  "region": "河南",
+  "series_id": "cn-ha-chemistry-selective",
+  "targets": [
+    "chemistry:14-single-choice",
+    "chemistry:four-constructed"
+  ],
+  "definitions": {
+    "chemistry:14-single-choice": "候选卷面题型标题和题号同时支持14道单选",
+    "chemistry:four-constructed": "候选卷面编号与题头支持4道必答非选择题"
+  },
+  "observations": [
+    {
+      "year": 2025,
+      "paper_id": "2025-cn-ha-chemistry-selective",
+      "available_on": "2025-11-18",
+      "date_basis": "研究观察按同年11月18日保守纳入；当地考试结束后",
+      "review_state": "independently_coded",
+      "source_url": "https://jhgk.cn/upload/file/20250616/1750064212681065853.pdf",
+      "version_sha256": "16042bbf85d8dc97b1e15bf8135b598880f8be9161b1981a97e2208974b7d581",
+      "values": {
+        "chemistry:14-single-choice": 1,
+        "chemistry:four-constructed": 1
+      }
+    },
+    {
+      "year": 2026,
+      "paper_id": "2026-cn-ha-chemistry-selective",
+      "available_on": "2026-11-18",
+      "date_basis": "研究观察按同年11月18日保守纳入；当地考试结束后",
+      "review_state": "independently_coded",
+      "source_url": "https://www.renrendoc.com/paper/536700548.html",
+      "version_sha256": "1bcb734b2a54acd35ce436ccd6b7e82f6341de829eca06f67b771cf042d10203",
+      "values": {
+        "chemistry:14-single-choice": 1,
+        "chemistry:four-constructed": 1
+      }
+    }
+  ]
+}

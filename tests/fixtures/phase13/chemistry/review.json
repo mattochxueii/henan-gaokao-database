@@ -1,0 +1,111 @@
+{
+  "reviewer": "independent-agent-biology",
+  "input_scope": "student_packet_only",
+  "items": [
+    {
+      "id": "orig:chemistry:p13:01",
+      "answer": {
+        "reactant_coefficients": [
+          2,
+          5,
+          16
+        ],
+        "product_coefficients": [
+          2,
+          10,
+          8
+        ],
+        "electrons_transferred": 10
+      },
+      "reasoning": "MnO₄⁻ 中锰由 +7 价变为 +2 价，每 mol 高锰酸根得 5 mol 电子。草酸根中的两个碳各由 +3 价升为 +4 价，每 mol 草酸根失 2 mol 电子。按最小公倍数 10 对齐电子，取 2 MnO₄⁻ 与 5 C₂O₄²⁻，再配 H⁺ 与 H₂O。净离子式为 2 MnO₄⁻ + 5 C₂O₄²⁻ + 16 H⁺ → 2 Mn²⁺ + 10 CO₂ + 8 H₂O。两侧 Mn、C、O、H 和电荷相等，两侧净电荷均为 +4。题设消耗 2 mol MnO₄⁻，转移电子 2×5 = 10 mol。",
+      "science_review": "酸性条件下高锰酸钾氧化草酸根有分析化学实验依据。NIST 的草酸钠标定研究使用稀硫酸，并在部分操作中加热至 55–60 ℃。题设给出理想净反应物与生成物。若评价真实工艺的转化率、副反应或最佳温度，尚需额外信息。",
+      "approved": true,
+      "original_answer": {
+        "反应物系数": [
+          2,
+          5,
+          16
+        ],
+        "生成物系数": [
+          2,
+          10,
+          8
+        ],
+        "电子转移物质的量": "10 mol"
+      }
+    },
+    {
+      "id": "orig:chemistry:p13:02",
+      "answer": {
+        "excess_ion": "OH⁻",
+        "excess_mol_l": 0.01,
+        "pH": 12
+      },
+      "reasoning": "强酸强碱按 H⁺ + OH⁻ → H₂O 以 1∶1 反应。H⁺ 为 0.02000×0.0800 = 0.00160 mol，OH⁻ 为 0.03000×0.0700 = 0.00210 mol。OH⁻ 剩余 0.00050 mol，总体积 0.05000 L，浓度为 0.010 mol/L。25 ℃稀溶液模型下 pOH = −lg(0.010) = 2.00，pH = 14.00 − 2.00 = 12.00。",
+      "science_review": "HCl 和 NaOH 的稀水溶液可按完全电离处理。题面指定 25 ℃、体积可加及稀溶液模型，支持此浓度近似；实际精密 pH 测量还受离子活度、温度和电极校准影响。",
+      "approved": true,
+      "original_answer": {
+        "过量离子": "OH⁻",
+        "过量离子浓度": "0.010 mol/L",
+        "pH": "12.00"
+      }
+    },
+    {
+      "id": "orig:chemistry:p13:03",
+      "answer": {
+        "inference": "支持含有二氧化碳，不能认定气体纯度",
+        "reactant_coefficients": [
+          1,
+          2,
+          1
+        ],
+        "product_coefficients": [
+          1,
+          1
+        ]
+      },
+      "reasoning": "乙为空白对照，未出现浑浊。丙用 NaHCO₃ 与稀盐酸产生 CO₂，是已知阳性对照，起初出现浑浊，说明该观察方法能响应 CO₂。题设去除酸雾和悬浮颗粒并排除其他致浑浊物后，甲出现同样现象，支持其中有 CO₂。该现象没有测定 CO₂ 体积分数，也不能识别不致浑浊的共存气体，因此不能确定纯度。少量 CO₂ 被碱性溶液吸收形成 CO₃²⁻，再与 Ca²⁺ 生成沉淀，合并得净离子方程式 Ca²⁺ + 2 OH⁻ + CO₂ → CaCO₃↓ + H₂O。",
+      "science_review": "石灰水初始浑浊符合碳酸钙沉淀实验；过量 CO₂ 可能使沉淀重新溶解，题面限定起始观测合理。对实际复现实验，应更换或清洗并吹扫每轮使用的装置，保持载气背景一致，避免残余 CO₂ 和串样。判断适用范围是题目给定已排除的干扰。",
+      "approved": true,
+      "original_answer": {
+        "是否有二氧化碳证据": "在所给排除条件下，甲的气体含 CO₂ 获得阳性支持",
+        "能否确定纯度": "不能",
+        "净离子方程式": "Ca²⁺ + 2 OH⁻ + CO₂ → CaCO₃↓ + H₂O"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "item": "orig:chemistry:p13:01",
+      "title": "Standardization of permanganate solutions with sodium oxalate",
+      "authority": "NIST Research Library",
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/15/jresv15n5p493_a1b.pdf"
+    },
+    {
+      "item": "orig:chemistry:p13:02",
+      "title": "Chemistry 2e, 14.7 Acid-Base Titrations",
+      "authority": "OpenStax / Rice University",
+      "url": "https://openstax.org/books/chemistry-2e/pages/14-7-acid-base-titrations"
+    },
+    {
+      "item": "orig:chemistry:p13:03",
+      "title": "Limewater as Indicator of Carbon Dioxide Gas",
+      "authority": "Indiana University Department of Chemistry",
+      "url": "https://www.chem.indiana.edu/faculty-research/faculty-resources/chemistry-demos/demo/limewater-as-indicator-of-carbon-dioxide-gas/"
+    },
+    {
+      "item": "orig:chemistry:p13:03",
+      "title": "Aqueous equilibrium and precipitation reactions between carbon dioxide and limewater",
+      "authority": "University of Wisconsin–Madison Demonstration Lab",
+      "url": "https://demolab.chem.wisc.edu/aqueous-equilibrium-and-precipitation-reactions-reactions-between-carbon-dioxide-and-limewater/"
+    },
+    {
+      "item": "orig:chemistry:p13:03",
+      "title": "Dry Ice and Limewater lecture demonstration",
+      "authority": "North Carolina State University Department of Chemistry",
+      "url": "https://projects.cos.ncsu.edu/chemistrydemos/Equilibrium/Dry%20Ice%20and%20Limewater.pdf"
+    }
+  ],
+  "paper_version": "207c445416eceb17562ebbfe8de8d965408235c854371b157f5943c0d78e9c43",
+  "source_review_sha256": "2ae177e76e0369fe870a60bb9ca6d00438612af90393a24a5aec0cbd5f7124a0"
+}

@@ -1,0 +1,109 @@
+{
+  "subject": "math",
+  "questions": 19,
+  "points": 150,
+  "minutes": 120,
+  "layout_mode": "practice",
+  "reference_sha256": "1f82a2a470c49ee29c19c580a406c27f2e44e01dbdb6ca99b37e2634a8e94bb1",
+  "dna_sha256": "63053c23d62014937d0c0e5be490e1b4725ae2ab26bba5bddd9a764086b7fc59",
+  "context_sha256": "b635a44af7f3d654c01e97f83d85d6e423a816655dac9b7d1b1b5e09a08f5e25",
+  "typical_checks": {
+    "modules": {
+      "集合与逻辑": [
+        1,
+        14
+      ],
+      "复数": [
+        2
+      ],
+      "三角函数与解三角形": [
+        3,
+        10,
+        15
+      ],
+      "统计与概率": [
+        4,
+        9,
+        17
+      ],
+      "平面向量": [
+        5
+      ],
+      "数列": [
+        6
+      ],
+      "立体几何": [
+        7,
+        16
+      ],
+      "函数与导数": [
+        8,
+        12,
+        19
+      ],
+      "解析几何": [
+        11,
+        18
+      ],
+      "排列组合与计数": [
+        13
+      ]
+    },
+    "figures": {
+      "7": "wireframe",
+      "16": "wireframe",
+      "18": "coordinate"
+    },
+    "whole_program_spec_items": 14,
+    "argument_items": [
+      14,
+      15,
+      16,
+      18,
+      19
+    ],
+    "multi_choice_rule": "全部选对的得6分，部分选对的得部分分，有选错的得0分。"
+  },
+  "student_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+  "artifacts": {
+    "paper": 5,
+    "solutions": 4
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "status": "returned",
+      "fatal_count": 1,
+      "charged_points": 20,
+      "rewrite": [
+        7,
+        10,
+        11,
+        16,
+        18
+      ]
+    },
+    {
+      "round": 2,
+      "status": "LOCAL_QA_PASSED",
+      "fatal_count": 0,
+      "charged_points": 14,
+      "rewrite": [
+        7,
+        16,
+        18
+      ]
+    },
+    {
+      "round": 3,
+      "status": "LOCAL_QA_PASSED",
+      "fatal_count": 0,
+      "charged_points": 0,
+      "rewrite": []
+    }
+  ],
+  "local_qa_status": "LOCAL_QA_PASSED",
+  "human_teacher_reviews": 0,
+  "student_trials": 0,
+  "position_metadata_correction": "首道填空归为基础题位。重跑生成核对题面和验算结果相同，最终盲审 PDF 完全相同。"
+}

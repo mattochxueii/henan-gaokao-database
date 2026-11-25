@@ -1,0 +1,29 @@
+{
+  "region_id": "河南",
+  "year": 2027,
+  "subject": "math",
+  "exam_system_id": "new-3+1+2",
+  "curriculum_id": "math-2017-2020",
+  "primary_series": "cn-new-gaokao-1",
+  "series_status": "沿用已核2025/2026实际用卷作为2027模拟设定，非2027详细卷型公告",
+  "structure_source": "analysis/rules.json",
+  "immutable_current_structure": true,
+  "reference_tiers": {
+    "current_used_series": 100,
+    "same_series_history": 80,
+    "comparable_new_series": 55,
+    "legacy_or_specialty": 25
+  },
+  "module_coverage_weights": {
+    "集合与复数": 1,
+    "三角函数与解三角形": 2,
+    "平面向量": 1,
+    "立体几何": 2,
+    "解析几何": 2,
+    "概率统计": 2,
+    "数列": 2,
+    "函数与导数": 3
+  },
+  "weight_basis": "目标课程模块覆盖的显式模拟设定，非题目数量投票",
+  "per_paper_reference_cap": 2
+}

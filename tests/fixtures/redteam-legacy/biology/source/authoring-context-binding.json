@@ -1,0 +1,508 @@
+{
+  "sha256": "6e3b326fdd683931a7f2a32fb145238d179255f8b34737cf322c04f44eb4c8c8",
+  "dna_sha256": "26ba58f22d010f81407db9bc45fe3b8c10b09f04827c959859ce650691c9ac0a",
+  "subject": "biology",
+  "year": 2027,
+  "context_limit": 100,
+  "basis": "2025、2026 河南同科正式选择性考试，data/dna/biology.json",
+  "same_position_references": {
+    "1": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q001",
+        "version_sha256": "93dc52f62f147916257c8fbd209d3569daf8730b14cf6b35f59f8cad186035f8",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "细胞结构",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q001",
+        "version_sha256": "d0e69a97907160946c254897f398cfcc5a79654e4709d3244e1805784aad26cb",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "分子与营养",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "2": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q002",
+        "version_sha256": "66613e6de7e8836f9dac489bce375410cd4b9cc8c6f151e11002c74afe385fcd",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "遗传物质",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q002",
+        "version_sha256": "0b358bee4e584c31269182919e5d33be060f70d3646701837bdd28aaa001dc14",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "细胞工程",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "3": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q003",
+        "version_sha256": "36cba918e5b4557a6f69a1ff8ea8707af9c850867c8e45a64c7f423e98245b8c",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "跨膜运输",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q003",
+        "version_sha256": "1022cc5187a475e1c025c41cbfd4f9eab87a4dbb83600ab2d1980e0a1e561f7d",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "跨膜运输",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "4": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q004",
+        "version_sha256": "1decdf978a5ea8d0a1daf0e7df9d02c25a81f2f1c7b4e8d264f84bb14186393b",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "细胞呼吸",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q004",
+        "version_sha256": "2eeba3176b341c9deddae6ab24a4935bae2bcc9151d73502983e9e4f2f7c229f",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "细胞呼吸",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "5": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q005",
+        "version_sha256": "5c8a93021652ec3a353948382031f71bbc44492cb10be06d1ca4378eb95d6f3d",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "细胞分化",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q005",
+        "version_sha256": "f375468231ed183daafe2abd96d656cadcd0cc1a58914aef8667dcdd77bebe6d",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "细胞周期",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "6": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q006",
+        "version_sha256": "5e03c73f7263fac06583900eeed84c5baeaebb99778ef9c715a1195c8b7744dd",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "发酵",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q006",
+        "version_sha256": "bee38a9c36db1d3280680e46010b10ac778d8e656b16e4760d5ec23ec3e6daa5",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "DNA复制",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "7": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q007",
+        "version_sha256": "9914f3bbecd9205d1f3aa0c82e1fc295e49e8251f884e97e68051c70e6ad2bef",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "进化",
+        "features": [
+          "进化图与化石相对年代"
+        ],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q007",
+        "version_sha256": "b251c3094652c2c8d0431f0f4c328d8fa79cc2e416ccd3e9ffe1fe0480859365",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "进化",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "8": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q008",
+        "version_sha256": "7aedce7ad9e436ac6aa024e77ad40eb28a4f7af7d01c102ab828ded4d5a022a8",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "免疫",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q008",
+        "version_sha256": "35c60bc0ee5cf5c9037651256f065559c5e1d205f6e536cf06f0d65bfebf88d7",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "稳态",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "9": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q009",
+        "version_sha256": "19566b69e40a73ff9a4d6adc980190200fc40fd804637472a48d2a7f2a1d93fb",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "稳态",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q009",
+        "version_sha256": "a04abf715209b3297bd8e5a26d2b5e69bdde25d75ec3f030753364bda51eff33",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "神经调节",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "10": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q010",
+        "version_sha256": "bc3f557032f38f25afbca7ead93076a5d3094d0f2e2cfad2a81c440ef4dda72d",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "植物调节",
+        "features": [
+          "对照光条件与激素效应"
+        ],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q010",
+        "version_sha256": "f06a135fc6d57d9a0a3e19234167ce3f09a0b490d3d61949a73791bc0c40acb2",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "植物调节",
+        "features": [
+          "基因型与处理交互"
+        ],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "11": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q011",
+        "version_sha256": "e2108a31431d6e3cc5838a1ed907a3f8bce119090a7b04d31c0d533efbe18897",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "群落",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q011",
+        "version_sha256": "d708bde3a53a6b711d7640ef1b8e26aa8b2d2b441af4a465f4445409c14feac1",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "群落",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "12": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q012",
+        "version_sha256": "9954823dfaf7c025d0f70239df35af2ed6db4633e33beedf35e51a76f62f8009",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "种群",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q012",
+        "version_sha256": "216a69fc32611be3d9bed358365b0c8b60d27a9e0070f732370a70d36d6aad70",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "生态",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "13": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q013",
+        "version_sha256": "f3ccd60592dfd9ab6c70fc37b5f378a0d3356cc6aed2efb96465f6b380c66aef",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "遗传",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q013",
+        "version_sha256": "a9717ec50ffbc530de7cce2a80f2386b4441c25611689834d3330fa85c2d0202",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "蛋白质工程",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "14": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q014",
+        "version_sha256": "a4d2f230c2098ef36739ea508afc1457ce88277fe3f00fc4965884c027e5c8a9",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "基因表达",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q014",
+        "version_sha256": "c712b35deac340d5d7cf25c4781e2e43d3c7e09d49ff75d26ad96ee3a927a1b2",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "细胞工程",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "15": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q015",
+        "version_sha256": "01834606d0a1063ff5c8a2301349ba7175e1b8e8277cd8912da1b2df20425165",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "遗传",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q015",
+        "version_sha256": "b48e659018f727ad64f719750f8a4a473b154139ceffb87c3cc77c1614489536",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "遗传",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "16": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q016",
+        "version_sha256": "7e4d73bc66b9664a0fa46f3e4515043342daa857ada94f2f580eccb4a231b3cc",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "实验设计",
+        "features": [
+          "减法原理",
+          "证据限度"
+        ],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "limited_position_evidence"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q016",
+        "version_sha256": "533476cf2072f4f566aa66b10916e22f647d402e26aa29cf4d8ff86cac2c95e1",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "微生物",
+        "features": [],
+        "kind": "single_choice",
+        "points": 3,
+        "scope": "practice_text"
+      }
+    },
+    "17": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q017",
+        "version_sha256": "21a79f54cf72e45165a973b898e23f33ce821a35394d1309bcfd13e4825c0cc2",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "光合作用",
+        "features": [
+          "变量控制",
+          "图中光补偿点"
+        ],
+        "kind": "constructed_response",
+        "points": 10,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q017",
+        "version_sha256": "6250aeb5878d0be87529aaa52e9b8a77e31c64becd550c4c94d85428f25f8d8c",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "光合作用",
+        "features": [
+          "数据表",
+          "物质代谢和能量双维解释"
+        ],
+        "kind": "constructed_response",
+        "points": null,
+        "scope": "limited_position_evidence"
+      }
+    },
+    "18": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q018",
+        "version_sha256": "91078249cbd600f35a2ac15f1007c330b64639976ff0eb67157579e7d5f5ce12",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "神经调节",
+        "features": [
+          "膜电位图",
+          "设计验证实验"
+        ],
+        "kind": "constructed_response",
+        "points": 11,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q018",
+        "version_sha256": "ecefbe34d81355f98e1b93f048ecca193c5b06074351389740264960a29cb9d0",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "稳态",
+        "features": [
+          "反馈机制",
+          "对照与因果"
+        ],
+        "kind": "constructed_response",
+        "points": null,
+        "scope": "limited_position_evidence"
+      }
+    },
+    "19": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q019",
+        "version_sha256": "95cba4b1b3edd6a3372dccb27a0a80cf6da0d302b953dfefbe77ce5e79d0278a",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "生态",
+        "features": [
+          "种群图与生态措施"
+        ],
+        "kind": "constructed_response",
+        "points": 10,
+        "scope": "practice_text"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q019",
+        "version_sha256": "4c562c989c254a6fe90bae7bfe7dfc2b8714f523076a8a6cf670dbaeb271ba39",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "生态",
+        "features": [
+          "情境生态位",
+          "生态工程"
+        ],
+        "kind": "constructed_response",
+        "points": null,
+        "scope": "limited_position_evidence"
+      }
+    },
+    "20": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q020",
+        "version_sha256": "67ba0edbb974c029ca7bf622e6f3a6d2a8c97d1e97cbbac71e0640f9ceea8454",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "遗传",
+        "features": [
+          "表型",
+          "PCR带型"
+        ],
+        "kind": "constructed_response",
+        "points": 10,
+        "scope": "limited_position_evidence"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q020",
+        "version_sha256": "fe6c31c7131dbd272002b96b780120e5f62a93f19453756edf85488648c29c9e",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "遗传",
+        "features": [
+          "表型比例与基因型"
+        ],
+        "kind": "constructed_response",
+        "points": null,
+        "scope": "limited_position_evidence"
+      }
+    },
+    "21": {
+      "2025": {
+        "id": "2025-cn-ha-biology-selective:q021",
+        "version_sha256": "a3324248a595ed30e49fd9fdc7c1658c6500bc9633bc98ab90896d9871c6e0ce",
+        "source_url": "https://kaosj.com/papers/2025/07/2025-gaokao-biology-henan-paper/",
+        "topic": "基因工程",
+        "features": [
+          "遗传工程材料读图",
+          "保守度与功能折中"
+        ],
+        "kind": "constructed_response",
+        "points": 11,
+        "scope": "limited_position_evidence"
+      },
+      "2026": {
+        "id": "2026-cn-ha-biology-selective:q021",
+        "version_sha256": "51c88ef41195eb5956bf7f098fd1289029b66e91836a7985104472353882dd6f",
+        "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-biology-henan-paper/",
+        "topic": "基因工程",
+        "features": [
+          "载体元件与带型"
+        ],
+        "kind": "constructed_response",
+        "points": null,
+        "scope": "limited_position_evidence"
+      }
+    }
+  }
+}

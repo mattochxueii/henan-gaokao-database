@@ -1,0 +1,187 @@
+{
+  "subject": "chemistry",
+  "title": "河南化学原创专题练习 · HN15-C40-v1",
+  "minutes": 35,
+  "questions": [
+    {
+      "id": "orig:chemistry:p15:01",
+      "points": 3,
+      "topic": "电化学",
+      "stem": "锌片浸在硫酸锌溶液中，铜片浸在硫酸铜溶液中，两侧以硝酸钾盐桥相连，两金属片通过导线连接。按高中原电池模型，下列有关自发放电的说法正确的是",
+      "options": {
+        "A": "导线中电子由铜片流向锌片",
+        "B": "每析出 1 mol 铜，外电路转移 2 mol 电子",
+        "C": "盐桥中阴离子向铜半电池迁移",
+        "D": "锌片发生还原，且其质量增加"
+      },
+      "parts": [],
+      "problem": {
+        "op": "galvanic_choice",
+        "anode": "Zn",
+        "cathode": "Cu",
+        "anolyte": "ZnSO4",
+        "catholyte": "CuSO4",
+        "bridge": "KNO3",
+        "options": {
+          "A": "electrons_cu_to_zn",
+          "B": "two_e_per_cu",
+          "C": "anions_to_copper",
+          "D": "anode_mass_increases"
+        }
+      },
+      "proposed_answer": "B"
+    },
+    {
+      "id": "orig:chemistry:p15:02",
+      "points": 3,
+      "topic": "物质结构与性质",
+      "stem": "乙醇和二甲醚的结构简式分别为 CH₃CH₂OH 和 CH₃OCH₃。在 101 kPa 下比较其沸点，下列解释合理的是",
+      "options": {
+        "A": "两者分子式不同，故乙醇沸点较高",
+        "B": "二甲醚中的碳氧键有极性，故二甲醚沸点较高",
+        "C": "乙醇分子间可形成 O—H···O 氢键，故乙醇沸点较高",
+        "D": "二甲醚的氧原子不能作为氢键受体"
+      },
+      "parts": [],
+      "problem": {
+        "op": "structure_choice",
+        "pair": [
+          "ethanol",
+          "dimethyl_ether"
+        ],
+        "same_pressure": true,
+        "options": {
+          "A": "different_formula",
+          "B": "ether_higher_bond_polarity",
+          "C": "ethanol_oh_hydrogen_bond",
+          "D": "ether_cannot_accept_h_bond"
+        }
+      },
+      "proposed_answer": "C"
+    },
+    {
+      "id": "orig:chemistry:p15:03",
+      "points": 11,
+      "topic": "化学平衡",
+      "stem": "在恒温、密闭、忽略气体非理想性及其他反应的理论模型中，只有 N₂O₄(g) 与 NO₂(g) 参与可逆反应：\\(\\mathrm{N_2O_4(g)}\\rightleftharpoons 2\\mathrm{NO_2(g)}\\)。初始平衡时，两者浓度依次为 0.160 mol/L 和 0.280 mol/L。将容器体积瞬间增大至原来的 2 倍，此后保持容积和温度不变。按浓度形式计算平衡常数及反应商。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "写出平衡常数表达式，并计算该温度下的 Kc。"
+        },
+        {
+          "label": "（2）",
+          "text": "求体积刚改变时的反应商，判断接下来平衡移动的方向并说明理由。"
+        },
+        {
+          "label": "（3）",
+          "text": "计算新平衡时两种气体的浓度，并交代对所取解的判断。"
+        }
+      ],
+      "problem": {
+        "op": "dimer_equilibrium",
+        "reaction": "N2O4(g)<=>2NO2(g)",
+        "closed": true,
+        "isothermal": true,
+        "ideal_gas": true,
+        "only_reaction": true,
+        "unit": "mol/L",
+        "dimer": ".160",
+        "monomer": ".280",
+        "volume_ratio": 2
+      },
+      "proposed_answer": {
+        "Kc": "49/100",
+        "Q_after": "49/200",
+        "direction": "forward",
+        "dimer_final": "1/16",
+        "monomer_final": "7/40"
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:04",
+      "points": 11,
+      "topic": "实验与证据",
+      "stem": "某饮料可能同时含有维生素 C 和其他可与碘反应的还原性物质。设计一项纸面滴定研究，用同一批 0.0100 mol/L 碘标准液，比较空白、取样 10.00 mL 未加标样及同体积加标样。三组总稀释体积及其他测量条件相同。给定维生素 C 与碘的物质的量之比为 1∶1。空白不含饮料或维生素 C。表中报告的是未作空白校正的模拟读数。计算时，从未加标样和加标样的用量中分别减去空白用量。加标的维生素 C 为 3.00×10⁻⁵ mol。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求未加标饮料中以维生素 C 计的碘消耗当量浓度。"
+        },
+        {
+          "label": "（2）",
+          "text": "求维生素 C 的加标回收率，并给出计算依据。"
+        },
+        {
+          "label": "（3）",
+          "text": "能否把第（1）问的结果直接作为维生素 C 的真实浓度？说明理由，并提出一种能检验干扰的研究设计。"
+        }
+      ],
+      "problem": {
+        "op": "iodine_evidence",
+        "iodine_mol_l": "0.0100",
+        "sample_ml": "10.00",
+        "blank_ml": ".20",
+        "sample_read_ml": "6.20",
+        "spiked_read_ml": "9.20",
+        "spike_mol": ".0000300",
+        "same_conditions": true,
+        "possible_co_reductants": true,
+        "stoichiometry": "1:1"
+      },
+      "proposed_answer": {
+        "iodine_equivalent_mol_L": "3/500",
+        "spike_recovery_percent": 100,
+        "native_vitamin_c_identified": false
+      },
+      "figure": {
+        "path": "titration.png",
+        "sha256": "2aeefd0e417324eebe4a0b4db56c0f58e2c245098c160d68ae5488a7465248d5"
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:05",
+      "points": 12,
+      "topic": "有机化学",
+      "stem": "某酯 X 是下列三种物质之一：乙酸乙酯、丙酸甲酯、甲酸正丙酯。0.0200 mol 纯 X 完全碱性水解，所得醇与羧酸盐均只有一种。将所得醇分离后完全燃烧，生成 0.0400 mol CO₂。水解时投料含 0.0250 mol NaOH，除 X 的水解外无其他反应。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "确定 X 的结构简式和分子式，并说明如何利用燃烧数据排除另外两种候选。"
+        },
+        {
+          "label": "（2）",
+          "text": "写出 X 与 NaOH 的水解反应式，标明有机产物。"
+        },
+        {
+          "label": "（3）",
+          "text": "计算水解后剩余 NaOH 的物质的量。"
+        }
+      ],
+      "problem": {
+        "op": "ester_inference",
+        "candidates": [
+          "ethyl_acetate",
+          "methyl_propionate",
+          "propyl_formate"
+        ],
+        "complete_saponification": true,
+        "only_reaction": true,
+        "pure_ester": true,
+        "complete_alcohol_combustion": true,
+        "ester_mol": ".0200",
+        "carbon_dioxide_mol": ".0400",
+        "hydroxide_mol": ".0250"
+      },
+      "proposed_answer": {
+        "ester": "ethyl_acetate",
+        "formula": "C4H8O2",
+        "alcohol": "ethanol",
+        "hydroxide_remaining_mol": "1/200"
+      }
+    }
+  ]
+}

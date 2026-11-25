@@ -1,0 +1,1096 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "physics",
+    "region": "河南",
+    "year": 2027,
+    "mode": "standard",
+    "mapping": {
+      "subject": "physics",
+      "year": 2027,
+      "paper_id": "2027-cn-ha-physics-selective",
+      "series_id": "cn-ha-physics-selective",
+      "curriculum_id": "physics-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "first_choice",
+      "authoring_body": "河南省统一命题",
+      "status": "system_announced",
+      "points": null,
+      "minutes": null,
+      "evidence": [
+        "hn-2027",
+        "hn-reform"
+      ],
+      "structure": null
+    },
+    "curriculum_topics": [
+      "力与运动",
+      "牛顿运动定律",
+      "功和能",
+      "动量与能量",
+      "直流电路",
+      "电场",
+      "磁场",
+      "电磁感应",
+      "机械振动与波",
+      "热学",
+      "光学",
+      "物理实验"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-physics-selective:q004",
+        "topic": "交变电流与理想变压器",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "6257dcbde2f9ce9ff468d36ff2ce36798865ae6471e7dacfb5463233fcb56291",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-physics-selective:q007",
+        "topic": "平抛与图形投影",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "d9d38c382b1858b169998a3cbeaac96047356bcb6cb5833d5c64ba154c5907a6",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      },
+      {
+        "id": "2026-cn-ha-physics-selective:q011",
+        "topic": "游标与导轨实验",
+        "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "9d6f149d05721060fcd9698a02f769b2ab36b76024f9cabc0600c463a9b1b62b",
+        "usable_for_practice": null,
+        "strict_official_verified": null,
+        "conflict_note": null
+      }
+    ],
+    "structure": {
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 7,
+          "points": 28
+        },
+        {
+          "kind": "multiple_choice",
+          "count": 3,
+          "points": 18
+        },
+        {
+          "kind": "constructed_response",
+          "count": 5,
+          "points": 54
+        }
+      ],
+      "source_urls": [
+        "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+        "https://www.shijuan123.com/tiku/papers/ha-2026.html",
+        "https://www.yeyulingfeng.com/wendang/91324497.html",
+        "https://www.zzwb.cn/news/382763.html"
+      ],
+      "status": "observed_third_party_paper",
+      "source_details": [
+        {
+          "kind": "single_choice",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "points_each": 4,
+          "total_points": 28
+        },
+        {
+          "kind": "multiple_choice",
+          "numbers": [
+            8,
+            9,
+            10
+          ],
+          "points_each": 6,
+          "partial_correct_points": 3,
+          "total_points": 18
+        },
+        {
+          "kind": "experiment",
+          "numbers": [
+            11,
+            12
+          ],
+          "individual_points": [
+            6,
+            9
+          ],
+          "total_points": 15
+        },
+        {
+          "kind": "calculation",
+          "numbers": [
+            13,
+            14,
+            15
+          ],
+          "individual_points": [
+            10,
+            12,
+            17
+          ],
+          "total_points": 39
+        }
+      ]
+    },
+    "structure_minutes": 75,
+    "structure_year": 2026,
+    "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认",
+    "exam_policy": {
+      "schema_version": 1,
+      "subject": "physics",
+      "year": 2027,
+      "region": "河南",
+      "series": "cn-ha-physics-selective",
+      "rules": {
+        "multiple_choice": {
+          "id": "henan-selective-physics-multiple-choice",
+          "subject": "physics",
+          "kind": "multiple_choice",
+          "region": "河南",
+          "series": [
+            "cn-ha-physics-selective"
+          ],
+          "from_year": 2025,
+          "parameters": {
+            "full_credit": 6,
+            "partial_credit": 3,
+            "wrong_credit": 0,
+            "instruction": "全部选对得满分，选对但不全得3分，有选错的得0分。"
+          },
+          "sources": [
+            {
+              "title": "2025年河南物理选择性考试原卷多项选择题栏目",
+              "url": "https://www.jhgk.cn/upload/file/20250612/1749723303810089980.pdf",
+              "evidence": "paper_facsimile"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "orig:physics:hn27-folio:q01",
+      "topic": "原子能级与跃迁",
+      "version_sha256": "3bb56e3235cb8a02e6c5c8c4e35a9781ad06f38794d75a05f17f531df000ce8a",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "原子能级跃迁",
+            "derivation": "按初末能级差列全直接和级联跃迁；用仪器阈值筛去谱线，再按光子能量与波长反比排序"
+          },
+          "parts": {
+            "overall": "按初末能级差列全直接和级联跃迁"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q02",
+      "topic": "平行界面折射",
+      "version_sha256": "de501b4ca30bd80cbe048e5d8375f1399e187aefaa4ceba9149caa7b344440fd",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "光路与折射定律",
+            "derivation": "由两界面平行用正弦折射关系消去内界面；用图中同向的两段水平偏移分离乙层的折射角"
+          },
+          "parts": {
+            "overall": "由两界面平行用正弦折射关系消去内界面"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q03",
+      "topic": "凌星几何与万有引力",
+      "version_sha256": "e162d3933e5225621f287eb83d7f3019b0467cdf06f97a3252f6e062fae34dcd",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "D",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "凌星投影与周期",
+            "derivation": "用进、出视圆盘的对称时段换算半个轨道圆心角；从投影确定轨道与恒星半径比，再把中心质量化为密度"
+          },
+          "parts": {
+            "overall": "用进、出视圆盘的对称时段换算半个轨道圆心角"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q04",
+      "topic": "分段电势与速度",
+      "version_sha256": "1de72555e79a9a3790b6f37d8e66aa258f3ac95fabec37e911d8aa067b18437c",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "电势坡度与场",
+            "derivation": "用斜率的负号定场方向，再用负电荷确定加速方向；将电势差转为动能并确认能越过谷底；用分段匀变速平均速度比较时间"
+          },
+          "parts": {
+            "overall": "用斜率的负号定场方向，再用负电荷确定加速方向"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q05",
+      "topic": "定位线圈的感应脉冲",
+      "version_sha256": "9077575dfa338ef0754bef633cfb51e07324c7a81d6a3317e8ce770288a664c9",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "B",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "法拉第电磁感应定律",
+            "derivation": "从每匝磁通量图分别读取两个非零斜率；用匝数、电阻区分电流、净电荷和焦耳热"
+          },
+          "parts": {
+            "overall": "从每匝磁通量图分别读取两个非零斜率"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q06",
+      "topic": "对置磁区的线圈受力",
+      "version_sha256": "fff08d26ef827b38bd1d55dec49f4e029a9e1bb8e4ea0cc2dde5e7186ab3a4fb",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "C",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "安培力方向与叠加",
+            "derivation": "用初次拉力差约束两边磁力合成，反推下边磁场方向；追踪同时切换的电流与下区磁极，比较两次净拉力"
+          },
+          "parts": {
+            "overall": "用初次拉力差约束两边磁力合成，反推下边磁场方向"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q07",
+      "topic": "折线路径的摩擦功",
+      "version_sha256": "a649eeb6c433263fbc35ee0f5b07aa61cbd18c0c4099b89162f54d39ae2c5fff",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "A",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "受力与功",
+            "derivation": "把分段摩擦功改写为轨道投影量；按合力方向检查工件不会停在某个直段；用总高度和水平位移确定末态"
+          },
+          "parts": {
+            "overall": "把分段摩擦功改写为轨道投影量"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q08",
+      "topic": "气柱声学测温与热量比较",
+      "version_sha256": "5fb058c6e5362d6f58760c6977963216b2dc28632b2036007ca256452c729fdb",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "BC",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "机械波反射",
+            "derivation": "用往返时间与柱长求声速尺度；先分辨甲恒容与乙恒压导致的柱长规律；以相同末温连到内能，再由体积功比较吸热"
+          },
+          "parts": {
+            "overall": "用往返时间与柱长求声速尺度"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q09",
+      "topic": "磁分析半周的半径、周期与加速度",
+      "version_sha256": "07739a3a02af4ccd9e8789133af0bc1a80df08860ea29096c137a86646010804",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "AC",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "磁场中的半圆轨迹",
+            "derivation": "从击中距离提取直径并换成半径；联立等动能与洛伦兹力运动，区分质量、半周时间和加速度尺度；反解重合的异电压条件并判定时间差是否随速率变化"
+          },
+          "parts": {
+            "overall": "从击中距离提取直径并换成半径"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q10",
+      "topic": "相对起跳速度与追及条件",
+      "version_sha256": "e8c1766661c924bad402323d58c5b4c699bcad7fe5ba0a4ff4b763d32fc14c60",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": "ACD",
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "冲量与水平动量",
+            "derivation": "在两次起跳分别把相对速度与质心速度联立；第一次着车重新计算共同速度；用第二次起跳后速度与正在左移的甲比较，保留严格追及条件"
+          },
+          "parts": {
+            "overall": "在两次起跳分别把相对速度与质心速度联立"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q11",
+      "topic": "正反向牵引分离拖车阻力和导轨倾斜",
+      "version_sha256": "e3bad36785f69958b6c131872e9e42a532626b121e0eaea02741c783d72f9c57",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "0.80 kg；右端较高。",
+          "（2）": "0.13 N；偏大。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "牛顿第二定律",
+            "derivation": "由正反向图线确定相同斜率及两个截距；合并截距消去重力分量并扣空载偏差；用截距差判断未标方向的倾斜"
+          },
+          "parts": {
+            "（1）": "由正反向图线确定相同斜率及两个截距",
+            "（2）": "合并截距消去重力分量并扣空载偏差"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q12",
+      "topic": "四端接法与正负电流消除电压零偏",
+      "version_sha256": "26ee2eb1eaf63244af5df78fbd51fee5095a6faaa7c2525eeec7c6d9d2a949e8",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "C、D；+0.024 V。",
+          "（2）": "0.540 Ω；0.400 Ω。",
+          "（3）": "偏大；仅正向测量时未抵消正的零位偏差，分子偏大。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "电势差",
+            "derivation": "区分本体测压端与外部载流端；给同仪表的两种电流正负写电压关系；以平均和半差分别提取零偏与真压降，再由外内差扣两引线"
+          },
+          "parts": {
+            "（1）": "区分本体测压端与外部载流端",
+            "（2）": "给同仪表的两种电流正负写电压关系",
+            "（3）": "以平均和半差分别提取零偏与真压降，再由外内差扣两引线"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q13",
+      "topic": "光伏曲线的负载匹配",
+      "version_sha256": "e82bee7365cd6643c7f8a583e0d7f76ab0c324e1400579dfe1274d236aa2a816",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "3.60 W 和 3.00 W。",
+          "（2）": "最大输出功率 4.80 W；此时负载 10/3 Ω。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "欧姆定律与工作点",
+            "derivation": "用负载的电流—电压关系与实测外特性取交点；逐次检查求得的工作点是否属于选定线段；分别比较两段的功率函数，排除区间外的抛物线顶点"
+          },
+          "parts": {
+            "（1）": "用负载的电流—电压关系与实测外特性取交点",
+            "（2）": "逐次检查求得的工作点是否属于选定线段"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q14",
+      "topic": "轴向匀强场中标定螺旋周期与定点收集",
+      "version_sha256": "1838b701458e513bebd36c0bfd34fbca1697625a61691820943f38625c58afad",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "\\(B=4\\pi mu/(qL)\\)；最大径向距离为 \\(L/\\pi<L/2\\)，不会碰壁。",
+          "（2）": "电场沿 \\(+z\\)，\\(E=2mu^2/(qL)\\)；击中时速率为 \\(\\sqrt{13}\\,u\\)。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "洛伦兹力与圆周周期",
+            "derivation": "把空间轨迹分解为轴向运动与平面投影回轴周期；由标定位置定磁场，计算最大离轴距离而不是半径作碰壁检查；给第二次完整周期与轴向位移联立定场，检查轴向单调及到达速度"
+          },
+          "parts": {
+            "（1）": "把空间轨迹分解为轴向运动与平面投影回轴周期",
+            "（2）": "由标定位置定磁场，计算最大离轴距离而不是半径作碰壁检查"
+          }
+        }
+      }
+    },
+    {
+      "id": "orig:physics:hn27-folio:q15",
+      "topic": "传送带返送的阈值与累计滑移",
+      "version_sha256": "23e30d6da6d6d9ad7ca85bed2317800d4b90d2aeb81eada808c6321c73411a45",
+      "verification_mode": "independent_review",
+      "verification": {
+        "answer": {
+          "（1）": "首次入斜面速率 \\(4.00\\,\\mathrm{m/s}\\)；首次最远距离 \\(50/49\\,\\mathrm{m}\\)。",
+          "（2）": "共发出六次信号。",
+          "（3）": "传送带接触面总热量 \\(24+16\\sqrt2\\,\\mathrm{J}\\)。"
+        },
+        "checks": [],
+        "unverified": [
+          "完整学科推导待独立核对"
+        ],
+        "explanation": "待审候选答案，未运行算子",
+        "independent_check": {
+          "checks": {
+            "assumptions": "分阶段摩擦与可达性",
+            "derivation": "先检验同步距离、斜轨静摩擦条件和首个回程不越过带端；把上坡能量、下坡重力分量和带上反向衔接成逐次减半的距离；按探头实际计数的最后时刻止，用有向位移与相对运动计传送带热"
+          },
+          "parts": {
+            "（1）": "先检验同步距离、斜轨静摩擦条件和首个回程不越过带端",
+            "（2）": "把上坡能量、下坡重力分量和带上反向衔接成逐次减半的距离",
+            "（3）": "按探头实际计数的最后时刻止，用有向位移与相对运动计传送带热"
+          }
+        }
+      }
+    }
+  ],
+  "answers": [
+    "D",
+    "C",
+    "D",
+    "C",
+    "B",
+    "C",
+    "A",
+    "BC",
+    "AC",
+    "ACD",
+    {
+      "（1）": "0.80 kg；右端较高。",
+      "（2）": "0.13 N；偏大。"
+    },
+    {
+      "（1）": "C、D；+0.024 V。",
+      "（2）": "0.540 Ω；0.400 Ω。",
+      "（3）": "偏大；仅正向测量时未抵消正的零位偏差，分子偏大。"
+    },
+    {
+      "（1）": "3.60 W 和 3.00 W。",
+      "（2）": "最大输出功率 4.80 W；此时负载 10/3 Ω。"
+    },
+    {
+      "（1）": "\\(B=4\\pi mu/(qL)\\)；最大径向距离为 \\(L/\\pi<L/2\\)，不会碰壁。",
+      "（2）": "电场沿 \\(+z\\)，\\(E=2mu^2/(qL)\\)；击中时速率为 \\(\\sqrt{13}\\,u\\)。"
+    },
+    {
+      "（1）": "首次入斜面速率 \\(4.00\\,\\mathrm{m/s}\\)；首次最远距离 \\(50/49\\,\\mathrm{m}\\)。",
+      "（2）": "共发出六次信号。",
+      "（3）": "传送带接触面总热量 \\(24+16\\sqrt2\\,\\mathrm{J}\\)。"
+    }
+  ],
+  "quality_benchmarks": {
+    "protocol": "gaokao-editorial-audit-v1",
+    "subject": "physics",
+    "series": "cn-ha-physics-selective",
+    "slots": {
+      "1": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q001",
+          "version_sha256": "2a5754cefca6ad9db45c0d7d5c6055d3c8844e4af648cf4851cb34c9f21dbadc",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "动力学",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q001",
+          "version_sha256": "2b2a0e90654a908cf3223c8fb723619836191554ab5615beb83879954c23cc06",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "振动",
+          "features": [
+            "周期与振幅分别比较"
+          ],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "2": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q002",
+          "version_sha256": "2c6c3dc31a215b549eb66ba596527f9adde7e5c694f89158e9a6140e4330155b",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "光学",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q002",
+          "version_sha256": "94c8539114aedbae1af5834291ab0703298b521849de262881443e98f32700a5",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "电场",
+          "features": [
+            "由力图反推电荷符号"
+          ],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "3": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q003",
+          "version_sha256": "23d96d9553a3343f2218b3943a1f7c31ef577d1c4af0cf80f8711fb0b6d518df",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "万有引力",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q003",
+          "version_sha256": "81168b70b605880063699b1a92e8e6fc7a26ea24158c3229b983623a5329d277",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "光学",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "4": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q004",
+          "version_sha256": "d30032d8f07166822c4e40ea973c5000200aa9bc94e8c5eeb7fbf694973a7914",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电场",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q004",
+          "version_sha256": "0ba3aaddde60810f748e40b7c4e9cd674a167fb3e3a15df84795cb04d6c6da1e",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "变压器",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "5": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q005",
+          "version_sha256": "57da1f19fc72a1940f97d57fc17b556d5343d1f01b91305783f4f2eafb4dc9a5",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电磁感应",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q005",
+          "version_sha256": "cfa441bdcca04a0c8ea6a64e20d3fe52ea3c37a92a13e43a2e48f8619c3ac09a",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "万有引力",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "6": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q006",
+          "version_sha256": "bc2ebff198119ce3cddc021bb53e4a78bde363339724c60c93551937a5b8b6dd",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "原子核",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q006",
+          "version_sha256": "0c1a19e0f773a2c286a0411d41615951aa8073415535ac17fc2787d733ee7904",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "磁场",
+          "features": [],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "7": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q007",
+          "version_sha256": "0ed352781a00ec91a9bc6f9550765abd26775b856b946f71d1098bf466db73eb",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "动量",
+          "features": [
+            "碰撞分段",
+            "速度图取量"
+          ],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q007",
+          "version_sha256": "cbf8267169b674afda20e7ee3210ec03430771f17d258e6f72be7651aed0f528",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "平抛",
+          "features": [
+            "速度投影"
+          ],
+          "kind": "single_choice",
+          "points": 4,
+          "scope": "practice_text"
+        }
+      },
+      "8": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q008",
+          "version_sha256": "3485792aedce70c5eb7d9f6e2675f494026924e7c54cea83e3a548f267cafb2d",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "波",
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q008",
+          "version_sha256": "da01c74361b9bed08304d77da2e4a546824d6ba537a34b9d02946c8e7b7dc31c",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "光电效应",
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "9": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q009",
+          "version_sha256": "aa2bd39b14aff8c8c5fc784ccef98921eb4199a336123fdc8a8cea8056afe441",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电磁感应",
+          "features": [
+            "力与磁场方向"
+          ],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q009",
+          "version_sha256": "6f19536f9a0348eeb2b2139872e5023a102caed3c45659fa942a75f10eeafbf9",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "电磁感应",
+          "features": [
+            "楞次定律与图像极性"
+          ],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "10": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q010",
+          "version_sha256": "275d1f8245ede8c4a8f9829fd06829ef3ca8ccf584f8eaba942c33614c722478",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "热学",
+          "features": [],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q010",
+          "version_sha256": "533e5edf6a31504e9baebf5fbff65e8023ac7f0351d2da31d4ab4c4c1357bd30",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "多阶段动力学",
+          "features": [
+            "相对运动",
+            "分段加速度"
+          ],
+          "kind": "multiple_choice",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "11": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q011",
+          "version_sha256": "4d41116840f28382414f805d4a4cffd3d131e198cbf2ab92b6ea927e0df3fb2e",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电路实验",
+          "features": [
+            "读电阻量程",
+            "比较阈值"
+          ],
+          "kind": "constructed_response",
+          "points": 6,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q011",
+          "version_sha256": "94770bd7fb9a13a7273b7e3ed8bb233effd089a3a73f971a245e0e3663f717d4",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "力学实验",
+          "features": [
+            "光电门读数",
+            "理论与实测速率"
+          ],
+          "kind": "constructed_response",
+          "points": 6,
+          "scope": "practice_text"
+        }
+      },
+      "12": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q012",
+          "version_sha256": "1d5a4d81c6835bdad78db071dc53b38401617dd7ff93c4be9c4fd86e0a922144",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "力学实验",
+          "features": [
+            "打点数据",
+            "估计系统误差"
+          ],
+          "kind": "constructed_response",
+          "points": 9,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q012",
+          "version_sha256": "5e42665fe8699e0c9291d860212a8396f8679eb69fe2b6eaf705cf5b70b79ba5",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "电路实验",
+          "features": [
+            "接线",
+            "RC斜率和截距"
+          ],
+          "kind": "constructed_response",
+          "points": 9,
+          "scope": "limited_position_evidence"
+        }
+      },
+      "13": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q013",
+          "version_sha256": "269052bdcfd887ace82f84c7ab0a898ad70f41fc2fe2352b3edcddd26cfc0744",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电场",
+          "features": [
+            "类平抛分段"
+          ],
+          "kind": "constructed_response",
+          "points": 10,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q013",
+          "version_sha256": "c2885245d64524e9128914d92b5e039c7b560129056a51013a202bd6651ac702",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "热学",
+          "features": [
+            "气体状态与质量比"
+          ],
+          "kind": "constructed_response",
+          "points": 10,
+          "scope": "practice_text"
+        }
+      },
+      "14": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q014",
+          "version_sha256": "1326f7e9e2d45ef0909d4649e02ad8007055cf5962753f7a3b5ad34a9251ac23",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "多阶段动力学",
+          "features": [
+            "碰撞与摩擦分段"
+          ],
+          "kind": "constructed_response",
+          "points": 12,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q014",
+          "version_sha256": "a671794f710376790231e72b068b9314f6686c899cf944ceaecbc31779215eb0",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "电场",
+          "features": [
+            "分区运动",
+            "比荷与飞行时间"
+          ],
+          "kind": "constructed_response",
+          "points": 12,
+          "scope": "practice_text"
+        }
+      },
+      "15": {
+        "2025": {
+          "id": "2025-cn-ha-physics-selective:q015",
+          "version_sha256": "e51113347a936287275cbd89750af2c6b4ada480e16ca96fc9a9d7e478553ab0",
+          "source_url": "https://kaosj.com/papers/2025/06/2025-henan-gaokao-physics-paper/",
+          "topic": "电磁复合场",
+          "features": [
+            "电磁分区",
+            "运动周期与漂移"
+          ],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "practice_text"
+        },
+        "2026": {
+          "id": "2026-cn-ha-physics-selective:q015",
+          "version_sha256": "9c40b944d264d901fdd803ed9c9fd48d53877320ed706a51a742696115183312",
+          "source_url": "https://kaosj.com/papers/2026/07/2026-gaokao-physics-henan-paper/",
+          "topic": "多阶段动力学",
+          "features": [
+            "弹性碰撞",
+            "逐次运动状态"
+          ],
+          "kind": "constructed_response",
+          "points": 17,
+          "scope": "practice_text"
+        }
+      }
+    },
+    "review_board": "three-readers-v2",
+    "qa_policy": [
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "physics.breadth",
+        "subject": "physics",
+        "severity": "major",
+        "check": "标准卷逐查八块，光学独立于机械波",
+        "counterexample": "机械波代替全部光学"
+      },
+      {
+        "id": "physics.device",
+        "subject": "physics",
+        "severity": "major",
+        "check": "同一器具最多占两题",
+        "counterexample": "三题使用弹簧连接物体"
+      },
+      {
+        "id": "physics.constant",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "由标称数据验算可认定的常量，相对误差不超过1%",
+        "counterexample": "光电拟合斜率偏离 h/e 达3%"
+      },
+      {
+        "id": "physics.adjust",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "核查回路可调元件、空间距离及边界",
+        "counterexample": "要求扫电流却只有固定电源与负载"
+      },
+      {
+        "id": "physics.algebra",
+        "subject": "physics",
+        "severity": "major",
+        "check": "寻找物理建模与推理转折",
+        "counterexample": "靠两组未知量联立即可作答"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      },
+      {
+        "id": "physics.weight",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "每卷逐题按主考模块独立计分，计算题兼有力学综合和电磁",
+        "counterexample": "A卷配置力学压轴，B卷配置电磁压轴后只检查两卷合计覆盖"
+      },
+      {
+        "id": "physics.rounding",
+        "subject": "physics",
+        "severity": "fatal",
+        "check": "按空位复算两种常用π近似的最终进位",
+        "counterexample": "3.118π保留三位有效数字时分别给出9.79与9.80"
+      }
+    ],
+    "exam_policy": {
+      "schema_version": 1,
+      "subject": "physics",
+      "year": 2027,
+      "region": "河南",
+      "series": "cn-ha-physics-selective",
+      "rules": {
+        "multiple_choice": {
+          "id": "henan-selective-physics-multiple-choice",
+          "subject": "physics",
+          "kind": "multiple_choice",
+          "region": "河南",
+          "series": [
+            "cn-ha-physics-selective"
+          ],
+          "from_year": 2025,
+          "parameters": {
+            "full_credit": 6,
+            "partial_credit": 3,
+            "wrong_credit": 0,
+            "instruction": "全部选对得满分，选对但不全得3分，有选错的得0分。"
+          },
+          "sources": [
+            {
+              "title": "2025年河南物理选择性考试原卷多项选择题栏目",
+              "url": "https://www.jhgk.cn/upload/file/20250612/1749723303810089980.pdf",
+              "evidence": "paper_facsimile"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "candidate_sha256": "db4d725603dde841cc2c246eee83bf8f1e27a90eedd4631d4a748fcf8d831f89",
+  "paper_version": "c5d093c11cd1b412c9783ae9743d78d639e2937b9693b32c365b380851b62092",
+  "paper_pdf_sha256": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade"
+}

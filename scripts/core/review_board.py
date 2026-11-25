@@ -1,0 +1,371 @@
+"""Blind review transport, deterministic scoring and immutable, item-locked revisions."""
+from pathlib import Path
+from typing import Protocol
+import shutil
+
+from analysis_db import fingerprint
+from forecast_store import write_new
+from gaokao import digest, read_json, require
+from core.exam_qa import inspect, policies
+from core.exam_policy import guess_snapshot
+
+LEGACY_VERSION = "three-readers-v1"
+VERSION = "three-readers-v2"
+LOCAL_QA_PASSED = "LOCAL_QA_PASSED"
+ROLES=("solver","pedagogy","visual")
+TARIFF={"coverage":6,"depth":4,"weak":3,"abstract":2,"graphic":2}
+HARD={"constant","scoring","missing_blank","figures","notation"}
+RULE_COST={"device":"coverage","coverage":"coverage"}
+
+
+def successful(status):
+    return status in ("eligible", LOCAL_QA_PASSED)
+
+
+class BlindProvider(Protocol):
+    """Optional heterogenous provider; the caller sends only these allowlisted inputs."""
+    def review(self, *, role: str, student_pdf: bytes, rules: list,
+               benchmarks: list, listening_script: dict | None,
+               required_reply: dict | None = None) -> dict: ...
+
+
+def packet_path(folder):
+    pdf=folder/"paper.pdf"
+    return pdf if pdf.is_file() else folder/"review-only/paper.pdf"
+
+
+def evidence(root, folder, rule_snapshot=None, *, recheck_legacy_policy=False, enforce_release=False):
+    from core.quality_audit import _paper_inputs
+    from core import release_checks
+    from pypdf import PdfReader
+
+    ref,paper,version,pdf_sha=_paper_inputs(folder)
+    require(ref is not None, "此试卷缺版本绑定的同题位审稿依据")
+    pdf=packet_path(folder)
+    doc=PdfReader(pdf)
+    subj=ref["subject"]
+    if (folder/"verification.json").exists():
+        spec=read_json(folder/"verification.json")
+        answers=spec.get("answers")
+        if answers is None:
+            answers=spec["expected"]
+    else:
+        spec=read_json(folder/"raw-ai-candidate.json")
+        answers=[q.get("answer_key") for q in read_json(folder/"math-verification.json")]
+    header="\n".join((p.extract_text() or "") for p in doc.pages)
+    rules=rule_snapshot if rule_snapshot is not None else ref.get("qa_policy") or policies(root,subj)
+    listening_file = folder/"listening-review.json"
+    listening = read_json(listening_file) if listening_file.is_file() else {}
+    if listening:
+        require(fingerprint(listening) == spec["listening_sha256"], "听力文本版本错误")
+    strict = ref.get("review_board") == VERSION
+    if strict:
+        require(paper.get("exam_policy") == ref.get("exam_policy"), "考制与命题上下文绑定不同")
+    elif not paper.get("exam_policy"):
+        if recheck_legacy_policy:
+            paper = {**paper,"exam_policy":guess_snapshot(root,subj,paper["title"],series=ref.get("series"))}
+        else:
+            header = "".join(header.split())
+    release = ref.get("release_rules") == release_checks.VERSION
+    gate=inspect(root,subj,paper,answers,header=header,observations=ref.get("constant_observations",()),
+                 policy_snapshot=rules,figure_folder=folder,listening=listening,enforce_corridors=strict,
+                 release_artifacts=release_checks.from_folder(folder,pdf) if release or enforce_release else None)
+    if release:
+        from core.publication_ledger import reuse_findings
+
+        failures=[{"number":1,"rule":"release_ledger","evidence":detail}
+                  for detail in reuse_findings(root,subj,paper,pdf_sha)]
+        if failures:
+            gate.update(issues=[*gate["issues"],*failures],passed=False)
+        if subj=="chinese":
+            from core.chinese_corpus import recitation_findings
+
+            source=paper["questions"][16].get("recitation_sources",[])
+            keys=[answers[16],*spec.get("exact_key_variants",{}).get("17",[])]
+            for answer in keys:
+                for failure in recitation_findings(root,source,answer):
+                    gate["issues"].append({"number":17,"rule":"chinese_recitation_edition","evidence":failure})
+                    gate["passed"]=False
+    # Lock printed stems, options, parts, content-bound figures and any shared passage.
+    versions = {}
+    local_versions = {}
+    material_groups = {}
+    choice_keys = {}
+    exact_keys = {}
+    exact_variants = spec.get("exact_key_variants", {})
+    for n,q in enumerate(paper["questions"],1):
+        material = paper.get("materials",{}).get(q.get("material"))
+        parts = [q, material, answers[n-1]]
+        if str(n) in exact_variants:
+            parts.append(exact_variants[str(n)])
+        if q.get("material") in listening:
+            parts.append(listening[q["material"]])
+        versions[str(n)] = fingerprint(parts)
+        if material is not None:
+            local_versions[str(n)] = fingerprint([q,answers[n-1]])
+            material_groups[str(n)] = q["material"]
+        if (q.get("options") or (material or {}).get("options")) and isinstance(answers[n-1],str):
+            choice_keys[str(n)] = answers[n-1]
+        if q.get("kind") in ("grammar_gap","recitation"):
+            exact_keys[str(n)] = answers[n-1]
+    return {"subject":subj,"version":version,"pdf_sha256":pdf_sha,"pages":len(doc.pages),
+            "item_versions":versions,"ids":[q.get("id",q.get("number",n)) for n,q in enumerate(paper["questions"],1)],
+            "choice_keys":choice_keys, **({"exact_keys":exact_keys} if exact_keys else {}),
+            **({"exact_key_variants":exact_variants} if exact_variants else {}),
+            **({"local_versions":local_versions,"material_groups":material_groups} if local_versions else {}),
+            "rules":rules,"preflight":gate,"reference_sha256":fingerprint(ref),
+            **({"protocol": VERSION} if strict else {}),
+            **({"release_rules":release_checks.VERSION} if release else {})}
+
+
+def blind_bundle(root, folder, role):
+    from core.practice_workbook import authoring_context
+    require(role in ROLES,"未知评审角色")
+    state=evidence(root,folder)
+    require(state["preflight"]["passed"],"先修复机器安检硬错误，再送盲审")
+    examples=[]
+    if role=="pedagogy":
+        for q in authoring_context(root,state["subject"],limit=150)["references"]:
+            if q["year"] in (2025,2026):
+                examples.append({k:q.get(k) for k in ("id","year","number","topic","stem","parts","options")})
+    listening=folder/"listening-review.json"
+    bundle={"role":role,"rules":state["rules"],"benchmarks":examples,
+            "listening_script":read_json(listening) if listening.is_file() and role!="visual" else None,
+            "student_pdf":packet_path(folder).read_bytes()}
+    if state.get("release_rules"):
+        from core.review_probe import instructions
+
+        bundle["required_reply"]=instructions(state["subject"])
+    return bundle
+
+
+def dispatch(root,folder,role,provider):
+    return provider.review(**blind_bundle(root,folder,role))
+
+
+def export_blind(root,folder,role,target):
+    payload=blind_bundle(root,folder,role)
+    target.mkdir(parents=True,exist_ok=False)
+    (target/"student.pdf").write_bytes(payload.pop("student_pdf"))
+    write_new(target/"instructions.json",payload)
+    return {"role":role,"pdf_sha256":digest(target/"student.pdf")}
+
+
+def normalize_gap(value):
+    """Ignore punctuation around a supplied response; preserve spelling, case and word order."""
+    import re
+    import unicodedata
+    if isinstance(value, list):
+        value = "；".join(value)
+    text = unicodedata.normalize("NFC",str(value)).strip()
+    if re.search(r"[A-Za-z]",text):
+        return " ".join(text.split())
+    return re.sub(r"[\s，,。；;、]+", "", text)
+
+
+def recitation_cells(value):
+    """Compare each printed blank separately when an open recitation has accepted examples."""
+    import re
+    if isinstance(value, str):
+        text = re.sub(r"(?:^|(?<=[。；;\n]))\s*[（(][1-9][）)]", "", value)
+        value = [cell for cell in re.split(r"[，,。；;\n]+", text) if cell.strip()]
+    return tuple(normalize_gap(cell) for cell in value) if isinstance(value, list) else ()
+
+
+def score_exam(state, reports, previous=None):
+    pre=state["preflight"]
+    versions=state["item_versions"]
+    numbers=set(range(1,len(versions)+1))
+    require(set(versions)=={str(n) for n in numbers},"题号不连续")
+    round_no=previous["round"]+1 if previous else 1
+    protocol = state.get("protocol", LEGACY_VERSION)
+    require(protocol in (LEGACY_VERSION, VERSION), "未知本地审稿协议")
+    cycle_round = previous.get("cycle_round",previous["round"])+1 if previous else 1
+    feedback = state.get("external_feedback", [])
+    external_targets = None
+    if feedback:
+        from core.external_review import repair_targets
+
+        require(protocol == VERSION and previous and previous["status"] == LOCAL_QA_PASSED,
+                "外部审稿返工须来自已通过本地质检的版本")
+        external_targets, layout_only = repair_targets(feedback, previous, state["rules"])
+        require(external_targets or layout_only, "外部审稿没有退稿理由")
+        cycle_round = 1
+    require(cycle_round<=3,"三轮用尽，禁止继续")
+    if previous:
+        require(previous["status"]!="rejected" and state["ids"]==previous["ids"]
+                and previous["subject"]==state["subject"] and set(previous["item_versions"])==set(versions),
+                "与此前试卷身份或题序不符")
+        changed={int(k) for k,v in versions.items() if previous["item_versions"][k]!=v}
+        allowed=set(previous["rewrite"]) if external_targets is None else external_targets
+        # A corrected cloze passage must be reread by every affected item. Their individual
+        # wording, answer, and passage assignment remain locked unless separately returned.
+        groups = previous.get("material_groups",{})
+        affected = {groups[str(n)] for n in allowed if str(n) in groups}
+        old_local, new_local = previous.get("local_versions",{}), state.get("local_versions",{})
+        for n in changed-allowed:
+            k = str(n)
+            require(k in old_local and old_local[k]==new_local.get(k) and groups[k] in affected
+                    and state.get("material_groups",{}).get(k)==groups[k],"零扣分题已锁定")
+        layout_repair = (layout_only if external_targets is not None else protocol == VERSION and any(
+            item["category"] == "graphic" or item["rule"] == "policy_conflict" for item in previous["deductions"]))
+        require(bool(changed & allowed) or (layout_repair and state["pdf_sha256"] != previous["pdf_sha256"]),
+                "没有针对退回题位的修订")
+    charges=[]
+    def add(n,category,rule,fact,reader,points=None):
+        require(type(n) is int and (n in numbers or (reader=="machine" and n==0))
+                and isinstance(fact,str) and fact.strip() and isinstance(rule,str) and rule,
+                "扣分须有题号、规则及事实")
+        require(category=="fatal" or category in TARIFF,"未知扣分维度")
+        cost=0 if category=="fatal" else TARIFF[category]
+        if category=="graphic" and points is not None:
+            require(type(points) is int and points in (2,3),"图件瑕疵只扣2或3分")
+            cost=points
+        charges.append({"number":n,"category":category,"rule":rule,"points":cost,"evidence":fact,"reader":reader})
+    shared=iter(state.get("repair_slots",()))
+    for issue in pre["issues"]:
+        number=issue["number"]
+        if number==0:
+            number=next(shared,None)
+            require(number in numbers,"整卷问题缺少实际承接修订的题位")
+        add(number,"fatal" if issue["rule"] in HARD else RULE_COST.get(issue["rule"],"fatal"),
+            issue["rule"],issue["evidence"],"machine")
+    if pre["passed"]:
+        require(len(reports)==3 and {r["role"] for r in reports}==set(ROLES)
+                and len({r["identity"] for r in reports})==3,"须有三份不同身份的隔离审稿")
+        rules={r["id"] for r in state["rules"]}
+        for report in reports:
+            role=report["role"]
+            require(report["identity"].strip() and report["pdf_sha256"].lower()==state["pdf_sha256"],"审稿身份或PDF版本不符")
+            items=report["items"]
+            require(len(items)==len(numbers) and {i["number"] for i in items}==numbers
+                    and all(str(i.get("reasoning","")).strip() for i in items),"缺逐题审读记录")
+            if role=="solver":
+                require(all(i.get("answer") not in (None,"",{},[]) for i in items),"须由仅看题面的解题者给出逐题答案")
+                for item in items:
+                    key=state.get("choice_keys",{}).get(str(item["number"]))
+                    if key is not None and sorted(str(item["answer"]))!=sorted(key):
+                        add(item["number"],"fatal","all.solution","独立选项 "+str(item["answer"])+" 与提交键 "+key+" 不一致","comparison")
+                    exact = state.get("exact_keys",{}).get(str(item["number"]))
+                    variants = state.get("exact_key_variants", {}).get(str(item["number"]), [])
+                    normalize = recitation_cells if variants else normalize_gap
+                    if exact is not None and normalize(item["answer"]) not in {
+                        normalize(answer) for answer in [exact, *variants]
+                    }:
+                        add(item["number"],"fatal","all.solution","盲答与填空键不一致，须逐空核对","comparison")
+            if role=="pedagogy":
+                require(all(i.get("comparison") and i.get("steps") and i.get("concepts") for i in items),"教研员缺同题位比较与推理证据")
+            if role=="visual":
+                require([p["number"] for p in report["pages"]]==list(range(1,state["pages"]+1))
+                        and all(p["note"].strip() for p in report["pages"]),"漏审印刷页")
+            if state.get("release_rules"):
+                from core.review_probe import reply_findings
+
+                for number,rule,fact in reply_findings(state["subject"],report):
+                    add(number,"fatal",rule,fact,role)
+            for issue in report["findings"]:
+                require(issue["rule"] in rules,"扣分未绑定当前排雷条目")
+                add(issue["number"],issue["category"],issue["rule"],issue["evidence"],role,issue.get("points"))
+    else:
+        require(not reports,"机器安检未通过前不可先行AI评分")
+    # Each per-question depth/choice defect is charged once even when independently confirmed twice.
+    booked={}
+    for c in charges:
+        key=(c["number"],c["category"],"" if c["category"] in {"weak","depth"} else c["evidence"])
+        booked[key]=max(booked.get(key,0),c["points"])
+    fatal=sum(c["category"]=="fatal" for c in charges)
+    score=0 if fatal else max(0,100-sum(booked.values()))
+    rewrite=sorted({c["number"] for c in charges if c["number"]})
+    if pre["passed"] and not fatal and score >= 85:
+        status = LOCAL_QA_PASSED if protocol == VERSION else "eligible"
+    else:
+        status = "rejected" if cycle_round == 3 else "returned"
+    return {"protocol":protocol,"round":round_no,"subject":state["subject"],"ids":state["ids"],
+            "pdf_sha256":state["pdf_sha256"],"item_versions":dict(versions),"fatal_count":fatal,"final_score":score,
+            "status":status,"deductions":charges,"charged_points":sum(booked.values()),
+            "rewrite":rewrite,"locked":sorted(numbers-set(rewrite)),
+            **({k:state[k] for k in ("local_versions","material_groups")} if state.get("local_versions") else {}),
+            **({"cycle_round":cycle_round,"paper_version":state["version"]} if protocol == VERSION else {}),
+            **({"release_rules":state["release_rules"]} if state.get("release_rules") else {}),
+            "prior_sha256":fingerprint(previous) if previous else None,
+            "inputs_sha256":fingerprint([state,reports])}
+
+
+def replay(history):
+    last=None
+    rounds = sorted(history.glob("round*.json"), key=lambda p: int(p.stem.removeprefix("round")))
+    for index, path in enumerate(rounds, 1):
+        require(path.name == f"round{index}.json", "评审轮次不连续")
+        doc=read_json(path)
+        last=score_exam(doc["state"],doc["reports"],last)
+        require(last==read_json(history/f"scorecard-round{index}.json"),"历史评分或审稿输入被更改")
+    return last
+
+
+def record(root,folder,reports,previous_folder=None,repair_slots=()):
+    from tempfile import TemporaryDirectory
+    state=evidence(root,folder)
+    state["repair_slots"]=list(repair_slots)
+    require(not (folder/"board").exists(),"已评分版本不可覆写")
+    prior=None
+    if previous_folder:
+        prior=replay(previous_folder/"board")
+        require(prior is not None,"缺历史评分链")
+        if prior["status"] == LOCAL_QA_PASSED:
+            from core.external_review import active_findings
+
+            feedback = active_findings(previous_folder, prior)
+            if feedback:
+                state["external_feedback"] = feedback
+    global_issues=[x for x in state["preflight"]["issues"] if not x["number"]]
+    if global_issues and not repair_slots:
+        # Prefer an editable choice currently overrepresented in the matched modules.
+        counts={int(n):0 for n in state["item_versions"]}
+        for hits in state["preflight"]["coverage"].values():
+            for n in hits:counts[n]+=max(0,len(hits)-1)
+        if state.get("external_feedback"):
+            from core.external_review import repair_targets
+
+            allowed, _ = repair_targets(state["external_feedback"], prior, state["rules"])
+        else:
+            allowed=set(prior["rewrite"]) if prior else set(counts)
+        if not allowed and state.get("external_feedback"):
+            allowed = set(counts)
+        options=sorted(allowed,key=lambda n:(str(n) not in state["choice_keys"],-counts[n],n))
+        require(options,"缺可修改的题位")
+        state["repair_slots"]=[options[i%len(options)] for i in range(len(global_issues))]
+    result=score_exam(state,reports,prior)
+    with TemporaryDirectory(dir=folder) as scratch:
+        target=Path(scratch)/"board"
+        if previous_folder:
+            shutil.copytree(previous_folder/"board",target,ignore=shutil.ignore_patterns("decision.json"))
+        write_new(target/f"round{result['round']}.json",{"state":state,"reports":reports})
+        write_new(target/f"scorecard-round{result['round']}.json",result)
+        target.rename(folder/"board")
+    return result
+
+
+def authorize(root,folder):
+    history=folder/"board"
+    result=replay(history)
+    require(result is not None and successful(result["status"]),"独立评分未达到发布条件")
+    if result["status"] == LOCAL_QA_PASSED:
+        from core.external_review import active_findings
+
+        require(not active_findings(folder, result), "外部盲审有未处理缺陷，须局部返工并重新审稿")
+    state=read_json(history/f"round{result['round']}.json")["state"]
+    current=evidence(root,folder,state["rules"])
+    require(all(state[k]==v for k,v in current.items()),"发布前题面、答案、规则或 PDF 已变更")
+    return fingerprint(result)
+
+
+def decision_view(result):
+    """Keep the full numeric ledger in scorecard-roundN.json."""
+    common = {"state":result["status"],"round":result["round"],
+              "fatal_count":result["fatal_count"],"rewrite":result["rewrite"],"locked":result["locked"],
+              "deductions":result["deductions"],"pdf_sha256":result["pdf_sha256"]}
+    if result["protocol"] == LEGACY_VERSION:
+        common["score"] = result["final_score"]
+    else:
+        common["scorecard"] = f"board/scorecard-round{result['round']}.json"
+    return common

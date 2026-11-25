@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "subject": "chemistry",
+  "sources": [
+    {
+      "id": "chemistry-standard-2020",
+      "url": "https://www.pep.com.cn/xw/zt/rjwy/gzkb2020/202205/P020220517517668288401.pdf",
+      "kind": "national_curriculum",
+      "locator": "课程结构 8–12；课程内容 13–43"
+    },
+    {
+      "id": "chemistry-pep-modules",
+      "url": "https://www.pep.com.cn/xw/zt/px/2019/huaxue/",
+      "kind": "textbook_publisher_module_material"
+    },
+    {
+      "id": "moe-textbook-catalogue",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202305/t20230506_1058493.html",
+      "kind": "textbook_catalogue"
+    }
+  ],
+  "modules": [
+    {
+      "id": "concepts",
+      "title": "基本概念与物质性质",
+      "series": "必修",
+      "knowledge": [
+        "物质分类",
+        "离子反应",
+        "氧化还原",
+        "元素及化合物",
+        "化学计量"
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "物质结构与性质",
+      "series": "选择性必修2",
+      "knowledge": [
+        "原子结构",
+        "周期规律",
+        "成键",
+        "分子构型",
+        "杂化",
+        "极性与分子间作用",
+        "晶体"
+      ]
+    },
+    {
+      "id": "principles",
+      "title": "化学反应原理",
+      "series": "选择性必修1",
+      "knowledge": [
+        "反应热",
+        "速率",
+        "平衡",
+        "水溶液离子",
+        "沉淀",
+        "电化学"
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "实验与探究",
+      "series": "必修及各选择性必修主题",
+      "knowledge": [
+        "仪器及分离",
+        "现象检验",
+        "对照",
+        "定量数据",
+        "误差",
+        "证据边界"
+      ]
+    },
+    {
+      "id": "organic",
+      "title": "有机化学",
+      "series": "选择性必修3",
+      "knowledge": [
+        "官能团",
+        "结构性质",
+        "反应类型",
+        "同分异构",
+        "转化路线"
+      ]
+    },
+    {
+      "id": "application",
+      "title": "化学综合应用",
+      "series": "跨主题",
+      "knowledge": [
+        "工业流程",
+        "物质循环",
+        "绿色化学",
+        "能源材料",
+        "生产情境"
+      ]
+    }
+  ],
+  "classifiers": [
+    {
+      "id": "conditional_path",
+      "positive": "改变介质、温度、相或过量条件会改变允许反应或主要产物",
+      "negative": "条件只出现在背景，解答从不使用",
+      "boundary": "配平守恒的候选仍需检验反应条件和竞争过程"
+    },
+    {
+      "id": "evidence_scope",
+      "positive": "需要判断观察能否排除另一解释",
+      "negative": "套表计算不涉及解释",
+      "boundary": "正对照确认响应，不能自动证明待测物唯一"
+    },
+    {
+      "id": "transfer",
+      "positive": "由陌生背景提供信息，再迁移高中已学守恒或结构概念",
+      "negative": "陌生名称可删除且作答不变",
+      "boundary": "只按解题中必须使用的信息编码"
+    },
+    {
+      "id": "figure_essential",
+      "positive": "独有信息必须从图表或结构式取得",
+      "negative": "图只重复文字",
+      "boundary": "图示选项可为作答所必需，即便模型可用题文建立"
+    },
+    {
+      "id": "sequential_reasoning",
+      "positive": "后问所需定量或定性约束来自前问",
+      "negative": "相同情境各自独立",
+      "boundary": "若后问也直接重给条件，按可独立证据标记"
+    }
+  ],
+  "limits": "标签可并存。选主要任务须给解题证据。缺图和冲突状态保持待核，难度只供编辑。"
+}

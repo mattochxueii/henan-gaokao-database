@@ -1,0 +1,167 @@
+{
+  "subject": "biology",
+  "questions": [
+    {
+      "id": "orig:biology:p13:01",
+      "stem": "某二倍体植物的果皮颜色由 A/a 控制，A 对 a 完全显性。果面有无绒毛由 B/b 控制，B 对 b 完全显性。两对基因位于不同对常染色体上。将 AaBb 与 aaBb 杂交，两亲本产生的不同配子在各自性别内等概率参与受精，且各基因型在筛选前存活率相同。对杂交后代进行检测，筛除所有 aabb 植株。 题中后代性状均指杂交后代植株成熟后所结果实的性状。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "筛除的植株占原后代的比例是多少？"
+        },
+        {
+          "label": "（2）",
+          "text": "从保留的植株中等概率抽取一株，其基因型为 AaBb 的概率和同时表现两种显性性状的概率分别是多少？"
+        }
+      ],
+      "topic": "遗传与进化·自由组合和条件抽样",
+      "points": 8,
+      "problem": {
+        "op": "mendelian_cross",
+        "parents": [
+          "AaBb",
+          "aaBb"
+        ],
+        "exclude": [
+          "aabb"
+        ],
+        "independent_loci": true,
+        "complete_dominance": true,
+        "equal_viability": true
+      },
+      "proposed_answer": {
+        "筛除比例": "1/8",
+        "保留者中AaBb比例": "2/7",
+        "保留者中双显性比例": "3/7"
+      },
+      "metadata": {
+        "knowledge": [
+          "基因的自由组合定律",
+          "条件概率"
+        ],
+        "skills": [
+          "遗传建模",
+          "分离比例核算"
+        ],
+        "science_boundary": "二倍体、独立分配、完全显性和筛前等存活率均在题面明确。"
+      }
+    },
+    {
+      "id": "orig:biology:p13:02",
+      "stem": "为探究 NaCl 处理对一批萝卜种子萌发的影响，将同批种子随机等分到 6 个独立培养皿中，每皿 20 粒，再随机分成每组 3 皿。各皿加入等量的 10 mL 溶液，分别为清水和浓度 5 g/L 的 NaCl 溶液，在 25 ℃、相同暗培养条件下培养 72 小时。以胚根突破种皮作为萌发标准。清水组各皿萌发数依次是 16、18、17，NaCl 组依次是 10、11、12。",
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "分别求两组的萌发率，并用百分点表示处理组相对清水组的变化。以组内总萌发数除以组内总播种数计算萌发率。"
+        },
+        {
+          "label": "（2）",
+          "text": "该设计比较的自变量是什么？结果能否单独证明萌发率差异由 Na⁺ 毒害而非渗透效应造成？说明理由。"
+        }
+      ],
+      "topic": "分子与细胞·实验对照与推理边界",
+      "points": 8,
+      "problem": {
+        "op": "single_factor_experiment",
+        "case": "salt_germination",
+        "random_allocation": true,
+        "independent_dishes": true,
+        "groups": {
+          "control": {
+            "controls": {
+              "seed_lot": "批次R",
+              "temperature_c": 25,
+              "duration_h": 72,
+              "seeds_per_dish": 20,
+              "illumination": "同一暗培养条件",
+              "solution_ml": 10
+            },
+            "nacl_g_per_l": 0,
+            "germinated_per_dish": [
+              16,
+              18,
+              17
+            ]
+          },
+          "treatment": {
+            "controls": {
+              "seed_lot": "批次R",
+              "temperature_c": 25,
+              "duration_h": 72,
+              "seeds_per_dish": 20,
+              "illumination": "同一暗培养条件",
+              "solution_ml": 10
+            },
+            "nacl_g_per_l": 5,
+            "germinated_per_dish": [
+              10,
+              11,
+              12
+            ]
+          }
+        }
+      },
+      "proposed_answer": {
+        "对照萌发率": "17/20",
+        "处理萌发率": "11/20",
+        "差值（处理－对照，百分点）": "-30",
+        "自变量": "NaCl 浓度",
+        "能否单独证明 Na⁺ 毒害": "不能",
+        "证据边界": "只支持题设条件下的观测差异"
+      },
+      "metadata": {
+        "knowledge": [
+          "对照实验",
+          "萌发率",
+          "水分跨膜运输"
+        ],
+        "skills": [
+          "控制变量",
+          "证据与因果区分"
+        ],
+        "data_origin": "原创模拟数据",
+        "science_boundary": "皿为实验单位。随机化同控支持比较处理，但单一浓度、未设等渗非离子处理，不能区分机制。"
+      }
+    },
+    {
+      "id": "orig:biology:p13:03",
+      "stem": "取两份状态相同的活植物表皮细胞，分别置于蔗糖溶液 X、Y 中。两份细胞初始水势均为 −0.50 MPa，X 和 Y 的水势分别为 −0.80 MPa 和 −0.20 MPa。在观察的初始阶段，蔗糖不透过细胞质膜。已知水的跨膜净移动方向由水势较高一侧指向较低一侧。关于刚置入溶液时细胞内水分的变化，下列判断正确的是",
+      "options": {
+        "A": "X 组细胞净吸水，Y 组细胞净失水",
+        "B": "X 组细胞净失水，Y 组细胞净吸水",
+        "C": "X、Y 两组细胞均净失水",
+        "D": "X、Y 两组细胞均净吸水"
+      },
+      "topic": "分子与细胞·渗透与净水流",
+      "points": 3,
+      "problem": {
+        "op": "concept_inference",
+        "case": "initial_osmosis",
+        "living_cells": true,
+        "sucrose_impermeant": true,
+        "initial_only": true,
+        "cell_psi_mpa": "-0.50",
+        "x_psi_mpa": "-0.80",
+        "y_psi_mpa": "-0.20",
+        "option_models": {
+          "A": "x_in_y_out",
+          "B": "x_out_y_in",
+          "C": "both_out",
+          "D": "both_in"
+        }
+      },
+      "proposed_answer": "B",
+      "metadata": {
+        "knowledge": [
+          "物质跨膜运输",
+          "植物细胞渗透"
+        ],
+        "skills": [
+          "比较数量关系",
+          "边界条件辨析"
+        ],
+        "science_boundary": "水势比较规则题面给出；仅初始净水流可判断，不能由题设判断质壁分离或平衡体积。"
+      }
+    }
+  ]
+}

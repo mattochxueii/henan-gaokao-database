@@ -1,0 +1,3101 @@
+{
+  "id": "2021-cn-math-new-gaokao-1",
+  "subject": "math",
+  "year": 2021,
+  "title": "2021年新高考I卷",
+  "regions": [
+    "山东",
+    "广东",
+    "江苏",
+    "河北",
+    "湖北",
+    "湖南",
+    "福建"
+  ],
+  "series_id": "cn-new-gaokao-1",
+  "exam_kind": "official_exam",
+  "question_count": 22,
+  "source": {
+    "title": "原有项目双源档案",
+    "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
+    "rights_basis": "仅用于个人学习与教研归档"
+  },
+  "distribution": "private-research",
+  "compatibility": "national-math-v1",
+  "questions": [
+    {
+      "id": "2021-cn-math-new-gaokao-1:q001",
+      "subject": "math",
+      "stem": "设集合 \\(A=\\{x\\mid -2<x<4\\}\\)，\\(B=\\{2,3,4,5\\}\\)，则 \\(A\\cap B=\\)（\\quad）",
+      "options": {
+        "A": "\\(\\{2\\}\\)",
+        "B": "\\(\\{2,3\\}\\)",
+        "C": "\\(\\{3,4\\}\\)",
+        "D": "\\(\\{2,3,4\\}\\)"
+      },
+      "formulas": [
+        "A=\\{x\\mid -2<x<4\\}",
+        "B=\\{2,3,4,5\\}",
+        "A\\cap B=",
+        "\\{2\\}",
+        "\\{2,3\\}",
+        "\\{3,4\\}",
+        "\\{2,3,4\\}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "设集合 \\(A=\\{x\\mid -2<x<4\\}\\)，\\(B=\\{2,3,4,5\\}\\)，则 \\(A\\cap B=\\)（\\quad）\n\n\\choices\n    {\\(\\{2\\}\\)}\n    {\\(\\{2,3\\}\\)}\n    {\\(\\{3,4\\}\\)}\n    {\\(\\{2,3,4\\}\\)}",
+      "content_sha256": "53b00ad652298d8b74c66c096b18f834654a66c9fa2c0050a697a72e48ef81c2",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q001",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q001",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 1,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "a33a5837004ad77faa072e7cea2b24aa30adb0e477458f7c74d93365758092af",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 5,
+          "end": 13,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q001:answer",
+      "topic_flags": [
+        "集合与复数"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q001",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q001:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q001",
+        "question_id": "2021-cn-math-new-gaokao-1:q001",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 15,
+            "end": 17
+          }
+        ],
+        "question_version_sha256": "a33a5837004ad77faa072e7cea2b24aa30adb0e477458f7c74d93365758092af",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q001",
+        "base_version_sha256": "a33a5837004ad77faa072e7cea2b24aa30adb0e477458f7c74d93365758092af",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "B",
+        "solution": "集合 B 中只有 2 和 3 严格位于 (−2,4) 内，故交集为 {2,3}。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "a33a5837004ad77faa072e7cea2b24aa30adb0e477458f7c74d93365758092af",
+        "reference_answer": "B",
+        "explanation": "集合 B 中只有 2 和 3 严格位于 (−2,4) 内，故交集为 {2,3}。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q002",
+      "subject": "math",
+      "stem": "已知 \\(z=2-i\\)，则 \\(z\\left( \\overline{z}+i \\right)=\\)（\\quad）",
+      "options": {
+        "A": "\\(6-2i\\)",
+        "B": "\\(4-2i\\)",
+        "C": "\\(6+2i\\)",
+        "D": "\\(4+2i\\)"
+      },
+      "formulas": [
+        "z=2-i",
+        "z\\left( \\overline{z}+i \\right)=",
+        "6-2i",
+        "4-2i",
+        "6+2i",
+        "4+2i"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(z=2-\\i\\)，则 \\(z\\left( \\overline{z}+\\i \\right)=\\)（\\quad）\n\n\\choices\n    {\\(6-2\\i\\)}\n    {\\(4-2\\i\\)}\n    {\\(6+2\\i\\)}\n    {\\(4+2\\i\\)}",
+      "content_sha256": "befd699efa91f28d640c103b34898d4730e033a2e0638679b8ad158a29740b42",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q002",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q002",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 2,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "b98d412662951e604241c292dfd9ae5e2221fb5f7f5a671d703e327245f8480a",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 19,
+          "end": 27,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q002:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q002",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q002:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q002",
+        "question_id": "2021-cn-math-new-gaokao-1:q002",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 29,
+            "end": 31
+          }
+        ],
+        "question_version_sha256": "b98d412662951e604241c292dfd9ae5e2221fb5f7f5a671d703e327245f8480a",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q002",
+        "base_version_sha256": "b98d412662951e604241c292dfd9ae5e2221fb5f7f5a671d703e327245f8480a",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "C",
+        "solution": "z 的共轭为 2+i，故 z(z̄+i)=(2−i)(2+2i)=6+2i。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "b98d412662951e604241c292dfd9ae5e2221fb5f7f5a671d703e327245f8480a",
+        "reference_answer": "C",
+        "explanation": "z 的共轭为 2+i，故 z(z̄+i)=(2−i)(2+2i)=6+2i。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q003",
+      "subject": "math",
+      "stem": "已知圆锥的底面半径为 \\(\\sqrt{2}\\)，其侧面展开图为一个半圆，则该圆锥的母线长为（\\quad）",
+      "options": {
+        "A": "\\(2\\)",
+        "B": "\\(2\\sqrt{2}\\)",
+        "C": "\\(4\\)",
+        "D": "\\(4\\sqrt{2}\\)"
+      },
+      "formulas": [
+        "\\sqrt{2}",
+        "2",
+        "2\\sqrt{2}",
+        "4",
+        "4\\sqrt{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知圆锥的底面半径为 \\(\\sqrt{2}\\)，其侧面展开图为一个半圆，则该圆锥的母线长为（\\quad）\n\n\\choices\n    {\\(2\\)}\n    {\\(2\\sqrt{2}\\)}\n    {\\(4\\)}\n    {\\(4\\sqrt{2}\\)}",
+      "content_sha256": "62eced4cb366fb76a98d9cc1adabdc0a595b10e55e8fa8fcd42df9c562dfd19e",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q003",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q003",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 3,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "95fb1d22eef5fe5f67f274f397fc9013f151be553813301659df05c2bd1528e7",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 33,
+          "end": 41,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q003:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q003",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q003:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q003",
+        "question_id": "2021-cn-math-new-gaokao-1:q003",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 43,
+            "end": 45
+          }
+        ],
+        "question_version_sha256": "95fb1d22eef5fe5f67f274f397fc9013f151be553813301659df05c2bd1528e7",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q003",
+        "base_version_sha256": "95fb1d22eef5fe5f67f274f397fc9013f151be553813301659df05c2bd1528e7",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "B",
+        "solution": "设母线长为 l。展开半圆的弧长等于底面圆周长，所以 πl=2π√2，得 l=2√2。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "95fb1d22eef5fe5f67f274f397fc9013f151be553813301659df05c2bd1528e7",
+        "reference_answer": "B",
+        "explanation": "设母线长为 l。展开半圆的弧长等于底面圆周长，所以 πl=2π√2，得 l=2√2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q004",
+      "subject": "math",
+      "stem": "下列区间中，函数 \\(f(x)=7\\sin\\left( x-\\frac{\\pi}{6}\\right)\\) 单调递增的区间是（\\quad）",
+      "options": {
+        "A": "\\(\\left( 0,\\frac{\\pi}{2}\\right)\\)",
+        "B": "\\(\\left( \\frac{\\pi}{2},\\pi\\right)\\)",
+        "C": "\\(\\left( \\pi,\\frac{3\\pi}{2}\\right)\\)",
+        "D": "\\(\\left( \\frac{3\\pi}{2},2\\pi\\right)\\)"
+      },
+      "formulas": [
+        "f(x)=7\\sin\\left( x-\\frac{\\pi}{6}\\right)",
+        "\\left( 0,\\frac{\\pi}{2}\\right)",
+        "\\left( \\frac{\\pi}{2},\\pi\\right)",
+        "\\left( \\pi,\\frac{3\\pi}{2}\\right)",
+        "\\left( \\frac{3\\pi}{2},2\\pi\\right)"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "下列区间中，函数 \\(f(x)=7\\sin\\left( x-\\frac{\\pi}{6}\\right)\\) 单调递增的区间是（\\quad）\n\n\\choices\n    {\\(\\left( 0,\\frac{\\pi}{2}\\right)\\)}\n    {\\(\\left( \\frac{\\pi}{2},\\pi\\right)\\)}\n    {\\(\\left( \\pi,\\frac{3\\pi}{2}\\right)\\)}\n    {\\(\\left( \\frac{3\\pi}{2},2\\pi\\right)\\)}",
+      "content_sha256": "ae07248c805baaa91b463b78b81cc8f6d4b8c8018163378d8750bbfecadd9898",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q004",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q004",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 4,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "c38a91358125e203f05df98ad96950e644f1ea04a3363410e5a75198749ac15a",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 47,
+          "end": 55,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q004:answer",
+      "topic_flags": [
+        "函数与导数",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q004",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q004:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q004",
+        "question_id": "2021-cn-math-new-gaokao-1:q004",
+        "reference_answer": "A",
+        "explanation": null,
+        "raw_answer_latex": "A",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 57,
+            "end": 59
+          }
+        ],
+        "question_version_sha256": "c38a91358125e203f05df98ad96950e644f1ea04a3363410e5a75198749ac15a",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q004",
+        "base_version_sha256": "c38a91358125e203f05df98ad96950e644f1ea04a3363410e5a75198749ac15a",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "A",
+        "solution": "f′(x)=7cos(x−π/6)，在 (−π/3+2kπ,2π/3+2kπ) 为正。四项中只有 (0,π/2) 完全在一个递增区间内。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "c38a91358125e203f05df98ad96950e644f1ea04a3363410e5a75198749ac15a",
+        "reference_answer": "A",
+        "explanation": "f′(x)=7cos(x−π/6)，在 (−π/3+2kπ,2π/3+2kπ) 为正。四项中只有 (0,π/2) 完全在一个递增区间内。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q005",
+      "subject": "math",
+      "stem": "已知 \\(F_1\\)，\\(F_2\\) 是椭圆 \\(C:\\frac{x^2}{9}+\\frac{y^2}{4}=1\\) 的两个焦点，点 \\(M\\) 在 \\(C\\) 上，则 \\(|MF_1|\\cdot|MF_2|\\) 的最大值为（\\quad）",
+      "options": {
+        "A": "\\(13\\)",
+        "B": "\\(12\\)",
+        "C": "\\(9\\)",
+        "D": "\\(6\\)"
+      },
+      "formulas": [
+        "F_1",
+        "F_2",
+        "C:\\frac{x^2}{9}+\\frac{y^2}{4}=1",
+        "M",
+        "C",
+        "|MF_1|\\cdot|MF_2|",
+        "13",
+        "12",
+        "9",
+        "6"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(F_1\\)，\\(F_2\\) 是椭圆 \\(C:\\frac{x^2}{9}+\\frac{y^2}{4}=1\\) 的两个焦点，点 \\(M\\) 在 \\(C\\) 上，则 \\(|MF_1|\\cdot|MF_2|\\) 的最大值为（\\quad）\n\n\\choices\n    {\\(13\\)}\n    {\\(12\\)}\n    {\\(9\\)}\n    {\\(6\\)}",
+      "content_sha256": "75a90547f2bf2ebe5454f6bc190ed077f7f6a10f1984c8d330f32206c6094448",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q005",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q005",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 5,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 61,
+          "end": 69,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q005:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q005",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q005:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q005",
+        "question_id": "2021-cn-math-new-gaokao-1:q005",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 71,
+            "end": 73
+          }
+        ],
+        "question_version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q005",
+        "base_version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "逐项核对所列条件、公式及设问；答案重解为独立 AI 推导。",
+        "topic": "解析几何",
+        "deep_analysis": {
+          "knowledge": "椭圆焦半径；均值不等式",
+          "methods": "不变量、等号可达性",
+          "competencies": "直观想象与逻辑推理",
+          "condition_design": "不显式给坐标，取遍椭圆",
+          "breakthrough": "先锁住焦距和而非联立坐标",
+          "solution_path": "椭圆定义给焦距之和6，乘积至多9，短轴端点恰达等号。",
+          "computation": "低，和定积最值",
+          "misconception": "仅写上界未定位等号点",
+          "integration": "轨迹定义与代数不等式",
+          "context": "纯几何",
+          "progression": "单问",
+          "difficulty": "基础至中低，方法选择比运算重要",
+          "related": "2024Ⅰ16面积条件由几何转入两条平行直线",
+          "design_value": "利用定义降维后检查可达性"
+        },
+        "result": "C",
+        "solution": "椭圆定义给焦距之和6，乘积至多9，短轴端点恰达等号。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+        "reference_answer": "C",
+        "explanation": "椭圆定义给焦距之和6，乘积至多9，短轴端点恰达等号。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "椭圆焦半径；均值不等式",
+        "methods": "不变量、等号可达性",
+        "competencies": "直观想象与逻辑推理",
+        "condition_design": "不显式给坐标，取遍椭圆",
+        "breakthrough": "先锁住焦距和而非联立坐标",
+        "solution_path": "椭圆定义给焦距之和6，乘积至多9，短轴端点恰达等号。",
+        "computation": "低，和定积最值",
+        "misconception": "仅写上界未定位等号点",
+        "integration": "轨迹定义与代数不等式",
+        "context": "纯几何",
+        "progression": "单问",
+        "difficulty": "基础至中低，方法选择比运算重要",
+        "related": "2024Ⅰ16面积条件由几何转入两条平行直线",
+        "design_value": "利用定义降维后检查可达性",
+        "version_sha256": "6ee4fd4dd941a0d7af62e52abe27fcc35b6388a9af19e46899e724aeb7fe37c0",
+        "evidence": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q006",
+      "subject": "math",
+      "stem": "若 \\(\\tan\\theta=-2\\)，则 \\(\\dfrac{\\sin\\theta\\left( 1+\\sin2\\theta \\right)}{\\sin\\theta+\\cos\\theta}=\\)（\\quad）",
+      "options": {
+        "A": "\\(-\\dfrac{6}{5}\\)",
+        "B": "\\(-\\dfrac{2}{5}\\)",
+        "C": "\\(\\dfrac{2}{5}\\)",
+        "D": "\\(\\dfrac{6}{5}\\)"
+      },
+      "formulas": [
+        "\\tan\\theta=-2",
+        "\\dfrac{\\sin\\theta\\left( 1+\\sin2\\theta \\right)}{\\sin\\theta+\\cos\\theta}=",
+        "-\\dfrac{6}{5}",
+        "-\\dfrac{2}{5}",
+        "\\dfrac{2}{5}",
+        "\\dfrac{6}{5}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若 \\(\\tan\\theta=-2\\)，则 \\(\\dfrac{\\sin\\theta\\left( 1+\\sin2\\theta \\right)}{\\sin\\theta+\\cos\\theta}=\\)（\\quad）\n\n\\choices\n    {\\(-\\dfrac{6}{5}\\)}\n    {\\(-\\dfrac{2}{5}\\)}\n    {\\(\\dfrac{2}{5}\\)}\n    {\\(\\dfrac{6}{5}\\)}",
+      "content_sha256": "2fee1b5920ef830a3d61fb98ce77d4a10912ca1162f38246d731ac34f8d52aa6",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q006",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q006",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 6,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "db46e8ec87dcba6e7d54cd678c80736b3c87d418c6a04a78d5a9ecdc11363aa5",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 75,
+          "end": 83,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q006:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q006",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q006:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q006",
+        "question_id": "2021-cn-math-new-gaokao-1:q006",
+        "reference_answer": "C",
+        "explanation": null,
+        "raw_answer_latex": "C",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 85,
+            "end": 87
+          }
+        ],
+        "question_version_sha256": "db46e8ec87dcba6e7d54cd678c80736b3c87d418c6a04a78d5a9ecdc11363aa5",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q006",
+        "base_version_sha256": "db46e8ec87dcba6e7d54cd678c80736b3c87d418c6a04a78d5a9ecdc11363aa5",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "C",
+        "solution": "由 tanθ=−2 得 sin 2θ=2tanθ/(1+tan²θ)=−4/5，而 sinθ/(sinθ+cosθ)=tanθ/(tanθ+1)=2。两因子相乘得 2/5。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "db46e8ec87dcba6e7d54cd678c80736b3c87d418c6a04a78d5a9ecdc11363aa5",
+        "reference_answer": "C",
+        "explanation": "由 tanθ=−2 得 sin 2θ=2tanθ/(1+tan²θ)=−4/5，而 sinθ/(sinθ+cosθ)=tanθ/(tanθ+1)=2。两因子相乘得 2/5。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q007",
+      "subject": "math",
+      "stem": "若过点 \\((a,b)\\) 可以作曲线 \\(y=e^x\\) 的两条切线，则（\\quad）",
+      "options": {
+        "A": "\\(e^b<a\\)",
+        "B": "\\(e^a<b\\)",
+        "C": "\\(0<a<e^b\\)",
+        "D": "\\(0<b<e^a\\)"
+      },
+      "formulas": [
+        "(a,b)",
+        "y=e^x",
+        "e^b<a",
+        "e^a<b",
+        "0<a<e^b",
+        "0<b<e^a"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "若过点 \\((a,b)\\) 可以作曲线 \\(y=\\e^x\\) 的两条切线，则（\\quad）\n\n\\choices\n    {\\(\\e^b<a\\)}\n    {\\(\\e^a<b\\)}\n    {\\(0<a<\\e^b\\)}\n    {\\(0<b<\\e^a\\)}",
+      "content_sha256": "3f6fb24c0da407a34e22e3bfe676ffda679a80a1451eba27d49954797727480e",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q007",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q007",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 7,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "ffa81c06599efc4e67427c8686501ca52f3fe98efa58b117b228257a28b51adb",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 89,
+          "end": 97,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q007:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q007",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q007:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q007",
+        "question_id": "2021-cn-math-new-gaokao-1:q007",
+        "reference_answer": "D",
+        "explanation": null,
+        "raw_answer_latex": "D",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 99,
+            "end": 101
+          }
+        ],
+        "question_version_sha256": "ffa81c06599efc4e67427c8686501ca52f3fe98efa58b117b228257a28b51adb",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q007",
+        "base_version_sha256": "ffa81c06599efc4e67427c8686501ca52f3fe98efa58b117b228257a28b51adb",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "逐项核对所列条件、公式及设问；答案重解为独立 AI 推导。",
+        "topic": "导数",
+        "deep_analysis": {
+          "knowledge": "指数曲线切线条数；单调分支",
+          "methods": "参数化切点、水平线交点计数",
+          "competencies": "数学抽象、逻辑推理",
+          "condition_design": "以外点而非切点给条件",
+          "breakthrough": "将切线存在性转为一元图像水平截线",
+          "solution_path": "以t为切点横坐标。切线经过(a,b)等价于b=e^t(1+a−t)，右端先增后减，峰值e^a，左极限0且从正侧逼近，右极限负无穷；恰有两解当且仅当0<b<e^a。",
+          "computation": "中低，导数简单但边界多",
+          "misconception": "把左极限0计入双切线",
+          "integration": "导数与几何切线",
+          "context": "纯函数",
+          "progression": "单问，切点消去后分支计数",
+          "difficulty": "中档，边界开闭不可省略",
+          "related": "2022Ⅰ15也从切线转根数，但后者消元得二次式",
+          "design_value": "同一外点的两条切线适合训练量词"
+        },
+        "result": "D",
+        "solution": "以t为切点横坐标。切线经过(a,b)等价于b=e^t(1+a−t)，右端先增后减，峰值e^a，左极限0且从正侧逼近，右极限负无穷；恰有两解当且仅当0<b<e^a。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "ffa81c06599efc4e67427c8686501ca52f3fe98efa58b117b228257a28b51adb",
+        "reference_answer": "D",
+        "explanation": "以t为切点横坐标。切线经过(a,b)等价于b=e^t(1+a−t)，右端先增后减，峰值e^a，左极限0且从正侧逼近，右极限负无穷；恰有两解当且仅当0<b<e^a。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "指数曲线切线条数；单调分支",
+        "methods": "参数化切点、水平线交点计数",
+        "competencies": "数学抽象、逻辑推理",
+        "condition_design": "以外点而非切点给条件",
+        "breakthrough": "将切线存在性转为一元图像水平截线",
+        "solution_path": "以t为切点横坐标。切线经过(a,b)等价于b=e^t(1+a−t)，右端先增后减，峰值e^a，左极限0且从正侧逼近，右极限负无穷；恰有两解当且仅当0<b<e^a。",
+        "computation": "中低，导数简单但边界多",
+        "misconception": "把左极限0计入双切线",
+        "integration": "导数与几何切线",
+        "context": "纯函数",
+        "progression": "单问，切点消去后分支计数",
+        "difficulty": "中档，边界开闭不可省略",
+        "related": "2022Ⅰ15也从切线转根数，但后者消元得二次式",
+        "design_value": "同一外点的两条切线适合训练量词",
+        "version_sha256": "ffa81c06599efc4e67427c8686501ca52f3fe98efa58b117b228257a28b51adb",
+        "evidence": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q008",
+      "subject": "math",
+      "stem": "有 \\(6\\) 个相同的球，分别标有数字 \\(1\\)，\\(2\\)，\\(3\\)，\\(4\\)，\\(5\\)，\\(6\\)，从中有放回地随机取两次，每次取 \\(1\\) 个球，甲表示事件“第一次取出的球的数字是 \\(1\\)”，乙表示事件“第二次取出的球的数字是 \\(2\\)”，丙表示事件“两次取出的球的数字之和是 \\(8\\)”，丁表示事件“两次取出的球的数字之和是 \\(7\\)”，则（\\quad）",
+      "options": {
+        "A": "甲与丙相互独立",
+        "B": "甲与丁相互独立",
+        "C": "乙与丙相互独立",
+        "D": "丙与丁相互独立"
+      },
+      "formulas": [
+        "6",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "1",
+        "1",
+        "2",
+        "8",
+        "7"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "有 \\(6\\) 个相同的球，分别标有数字 \\(1\\)，\\(2\\)，\\(3\\)，\\(4\\)，\\(5\\)，\\(6\\)，从中有放回地随机取两次，每次取 \\(1\\) 个球，甲表示事件“第一次取出的球的数字是 \\(1\\)”，乙表示事件“第二次取出的球的数字是 \\(2\\)”，丙表示事件“两次取出的球的数字之和是 \\(8\\)”，丁表示事件“两次取出的球的数字之和是 \\(7\\)”，则（\\quad）\n\n\\choices\n    {甲与丙相互独立}\n    {甲与丁相互独立}\n    {乙与丙相互独立}\n    {丙与丁相互独立}",
+      "content_sha256": "7860b6a0fbbde64a163d4cf1cb4789270ca990bc97ea17da07c4c0bc1758a22d",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q008",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q008",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 8,
+      "kind": "single_choice",
+      "points": 5,
+      "version_sha256": "9cd70f766b37b6b42bbe7bef13a6e298eb17d0a53a6fd0be8c78fcc6fb8c80b3",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 103,
+          "end": 111,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q008:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q008",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q008:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q008",
+        "question_id": "2021-cn-math-new-gaokao-1:q008",
+        "reference_answer": "B",
+        "explanation": null,
+        "raw_answer_latex": "B",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 113,
+            "end": 115
+          }
+        ],
+        "question_version_sha256": "9cd70f766b37b6b42bbe7bef13a6e298eb17d0a53a6fd0be8c78fcc6fb8c80b3",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q008",
+        "base_version_sha256": "9cd70f766b37b6b42bbe7bef13a6e298eb17d0a53a6fd0be8c78fcc6fb8c80b3",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "B",
+        "solution": "36 个有序结果等可能。甲、乙各含 6 个结果，丙含 5 个、丁含 6 个。甲与丙交集为空。甲与丁交集只有 (1,6)，概率 1/36=(1/6)(1/6)。乙与丙交集只有 (6,2)，概率 1/36≠(1/6)(5/36)。丙、丁互斥且概率均正，故只有 B 对。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "9cd70f766b37b6b42bbe7bef13a6e298eb17d0a53a6fd0be8c78fcc6fb8c80b3",
+        "reference_answer": "B",
+        "explanation": "36 个有序结果等可能。甲、乙各含 6 个结果，丙含 5 个、丁含 6 个。甲与丙交集为空。甲与丁交集只有 (1,6)，概率 1/36=(1/6)(1/6)。乙与丙交集只有 (6,2)，概率 1/36≠(1/6)(5/36)。丙、丁互斥且概率均正，故只有 B 对。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q009",
+      "subject": "math",
+      "stem": "有一组样本数据 \\(x_1\\)，\\(x_2\\)，\\(\\dots\\)，\\(x_n\\)，由这组数据得到新样本数据 \\(y_1\\)，\\(y_2\\)，\\(\\dots\\)，\\(y_n\\)，其中 \\(y_i=x_i+c\\)（\\(i=1\\)，\\(2\\)，\\(\\dots\\)，\\(n\\)），\\(c\\) 为非零常数，则（\\quad）",
+      "options": {
+        "A": "两组样本数据的样本平均数相同",
+        "B": "两组样本数据的样本中位数相同",
+        "C": "两组样本数据的样本标准差相同",
+        "D": "两组样本数据的样本极差相同"
+      },
+      "formulas": [
+        "x_1",
+        "x_2",
+        "\\dots",
+        "x_n",
+        "y_1",
+        "y_2",
+        "\\dots",
+        "y_n",
+        "y_i=x_i+c",
+        "i=1",
+        "2",
+        "\\dots",
+        "n",
+        "c"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "有一组样本数据 \\(x_1\\)，\\(x_2\\)，\\(\\dots\\)，\\(x_n\\)，由这组数据得到新样本数据 \\(y_1\\)，\\(y_2\\)，\\(\\dots\\)，\\(y_n\\)，其中 \\(y_i=x_i+c\\)（\\(i=1\\)，\\(2\\)，\\(\\dots\\)，\\(n\\)），\\(c\\) 为非零常数，则（\\quad）\n\n\\choices\n    {两组样本数据的样本平均数相同}\n    {两组样本数据的样本中位数相同}\n    {两组样本数据的样本标准差相同}\n    {两组样本数据的样本极差相同}",
+      "content_sha256": "f37f41a97498975d278a8ab6ec3bc6a7e421cbbbec09feef89bbf9224187bcd2",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q009",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q009",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 9,
+      "kind": "multiple_choice",
+      "points": 5,
+      "version_sha256": "495fc5fe19290795000d45885105fe31a180ae945a13134af5e4578ae988f360",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 119,
+          "end": 127,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q009:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q009",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q009:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q009",
+        "question_id": "2021-cn-math-new-gaokao-1:q009",
+        "reference_answer": "CD",
+        "explanation": null,
+        "raw_answer_latex": "CD",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 129,
+            "end": 131
+          }
+        ],
+        "question_version_sha256": "495fc5fe19290795000d45885105fe31a180ae945a13134af5e4578ae988f360",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q009",
+        "base_version_sha256": "495fc5fe19290795000d45885105fe31a180ae945a13134af5e4578ae988f360",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "CD",
+        "solution": "给每项加非零常数 c 后，均值与中位数都增加 c。各项与均值的差不变，所以标准差不变。最大值与最小值均增加 c，所以极差不变。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "495fc5fe19290795000d45885105fe31a180ae945a13134af5e4578ae988f360",
+        "reference_answer": "CD",
+        "explanation": "给每项加非零常数 c 后，均值与中位数都增加 c。各项与均值的差不变，所以标准差不变。最大值与最小值均增加 c，所以极差不变。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q010",
+      "subject": "math",
+      "stem": "已知 \\(O\\) 为坐标原点，点 \\(P_1=\\left( \\cos\\alpha,\\sin\\alpha \\right)\\)，\\(P_2=\\left( \\cos\\beta,-\\sin\\beta \\right)\\)，\\(P_3=\\left( \\cos\\left( \\alpha+\\beta \\right),\\sin\\left( \\alpha+\\beta \\right) \\right)\\)，\\(A(1,0)\\)，则（\\quad）",
+      "options": {
+        "A": "\\(|OP_1|=|OP_2|\\)",
+        "B": "\\(|AP_1|=|AP_2|\\)",
+        "C": "\\(\\overrightarrow{OA}\\cdot\\overrightarrow{OP_3}=\\overrightarrow{OP_1}\\cdot\\overrightarrow{OP_2}\\)",
+        "D": "\\(\\overrightarrow{OA}\\cdot\\overrightarrow{OP_1}=\\overrightarrow{OP_2}\\cdot\\overrightarrow{OP_3}\\)"
+      },
+      "formulas": [
+        "O",
+        "P_1=\\left( \\cos\\alpha,\\sin\\alpha \\right)",
+        "P_2=\\left( \\cos\\beta,-\\sin\\beta \\right)",
+        "P_3=\\left( \\cos\\left( \\alpha+\\beta \\right),\\sin\\left( \\alpha+\\beta \\right) \\right)",
+        "A(1,0)",
+        "|OP_1|=|OP_2|",
+        "|AP_1|=|AP_2|",
+        "\\overrightarrow{OA}\\cdot\\overrightarrow{OP_3}=\\overrightarrow{OP_1}\\cdot\\overrightarrow{OP_2}",
+        "\\overrightarrow{OA}\\cdot\\overrightarrow{OP_1}=\\overrightarrow{OP_2}\\cdot\\overrightarrow{OP_3}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(O\\) 为坐标原点，点 \\(P_1=\\left( \\cos\\alpha,\\sin\\alpha \\right)\\)，\\(P_2=\\left( \\cos\\beta,-\\sin\\beta \\right)\\)，\\(P_3=\\left( \\cos\\left( \\alpha+\\beta \\right),\\sin\\left( \\alpha+\\beta \\right) \\right)\\)，\\(A(1,0)\\)，则（\\quad）\n\n\\choices\n    {\\(|OP_1|=|OP_2|\\)}\n    {\\(|AP_1|=|AP_2|\\)}\n    {\\(\\overrightarrow{OA}\\cdot\\overrightarrow{OP_3}=\\overrightarrow{OP_1}\\cdot\\overrightarrow{OP_2}\\)}\n    {\\(\\overrightarrow{OA}\\cdot\\overrightarrow{OP_1}=\\overrightarrow{OP_2}\\cdot\\overrightarrow{OP_3}\\)}",
+      "content_sha256": "9a9801c042dd5167e0ea4e8011f02befab31a3146c6ecd31d82395d918dd5bd1",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q010",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q010",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 10,
+      "kind": "multiple_choice",
+      "points": 5,
+      "version_sha256": "1084f6b7b12b28f449c2a6608e4167788cc02e3ad80b8c7369ed5bf68efc2aa0",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 133,
+          "end": 141,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q010:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q010",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q010:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q010",
+        "question_id": "2021-cn-math-new-gaokao-1:q010",
+        "reference_answer": "AC",
+        "explanation": null,
+        "raw_answer_latex": "AC",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 143,
+            "end": 145
+          }
+        ],
+        "question_version_sha256": "1084f6b7b12b28f449c2a6608e4167788cc02e3ad80b8c7369ed5bf68efc2aa0",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q010",
+        "base_version_sha256": "1084f6b7b12b28f449c2a6608e4167788cc02e3ad80b8c7369ed5bf68efc2aa0",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "AC",
+        "solution": "P₁、P₂ 均在单位圆上，故 A 对。AP₁²=2−2cosα，AP₂²=2−2cosβ，一般不相等。OA·OP₃ 与 OP₁·OP₂ 均为 cos(α+β)。D 两侧分别为 cosα、cos(α+2β)，一般不相等。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "1084f6b7b12b28f449c2a6608e4167788cc02e3ad80b8c7369ed5bf68efc2aa0",
+        "reference_answer": "AC",
+        "explanation": "P₁、P₂ 均在单位圆上，故 A 对。AP₁²=2−2cosα，AP₂²=2−2cosβ，一般不相等。OA·OP₃ 与 OP₁·OP₂ 均为 cos(α+β)。D 两侧分别为 cosα、cos(α+2β)，一般不相等。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q011",
+      "subject": "math",
+      "stem": "已知点 \\(P\\) 在圆 \\(\\left( x-5 \\right)^2+\\left( y-5 \\right)^2=16\\) 上，点 \\(A(4,0)\\)，\\(B(0,2)\\)，则（\\quad）",
+      "options": {
+        "A": "点 \\(P\\) 到直线 \\(AB\\) 的距离小于 \\(10\\)",
+        "B": "点 \\(P\\) 到直线 \\(AB\\) 的距离大于 \\(2\\)",
+        "C": "当 \\(\\angle PBA\\) 最小时，\\(|PB|=3\\sqrt{2}\\)",
+        "D": "当 \\(\\angle PBA\\) 最大时，\\(|PB|=3\\sqrt{2}\\)"
+      },
+      "formulas": [
+        "P",
+        "\\left( x-5 \\right)^2+\\left( y-5 \\right)^2=16",
+        "A(4,0)",
+        "B(0,2)",
+        "P",
+        "AB",
+        "10",
+        "P",
+        "AB",
+        "2",
+        "\\angle PBA",
+        "|PB|=3\\sqrt{2}",
+        "\\angle PBA",
+        "|PB|=3\\sqrt{2}"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知点 \\(P\\) 在圆 \\(\\left( x-5 \\right)^2+\\left( y-5 \\right)^2=16\\) 上，点 \\(A(4,0)\\)，\\(B(0,2)\\)，则（\\quad）\n\n\\choices\n    {点 \\(P\\) 到直线 \\(AB\\) 的距离小于 \\(10\\)}\n    {点 \\(P\\) 到直线 \\(AB\\) 的距离大于 \\(2\\)}\n    {当 \\(\\angle PBA\\) 最小时，\\(|PB|=3\\sqrt{2}\\)}\n    {当 \\(\\angle PBA\\) 最大时，\\(|PB|=3\\sqrt{2}\\)}",
+      "content_sha256": "737f5e5b20ae4a17eadd2163acb4b796c978b30c5691fba66e9c395b86a95773",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q011",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q011",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 11,
+      "kind": "multiple_choice",
+      "points": 5,
+      "version_sha256": "6b805ec4250292fe8fa799a11be46725a92e6444ee1320da1e03126eaaaafacf",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 147,
+          "end": 155,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q011:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q011",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q011:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q011",
+        "question_id": "2021-cn-math-new-gaokao-1:q011",
+        "reference_answer": "ACD",
+        "explanation": null,
+        "raw_answer_latex": "ACD",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 157,
+            "end": 159
+          }
+        ],
+        "question_version_sha256": "6b805ec4250292fe8fa799a11be46725a92e6444ee1320da1e03126eaaaafacf",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q011",
+        "base_version_sha256": "6b805ec4250292fe8fa799a11be46725a92e6444ee1320da1e03126eaaaafacf",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "ACD",
+        "solution": "圆心 O=(5,5) 到 AB 即 x+2y−4=0 的距离为 11/√5。圆半径为 4，所以圆上点到 AB 的距离最小为 11/√5−4<2，最大为 11/√5+4<10。圆整个在 AB 的同一侧，故从 B 指向圆的射线方向的两个端点，对应 ∠PBA 的最小值与最大值，均为切线。切线长 √(BO²−16)=√(34−16)=3√2。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "6b805ec4250292fe8fa799a11be46725a92e6444ee1320da1e03126eaaaafacf",
+        "reference_answer": "ACD",
+        "explanation": "圆心 O=(5,5) 到 AB 即 x+2y−4=0 的距离为 11/√5。圆半径为 4，所以圆上点到 AB 的距离最小为 11/√5−4<2，最大为 11/√5+4<10。圆整个在 AB 的同一侧，故从 B 指向圆的射线方向的两个端点，对应 ∠PBA 的最小值与最大值，均为切线。切线长 √(BO²−16)=√(34−16)=3√2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q012",
+      "subject": "math",
+      "stem": "在正三棱柱 \\(ABC-A_1B_1C_1\\) 中，\\(AB=AA_1=1\\)，点 \\(P\\) 满足 \\(\\overrightarrow{BP}=\\lambda\\overrightarrow{BC}+\\mu\\overrightarrow{BB_1}\\)，其中 \\(\\lambda\\in[0,1]\\)，\\(\\mu\\in[0,1]\\)，则（\\quad）",
+      "options": {
+        "A": "当 \\(\\lambda=1\\) 时，\\(\\triangle AB_1P\\) 的周长为定值",
+        "B": "当 \\(\\mu=1\\) 时，三棱锥 \\(P-A_1BC\\) 的体积为定值",
+        "C": "当 \\(\\lambda=\\frac{1}{2}\\) 时，有且仅有一个点 \\(P\\)，使得 \\(A_1P\\perp BP\\)",
+        "D": "当 \\(\\mu=\\frac{1}{2}\\) 时，有且仅有一个点 \\(P\\)，使得 \\(A_1B\\perp\\) 平面 \\(AB_1P\\)"
+      },
+      "formulas": [
+        "ABC-A_1B_1C_1",
+        "AB=AA_1=1",
+        "P",
+        "\\overrightarrow{BP}=\\lambda\\overrightarrow{BC}+\\mu\\overrightarrow{BB_1}",
+        "\\lambda\\in[0,1]",
+        "\\mu\\in[0,1]",
+        "\\lambda=1",
+        "\\triangle AB_1P",
+        "\\mu=1",
+        "P-A_1BC",
+        "\\lambda=\\frac{1}{2}",
+        "P",
+        "A_1P\\perp BP",
+        "\\mu=\\frac{1}{2}",
+        "P",
+        "A_1B\\perp",
+        "AB_1P"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在正三棱柱 \\(ABC-A_1B_1C_1\\) 中，\\(AB=AA_1=1\\)，点 \\(P\\) 满足 \\(\\overrightarrow{BP}=\\lambda\\overrightarrow{BC}+\\mu\\overrightarrow{BB_1}\\)，其中 \\(\\lambda\\in[0,1]\\)，\\(\\mu\\in[0,1]\\)，则（\\quad）\n\n\\choices\n    {当 \\(\\lambda=1\\) 时，\\(\\triangle AB_1P\\) 的周长为定值}\n    {当 \\(\\mu=1\\) 时，三棱锥 \\(P-A_1BC\\) 的体积为定值}\n    {当 \\(\\lambda=\\frac{1}{2}\\) 时，有且仅有一个点 \\(P\\)，使得 \\(A_1P\\perp BP\\)}\n    {当 \\(\\mu=\\frac{1}{2}\\) 时，有且仅有一个点 \\(P\\)，使得 \\(A_1B\\perp\\) 平面 \\(AB_1P\\)}",
+      "content_sha256": "de64c69cda36db6ebbba31f0e81596788ea40fc7d3836460add550356ca90bda",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q012",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q012",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 12,
+      "kind": "multiple_choice",
+      "points": 5,
+      "version_sha256": "c681adf6d4172cc065dce5e0ddccce899c32ab3de39b9af2f8e7ca3310be0003",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 161,
+          "end": 169,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q012:answer",
+      "topic_flags": [
+        "立体几何",
+        "平面向量"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q012",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q012:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q012",
+        "question_id": "2021-cn-math-new-gaokao-1:q012",
+        "reference_answer": "BD",
+        "explanation": null,
+        "raw_answer_latex": "BD",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 171,
+            "end": 173
+          }
+        ],
+        "question_version_sha256": "c681adf6d4172cc065dce5e0ddccce899c32ab3de39b9af2f8e7ca3310be0003",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q012",
+        "base_version_sha256": "c681adf6d4172cc065dce5e0ddccce899c32ab3de39b9af2f8e7ca3310be0003",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "BD",
+        "solution": "取 B=(0,0,0)、C=(1,0,0)、A=(1/2,√3/2,0)、B₁=(0,0,1)，则 P=(λ,0,μ)。选项 A 中，在 μ=0 与 μ=1/2 时的 AP+B₁P 分别为 1+√2 与 √5，故周长不固定。B 当 μ=1 时，BCP 的面积恒为 1/2，A₁ 到其平面的距离恒为 √3/2，故体积恒为 √3/12。C 当 λ=1/2 时，BP·PA₁=μ(1−μ)，有 μ=0、1 两个解。D 中 A₁B·AB₁=0，且 μ=1/2 时 A₁B·AP=(1−λ)/2，仅 λ=1 满足。此时 AP、AB₁ 不共线，确立垂直平面。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "c681adf6d4172cc065dce5e0ddccce899c32ab3de39b9af2f8e7ca3310be0003",
+        "reference_answer": "BD",
+        "explanation": "取 B=(0,0,0)、C=(1,0,0)、A=(1/2,√3/2,0)、B₁=(0,0,1)，则 P=(λ,0,μ)。选项 A 中，在 μ=0 与 μ=1/2 时的 AP+B₁P 分别为 1+√2 与 √5，故周长不固定。B 当 μ=1 时，BCP 的面积恒为 1/2，A₁ 到其平面的距离恒为 √3/2，故体积恒为 √3/12。C 当 λ=1/2 时，BP·PA₁=μ(1−μ)，有 μ=0、1 两个解。D 中 A₁B·AB₁=0，且 μ=1/2 时 A₁B·AP=(1−λ)/2，仅 λ=1 满足。此时 AP、AB₁ 不共线，确立垂直平面。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q013",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=x^3\\left( a\\cdot 2^x-2^{-x} \\right)\\) 是偶函数，则 \\(a=________\\).",
+      "options": {},
+      "formulas": [
+        "f(x)=x^3\\left( a\\cdot 2^x-2^{-x} \\right)",
+        "a=________"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=x^3\\left( a\\cdot 2^x-2^{-x} \\right)\\) 是偶函数，则 \\(a=\\fillinblank{}\\).",
+      "content_sha256": "2083c4d22310215d4879792592a9211a7e5363ec34343449e4440752cf0a011e",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q013",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q013",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 13,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "b121b87854362ffbe3d4d87d7df384c424018196445e82564e600bd6c745665d",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 177,
+          "end": 179,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q013:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q013",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q013:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q013",
+        "question_id": "2021-cn-math-new-gaokao-1:q013",
+        "reference_answer": "1",
+        "explanation": null,
+        "raw_answer_latex": "1",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 181,
+            "end": 183
+          }
+        ],
+        "question_version_sha256": "b121b87854362ffbe3d4d87d7df384c424018196445e82564e600bd6c745665d",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q013",
+        "base_version_sha256": "b121b87854362ffbe3d4d87d7df384c424018196445e82564e600bd6c745665d",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面及所有选项或填空与原页相符，独立推导结果与第三方一致。",
+        "result": "1",
+        "solution": "由 f(x)=f(−x)，对任意 x≠0 可约去 x³，得 (a−1)(2^x+2^(−x))=0。括号中的指数和恒正，故 a=1。代回即为偶函数。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "b121b87854362ffbe3d4d87d7df384c424018196445e82564e600bd6c745665d",
+        "reference_answer": "1",
+        "explanation": "由 f(x)=f(−x)，对任意 x≠0 可约去 x³，得 (a−1)(2^x+2^(−x))=0。括号中的指数和恒正，故 a=1。代回即为偶函数。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q014",
+      "subject": "math",
+      "stem": "已知 \\(O\\) 为坐标原点，抛物线 \\(C:y^2=2px\\)（\\(p>0\\)）的焦点为 \\(F\\)，\\(P\\) 为 \\(C\\) 上一点，\\(PF\\) 与 \\(x\\) 轴垂直，\\(Q\\) 为 \\(x\\) 轴上一点，且 \\(PQ\\perp OP\\)，若 \\(|FQ|=6\\)，则 \\(C\\) 的准线方程为________.",
+      "options": {},
+      "formulas": [
+        "O",
+        "C:y^2=2px",
+        "p>0",
+        "F",
+        "P",
+        "C",
+        "PF",
+        "x",
+        "Q",
+        "x",
+        "PQ\\perp OP",
+        "|FQ|=6",
+        "C"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知 \\(O\\) 为坐标原点，抛物线 \\(C:y^2=2px\\)（\\(p>0\\)）的焦点为 \\(F\\)，\\(P\\) 为 \\(C\\) 上一点，\\(PF\\) 与 \\(x\\) 轴垂直，\\(Q\\) 为 \\(x\\) 轴上一点，且 \\(PQ\\perp OP\\)，若 \\(|FQ|=6\\)，则 \\(C\\) 的准线方程为\\fillinblank{}.",
+      "content_sha256": "1f5976b42ef6f44152b1b6ccecbc3e86a4a5beae290eccf14085a722da9dc457",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q014",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q014",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 14,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "c5204cf4c1661992625025f2cce391d296dd3774a802a090389a098386099da9",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 185,
+          "end": 187,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q014:answer",
+      "topic_flags": [
+        "解析几何"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q014",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q014:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q014",
+        "question_id": "2021-cn-math-new-gaokao-1:q014",
+        "reference_answer": "\\(x=-\\dfrac{3}{2}\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(x=-\\dfrac{3}{2}\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 189,
+            "end": 191
+          }
+        ],
+        "question_version_sha256": "c5204cf4c1661992625025f2cce391d296dd3774a802a090389a098386099da9",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q014",
+        "base_version_sha256": "c5204cf4c1661992625025f2cce391d296dd3774a802a090389a098386099da9",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "逐项核对所列条件、公式及设问；答案重解为独立 AI 推导。",
+        "topic": "解析几何",
+        "deep_analysis": {
+          "knowledge": "抛物线通径与准线、向量正交",
+          "methods": "对称、点积消元",
+          "competencies": "直观想象与数学运算",
+          "condition_design": "用焦点对齐及点积反推参数",
+          "breakthrough": "以焦点横坐标先锁定P",
+          "solution_path": "焦点F=(p/2,0)，P=(p/2,±p)。由正交得Q=(5p/2,0)，所以2p=6，准线x=−p/2。",
+          "computation": "低，代入一次与点积一次",
+          "misconception": "误用y²=4px的参数约定",
+          "integration": "标准方程、向量正交",
+          "context": "纯几何",
+          "progression": "单问",
+          "difficulty": "中低，注意p参数和±位置",
+          "related": "2020Ⅰ13也是焦点约束，但目标为弦长度",
+          "design_value": "条件组合使未知参数可线性恢复"
+        },
+        "result": "x=−3/2",
+        "solution": "焦点F=(p/2,0)，P=(p/2,±p)。由正交得Q=(5p/2,0)，所以2p=6，准线x=−p/2。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "c5204cf4c1661992625025f2cce391d296dd3774a802a090389a098386099da9",
+        "reference_answer": "x=−3/2",
+        "explanation": "焦点F=(p/2,0)，P=(p/2,±p)。由正交得Q=(5p/2,0)，所以2p=6，准线x=−p/2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "抛物线通径与准线、向量正交",
+        "methods": "对称、点积消元",
+        "competencies": "直观想象与数学运算",
+        "condition_design": "用焦点对齐及点积反推参数",
+        "breakthrough": "以焦点横坐标先锁定P",
+        "solution_path": "焦点F=(p/2,0)，P=(p/2,±p)。由正交得Q=(5p/2,0)，所以2p=6，准线x=−p/2。",
+        "computation": "低，代入一次与点积一次",
+        "misconception": "误用y²=4px的参数约定",
+        "integration": "标准方程、向量正交",
+        "context": "纯几何",
+        "progression": "单问",
+        "difficulty": "中低，注意p参数和±位置",
+        "related": "2020Ⅰ13也是焦点约束，但目标为弦长度",
+        "design_value": "条件组合使未知参数可线性恢复",
+        "version_sha256": "c5204cf4c1661992625025f2cce391d296dd3774a802a090389a098386099da9",
+        "evidence": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q015",
+      "subject": "math",
+      "stem": "函数 \\(f(x)=|2x-1|-2\\ln x\\) 的最小值为________.",
+      "options": {},
+      "formulas": [
+        "f(x)=|2x-1|-2\\ln x"
+      ],
+      "parts": [],
+      "subquestion_tree": [],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "函数 \\(f(x)=|2x-1|-2\\ln x\\) 的最小值为\\fillinblank{}.",
+      "content_sha256": "becb0f25c24cc9f9a808bcb91d09660dca31a1f3f46156f70744198746f7cd4d",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q015",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q015",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 15,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "5e8f524a3c9e750372eb6ff451c22ef6d0b8a6d7977757a3388c04f4ecc3a2b2",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 193,
+          "end": 195,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q015:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q015",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q015:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q015",
+        "question_id": "2021-cn-math-new-gaokao-1:q015",
+        "reference_answer": "1",
+        "explanation": null,
+        "raw_answer_latex": "1",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 197,
+            "end": 199
+          }
+        ],
+        "question_version_sha256": "5e8f524a3c9e750372eb6ff451c22ef6d0b8a6d7977757a3388c04f4ecc3a2b2",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q015",
+        "base_version_sha256": "5e8f524a3c9e750372eb6ff451c22ef6d0b8a6d7977757a3388c04f4ecc3a2b2",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "逐项核对所列条件、公式及设问；答案重解为独立 AI 推导。",
+        "topic": "导数",
+        "deep_analysis": {
+          "knowledge": "绝对值分段与最值",
+          "methods": "分段求导、折点检查",
+          "competencies": "逻辑推理与数学运算",
+          "condition_design": "非光滑点与驻点不重合",
+          "breakthrough": "分段符号一致处合并",
+          "solution_path": "x>0，绝对值在1/2分段；两段合起来在(0,1)递减，之后递增，f(1)=1。",
+          "computation": "低，两个导数表达式",
+          "misconception": "把绝对值折点直接当最小点",
+          "integration": "分段定义域与导数",
+          "context": "纯数学",
+          "progression": "单问",
+          "difficulty": "中低，必须检查折点",
+          "related": "2023Ⅰ19同样靠最小值，但需要再优化参数",
+          "design_value": "将分段点设计成候选而非答案"
+        },
+        "result": "1",
+        "solution": "x>0，绝对值在1/2分段；两段合起来在(0,1)递减，之后递增，f(1)=1。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "5e8f524a3c9e750372eb6ff451c22ef6d0b8a6d7977757a3388c04f4ecc3a2b2",
+        "reference_answer": "1",
+        "explanation": "x>0，绝对值在1/2分段；两段合起来在(0,1)递减，之后递增，f(1)=1。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "绝对值分段与最值",
+        "methods": "分段求导、折点检查",
+        "competencies": "逻辑推理与数学运算",
+        "condition_design": "非光滑点与驻点不重合",
+        "breakthrough": "分段符号一致处合并",
+        "solution_path": "x>0，绝对值在1/2分段；两段合起来在(0,1)递减，之后递增，f(1)=1。",
+        "computation": "低，两个导数表达式",
+        "misconception": "把绝对值折点直接当最小点",
+        "integration": "分段定义域与导数",
+        "context": "纯数学",
+        "progression": "单问",
+        "difficulty": "中低，必须检查折点",
+        "related": "2023Ⅰ19同样靠最小值，但需要再优化参数",
+        "design_value": "将分段点设计成候选而非答案",
+        "version_sha256": "5e8f524a3c9e750372eb6ff451c22ef6d0b8a6d7977757a3388c04f4ecc3a2b2",
+        "evidence": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q016",
+      "subject": "math",
+      "stem": "某校学生在研究民间剪纸艺术时，发现剪纸时经常会沿纸的某条对称轴把纸对折，规格为 \\(20\\text{ dm}\\times 12\\text{ dm}\\) 的长方形纸，对折 \\(1\\) 次共可以得到 \\(10\\text{ dm}\\times 12\\text{ dm}\\)，\\(20\\text{ dm}\\times 6\\text{ dm}\\) 两种规格的图形，它们的面积之和 \\(S_1=240\\text{ dm}^2\\)；对折 \\(2\\) 次共可以得到 \\(5\\text{ dm}\\times 12\\text{ dm}\\)，\\(10\\text{ dm}\\times 6\\text{ dm}\\)，\\(20\\text{ dm}\\times 3\\text{ dm}\\) 三种规格的图形，它们的面积之和 \\(S_2=180\\text{ dm}^2\\). 以此类推.\n\n\n\n（子项） 对折 \\(4\\) 次共可以得到不同规格图形的种数为________；\n\n（子项） 如果对折 \\(n\\) 次，那么 \\(\\sum_{k=1}^n S_k=________\\text{ dm}^2\\).",
+      "options": {},
+      "formulas": [
+        "20\\text{ dm}\\times 12\\text{ dm}",
+        "1",
+        "10\\text{ dm}\\times 12\\text{ dm}",
+        "20\\text{ dm}\\times 6\\text{ dm}",
+        "S_1=240\\text{ dm}^2",
+        "2",
+        "5\\text{ dm}\\times 12\\text{ dm}",
+        "10\\text{ dm}\\times 6\\text{ dm}",
+        "20\\text{ dm}\\times 3\\text{ dm}",
+        "S_2=180\\text{ dm}^2",
+        "4",
+        "n",
+        "\\sum_{k=1}^n S_k=________\\text{ dm}^2"
+      ],
+      "parts": [
+        "对折 \\(4\\) 次共可以得到不同规格图形的种数为________；",
+        "如果对折 \\(n\\) 次，那么 \\(\\sum_{k=1}^n S_k=________\\text{ dm}^2\\)."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "对折 \\(4\\) 次共可以得到不同规格图形的种数为________；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "如果对折 \\(n\\) 次，那么 \\(\\sum_{k=1}^n S_k=________\\text{ dm}^2\\)."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "某校学生在研究民间剪纸艺术时，发现剪纸时经常会沿纸的某条对称轴把纸对折，规格为 \\(20\\text{ dm}\\times 12\\text{ dm}\\) 的长方形纸，对折 \\(1\\) 次共可以得到 \\(10\\text{ dm}\\times 12\\text{ dm}\\)，\\(20\\text{ dm}\\times 6\\text{ dm}\\) 两种规格的图形，它们的面积之和 \\(S_1=240\\text{ dm}^2\\)；对折 \\(2\\) 次共可以得到 \\(5\\text{ dm}\\times 12\\text{ dm}\\)，\\(10\\text{ dm}\\times 6\\text{ dm}\\)，\\(20\\text{ dm}\\times 3\\text{ dm}\\) 三种规格的图形，它们的面积之和 \\(S_2=180\\text{ dm}^2\\). 以此类推.\n\n\\begin{enumerate}\n\\item 对折 \\(4\\) 次共可以得到不同规格图形的种数为\\fillinblank{}；\n\\item 如果对折 \\(n\\) 次，那么 \\(\\sum_{k=1}^n S_k=\\fillinblank{}\\text{ dm}^2\\).\n\\end{enumerate}",
+      "content_sha256": "cbd9c01bba6c95fb01c7475a0090cd0e0f79758249a67f53fe68068f12e3553d",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q016",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q016",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 16,
+      "kind": "fill_in",
+      "points": 5,
+      "version_sha256": "b9a73a88ad6176ad6ecc52a8f5ffd8c4b97812c0d3579142b1008c633b24978c",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 201,
+          "end": 208,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q016:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q016",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q016:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q016",
+        "question_id": "2021-cn-math-new-gaokao-1:q016",
+        "reference_answer": "\\(5\\)；\\(720-\\dfrac{15(n+3)}{2^{n-4}}\\)",
+        "explanation": null,
+        "raw_answer_latex": "\\(5\\)；\\(720-\\dfrac{15(n+3)}{2^{n-4}}\\)",
+        "raw_solution_latex": "",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "answer",
+            "start": 210,
+            "end": 212
+          }
+        ],
+        "question_version_sha256": "b9a73a88ad6176ad6ecc52a8f5ffd8c4b97812c0d3579142b1008c633b24978c",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "national_analysis": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q016",
+        "question_id": "2021-cn-math-new-gaokao-1:q016",
+        "version_sha256": "b9a73a88ad6176ad6ecc52a8f5ffd8c4b97812c0d3579142b1008c633b24978c",
+        "knowledge": {
+          "primary": [
+            "折纸图形的数列计数与面积求和"
+          ],
+          "secondary": []
+        },
+        "methods": [
+          "分类计数",
+          "递推",
+          "等比求和"
+        ],
+        "competencies": [
+          "逻辑推理",
+          "数学运算"
+        ],
+        "difficulty": {
+          "level": 3,
+          "basis": "纸张对折后不同规格数和面积和随次数变化；虽题干未直接出现数列二字，逐页阅读后补充数列思想标签，不能只靠关键词召回。",
+          "measurement": "AI content-based editorial judgment; not empirical"
+        },
+        "reasoning_observation": "纸张对折后不同规格数和面积和随次数变化；虽题干未直接出现数列二字，逐页阅读后补充数列思想标签，不能只靠关键词召回。",
+        "evidence": {
+          "tex": {
+            "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+            "start": 201,
+            "end": 208,
+            "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+          },
+          "pdf": {
+            "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+            "page": 1,
+            "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+          },
+          "source_ids": [
+            "dxathing-pinned",
+            "deekur-pinned"
+          ]
+        },
+        "model_version": "not_exposed_by_host",
+        "analysis_class": "limited_sample_observation",
+        "source_was_read": true,
+        "human_reviewed": false,
+        "formal_proof": false
+      },
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q016",
+        "base_version_sha256": "b9a73a88ad6176ad6ecc52a8f5ffd8c4b97812c0d3579142b1008c633b24978c",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "原页为一个题干中的两个填空，结构化分成两段，均保留。第三方的 15(n+3)/2^(n−4) 与 240(n+3)/2^n 等价。",
+        "result": "5；720−240(n+3)/2^n",
+        "solution": "若 k 次对折中有 j 次将原长方向减半，则长宽为 20/2^j 与 12/2^(k−j)，其中 j=0,…,k。因为 20/12 不是 2 的整数次幂，交换长宽也不会把两种方案合成同一规格，所以共有 k+1 种，k=4 时为 5。每种面积为 240/2^k，故 S_k=240(k+1)/2^k。利用 (k+1)/2^k=(k+2)/2^(k−1)−(k+3)/2^k 逐项相消，得和为 240[3−(n+3)/2^n]。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "b9a73a88ad6176ad6ecc52a8f5ffd8c4b97812c0d3579142b1008c633b24978c",
+        "reference_answer": "5；720−240(n+3)/2^n",
+        "explanation": "若 k 次对折中有 j 次将原长方向减半，则长宽为 20/2^j 与 12/2^(k−j)，其中 j=0,…,k。因为 20/12 不是 2 的整数次幂，交换长宽也不会把两种方案合成同一规格，所以共有 k+1 种，k=4 时为 5。每种面积为 240/2^k，故 S_k=240(k+1)/2^k。利用 (k+1)/2^k=(k+2)/2^(k−1)−(k+3)/2^k 逐项相消，得和为 240[3−(n+3)/2^n]。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q017",
+      "subject": "math",
+      "stem": "已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=1\\)，且\n\\(a_{n+1}=\\begin{cases}\na_n+1, & n\\text{为奇数},\\\\\na_n+2, & n\\text{为偶数}.\n\\end{cases}\\)\n\n\n\n（子项） 记 \\(b_n=a_{2n}\\)，写出 \\(b_1\\)，\\(b_2\\)，并求数列 \\(\\{b_n\\}\\) 的通项公式；\n\n（子项） 求 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和.",
+      "options": {},
+      "formulas": [
+        "\\{a_n\\}",
+        "a_1=1",
+        "a_{n+1}=\\begin{cases}\na_n+1, & n\\text{为奇数},\\\\\na_n+2, & n\\text{为偶数}.\n\\end{cases}",
+        "b_n=a_{2n}",
+        "b_1",
+        "b_2",
+        "\\{b_n\\}",
+        "\\{a_n\\}",
+        "20"
+      ],
+      "parts": [
+        "记 \\(b_n=a_{2n}\\)，写出 \\(b_1\\)，\\(b_2\\)，并求数列 \\(\\{b_n\\}\\) 的通项公式；",
+        "求 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "记 \\(b_n=a_{2n}\\)，写出 \\(b_1\\)，\\(b_2\\)，并求数列 \\(\\{b_n\\}\\) 的通项公式；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "求 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知数列 \\(\\{a_n\\}\\) 满足 \\(a_1=1\\)，且\n\\(a_{n+1}=\\begin{cases}\na_n+1, & n\\text{为奇数},\\\\\na_n+2, & n\\text{为偶数}.\n\\end{cases}\\)\n\n\\begin{enumerate}\n\\item 记 \\(b_n=a_{2n}\\)，写出 \\(b_1\\)，\\(b_2\\)，并求数列 \\(\\{b_n\\}\\) 的通项公式；\n\\item 求 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和.\n\\end{enumerate}",
+      "content_sha256": "6f96c42b3426259465b892946c683d4be26b68e6e39ab0d7ddb9073bbf1ce76e",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q017",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q017",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 17,
+      "kind": "constructed_response",
+      "points": 10,
+      "version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 216,
+          "end": 227,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q017:answer",
+      "topic_flags": [
+        "数列"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q017",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q017:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q017",
+        "question_id": "2021-cn-math-new-gaokao-1:q017",
+        "reference_answer": null,
+        "explanation": "（子项） 由题意，\\(a_1=1\\). 因为 \\(1\\) 为奇数，所以 \\(a_2=a_1+1=2\\)，即 \\(b_1=2\\). 因为 \\(2\\) 为偶数，所以 \\(a_3=a_2+2=4\\)；因为 \\(3\\) 为奇数，所以 \\(a_4=a_3+1=5\\)，即 \\(b_2=5\\). 对任意 \\(n\\ge1\\)，因为 \\(2n+1\\) 为奇数，\\(2n\\) 为偶数，所以 \\(a_{2n+2}=a_{2n+1}+1=(a_{2n}+2)+1=a_{2n}+3\\)，即 \\(b_{n+1}-b_n=3\\). 因此数列 \\(\\{b_n\\}\\) 是以 \\(b_1=2\\) 为首项，\\(3\\) 为公差的等差数列，其通项公式为 \\(b_n=2+3(n-1)=3n-1\\).\n \n（子项） 记 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和为 \\(S_{20}\\). 由（1）可知，对任意正整数 \\(k\\)，\\(a_{2k}=b_k=3k-1\\)，且 \\(a_{2k-1}=a_{2k}-1=b_k-1=3k-2\\). 从而 \\(a_{2k-1}+a_{2k}=(3k-2)+(3k-1)=6k-3\\). 于是 \\(S_{20}=\\sum_{k=1}^{10}(a_{2k-1}+a_{2k})=\\sum_{k=1}^{10}(6k-3)=6\\times\\dfrac{10\\times11}{2}-3\\times10=330-30=300\\). 所以 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和为 \\(300\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 由题意，\\(a_1=1\\). 因为 \\(1\\) 为奇数，所以 \\(a_2=a_1+1=2\\)，即 \\(b_1=2\\). 因为 \\(2\\) 为偶数，所以 \\(a_3=a_2+2=4\\)；因为 \\(3\\) 为奇数，所以 \\(a_4=a_3+1=5\\)，即 \\(b_2=5\\). 对任意 \\(n\\ge1\\)，因为 \\(2n+1\\) 为奇数，\\(2n\\) 为偶数，所以 \\(a_{2n+2}=a_{2n+1}+1=(a_{2n}+2)+1=a_{2n}+3\\)，即 \\(b_{n+1}-b_n=3\\). 因此数列 \\(\\{b_n\\}\\) 是以 \\(b_1=2\\) 为首项，\\(3\\) 为公差的等差数列，其通项公式为 \\(b_n=2+3(n-1)=3n-1\\).\n    \\item 记 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和为 \\(S_{20}\\). 由（1）可知，对任意正整数 \\(k\\)，\\(a_{2k}=b_k=3k-1\\)，且 \\(a_{2k-1}=a_{2k}-1=b_k-1=3k-2\\). 从而 \\(a_{2k-1}+a_{2k}=(3k-2)+(3k-1)=6k-3\\). 于是 \\(S_{20}=\\sum_{k=1}^{10}(a_{2k-1}+a_{2k})=\\sum_{k=1}^{10}(6k-3)=6\\times\\dfrac{10\\times11}{2}-3\\times10=330-30=300\\). 所以 \\(\\{a_n\\}\\) 的前 \\(20\\) 项和为 \\(300\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 229,
+            "end": 234
+          }
+        ],
+        "question_version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "national_analysis": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q017",
+        "question_id": "2021-cn-math-new-gaokao-1:q017",
+        "version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+        "knowledge": {
+          "primary": [
+            "奇偶分段递推"
+          ],
+          "secondary": [
+            "数列"
+          ]
+        },
+        "methods": [
+          "分类讨论",
+          "分组求和"
+        ],
+        "competencies": [
+          "逻辑推理",
+          "数学运算"
+        ],
+        "difficulty": {
+          "level": 2,
+          "basis": "奇偶下标的增量不同，先抽取偶子列，再合并奇偶子列求和；无需将它当作单一等差列。",
+          "measurement": "AI content-based editorial judgment; not empirical"
+        },
+        "reasoning_observation": "奇偶下标的增量不同，先抽取偶子列，再合并奇偶子列求和；无需将它当作单一等差列。",
+        "evidence": {
+          "tex": {
+            "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+            "start": 216,
+            "end": 227,
+            "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+          },
+          "pdf": {
+            "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+            "page": 1,
+            "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+          },
+          "source_ids": [
+            "dxathing-pinned",
+            "deekur-pinned"
+          ]
+        },
+        "model_version": "not_exposed_by_host",
+        "analysis_class": "limited_sample_observation",
+        "source_was_read": true,
+        "human_reviewed": false,
+        "formal_proof": false
+      },
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q017",
+        "base_version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "host_ai_visual_and_mathematical_review",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "逐项核对所列条件、公式及设问；答案重解为独立 AI 推导。",
+        "topic": "数列",
+        "deep_analysis": {
+          "knowledge": "奇偶递推及分组求和",
+          "methods": "步长合成、配对",
+          "competencies": "数学抽象与数学运算",
+          "condition_design": "单步增量随奇偶变化",
+          "breakthrough": "两步增量恒定",
+          "solution_path": "每两步固定增加3，偶下标项为3n−1，紧邻奇项为3n−2。十对和为Σ(6n−3)=300。",
+          "computation": "低至中，配对后线性",
+          "misconception": "把交替增量当原序列公差",
+          "integration": "递推和求和",
+          "context": "纯数学",
+          "progression": "先取子序列，再回到完整序列",
+          "difficulty": "中低，显式子问提供结构线索",
+          "related": "2022Ⅰ17也从非标准表示恢复递推",
+          "design_value": "适合比较显式奇偶分组与隐式状态恢复"
+        },
+        "result": "b_1=2，b_2=5，b_n=3n−1；S_20=300",
+        "solution": "每两步固定增加3，偶下标项为3n−1，紧邻奇项为3n−2。十对和为Σ(6n−3)=300。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+        "reference_answer": "b_1=2，b_2=5，b_n=3n−1；S_20=300",
+        "explanation": "每两步固定增加3，偶下标项为3n−1，紧邻奇项为3n−2。十对和为Σ(6n−3)=300。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "deep_analysis": {
+        "knowledge": "奇偶递推及分组求和",
+        "methods": "步长合成、配对",
+        "competencies": "数学抽象与数学运算",
+        "condition_design": "单步增量随奇偶变化",
+        "breakthrough": "两步增量恒定",
+        "solution_path": "每两步固定增加3，偶下标项为3n−1，紧邻奇项为3n−2。十对和为Σ(6n−3)=300。",
+        "computation": "低至中，配对后线性",
+        "misconception": "把交替增量当原序列公差",
+        "integration": "递推和求和",
+        "context": "纯数学",
+        "progression": "先取子序列，再回到完整序列",
+        "difficulty": "中低，显式子问提供结构线索",
+        "related": "2022Ⅰ17也从非标准表示恢复递推",
+        "design_value": "适合比较显式奇偶分组与隐式状态恢复",
+        "version_sha256": "a97464fdd69c48b4d961485888aefb1bcda3bbb68761ec50f6cf7694d0834ffd",
+        "evidence": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "human_reviewed": false,
+        "classification": "content_based_editorial_inference"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q018",
+      "subject": "math",
+      "stem": "某学校组织“一带一路”知识竞赛，有 A，B 两类问题，每位参加比赛的同学先在两类问题中选择一类并从中随机抽取一个问题回答，若回答错误则该同学比赛结束；若回答正确则从另一类问题中再随机抽取一个问题回答，无论回答正确与否，该同学比赛结束. A 类问题中的每个问题回答正确得 \\(20\\) 分，否则得 \\(0\\) 分；B 类问题中的每个问题回答正确得 \\(80\\) 分，否则得 \\(0\\) 分. 已知小明能正确回答 A 类问题的概率为 \\(0.8\\)，能正确回答 B 类问题的概率为 \\(0.6\\)，且能正确回答问题的概率与回答次序无关.\n\n\n\n（子项） 若小明先回答 \\(A\\) 类问题，记 \\(X\\) 为小明的累计得分，求 \\(X\\) 的分布列；\n\n（子项） 为使累计得分的期望最大，小明应选择先回答哪类问题？并说明理由.",
+      "options": {},
+      "formulas": [
+        "20",
+        "0",
+        "80",
+        "0",
+        "0.8",
+        "0.6",
+        "A",
+        "X",
+        "X"
+      ],
+      "parts": [
+        "若小明先回答 \\(A\\) 类问题，记 \\(X\\) 为小明的累计得分，求 \\(X\\) 的分布列；",
+        "为使累计得分的期望最大，小明应选择先回答哪类问题？并说明理由."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "若小明先回答 \\(A\\) 类问题，记 \\(X\\) 为小明的累计得分，求 \\(X\\) 的分布列；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "为使累计得分的期望最大，小明应选择先回答哪类问题？并说明理由."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "某学校组织“一带一路”知识竞赛，有 A，B 两类问题，每位参加比赛的同学先在两类问题中选择一类并从中随机抽取一个问题回答，若回答错误则该同学比赛结束；若回答正确则从另一类问题中再随机抽取一个问题回答，无论回答正确与否，该同学比赛结束. A 类问题中的每个问题回答正确得 \\(20\\) 分，否则得 \\(0\\) 分；B 类问题中的每个问题回答正确得 \\(80\\) 分，否则得 \\(0\\) 分. 已知小明能正确回答 A 类问题的概率为 \\(0.8\\)，能正确回答 B 类问题的概率为 \\(0.6\\)，且能正确回答问题的概率与回答次序无关.\n\n\\begin{enumerate}\n\\item 若小明先回答 \\(A\\) 类问题，记 \\(X\\) 为小明的累计得分，求 \\(X\\) 的分布列；\n\\item 为使累计得分的期望最大，小明应选择先回答哪类问题？并说明理由.\n\\end{enumerate}",
+      "content_sha256": "42ed5b71a5704d86fd5417e0a54bd9b7dcd17b54cebebe3cb2fe6865721a8793",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q018",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q018",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 18,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "e6408f43cc03969451c6b66f2c5176d4ac5a9af60696c6935cc94cf9e4dadb1b",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 236,
+          "end": 243,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q018:answer",
+      "topic_flags": [
+        "概率统计"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q018",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q018:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q018",
+        "question_id": "2021-cn-math-new-gaokao-1:q018",
+        "reference_answer": null,
+        "explanation": "（子项） 若小明先回答 A 类问题，小明的累计得分 \\(X\\) 的所有可能取值为 \\(0\\)，\\(20\\)，\\(100\\). 当小明回答 A 类问题错误时，比赛结束，此时 \\(X=0\\)，概率为 \\(P(X=0)=1-0.8=0.2\\)；当小明回答 A 类问题正确但回答 B 类问题错误时，比赛结束，此时 \\(X=20\\)，概率为 \\(P(X=20)=0.8\\times(1-0.6)=0.8\\times0.4=0.32\\)；当小明回答 A 类问题和 B 类问题均正确时，此时 \\(X=20+80=100\\)，概率为 \\(P(X=100)=0.8\\times0.6=0.48\\). 所以 \\(X\\) 的分布列为\n \n \\begin{tabular}{c|ccc}\n \\(X\\) & \\(0\\) & \\(20\\) & \\(100\\) \\\\\n \\hline\n \\(P\\) & \\(0.2\\) & \\(0.32\\) & \\(0.48\\)\n \\end{tabular}\n \n \n（子项） 小明应选择先回答 B 类问题. 理由如下：由（1）可知，若小明先回答 A 类问题，累计得分的数学期望为 \\(E(X)=0\\times0.2+20\\times0.32+100\\times0.48=6.4+48=54.4\\). 若小明先回答 B 类问题，记 \\(Y\\) 为小明的累计得分，则 \\(Y\\) 的可能取值为 \\(0\\)，\\(80\\)，\\(100\\). 此时 \\(P(Y=0)=1-0.6=0.4\\)，\\(P(Y=80)=0.6\\times(1-0.8)=0.12\\)，\\(P(Y=100)=0.6\\times0.8=0.48\\). 累计得分的数学期望为 \\(E(Y)=0\\times0.4+80\\times0.12+100\\times0.48=9.6+48=57.6\\). 因为 \\(E(Y)>E(X)\\)，所以为使累计得分的期望最大，小明应选择先回答 B 类问题.",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 若小明先回答 A 类问题，小明的累计得分 \\(X\\) 的所有可能取值为 \\(0\\)，\\(20\\)，\\(100\\). 当小明回答 A 类问题错误时，比赛结束，此时 \\(X=0\\)，概率为 \\(P(X=0)=1-0.8=0.2\\)；当小明回答 A 类问题正确但回答 B 类问题错误时，比赛结束，此时 \\(X=20\\)，概率为 \\(P(X=20)=0.8\\times(1-0.6)=0.8\\times0.4=0.32\\)；当小明回答 A 类问题和 B 类问题均正确时，此时 \\(X=20+80=100\\)，概率为 \\(P(X=100)=0.8\\times0.6=0.48\\). 所以 \\(X\\) 的分布列为\n    \\begin{center}\n    \\begin{tabular}{c|ccc}\n    \\(X\\) & \\(0\\) & \\(20\\) & \\(100\\) \\\\\n    \\hline\n    \\(P\\) & \\(0.2\\) & \\(0.32\\) & \\(0.48\\)\n    \\end{tabular}\n    \\end{center}\n    \\item 小明应选择先回答 B 类问题. 理由如下：由（1）可知，若小明先回答 A 类问题，累计得分的数学期望为 \\(E(X)=0\\times0.2+20\\times0.32+100\\times0.48=6.4+48=54.4\\). 若小明先回答 B 类问题，记 \\(Y\\) 为小明的累计得分，则 \\(Y\\) 的可能取值为 \\(0\\)，\\(80\\)，\\(100\\). 此时 \\(P(Y=0)=1-0.6=0.4\\)，\\(P(Y=80)=0.6\\times(1-0.8)=0.12\\)，\\(P(Y=100)=0.6\\times0.8=0.48\\). 累计得分的数学期望为 \\(E(Y)=0\\times0.4+80\\times0.12+100\\times0.48=9.6+48=57.6\\). 因为 \\(E(Y)>E(X)\\)，所以为使累计得分的期望最大，小明应选择先回答 B 类问题.\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 245,
+            "end": 257
+          }
+        ],
+        "question_version_sha256": "e6408f43cc03969451c6b66f2c5176d4ac5a9af60696c6935cc94cf9e4dadb1b",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q018",
+        "base_version_sha256": "e6408f43cc03969451c6b66f2c5176d4ac5a9af60696c6935cc94cf9e4dadb1b",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面、各小问与原页相符，独立推导结果与第三方一致。",
+        "result": "（1）X=0,20,100 的概率分别为 0.2,0.32,0.48；（2）先答 B 类",
+        "solution": "先答 A 时，首题错、首题对且次题错、两题均对的概率依次为 0.2、0.8×0.4=0.32、0.8×0.6=0.48，得分依次为 0、20、100，期望 54.4。先答 B 时相应概率为 0.4、0.6×0.2=0.12、0.6×0.8=0.48，得分为 0、80、100，期望 57.6，因此先答 B。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "e6408f43cc03969451c6b66f2c5176d4ac5a9af60696c6935cc94cf9e4dadb1b",
+        "reference_answer": "（1）X=0,20,100 的概率分别为 0.2,0.32,0.48；（2）先答 B 类",
+        "explanation": "先答 A 时，首题错、首题对且次题错、两题均对的概率依次为 0.2、0.8×0.4=0.32、0.8×0.6=0.48，得分依次为 0、20、100，期望 54.4。先答 B 时相应概率为 0.4、0.6×0.2=0.12、0.6×0.8=0.48，得分为 0、80、100，期望 57.6，因此先答 B。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q019",
+      "subject": "math",
+      "stem": "记 \\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\). 已知 \\(b^2=ac\\)，点 \\(D\\) 在边 \\(AC\\) 上，且 \\(BD\\sin\\angle ABC=a\\sin C\\).\n\n\n\n（子项） 证明：\\(BD=b\\)；\n\n（子项） 若 \\(AD=2DC\\)，求 \\(\\cos\\angle ABC\\).",
+      "options": {},
+      "formulas": [
+        "\\triangle ABC",
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c",
+        "b^2=ac",
+        "D",
+        "AC",
+        "BD\\sin\\angle ABC=a\\sin C",
+        "BD=b",
+        "AD=2DC",
+        "\\cos\\angle ABC"
+      ],
+      "parts": [
+        "证明：\\(BD=b\\)；",
+        "若 \\(AD=2DC\\)，求 \\(\\cos\\angle ABC\\)."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "证明：\\(BD=b\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(AD=2DC\\)，求 \\(\\cos\\angle ABC\\)."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "记 \\(\\triangle ABC\\) 的内角 \\(A\\)，\\(B\\)，\\(C\\) 的对边分别为 \\(a\\)，\\(b\\)，\\(c\\). 已知 \\(b^2=ac\\)，点 \\(D\\) 在边 \\(AC\\) 上，且 \\(BD\\sin\\angle ABC=a\\sin C\\).\n\n\\begin{enumerate}\n\\item 证明：\\(BD=b\\)；\n\\item 若 \\(AD=2DC\\)，求 \\(\\cos\\angle ABC\\).\n\\end{enumerate}",
+      "content_sha256": "b7fddda975ea7bca50b8a79111c1968da98408337d6efb7534492d3e3c2a06a2",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q019",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q019",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 19,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "1729b62e8dafdbc7ac0586eb3d9d4a1ede596d847913d533121cd9c69f83321c",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 259,
+          "end": 266,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q019:answer",
+      "topic_flags": [
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q019",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q019:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q019",
+        "question_id": "2021-cn-math-new-gaokao-1:q019",
+        "reference_answer": null,
+        "explanation": "（子项） 在 \\(\\triangle ABC\\) 中，由正弦定理得 \\(\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin\\angle ABC}=\\dfrac{c}{\\sin C}\\)，故 \\(a\\sin C=c\\sin A\\). 又由已知 \\(BD\\sin\\angle ABC=a\\sin C\\)，得 \\(BD=\\dfrac{a\\sin C}{\\sin\\angle ABC}=\\dfrac{c\\sin A}{\\sin\\angle ABC}=\\dfrac{ac}{b}\\). 因为 \\(b^2=ac\\)，所以 \\(BD=\\dfrac{b^2}{b}=b\\).\n \n（子项） 因为 \\(D\\) 在边 \\(AC\\) 上，且 \\(AD=2DC\\)，所以 \\(CD=\\dfrac13b\\)，\\(AD=\\dfrac23b\\). 设 \\(\\angle BDC=\\theta\\)，则 \\(\\angle BDA=\\pi-\\theta\\). 在 \\(\\triangle BDC\\) 中，由余弦定理得 \\(\\cos\\theta=\\dfrac{BD^2+CD^2-BC^2}{2BD\\cdot CD}=\\dfrac{b^2+\\frac19b^2-a^2}{2b\\cdot\\frac13b}=\\dfrac{5}{3}-\\dfrac{3a^2}{2b^2}\\). 在 \\(\\triangle BDA\\) 中，由余弦定理得 \\(\\cos(\\pi-\\theta)=\\dfrac{BD^2+AD^2-AB^2}{2BD\\cdot AD}=\\dfrac{b^2+\\frac49b^2-c^2}{2b\\cdot\\frac23b}=\\dfrac{13}{12}-\\dfrac{3c^2}{4b^2}\\). 因为 \\(\\cos(\\pi-\\theta)=-\\cos\\theta\\)，所以 \\(\\left(\\dfrac53-\\dfrac{3a^2}{2b^2}\\right)+\\left(\\dfrac{13}{12}-\\dfrac{3c^2}{4b^2}\\right)=0\\)，即 \\(\\dfrac{3a^2}{2b^2}+\\dfrac{3c^2}{4b^2}=\\dfrac{11}{4}\\)，化简得 \\(2a^2+c^2=\\dfrac{11}{3}b^2\\). 将 \\(b^2=ac\\) 代入，得 \\(6a^2-11ac+3c^2=0\\)，因式分解得 \\((2a-3c)(3a-c)=0\\). 若 \\(3a-c=0\\)，则 \\(c=3a\\)，\\(b=\\sqrt{ac}=\\sqrt3a\\)，在 \\(\\triangle BDC\\) 中，\\(BC=a\\)，\\(BD-CD=\\dfrac23b=\\dfrac{2\\sqrt3}{3}a>a=BC\\)，两边之差大于第三边，不满足三角形三边关系，舍去；故必有 \\(2a-3c=0\\)，即 \\(a=\\dfrac32c\\)，从而 \\(b^2=ac=\\dfrac32c^2\\). 由余弦定理得 \\(\\cos\\angle ABC=\\dfrac{a^2+c^2-b^2}{2ac}=\\dfrac{\\frac94c^2+c^2-\\frac32c^2}{2\\times\\frac32c\\times c}=\\dfrac{\\frac74}{3}=\\dfrac{7}{12}\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 在 \\(\\triangle ABC\\) 中，由正弦定理得 \\(\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin\\angle ABC}=\\dfrac{c}{\\sin C}\\)，故 \\(a\\sin C=c\\sin A\\). 又由已知 \\(BD\\sin\\angle ABC=a\\sin C\\)，得 \\(BD=\\dfrac{a\\sin C}{\\sin\\angle ABC}=\\dfrac{c\\sin A}{\\sin\\angle ABC}=\\dfrac{ac}{b}\\). 因为 \\(b^2=ac\\)，所以 \\(BD=\\dfrac{b^2}{b}=b\\).\n    \\item 因为 \\(D\\) 在边 \\(AC\\) 上，且 \\(AD=2DC\\)，所以 \\(CD=\\dfrac13b\\)，\\(AD=\\dfrac23b\\). 设 \\(\\angle BDC=\\theta\\)，则 \\(\\angle BDA=\\pi-\\theta\\). 在 \\(\\triangle BDC\\) 中，由余弦定理得 \\(\\cos\\theta=\\dfrac{BD^2+CD^2-BC^2}{2BD\\cdot CD}=\\dfrac{b^2+\\frac19b^2-a^2}{2b\\cdot\\frac13b}=\\dfrac{5}{3}-\\dfrac{3a^2}{2b^2}\\). 在 \\(\\triangle BDA\\) 中，由余弦定理得 \\(\\cos(\\pi-\\theta)=\\dfrac{BD^2+AD^2-AB^2}{2BD\\cdot AD}=\\dfrac{b^2+\\frac49b^2-c^2}{2b\\cdot\\frac23b}=\\dfrac{13}{12}-\\dfrac{3c^2}{4b^2}\\). 因为 \\(\\cos(\\pi-\\theta)=-\\cos\\theta\\)，所以 \\(\\left(\\dfrac53-\\dfrac{3a^2}{2b^2}\\right)+\\left(\\dfrac{13}{12}-\\dfrac{3c^2}{4b^2}\\right)=0\\)，即 \\(\\dfrac{3a^2}{2b^2}+\\dfrac{3c^2}{4b^2}=\\dfrac{11}{4}\\)，化简得 \\(2a^2+c^2=\\dfrac{11}{3}b^2\\). 将 \\(b^2=ac\\) 代入，得 \\(6a^2-11ac+3c^2=0\\)，因式分解得 \\((2a-3c)(3a-c)=0\\). 若 \\(3a-c=0\\)，则 \\(c=3a\\)，\\(b=\\sqrt{ac}=\\sqrt3a\\)，在 \\(\\triangle BDC\\) 中，\\(BC=a\\)，\\(BD-CD=\\dfrac23b=\\dfrac{2\\sqrt3}{3}a>a=BC\\)，两边之差大于第三边，不满足三角形三边关系，舍去；故必有 \\(2a-3c=0\\)，即 \\(a=\\dfrac32c\\)，从而 \\(b^2=ac=\\dfrac32c^2\\). 由余弦定理得 \\(\\cos\\angle ABC=\\dfrac{a^2+c^2-b^2}{2ac}=\\dfrac{\\frac94c^2+c^2-\\frac32c^2}{2\\times\\frac32c\\times c}=\\dfrac{\\frac74}{3}=\\dfrac{7}{12}\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 268,
+            "end": 273
+          }
+        ],
+        "question_version_sha256": "1729b62e8dafdbc7ac0586eb3d9d4a1ede596d847913d533121cd9c69f83321c",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q019",
+        "base_version_sha256": "1729b62e8dafdbc7ac0586eb3d9d4a1ede596d847913d533121cd9c69f83321c",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 1,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "807102fec51e574ef73b472ae444f659eca3ca28e284ecaa4bbff90a61d1d12a",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面、各小问与原页相符，独立推导结果与第三方一致。",
+        "result": "（1）BD=b；（2）cos∠ABC=7/12",
+        "solution": "由正弦定理，sin C/sin B=c/b，故 BD=ac/b=b。又 AD=2b/3、DC=b/3，由斯图尔特定理 b(BD²+AD·DC)=a²AD+c²DC，得 2a²+c²=11b²/3。令 u=a²/b²，利用 ac=b² 得 6u²−11u+3=0，故 u=3/2 或 1/3。后者导致 a+b=(1+1/√3)b<√3b=c，违反三角不等式。故 a²/b²=3/2、c²/b²=2/3，代余弦定理得 (a²+c²−b²)/(2ac)=7/12。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "1729b62e8dafdbc7ac0586eb3d9d4a1ede596d847913d533121cd9c69f83321c",
+        "reference_answer": "（1）BD=b；（2）cos∠ABC=7/12",
+        "explanation": "由正弦定理，sin C/sin B=c/b，故 BD=ac/b=b。又 AD=2b/3、DC=b/3，由斯图尔特定理 b(BD²+AD·DC)=a²AD+c²DC，得 2a²+c²=11b²/3。令 u=a²/b²，利用 ac=b² 得 6u²−11u+3=0，故 u=3/2 或 1/3。后者导致 a+b=(1+1/√3)b<√3b=c，违反三角不等式。故 a²/b²=3/2、c²/b²=2/3，代余弦定理得 (a²+c²−b²)/(2ac)=7/12。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q020",
+      "subject": "math",
+      "stem": "如图，在三棱锥 \\(A-BCD\\) 中，平面 \\(ABD\\perp\\) 平面 \\(BCD\\)，\\(AB=AD\\)，\\(O\\) 为 \\(BD\\) 的中点.\n\n\n\n（子项） 证明：\\(OA\\perp CD\\)；\n\n（子项） 若 \\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，点 \\(E\\) 在棱 \\(AD\\) 上，\\(DE=2EA\\)，且二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，求三棱锥 \\(A-BCD\\) 的体积.\n\n\n[图：img/2021/new_gaokao_paper_1/q20_fig1.png]",
+      "options": {},
+      "formulas": [
+        "A-BCD",
+        "ABD\\perp",
+        "BCD",
+        "AB=AD",
+        "O",
+        "BD",
+        "OA\\perp CD",
+        "\\triangle OCD",
+        "1",
+        "E",
+        "AD",
+        "DE=2EA",
+        "E-BC-D",
+        "45^\\circ",
+        "A-BCD"
+      ],
+      "parts": [
+        "证明：\\(OA\\perp CD\\)；",
+        "若 \\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，点 \\(E\\) 在棱 \\(AD\\) 上，\\(DE=2EA\\)，且二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，求三棱锥 \\(A-BCD\\) 的体积."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "证明：\\(OA\\perp CD\\)；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "若 \\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，点 \\(E\\) 在棱 \\(AD\\) 上，\\(DE=2EA\\)，且二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，求三棱锥 \\(A-BCD\\) 的体积."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [
+        {
+          "path": "upstream/tex/img/2021/new_gaokao_paper_1/q20_fig1.png",
+          "sha256": "ae989446149a80ca7d7e23dc4f46d9ed6e1a46f0016ff9eead1537a0739d50fd",
+          "kind": "image",
+          "plaintext_path": "assets/ae989446149a80ca7d7e23dc4f46d9ed6e1a46f0016ff9eead1537a0739d50fd.png"
+        }
+      ],
+      "raw_problem_latex": "如图，在三棱锥 \\(A-BCD\\) 中，平面 \\(ABD\\perp\\) 平面 \\(BCD\\)，\\(AB=AD\\)，\\(O\\) 为 \\(BD\\) 的中点.\n\n\\begin{enumerate}\n\\item 证明：\\(OA\\perp CD\\)；\n\\item 若 \\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，点 \\(E\\) 在棱 \\(AD\\) 上，\\(DE=2EA\\)，且二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，求三棱锥 \\(A-BCD\\) 的体积.\n\\end{enumerate}\n\n\\bitmapfigure[max width=4.6cm]{img/2021/new_gaokao_paper_1/q20_fig1.png}",
+      "content_sha256": "188c5b43b1739cf8fba96ede5d4bc8f6acb17eebcc1a612602976acc507f9505",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q020",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q020",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 20,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "9cc40d7de127de88f6cc45d8ed567138e9e50478f53daae1bb6f90a60b6f3832",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 275,
+          "end": 284,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q020:answer",
+      "topic_flags": [
+        "立体几何",
+        "三角函数与解三角形"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q020",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q020:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q020",
+        "question_id": "2021-cn-math-new-gaokao-1:q020",
+        "reference_answer": null,
+        "explanation": "（子项） 在 \\(\\triangle ABD\\) 中，因为 \\(AB=AD\\)，\\(O\\) 为 \\(BD\\) 的中点，所以 \\(OA\\perp BD\\). 又因为平面 \\(ABD\\perp\\) 平面 \\(BCD\\)，平面 \\(ABD\\cap\\) 平面 \\(BCD=BD\\)，且 \\(OA\\subset\\) 平面 \\(ABD\\)，所以 \\(OA\\perp\\) 平面 \\(BCD\\). 因为 \\(CD\\subset\\) 平面 \\(BCD\\)，所以 \\(OA\\perp CD\\).\n \n（子项） 由题意，\\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，所以 \\(OC=OD=CD=1\\)，\\(\\angle COD=60^\\circ\\). 因为 \\(O\\) 为 \\(BD\\) 的中点，所以 \\(B\\)，\\(O\\)，\\(D\\) 三点共线，且 \\(OB=OD=1\\). 以 \\(O\\) 为坐标原点，直线 \\(BD\\) 为 \\(x\\) 轴，过点 \\(O\\) 垂直于 \\(BD\\) 的直线为 \\(y\\) 轴，射线 \\(OA\\) 为 \\(z\\) 轴建立空间直角坐标系. 则 \\(D(1,0,0)\\)，\\(B(-1,0,0)\\)，\\(C\\left(\\dfrac12,\\dfrac{\\sqrt3}{2},0\\right)\\). 设 \\(OA=h\\)（\\(h>0\\)），则 \\(A(0,0,h)\\). 因为点 \\(E\\) 在棱 \\(AD\\) 上且 \\(DE=2EA\\)，所以 \\(\\overrightarrow{AE}=\\dfrac13\\overrightarrow{AD}=\\left(\\dfrac13,0,-\\dfrac13h\\right)\\)，得 \\(E\\left(\\dfrac13,0,\\dfrac23h\\right)\\). 从而 \\(\\overrightarrow{BC}=\\left(\\dfrac32,\\dfrac{\\sqrt3}{2},0\\right)\\)，\\(\\overrightarrow{BE}=\\left(\\dfrac43,0,\\dfrac23h\\right)\\). 设平面 \\(EBC\\) 的法向量为 \\(\\boldsymbol n=(x,y,z)\\)，由 \\(\\boldsymbol n\\cdot\\overrightarrow{BC}=0\\) 且 \\(\\boldsymbol n\\cdot\\overrightarrow{BE}=0\\)，得\n \\(\\begin{cases}\n \\dfrac32x+\\dfrac{\\sqrt3}{2}y=0,\\\\\n \\dfrac43x+\\dfrac23hz=0,\n \\end{cases}\\)\n 取 \\(x=1\\)，得 \\(y=-\\sqrt3\\)，\\(z=-\\dfrac{2}{h}\\)，所以 \\(\\boldsymbol n=\\left(1,-\\sqrt3,-\\dfrac2h\\right)\\). 平面 \\(BCD\\) 的法向量可取 \\(\\boldsymbol m=(0,0,1)\\). 因为二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，所以 \\(\\cos45^\\circ=\\dfrac{|\\boldsymbol m\\cdot\\boldsymbol n|}{|\\boldsymbol m||\\boldsymbol n|}=\\dfrac{\\frac2h}{\\sqrt{1^2+(-\\sqrt3)^2+\\left(-\\frac2h\\right)^2}}=\\dfrac{2}{\\sqrt{4h^2+4}}=\\dfrac{1}{\\sqrt{h^2+1}}=\\dfrac{\\sqrt2}{2}\\)，解得 \\(h=1\\)，即 \\(OA=1\\). 因为 \\(BD=2\\)，点 \\(C\\) 到直线 \\(BD\\) 的距离为 \\(\\dfrac{\\sqrt3}{2}\\)，所以 \\(\\triangle BCD\\) 的面积为 \\(S_{\\triangle BCD}=\\dfrac12\\times2\\times\\dfrac{\\sqrt3}{2}=\\dfrac{\\sqrt3}{2}\\). 故三棱锥 \\(A-BCD\\) 的体积为 \\(V=\\dfrac13S_{\\triangle BCD}\\cdot OA=\\dfrac13\\times\\dfrac{\\sqrt3}{2}\\times1=\\dfrac{\\sqrt3}{6}\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 在 \\(\\triangle ABD\\) 中，因为 \\(AB=AD\\)，\\(O\\) 为 \\(BD\\) 的中点，所以 \\(OA\\perp BD\\). 又因为平面 \\(ABD\\perp\\) 平面 \\(BCD\\)，平面 \\(ABD\\cap\\) 平面 \\(BCD=BD\\)，且 \\(OA\\subset\\) 平面 \\(ABD\\)，所以 \\(OA\\perp\\) 平面 \\(BCD\\). 因为 \\(CD\\subset\\) 平面 \\(BCD\\)，所以 \\(OA\\perp CD\\).\n    \\item 由题意，\\(\\triangle OCD\\) 是边长为 \\(1\\) 的等边三角形，所以 \\(OC=OD=CD=1\\)，\\(\\angle COD=60^\\circ\\). 因为 \\(O\\) 为 \\(BD\\) 的中点，所以 \\(B\\)，\\(O\\)，\\(D\\) 三点共线，且 \\(OB=OD=1\\). 以 \\(O\\) 为坐标原点，直线 \\(BD\\) 为 \\(x\\) 轴，过点 \\(O\\) 垂直于 \\(BD\\) 的直线为 \\(y\\) 轴，射线 \\(OA\\) 为 \\(z\\) 轴建立空间直角坐标系. 则 \\(D(1,0,0)\\)，\\(B(-1,0,0)\\)，\\(C\\left(\\dfrac12,\\dfrac{\\sqrt3}{2},0\\right)\\). 设 \\(OA=h\\)（\\(h>0\\)），则 \\(A(0,0,h)\\). 因为点 \\(E\\) 在棱 \\(AD\\) 上且 \\(DE=2EA\\)，所以 \\(\\overrightarrow{AE}=\\dfrac13\\overrightarrow{AD}=\\left(\\dfrac13,0,-\\dfrac13h\\right)\\)，得 \\(E\\left(\\dfrac13,0,\\dfrac23h\\right)\\). 从而 \\(\\overrightarrow{BC}=\\left(\\dfrac32,\\dfrac{\\sqrt3}{2},0\\right)\\)，\\(\\overrightarrow{BE}=\\left(\\dfrac43,0,\\dfrac23h\\right)\\). 设平面 \\(EBC\\) 的法向量为 \\(\\bs n=(x,y,z)\\)，由 \\(\\bs n\\cdot\\overrightarrow{BC}=0\\) 且 \\(\\bs n\\cdot\\overrightarrow{BE}=0\\)，得\n    \\(\\begin{cases}\n    \\dfrac32x+\\dfrac{\\sqrt3}{2}y=0,\\\\\n    \\dfrac43x+\\dfrac23hz=0,\n    \\end{cases}\\)\n    取 \\(x=1\\)，得 \\(y=-\\sqrt3\\)，\\(z=-\\dfrac{2}{h}\\)，所以 \\(\\bs n=\\left(1,-\\sqrt3,-\\dfrac2h\\right)\\). 平面 \\(BCD\\) 的法向量可取 \\(\\bs m=(0,0,1)\\). 因为二面角 \\(E-BC-D\\) 的大小为 \\(45^\\circ\\)，所以 \\(\\cos45^\\circ=\\dfrac{|\\bs m\\cdot\\bs n|}{|\\bs m||\\bs n|}=\\dfrac{\\frac2h}{\\sqrt{1^2+(-\\sqrt3)^2+\\left(-\\frac2h\\right)^2}}=\\dfrac{2}{\\sqrt{4h^2+4}}=\\dfrac{1}{\\sqrt{h^2+1}}=\\dfrac{\\sqrt2}{2}\\)，解得 \\(h=1\\)，即 \\(OA=1\\). 因为 \\(BD=2\\)，点 \\(C\\) 到直线 \\(BD\\) 的距离为 \\(\\dfrac{\\sqrt3}{2}\\)，所以 \\(\\triangle BCD\\) 的面积为 \\(S_{\\triangle BCD}=\\dfrac12\\times2\\times\\dfrac{\\sqrt3}{2}=\\dfrac{\\sqrt3}{2}\\). 故三棱锥 \\(A-BCD\\) 的体积为 \\(V=\\dfrac13S_{\\triangle BCD}\\cdot OA=\\dfrac13\\times\\dfrac{\\sqrt3}{2}\\times1=\\dfrac{\\sqrt3}{6}\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 286,
+            "end": 296
+          }
+        ],
+        "question_version_sha256": "9cc40d7de127de88f6cc45d8ed567138e9e50478f53daae1bb6f90a60b6f3832",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q020",
+        "base_version_sha256": "9cc40d7de127de88f6cc45d8ed567138e9e50478f53daae1bb6f90a60b6f3832",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "a09acb66098bb77a4f58929b1d7a7b5d97e59e9b056f12d223b39cdbf8ddeb59",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "两问、二面角的字母顺序及独立图件的标记与原页核对。重绘的视角有差别，顶点和边的关系一致。第三方结果一致。",
+        "result": "（1）OA⊥CD；（2）√3/6",
+        "solution": "等腰三角形 ABD 中 OA⊥BD，且两平面的交线为 BD，故 OA⊥平面 BCD，进而 OA⊥CD。取 O 为原点，D=(1,0,0)、B=(−1,0,0)、C=(1/2,√3/2,0)、A=(0,0,h)。由 DE=2EA 得 E=(1/3,0,2h/3)，其在底面的投影 E₀=(1/3,0,0) 到 BC 的距离为 2/3，且与 D 在 BC 同侧。沿垂直 BC 的截面，tan45°=(2h/3)/(2/3)，得 h=1。底面积为 √3/2，故体积 √3/6。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "9cc40d7de127de88f6cc45d8ed567138e9e50478f53daae1bb6f90a60b6f3832",
+        "reference_answer": "（1）OA⊥CD；（2）√3/6",
+        "explanation": "等腰三角形 ABD 中 OA⊥BD，且两平面的交线为 BD，故 OA⊥平面 BCD，进而 OA⊥CD。取 O 为原点，D=(1,0,0)、B=(−1,0,0)、C=(1/2,√3/2,0)、A=(0,0,h)。由 DE=2EA 得 E=(1/3,0,2h/3)，其在底面的投影 E₀=(1/3,0,0) 到 BC 的距离为 2/3，且与 D 在 BC 同侧。沿垂直 BC 的截面，tan45°=(2h/3)/(2/3)，得 h=1。底面积为 √3/2，故体积 √3/6。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q021",
+      "subject": "math",
+      "stem": "在平面直角坐标系 \\(xOy\\) 中，已知点 \\(F_1(-\\sqrt{17},0)\\)，\\(F_2(\\sqrt{17},0)\\)，满足 \\(|MF_1|-|MF_2|=2\\) 的点 \\(M\\) 的轨迹为 \\(C\\).\n\n\n\n（子项） 求 \\(C\\) 的方程；\n\n（子项） 设点 \\(T\\) 在直线 \\(x=\\frac{1}{2}\\) 上，过 \\(T\\) 的两条直线分别交 \\(C\\) 于 \\(A\\)，\\(B\\) 两点和 \\(P\\)，\\(Q\\) 两点，且 \\(TA\\cdot TB=TP\\cdot TQ\\)，求直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和.",
+      "options": {},
+      "formulas": [
+        "xOy",
+        "F_1(-\\sqrt{17},0)",
+        "F_2(\\sqrt{17},0)",
+        "|MF_1|-|MF_2|=2",
+        "M",
+        "C",
+        "C",
+        "T",
+        "x=\\frac{1}{2}",
+        "T",
+        "C",
+        "A",
+        "B",
+        "P",
+        "Q",
+        "TA\\cdot TB=TP\\cdot TQ",
+        "AB",
+        "PQ"
+      ],
+      "parts": [
+        "求 \\(C\\) 的方程；",
+        "设点 \\(T\\) 在直线 \\(x=\\frac{1}{2}\\) 上，过 \\(T\\) 的两条直线分别交 \\(C\\) 于 \\(A\\)，\\(B\\) 两点和 \\(P\\)，\\(Q\\) 两点，且 \\(TA\\cdot TB=TP\\cdot TQ\\)，求直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "求 \\(C\\) 的方程；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "设点 \\(T\\) 在直线 \\(x=\\frac{1}{2}\\) 上，过 \\(T\\) 的两条直线分别交 \\(C\\) 于 \\(A\\)，\\(B\\) 两点和 \\(P\\)，\\(Q\\) 两点，且 \\(TA\\cdot TB=TP\\cdot TQ\\)，求直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "在平面直角坐标系 \\(xOy\\) 中，已知点 \\(F_1(-\\sqrt{17},0)\\)，\\(F_2(\\sqrt{17},0)\\)，满足 \\(|MF_1|-|MF_2|=2\\) 的点 \\(M\\) 的轨迹为 \\(C\\).\n\n\\begin{enumerate}\n\\item 求 \\(C\\) 的方程；\n\\item 设点 \\(T\\) 在直线 \\(x=\\frac{1}{2}\\) 上，过 \\(T\\) 的两条直线分别交 \\(C\\) 于 \\(A\\)，\\(B\\) 两点和 \\(P\\)，\\(Q\\) 两点，且 \\(TA\\cdot TB=TP\\cdot TQ\\)，求直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和.\n\\end{enumerate}",
+      "content_sha256": "c3880f9deec05dd7c5b5374855e8fe356533403a7609289b50e51550ec9b103a",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q021",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q021",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 21,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "04c57f352bb5e011e528eeff1aa73b24518fc830c1bb9158e4f0fbf0c97dc5c1",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 298,
+          "end": 305,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q021:answer",
+      "topic_flags": [],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q021",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q021:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q021",
+        "question_id": "2021-cn-math-new-gaokao-1:q021",
+        "reference_answer": null,
+        "explanation": "（子项） 因为 \\(F_1(-\\sqrt{17},0)\\)，\\(F_2(\\sqrt{17},0)\\)，满足 \\(|MF_1|-|MF_2|=2<|F_1F_2|=2\\sqrt{17}\\)，由双曲线的定义可知，点 \\(M\\) 的轨迹是以 \\(F_1\\)，\\(F_2\\) 为焦点的双曲线的右支. 其中半实轴长 \\(a=1\\)，半焦距 \\(c=\\sqrt{17}\\)，半虚轴长满足 \\(b^2=c^2-a^2=16\\). 故 \\(C\\) 的方程为 \\(x^2-\\dfrac{y^2}{16}=1\\)（\\(x\\ge1\\)）.\n \n（子项） 由题意，设 \\(T\\left(\\dfrac12,t\\right)\\). 显然过点 \\(T\\) 且与 \\(C\\) 相交的直线的斜率存在，设直线 \\(AB\\) 的倾斜角为 \\(\\alpha\\)，则其参数方程为\n \\(\\begin{cases}\n x=\\dfrac12+s\\cos\\alpha,\\\\\n y=t+s\\sin\\alpha,\n \\end{cases}\\)\n 其中 \\(s\\) 为参数. 代入 \\(x^2-\\dfrac{y^2}{16}=1\\)，得 \\(\\left(\\dfrac12+s\\cos\\alpha\\right)^2-\\dfrac{(t+s\\sin\\alpha)^2}{16}=1\\)，整理得 \\((16\\cos^2\\alpha-\\sin^2\\alpha)s^2+(16\\cos\\alpha-2t\\sin\\alpha)s-(12+t^2)=0\\). 设 \\(A\\)，\\(B\\) 对应的参数分别为 \\(s_1\\)，\\(s_2\\)，则 \\(s_1s_2=\\dfrac{-(12+t^2)}{16\\cos^2\\alpha-\\sin^2\\alpha}\\). 因为 \\(A\\)，\\(B\\) 两点均在双曲线的右支上，所以 \\(s_1\\)，\\(s_2\\) 同号，从而 \\(s_1s_2>0\\). 又 \\(12+t^2>0\\)，所以 \\(16\\cos^2\\alpha-\\sin^2\\alpha<0\\)，即 \\(16-\\tan^2\\alpha<0\\). 设直线 \\(AB\\) 的斜率为 \\(k_1=\\tan\\alpha\\)，则 \\(TA\\cdot TB=|s_1s_2|=\\dfrac{12+t^2}{\\sin^2\\alpha-16\\cos^2\\alpha}=\\dfrac{(12+t^2)(1+k_1^2)}{k_1^2-16}\\). 同理，设直线 \\(PQ\\) 的斜率为 \\(k_2\\)，则 \\(TP\\cdot TQ=\\dfrac{(12+t^2)(1+k_2^2)}{k_2^2-16}\\). 由 \\(TA\\cdot TB=TP\\cdot TQ\\)，得 \\(\\dfrac{1+k_1^2}{k_1^2-16}=\\dfrac{1+k_2^2}{k_2^2-16}\\)，即 \\(1+\\dfrac{17}{k_1^2-16}=1+\\dfrac{17}{k_2^2-16}\\)，所以 \\(k_1^2=k_2^2\\). 因为直线 \\(AB\\) 与 \\(PQ\\) 是两条不同直线，所以 \\(k_1\\ne k_2\\)，故 \\(k_1=-k_2\\)，即 \\(k_1+k_2=0\\). 所以直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和为 \\(0\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 因为 \\(F_1(-\\sqrt{17},0)\\)，\\(F_2(\\sqrt{17},0)\\)，满足 \\(|MF_1|-|MF_2|=2<|F_1F_2|=2\\sqrt{17}\\)，由双曲线的定义可知，点 \\(M\\) 的轨迹是以 \\(F_1\\)，\\(F_2\\) 为焦点的双曲线的右支. 其中半实轴长 \\(a=1\\)，半焦距 \\(c=\\sqrt{17}\\)，半虚轴长满足 \\(b^2=c^2-a^2=16\\). 故 \\(C\\) 的方程为 \\(x^2-\\dfrac{y^2}{16}=1\\)（\\(x\\ge1\\)）.\n    \\item 由题意，设 \\(T\\left(\\dfrac12,t\\right)\\). 显然过点 \\(T\\) 且与 \\(C\\) 相交的直线的斜率存在，设直线 \\(AB\\) 的倾斜角为 \\(\\alpha\\)，则其参数方程为\n    \\(\\begin{cases}\n    x=\\dfrac12+s\\cos\\alpha,\\\\\n    y=t+s\\sin\\alpha,\n    \\end{cases}\\)\n    其中 \\(s\\) 为参数. 代入 \\(x^2-\\dfrac{y^2}{16}=1\\)，得 \\(\\left(\\dfrac12+s\\cos\\alpha\\right)^2-\\dfrac{(t+s\\sin\\alpha)^2}{16}=1\\)，整理得 \\((16\\cos^2\\alpha-\\sin^2\\alpha)s^2+(16\\cos\\alpha-2t\\sin\\alpha)s-(12+t^2)=0\\). 设 \\(A\\)，\\(B\\) 对应的参数分别为 \\(s_1\\)，\\(s_2\\)，则 \\(s_1s_2=\\dfrac{-(12+t^2)}{16\\cos^2\\alpha-\\sin^2\\alpha}\\). 因为 \\(A\\)，\\(B\\) 两点均在双曲线的右支上，所以 \\(s_1\\)，\\(s_2\\) 同号，从而 \\(s_1s_2>0\\). 又 \\(12+t^2>0\\)，所以 \\(16\\cos^2\\alpha-\\sin^2\\alpha<0\\)，即 \\(16-\\tan^2\\alpha<0\\). 设直线 \\(AB\\) 的斜率为 \\(k_1=\\tan\\alpha\\)，则 \\(TA\\cdot TB=|s_1s_2|=\\dfrac{12+t^2}{\\sin^2\\alpha-16\\cos^2\\alpha}=\\dfrac{(12+t^2)(1+k_1^2)}{k_1^2-16}\\). 同理，设直线 \\(PQ\\) 的斜率为 \\(k_2\\)，则 \\(TP\\cdot TQ=\\dfrac{(12+t^2)(1+k_2^2)}{k_2^2-16}\\). 由 \\(TA\\cdot TB=TP\\cdot TQ\\)，得 \\(\\dfrac{1+k_1^2}{k_1^2-16}=\\dfrac{1+k_2^2}{k_2^2-16}\\)，即 \\(1+\\dfrac{17}{k_1^2-16}=1+\\dfrac{17}{k_2^2-16}\\)，所以 \\(k_1^2=k_2^2\\). 因为直线 \\(AB\\) 与 \\(PQ\\) 是两条不同直线，所以 \\(k_1\\ne k_2\\)，故 \\(k_1=-k_2\\)，即 \\(k_1+k_2=0\\). 所以直线 \\(AB\\) 的斜率与直线 \\(PQ\\) 的斜率之和为 \\(0\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 307,
+            "end": 317
+          }
+        ],
+        "question_version_sha256": "04c57f352bb5e011e528eeff1aa73b24518fc830c1bb9158e4f0fbf0c97dc5c1",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q021",
+        "base_version_sha256": "04c57f352bb5e011e528eeff1aa73b24518fc830c1bb9158e4f0fbf0c97dc5c1",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "a09acb66098bb77a4f58929b1d7a7b5d97e59e9b056f12d223b39cdbf8ddeb59",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "结构化文本以 TA 等表示线段长度，原页写作 |TA| 等，数学含义一致。两个设问与第三方结论一致。",
+        "result": "（1）x²−y²/16=1，x≥1；（2）0",
+        "solution": "正的焦距差给出双曲线右支，a=1、c=√17，故 b²=16。设 T=(1/2,t)，过 T 的割线写成 y=t+k(x−1/2)，竖线 x=1/2 不可能与右支相交。令 u=x−1/2，代入得 (16−k²)u²+(16−2tk)u−(12+t²)=0。两交点对应两个正根，故 k²>16。两点到 T 的距离之积为 (1+k²)u₁u₂=(12+t²)[1+17/(k²−16)]。两条割线的距离积相同，所以斜率平方相同。过 T 的两条不同直线的斜率不等，故斜率相反，和为零。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "04c57f352bb5e011e528eeff1aa73b24518fc830c1bb9158e4f0fbf0c97dc5c1",
+        "reference_answer": "（1）x²−y²/16=1，x≥1；（2）0",
+        "explanation": "正的焦距差给出双曲线右支，a=1、c=√17，故 b²=16。设 T=(1/2,t)，过 T 的割线写成 y=t+k(x−1/2)，竖线 x=1/2 不可能与右支相交。令 u=x−1/2，代入得 (16−k²)u²+(16−2tk)u−(12+t²)=0。两交点对应两个正根，故 k²>16。两点到 T 的距离之积为 (1+k²)u₁u₂=(12+t²)[1+17/(k²−16)]。两条割线的距离积相同，所以斜率平方相同。过 T 的两条不同直线的斜率不等，故斜率相反，和为零。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    },
+    {
+      "id": "2021-cn-math-new-gaokao-1:q022",
+      "subject": "math",
+      "stem": "已知函数 \\(f(x)=x\\left( 1-\\ln x \\right)\\).\n\n\n\n（子项） 讨论 \\(f(x)\\) 的单调性；\n\n（子项） 设 \\(a\\)，\\(b\\) 为两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\)，证明 \\(2<\\frac{1}{a}+\\frac{1}{b}<e\\).",
+      "options": {},
+      "formulas": [
+        "f(x)=x\\left( 1-\\ln x \\right)",
+        "f(x)",
+        "a",
+        "b",
+        "b\\ln a-a\\ln b=a-b",
+        "2<\\frac{1}{a}+\\frac{1}{b}<e"
+      ],
+      "parts": [
+        "讨论 \\(f(x)\\) 的单调性；",
+        "设 \\(a\\)，\\(b\\) 为两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\)，证明 \\(2<\\frac{1}{a}+\\frac{1}{b}<e\\)."
+      ],
+      "subquestion_tree": [
+        {
+          "number": 1,
+          "children": [],
+          "text": "讨论 \\(f(x)\\) 的单调性；"
+        },
+        {
+          "number": 2,
+          "children": [],
+          "text": "设 \\(a\\)，\\(b\\) 为两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\)，证明 \\(2<\\frac{1}{a}+\\frac{1}{b}<e\\)."
+        }
+      ],
+      "tables_latex": [],
+      "asset_refs": [],
+      "raw_problem_latex": "已知函数 \\(f(x)=x\\left( 1-\\ln x \\right)\\).\n\n\\begin{enumerate}\n\\item 讨论 \\(f(x)\\) 的单调性；\n\\item 设 \\(a\\)，\\(b\\) 为两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\)，证明 \\(2<\\frac{1}{a}+\\frac{1}{b}<\\e\\).\n\\end{enumerate}",
+      "content_sha256": "d07eea8130e0b01a0a6ed34c73677fefaedaa2999e0f8e277fe146cb84167ddf",
+      "origin_occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+      "data_status": "完整第三方候选题面",
+      "review_status": "已解析并自动校验；逐题数学与视觉核验待完成",
+      "human_reviewed": false,
+      "difficulty": null,
+      "knowledge_points": null,
+      "question_id": "2021-cn-math-new-gaokao-1:q022",
+      "paper_id": "2021-cn-math-new-gaokao-1",
+      "number": 22,
+      "kind": "constructed_response",
+      "points": 12,
+      "version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+      "source_locator": {
+        "tex": {
+          "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+          "start": 319,
+          "end": 326,
+          "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+        },
+        "pdf": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "source_ids": [
+          "dxathing-pinned",
+          "deekur-pinned"
+        ]
+      },
+      "content_complete": true,
+      "issues": [],
+      "research_eligible": true,
+      "answer_id": "2021-cn-math-new-gaokao-1:q022:answer",
+      "topic_flags": [
+        "函数与导数"
+      ],
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+      "year": 2021,
+      "series_id": "cn-new-gaokao-1",
+      "track": "unified",
+      "curriculum_id": "math-transition-unresolved",
+      "paper_title": "2021年新高考I卷",
+      "answer": {
+        "id": "2021-cn-math-new-gaokao-1:q022:answer",
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+        "question_id": "2021-cn-math-new-gaokao-1:q022",
+        "reference_answer": null,
+        "explanation": "（子项） 函数 \\(f(x)=x(1-\\ln x)\\) 的定义域为 \\((0,+\\infty)\\). 求导得 \\(f'(x)=1-\\ln x-x\\cdot\\dfrac1x=-\\ln x\\). 当 \\(0<x<1\\) 时，\\(f'(x)>0\\)，\\(f(x)\\) 单调递增；当 \\(x>1\\) 时，\\(f'(x)<0\\)，\\(f(x)\\) 单调递减. 所以 \\(f(x)\\) 的单调递增区间为 \\((0,1)\\)，单调递减区间为 \\((1,+\\infty)\\).\n \n（子项） 由题意，\\(a\\)，\\(b\\) 是两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\). 两边同除以 \\(ab\\)，得 \\(\\dfrac{\\ln a}{a}-\\dfrac{\\ln b}{b}=\\dfrac1b-\\dfrac1a\\)，整理得 \\(\\dfrac1a\\left(1-\\ln\\dfrac1a\\right)=\\dfrac1b\\left(1-\\ln\\dfrac1b\\right)\\). 令 \\(u=\\dfrac1a\\)，\\(v=\\dfrac1b\\)，则 \\(u\\ne v\\) 且 \\(u>0\\)，\\(v>0\\)，上式即为 \\(f(u)=f(v)\\). 不妨设 \\(0<u<1<v\\).\n\n 先证 \\(u+v>2\\)：构造函数 \\(g(x)=f(x)-f(2-x)\\)（\\(0<x<1\\)）. 则 \\(g'(x)=f'(x)+f'(2-x)=-\\ln x-\\ln(2-x)=-\\ln[x(2-x)]\\). 当 \\(0<x<1\\) 时，\\(x(2-x)=-(x-1)^2+1<1\\)，所以 \\(\\ln[x(2-x)]<0\\)，从而 \\(g'(x)>0\\)，\\(g(x)\\) 在 \\((0,1)\\) 上单调递增. 故当 \\(0<x<1\\) 时，\\(g(x)<g(1)=0\\)，即 \\(f(x)<f(2-x)\\). 取 \\(x=u\\)，得 \\(f(u)<f(2-u)\\). 因为 \\(f(u)=f(v)\\)，所以 \\(f(v)<f(2-u)\\). 又 \\(0<u<1\\)，得 \\(1<2-u<2\\)，由（1）知 \\(f(x)\\) 在 \\((1,+\\infty)\\) 上单调递减，所以 \\(v>2-u\\)，即 \\(u+v>2\\).\n\n 再证 \\(u+v<e\\)：令 \\(t=\\dfrac vu\\)，因为 \\(0<u<1<v\\)，所以 \\(t>1\\). 由 \\(f(u)=f(v)\\) 得 \\(u(1-\\ln u)=tu(1-\\ln(tu))\\)，化简得 \\(1-\\ln u=t(1-\\ln t-\\ln u)\\)，解得 \\(\\ln u=1-\\dfrac{t\\ln t}{t-1}\\)，故 \\(u=e\\cdote^{-\\frac{t\\ln t}{t-1}}\\). 于是 \\(u+v=(1+t)u=e(1+t)e^{-\\frac{t\\ln t}{t-1}}\\). 设 \\(\\varphi(t)=(t-1)\\ln(1+t)-t\\ln t\\)（\\(t>1\\)），则 \\(\\varphi'(t)=\\ln(1+t)+\\dfrac{t-1}{t+1}-\\ln t-1=\\ln\\left(1+\\dfrac1t\\right)-\\dfrac{2}{t+1}\\). 令 \\(w=\\dfrac1t\\in(0,1)\\)，设 \\(\\psi(w)=\\ln(1+w)-\\dfrac{2w}{w+1}\\)，则 \\(\\psi'(w)=\\dfrac{1}{1+w}-\\dfrac{2}{(w+1)^2}=\\dfrac{w-1}{(w+1)^2}<0\\)，所以 \\(\\psi(w)<\\psi(0)=0\\)，即 \\(\\varphi'(t)<0\\) 恒成立. 从而 \\(\\varphi(t)\\) 在 \\((1,+\\infty)\\) 上单调递减，故当 \\(t>1\\) 时，\\(\\varphi(t)<\\lim_{t\\to1^+}\\varphi(t)=0\\). 所以 \\((t-1)\\ln(1+t)-t\\ln t<0\\)，即 \\(\\ln(1+t)<\\dfrac{t\\ln t}{t-1}\\)，从而 \\((1+t)e^{-\\frac{t\\ln t}{t-1}}<1\\). 因此 \\(u+v<e\\). 综上所述，\\(2<\\dfrac1a+\\dfrac1b<e\\).",
+        "raw_answer_latex": "",
+        "raw_solution_latex": "\\begin{enumerate}\n    \\item 函数 \\(f(x)=x(1-\\ln x)\\) 的定义域为 \\((0,+\\infty)\\). 求导得 \\(f'(x)=1-\\ln x-x\\cdot\\dfrac1x=-\\ln x\\). 当 \\(0<x<1\\) 时，\\(f'(x)>0\\)，\\(f(x)\\) 单调递增；当 \\(x>1\\) 时，\\(f'(x)<0\\)，\\(f(x)\\) 单调递减. 所以 \\(f(x)\\) 的单调递增区间为 \\((0,1)\\)，单调递减区间为 \\((1,+\\infty)\\).\n    \\item 由题意，\\(a\\)，\\(b\\) 是两个不相等的正数，且 \\(b\\ln a-a\\ln b=a-b\\). 两边同除以 \\(ab\\)，得 \\(\\dfrac{\\ln a}{a}-\\dfrac{\\ln b}{b}=\\dfrac1b-\\dfrac1a\\)，整理得 \\(\\dfrac1a\\left(1-\\ln\\dfrac1a\\right)=\\dfrac1b\\left(1-\\ln\\dfrac1b\\right)\\). 令 \\(u=\\dfrac1a\\)，\\(v=\\dfrac1b\\)，则 \\(u\\ne v\\) 且 \\(u>0\\)，\\(v>0\\)，上式即为 \\(f(u)=f(v)\\). 不妨设 \\(0<u<1<v\\).\n\n    先证 \\(u+v>2\\)：构造函数 \\(g(x)=f(x)-f(2-x)\\)（\\(0<x<1\\)）. 则 \\(g'(x)=f'(x)+f'(2-x)=-\\ln x-\\ln(2-x)=-\\ln[x(2-x)]\\). 当 \\(0<x<1\\) 时，\\(x(2-x)=-(x-1)^2+1<1\\)，所以 \\(\\ln[x(2-x)]<0\\)，从而 \\(g'(x)>0\\)，\\(g(x)\\) 在 \\((0,1)\\) 上单调递增. 故当 \\(0<x<1\\) 时，\\(g(x)<g(1)=0\\)，即 \\(f(x)<f(2-x)\\). 取 \\(x=u\\)，得 \\(f(u)<f(2-u)\\). 因为 \\(f(u)=f(v)\\)，所以 \\(f(v)<f(2-u)\\). 又 \\(0<u<1\\)，得 \\(1<2-u<2\\)，由（1）知 \\(f(x)\\) 在 \\((1,+\\infty)\\) 上单调递减，所以 \\(v>2-u\\)，即 \\(u+v>2\\).\n\n    再证 \\(u+v<\\e\\)：令 \\(t=\\dfrac vu\\)，因为 \\(0<u<1<v\\)，所以 \\(t>1\\). 由 \\(f(u)=f(v)\\) 得 \\(u(1-\\ln u)=tu(1-\\ln(tu))\\)，化简得 \\(1-\\ln u=t(1-\\ln t-\\ln u)\\)，解得 \\(\\ln u=1-\\dfrac{t\\ln t}{t-1}\\)，故 \\(u=\\e\\cdot\\e^{-\\frac{t\\ln t}{t-1}}\\). 于是 \\(u+v=(1+t)u=\\e(1+t)\\e^{-\\frac{t\\ln t}{t-1}}\\). 设 \\(\\varphi(t)=(t-1)\\ln(1+t)-t\\ln t\\)（\\(t>1\\)），则 \\(\\varphi'(t)=\\ln(1+t)+\\dfrac{t-1}{t+1}-\\ln t-1=\\ln\\left(1+\\dfrac1t\\right)-\\dfrac{2}{t+1}\\). 令 \\(w=\\dfrac1t\\in(0,1)\\)，设 \\(\\psi(w)=\\ln(1+w)-\\dfrac{2w}{w+1}\\)，则 \\(\\psi'(w)=\\dfrac{1}{1+w}-\\dfrac{2}{(w+1)^2}=\\dfrac{w-1}{(w+1)^2}<0\\)，所以 \\(\\psi(w)<\\psi(0)=0\\)，即 \\(\\varphi'(t)<0\\) 恒成立. 从而 \\(\\varphi(t)\\) 在 \\((1,+\\infty)\\) 上单调递减，故当 \\(t>1\\) 时，\\(\\varphi(t)<\\lim_{t\\to1^+}\\varphi(t)=0\\). 所以 \\((t-1)\\ln(1+t)-t\\ln t<0\\)，即 \\(\\ln(1+t)<\\dfrac{t\\ln t}{t-1}\\)，从而 \\((1+t)\\e^{-\\frac{t\\ln t}{t-1}}<1\\). 因此 \\(u+v<\\e\\). 综上所述，\\(2<\\dfrac1a+\\dfrac1b<\\e\\).\n\\end{enumerate}",
+        "asset_refs": [],
+        "source_id": "dxathing-pinned",
+        "source_tex_lines": [
+          {
+            "kind": "solution",
+            "start": 328,
+            "end": 337
+          }
+        ],
+        "question_version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+        "authority": "third_party",
+        "review_status": "未独立核验的整理答案"
+      },
+      "legacy": false,
+      "national_analysis": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+        "question_id": "2021-cn-math-new-gaokao-1:q022",
+        "version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+        "knowledge": {
+          "primary": [
+            "等值条件转化与双向界"
+          ],
+          "secondary": [
+            "函数与导数"
+          ]
+        },
+        "methods": [
+          "导数",
+          "换元",
+          "比较函数"
+        ],
+        "competencies": [
+          "逻辑推理",
+          "数学运算"
+        ],
+        "difficulty": {
+          "level": 5,
+          "basis": "题面用两个正数的对数关系约束，目标是倒数和的上下界，需要将代数条件转成等值函数。",
+          "measurement": "AI content-based editorial judgment; not empirical"
+        },
+        "reasoning_observation": "题面用两个正数的对数关系约束，目标是倒数和的上下界，需要将代数条件转成等值函数。",
+        "evidence": {
+          "tex": {
+            "path": "upstream/tex/content/2021/new_gaokao_paper_1.tex",
+            "start": 319,
+            "end": 326,
+            "sha256": "55e63711be8a697b45fdeaa2bb35d7c915ceeafe4a6f87701be07284e717b21e"
+          },
+          "pdf": {
+            "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+            "page": 2,
+            "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+          },
+          "source_ids": [
+            "dxathing-pinned",
+            "deekur-pinned"
+          ]
+        },
+        "model_version": "not_exposed_by_host",
+        "analysis_class": "limited_sample_observation",
+        "source_was_read": true,
+        "human_reviewed": false,
+        "formal_proof": false
+      },
+      "calibration": {
+        "occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+        "base_version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+        "source": {
+          "path": "upstream/pdf/2021-cn-math-new-gaokao-1.pdf",
+          "page": 2,
+          "sha256": "0f1e2a795894381003e721b7765af51d31708a579c42b8c0ac52e4daf7bf7513"
+        },
+        "review_page_sha256": "a09acb66098bb77a4f58929b1d7a7b5d97e59e9b056f12d223b39cdbf8ddeb59",
+        "body": "pdf_matched",
+        "answer": "independently_solved",
+        "reviewer": "independent_ai_source_page_and_derivation",
+        "reviewed_on": "2026-11-09",
+        "official_original": false,
+        "human_reviewed": false,
+        "note": "题面、各小问与原页相符，独立推导结果与第三方一致。",
+        "result": "（1）在 (0,1) 递增、在 (1,+∞) 递减；（2）2<1/a+1/b<e",
+        "solution": "f′(x)=−ln x，故在 (0,1) 严格增，在 (1,+∞) 严格减。原等式除以 ab 得 f(1/a)=f(1/b)。设两自变量为 0<x<1<y，令 t=y/x>1，代入 f(x)=f(tx) 得 x+y=e(1+t)exp[−t ln t/(t−1)]。因 ln t/(t−1)>1/t>ln(1+1/t)，所以 ln(1+t)<t ln t/(t−1)，即 x+y<e。又设 H(t)=1+ln((1+t)/2)−t ln t/(t−1)，则 H(1+)=0，H′(t)=[(t+1)ln t−2(t−1)]/[(t+1)(t−1)²]>0。最后的不等号来自 ln t−2(t−1)/(t+1) 在 t=1 为零，导数为 (t−1)²/[t(t+1)²]>0。因此 H(t)=ln((x+y)/2)>0，即 x+y>2。"
+      },
+      "reviewed_answer": {
+        "question_version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+        "reference_answer": "（1）在 (0,1) 递增、在 (1,+∞) 递减；（2）2<1/a+1/b<e",
+        "explanation": "f′(x)=−ln x，故在 (0,1) 严格增，在 (1,+∞) 严格减。原等式除以 ab 得 f(1/a)=f(1/b)。设两自变量为 0<x<1<y，令 t=y/x>1，代入 f(x)=f(tx) 得 x+y=e(1+t)exp[−t ln t/(t−1)]。因 ln t/(t−1)>1/t>ln(1+1/t)，所以 ln(1+t)<t ln t/(t−1)，即 x+y<e。又设 H(t)=1+ln((1+t)/2)−t ln t/(t−1)，则 H(1+)=0，H′(t)=[(t+1)ln t−2(t−1)]/[(t+1)(t−1)²]>0。最后的不等号来自 ln t−2(t−1)/(t+1) 在 t=1 为零，导数为 (t−1)²/[t(t+1)²]>0。因此 H(t)=ln((x+y)/2)>0，即 x+y>2。",
+        "status": "独立AI重解；非官方答案",
+        "authority": "independent_ai_review"
+      },
+      "assessment_state": "source_and_solution_reviewed",
+      "usable_for_practice": true,
+      "source_and_solution_reviewed": true
+    }
+  ],
+  "content_sha256": "1bbc90c54419a4ccbd7904e15bc41818dcd6c5743f11c1f59647ef02adafdfb7"
+}

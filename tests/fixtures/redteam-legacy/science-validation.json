@@ -1,0 +1,366 @@
+{
+  "policy": {
+    "year": 2027,
+    "region": "河南",
+    "structure_basis_year": 2026,
+    "current_system_evidence_url": "https://yk.eeahn.cn/portal/article/index.html?cid=23&id=7330",
+    "previous_paper_rules_url": "https://www.haeea.cn/a/202501/43452_db58ed70.shtml"
+  },
+  "protected": {
+    "papers": 48,
+    "questions": 1297,
+    "frozen_sha256": {
+      "forecast/frozen/henan-2027-math-v3.json": "33c20281a81ddc747189bc251564b90fc725ad86f540ad068c767ea0ee185931",
+      "forecast/preregistered/2027-math-trends.json": "0d7d54bd820d4f572aba59f3e6e7e5346ae55cad0e55696d55ebad0b955ed8a0"
+    }
+  },
+  "subjects": {
+    "physics": {
+      "questions": 15,
+      "points": 100,
+      "minutes": 75,
+      "layout": "practice",
+      "paper_pages": 7,
+      "solutions_pages": 2,
+      "word_inline_shapes": {
+        "student": 122,
+        "answers": 131
+      },
+      "figures": {
+        "choice": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "nonchoice": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "figure_collisions": 0,
+      "blanks": {
+        "11": 4,
+        "12": 6
+      },
+      "qa_issues": 0,
+      "qa_warnings": 0,
+      "corridor": {
+        "groups": {
+          "mechanics": 37,
+          "electromagnetism": 49,
+          "other": 14
+        },
+        "modules": {
+          "atomic": 4,
+          "optics_waves": 4,
+          "astronomy": 4,
+          "electrostatics_circuits": 23,
+          "induction_ac": 4,
+          "magnetic_force": 22,
+          "mechanics": 33,
+          "thermodynamics": 6
+        },
+        "question_groups": {
+          "1": "other",
+          "2": "other",
+          "3": "mechanics",
+          "4": "electromagnetism",
+          "5": "electromagnetism",
+          "6": "electromagnetism",
+          "7": "mechanics",
+          "8": "other",
+          "9": "electromagnetism",
+          "10": "mechanics",
+          "11": "mechanics",
+          "12": "electromagnetism",
+          "13": "electromagnetism",
+          "14": "electromagnetism",
+          "15": "mechanics"
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "final_score": 94,
+          "fatal_count": 0,
+          "status": "returned",
+          "rewrite": [
+            9
+          ],
+          "pdf_sha256": "ee31c626e90d613df96ee79c88f6ba804c62342b2bf685e0eda6bf32211348aa"
+        },
+        {
+          "round": 2,
+          "final_score": 0,
+          "fatal_count": 5,
+          "status": "returned",
+          "rewrite": [
+            2,
+            3,
+            6,
+            8,
+            9,
+            11,
+            12,
+            14,
+            15
+          ],
+          "pdf_sha256": "b0940a465e4f0e6fdba177e7a480a49888b5a591fe320a6f30b367c6f17db7ae"
+        },
+        {
+          "round": 3,
+          "final_score": 100,
+          "fatal_count": 0,
+          "status": "LOCAL_QA_PASSED",
+          "rewrite": [],
+          "pdf_sha256": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade"
+        }
+      ],
+      "final_board_status": "LOCAL_QA_PASSED",
+      "final_board_score": 100,
+      "independently_solved": 15,
+      "program_operator_count": 0,
+      "answer_areas": [
+        {
+          "number": 13,
+          "page": 5,
+          "height_cm": 7.0,
+          "continuation": false
+        },
+        {
+          "number": 14,
+          "page": 6,
+          "height_cm": 7.0,
+          "continuation": false
+        },
+        {
+          "number": 15,
+          "page": 7,
+          "height_cm": 10.4,
+          "continuation": false
+        }
+      ],
+      "artifacts": {
+        "paper.pdf": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade",
+        "solutions.pdf": "c7df50360ee158e69dd687102a7bdc30a63d24e14b700fcf1e09e182fa04805a",
+        "paper.docx": "50cff6239ceea8923bde974f4acf702094a65b8b6f8157f2b3d36352ae4d90bb",
+        "solutions.docx": "cf50dff1d91da8c5fa72e774bc60e369d1232fbf587e2cd0569c090f0525a0d0"
+      }
+    },
+    "chemistry": {
+      "questions": 18,
+      "points": 100,
+      "minutes": 75,
+      "layout": "practice",
+      "paper_pages": 6,
+      "solutions_pages": 2,
+      "word_inline_shapes": {
+        "student": 107,
+        "answers": 67
+      },
+      "figures": {
+        "choice": [
+          3,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "nonchoice": [
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      "figure_collisions": 0,
+      "blanks": {
+        "15": 7,
+        "16": 8,
+        "17": 10,
+        "18": 7
+      },
+      "qa_issues": 0,
+      "qa_warnings": 0,
+      "corridor": {
+        "structure": {
+          "晶体": [
+            9
+          ],
+          "原子": [],
+          "成键": [
+            5
+          ]
+        },
+        "first_five": {
+          "STSE": [
+            1
+          ],
+          "基础实验操作": [
+            3
+          ]
+        },
+        "nonchoice_blanks": {
+          "15": 7,
+          "16": 8,
+          "17": 10,
+          "18": 7
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "final_score": 0,
+          "fatal_count": 3,
+          "status": "returned",
+          "rewrite": [
+            1,
+            3,
+            5,
+            16
+          ],
+          "pdf_sha256": "4301ca5a67644d12dba4a565b5ebac5187fae7f73645891c6769b95c1639395b"
+        },
+        {
+          "round": 2,
+          "final_score": 0,
+          "fatal_count": 5,
+          "status": "returned",
+          "rewrite": [
+            3,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18
+          ],
+          "pdf_sha256": "47d499f9cb49a41784016e3b2a9f71ecba815a925a632e5916547a7af8ced14f"
+        },
+        {
+          "round": 3,
+          "final_score": 100,
+          "fatal_count": 0,
+          "status": "LOCAL_QA_PASSED",
+          "rewrite": [],
+          "pdf_sha256": "99b21b590a36f918bc30684a46fb5e12960da7460194563c970d32301187f3cd"
+        }
+      ],
+      "final_board_status": "LOCAL_QA_PASSED",
+      "final_board_score": 100,
+      "independently_solved": 18,
+      "program_operator_count": 0,
+      "answer_areas": [],
+      "artifacts": {
+        "paper.pdf": "99b21b590a36f918bc30684a46fb5e12960da7460194563c970d32301187f3cd",
+        "solutions.pdf": "5e564395331c45d0d76ccb5a330688271b8c46cdffe9bb8e9b68ba15344596ff",
+        "paper.docx": "c6875aeb6417940d35998d1753c9099fcb95e53d487ef70f0845245c0131a005",
+        "solutions.docx": "5ed78068be42af140d40007ca8ea549b8c6cb1f4f0789bac3873f978b3ef9e67"
+      }
+    },
+    "biology": {
+      "questions": 21,
+      "points": 100,
+      "minutes": 75,
+      "layout": "practice",
+      "paper_pages": 7,
+      "solutions_pages": 2,
+      "word_inline_shapes": {
+        "student": 40,
+        "answers": 12
+      },
+      "figures": {
+        "choice": [
+          4,
+          5,
+          8,
+          9,
+          11,
+          15
+        ],
+        "nonchoice": [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "figure_collisions": 0,
+      "blanks": {
+        "17": 9,
+        "18": 7,
+        "19": 6,
+        "20": 7,
+        "21": 7
+      },
+      "qa_issues": 0,
+      "qa_warnings": 0,
+      "corridor": {},
+      "rounds": [
+        {
+          "round": 1,
+          "final_score": 0,
+          "fatal_count": 1,
+          "status": "returned",
+          "rewrite": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "pdf_sha256": "977e0c808876d20c9bafd40f1b35ee3e97ecdd0bd6cec7ab3268f0e2cf626abd"
+        },
+        {
+          "round": 2,
+          "final_score": 100,
+          "fatal_count": 0,
+          "status": "LOCAL_QA_PASSED",
+          "rewrite": [],
+          "pdf_sha256": "01d0fc5ad897b6622352008ca5267b4efa017b0dd0b2b172cf57ad28b303925d"
+        }
+      ],
+      "final_board_status": "LOCAL_QA_PASSED",
+      "final_board_score": 100,
+      "independently_solved": 21,
+      "program_operator_count": 0,
+      "answer_areas": [],
+      "artifacts": {
+        "paper.pdf": "01d0fc5ad897b6622352008ca5267b4efa017b0dd0b2b172cf57ad28b303925d",
+        "solutions.pdf": "84c9525b695930d4fcce41ebddbcf4769d50d966335f0e77123a14bc06483689",
+        "paper.docx": "57c1f3ac690e2536da1de51026c9d75112690f6b561a654c1f663e54d7cbde07",
+        "solutions.docx": "8956d2c0fd863e3fceecbd0ab383945f0ea9290c21765b67260e1b1f5a9269fd"
+      }
+    }
+  },
+  "trial": {
+    "teacher_reviews": 0,
+    "observed_student_attempts": 0,
+    "external_reviews_received": 0
+  },
+  "scope": "隔离盲审为独立 AI 角色。编辑证据来自河南 2025、2026 正式卷的已入库版本和 DNA；同题位题图缺件按记录注明。"
+}

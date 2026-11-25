@@ -1,0 +1,465 @@
+{
+  "baseline_commit": "d26013ca054b5f097aa56ab63f8f601ca8dd9318",
+  "method": "只读复扫绑定的原有PDF、公开卷面、答案、听力稿与核对记录。每项证据带题号。",
+  "papers": {
+    "chinese": {
+      "pdf_sha256": "1d2ab766a10a2dca7fed95efac2283a9f3e30e66ebd29087e280bfce3fd4285b",
+      "passed": false,
+      "issues": [
+        {
+          "number": 1,
+          "rule": "answer_distribution",
+          "evidence": "单选B有5/9题，超过上限"
+        },
+        {
+          "number": 9,
+          "rule": "marking_template",
+          "evidence": "评分参考未完整采用本题的印刷规则"
+        },
+        {
+          "number": 10,
+          "rule": "marking_template",
+          "evidence": "评分参考未完整采用本题的印刷规则"
+        },
+        {
+          "number": 16,
+          "rule": "marking_template",
+          "evidence": "评分参考未完整采用本题的印刷规则"
+        },
+        {
+          "number": 17,
+          "rule": "marking_template",
+          "evidence": "评分参考未完整采用本题的印刷规则"
+        },
+        {
+          "number": 22,
+          "rule": "chinese_essay_bands",
+          "evidence": "作文使用17～20，要求20～16／15～11／10～6／5～0"
+        },
+        {
+          "number": 22,
+          "rule": "marking_template",
+          "evidence": "评分参考未完整采用本题的印刷规则"
+        },
+        {
+          "number": 5,
+          "rule": "terminology",
+          "evidence": "不规范用语：候选答"
+        },
+        {
+          "number": 9,
+          "rule": "terminology",
+          "evidence": "不规范用语：自行扣扣"
+        },
+        {
+          "number": 13,
+          "rule": "terminology",
+          "evidence": "不规范用语：主语域"
+        },
+        {
+          "number": 22,
+          "rule": "terminology",
+          "evidence": "不规范用语：示文"
+        },
+        {
+          "number": 17,
+          "rule": "chinese_imagery",
+          "evidence": "古诗和开放默写重复意象：犬"
+        },
+        {
+          "number": 21,
+          "rule": "chinese_paragraph_quote",
+          "evidence": "“留”在首、末两段分别出现[0, 2]次"
+        },
+        {
+          "number": 22,
+          "rule": "chinese_essay_grid",
+          "evidence": "实际作文稿纸900格，800字标尺有"
+        }
+      ]
+    },
+    "math": {
+      "pdf_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+      "passed": false,
+      "issues": [
+        {
+          "number": 1,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 2,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 3,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 4,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 5,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 6,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 7,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 8,
+          "rule": "math_choice_equivalence",
+          "evidence": "单选评分误印“可接受数学等价写法”"
+        },
+        {
+          "number": 16,
+          "rule": "math_radical",
+          "evidence": "解析的终式分母含根式：\\frac8{\\sqrt{82}}"
+        },
+        {
+          "number": 18,
+          "rule": "math_progression",
+          "evidence": "第18、19题均无第三问递进"
+        },
+        {
+          "number": 18,
+          "rule": "math_conic_coverage",
+          "evidence": "全卷圆锥曲线仅覆盖：椭圆"
+        },
+        {
+          "number": 10,
+          "rule": "math_inference_coverage",
+          "evidence": "缺现代统计推断或数据分位分析"
+        },
+        {
+          "number": 4,
+          "rule": "math_defensive_variance",
+          "evidence": "普通高中方差无需指定按1/n作为方差"
+        }
+      ]
+    },
+    "english": {
+      "pdf_sha256": "9dead1f5d15eb6b41284d80e93bae25b76ce7f3b285dab3373876a3c43e77f4e",
+      "passed": false,
+      "issues": [
+        {
+          "number": 66,
+          "rule": "english_language_weight",
+          "evidence": "语言评分权重至多33%，最低40%"
+        },
+        {
+          "number": 66,
+          "rule": "english_writing_bands",
+          "evidence": "写作未采用对应总分的五档整体评分"
+        },
+        {
+          "number": 66,
+          "rule": "english_printed_credit",
+          "evidence": "向预印称呼、署名或结束语赋分"
+        },
+        {
+          "number": 67,
+          "rule": "english_language_weight",
+          "evidence": "语言评分权重至多12%，最低40%"
+        },
+        {
+          "number": 67,
+          "rule": "english_writing_bands",
+          "evidence": "写作未采用对应总分的五档整体评分"
+        },
+        {
+          "number": 1,
+          "rule": "practice_answer_card",
+          "evidence": "自印练习版含答题卡作答指令"
+        },
+        {
+          "number": 1,
+          "rule": "english_listening_length",
+          "evidence": "有效朗读842词，要求1050～1300词"
+        },
+        {
+          "number": 56,
+          "rule": "english_grammar_prompts",
+          "evidence": "有提示词5空，无提示词5空，要求6～7与3～4"
+        },
+        {
+          "number": 41,
+          "rule": "english_cross_item_leak",
+          "evidence": "正确实词 comparable 已出现在本卷阅读材料或正确项"
+        },
+        {
+          "number": 1,
+          "rule": "english_theme_overlap",
+          "evidence": "saturday在3个板块出现（cloze, continuation, reading）"
+        },
+        {
+          "number": 1,
+          "rule": "english_theme_overlap",
+          "evidence": "community volunteer在3个板块出现（cloze, gap_match, reading）"
+        },
+        {
+          "number": 1,
+          "rule": "english_invigilator",
+          "evidence": "听力朗读稿使用“监考：”"
+        }
+      ]
+    },
+    "physics": {
+      "pdf_sha256": "1c7f2f2fa1301b868a63af719a9d9a9d40fa8a0743a95e0da9c46d429cb9cade",
+      "passed": false,
+      "issues": [
+        {
+          "number": 6,
+          "rule": "terminology",
+          "evidence": "不规范用语：水平磁力"
+        },
+        {
+          "number": 11,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 12,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 13,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 14,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 15,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 13,
+          "rule": "physics_dc_share",
+          "evidence": "纯直流电路19分（相关题号[12, 13]），上限14分"
+        },
+        {
+          "number": 13,
+          "rule": "physics_core_topics",
+          "evidence": "高频核心缺：ac、oscillation、induction_rod"
+        },
+        {
+          "number": 13,
+          "rule": "physics_dc_calculation",
+          "evidence": "计算题使用纯直流模型"
+        },
+        {
+          "number": 12,
+          "rule": "physics_experiment_overlap",
+          "evidence": "第11、12题共用实验范式（零偏与换向抵消或相同范式代码）"
+        },
+        {
+          "number": 1,
+          "rule": "physics_visible_uv",
+          "evidence": "把仪器可检出的最高4.2 eV谱线归入可见谱线"
+        },
+        {
+          "number": 7,
+          "rule": "physics_radical_decimal",
+          "evidence": "选择题速率等结果根号内直接保留小数"
+        }
+      ]
+    },
+    "chemistry": {
+      "pdf_sha256": "99b21b590a36f918bc30684a46fb5e12960da7460194563c970d32301187f3cd",
+      "passed": false,
+      "issues": [
+        {
+          "number": 1,
+          "rule": "terminology",
+          "evidence": "不规范用语：氧化数"
+        },
+        {
+          "number": 5,
+          "rule": "terminology",
+          "evidence": "不规范用语：氧化数"
+        },
+        {
+          "number": 7,
+          "rule": "terminology",
+          "evidence": "不规范用语：伯碳原子"
+        },
+        {
+          "number": 15,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 16,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 17,
+          "rule": "terminology",
+          "evidence": "不规范用语：气体活度、项目参考评分"
+        },
+        {
+          "number": 18,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 1,
+          "rule": "science_wrong_instructions",
+          "evidence": "化学生物卷误印物理计算题导语"
+        },
+        {
+          "number": 18,
+          "rule": "answer_leak",
+          "evidence": "题干已给出空③的答案线索“还原反应”"
+        },
+        {
+          "number": 1,
+          "rule": "chemistry_periodic",
+          "evidence": "缺原子结构与元素周期律推断"
+        },
+        {
+          "number": 5,
+          "rule": "chemistry_ionic_judgment",
+          "evidence": "缺离子方程式正误判断题"
+        },
+        {
+          "number": 15,
+          "rule": "chemistry_inorganic_arrow",
+          "evidence": "无机方程式使用箭头：\\mathrm{Zn}+\\mathrm{Cu^{2+}}\\to\\mathrm{Zn^{2+}}+\\mathrm{Cu}"
+        },
+        {
+          "number": 16,
+          "rule": "chemistry_inorganic_arrow",
+          "evidence": "无机方程式使用箭头：\\mathrm{HCO_3^-}+\\mathrm H^+\\to\\mathrm{CO_2}+\\mathrm{H_2O}"
+        },
+        {
+          "number": 16,
+          "rule": "chemistry_gas_marker",
+          "evidence": "生成气体的方程式缺↑"
+        },
+        {
+          "number": 17,
+          "rule": "chemistry_equilibrium_notation",
+          "evidence": "标准分压比的无量纲常数与Kp记号混用"
+        }
+      ]
+    },
+    "biology": {
+      "pdf_sha256": "01d0fc5ad897b6622352008ca5267b4efa017b0dd0b2b172cf57ad28b303925d",
+      "passed": false,
+      "issues": [
+        {
+          "number": 18,
+          "rule": "science_equivalence",
+          "evidence": "抗利尿激素题缺垂体与垂体后叶等价评分说明"
+        },
+        {
+          "number": 5,
+          "rule": "terminology",
+          "evidence": "不规范用语：同源体"
+        },
+        {
+          "number": 7,
+          "rule": "terminology",
+          "evidence": "不规范用语：居群"
+        },
+        {
+          "number": 17,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 18,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 19,
+          "rule": "terminology",
+          "evidence": "不规范用语：腐屑、生产者现存量、项目参考评分"
+        },
+        {
+          "number": 20,
+          "rule": "terminology",
+          "evidence": "不规范用语：连锁相位、项目参考评分"
+        },
+        {
+          "number": 21,
+          "rule": "terminology",
+          "evidence": "不规范用语：项目参考评分"
+        },
+        {
+          "number": 1,
+          "rule": "science_wrong_instructions",
+          "evidence": "化学生物卷误印物理计算题导语"
+        },
+        {
+          "number": 15,
+          "rule": "biology_molecular_genetics",
+          "evidence": "缺相应主干考查"
+        },
+        {
+          "number": 21,
+          "rule": "biology_bioengineering",
+          "evidence": "缺相应主干考查"
+        },
+        {
+          "number": 1,
+          "rule": "biology_hedged_keys",
+          "evidence": "6/16道单选正解使用对冲句式，题号[1, 2, 7, 8, 11, 16]"
+        },
+        {
+          "number": 17,
+          "rule": "biology_table_reference",
+          "evidence": "该数据为表格，题干仍指称“图”"
+        },
+        {
+          "number": 18,
+          "rule": "biology_table_reference",
+          "evidence": "该数据为表格，题干仍指称“图”"
+        },
+        {
+          "number": 20,
+          "rule": "biology_table_reference",
+          "evidence": "该数据为表格，题干仍指称“图”"
+        },
+        {
+          "number": 21,
+          "rule": "biology_table_reference",
+          "evidence": "该数据为表格，题干仍指称“图”"
+        }
+      ]
+    }
+  },
+  "blocked": 6,
+  "chinese_corpus": {
+    "required-memorization.json": {
+      "path": "data/corpus/chinese/required-memorization.json",
+      "entries": 60,
+      "sha256": "fae70a3a4d0ddb9ead2defe4a463f93fd3be4211ab0633c8b1eeb15fe493c9a0"
+    },
+    "classical-unfamiliar-pool.json": {
+      "path": "data/corpus/chinese/classical-unfamiliar-pool.json",
+      "entries": 42,
+      "sha256": "988df2f5086d7c8fdbfc8fbd56bec9f50191f98e7a6e97a213fae3fa00932a6c"
+    }
+  }
+}

@@ -7,9 +7,10 @@ from pathlib import Path
 
 from gaokao import (
     ROOT, SUBJECTS, atomic_write, digest, dumps, import_file, load, load_solutions,
-    register, relative_path, require,
+    register, relative_path, require, read_lines,
 )
 from reference import reference_rows
+from storage import reference_directory
 
 
 def select(papers, options):
@@ -53,7 +54,7 @@ def summaries(papers, files, entries, solutions=None, references=None):
     return result
 
 
-def question_result(row, paper, sources, solution, reference):
+def question_result(row, paper, sources, solution, reference, curation=None):
     result = {
         **row, "year": paper["year"], "subject": paper["subject"],
         "content_complete": row.get("content_complete", False),
@@ -75,6 +76,10 @@ def question_result(row, paper, sources, solution, reference):
         )
         if reference["source_url"] not in result["sources"]:
             result["sources"].insert(0, reference["source_url"])
+    if curation:
+        result["curation"] = curation
+        result["answer_for_current_candidate"] = curation["answer_for_current_candidate"]
+        result["current_solution"] = curation["current_solution"]
     return result
 
 
@@ -93,7 +98,7 @@ def extract(root, records, identifier):
         pages.pop()
     require(any(page.strip() for page in pages), "PDF 无可提取文本，需要 OCR 或人工录入")
     paper_id = record["paper_id"]
-    output = root / "parsed" / paper_id / f"{record['sha256']}.json"
+    output = root / ".local-data" / "intake" / "parsed" / paper_id / f"{record['sha256']}.json"
     atomic_write(output, dumps({
         "paper_id": paper_id, "file_id": identifier, "source_sha256": record["sha256"],
         "method": "pdftotext -layout", "status": "待校对",
@@ -143,7 +148,9 @@ def main():
         else:
             sources, papers, records, entries = load(root, check_hash=action == "validate")
             solutions = load_solutions(root, entries, sources)
-            references = reference_rows(options.reference_dir, sources, papers, entries,
+            curation_path = root / "data/analysis" / "curation.jsonl"
+            curation = {row["question_id"]: row for row in read_lines(curation_path)} if curation_path.exists() else {}
+            references = reference_rows(reference_directory(root, options.reference_dir), sources, papers, entries,
                                         check_hash=action == "validate")
             if action == "validate":
                 result = {
@@ -168,7 +175,7 @@ def main():
                 else:
                     result = [
                         question_result(row, selected[row["paper_id"]], sources,
-                                        solutions.get(row["id"]), references.get(row["id"]))
+                                        solutions.get(row["id"]), references.get(row["id"]), curation.get(row["id"]))
                         for row in entries if row["paper_id"] in selected
                         and (options.number is None or row["original_number"] == options.number)
                         and (options.kind is None or row["kind"] == options.kind)

@@ -1,0 +1,128 @@
+{
+  "workflow": "science-workflow-v1",
+  "subject": "chemistry",
+  "region": "河南",
+  "year": 2027,
+  "mode": "standard",
+  "mapping": {
+    "subject": "chemistry",
+    "year": 2027,
+    "paper_id": "2027-cn-ha-chemistry-selective",
+    "series_id": "cn-ha-chemistry-selective",
+    "curriculum_id": "chemistry-2017-2020",
+    "region": "河南",
+    "exam_system_id": "new-3+1+2",
+    "role": "reselection",
+    "authoring_body": "河南省统一命题",
+    "status": "system_announced",
+    "points": null,
+    "minutes": null,
+    "evidence": [
+      "hn-2027",
+      "hn-reform"
+    ],
+    "structure": null
+  },
+  "curriculum_topics": [
+    "物质结构与性质",
+    "离子反应",
+    "氧化还原",
+    "化学反应原理",
+    "化学平衡",
+    "电化学",
+    "水溶液离子平衡",
+    "化学实验",
+    "无机物推断",
+    "有机化学",
+    "工业流程",
+    "基本概念与物质性质",
+    "物质结构与性质",
+    "化学反应原理",
+    "实验与探究",
+    "有机化学",
+    "化学综合应用"
+  ],
+  "requested_topics": [],
+  "reference_candidates": [
+    {
+      "id": "2026-cn-ha-chemistry-selective:q001",
+      "topic": "物质变化的分类",
+      "source_url": "https://zy.21cnjy.com/25976018",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "bb8775e200a24a360d1682383ebb4f5feaef28cd9b1df71e21e946b9aa563ef7",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    },
+    {
+      "id": "2026-cn-ha-chemistry-selective:q006",
+      "topic": "用物种形态、原子数和电荷校验离子方程式",
+      "source_url": "https://www.renrendoc.com/paper/536700548.html",
+      "review_status": "source_and_solution_reviewed",
+      "version_sha256": "ad11be66c9543333f2dca2fb84542e88e15e1f18ceb810438c6901f54393f3ec",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    },
+    {
+      "id": "2026-cn-ha-chemistry-selective:q010",
+      "topic": "以晶体结构、分子间力、极性和电子壳层解释性质",
+      "source_url": "https://www.renrendoc.com/paper/536700548.html",
+      "review_status": "source_and_solution_reviewed",
+      "version_sha256": "cd18c9a82b5ce3c3d06dcc8860ec7682e0f6f6a207897f3e19b7e7ca5331bcb0",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    }
+  ],
+  "structure": {
+    "sections": [
+      {
+        "kind": "single_choice",
+        "count": 14,
+        "points": 42
+      },
+      {
+        "kind": "constructed_response",
+        "count": 4,
+        "points": 58
+      }
+    ],
+    "source_urls": [
+      "https://www.51jiaoxi.com/doc-18504525.html",
+      "https://zy.21cnjy.com/25976018",
+      "https://zy.21cnjy.com/25959272"
+    ],
+    "status": "observed_third_party_paper",
+    "source_details": [
+      {
+        "kind": "single_choice",
+        "count": 14,
+        "points": 42,
+        "points_each": 3
+      },
+      {
+        "kind": "constructed_response",
+        "count": 4,
+        "points": 58,
+        "individual_points": [
+          14,
+          14,
+          15,
+          15
+        ]
+      }
+    ]
+  },
+  "structure_minutes": 75,
+  "structure_year": 2026,
+  "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认",
+  "exam_policy": {
+    "schema_version": 1,
+    "subject": "chemistry",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-ha-chemistry-selective",
+    "rules": {}
+  }
+}

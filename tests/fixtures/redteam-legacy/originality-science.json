@@ -1,0 +1,134 @@
+{
+  "method": "对第14–26阶段本地结构化原创档案，归一化标点、空白和数字后比对整题；另对历史题图做字节哈希核对。",
+  "scope": "精确匹配排查改数字；高相似整题进一步人工核对题干机制，不作网外首创判断。",
+  "subjects": {
+    "physics": {
+      "historical_files": 29,
+      "historical_question_signatures": 135,
+      "historical_distinct_figures": 257,
+      "question_matches": [],
+      "reused_figure_numbers": [],
+      "closest_structural_text_samples": [
+        {
+          "number": 7,
+          "ratio": 0.3722,
+          "source": "experiments/phase21/physics/blind-packet.json",
+          "archive_number": 8
+        },
+        {
+          "number": 1,
+          "ratio": 0.3658,
+          "source": "experiments/phase22/physics/ai-candidate.json",
+          "archive_number": 1
+        },
+        {
+          "number": 2,
+          "ratio": 0.3459,
+          "source": "experiments/phase22/physics/ai-candidate.json",
+          "archive_number": 1
+        },
+        {
+          "number": 3,
+          "ratio": 0.3459,
+          "source": "experiments/phase22/physics/ai-candidate.json",
+          "archive_number": 1
+        },
+        {
+          "number": 15,
+          "ratio": 0.3215,
+          "source": "experiments/phase21/physics/blind-packet.json",
+          "archive_number": 7
+        }
+      ]
+    },
+    "chemistry": {
+      "historical_files": 8,
+      "historical_question_signatures": 81,
+      "historical_distinct_figures": 41,
+      "question_matches": [],
+      "reused_figure_numbers": [],
+      "closest_structural_text_samples": [
+        {
+          "number": 2,
+          "ratio": 0.471,
+          "source": "experiments/phase16/henan-chem-100/source/candidates.json",
+          "archive_number": 14
+        },
+        {
+          "number": 6,
+          "ratio": 0.4343,
+          "source": "experiments/phase22/chemistry/draft-ai-candidate.json",
+          "archive_number": 10
+        },
+        {
+          "number": 15,
+          "ratio": 0.4086,
+          "source": "experiments/phase22/chemistry/blind-packet.json",
+          "archive_number": 15
+        },
+        {
+          "number": 7,
+          "ratio": 0.4011,
+          "source": "experiments/phase21/chemistry/blind-packet.json",
+          "archive_number": 11
+        },
+        {
+          "number": 5,
+          "ratio": 0.3961,
+          "source": "experiments/phase22/chemistry/ai-candidate.json",
+          "archive_number": 1
+        }
+      ]
+    },
+    "biology": {
+      "historical_files": 5,
+      "historical_question_signatures": 52,
+      "historical_distinct_figures": 24,
+      "question_matches": [],
+      "reused_figure_numbers": [],
+      "closest_structural_text_samples": [
+        {
+          "number": 18,
+          "ratio": 0.418,
+          "source": "experiments/phase21/biology/blind-packet.json",
+          "archive_number": 21
+        },
+        {
+          "number": 19,
+          "ratio": 0.3485,
+          "source": "experiments/phase21/biology/blind-packet.json",
+          "archive_number": 18
+        },
+        {
+          "number": 17,
+          "ratio": 0.3348,
+          "source": "experiments/phase21/biology/blind-packet.json",
+          "archive_number": 18
+        },
+        {
+          "number": 21,
+          "ratio": 0.3212,
+          "source": "experiments/phase21/biology/blind-packet.json",
+          "archive_number": 18
+        },
+        {
+          "number": 20,
+          "ratio": 0.3063,
+          "source": "experiments/phase21/biology/blind-packet.json",
+          "archive_number": 20
+        }
+      ]
+    }
+  },
+  "structural_rewrites": {
+    "physics": {
+      "8": "由循环图的面积与温度改为两支气柱的声回波测温，分别从等容和等压时间比反推末温及吸热差。",
+      "11": "由双光电门计时改为正反牵引，使用两条测力—加速度线消除重力偏置，并校正仪器空载读数。",
+      "12": "由电容充放电改为四端正反电流校准，利用和差区分引线压降、电压零偏和真实电阻。",
+      "14": "由平面相邻电磁区改为整个圆筒内的轴向场，利用投影回轴周期、侧壁净距和指定周次的三维到达。"
+    },
+    "chemistry": {
+      "9": "由晶胞均摊后求密度改为根据钛还原比例与电荷守恒反推氧空位和占据率。"
+    }
+  }
+}

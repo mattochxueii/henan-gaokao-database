@@ -1,0 +1,3081 @@
+{
+  "schema_version": 1,
+  "blueprint": {
+    "mode": "full",
+    "title": "河南2027高考风格数学模拟 · 150分",
+    "slots": [
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "complex_norm"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "integer_set"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "trig_square"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "vector_sum"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "ellipse_chord"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "urn_pair"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "positive_roots"
+      },
+      {
+        "kind": "single_choice",
+        "points": 5,
+        "family": "trig_count"
+      },
+      {
+        "kind": "multiple_choice",
+        "points": 6,
+        "family": "seq_interlace"
+      },
+      {
+        "kind": "multiple_choice",
+        "points": 6,
+        "family": "geometry_assertions"
+      },
+      {
+        "kind": "multiple_choice",
+        "points": 6,
+        "family": "logquad_assertions"
+      },
+      {
+        "kind": "fill_in",
+        "points": 5,
+        "family": "binomial"
+      },
+      {
+        "kind": "fill_in",
+        "points": 5,
+        "family": "variance"
+      },
+      {
+        "kind": "fill_in",
+        "points": 5,
+        "family": "exp_peak"
+      },
+      {
+        "kind": "constructed_response",
+        "points": 13,
+        "family": "urn_mixture"
+      },
+      {
+        "kind": "constructed_response",
+        "points": 15,
+        "family": "tetrahedron"
+      },
+      {
+        "kind": "constructed_response",
+        "points": 15,
+        "family": "seq_alternating"
+      },
+      {
+        "kind": "constructed_response",
+        "points": 17,
+        "family": "ellipse_conjugate"
+      },
+      {
+        "kind": "constructed_response",
+        "points": 17,
+        "family": "deriv_logroots"
+      }
+    ],
+    "total_points": 150,
+    "rules_sha256": "536a72ff8349e505dc2f8621f61143b4fb70dd1ca4680d05d4d96b99a43d071d",
+    "target_year": 2027,
+    "difficulty_target": {
+      "basis": "模拟设定，按题目族的推理设计等级分类，尚无实测",
+      "level_groups": {
+        "foundation": [
+          1
+        ],
+        "medium": [
+          2,
+          3
+        ],
+        "advanced": [
+          4,
+          5
+        ]
+      },
+      "foundation": 4,
+      "medium": 11,
+      "advanced": 4,
+      "ordinal_counts": {
+        "1": 4,
+        "2": 6,
+        "3": 5,
+        "4": 3,
+        "5": 1
+      }
+    },
+    "verified_features": [
+      "两个候选样本的历史结构"
+    ],
+    "simulation_settings": [
+      "2027详细结构沿用历史候选；正式通知优先",
+      "难度按方法与推理层数设计，未实测",
+      "本地题目族生成，AI设计与数学验证分离"
+    ],
+    "official_2027_paper_prediction": false
+  },
+  "seed": 20261110,
+  "provider": "template",
+  "generation_mode": "template",
+  "rules_snapshot": {
+    "schema_version": 1,
+    "revision": "2026-11-07-v1",
+    "scope": "河南2025–2026数学候选样本，共2卷38题",
+    "sources": [
+      {
+        "id": "haeea-2027-registration",
+        "url": "https://www.haeea.cn/a/202610/43749_c5d5e459.shtml",
+        "retrieved_at": "2026-11-07",
+        "finding": "第11问，全国统考含数学，3+1+2。未给2027数学详细卷面结构。"
+      },
+      {
+        "id": "moe-2026-math-review",
+        "url": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2026/2026_zt08/mtbd/202606/t20260608_1439853.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "强调基础知识与关键能力、综合性和创新性。官方发布的媒体报道，非2027结构通知。"
+      },
+      {
+        "id": "moe-competencies",
+        "url": "https://hudong.moe.gov.cn/jyb_xwfb/moe_2082/2021/2021_zl35/dudao/202104/t20210428_528952.html",
+        "retrieved_at": "2026-11-07",
+        "finding": "数学核心素养六项名称。"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "official-national-math",
+        "class": "official_requirement",
+        "claim": "2027河南数学为全国统考科目",
+        "evidence": [
+          "haeea-2027-registration"
+        ],
+        "applies_year": 2027
+      },
+      {
+        "id": "official-competencies",
+        "class": "official_requirement",
+        "claim": "数学抽象、逻辑推理、数学建模、直观想象、数学运算、数据分析",
+        "evidence": [
+          "moe-competencies"
+        ]
+      },
+      {
+        "id": "historical-structure",
+        "class": "direct_candidate_fact",
+        "claim": "两份保存的候选卷均19题150分，8单选、3多选、3填空、5解答",
+        "evidence": [
+          "2025-cn-math-national-1:pages1-4",
+          "2026-cn-math-national-1:pages1-4"
+        ],
+        "official_original_confirmed": false
+      },
+      {
+        "id": "sequence-variety",
+        "class": "limited_sample_observation",
+        "claim": "2025有等比块和及递推-导数综合，2026有分块和-局部等比存在性",
+        "question_ids": [
+          "2025-cn-math-national-1:q013",
+          "2025-cn-math-national-1:q016",
+          "2026-cn-math-national-1:q014"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "scaffold",
+        "class": "limited_sample_observation",
+        "claim": "解答题多以基础计算或证明起步，再要求综合推理",
+        "question_ids": [
+          "2025-cn-math-national-1:q017",
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q017",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "final-function",
+        "class": "limited_sample_observation",
+        "claim": "当前两套候选末题均有函数量词与全域论证",
+        "question_ids": [
+          "2025-cn-math-national-1:q019",
+          "2026-cn-math-national-1:q019"
+        ],
+        "sample_papers": 2
+      },
+      {
+        "id": "2027-final",
+        "class": "unverified_hypothesis",
+        "claim": "2027可能继续采用函数综合末题",
+        "enabled_as_hard_constraint": false,
+        "reason": "两套样本不能证明固定位置规律"
+      },
+      {
+        "id": "2027-structure",
+        "class": "simulation_setting",
+        "claim": "本原型2027模拟沿用两年观察结构，正式新通知优先",
+        "official_2027_structure_verified": false
+      }
+    ],
+    "blueprint": {
+      "id": "historical-19q-150-v1",
+      "target_year": 2027,
+      "structure_status": "historical_candidate_structure_used_as_simulation_setting",
+      "official_2027_structure_verified": false,
+      "total_points": 150,
+      "duration_minutes": 120,
+      "sections": [
+        {
+          "kind": "single_choice",
+          "count": 8,
+          "points_each": 5
+        },
+        {
+          "kind": "multiple_choice",
+          "count": 3,
+          "points_each": 6
+        },
+        {
+          "kind": "fill_in",
+          "count": 3,
+          "points_each": 5
+        },
+        {
+          "kind": "constructed_response",
+          "count": 5,
+          "points": [
+            13,
+            15,
+            15,
+            17,
+            17
+          ]
+        }
+      ],
+      "difficulty_target": {
+        "basis": "模拟设定，按题目族的推理设计等级分类，尚无实测",
+        "level_groups": {
+          "foundation": [
+            1
+          ],
+          "medium": [
+            2,
+            3
+          ],
+          "advanced": [
+            4,
+            5
+          ]
+        },
+        "foundation": 4,
+        "medium": 11,
+        "advanced": 4,
+        "ordinal_counts": {
+          "1": 4,
+          "2": 6,
+          "3": 5,
+          "4": 3,
+          "5": 1
+        }
+      },
+      "module_constraints": {
+        "minimum_distinct_modules": 6,
+        "required": [
+          "数列",
+          "函数与导数",
+          "概率统计",
+          "解析几何",
+          "立体几何",
+          "三角与向量"
+        ]
+      },
+      "scoring_multiple_choice": "全对6分，部分选对的具体分数未从候选卷确定，模拟卷另行约定选对1项2分、2项4分，错选0分。"
+    }
+  },
+  "limits": {
+    "max_questions": 30,
+    "max_attempts_per_question": 3,
+    "max_output_characters": 160000,
+    "max_model_calls": 0,
+    "max_remote_retries": 0,
+    "remote_timeout_seconds": 30,
+    "estimated_remote_cost_limit_usd": 0.0
+  },
+  "remote_model_calls": 0,
+  "host_model_version": "not_exposed_by_host",
+  "questions": [
+    {
+      "family": "complex_norm",
+      "parameters": {
+        "a": 5,
+        "b": 2,
+        "m": 4
+      },
+      "stem": "复数z满足z+共轭z=10，且|z-2|²=13。求(Im z)²。",
+      "proposed_values": [
+        "4"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(4\\)",
+          "semantic_value": "4",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(2\\)",
+          "semantic_value": "2",
+          "error_path": "把虚部平方误作虚部绝对值"
+        },
+        "C": {
+          "text": "\\(13\\)",
+          "semantic_value": "13",
+          "error_path": "把模平方当虚部平方"
+        },
+        "D": {
+          "text": "\\(9\\)",
+          "semantic_value": "9",
+          "error_path": "只保留实部平方"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261211,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q001:v1",
+      "order": 1,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 1,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "integer_set",
+      "parameters": {
+        "a": 4,
+        "b": 3,
+        "m": 8
+      },
+      "stem": "集合A={x∈Z|(x-4)(x-12)≤0}，B为3的整数倍的集合。求A中不属于B的元素个数。",
+      "proposed_values": [
+        "6"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "集合与复数",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(6\\)",
+          "semantic_value": "6",
+          "error_path": "正确解"
+        },
+        "B": {
+          "text": "\\(5\\)",
+          "semantic_value": "5",
+          "error_path": "误把闭区间当开区间"
+        },
+        "C": {
+          "text": "\\(9\\)",
+          "semantic_value": "9",
+          "error_path": "未剔除倍数"
+        },
+        "D": {
+          "text": "\\(3\\)",
+          "semantic_value": "3",
+          "error_path": "只数被剔除元素"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261312,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q002:v1",
+      "order": 2,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 1,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "trig_square",
+      "parameters": {
+        "a": 4,
+        "b": 2,
+        "m": 4
+      },
+      "stem": "已知\\(t\\in(0,\\pi/2)\\)，且\\(\\sin t+\\cos t=\\sqrt{6}/2\\)。求\\(\\sin 2t\\)。",
+      "proposed_values": [
+        "1/2"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(\\frac{3}{4}\\)",
+          "semantic_value": "3/4",
+          "error_path": "平方后漏去常数项"
+        },
+        "B": {
+          "text": "\\(\\frac{1}{2}\\)",
+          "semantic_value": "1/2",
+          "error_path": "正确解"
+        },
+        "C": {
+          "text": "\\(\\frac{\\sqrt{6}}{4}\\)",
+          "semantic_value": "sqrt(6)/4",
+          "error_path": "把和直接除以2"
+        },
+        "D": {
+          "text": "\\(- \\frac{1}{2}\\)",
+          "semantic_value": "-1/2",
+          "error_path": "和角转化时符号错误"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261413,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "answer_domain": [
+        -1,
+        1
+      ],
+      "id": "orig:henan-math:full:20261110:q003:v1",
+      "order": 3,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "vector_sum",
+      "parameters": {
+        "a": 2,
+        "b": 2,
+        "m": 6
+      },
+      "stem": "向量u=(2,1)，v=(1,t)，且u⊥v。求|u+v|²。",
+      "proposed_values": [
+        "10"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(18\\)",
+          "semantic_value": "18",
+          "error_path": "垂直条件解t时丢负号"
+        },
+        "B": {
+          "text": "\\(2\\)",
+          "semantic_value": "2",
+          "error_path": "把分量和当模平方"
+        },
+        "C": {
+          "text": "\\(10\\)",
+          "semantic_value": "10",
+          "error_path": "正确解"
+        },
+        "D": {
+          "text": "\\(5\\)",
+          "semantic_value": "5",
+          "error_path": "漏加第二向量长度平方"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261514,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q004:v1",
+      "order": 4,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "ellipse_chord",
+      "parameters": {
+        "a": 9,
+        "b": 4,
+        "m": 4
+      },
+      "stem": "椭圆\\(\\frac{x^{2}}{81} + \\frac{y^{2}}{16}\\)=1被直线y=2截得的弦长是多少？",
+      "proposed_values": [
+        "9*sqrt(3)"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "解析几何",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(4 \\sqrt{3}\\)",
+          "semantic_value": "4*sqrt(3)",
+          "error_path": "混用长短半轴"
+        },
+        "B": {
+          "text": "\\(18\\)",
+          "semantic_value": "18",
+          "error_path": "误把该弦当长轴"
+        },
+        "C": {
+          "text": "\\(\\frac{9 \\sqrt{3}}{2}\\)",
+          "semantic_value": "9*sqrt(3)/2",
+          "error_path": "只取一个端点到纵轴距离"
+        },
+        "D": {
+          "text": "\\(9 \\sqrt{3}\\)",
+          "semantic_value": "9*sqrt(3)",
+          "error_path": "正确解"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261615,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q005:v1",
+      "order": 5,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "urn_pair",
+      "parameters": {
+        "a": 3,
+        "b": 4,
+        "m": 5
+      },
+      "stem": "袋中有3个红球、4个蓝球，各球等可能取到。无放回连续取2球，求恰好一红一蓝的概率。",
+      "proposed_values": [
+        "4/7"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "概率统计",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(\\frac{3}{7}\\)",
+          "semantic_value": "3/7",
+          "error_path": "把联合事件误作一次取红"
+        },
+        "B": {
+          "text": "\\(\\frac{2}{7}\\)",
+          "semantic_value": "2/7",
+          "error_path": "只计红蓝一种顺序"
+        },
+        "C": {
+          "text": "\\(\\frac{4}{7}\\)",
+          "semantic_value": "4/7",
+          "error_path": "正确解"
+        },
+        "D": {
+          "text": "\\(\\frac{24}{49}\\)",
+          "semantic_value": "24/49",
+          "error_path": "误按有放回抽样"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261716,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "answer_domain": [
+        0,
+        1
+      ],
+      "id": "orig:henan-math:full:20261110:q006:v1",
+      "order": 6,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "positive_roots",
+      "parameters": {
+        "a": 5,
+        "b": 3,
+        "m": 4
+      },
+      "stem": "关于x的方程x²-2tx+t=0有两个互异正实根。t的取值范围的有限端点是多少？",
+      "proposed_values": [
+        "1"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "函数与导数",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(-1\\)",
+          "semantic_value": "-1",
+          "error_path": "判别式移项符号错误"
+        },
+        "B": {
+          "text": "\\(0\\)",
+          "semantic_value": "0",
+          "error_path": "仅用根的和、积为正"
+        },
+        "C": {
+          "text": "\\(1\\)",
+          "semantic_value": "1",
+          "error_path": "正确解"
+        },
+        "D": {
+          "text": "\\(\\frac{1}{2}\\)",
+          "semantic_value": "1/2",
+          "error_path": "遗漏判别式中的因子2"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261817,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q007:v1",
+      "order": 7,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "trig_count",
+      "parameters": {
+        "a": 2,
+        "b": 3,
+        "m": 7
+      },
+      "stem": "方程\\(\\sin(2x)=1/2\\)在\\(0<x<2\\pi\\)内有多少个解？",
+      "proposed_values": [
+        "4"
+      ],
+      "kind": "single_choice",
+      "points": 5,
+      "module": "三角与向量",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "\\(8\\)",
+          "semantic_value": "8",
+          "error_path": "把正负三角值混计"
+        },
+        "B": {
+          "text": "\\(2\\)",
+          "semantic_value": "2",
+          "error_path": "忽略自变量倍角"
+        },
+        "C": {
+          "text": "\\(4\\)",
+          "semantic_value": "4",
+          "error_path": "正确解"
+        },
+        "D": {
+          "text": "\\(3\\)",
+          "semantic_value": "3",
+          "error_path": "漏掉最后半周期的一个交点"
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20261918,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q008:v1",
+      "order": 8,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "seq_interlace",
+      "parameters": {
+        "a": 2,
+        "b": 2,
+        "m": 4
+      },
+      "stem": "数列满足a₁=2，a₂=4，且对每个正整数n有aₙ₊₂=aₙ+2。求前8项的和。 判断下列命题，选择所有正确选项。",
+      "proposed_values": [
+        "48"
+      ],
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "数列",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "题中所求和为\\(48\\)",
+          "assertion_index": 0
+        },
+        "B": {
+          "text": "奇数项构成公比为2的等比数列",
+          "assertion_index": 1
+        },
+        "C": {
+          "text": "偶数项构成公差为2的等差数列",
+          "assertion_index": 2
+        },
+        "D": {
+          "text": "整个数列一定是等差数列",
+          "assertion_index": 3
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262019,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "proposal_truth_mask": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "id": "orig:henan-math:full:20261110:q009:v1",
+      "order": 9,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 1,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "geometry_assertions",
+      "parameters": {
+        "a": 2,
+        "b": 4,
+        "m": 8,
+        "statements": [
+          "OA垂直平面OBC",
+          "CM平行AB",
+          "CM垂直AB",
+          "OA平行CM"
+        ]
+      },
+      "stem": "空间取O=(0,0,0)，A=(2,0,0)，B=(0,2,0)，C=(0,0,4)，M为AB中点。 判断下列命题，选择所有正确选项。",
+      "proposed_values": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "立体几何",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "OA垂直平面OBC",
+          "assertion_index": 0
+        },
+        "B": {
+          "text": "CM平行AB",
+          "assertion_index": 1
+        },
+        "C": {
+          "text": "CM垂直AB",
+          "assertion_index": 2
+        },
+        "D": {
+          "text": "OA平行CM",
+          "assertion_index": 3
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262120,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "proposal_truth_mask": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "id": "orig:henan-math:full:20261110:q010:v1",
+      "order": 10,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "logquad_assertions",
+      "parameters": {
+        "a": 4,
+        "b": 3,
+        "m": 4,
+        "statements": [
+          "f在\\(\\frac{1}{2}\\)处取得最大值",
+          "最大值为\\(- \\frac{\\log{\\left(4 \\right)}}{2} - \\frac{1}{2}\\)",
+          "f′在定义域内严格递减",
+          "f在定义域内的最小值可以取到"
+        ]
+      },
+      "stem": "设f(x)=ln x-(4/2)x²（x>0）。 判断下列命题，选择所有正确选项。",
+      "proposed_values": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "kind": "multiple_choice",
+      "points": 6,
+      "module": "函数与导数",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": {
+        "A": {
+          "text": "f在\\(\\frac{1}{2}\\)处取得最大值",
+          "assertion_index": 0
+        },
+        "B": {
+          "text": "最大值为\\(- \\frac{\\log{\\left(4 \\right)}}{2} - \\frac{1}{2}\\)",
+          "assertion_index": 1
+        },
+        "C": {
+          "text": "f′在定义域内严格递减",
+          "assertion_index": 2
+        },
+        "D": {
+          "text": "f在定义域内的最小值可以取到",
+          "assertion_index": 3
+        }
+      },
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262221,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "proposal_truth_mask": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "id": "orig:henan-math:full:20261110:q011:v1",
+      "order": 11,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "binomial",
+      "parameters": {
+        "a": 2,
+        "b": 2,
+        "m": 7
+      },
+      "stem": "求\\(\\left(x + \\frac{1}{x}\\right)^{4}\\)展开式中x²的系数。",
+      "proposed_values": [
+        "4"
+      ],
+      "kind": "fill_in",
+      "points": 5,
+      "module": "排列组合",
+      "difficulty": 2,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262322,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q012:v1",
+      "order": 12,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 2,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "variance",
+      "parameters": {
+        "a": 2,
+        "b": 3,
+        "m": 4
+      },
+      "stem": "某组数据X的均值为2，方差为3。每个数据改为Y=4X-2，求新数据的方差。",
+      "proposed_values": [
+        "48"
+      ],
+      "kind": "fill_in",
+      "points": 5,
+      "module": "概率统计",
+      "difficulty": 1,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262423,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q013:v1",
+      "order": 13,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 1,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "exp_peak",
+      "parameters": {
+        "a": 2,
+        "b": 2,
+        "m": 8
+      },
+      "stem": "求函数\\(x e^{- \\frac{x}{2}}\\)（x∈R）的最大值。",
+      "proposed_values": [
+        "2*exp(-1)"
+      ],
+      "kind": "fill_in",
+      "points": 5,
+      "module": "函数与导数",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262524,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q014:v1",
+      "order": 14,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "urn_mixture",
+      "parameters": {
+        "a": 4,
+        "b": 2,
+        "m": 6
+      },
+      "stem": "先等可能选甲、乙之一，再从选中的袋中有放回抽两次。甲袋红球概率1/3，乙袋红球概率2/3。记两次红球指示量为I₁,I₂。(1)求首次红球的概率；(2)已知首次红球，求选中乙袋的概率；(3)求两次均红概率，判断I₁,I₂是否独立并求其协方差。",
+      "proposed_values": [
+        "1/2",
+        "2/3",
+        "5/18",
+        "1/36"
+      ],
+      "kind": "constructed_response",
+      "points": 13,
+      "module": "概率统计",
+      "difficulty": 3,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262625,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q015:v1",
+      "order": 15,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "tetrahedron",
+      "parameters": {
+        "a": 5,
+        "b": 3,
+        "m": 6
+      },
+      "stem": "O=(0,0,0)，A=(5,0,0)，B=(0,5,0)，C=(0,0,h)，h>0。M,N分别为AC,BC中点。(1)证明MN∥AB；(2)用h表示O到平面ABC距离；(3)若直线OC与平面ABC夹角的正弦为1/√3，求h及上述距离。",
+      "proposed_values": [
+        "5*h/sqrt(2*h**2 + 25)",
+        "5",
+        "5*sqrt(3)/3"
+      ],
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "立体几何",
+      "difficulty": 4,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262726,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q016:v1",
+      "order": 16,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 4,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "seq_alternating",
+      "parameters": {
+        "a": 2,
+        "b": 4,
+        "m": 6
+      },
+      "stem": "数列满足a₁=5，aₙ₊₁=4aₙ+(5)(-1)ⁿ。求通项aₙ及前6项和。",
+      "proposed_values": [
+        "(-1)**(n - 1) + 4*4**(n - 1)",
+        "5460"
+      ],
+      "kind": "constructed_response",
+      "points": 15,
+      "module": "数列",
+      "difficulty": 4,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262827,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q017:v1",
+      "order": 17,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 3,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "ellipse_conjugate",
+      "parameters": {
+        "a": 6,
+        "b": 2,
+        "m": 8
+      },
+      "stem": "椭圆\\(\\frac{x^{2}}{36} + \\frac{y^{2}}{4}\\)=1上取P=(6cos t,2sin t)，Q=(-6sin t,2cos t)，t∈R，O为原点。(1)证明△OPQ面积不变并求其值；(2)求PQ长度范围；(3)求中点M轨迹的方程并说明是否取遍。",
+      "proposed_values": [
+        "6",
+        "2*sqrt(2)",
+        "6*sqrt(2)",
+        "18",
+        "2"
+      ],
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "解析几何",
+      "difficulty": 4,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20262928,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q018:v1",
+      "order": 18,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 4,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    },
+    {
+      "family": "deriv_logroots",
+      "parameters": {
+        "a": 4,
+        "b": 2,
+        "m": 7
+      },
+      "stem": "设F(x)=(ln x)³-3ln x-c（x>0）。(1)求F(x)=0有三个互异正根的c的范围；(2)记三根x₁<x₂<x₃，证明乘积为1；(3)若x₁x₃=x₂²，求c和三根。",
+      "proposed_values": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "exp(-sqrt(3))",
+        "1",
+        "exp(sqrt(3))"
+      ],
+      "kind": "constructed_response",
+      "points": 17,
+      "module": "函数与导数",
+      "difficulty": 5,
+      "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+      "options": null,
+      "generation": {
+        "backend": "runtime_parameterized_family",
+        "seed": 20263029,
+        "host_authored_design_revision": "v1",
+        "model_version": null,
+        "mode": "template",
+        "ai_dynamically_authored": false
+      },
+      "id": "orig:henan-math:full:20261110:q019:v1",
+      "order": 19,
+      "revision": 1,
+      "novelty_basis": "模板备用模式。沿用固定数学结构并调整参数，不作为本轮AI自主原创的证据。",
+      "difficulty_review": {
+        "estimate": 5,
+        "basis": "按实际解法层数复核。交错一阶递推只需一次平移和有限和，原4级缺乏依据，暂估3级。其他历史标签仍待教师校准。",
+        "empirical": false
+      }
+    }
+  ],
+  "verifications": [
+    {
+      "question_sha256": "e1f79289e9be57805a4f80567909894c1835d7049c1765997ea251e8097945f5",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "A",
+      "values": [
+        "4"
+      ],
+      "values_latex": [
+        "4"
+      ],
+      "steps": [
+        "由z+共轭z=10得Re z=5。令z=5+yi，模平方条件成为(5-2)²+y²=13，因此y²=4。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "af7082ddb5eb360eedbe2e619f8e96e1108cebe4e5ce6d004aa8eab6f654a42b",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "A",
+      "values": [
+        "6"
+      ],
+      "values_latex": [
+        "6"
+      ],
+      "steps": [
+        "二次不等式给出4≤x≤12，取其中整数再剔除3的整倍数，保留[4, 5, 7, 8, 10, 11]，共6个。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "4ede133e620109c71cd75ba789592bc83158d48500ae03aa206086906fd44ea9",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "B",
+      "values": [
+        "1/2"
+      ],
+      "values_latex": [
+        "\\frac{1}{2}"
+      ],
+      "steps": [
+        "两边平方并用sin²t+cos²t=1，得到sin 2t=(sin t+cos t)²-1。给定和在第一象限的可取范围内。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "c0a8e8b75f8554636da56ff286263b43705da321ad10092528a6e654c125f899",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "10"
+      ],
+      "values_latex": [
+        "10"
+      ],
+      "steps": [
+        "垂直要求u·v=2+t=0，故t=-2。和向量为(3,-1)，长度平方为(3)²+(-1)²=10。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "67c947875de7b6182d8d791c6e99f113dd33bf7296823361657a865d98bfd14b",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "D",
+      "values": [
+        "9*sqrt(3)"
+      ],
+      "values_latex": [
+        "9 \\sqrt{3}"
+      ],
+      "steps": [
+        "代入y=2，纵坐标项为1/4，所以x²=3×81/4。两个端点横坐标为±9/2√3，弦长为9√3。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "63187750954f71a9aa422bc9c7d735e39aece296f247dd93ecb68a7ea26a82e7",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "4/7"
+      ],
+      "values_latex": [
+        "\\frac{4}{7}"
+      ],
+      "steps": [
+        "给每球编号，有序不放回二元组总数为7×6=42。两颜色不同有2×3×4=24种，概率为24/42=4/7。程序逐组枚举也得到相同计数。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "607e5026564dd7d5a066d403ae2e6e9873d87605999ffb8f603c2a53dde3ef0a",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "1"
+      ],
+      "values_latex": [
+        "1"
+      ],
+      "steps": [
+        "两根互异实根要求判别式4t(t-1)>0；两根为正还要求和2t>0、积t>0。合并得到t>1，有限端点1不取。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "ac3e787526ff2de304b4e482730a2c559bafab5abbc8be76b63efea9b004cbc1",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "C",
+      "values": [
+        "4"
+      ],
+      "values_latex": [
+        "4"
+      ],
+      "steps": [
+        "令u=2x，则0<u<4π。每个完整周期sin u=1/2有两解，两个周期共4解，均不在端点。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "49cb12ecefb36ec18839a2c83f4e5e1d72c2f9e9e797e5e2bfa1829180cb9b57",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "AC",
+      "values": [
+        "48"
+      ],
+      "values_latex": [
+        "48"
+      ],
+      "steps": [
+        "奇数项a₂ⱼ₋₁=2+2(j-1)，偶数项a₂ⱼ=4+2(j-1)。",
+        "相邻两项之和为6+4(j-1)，j从1取到4，故总和为4×6+4×4×3/2=48。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "32aa4b4746a338f6f5f30298d6d82cca4a3952204790e562b8d5da5a4e1f0d80",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "AC",
+      "values": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "用坐标向量判断。OA与OB、OC均垂直，故垂直于其张成平面；CM·AB=0；另外两个平行条件的叉积均不为零。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "fe55370b5589f0c39e3a95a13f8bc419c99201f24d9bf5a726838182f576d507",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": "ABC",
+      "values": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "values_latex": [
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "steps": [
+        "f′=1/x-4x，唯一正零点为1/√4；f″=-1/x²-4<0，所以导数严格递减，零点为全局最大点。",
+        "代入得最大值-(ln 4+1)/2。x趋于0的正侧时f趋于负无穷，所以无可取的最小值。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "9454348184e0ab5d4ef34ccfd4b17babf22adc95b2f6ec21ecc7d5320e345e0a",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "4"
+      ],
+      "values_latex": [
+        "4"
+      ],
+      "steps": [
+        "从4个因子中选j个x⁻¹，通项x指数为4-2j。令它为2得j=1，系数为组合数C(4,1)=4。程序用完全展开独立提取同一系数。"
+      ],
+      "program_checks": [],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "3a4988415b7222d96988b1731461306d9f15e1f7dbfb302ac45d39d651c0997e",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "48"
+      ],
+      "values_latex": [
+        "48"
+      ],
+      "steps": [
+        "EY=4×2-2=6，所以Y-EY=4(X-EX)。平方取平均得到VarY=4²×3=48，标准差为4√3。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "b9385476746938a097220ed34d8603e0b6755766b39944ededf55701eb78872a",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "2*exp(-1)"
+      ],
+      "values_latex": [
+        "\\frac{2}{e}"
+      ],
+      "steps": [
+        "f′(x)=exp(-x/2)(1-x/2)。指数因子始终正，导数在x<2为正、x>2为负，所以在x=2唯一取得全局最大值2/e。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "7ff5b21326094e3122553b305819e2d40b176490f303739ee3e8abe2b74f8070",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "1/2",
+        "2/3",
+        "5/18",
+        "1/36"
+      ],
+      "values_latex": [
+        "\\frac{1}{2}",
+        "\\frac{2}{3}",
+        "\\frac{5}{18}",
+        "\\frac{1}{36}"
+      ],
+      "steps": [
+        "全概率公式算一次红球概率。用贝叶斯公式算首次红后选乙的概率。",
+        "同一袋被固定，两次抽取只在给定袋时独立；无条件两次均红为(p甲²+p乙²)/2。",
+        "与边际概率乘积不等，所以无条件不独立。协方差为联合概率减边际乘积。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "58b399316a0277f95470841c1a3070959fd0e3df183b4c6e79c52dfb957b12b8",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "5*h/sqrt(2*h**2 + 25)",
+        "5",
+        "5*sqrt(3)/3"
+      ],
+      "values_latex": [
+        "\\frac{5 h}{\\sqrt{2 h^{2} + 25}}",
+        "5",
+        "\\frac{5 \\sqrt{3}}{3}"
+      ],
+      "steps": [
+        "中点向量MN=AB/2，且MN在底边上方、与AB不同线，所以平行。",
+        "用AB×AC可取法向量(h,h,5)，平面方程hx+hy+5z=5h。",
+        "点O到面的距离为5h/√(25+2h²)。直线OC的单位方向为(0,0,1)，线面角正弦为5/√(25+2h²)。",
+        "其平方等于1/3给出3×25=25+2h²，h>0故h=5，距离=5*sqrt(3)/3。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "48d5c4723a18b759c00ddf92fd38b7446dfc2788fc853efcd1f15a2cdf12edc6",
+      "passed": true,
+      "status": "programmatically_verified",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-(-1)**n + 4**n",
+        "5460"
+      ],
+      "values_latex": [
+        "- \\left(-1\\right)^{n} + 4^{n}",
+        "5460"
+      ],
+      "steps": [
+        "令cₙ=aₙ-(-1)ⁿ⁻¹。代入原递推可得cₙ₊₁=4cₙ，且c₁=4。",
+        "所以cₙ=4×4ⁿ⁻¹，aₙ=4×4ⁿ⁻¹+(-1)ⁿ⁻¹。代回原递推与首项均相符。",
+        "前6项的等比部分和为(4)(4^6-1)/(4-1)；交错部分和为[1-(-1)^6]/2。相加为5460。"
+      ],
+      "program_checks": [
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "bbf330214c1fe722d9315a2498343d19cfcd9f336547f218a0b1734a9eaf9560",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "6",
+        "2*sqrt(2)",
+        "6*sqrt(2)",
+        "18",
+        "2"
+      ],
+      "values_latex": [
+        "6",
+        "2 \\sqrt{2}",
+        "6 \\sqrt{2}",
+        "18",
+        "2"
+      ],
+      "steps": [
+        "为书写简洁，记长半轴a=6、短半轴b=2。面积为行列式绝对值的一半，sin²+cos²消去参数，得ab/2=6。",
+        "长度平方为a²+b²+(a²-b²)sin2t，所以范围是[√2b,√2a]且两端可取。",
+        "中点为(a/√2 cos(t+π/4),b/√2 sin(t+π/4))。参数平移遍历整个圆，故轨迹椭圆取遍。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    },
+    {
+      "question_sha256": "c98daff3a38088de8bcdbcb98293cacbbbf4ebc8905695bb52a2798417dd70de",
+      "passed": true,
+      "status": "symbolic_checks_and_reasoning_review",
+      "canonical_text_matches_spec": true,
+      "proposal_matches_independent_solution": true,
+      "option_count_valid": true,
+      "option_key": null,
+      "values": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "exp(-sqrt(3))",
+        "1",
+        "exp(sqrt(3))"
+      ],
+      "values_latex": [
+        "-2",
+        "2",
+        "1",
+        "0",
+        "e^{- \\sqrt{3}}",
+        "1",
+        "e^{\\sqrt{3}}"
+      ],
+      "steps": [
+        "令t=ln x，实数t与正数x一一对应。g(t)=t³-3t在(-∞,-1)、(1,∞)递增，在(-1,1)递减，极值2、-2。",
+        "因此恰有三个互异正根当且仅当-2<c<2，端点会产生重根。",
+        "由三次方程韦达定理，三个t根之和为0，故三个x根之积为exp(0)=1。",
+        "附加条件结合乘积得x₂³=1，所以x₂=1、t₂=0、c=0，另两根为exp(±√3)。"
+      ],
+      "program_checks": [
+        true,
+        true,
+        true
+      ],
+      "engine": "SymPy 1.14.0",
+      "verification_revision": "solver-v1",
+      "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+      "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+      "reasoning_review": {
+        "reviewer": "Codex",
+        "model_version": "not_exposed_by_host",
+        "independent_human": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "question_id": "orig:henan-math:full:20261110:q001:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "e1f79289e9be57805a4f80567909894c1835d7049c1765997ea251e8097945f5",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "A",
+        "values": [
+          "4"
+        ],
+        "values_latex": [
+          "4"
+        ],
+        "steps": [
+          "由z+共轭z=10得Re z=5。令z=5+yi，模平方条件成为(5-2)²+y²=13，因此y²=4。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q001",
+            "score": 0.3077
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "集合与复数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q002:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "af7082ddb5eb360eedbe2e619f8e96e1108cebe4e5ce6d004aa8eab6f654a42b",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "A",
+        "values": [
+          "6"
+        ],
+        "values_latex": [
+          "6"
+        ],
+        "steps": [
+          "二次不等式给出4≤x≤12，取其中整数再剔除3的整倍数，保留[4, 5, 7, 8, 10, 11]，共6个。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q002",
+            "score": 0.2469
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "集合与复数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q003:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "4ede133e620109c71cd75ba789592bc83158d48500ae03aa206086906fd44ea9",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "B",
+        "values": [
+          "1/2"
+        ],
+        "values_latex": [
+          "\\frac{1}{2}"
+        ],
+        "steps": [
+          "两边平方并用sin²t+cos²t=1，得到sin 2t=(sin t+cos t)²-1。给定和在第一象限的可取范围内。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q003",
+            "score": 0.5085
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "三角与向量",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q004:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "c0a8e8b75f8554636da56ff286263b43705da321ad10092528a6e654c125f899",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "C",
+        "values": [
+          "10"
+        ],
+        "values_latex": [
+          "10"
+        ],
+        "steps": [
+          "垂直要求u·v=2+t=0，故t=-2。和向量为(3,-1)，长度平方为(3)²+(-1)²=10。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q001:v1",
+            "score": 0.2979
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "三角与向量",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q005:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "67c947875de7b6182d8d791c6e99f113dd33bf7296823361657a865d98bfd14b",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "D",
+        "values": [
+          "9*sqrt(3)"
+        ],
+        "values_latex": [
+          "9 \\sqrt{3}"
+        ],
+        "steps": [
+          "代入y=2，纵坐标项为1/4，所以x²=3×81/4。两个端点横坐标为±9/2√3，弦长为9√3。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q018",
+            "score": 0.5862
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "解析几何",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q006:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "63187750954f71a9aa422bc9c7d735e39aece296f247dd93ecb68a7ea26a82e7",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "C",
+        "values": [
+          "4/7"
+        ],
+        "values_latex": [
+          "\\frac{4}{7}"
+        ],
+        "steps": [
+          "给每球编号，有序不放回二元组总数为7×6=42。两颜色不同有2×3×4=24种，概率为24/42=4/7。程序逐组枚举也得到相同计数。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q014",
+            "score": 0.1818
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "概率统计",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q007:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "607e5026564dd7d5a066d403ae2e6e9873d87605999ffb8f603c2a53dde3ef0a",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "C",
+        "values": [
+          "1"
+        ],
+        "values_latex": [
+          "1"
+        ],
+        "steps": [
+          "两根互异实根要求判别式4t(t-1)>0；两根为正还要求和2t>0、积t>0。合并得到t>1，有限端点1不取。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2025-cn-math-national-1:q007",
+            "score": 0.2424
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q008:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "ac3e787526ff2de304b4e482730a2c559bafab5abbc8be76b63efea9b004cbc1",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "C",
+        "values": [
+          "4"
+        ],
+        "values_latex": [
+          "4"
+        ],
+        "steps": [
+          "令u=2x，则0<u<4π。每个完整周期sin u=1/2有两解，两个周期共4解，均不在端点。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q004",
+            "score": 0.3929
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "三角与向量",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q009:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "49cb12ecefb36ec18839a2c83f4e5e1d72c2f9e9e797e5e2bfa1829180cb9b57",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "AC",
+        "values": [
+          "48"
+        ],
+        "values_latex": [
+          "48"
+        ],
+        "steps": [
+          "奇数项a₂ⱼ₋₁=2+2(j-1)，偶数项a₂ⱼ=4+2(j-1)。",
+          "相邻两项之和为6+4(j-1)，j从1取到4，故总和为4×6+4×4×3/2=48。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q001:v1",
+            "score": 0.2903
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q010:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "32aa4b4746a338f6f5f30298d6d82cca4a3952204790e562b8d5da5a4e1f0d80",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "AC",
+        "values": [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        "values_latex": [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        "steps": [
+          "用坐标向量判断。OA与OB、OC均垂直，故垂直于其张成平面；CM·AB=0；另外两个平行条件的叉积均不为零。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q004:v1",
+            "score": 0.32
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "立体几何",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q011:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "fe55370b5589f0c39e3a95a13f8bc419c99201f24d9bf5a726838182f576d507",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": "ABC",
+        "values": [
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        "values_latex": [
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        "steps": [
+          "f′=1/x-4x，唯一正零点为1/√4；f″=-1/x²-4<0，所以导数严格递减，零点为全局最大点。",
+          "代入得最大值-(ln 4+1)/2。x趋于0的正侧时f趋于负无穷，所以无可取的最小值。"
+        ],
+        "program_checks": [
+          true,
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q004",
+            "score": 0.3333
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q012:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "9454348184e0ab5d4ef34ccfd4b17babf22adc95b2f6ec21ecc7d5320e345e0a",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "4"
+        ],
+        "values_latex": [
+          "4"
+        ],
+        "steps": [
+          "从4个因子中选j个x⁻¹，通项x指数为4-2j。令它为2得j=1，系数为组合数C(4,1)=4。程序用完全展开独立提取同一系数。"
+        ],
+        "program_checks": [],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q006",
+            "score": 0.4384
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "排列组合",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q013:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "3a4988415b7222d96988b1731461306d9f15e1f7dbfb302ac45d39d651c0997e",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "48"
+        ],
+        "values_latex": [
+          "48"
+        ],
+        "steps": [
+          "EY=4×2-2=6，所以Y-EY=4(X-EX)。平方取平均得到VarY=4²×3=48，标准差为4√3。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q009:v1",
+            "score": 0.2899
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "概率统计",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q014:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "b9385476746938a097220ed34d8603e0b6755766b39944ededf55701eb78872a",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "2*exp(-1)"
+        ],
+        "values_latex": [
+          "\\frac{2}{e}"
+        ],
+        "steps": [
+          "f′(x)=exp(-x/2)(1-x/2)。指数因子始终正，导数在x<2为正、x>2为负，所以在x=2唯一取得全局最大值2/e。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "2026-cn-math-national-1:q006",
+            "score": 0.5625
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q015:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "7ff5b21326094e3122553b305819e2d40b176490f303739ee3e8abe2b74f8070",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "1/2",
+          "2/3",
+          "5/18",
+          "1/36"
+        ],
+        "values_latex": [
+          "\\frac{1}{2}",
+          "\\frac{2}{3}",
+          "\\frac{5}{18}",
+          "\\frac{1}{36}"
+        ],
+        "steps": [
+          "全概率公式算一次红球概率。用贝叶斯公式算首次红后选乙的概率。",
+          "同一袋被固定，两次抽取只在给定袋时独立；无条件两次均红为(p甲²+p乙²)/2。",
+          "与边际概率乘积不等，所以无条件不独立。协方差为联合概率减边际乘积。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q013:v1",
+            "score": 0.1333
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "概率统计",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q016:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "58b399316a0277f95470841c1a3070959fd0e3df183b4c6e79c52dfb957b12b8",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "5*h/sqrt(2*h**2 + 25)",
+          "5",
+          "5*sqrt(3)/3"
+        ],
+        "values_latex": [
+          "\\frac{5 h}{\\sqrt{2 h^{2} + 25}}",
+          "5",
+          "\\frac{5 \\sqrt{3}}{3}"
+        ],
+        "steps": [
+          "中点向量MN=AB/2，且MN在底边上方、与AB不同线，所以平行。",
+          "用AB×AC可取法向量(h,h,5)，平面方程hx+hy+5z=5h。",
+          "点O到面的距离为5h/√(25+2h²)。直线OC的单位方向为(0,0,1)，线面角正弦为5/√(25+2h²)。",
+          "其平方等于1/3给出3×25=25+2h²，h>0故h=5，距离=5*sqrt(3)/3。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q010:v1",
+            "score": 0.4211
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "立体几何",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q017:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "48d5c4723a18b759c00ddf92fd38b7446dfc2788fc853efcd1f15a2cdf12edc6",
+        "passed": true,
+        "status": "programmatically_verified",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "-(-1)**n + 4**n",
+          "5460"
+        ],
+        "values_latex": [
+          "- \\left(-1\\right)^{n} + 4^{n}",
+          "5460"
+        ],
+        "steps": [
+          "令cₙ=aₙ-(-1)ⁿ⁻¹。代入原递推可得cₙ₊₁=4cₙ，且c₁=4。",
+          "所以cₙ=4×4ⁿ⁻¹，aₙ=4×4ⁿ⁻¹+(-1)ⁿ⁻¹。代回原递推与首项均相符。",
+          "前6项的等比部分和为(4)(4^6-1)/(4-1)；交错部分和为[1-(-1)^6]/2。相加为5460。"
+        ],
+        "program_checks": [
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "程序仅验证当前数学规格及标准题面，未证明教育测量质量",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q009:v1",
+            "score": 0.6269
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "数列",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q018:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "bbf330214c1fe722d9315a2498343d19cfcd9f336547f218a0b1734a9eaf9560",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "6",
+          "2*sqrt(2)",
+          "6*sqrt(2)",
+          "18",
+          "2"
+        ],
+        "values_latex": [
+          "6",
+          "2 \\sqrt{2}",
+          "6 \\sqrt{2}",
+          "18",
+          "2"
+        ],
+        "steps": [
+          "为书写简洁，记长半轴a=6、短半轴b=2。面积为行列式绝对值的一半，sin²+cos²消去参数，得ab/2=6。",
+          "长度平方为a²+b²+(a²-b²)sin2t，所以范围是[√2b,√2a]且两端可取。",
+          "中点为(a/√2 cos(t+π/4),b/√2 sin(t+π/4))。参数平移遍历整个圆，故轨迹椭圆取遍。"
+        ],
+        "program_checks": [
+          true,
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q005:v1",
+            "score": 0.5031
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "解析几何",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    },
+    {
+      "question_id": "orig:henan-math:full:20261110:q019:v1",
+      "attempt": 1,
+      "passed": true,
+      "verification": {
+        "question_sha256": "c98daff3a38088de8bcdbcb98293cacbbbf4ebc8905695bb52a2798417dd70de",
+        "passed": true,
+        "status": "symbolic_checks_and_reasoning_review",
+        "canonical_text_matches_spec": true,
+        "proposal_matches_independent_solution": true,
+        "option_count_valid": true,
+        "option_key": null,
+        "values": [
+          "-2",
+          "2",
+          "1",
+          "0",
+          "exp(-sqrt(3))",
+          "1",
+          "exp(sqrt(3))"
+        ],
+        "values_latex": [
+          "-2",
+          "2",
+          "1",
+          "0",
+          "e^{- \\sqrt{3}}",
+          "1",
+          "e^{\\sqrt{3}}"
+        ],
+        "steps": [
+          "令t=ln x，实数t与正数x一一对应。g(t)=t³-3t在(-∞,-1)、(1,∞)递增，在(-1,1)递减，极值2、-2。",
+          "因此恰有三个互异正根当且仅当-2<c<2，端点会产生重根。",
+          "由三次方程韦达定理，三个t根之和为0，故三个x根之积为exp(0)=1。",
+          "附加条件结合乘积得x₂³=1，所以x₂=1、t₂=0、c=0，另两根为exp(±√3)。"
+        ],
+        "program_checks": [
+          true,
+          true,
+          true
+        ],
+        "engine": "SymPy 1.14.0",
+        "verification_revision": "solver-v1",
+        "remaining_uncertainty": "全域符号证明的文字推理已经AI复核，尚无人类盲审与考生实测",
+        "independence": "独立求解函数仅接收题目族和参数，不能读取草稿答案；与生成器使用不同计算路径",
+        "reasoning_review": {
+          "reviewer": "Codex",
+          "model_version": "not_exposed_by_host",
+          "independent_human": false
+        }
+      },
+      "quality": {
+        "duplicate": {
+          "closest": {
+            "id": "orig:henan-math:full:20261110:q011:v1",
+            "score": 0.2921
+          },
+          "threshold": 0.78,
+          "passed": true,
+          "method": "去除通用作答提示、归一化数字与单字母，保留数学结构后比较顺序相似度",
+          "limitation": "局部文本检测，不能证明全球原创性；题目族设计须另经推理审查"
+        },
+        "syllabus_module": "函数与导数",
+        "ambiguity_review": "标准题面与参数绑定校验；有定义域与量词，尚需教师盲审",
+        "difficulty_basis": "基于方法层数、分类和量词复杂度的设计等级，未经考生实测",
+        "calculation_review": "完整步骤保存在验证记录，未实测作答时间",
+        "item_audit": {
+          "passed": true,
+          "errors": [],
+          "reviewer": "deterministic-quality-v2",
+          "coverage": "可计算范围、必要字段与格式。语义歧义、课程逐条匹配和教育测量仍须独立审题。"
+        },
+        "passed": true
+      }
+    }
+  ],
+  "structure": {
+    "passed": true,
+    "questions": 19,
+    "points": 150,
+    "kind_counts": {
+      "single_choice": 8,
+      "multiple_choice": 3,
+      "fill_in": 3,
+      "constructed_response": 5
+    },
+    "module_counts": {
+      "集合与复数": 2,
+      "三角与向量": 3,
+      "解析几何": 2,
+      "概率统计": 3,
+      "函数与导数": 4,
+      "数列": 2,
+      "立体几何": 2,
+      "排列组合": 1
+    },
+    "difficulty_counts": {
+      "1": 4,
+      "2": 6,
+      "3": 5,
+      "4": 3,
+      "5": 1
+    }
+  },
+  "overall_status": "prototype_verified_with_reasoning_review",
+  "limitations": [
+    "主观难度与高考风格尚无教师盲评或考生实测",
+    "符号验证仅覆盖受支持数学题目族",
+    "文本相似度不能排除外部题库重复"
+  ],
+  "files": {
+    "paper_pdf": "paper.pdf",
+    "solutions_pdf": "solutions.pdf",
+    "paper_editable": "paper.md",
+    "solutions_editable": "solutions.md",
+    "word_status": "未生成DOCX。本环境未找到LibreOffice，无法完成文档技能要求的渲染核验。"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "subject": "physics",
+  "minutes": 32,
+  "questions": [
+    {
+      "id": "orig:physics:p14:01",
+      "points": 4,
+      "topic": "匀强电场",
+      "stem": "纸面内存在匀强电场，取向右和向上分别为 x、y 轴正方向。原点 O 的电势为 5 V，A(0.2 m，0) 的电势为 1 V，B(0，0.1 m) 的电势也是 5 V。该电场的方向和大小为",
+      "options": {
+        "A": "沿 x 轴正方向，20 V/m",
+        "B": "沿 x 轴负方向，20 V/m",
+        "C": "沿 y 轴正方向，40 V/m",
+        "D": "沿 y 轴负方向，40 V/m"
+      },
+      "parts": [],
+      "problem": {
+        "op": "field_direction",
+        "uniform": true,
+        "x_offset": {
+          "value": ".2",
+          "unit": "m"
+        },
+        "y_offset": {
+          "value": ".1",
+          "unit": "m"
+        },
+        "origin_potential": {
+          "value": 5,
+          "unit": "V"
+        },
+        "x_potential": {
+          "value": 1,
+          "unit": "V"
+        },
+        "y_potential": {
+          "value": 5,
+          "unit": "V"
+        },
+        "options": {
+          "A": [
+            20,
+            0
+          ],
+          "B": [
+            -20,
+            0
+          ],
+          "C": [
+            0,
+            40
+          ],
+          "D": [
+            0,
+            -40
+          ]
+        }
+      },
+      "proposed_answer": "A"
+    },
+    {
+      "id": "orig:physics:p14:02",
+      "points": 4,
+      "topic": "运动图像",
+      "stem": "滑块沿直导轨运动，规定向右为正，速度随时间的变化如图。滑块在 0～5 s 内的位移与路程分别为",
+      "options": {
+        "A": "向右 3.0 m，7.0 m",
+        "B": "向右 5.5 m，9.5 m",
+        "C": "向左 5.5 m，9.5 m",
+        "D": "向右 7.5 m，9.5 m"
+      },
+      "parts": [],
+      "problem": {
+        "op": "velocity_graph",
+        "time_axis": "s",
+        "velocity_axis": "m/s",
+        "points": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            5,
+            -2
+          ]
+        ],
+        "options": {
+          "A": [
+            3,
+            7
+          ],
+          "B": [
+            5.5,
+            9.5
+          ],
+          "C": [
+            -5.5,
+            9.5
+          ],
+          "D": [
+            7.5,
+            9.5
+          ]
+        }
+      },
+      "proposed_answer": "B",
+      "figure": {
+        "path": "motion.png",
+        "sha256": "21799858639b73f43bea413a41ca39ce39e747dbcfb4fd54f0cec61187a95344"
+      }
+    },
+    {
+      "id": "orig:physics:p14:03",
+      "points": 10,
+      "topic": "电路与实验",
+      "stem": "实验小组按图连接电路，研究电池的路端电压。电流表量程为 0～0.60 A，电压表量程为 0～3.0 V，两表均视为理想电表。闭合开关后改变外电阻 R，记录三组数据。电流 I 依次为 0.20 A、0.35 A、0.50 A，对应电压 U 依次为 2.80 V、2.48 V、2.21 V。把电池视为电动势 E 与内阻 r 均恒定的电源。本题约定，用首、末两组数据确定直线，若中间点实测电压与直线预测值相差不超过 0.03 V，则认为该点与模型相容。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "根据首、末两组数据求 E 和 r，结果均保留两位小数。"
+        },
+        {
+          "label": "（2）",
+          "text": "能否用现有量程的电压表直接测量开路电压？说明理由。"
+        },
+        {
+          "label": "（3）",
+          "text": "中间点是否与上述模型相容？这些数据能否证明该电池在任意电流下都满足同一关系？"
+        }
+      ],
+      "problem": {
+        "op": "terminal_data",
+        "ideal_meters": true,
+        "constant_emf_and_resistance_model": true,
+        "current_range": {
+          "value": ".60",
+          "unit": "A"
+        },
+        "voltage_range": {
+          "value": "3.0",
+          "unit": "V"
+        },
+        "tolerance": {
+          "value": ".03",
+          "unit": "V"
+        },
+        "current_unit": "A",
+        "voltage_unit": "V",
+        "readings": [
+          [
+            ".20",
+            "2.80"
+          ],
+          [
+            ".35",
+            "2.48"
+          ],
+          [
+            ".50",
+            "2.21"
+          ]
+        ]
+      },
+      "proposed_answer": {
+        "emf_V": "479/150",
+        "resistance_ohm": "59/30",
+        "middle_error_V": "1/40",
+        "within_tolerance": true,
+        "open_in_range": false,
+        "evidence": "sample_only"
+      },
+      "figure": {
+        "path": "circuit.png",
+        "sha256": "1afc1dee4896cb0c7248e425e9ad84cdcceadaee5da7d54894b70d5e12a4b760"
+      }
+    },
+    {
+      "id": "orig:physics:p14:04",
+      "points": 10,
+      "topic": "分段运动",
+      "stem": "滑块在水平导轨的 A 点以 1.0 m/s 的速度向右运动。从经过 A 点开始计时，它以 2.0 m/s² 的加速度向右运动 2.0 s，随后切换为制动模式，加速度大小为 1.5 m/s²、方向向左。速度降为零时，制动结束，滑块保持静止。B 点在 A 点右侧 10.0 m。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "求开始制动时滑块的速度及它到 A 点的距离。"
+        },
+        {
+          "label": "（2）",
+          "text": "从开始制动到经过 B 点，滑块用了多长时间？说明取舍过程。"
+        },
+        {
+          "label": "（3）",
+          "text": "求滑块从经过 A 点到停下所用的时间。"
+        }
+      ],
+      "problem": {
+        "op": "braking_crossing",
+        "positive_initial_motion": true,
+        "stays_at_rest": true,
+        "initial": {
+          "value": 1,
+          "unit": "m/s"
+        },
+        "thrust": {
+          "value": 2,
+          "unit": "m/s^2"
+        },
+        "thrust_time": {
+          "value": 2,
+          "unit": "s"
+        },
+        "braking": {
+          "value": "1.5",
+          "unit": "m/s^2"
+        },
+        "target": {
+          "value": 10,
+          "unit": "m"
+        }
+      },
+      "proposed_answer": {
+        "switch_speed": 5,
+        "switch_distance": 6,
+        "target_time_after_switch": "10/3 - 2*sqrt(13)/3",
+        "total_stop_time": "16/3"
+      }
+    },
+    {
+      "id": "orig:physics:p14:05",
+      "points": 12,
+      "topic": "电场与分段运动",
+      "stem": "质量为 m、电荷量大小为 q 的带电微球沿两平行板的中线水平向右进入竖直匀强电场，初速度为 4.0 m/s。电场方向竖直向上，微球电荷的正负未知，且 q/m＝0.50 C/kg。沿初速度方向，板长 0.20 m，板间距 0.020 m。离开平行板后，微球进入无场区域，到达距板右端 0.30 m 的竖直屏。以中线与屏的交点为零点，向上为正。在屏上测得落点到零点的距离为 0.020 m，记录没有区分落点在零点上方还是下方。忽略重力、空气阻力及边缘电场。",
+      "options": {},
+      "parts": [
+        {
+          "label": "（1）",
+          "text": "分别求微球在电场内、无场区运动的时间。"
+        },
+        {
+          "label": "（2）",
+          "text": "求电场强度大小，并分别给出微球带正电和负电时落点的有向坐标。"
+        },
+        {
+          "label": "（3）",
+          "text": "检验微球在电场内是否会碰到平行板。"
+        }
+      ],
+      "problem": {
+        "op": "plate_deflection",
+        "uniform_vertical_field": true,
+        "field_free_drift": true,
+        "ignores_gravity": true,
+        "starts_centered": true,
+        "charge_sign": "unknown",
+        "speed": {
+          "value": 4,
+          "unit": "m/s"
+        },
+        "length": {
+          "value": ".2",
+          "unit": "m"
+        },
+        "gap": {
+          "value": ".02",
+          "unit": "m"
+        },
+        "drift": {
+          "value": ".3",
+          "unit": "m"
+        },
+        "screen_offset": {
+          "value": ".02",
+          "unit": "m"
+        },
+        "abs_charge_to_mass": {
+          "value": ".5",
+          "unit": "C/kg"
+        }
+      },
+      "proposed_answer": {
+        "field_time_s": "1/20",
+        "drift_time_s": "3/40",
+        "field_N_C": 8,
+        "spots_m": {
+          "positive": "1/50",
+          "negative": "-1/50"
+        },
+        "exit_abs_m": "1/200",
+        "clears_plate": true
+      }
+    }
+  ],
+  "title": "河南物理原创专题练习 · HN14-P40-v1"
+}

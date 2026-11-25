@@ -1,0 +1,163 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "biology",
+    "region": "河南",
+    "year": 2026,
+    "mode": "targeted",
+    "mapping": {
+      "subject": "biology",
+      "year": 2026,
+      "paper_id": "2026-cn-ha-biology-selective",
+      "series_id": "cn-ha-biology-selective",
+      "curriculum_id": "biology-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "historical_selective",
+      "points": 100,
+      "minutes": 75,
+      "evidence": [
+        "hn-2026",
+        "hn-reform"
+      ],
+      "structure": {
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 16,
+            "points": 48
+          },
+          {
+            "kind": "constructed_response",
+            "count": 5,
+            "points": 52
+          }
+        ],
+        "source_urls": [
+          "https://zy.21cnjy.com/25959270"
+        ],
+        "status": "observed_third_party_paper",
+        "source_details": [
+          {
+            "kind": "single_choice",
+            "questions": 16,
+            "points": 48,
+            "each": 3
+          },
+          {
+            "kind": "constructed_response",
+            "questions": 5,
+            "points": 52
+          }
+        ]
+      }
+    },
+    "curriculum_topics": [
+      "细胞结构与功能",
+      "细胞代谢",
+      "细胞分裂",
+      "遗传与变异",
+      "生物进化",
+      "稳态与调节",
+      "生态系统",
+      "生物技术",
+      "实验设计与结果分析"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-biology-selective:q002",
+        "topic": "生物技术与工程·异源细胞融合鉴别",
+        "source_url": "https://zy.21cnjy.com/25959270",
+        "review_status": "independently_solved_summary"
+      },
+      {
+        "id": "2026-cn-ha-biology-selective:q007",
+        "topic": "遗传与进化·自然选择和基因频率",
+        "source_url": "https://zy.21cnjy.com/25959270",
+        "review_status": "independently_solved_summary"
+      }
+    ],
+    "structure": null,
+    "scope": "专项分数和时长由练习设定"
+  },
+  "questions": [
+    {
+      "id": "orig:biology:p13:01",
+      "topic": "遗传与进化·自由组合和条件抽样",
+      "version_sha256": "4953fb5d191a788c695ed96da1f547a9576e211741ce90f8399ee3be32c23dd2",
+      "verification": {
+        "answer": {
+          "筛除比例": "1/8",
+          "保留者中AaBb比例": "2/7",
+          "保留者中双显性比例": "3/7"
+        },
+        "checks": [
+          "两对常染色体等位基因独立分配",
+          "配子组合逐项枚举",
+          "剔除后以非零条件事件重新归一化"
+        ],
+        "unverified": [],
+        "explanation": "按每对等位基因等概率分离，两亲本配子独立组合。合子分布为AaBB 为 1/8、AaBb 为 1/4、Aabb 为 1/8、aaBB 为 1/8、aaBb 为 1/4、aabb 为 1/8。剔除指定基因型后，用各目标在保留合子中的组合数除以保留组合总数 14。这一概率计算限于题设独立分配、完全显性和筛选前等存活率。"
+      }
+    },
+    {
+      "id": "orig:biology:p13:02",
+      "topic": "分子与细胞·实验对照与推理边界",
+      "version_sha256": "dd2be15d9c99209abc595ad496a011c342b92afb9444708bd406a778628968cb",
+      "verification": {
+        "answer": {
+          "对照萌发率": "17/20",
+          "处理萌发率": "11/20",
+          "差值（处理－对照，百分点）": "-30",
+          "自变量": "NaCl 浓度",
+          "能否单独证明 Na⁺ 毒害": "不能",
+          "证据边界": "只支持题设条件下的观测差异"
+        },
+        "checks": [
+          "逐皿数据合法且含独立重复",
+          "对照组只改变 NaCl 浓度",
+          "按总萌发数和总播种数核算比例"
+        ],
+        "unverified": [],
+        "explanation": "各组将萌发数相加，除以该组播种总数。处理组观测萌发率较低。随机分配和同等培养条件支持比较这次盐处理的效应。这组数据不能判定是渗透效应还是离子效应，也不能推出任意浓度、品种或处理时间下的规律。"
+      }
+    },
+    {
+      "id": "orig:biology:p13:03",
+      "topic": "分子与细胞·渗透与净水流",
+      "version_sha256": "f3464090cb03024c3853740f9684b52b5e2cd33557f8184f8e1eaecf9d1414ea",
+      "verification": {
+        "answer": "B",
+        "checks": [
+          "核对初始水势次序",
+          "逐项比较跨膜净水流",
+          "四选项唯一真值"
+        ],
+        "unverified": [],
+        "explanation": "题设规定水的净移动方向由高水势一侧指向低水势一侧。分别比较细胞与 X、Y 溶液的初始水势即可判定。这一步没有推出最终水分平衡状态或是否发生质壁分离。"
+      }
+    }
+  ],
+  "answers": [
+    {
+      "筛除比例": "1/8",
+      "保留者中AaBb比例": "2/7",
+      "保留者中双显性比例": "3/7"
+    },
+    {
+      "对照萌发率": "17/20",
+      "处理萌发率": "11/20",
+      "差值（处理－对照，百分点）": "-30",
+      "自变量": "NaCl 浓度",
+      "能否单独证明 Na⁺ 毒害": "不能",
+      "证据边界": "只支持题设条件下的观测差异"
+    },
+    "B"
+  ],
+  "candidate_sha256": "0bb0786325478bfc22503ea063985836950b5272dd7806f742b1dd764849ab95",
+  "paper_version": "b792db326f1785b2f1e9c019372f8a399fd30a57921a623e9b4b856ef5f8cf5a",
+  "paper_pdf_sha256": "1d4c9e6b77ee44d39a973a539794b7149d15e32d4f38ba70484d30ff6fef3709"
+}

@@ -1,0 +1,167 @@
+{
+  "version": "math-feature-rubric-v2",
+  "locked_on": "2026-11-10",
+  "rules": "每题逐标签独立判断。1附可定位的数学证据，0为适用且能排除。缺图、条件冲突或证据不足写null并给理由；超出适用范围也写null但不计未知。多个标签可以同时成立。不能以关键词替代数学对象、约束和设问证据。",
+  "sample": {
+    "seed": "phase12-2026-11-10-v1",
+    "random_per_paper": 2,
+    "heldout_papers": [
+      "2021-cn-math-new-gaokao-2",
+      "2024-cn-math-new-gaokao-2",
+      "2026-cn-math-national-1",
+      "2026-cn-math-new-gaokao-2"
+    ],
+    "targeted": [
+      "2020-cn-math-new-gaokao-1:q018",
+      "2020-cn-math-new-gaokao-2:q020",
+      "2021-cn-math-new-gaokao-1:q017",
+      "2021-cn-math-new-gaokao-2:q020",
+      "2021-cn-math-new-gaokao-2:q021",
+      "2022-cn-math-new-gaokao-2:q019",
+      "2022-cn-math-new-gaokao-1:q020",
+      "2023-cn-math-new-gaokao-2:q018",
+      "2023-cn-math-new-gaokao-2:q019",
+      "2023-cn-math-new-gaokao-2:q022",
+      "2024-cn-math-new-gaokao-1:q008",
+      "2024-cn-math-new-gaokao-1:q019",
+      "2024-cn-math-new-gaokao-2:q019",
+      "2025-cn-math-national-1:q016",
+      "2025-cn-math-new-gaokao-2:q018",
+      "2025-cn-math-new-gaokao-2:q019",
+      "2026-cn-math-new-gaokao-2:q010",
+      "2026-cn-math-new-gaokao-2:q015",
+      "2026-cn-math-national-1:q017",
+      "2026-cn-math-national-1:q019"
+    ]
+  },
+  "admission": {
+    "minimum_positive": 5,
+    "minimum_negative": 5,
+    "minimum_holdout_papers": 3,
+    "minimum_kappa": 0.65,
+    "minimum_precision": 0.8,
+    "minimum_recall": 0.8,
+    "minimum_coverage": 0.8,
+    "year_variation_required": true,
+    "requires_independent_future_coding": true
+  },
+  "targets": [
+    {
+      "id": "module.functions_anchor",
+      "title": "函数主任务",
+      "scope": "all",
+      "definition": "存在直接研究函数（含三角函数）或数列性质、方程或通项的主任务。",
+      "positive": "求参数使给定函数单调。",
+      "negative": "几何题的求解可以选择设函数，但题面主要求几何量。",
+      "evidence": "指出具体设问和其直接对象。"
+    },
+    {
+      "id": "structure.sequence_recurrence",
+      "title": "数列递推",
+      "scope": "all",
+      "definition": "不同索引的状态通过同一个更新规则关联，题目给出、要求建立或实质检验该规则。状态可为点、概率、部分和或向量。",
+      "positive": "按前一个点反射生成下一点，并研究所得坐标数列。",
+      "negative": "已知是等差数列、只给出 a_n-6 或同下标两列之间的式子。",
+      "evidence": "写出旧索引到新索引的关系和它在设问中的作用。检验递推的实质性选项可计入。"
+    },
+    {
+      "id": "method.explicit_proof",
+      "title": "显式证明",
+      "scope": "constructed",
+      "definition": "解答题的指令直接要求证明一个命题，含求证或给出等价的证明命令。",
+      "positive": "证明两条直线垂直。",
+      "negative": "选择题判断某命题；解答题只要求计算。",
+      "evidence": "指出被证明的命题和子问。"
+    },
+    {
+      "id": "method.explicit_dependence",
+      "title": "显式跨问依赖",
+      "scope": "constructed",
+      "definition": "后问明确调用前问所得的结论、构造或计算结果，引用可由编号、结论文字或唯一新定义直接定位。",
+      "positive": "用第一问估计的量建模，且该量在第一问前没有已知数值。",
+      "negative": "后问仍研究同一个函数、同一公共参数或换一组条件，即便解题可复用技巧。",
+      "evidence": "列出前问输出、后问输入与连接。公共定义中的同名符号、独立可解只算弱证据。"
+    },
+    {
+      "id": "structure.derivative_parameter",
+      "title": "导数参数分类",
+      "scope": "constructed",
+      "definition": "参数变化改变函数单调、极值、零点或全域不等式的性质，求导判据在判定临界参数中有实质作用。",
+      "positive": "确定哪些参数可令不等式在正半轴恒成立，临界点由导数条件决定。",
+      "negative": "给定参数后求单点导数；只有一个可行参数由代入式确定。",
+      "evidence": "指出参数、受影响性质和至少一个分界或全域判据。"
+    },
+    {
+      "id": "structure.conic_dynamic",
+      "title": "动态圆锥曲线",
+      "scope": "all",
+      "definition": "圆锥曲线上的可变点、弦或受约束直线形成一族对象，并研究其轨迹、范围、极值、恒等或定点性质。",
+      "positive": "弦在焦点与斜率约束下移动，确定所得点的轨迹。",
+      "negative": "已给定一条弦只求长度；仅把圆锥曲线当作某个固定坐标的容器。",
+      "evidence": "指出自由度、约束与所求族性质。图中才有的约束不可猜测。"
+    },
+    {
+      "id": "structure.conditional_decision",
+      "title": "条件概率与决策",
+      "scope": "all",
+      "definition": "在已知随机事件发生的子总体中求风险或概率，或据此比较方案。",
+      "positive": "已知受检者呈阳性，计算实际患病风险。",
+      "negative": "固定参数取值、连续动作规则或求两个事件的交概率。",
+      "evidence": "明确写出条件事件、目标事件及所用子总体。"
+    },
+    {
+      "id": "structure.solid_existence",
+      "title": "立体几何存在性",
+      "scope": "constructed",
+      "definition": "在空间几何约束下判定某点、直线、平面或参数是否存在，或按条件构造并证明存在。",
+      "positive": "是否存在棱上一点使二面角等于给定值。",
+      "negative": "已知某点满足条件而直接计算距离。",
+      "evidence": "给出待构造对象、允许范围及待满足关系。"
+    },
+    {
+      "id": "method.necessity_sufficiency",
+      "title": "必要与充分",
+      "scope": "all",
+      "definition": "对同一等价命题显式要求证明两个方向，或确立同一性质的充要条件。",
+      "positive": "证明两事件独立当且仅当一个等式成立。",
+      "negative": "选一个条件判断类别、单向证法、题面把等价式当已知。",
+      "evidence": "写出 A 推 B 和 B 推 A 各自对应的任务。"
+    },
+    {
+      "id": "method.choice_cases",
+      "title": "选填分类讨论",
+      "scope": "objective",
+      "definition": "完整的正确结论需要对至少两种会改变模型或结论的互斥情形分别推理。",
+      "positive": "不同斜率区间导致不同交点个数，需覆盖各区间。",
+      "negative": "逐项检查选项，或可用统一论证而任意把解法拆开。",
+      "evidence": "指出分类变量、至少两个分支及分类必要性。"
+    },
+    {
+      "id": "method.real_model",
+      "title": "实际情境建模",
+      "scope": "all",
+      "definition": "需要从现实描述、观测或约束选择变量、样本空间或数量关系，并形成可运算模型。",
+      "positive": "从实际检测过程建立抽样条件或风险模型。",
+      "negative": "概率分布与公式完全给定，只代数值；故事换成字母对模型无影响。",
+      "evidence": "指出由哪条现实证据推导出何种数学关系。"
+    },
+    {
+      "id": "method.substantive_context",
+      "title": "实质实际情境",
+      "scope": "all",
+      "definition": "现实数据或情境约束改变适用数学对象、可行域或结论。模型可以已经部分给出。",
+      "positive": "根据生产检测的不同流程得到不同条件事件。",
+      "negative": "以真实地名包装一个与情境无关的方程。",
+      "evidence": "说明移除或改变哪项实际条件会改变数学任务。建模与实质情境可共存。"
+    },
+    {
+      "id": "method.transfer_prompt",
+      "title": "方法迁移",
+      "scope": "all",
+      "definition": "非标准定义、表示或约束要求主动映射到已有数学结构，映射决定核心解法。",
+      "positive": "把自定义可分数列映射为索引间隔与整除关系。",
+      "negative": "只换符号、名词或将定义直接代入即可完成。",
+      "evidence": "指出新表示、标准结构和桥接步骤。"
+    }
+  ]
+}

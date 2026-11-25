@@ -1,0 +1,460 @@
+{
+  "pdf_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+  "student_review_sha256": "3feb1fa64e9416776a1c3c5c7d86642189d67935f0f6ea1829e3c3b6b57cf348",
+  "math_verification_sha256": "b87fb7496f1315fb7326947d9c2466b513f02a774f72abae501c37e29621dad8",
+  "all_consistent": true,
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "独立结果：B。完整程序规格核对：False；True；False；False。"
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "独立结果：D。完整程序规格核对：I*(-1 + I)/2。"
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "独立结果：A。完整程序规格核对：6/7。"
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "独立结果：C。完整程序规格核对：2。"
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "独立结果：D。完整程序规格核对：5/6。"
+    },
+    {
+      "number": 6,
+      "passed": true,
+      "evidence": "独立结果：A。完整程序规格核对：33。"
+    },
+    {
+      "number": 7,
+      "passed": true,
+      "evidence": "独立结果：B。完整程序规格核对：91/5。"
+    },
+    {
+      "number": 8,
+      "passed": true,
+      "evidence": "独立结果：B。完整程序规格核对：9。"
+    },
+    {
+      "number": 9,
+      "passed": true,
+      "evidence": "独立结果：AC。完整程序规格核对：True；False；True；False。"
+    },
+    {
+      "number": 10,
+      "passed": true,
+      "evidence": "独立结果：ABD。完整程序规格核对：True；True；False；True。"
+    },
+    {
+      "number": 11,
+      "passed": true,
+      "evidence": "独立结果：AD。完整程序规格核对：True；False；False；True。"
+    },
+    {
+      "number": 12,
+      "passed": true,
+      "evidence": "独立结果：4/3。完整程序规格核对：3*exp(2)；4/3。"
+    },
+    {
+      "number": 13,
+      "passed": true,
+      "evidence": "独立结果：84。完整程序规格核对：14；84。"
+    },
+    {
+      "number": 14,
+      "passed": true,
+      "evidence": "独立结果：[2,9/4]。程序辅助的部分规格：9/4。数学论证核对：t=1先给判别式及右端取值约束，故a≤9/4且a≥2。t>0时轴在区间内，判别式非负且两端函数值非负，故两根均在区间。",
+      "argument_audit": {
+        "scope": "对所有 t∈[0,1]，检查两实根同时落在[0,2]。",
+        "necessity": "t=1先给判别式及右端取值约束，故a≤9/4且a≥2。",
+        "sufficiency": "t>0时轴在区间内，判别式非负且两端函数值非负，故两根均在区间。",
+        "boundaries": "t=0固定为0和2；t→0正侧的判别式约束随界变大。",
+        "equality": "a=2时2可为根，a=9/4时t=1允许重根。",
+        "school_solution": "用二次函数图象、判别式，及1+t/4+1/t的单调性。"
+      }
+    },
+    {
+      "number": 15,
+      "passed": true,
+      "evidence": "独立结果：（1）A=π/3。（2）面积最大值 2√3，此时 b=4、c=2。。程序辅助的部分规格：1/2；2*sqrt(3)。数学论证核对：余弦条件令内角唯一；中线平方给b²+c²+bc=28。(2b−c)(b−2c)≥0给面积上界，夹角与两边可构成三角形。",
+      "argument_audit": {
+        "scope": "正边长、内角且b≥2c，中线长度固定。",
+        "necessity": "余弦条件令内角唯一；中线平方给b²+c²+bc=28。",
+        "sufficiency": "(2b−c)(b−2c)≥0给面积上界，夹角与两边可构成三角形。",
+        "boundaries": "b,c均正，比例的可行边界为b=2c。",
+        "equality": "b=4、c=2取到上界2√3。",
+        "school_solution": "余弦定理、三角形面积、中线向量与因式分解。"
+      }
+    },
+    {
+      "number": 16,
+      "passed": true,
+      "evidence": "独立结果：（1）PN/PC=3/4。（2）余弦值 8/√82。。程序辅助的部分规格：3/4；4*sqrt(82)/41。数学论证核对：法向量与AC方向垂直，得到唯一t=3/4。法向量与QA数量积非零，排除AC含在平面内。",
+      "argument_audit": {
+        "scope": "N在线段PC内部，目标为平行时的内分比和锐二面角。",
+        "necessity": "法向量与AC方向垂直，得到唯一t=3/4。",
+        "sufficiency": "法向量与QA数量积非零，排除AC含在平面内。",
+        "boundaries": "解t=3/4位于(0,1)，截面三点不共线。",
+        "equality": "锐二面角取法向量余弦绝对值，得8/√82。",
+        "school_solution": "空间直角坐标及法向量线性条件。"
+      }
+    },
+    {
+      "number": 17,
+      "passed": true,
+      "evidence": "独立结果：（1）P(T=2)=1/5，P(T=3)=3/10，P(T=4)=1/2，E(T)=33/10。（2）7/10。。完整程序规格核对：{'distribution': {'2': '1/5', '3': '3/10', '4': '1/2'}, 'expectation': '33/10', 'variance': '61/100'}；7/10。"
+    },
+    {
+      "number": 18,
+      "passed": true,
+      "evidence": "独立结果：（1）(x−1/2)²+3y²=1/4，整条椭圆均可取到。（2）最大值 √2/4，直线为 y=x−1 或 y=1−x。。程序辅助的部分规格：1/8。数学论证核对：参数t的两根互为相反数，方向向量与中点满足正交式；非P时方向由PM确定。轨迹上每个非P点沿PM代回，因P在内部确有两根，且其和为零。",
+      "argument_audit": {
+        "scope": "所有过P的椭圆割线及中点轨迹，每个轨迹点均须可取。",
+        "necessity": "参数t的两根互为相反数，方向向量与中点满足正交式；非P时方向由PM确定。",
+        "sufficiency": "轨迹上每个非P点沿PM代回，因P在内部确有两根，且其和为零。",
+        "boundaries": "M=P来自竖直弦、MH=0；M=O的水平弦也给MH=0。",
+        "equality": "最值等号对应m=3/4，n=±1/4，两条线为y=±(x−1)。",
+        "school_solution": "直线参数、二次项系数和内积投影；用平方因式给出1/8的上界。"
+      }
+    },
+    {
+      "number": 19,
+      "passed": true,
+      "evidence": "独立结果：（1）对所有 0<a<b，L(a,b)>√ab。（2）λ∈[1/3,+∞)。。程序辅助的部分规格：以推理为主，代数检查只提供旁证。数学论证核对：小正t时，用临界三阶导在0处的符号排除λ<1/3。λ=1/3时零初值与三阶导正号传递至原函数，再由A>G扩展。",
+      "argument_audit": {
+        "scope": "对任意0<a<b，同一λ须使全称不等式成立。",
+        "necessity": "小正t时，用临界三阶导在0处的符号排除λ<1/3。",
+        "sufficiency": "λ=1/3时零初值与三阶导正号传递至原函数，再由A>G扩展。",
+        "boundaries": "t>0对应原题a<b；靠近t=0的反例由a=e^(−t), b=e^t实现。",
+        "equality": "λ=1/3是可用的最小权重。a<b时不等式仍严格。",
+        "school_solution": "对数化归、指数恒等式、重复求导与函数单调性。"
+      }
+    }
+  ],
+  "scoring": {
+    "authority": "project",
+    "paper_sha256": "cdc0dc5c917176c76d8d78c04781286f35324aa41b1707d1ca9f2c3a3245455d",
+    "questions": [
+      {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为B。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为D。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为A。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为C。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为D。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为A。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为B。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为B。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "正确集合为AC。全部选对得满分，部分选对得部分分，选错为零。"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "正确集合为ABD。全部选对得满分，部分选对得部分分，选错为零。"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "正确集合为AD。全部选对得满分，部分选对得部分分，选错为零。"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为4/3。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为84。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "答案为[2,9/4]。可接受数学等价写法。"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "由余弦定理写出余弦为1/2"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "在内角域推出A为π/3"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "从中点向量或中线公式推出b²+c²+bc=28"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "利用边比约束证明bc≤8"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "把上界转成面积上界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "求到b=4、c=2并说明可取"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "正确建系，写出M、Q、N和t的域"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "求随t变化的平面法向量并构造平行关系"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "求t=3/4并排除AC在MNQ内"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "写出底面与MNQ的两个法向量"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "取锐角余弦并化到8/√82"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "建立20种等可能位置集合"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "列出首达第2、3次的4、6种"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "补足第4次停止并给分布"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "求期望33/10"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "将T=4准确换成前三位至多一枚"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "区别前3位0枚与1枚的条件权重"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "使用后三位条件对称或直接枚举得到7/10"
+          }
+        ]
+      },
+      {
+        "number": 18,
+        "steps": [
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "由弦参数或点差法得到mu+3nv=0"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "求轨迹方程并补竖直弦"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "从轨迹点反向构造割线并说明都可达"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "得到OM沿割线的投影长，核对退化方向"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "将MH²化成单变量并证明上界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "定位m=3/4与两种n"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "写出最大值和两条直线"
+          }
+        ]
+      },
+      {
+        "number": 19,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "归一化为正参数t并写出L/g"
+          },
+          {
+            "part": 1,
+            "points": 3,
+            "criterion": "由K的导数证明严格下界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "构造H并处理所有正参数"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "计算临界F三阶导与零点初值并证明充分"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "由A>G推广到较大权重"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "用H三阶导在0附近为负证明必要性"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "给出可实现反例的a、b与参数集合"
+          }
+        ]
+      }
+    ]
+  }
+}

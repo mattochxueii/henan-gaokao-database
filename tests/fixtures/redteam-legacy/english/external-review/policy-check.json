@@ -1,0 +1,88 @@
+{
+  "policy": {
+    "schema_version": 1,
+    "subject": "english",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-new-gaokao-1",
+    "rules": {
+      "english_score": {
+        "id": "henan-english-combined",
+        "subject": "english",
+        "kind": "english_score",
+        "region": "河南",
+        "from_year": 2027,
+        "parameters": {
+          "method": "listening_plus_written",
+          "written_points": 120,
+          "listening_points": 30,
+          "header": "听力30分、笔试120分，两项原始分合计150分，直接计入河南高考文化总成绩。"
+        },
+        "sources": [
+          {
+            "title": "河南省深化普通高等学校考试招生综合改革实施方案",
+            "url": "https://www.xiangcheng.gov.cn/sitesources/xcs/page_pc/xxgk/jcxxgk/zcjd/articlef6ef57536b614c1ebb70641901df76b3.html",
+            "evidence": "official_policy"
+          },
+          {
+            "title": "河南省教育考试院高考综合改革政策解读",
+            "url": "https://news.haeea.cn/attach/file/20250526/20250526151948_0983_74fe03ee.pdf",
+            "evidence": "official_policy"
+          }
+        ]
+      },
+      "listening": {
+        "id": "national-english-listening-from-2026",
+        "subject": "english",
+        "kind": "listening",
+        "series": [
+          "cn-new-gaokao-1",
+          "cn-new-gaokao-2"
+        ],
+        "from_year": 2026,
+        "parameters": {
+          "sections": [
+            {
+              "first_number": 1,
+              "recordings": 5,
+              "repeats": 2,
+              "scope": "short_dialogues",
+              "read_seconds_per_item": 0,
+              "answer_seconds_per_item": 10
+            },
+            {
+              "first_number": 6,
+              "recordings": 5,
+              "repeats": 2,
+              "scope": "dialogues_or_monologues",
+              "read_seconds_per_item": 5,
+              "answer_seconds_per_item": 5
+            }
+          ]
+        },
+        "sources": [
+          {
+            "title": "武汉招考办2026年听力调整说明",
+            "url": "https://3g.wuhan.gov.cn/hdjl/rdhy/202605/t20260530_2771182.shtml",
+            "evidence": "official_notice"
+          },
+          {
+            "title": "汉阴县教育体育局2026年普通高考温馨提示",
+            "url": "https://www.hanyin.gov.cn/Content-2920634.html",
+            "evidence": "official_notice"
+          }
+        ]
+      }
+    }
+  },
+  "year_source": "bound",
+  "student_instructions": [
+    "听力30分、笔试120分，两项原始分合计150分，直接计入河南高考文化总成绩。",
+    "第一节　共5段短对话，每段录音播放两遍。每段播放完毕后留10秒作答并阅读下一小题。",
+    "第二节　共5段长对话或独白，每段录音播放两遍。播放前每小题留5秒读题，播放完毕后每小题留5秒作答。"
+  ],
+  "invigilator_instructions": {
+    "1": "第一节　监考：共5段短对话，每段录音播放两遍。每段播放完毕后留10秒作答并阅读下一小题。",
+    "6": "第二节　监考：共5段长对话或独白，每段录音播放两遍。播放前每小题留5秒读题，播放完毕后每小题留5秒作答。"
+  }
+}

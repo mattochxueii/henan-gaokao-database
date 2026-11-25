@@ -1,0 +1,187 @@
+{
+  "workflow": "science-workflow-v1",
+  "subject": "physics",
+  "region": "河南",
+  "year": 2027,
+  "mode": "standard",
+  "mapping": {
+    "subject": "physics",
+    "year": 2027,
+    "paper_id": "2027-cn-ha-physics-selective",
+    "series_id": "cn-ha-physics-selective",
+    "curriculum_id": "physics-2017-2020",
+    "region": "河南",
+    "exam_system_id": "new-3+1+2",
+    "role": "first_choice",
+    "authoring_body": "河南省统一命题",
+    "status": "system_announced",
+    "points": null,
+    "minutes": null,
+    "evidence": [
+      "hn-2027",
+      "hn-reform"
+    ],
+    "structure": null
+  },
+  "curriculum_topics": [
+    "力与运动",
+    "牛顿运动定律",
+    "功和能",
+    "动量与能量",
+    "直流电路",
+    "电场",
+    "磁场",
+    "电磁感应",
+    "机械振动与波",
+    "热学",
+    "光学",
+    "物理实验"
+  ],
+  "requested_topics": [],
+  "reference_candidates": [
+    {
+      "id": "2026-cn-ha-physics-selective:q004",
+      "topic": "交变电流与理想变压器",
+      "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "6257dcbde2f9ce9ff468d36ff2ce36798865ae6471e7dacfb5463233fcb56291",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    },
+    {
+      "id": "2026-cn-ha-physics-selective:q007",
+      "topic": "平抛与图形投影",
+      "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "d9d38c382b1858b169998a3cbeaac96047356bcb6cb5833d5c64ba154c5907a6",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    },
+    {
+      "id": "2026-cn-ha-physics-selective:q011",
+      "topic": "游标与导轨实验",
+      "source_url": "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+      "review_status": "independently_solved_summary",
+      "version_sha256": "9d6f149d05721060fcd9698a02f769b2ab36b76024f9cabc0600c463a9b1b62b",
+      "usable_for_practice": null,
+      "strict_official_verified": null,
+      "conflict_note": null
+    }
+  ],
+  "structure": {
+    "sections": [
+      {
+        "kind": "single_choice",
+        "count": 7,
+        "points": 28
+      },
+      {
+        "kind": "multiple_choice",
+        "count": 3,
+        "points": 18
+      },
+      {
+        "kind": "constructed_response",
+        "count": 5,
+        "points": 54
+      }
+    ],
+    "source_urls": [
+      "https://github.com/deekur/gaokaophysics/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2026/2026%E6%B2%B3%E5%8D%97.pdf",
+      "https://www.shijuan123.com/tiku/papers/ha-2026.html",
+      "https://www.yeyulingfeng.com/wendang/91324497.html",
+      "https://www.zzwb.cn/news/382763.html"
+    ],
+    "status": "observed_third_party_paper",
+    "source_details": [
+      {
+        "kind": "single_choice",
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "points_each": 4,
+        "total_points": 28
+      },
+      {
+        "kind": "multiple_choice",
+        "numbers": [
+          8,
+          9,
+          10
+        ],
+        "points_each": 6,
+        "partial_correct_points": 3,
+        "total_points": 18
+      },
+      {
+        "kind": "experiment",
+        "numbers": [
+          11,
+          12
+        ],
+        "individual_points": [
+          6,
+          9
+        ],
+        "total_points": 15
+      },
+      {
+        "kind": "calculation",
+        "numbers": [
+          13,
+          14,
+          15
+        ],
+        "individual_points": [
+          10,
+          12,
+          17
+        ],
+        "total_points": 39
+      }
+    ]
+  },
+  "structure_minutes": 75,
+  "structure_year": 2026,
+  "scope": "沿用河南 2026 年已见卷面结构的项目模拟；2027 年实际卷型待确认",
+  "exam_policy": {
+    "schema_version": 1,
+    "subject": "physics",
+    "year": 2027,
+    "region": "河南",
+    "series": "cn-ha-physics-selective",
+    "rules": {
+      "multiple_choice": {
+        "id": "henan-selective-physics-multiple-choice",
+        "subject": "physics",
+        "kind": "multiple_choice",
+        "region": "河南",
+        "series": [
+          "cn-ha-physics-selective"
+        ],
+        "from_year": 2025,
+        "parameters": {
+          "full_credit": 6,
+          "partial_credit": 3,
+          "wrong_credit": 0,
+          "instruction": "全部选对得满分，选对但不全得3分，有选错的得0分。"
+        },
+        "sources": [
+          {
+            "title": "2025年河南物理选择性考试原卷多项选择题栏目",
+            "url": "https://www.jhgk.cn/upload/file/20250612/1749723303810089980.pdf",
+            "evidence": "paper_facsimile"
+          }
+        ]
+      }
+    }
+  }
+}

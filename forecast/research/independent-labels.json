@@ -1,0 +1,403 @@
+{
+  "review_scope": {
+    "source": "national_db.rows 当前在用档案。仅以题干、选项和子问题面作为标注依据。题号、版本哈希及严格资格只用于抽样和绑定。",
+    "selection": "2020–2026 年新高考Ⅰ、Ⅱ卷，每卷按题号抽取第一道和最后一道具备严格资格的题。",
+    "strict_gate": "math_calibration.grade == source_and_solution_reviewed 且 research_eligible。",
+    "paper_count": 14,
+    "sample_count": 28,
+    "independence": "未查阅自动标签器、提议标签或题目答案、解析及深度分析。证据为题面简述。",
+    "rules": {
+      "primary": "根据整题的主要数学任务判定。四个标签中，概率兼收计数与描述统计，几何兼收复数。综合题只在无可辨主轴时标 null。",
+      "proof": "仅解答题的设问明示证或证明才记真。",
+      "applied_context": "具体情境必须提供问题所用数量或约束。裸样本数据不算应用情境。",
+      "conditional_probability": "必须询问在给定已发生事件下的概率。固定试验次数、参数条件及无放回规则本身不满足。",
+      "conic_midpoint": "题目需要圆锥曲线弦中点作为核心几何关系。仅出现弦、垂足或对称关系不满足。"
+    },
+    "limits": "首尾抽样只支持对这 28 条的独立复核，不能估计全库标签比例。条件概率与弦中点两个字段在此样本中均无阳性。"
+  },
+  "records": [
+    {
+      "occurrence_id": "2020-cn-math-new-gaokao-1:q001",
+      "version_sha256": "f7fa87e7eea1b092cdd6816f15d2dd48ea1b2ebb588c5ad61e962cc3f23f7aeb",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "考查区间并集与端点是否纳入。"
+    },
+    {
+      "occurrence_id": "2020-cn-math-new-gaokao-1:q022",
+      "version_sha256": "204a4bb4b8571c70990c281ba0a589dbf5ec662ef493510b7ea36977bb1ea57b",
+      "sample_position": "last",
+      "primary": "geometry",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "由椭圆与互相垂直的两条连线确定弦上垂足的位置，明确要求证明定点定距。垂足未被规定为弦中点，结论也不依赖中点。"
+    },
+    {
+      "occurrence_id": "2020-cn-math-new-gaokao-2:q001",
+      "version_sha256": "12c1e6aa7caf9a1e1cad3058b444b2afbaed68287f847b82883622dcefc922b5",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "比较两有限集合的共同元素。"
+    },
+    {
+      "occurrence_id": "2020-cn-math-new-gaokao-2:q022",
+      "version_sha256": "7004088f5a8c720e2c19f98e8d4c76a163a5981fad39f1dedf410835dab6dd38",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "指数对数函数的切线与参数下界为核心。两问均为求值或求范围。"
+    },
+    {
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q001",
+      "version_sha256": "a33a5837004ad77faa072e7cea2b24aa30adb0e477458f7c74d93365758092af",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "用开区间筛选有限集合的元素。"
+    },
+    {
+      "occurrence_id": "2021-cn-math-new-gaokao-1:q022",
+      "version_sha256": "b0070cfe4bce008e5627cfba495a396546141500bbf95d8339aaf512683a1eb0",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "先讨论对数函数单调性，随后明确要求证明由参数关系约束的双边不等式。"
+    },
+    {
+      "occurrence_id": "2021-cn-math-new-gaokao-2:q001",
+      "version_sha256": "9226c10906ae1a0180a6b24eb2c942fc2dc3998554b31ad6a58935eee2118236",
+      "sample_position": "first",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "把复数商对应到复平面象限。"
+    },
+    {
+      "occurrence_id": "2021-cn-math-new-gaokao-2:q022",
+      "version_sha256": "b9661d6b4567ebda5fe043453db2937c190c021b0a2167b2b4f47e75095b48ec",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "讨论含参指数函数的单调性，并从任选的参数条件证明有零点。"
+    },
+    {
+      "occurrence_id": "2022-cn-math-new-gaokao-1:q001",
+      "version_sha256": "57714138fced170430658354c08b97209f117b694394c23940a66c204cc0a96b",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "将根式与一次不等式的解集取交。"
+    },
+    {
+      "occurrence_id": "2022-cn-math-new-gaokao-1:q022",
+      "version_sha256": "97fac182b6c3f77ea6dd721ea7f6b8f592e94a43f38e7e3d45b64e2e166a06b3",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "以两个函数的共同最小值定参，再证明满足横坐标等差条件的水平截线存在。"
+    },
+    {
+      "occurrence_id": "2022-cn-math-new-gaokao-2:q001",
+      "version_sha256": "8e14b17c96f9d36957df913a1f4375fdd30ffa6b323100a39b92721dff4ae40a",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "用绝对值约束筛选有限集合。"
+    },
+    {
+      "occurrence_id": "2022-cn-math-new-gaokao-2:q022",
+      "version_sha256": "585d15118b61742ed6fca2fbaff7bf0587a99d3969ac550a293f14a70c5ddb2f",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "指数函数单调性与参数范围构成主体，末问明确要求证明有限和的对数界。"
+    },
+    {
+      "occurrence_id": "2023-cn-math-new-gaokao-1:q001",
+      "version_sha256": "e9e50de1f87c0b330c9ec56883e21f44f46a02e43bc6e92bf0d06e49eacfb84a",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "将二次不等式的解集与有限集合求交。"
+    },
+    {
+      "occurrence_id": "2023-cn-math-new-gaokao-1:q022",
+      "version_sha256": "9e7c2e1eb802f6a88cb5ff4c5771cdc183bc137373b1d9e2652641baf798879b",
+      "sample_position": "last",
+      "primary": "geometry",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "由焦点和准线确定轨迹，再证明内接三点给出的矩形周长下界。无需弦中点。"
+    },
+    {
+      "occurrence_id": "2023-cn-math-new-gaokao-2:q001",
+      "version_sha256": "c5442a16f7767c3601ac4961d6455d2575d1c15e6f58d6d748507e8f33846726",
+      "sample_position": "first",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "把复数乘积对应到复平面象限。"
+    },
+    {
+      "occurrence_id": "2023-cn-math-new-gaokao-2:q022",
+      "version_sha256": "60dc479547c86fe173ffc65087af530b341fb3efbbd6f2d9d9ebfbed0f2b1424",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "先证明正弦函数的局部界，再从余弦对数组合的极值条件求参数范围。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-1:q001",
+      "version_sha256": "9f1a58a30b601e4fd1940662ec125bd6eb6e01c972faf5a85874ed4d85c9cd3b",
+      "sample_position": "first",
+      "primary": "foundations",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "按三次不等式筛选有限集合，目标为交集。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-1:q019",
+      "version_sha256": "5f16fdf167bf3d28fa8ec14b3381e37bce92e94f4899c3741ba8cffde182fc2d",
+      "sample_position": "last",
+      "primary": "probability",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "等差数列提供可按下标表示的分组约束，核心为构造与计数，末问明确要求证明均匀抽取后成功概率的下界。抽取规则未给定已发生的事件。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-2:q001",
+      "version_sha256": "3cd981592a90c4b80414c4163449d543f5d5c10e336327e548afb37f21db33a9",
+      "sample_position": "first",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "直接求复数模，按指定映射归入几何。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-2:q019",
+      "version_sha256": "ef375a57c15b05df75bcbac44716e9a43444183b4e59c5db16a584b2cf7f4171",
+      "sample_position": "last",
+      "primary": "geometry",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "双曲线上的割线和反射定义迭代，中间明确要求证明等比关系，末问证明三角形面积不变。割线中点不是核心对象。"
+    },
+    {
+      "occurrence_id": "2025-cn-math-national-1:q001",
+      "version_sha256": "e38d01f3e7bdc230af0397e0dcf4ded0ee177ddf2030df542e22eb91324924cc",
+      "sample_position": "first",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "从复数乘积识别虚部，按指定映射归入几何。"
+    },
+    {
+      "occurrence_id": "2025-cn-math-national-1:q019",
+      "version_sha256": "bc9b54c5dbafe1145482ac8941663dffea219a105e8f4c3be8d8bb786df31344",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "考查余弦组合局部极值和全域最优界，中间明确要求证明区间内存在满足条件的点。"
+    },
+    {
+      "occurrence_id": "2025-cn-math-new-gaokao-2:q001",
+      "version_sha256": "a5804a404bb3752f2fec6a1a9c5398b9d8e3a16850eebfa252a3e6c38228aa8d",
+      "sample_position": "first",
+      "primary": "probability",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "给出裸数据并求样本均值，按概率统计类归入概率，无具体应用情境。"
+    },
+    {
+      "occurrence_id": "2025-cn-math-new-gaokao-2:q019",
+      "version_sha256": "d389fcad190ff8db10b8eabeabd2f43df4e3dea9a65ac242878a8cd245010fba",
+      "sample_position": "last",
+      "primary": "probability",
+      "proof": true,
+      "applied_context": true,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "乒乓球规则定义独立试验的积分和分差事件，末问明确要求证明概率差的序关系。打完固定球数是试验长度，未给定已发生的胜负事件。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-national-1:q001",
+      "version_sha256": "613ac63cf88cbda96b0f2dfd453aeade898da78da01876c4843c79162bd97726",
+      "sample_position": "first",
+      "primary": "probability",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "给出裸数据并求中位数，按概率统计类归入概率，无具体应用情境。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-national-1:q019",
+      "version_sha256": "69a7f0bb4d3940660c192138180b9461f3232bed8c2a871f6a519e75f54c3572",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "围绕函数平移后的增值集合、奇性及单调性展开，后两问明确要求证明。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-new-gaokao-2:q001",
+      "version_sha256": "2bdf7b0f5fe1681cdbb7466c49911727224940a0c415e630f81b898ae0fd0152",
+      "sample_position": "first",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "展开复数平方，按指定映射归入几何。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-new-gaokao-2:q019",
+      "version_sha256": "838dd3c9586bb6e6680d202fda6e2e970115278068d31cd61733b051dc84e5a0",
+      "sample_position": "last",
+      "primary": "functions",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "由切线定参数并求函数差式的参数界。所有子问均要求求值或求范围，未明示证明。"
+    }
+  ],
+  "available_on": "2026-11-10",
+  "targeted_scope": {
+    "selection": "独立目的性复核。六道指定的严格在用题，单独覆盖条件概率正例、相关边界例及圆锥曲线负例。",
+    "source": "只依据题干、选项及全部子问。题号、当前版本哈希和严格资格仅用于绑定。",
+    "independence": "未查阅自动标签、预测、题目答案或解析。",
+    "definitions": {
+      "conditional_probability": "有设问直接求或证明给定已发生事件下的条件概率即为真。题面以群体分层等价表述条件时也计入。单纯的参数约束、赛制条件或中间事件不计入。",
+      "conic_midpoint": "题目需要圆锥曲线弦中点作为核心几何关系。只出现弦、对称轴、焦点或区间组中值不计入。",
+      "other_fields": "采用首尾独立复核的口径。仅解答题明确要求证或证明时记 proof 为真。"
+    },
+    "sample_count": 6,
+    "limits": "目的性检查不并入首尾抽样一致率。六题覆盖条件概率正例，但没有圆锥曲线弦中点正例。"
+  },
+  "targeted_records": [
+    {
+      "occurrence_id": "2022-cn-math-new-gaokao-2:q019",
+      "version_sha256": "4f2354d0fa538f080ecfb512cba9ffe1989fb1b1b3ae78302b25bf4d12fc755f",
+      "primary": "probability",
+      "proof": false,
+      "applied_context": true,
+      "conditional_probability": true,
+      "conic_midpoint": false,
+      "evidence": "流行病学调查、患病率和年龄人口比共同决定概率模型。末问以随机选中者处于指定年龄组为已知事件，求其患病概率。题中的中点只是直方图区间的组中值。"
+    },
+    {
+      "occurrence_id": "2023-cn-math-new-gaokao-2:q019",
+      "version_sha256": "5bd7d68b68a466fafeabc7846767e1803224fee17b480f173006185e2f870769",
+      "primary": "probability",
+      "proof": false,
+      "applied_context": true,
+      "conditional_probability": true,
+      "conic_midpoint": false,
+      "evidence": "医学筛查以真实患病状态分层。漏诊率和误诊率分别在已患病或未患病的条件下定义，题目直接求后一类概率并比较两类之和。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-national-1:q017",
+      "version_sha256": "2296ba426a49143628644c815519bd3dcc1006ab50f411af6483fa778a8b4047",
+      "primary": "probability",
+      "proof": true,
+      "applied_context": true,
+      "conditional_probability": true,
+      "conic_midpoint": false,
+      "evidence": "投篮命中与停止规则决定分布。末问明确要求证明已知前若干次尚未停止时，继续超过指定次数的条件概率恒等式。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-2:q018",
+      "version_sha256": "a64fa857acf575701c79f3cfbf3e2b96a1e3735ff7a14befa2563cb19fb970c6",
+      "primary": "probability",
+      "proof": false,
+      "applied_context": true,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "两阶段赛制决定晋级与计分，题目求整场总成绩的概率、期望及最优顺序。晋级是总成绩事件的一部分，题面没有以已晋级作为给定事件。"
+    },
+    {
+      "occurrence_id": "2026-cn-math-new-gaokao-2:q018",
+      "version_sha256": "25e8dbc2dd8d5607d2c4f8bab25b238e9505eeb74f28eb69d317f6fcf27af083",
+      "primary": "geometry",
+      "proof": false,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "第一问的竖直焦点弦可直接代入固定横坐标并作两纵坐标之差。后续求交点轨迹及其对称中心，弦中点没有承担关键关系。"
+    },
+    {
+      "occurrence_id": "2024-cn-math-new-gaokao-2:q019",
+      "version_sha256": "ef375a57c15b05df75bcbac44716e9a43444183b4e59c5db16a584b2cf7f4171",
+      "primary": "geometry",
+      "proof": true,
+      "applied_context": false,
+      "conditional_probability": false,
+      "conic_midpoint": false,
+      "evidence": "双曲线交点和轴反射定义迭代，后两问明确要求证明等比关系及面积不变。反射不是求弦中点，题目也无需用弦中点定位。"
+    }
+  ]
+}

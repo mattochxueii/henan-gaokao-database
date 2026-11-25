@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "entities": [
+    "Paper",
+    "Question",
+    "QuestionOccurrence",
+    "ExamSeries",
+    "Region",
+    "ExamSystem",
+    "Source",
+    "Answer",
+    "Analysis",
+    "Curriculum"
+  ],
+  "subjects": {
+    "chinese": {
+      "components": [
+        "written"
+      ]
+    },
+    "math": {
+      "tracks": [
+        "unified",
+        "liberal",
+        "science"
+      ]
+    },
+    "english": {
+      "components": [
+        "written",
+        "listening",
+        "speaking_listening"
+      ],
+      "same_written_does_not_imply_same_audio": true
+    },
+    "physics": {
+      "components": [
+        "composite_section",
+        "selective_provincial"
+      ]
+    },
+    "chemistry": {
+      "components": [
+        "composite_section",
+        "selective_provincial"
+      ]
+    },
+    "biology": {
+      "components": [
+        "composite_section",
+        "selective_provincial"
+      ]
+    }
+  },
+  "identity": [
+    "paper_id includes year/subject/series/track/session",
+    "question master may have multiple paper occurrences"
+  ],
+  "required_provincial_fields": [
+    "year",
+    "region_id",
+    "subject",
+    "component"
+  ],
+  "unknown_values_are_null": true
+}

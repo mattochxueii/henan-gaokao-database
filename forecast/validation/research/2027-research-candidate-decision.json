@@ -1,0 +1,34 @@
+{
+  "decision_version": "math-validation-candidate-decision-v1",
+  "as_of": "2026-11-10",
+  "candidate_status": "research_only_no_new_numeric_forecast",
+  "supersedes_prediction": false,
+  "phase10_snapshot": {
+    "git_base": "0eefe6b",
+    "payload_sha256": "aa298619c150044ebcf4b39eca62ceb0bb3883176a15ae57a690f6288ec95922",
+    "file_sha256": "33c20281a81ddc747189bc251564b90fc725ad86f540ad068c767ea0ee185931",
+    "same_bytes_as_git": true,
+    "same_bytes_after_regeneration": true,
+    "model_hashes_match": true
+  },
+  "research_protocol_sha256": "b8f4bb87bd94831d52011929dd0d38319dd649d7bbcf6f889ad0bb0752e4ca9c",
+  "inputs": {
+    "dated_registry_sha256": "4ba6553e512862b4e315aa83cccc8f88d46138a07314cd7b2fed785178af93d9",
+    "observations_sha256": "2d21ba6c31cc5c2659aaeb1c359a237b21297b78d227dbfef5ea3b88010424b2",
+    "legacy_results_fingerprint": "1e761a387425e1c0b8e530e1867eea5082f5384bbd174051fb34adf94dd9e43b",
+    "results_sha256": "b6e74c0f790fc426c1533a057167045ffca395bc59b6c11e8076bbace495613d"
+  },
+  "reasons": [
+    "卷面题量的旧政策规则未稳定超过固定50%和上一年延续基线。",
+    "递推回放未超过固定50%，盲复标分歧较高。",
+    "函数和显式证明的评估结果均为单一类别，跨问标签样本不足。",
+    "没有可验证的政策增量或定量教学饱和数据。"
+  ],
+  "proof_status": {
+    "local_freeze": true,
+    "private_git_history": true,
+    "independent_signed_timestamp": false,
+    "request_generated_locally": true,
+    "request_sent": false
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "blueprint": {
+    "workflow": "science-workflow-v1",
+    "subject": "chemistry",
+    "region": "河南",
+    "year": 2026,
+    "mode": "targeted",
+    "mapping": {
+      "subject": "chemistry",
+      "year": 2026,
+      "paper_id": "2026-cn-ha-chemistry-selective",
+      "series_id": "cn-ha-chemistry-selective",
+      "curriculum_id": "chemistry-2017-2020",
+      "region": "河南",
+      "exam_system_id": "new-3+1+2",
+      "role": "reselection",
+      "authoring_body": "河南省统一命题",
+      "status": "historical_selective",
+      "points": 100,
+      "minutes": 75,
+      "evidence": [
+        "hn-2026",
+        "hn-reform"
+      ],
+      "structure": {
+        "sections": [
+          {
+            "kind": "single_choice",
+            "count": 14,
+            "points": 42
+          },
+          {
+            "kind": "constructed_response",
+            "count": 4,
+            "points": 58
+          }
+        ],
+        "source_urls": [
+          "https://www.51jiaoxi.com/doc-18504525.html",
+          "https://zy.21cnjy.com/25976018"
+        ],
+        "status": "observed_third_party_paper",
+        "source_details": [
+          {
+            "kind": "single_choice",
+            "count": 14,
+            "points": 42
+          },
+          {
+            "kind": "constructed_response",
+            "count": 4,
+            "points": 58
+          }
+        ]
+      }
+    },
+    "curriculum_topics": [
+      "物质结构与性质",
+      "离子反应",
+      "氧化还原",
+      "化学反应原理",
+      "化学平衡",
+      "电化学",
+      "水溶液离子平衡",
+      "化学实验",
+      "无机物推断",
+      "有机化学",
+      "工业流程"
+    ],
+    "requested_topics": [],
+    "reference_candidates": [
+      {
+        "id": "2026-cn-ha-chemistry-selective:q001",
+        "topic": "物质变化的分类",
+        "source_url": "https://zy.21cnjy.com/25976018",
+        "review_status": "independently_solved_summary",
+        "version_sha256": "bb8775e200a24a360d1682383ebb4f5feaef28cd9b1df71e21e946b9aa563ef7"
+      }
+    ],
+    "structure": null,
+    "scope": "专项分数和时长由练习设定"
+  },
+  "questions": [
+    {
+      "id": "orig:chemistry:p15:01",
+      "topic": "电化学",
+      "version_sha256": "4439a5477735714535d0b2ed6a8338c9c350b37c1bbf9492ca65bd004badc06f",
+      "verification": {
+        "answer": "B",
+        "checks": [
+          "核对半电池和电解质",
+          "核对电子流、电荷补偿及析铜计量",
+          "选择唯一性"
+        ],
+        "unverified": [
+          "真实电流、液接电势和副反应不由此模型预测。"
+        ],
+        "explanation": "负极锌失电子成 Zn²⁺，正极 Cu²⁺ 得两个电子成铜，盐桥阴离子补偿锌半电池。",
+        "science_sources": [
+          "https://openstax.org/books/chemistry-2e/pages/17-2-galvanic-cells"
+        ]
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:02",
+      "topic": "物质结构与性质",
+      "version_sha256": "1a404d9b1ed4a1a259ea333beb9ac93f88f53fa2cfa55531db9badc485daaac5",
+      "verification": {
+        "answer": "C",
+        "checks": [
+          "由连接片段重新统计原子",
+          "辨别氢键给体与受体",
+          "同压下比较沸点"
+        ],
+        "unverified": [
+          "仅覆盖这两个已知分子，不可泛化为按氢键数预测任意物质沸点。"
+        ],
+        "explanation": "两者分子式相同。纯乙醇有 O—H 给体和氧受体；醚氧可作受体，纯二甲醚自身没有 O—H 给体。",
+        "science_sources": [
+          "https://openstax.org/books/chemistry-2e/pages/10-1-intermolecular-forces"
+        ]
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:03",
+      "topic": "化学平衡",
+      "version_sha256": "0c6c8a5b68dff959b6c934896ee5f9bf533e71fbbd6b166fd72c1d6163254624",
+      "verification": {
+        "answer": {
+          "Kc": "49/100",
+          "Q_after": "49/200",
+          "direction": "forward",
+          "dimer_final": "1/16",
+          "monomer_final": "7/40"
+        },
+        "checks": [
+          "明确温度、体系和理想近似",
+          "计算瞬时反应商",
+          "检查物理根",
+          "独立核对氮原子守恒"
+        ],
+        "unverified": [
+          "平衡模型不推断动力学或实测数据精度。"
+        ],
+        "explanation": "体积改变后的初值与随后的新平衡区别计算。反应进度须使两组分浓度均为正。",
+        "science_sources": [
+          "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle"
+        ]
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:04",
+      "topic": "实验与证据",
+      "version_sha256": "2d830bff417987c0432c10ac70524c43422392575819fb9af433838a1675f021",
+      "verification": {
+        "answer": {
+          "iodine_equivalent_mol_L": "3/500",
+          "spike_recovery_percent": 100,
+          "native_vitamin_c_identified": false
+        },
+        "checks": [
+          "扣除空白并核对体积",
+          "计算加标增量",
+          "区分回收率与分析选择性"
+        ],
+        "unverified": [
+          "还原性杂质和基质干扰无法由同一组模拟读数辨认。须评审鉴别对照的适用条件。"
+        ],
+        "explanation": "在相同条件下加标前后差值可计算增量回收率，原有碘消耗仍可能包括共存还原物。",
+        "science_sources": []
+      }
+    },
+    {
+      "id": "orig:chemistry:p15:05",
+      "topic": "有机化学",
+      "version_sha256": "2b041e858b6409795336c6de70f126c345121e756020ad11400666c25fecca69",
+      "verification": {
+        "answer": {
+          "ester": "ethyl_acetate",
+          "formula": "C4H8O2",
+          "alcohol": "ethanol",
+          "hydroxide_remaining_mol": "1/200"
+        },
+        "checks": [
+          "用燃烧碳守恒识别醇骨架",
+          "核对候选唯一性和总分子式",
+          "按单酯水解 1∶1 验算碱"
+        ],
+        "unverified": [
+          "反应式写法和科学等效解法由独立审查核对。"
+        ],
+        "explanation": "每摩尔单酯提供一摩尔醇。醇的平均每分子碳数等于 CO₂ 与酯的量之比。",
+        "science_sources": [
+          "https://openstax.org/books/organic-chemistry/pages/21-6-chemistry-of-esters"
+        ]
+      }
+    }
+  ],
+  "answers": [
+    "B",
+    "C",
+    {
+      "Kc": "49/100",
+      "Q_after": "49/200",
+      "direction": "forward",
+      "dimer_final": "1/16",
+      "monomer_final": "7/40"
+    },
+    {
+      "iodine_equivalent_mol_L": "3/500",
+      "spike_recovery_percent": 100,
+      "native_vitamin_c_identified": false
+    },
+    {
+      "ester": "ethyl_acetate",
+      "formula": "C4H8O2",
+      "alcohol": "ethanol",
+      "hydroxide_remaining_mol": "1/200"
+    }
+  ],
+  "candidate_sha256": "568e1ec717e25d3658a243a366b9caf36f8eb7ba82b5c625c9b31e88a9301752",
+  "paper_version": "1364daeace20da1b3626731e714b1c568a5cb714fc6d604f412b6d72231ad012",
+  "paper_pdf_sha256": "d5720d72db5108d790515925913d89955065fc6681d574aaed7f5c311b010908"
+}

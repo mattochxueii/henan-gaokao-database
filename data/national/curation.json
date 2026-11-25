@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "overrides": [
+    {
+      "id": "2024-I-q18-center-disclosure",
+      "paper_id": "2024-cn-math-new-gaokao-1",
+      "number": 18,
+      "reason": "已保存PDF第2页第18题(2)只要求证明是中心对称图形；LaTeX整理版额外给出中心(1,a)，降低了求证难度。以实际视觉核对的PDF候选另建当前版本，保留原整理版。",
+      "source_kind": "saved_pdf_ai_visual",
+      "pdf_page": 2,
+      "pdf_sha256": "a8877417b265b5d1b8ab525d63946f63e0e41b611d37b1c0c0d01fd5a24fca7c",
+      "human_reviewed": false,
+      "operation": "replace_exact",
+      "old_text": "证明：曲线 \\(y=f(x)\\) 关于点 \\((1,a)\\) 中心对称；",
+      "new_text": "证明：曲线 \\(y=f(x)\\) 是中心对称图形；",
+      "tex_sha256": "482334d3d5c249a89e630d313d3c69e11fbfb7d7717e96c771371a8d49bc160b"
+    }
+  ]
+}

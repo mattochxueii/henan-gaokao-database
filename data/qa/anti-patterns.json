@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "entries": [
+    {
+      "id": "math.stop",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "随机过程须写首次停时及截断",
+      "counterexample": "至第 N 次仍未报警时未定义读取次数"
+    },
+    {
+      "id": "math.modules",
+      "subject": "math",
+      "severity": "major",
+      "check": "查超越函数、常规导数、立几选填、非均值统计",
+      "counterexample": "全卷只计算平均数"
+    },
+    {
+      "id": "math.score",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "核对六分多选的部分分文案",
+      "counterexample": "套用选对但不全得3分"
+    },
+    {
+      "id": "math.notation",
+      "subject": "math",
+      "severity": "major",
+      "check": "核查补集、对立事件课标符号",
+      "counterexample": "U\\setminus A 或 Y^c"
+    },
+    {
+      "id": "all.figure-condition",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "关键数值和必要部件须在图文中可定位且一致",
+      "counterexample": "间距改变为 2d 只印在图上"
+    },
+    {
+      "id": "physics.breadth",
+      "subject": "physics",
+      "severity": "major",
+      "check": "标准卷逐查八块，光学独立于机械波",
+      "counterexample": "机械波代替全部光学"
+    },
+    {
+      "id": "physics.device",
+      "subject": "physics",
+      "severity": "major",
+      "check": "同一器具最多占两题",
+      "counterexample": "三题使用弹簧连接物体"
+    },
+    {
+      "id": "physics.constant",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "由标称数据验算可认定的常量，相对误差不超过1%",
+      "counterexample": "光电拟合斜率偏离 h/e 达3%"
+    },
+    {
+      "id": "physics.adjust",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "核查回路可调元件、空间距离及边界",
+      "counterexample": "要求扫电流却只有固定电源与负载"
+    },
+    {
+      "id": "physics.algebra",
+      "subject": "physics",
+      "severity": "major",
+      "check": "寻找物理建模与推理转折",
+      "counterexample": "靠两组未知量联立即可作答"
+    },
+    {
+      "id": "chemistry.competition",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核查实际 pH 下先后或并行的酸碱反应",
+      "counterexample": "强碱中假定过量碳酸氢根仍保留"
+    },
+    {
+      "id": "chemistry.amphoteric",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核查除杂真实可行区间",
+      "counterexample": "用忽略两性溶解凑沉淀范围"
+    },
+    {
+      "id": "chemistry.coverage",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "查 STSE、基础实验及物质结构",
+      "counterexample": "实验只算滴定浓度而无装置或操作"
+    },
+    {
+      "id": "chemistry.sequence",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "写明操作顺序、待判断的实测对象",
+      "counterexample": "误差题只问结果会怎样"
+    },
+    {
+      "id": "biology.endocrine",
+      "subject": "biology",
+      "severity": "fatal",
+      "check": "区分交感神经—髓质和垂体—皮质调节",
+      "counterexample": "写成交感神经直接指令皮质释放糖皮质激素"
+    },
+    {
+      "id": "biology.abstract",
+      "subject": "biology",
+      "severity": "major",
+      "check": "统计无必要的匿名对象",
+      "counterexample": "满篇某物质、激素 C，难以区分对象"
+    },
+    {
+      "id": "all.absolute",
+      "subject": "all",
+      "severity": "major",
+      "check": "集中出现绝对词的错项应查能否不读题即排除",
+      "counterexample": "在弱对照中声称所有浓度均如此"
+    },
+    {
+      "id": "chinese.distractor",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "逐项判断范围、因果等微偏",
+      "counterexample": "靠常识排除未涉及的离题说法"
+    },
+    {
+      "id": "chinese.voice",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "核查文体和语感",
+      "counterexample": "把白话叙述用几个古词串成拟古文"
+    },
+    {
+      "id": "chinese.turn",
+      "subject": "chinese",
+      "severity": "major",
+      "check": "识别论证、叙述的转折",
+      "counterexample": "整段改写同一句鸡汤断言"
+    },
+    {
+      "id": "english.distractor",
+      "subject": "english",
+      "severity": "major",
+      "check": "干扰项须对应原文中具体的误读",
+      "counterexample": "选项常识上荒谬"
+    },
+    {
+      "id": "english.voice",
+      "subject": "english",
+      "severity": "major",
+      "check": "核查角色语域和具体语境",
+      "counterexample": "读后续写用套话代替人物行动"
+    },
+    {
+      "id": "english.turn",
+      "subject": "english",
+      "severity": "major",
+      "check": "研究结论与观察须有可考的推断边界",
+      "counterexample": "所有段落顺序重述首句"
+    },
+    {
+      "id": "all.graphic",
+      "subject": "all",
+      "severity": "major",
+      "check": "检查文本、图例和刻度的渲染像素",
+      "counterexample": "柱顶 76 与图例重叠"
+    },
+    {
+      "id": "all.solution",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "独立检查唯一解、单位、边界与评分",
+      "counterexample": "漏掉可行的第二种解，或选择题多解"
+    },
+    {
+      "id": "exam.policy",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+      "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+    },
+    {
+      "id": "physics.weight",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "每卷逐题按主考模块独立计分，计算题兼有力学综合和电磁",
+      "counterexample": "A卷配置力学压轴，B卷配置电磁压轴后只检查两卷合计覆盖"
+    },
+    {
+      "id": "physics.rounding",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "按空位复算两种常用π近似的最终进位",
+      "counterexample": "3.118π保留三位有效数字时分别给出9.79与9.80"
+    },
+    {
+      "id": "chinese.volume",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "计数时只统计各阅读材料一次，核对信息、文学、文言篇幅",
+      "counterexample": "以题干与选项凑足信息类阅读的正文下限"
+    },
+    {
+      "id": "chinese.classical",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "查文言主材料是否直接采用熟文，核对第12、15题设问方向",
+      "counterexample": "以整篇《日喻》或《庖丁解牛》代替陌生文言阅读"
+    },
+    {
+      "id": "chinese.recitation",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "三小题分别核对作者、篇目与明示的作品来源",
+      "counterexample": "第17题连续两小题考苏轼，或以苏东坡为名重复计算作者"
+    },
+    {
+      "id": "chinese.quotes",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "中文正文、题干、选项的一级引用使用全角双引号",
+      "counterexample": "把‘守拙’直接印为一级引用"
+    },
+    {
+      "id": "english.volume",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "A至D只计正文词数，单独核对C、D各自平均句长",
+      "counterexample": "四篇正文仅1000词，或用短句堆砌研究类文章"
+    },
+    {
+      "id": "english.grammar",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "逐空对照原文、提示词和答案形态，查细类集中与四项必含类型",
+      "counterexample": "把三个-ing答案分别改写标签以免触发上限"
+    },
+    {
+      "id": "english.typography",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "听力及正文钟点用冒号，英文一级引文用双引号",
+      "counterexample": "听力稿把13:45写成13.45"
+    },
+    {
+      "id": "chemistry.structure_depth",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "查前五题STSE和基础操作、选必2的多角度覆盖、非选择题空位数",
+      "counterexample": "全卷选必2只考一次常规晶胞，非选择题每题两个作答空"
+    },
+    {
+      "id": "all.answer_distribution",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "从版本绑定答案计算单选字母偏态和连续相同选项",
+      "counterexample": "语文9道单选中5个B"
+    },
+    {
+      "id": "all.publication_layout",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "依据学生PDF及答案文件核查练习版指令、作答区和评分模板",
+      "counterexample": "练习版要求在答题卡作答，作文稿纸少于1000格"
+    },
+    {
+      "id": "all.answer_leak",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "按空位和步骤编号核对题干是否已给出所问结论",
+      "counterexample": "题首已说明步骤5还原羰基，随后考步骤5的反应类型"
+    },
+    {
+      "id": "all.difficulty_probe",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "检查两层次分块估时和指定把关题的具体推理证据",
+      "counterexample": "尖子生完成150分数学卷估时80分钟，且压轴仅需代入"
+    },
+    {
+      "id": "chinese.material_integrity",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "逐段核验带引号的原词，检查古诗意象与开放默写去重",
+      "counterexample": "要求结合首末两段的两处“留”，首段却没有“留”"
+    },
+    {
+      "id": "math.standard_scoring",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "单选按键给分，多选按正解项数生成部分分，解答题认可等价通法",
+      "counterexample": "单选题评分印出可接受数学等价写法；终式8/√82"
+    },
+    {
+      "id": "math.progression",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "检查末两题递进、圆锥曲线覆盖及各题核心方法声明",
+      "counterexample": "末两题都只有两问，全卷圆锥曲线只考椭圆"
+    },
+    {
+      "id": "english.writing_listening",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "听力正文1050到1300个有效词，写作使用五档整体评分",
+      "counterexample": "写作按已印署名给分，语填提示词5比5"
+    },
+    {
+      "id": "physics.domain_balance",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "查直流分值、关键模型覆盖、实验范式以及探测门槛和可见光的区别",
+      "counterexample": "两道实验都用换向消除零位误差，4.2 eV被误称可见光"
+    },
+    {
+      "id": "chemistry.reaction_notation",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "核对无机方程式等号或可逆符号、气体箭头及平衡常数记号",
+      "counterexample": "离子方程式以单向箭头连接，生成二氧化碳无上箭头"
+    },
+    {
+      "id": "biology.hedges_and_tables",
+      "subject": "biology",
+      "severity": "fatal",
+      "check": "从绑定答案统计正确选项的对冲措辞，并核查数据表引用",
+      "counterexample": "16道单选里的6个正解含对冲套语，把计数表叫作图示"
+    },
+    {
+      "id": "all.release-vocabulary",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "拦截非本卷教材术语及内部评分模板文案",
+      "counterexample": "数量投影、项目自拟评分、校核独立核定答案"
+    },
+    {
+      "id": "math.parameter-interval",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "含参区间与非空判断改用集合描述",
+      "counterexample": "[a,2]∩B≠∅"
+    },
+    {
+      "id": "math.interval-options",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "单选区间选项不得通过多数相同端点泄露结果",
+      "counterexample": "三项都使用 −18 和 −2，只改开闭"
+    },
+    {
+      "id": "math.core-pillars",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "选填查指对数或抽象函数；解答查空间角；统计推断和随机变量均覆盖",
+      "counterexample": "只考空间距离；只有一次列联表"
+    },
+    {
+      "id": "physics.italic-quantities",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "用斜体公式标示正文单字母物理量",
+      "counterexample": "质量为 m、板长 L"
+    },
+    {
+      "id": "physics.declared-constants",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "终式使用 g 或 G 时须在题面声明",
+      "counterexample": "直接给 mgL 而未定义 g"
+    },
+    {
+      "id": "chinese.essay-marker",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "800字标尺须印在稿纸网格旁",
+      "counterexample": "只在作文题干印不少于800字"
+    },
+    {
+      "id": "english.lexical-register",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "C/D 篇进阶长词兼查频率与去重后的占比",
+      "counterexample": "重复使用同一长词伪造词汇复杂度"
+    }
+  ]
+}
