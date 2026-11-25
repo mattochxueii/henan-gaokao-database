@@ -22,6 +22,16 @@ from .research_quality import (
 VERSION = "exam-workflow-v2"
 
 
+def compile_for_layout(question, layout):
+    visible = compile_writing(question)
+    if layout == "math_compact":
+        visible.update(module=question.get("module"),
+                       figure_required=question["writing"].get("figure_required", False))
+        if technique := question.get("math_technique"):
+            visible["math_technique"] = technique
+    return visible
+
+
 def prepare(root, document, output, pilot_certificate=None, specialty_certificates=(), *,
             skip_pilot=False, layout_mode="practice"):
     output = Path(output)
@@ -102,12 +112,7 @@ def prepare(root, document, output, pilot_certificate=None, specialty_certificat
     for q in document["questions"]:
         try:
             require("family" not in q, "禁止模板题目族伪装AI")
-            student = compile_writing(q)
-            if presentation.get("layout") == "math_compact":
-                student["module"] = q.get("module")
-                if q.get("math_technique"):
-                    student["math_technique"] = q["math_technique"]
-                student["figure_required"] = q["writing"].get("figure_required", False)
+            student = compile_for_layout(q, presentation.get("layout"))
             result = solve_spec(q["math_spec"])
             require(result["program_checks_passed"], "数学计算失败：" + str(result))
             if q["kind"] == "single_choice" and q["math_spec"].get("assertions"):
@@ -228,9 +233,7 @@ def render_preview(output):
             and check["math_spec_sha256"] == fingerprint(q["math_spec"]),
             "数学验证已过期",
         )
-        compiled = compile_writing(q)
-        if presentation.get("layout") == "math_compact":
-            compiled.update(module=q.get("module"), figure_required=q["writing"].get("figure_required", False))
+        compiled = compile_for_layout(q, presentation.get("layout"))
         require(fingerprint(compiled) == fingerprint(visible), "写作文本已变化，必须回到题面核查")
     mode = document["paper"]["mode"]
     preview = output / "review-only"

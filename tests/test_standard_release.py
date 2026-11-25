@@ -23,6 +23,16 @@ def simple(number=1):
 
 
 class ReleaseLogicTests(TestCase):
+    def test_math_progression_uses_bound_part_labels_and_text(self):
+        from core.release_checks import math_checks
+
+        rows=[{"stem":"求值","parts":[]} for _ in range(19)]
+        rows[17]["parts"]=[{"label":f"（{n}）","text":"求范围"} for n in range(1,4)]
+        texts=["双曲线、抛物线、正态分布和数列"]*19
+        self.assertNotIn("math_progression",{issue[1] for issue in math_checks({},rows,texts)})
+        rows[17]["parts"][2]["text"]=""
+        self.assertIn("math_progression",{issue[1] for issue in math_checks({},rows,texts)})
+
     def test_choices_detect_four_consecutive_keys_and_accept_balanced(self):
         rows=[{"kind":"single_choice"}]*8
         self.assertFalse(list(choice_findings(rows,list("ABCDABCD"),"math")))

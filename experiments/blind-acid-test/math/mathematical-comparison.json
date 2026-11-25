@@ -1,0 +1,608 @@
+{
+  "pdf_sha256": "2661fff633f67e1dca6a13751f2670083ff0195af802b123ce63241bb7dd8b90",
+  "student_review_sha256": "a802aab8950fd36f8560d7cad3682bec216c33cef887248852b5829fc48e0ed4",
+  "math_verification_sha256": "602e5de49550226b6a9aa1750c0a947e88bbf573242a7a24237e3a65abba8e2f",
+  "questions": [
+    {
+      "number": 1,
+      "passed": true,
+      "evidence": "乘以2−i并以模平方5为分母，得z=(−1−7i)/5，因此z+2z̄=(−3+7i)/5。",
+      "independent_answer": "A",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 2,
+      "passed": true,
+      "evidence": "A=(−1,5)。B非空要求a≤2a+1，即a≥−1。非空的B包含两个端点，B⊆A还要求a>−1及2a+1<5，合得−1<a<2，反向也成立。",
+      "independent_answer": "B",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 3,
+      "passed": true,
+      "evidence": "对|a+b|²展开，19=4+9+2a·b，得a·b=3。所求数量投影为(2b−a)·a/|a|=(6−4)/2=1。",
+      "independent_answer": "C",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 4,
+      "passed": true,
+      "evidence": "正态分布关于10对称。由P(8<X<12)=p+q，知P(X<8)=P(X>12)=(1−p−q)/2。再以P(X<9)=P(X>11)=q+P(X>12)，得(1−p+q)/2。正态密度在每个开区间均为正，所以q>0，且按对称性q=P(8<X<9)<P(8<X<11)=p。因此A、C、D均与B严格不同。",
+      "independent_answer": "B",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 5,
+      "passed": true,
+      "evidence": "平方得sin 2α=−4/5。因sin α+cos α>0且α在第二象限，π/2<α<3π/4，所以cos 2α<0，值为−3/5。展开sin(2α+π/4)得−7√2/10。",
+      "independent_answer": "A",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 6,
+      "passed": true,
+      "evidence": "焦点为F(1,0)。k=0时仅交于顶点，故k≠0。联立y=k(x−1)和y²=4x得两根横坐标之和2+4/k²，且对应二次式在x=1为负，所以F在线段MN内。焦半径为x+1，得|MN|=4+4/k²=8，从而|k|=1。",
+      "independent_answer": "B",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 7,
+      "passed": true,
+      "evidence": "取A为原点，以AB、AC、AA₁为坐标轴。由B(3,0,0)、C(0,4,0)、M(3/2,0,6)得到截平面x/3+y/4+z/12=1。其与水平面z=s的交线在底面投影为x/3+y/4=1−s/12，法向固定。取s=0、6，按棱柱边界分别得到线段BC和MN，其中顶层与A₁C₁的交点为(0,2,6)，确为N。截面在两层间的边界沿x=0或y=0，构成梯形BCNM。两底长5、5/2。两底投影线到A的距离之差为(1−1/2)/√(1/9+1/16)=6/5，故截面高为√(6²+(6/5)²)=6√26/5，面积为9√26/2。",
+      "independent_answer": "C",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 8,
+      "passed": true,
+      "evidence": "令u=f(x)−1。f(u)=m的每个不同实根u贡献f(x)=u+1的实根数。f′(x)=3(x²−1)，极值为±2，所以单个u在(−3,1)贡献3，在端点−3、1贡献2，其他位置贡献1。外层的分界值为f(−3)=−18、f(1)=−2、f(−1)=2。按m依次取(−∞,−18)、{−18}、(−18,−2)、{−2}、(−2,2)、{2}、(2,+∞)，总数依次为1、2、3、5、7、4、1。",
+      "independent_answer": "D",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 9,
+      "passed": true,
+      "evidence": "先按随机选中的盒子区分两个等可能情形。同盒不放回抽取下，双红、恰一红、第一球红这三个事件在甲盒中的条件概率依次为3/10、6/10、3/5，在乙盒中为0、4/10、1/5。由两分支合并得三事件的总概率分别为3/20、1/2、2/5。已知恰一红时选甲的条件概率为[(1/2)(6/10)]/(1/2)=3/5；已知第一球红时第二球红的概率为(3/20)/(2/5)=3/8，故选AC。",
+      "independent_answer": "AC",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 10,
+      "passed": true,
+      "evidence": "π是周期。任意g的周期也是g(x)−g(x+π/2)=2sin 2x的周期，故最小正周期为π。g(π/2+t)=−sin2t+sin4t为奇函数，B真。g(x)=sin2x(1+2cos2x)，在(π/3,π/2)为负，C假。令u=cos2x，则g′=2(4u²+u−2)，两根(−1±√33)/8均在(−1,1)，对应区间中两个变号点，D真。",
+      "independent_answer": "ABD",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 2,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 11,
+      "passed": true,
+      "evidence": "a₂=2a₁−1=1，排除严格递增。令b_n=a_n+(-1)^n/3，则b_{n+1}=2b_n，b₁=2/3，故a_n=(2^n−(-1)^n)/3。于是S_{2m}=2(4^m−1)/3，且a_{n+2}−a_n=2^n。",
+      "independent_answer": "BD",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 4,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 12,
+      "passed": true,
+      "evidence": "(x+2)^5的常数、一次、二次系数依次为32、80、80。与1−2x+x²相乘，二次项为80−160+32=−48。",
+      "independent_answer": "−48",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 13,
+      "passed": true,
+      "evidence": "由x²+y²=4知3+x−y≥3−2√2>0。要证明比值不超过10，等价于−9x+12y≤30。柯西不等式给出上界2√(81+144)=30，且在(x,y)=(−6/5,8/5)取到等号。因此最大值10。发现候选可令上界为λ，由线性式圆上最大值与3λ相等解出λ=10（另一代数根−2不符合最大值为正）。",
+      "independent_answer": "10",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 1,
+        "partial_tasks": 0,
+        "independent_reasoning_tasks": 0,
+        "status": "complete_spec_checks"
+      }
+    },
+    {
+      "number": 14,
+      "passed": true,
+      "evidence": "以甲、乙为上、下步，前缀高度为d_k。内部恰两个零点，所以路径分为三段内部为正的归零路径。仅一处高度为3，故最高恰为3（若有高度4，去回途中均经过3），且只有一段能达到3。其余段给定半长度后，必为U(UD)^(r−1)D，其中U为上步，D为下步。特殊段从高度1出发，有唯一一次UUDD升至3并返回1，其前后可放普通UD块。特殊段半长度至少3至多4。半长度3时，另两段半长度为1与2，有3×2种；半长度4时，另两段均长1，特殊段有一个UD块可在UUDD之前或之后，有3×2种。共12种。将全串倒序并互换甲乙，得到仍合格的路径，且新高度为d_{12−k}，唯一峰位变为12−k₀。对全部排列求和，得2Σk₀=12×12，即72。",
+      "independent_answer": "72",
+      "program_coverage": {
+        "total_tasks": 1,
+        "complete_tasks": 0,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      },
+      "supplemental_enumeration": {
+        "possible_input_words": 924,
+        "peak_position_counts": {
+          "3": 3,
+          "5": 3,
+          "7": 3,
+          "9": 3
+        },
+        "sum": 72,
+        "checks": "穷举选择12位中6个甲位置，独立累加所有满足条件路径的峰位。"
+      }
+    },
+    {
+      "number": 15,
+      "passed": true,
+      "evidence": "由和差化积，2sin A cos(B−C)=2sin A cos A，故|B−C|=A。结合内角和得B或C为π/2。因b<c，C为直角。设p=a+b，c=√(a²+b²)≥p/√2，故p≤24(2−√2)。面积ab/2≤p²/8，代入得144(3−2√2)，在a=b=12(2−√2)时满足周长并达到等号。",
+      "independent_answer": "（1）B或C为直角。（2）144(3−2√2)，在a=b=12(2−√2)且C=π/2时取到。",
+      "program_coverage": {
+        "total_tasks": 3,
+        "complete_tasks": 1,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 16,
+      "passed": true,
+      "evidence": "OB和OD在各自面内垂直于共同交线AC，因此OB⊥OD，又OB=OD=2√2，故AC⊥BD及|BD|=4。取A=(−2√2,0,0)、C=(2√2,0,0)、B=(0,2√2,0)、D=(0,0,2√2)，设s=|AX|/|AB|、t=|CY|/|CD|，则|XY|²=8[(2−s−t)²+s²+t²]。括号内三项底数之和为2，柯西给出下界4/3。等号s=t=2−s−t=2/3，落在可行范围，故最短为4√6/3。",
+      "independent_answer": "（1）AC⊥BD，|BD|=4。（2）最小值4√6/3，两比值均为2/3。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 2,
+        "partial_tasks": 2,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 17,
+      "passed": true,
+      "evidence": "设两组达标数为a、c，令s=a+c，d=a−c。χ²=80d²/[s(80−s)]，初值2000/391。一次更正后d≥9，因s(80−s)≤1600，χ²≥4.05，不能跨越阈值。两次更正若有一步增大差值，最终d≥10，也不能跨越。两步都缩小差值时d=8，s为44、46或48，统计量最大为5120/(48×32)=10/3<3.841，三类均有足够地块可执行。",
+      "independent_answer": "（1）χ²=2000/391≈5.115，有证据表明灌溉方式与达标有关。（2）最少2块。三种方式为甲组两块达标改不达标、乙组两块不达标改达标、这两种更正各一块。",
+      "program_coverage": {
+        "total_tasks": 4,
+        "complete_tasks": 3,
+        "partial_tasks": 1,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 18,
+      "passed": true,
+      "evidence": "令PQ为y=k(x−2)。Q的坐标满足x>2、y>0且k²=(x+2)/(x−2)>1，故k>1。联立得Q=(2(k²+1)/(k²−1),4k/(k²−1))，M=(2k/(k−1),2k/(k−1))，N=(2k/(k+1),−2k/(k+1))，加坐标得两线段同中点。面积S=4k²/(k²−1)。当S=9时得k²=9/5，并求得Q=(7,3√5)。MN两坐标差的平方和为16k²(1+k²)/(k²−1)²=2S(S−2)。每个k>1均给出一个允许的Q，S遍历(4,+∞)，长度严格递增随S变化，范围为(4,+∞)。",
+      "independent_answer": "（1）MN、PQ中点均为(2k²/(k²−1),2k/(k²−1))，k为PQ斜率。（2）Q=(7,3√5)。（3）|MN|²=2S(S−2)，|MN|∈(4,+∞)。",
+      "program_coverage": {
+        "total_tasks": 5,
+        "complete_tasks": 2,
+        "partial_tasks": 3,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    },
+    {
+      "number": 19,
+      "passed": true,
+      "evidence": "对下界差F=e^t−1−t−t²/2有F(0)=F′(0)=0、F″=e^t−1>0。对上界差G=e^t t²/2−e^t+1+t有G(0)=G′(0)=0、G″=e^t(t²/2+2t)>0，因此两差在t>0均正。H_a′=x(a²x+2a−1)/[(1+x)(1+ax)²]，且H_a(0)=0。依a分三支讨论，只有0<a<1/2时先降后升并趋于+∞，故恰一正零点。设t=ln(1+x_a)，零点方程给出a=1/t−1/(e^t−1)，因而1/a−t=t²/(e^t−1−t)∈(2e^(−t),2)，λ=2已经充分。反过来每个t>0定义的a(t)>0且使x=e^t−1成为正零点，按（2）必有a(t)<1/2，因此可以令t→0⁺，此差趋于2，所有λ<2均不成立。",
+      "independent_answer": "（1）t²/2<e^t−1−t<e^t t²/2。（2）a=0时严格递减，a≥1/2时严格递增，两种情形均无正零点。0<a<1/2时，以x*=(1−2a)/a²为界先减后增，恰有一个正零点。（3）λ∈[2,+∞)。",
+      "program_coverage": {
+        "total_tasks": 6,
+        "complete_tasks": 1,
+        "partial_tasks": 5,
+        "independent_reasoning_tasks": 0,
+        "status": "partial_support"
+      }
+    }
+  ],
+  "all_consistent": true,
+  "scoring": {
+    "paper_sha256": "2661fff633f67e1dca6a13751f2670083ff0195af802b123ce63241bb7dd8b90",
+    "authority": "project",
+    "questions": [
+      {
+        "number": 1,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "steps": [
+          {
+            "points": 6,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "steps": [
+          {
+            "points": 5,
+            "criterion": "按该题型评分，校核独立核定答案。"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "将左端变为正弦和角乘余弦差角"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "合法约去正弦并得到 |B−C|=A"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "由角和推出 B、C 中较大者为直角"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "用 b<c 确定 C 为直角，面积化为 144−12c"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "从 a+b 的上界得到 c 的下界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "说明等号可达并给出准确最大值"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "说明折叠保留 OB、OD 对交线的垂直关系"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证 AC⊥BD 或用数量积证得"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "证 OB⊥OD 并算出 BD=4"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "构造直角坐标并写出两点的内分参数和取值范围"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "推出距离平方并正确配方或严格求其下界"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "验证两比值均为 2/3，给出最小距离"
+          }
+        ]
+      },
+      {
+        "number": 17,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "代入四格数或正确化成两组达标数差公式"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "正确比较统计量和临界值"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "按题给规则作统计判定"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "利用列和乘积至多1600，排除只更正一个"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "排除两次中有增加差的更正"
+          },
+          {
+            "part": 2,
+            "points": 3,
+            "criterion": "检验三个减差组合都能使统计量小于临界值"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "列全三种方式并得最少两个"
+          }
+        ]
+      },
+      {
+        "number": 18,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "合理利用 x+y 与 x−y，或其他可验证的斜率参数"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "正确得到 M、N 的两个截距或原坐标"
+          },
+          {
+            "part": 1,
+            "points": 1,
+            "criterion": "证明两线段中点相同"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "正确建立 S 与参数关系"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "由 S=9 求横坐标并选正根"
+          },
+          {
+            "part": 2,
+            "points": 1,
+            "criterion": "写明 Q(7,3√5)"
+          },
+          {
+            "part": 3,
+            "points": 3,
+            "criterion": "消去参数得到 |MN|²=2S(S−2)"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "证明面积值域 (4,+∞)"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "证明长度值域并说明端点不开"
+          }
+        ]
+      },
+      {
+        "number": 19,
+        "steps": [
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "在固定小区间比较二阶导并使用共同初值"
+          },
+          {
+            "part": 1,
+            "points": 2,
+            "criterion": "逐级推出并写出两侧严格界"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "正确求导并判断符号由一次因子决定"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "处理 a=0 和 a≥1/2 两类"
+          },
+          {
+            "part": 2,
+            "points": 2,
+            "criterion": "证明 0<a<1/2 时先降后升且有唯一正根"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "转换为指数余量的倒数并正确消去 a"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "用下界推出 λ≥2 的充分性"
+          },
+          {
+            "part": 3,
+            "points": 2,
+            "criterion": "反向构造 a、验证其为允许参数并用上界逼近"
+          },
+          {
+            "part": 3,
+            "points": 1,
+            "criterion": "给出完整取值范围"
+          }
+        ]
+      }
+    ]
+  }
+}

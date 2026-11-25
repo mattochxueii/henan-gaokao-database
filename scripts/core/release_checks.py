@@ -211,7 +211,14 @@ def english_checks(paper, rows, answers, listening):
 
 
 def math_checks(paper, rows, texts):
-    if sum(bool(re.search(r"[(（]\s*3\s*[)）]",t)) for t in texts[17:19])==0:
+    def has_progression(question):
+        # Compiled subquestions keep labels and content in separate fields.
+        parts=question.get("parts",[])
+        return len(parts)>=3 and all(
+            re.fullmatch(rf"[(（]\s*{n}\s*[)）]",part.get("label","")) and part.get("text","").strip()
+            for n,part in enumerate(parts[:3],1))
+
+    if not any(has_progression(question) for question in rows[17:19]):
         yield 18,"math_progression","第18、19题均无第三问递进"
     conics=[name for name in ("椭圆","双曲线","抛物线") if any(name in t for t in texts)]
     if len(conics)<2:

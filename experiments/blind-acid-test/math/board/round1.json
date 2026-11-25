@@ -1,0 +1,1844 @@
+{
+  "state": {
+    "subject": "math",
+    "version": "c92e32cda9e360a1237550c37450a110586d9ded5d50867031038acfcf740587",
+    "pdf_sha256": "6e45b2967ca565c8b9400a0dfba44174232702a52ffd462b844ddd3692620197",
+    "pages": 3,
+    "item_versions": {
+      "1": "82edbca5f4b97ba5976f6dc3bfd5644a570df7e1f78424e675211619a6883e7a",
+      "2": "a524eee7830785227cb2e169e5c72e89079d5263b2848c851f8060fb0975f9a3",
+      "3": "a8a07f01c016fa2118099177a32b695fbeea84fa2a0c5379fcfa3bdf8cf2434c",
+      "4": "4bf1e854eaf4b218820f2c3cbebc8e9844ce412faade26dbde5641671cb9eb17",
+      "5": "bab8f2777833f0e2f07564516a151d67dbb1f3d9f70c8dc789b42fe3b0707395",
+      "6": "b4f3c0791f79582e521bc198009fb28801f54ee08b1deef77bc619e8c6d929de",
+      "7": "c587fecae63413873c8bbd0a7799f72ff8950b250b4bdbac0f56688a8c258446",
+      "8": "729ea985271f1e903de3cfc7371bbff529876ff40c8e376d1f39330a92ffb89f",
+      "9": "c8ea7574644a440f7398a8473808ae9416c429f8c8107f7b6664ae4d1e4bab2f",
+      "10": "bd921e8fad57fba17d484ca24761fc9a375310fa309b1fa5a80153cbcac47251",
+      "11": "971b937a51296675bbb49a7548807d00702a2f8728d5fea90486b58ef4db6491",
+      "12": "c9269404983566f20d4d96c984f49c8881df184f1c4801916f5158fdb304c4a7",
+      "13": "0826c5a20199c7c007376b9a4753e46c950471511886273ba7c5d2bff7797601",
+      "14": "cb15c347ad5bb42dfa4e6f6000fc4873d35b691177ef126ec342eddebda540c7",
+      "15": "5b0f2e10987f00f2bb82bea12de8e3972c924aa158f4a6c08ef764b7e6bd2e63",
+      "16": "acc49a64d558b0fcad35f28f7d3802939bfc4cefe9d36510fe57c212ee55c201",
+      "17": "91251fb0455dde6d34c0863186aa56998bd8e9d2150460a354e3a25ced4d1bef",
+      "18": "397e471ffcf06c086f31ad71c1b47714081f778107cecb9953cab8316b318696",
+      "19": "c98e9d0e14e3b3a9eef753548ce5a301a970a1cb74ce57555e885070922bfb77"
+    },
+    "ids": [
+      "orig:math:hn27-m150-meridian:q01",
+      "orig:math:hn27-m150-meridian:q02",
+      "orig:math:hn27-m150-meridian:q03",
+      "orig:math:hn27-m150-meridian:q04",
+      "orig:math:hn27-m150-meridian:q05",
+      "orig:math:hn27-m150-meridian:q06",
+      "orig:math:hn27-m150-meridian:q07",
+      "orig:math:hn27-m150-meridian:q08",
+      "orig:math:hn27-m150-meridian:q09",
+      "orig:math:hn27-m150-meridian:q10",
+      "orig:math:hn27-m150-meridian:q11",
+      "orig:math:hn27-m150-meridian:q12",
+      "orig:math:hn27-m150-meridian:q13",
+      "orig:math:hn27-m150-meridian:q14",
+      "orig:math:hn27-m150-meridian:q15",
+      "orig:math:hn27-m150-meridian:q16",
+      "orig:math:hn27-m150-meridian:q17",
+      "orig:math:hn27-m150-meridian:q18",
+      "orig:math:hn27-m150-meridian:q19"
+    ],
+    "choice_keys": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "A",
+      "6": "B",
+      "7": "C",
+      "8": "D",
+      "9": "AC",
+      "11": "BD"
+    },
+    "rules": [
+      {
+        "id": "math.stop",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "随机过程须写首次停时及截断",
+        "counterexample": "至第 N 次仍未报警时未定义读取次数"
+      },
+      {
+        "id": "math.modules",
+        "subject": "math",
+        "severity": "major",
+        "check": "查超越函数、常规导数、立几选填、非均值统计",
+        "counterexample": "全卷只计算平均数"
+      },
+      {
+        "id": "math.score",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "核对六分多选的部分分文案",
+        "counterexample": "套用选对但不全得3分"
+      },
+      {
+        "id": "math.notation",
+        "subject": "math",
+        "severity": "major",
+        "check": "核查补集、对立事件课标符号",
+        "counterexample": "U\\setminus A 或 Y^c"
+      },
+      {
+        "id": "all.figure-condition",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "关键数值和必要部件须在图文中可定位且一致",
+        "counterexample": "间距改变为 2d 只印在图上"
+      },
+      {
+        "id": "all.absolute",
+        "subject": "all",
+        "severity": "major",
+        "check": "集中出现绝对词的错项应查能否不读题即排除",
+        "counterexample": "在弱对照中声称所有浓度均如此"
+      },
+      {
+        "id": "all.graphic",
+        "subject": "all",
+        "severity": "major",
+        "check": "检查文本、图例和刻度的渲染像素",
+        "counterexample": "柱顶 76 与图例重叠"
+      },
+      {
+        "id": "all.solution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "独立检查唯一解、单位、边界与评分",
+        "counterexample": "漏掉可行的第二种解，或选择题多解"
+      },
+      {
+        "id": "exam.policy",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按地区、卷系与目标年份核对外语计分、听力次数及多选给分",
+        "counterexample": "2027年河南英语卷仍印笔试乘以1.25，或写第一节仅读一遍"
+      },
+      {
+        "id": "all.answer_distribution",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "从版本绑定答案计算单选字母偏态和连续相同选项",
+        "counterexample": "语文9道单选中5个B"
+      },
+      {
+        "id": "all.publication_layout",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "依据学生PDF及答案文件核查练习版指令、作答区和评分模板",
+        "counterexample": "练习版要求在答题卡作答，作文稿纸少于1000格"
+      },
+      {
+        "id": "all.answer_leak",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "按空位和步骤编号核对题干是否已给出所问结论",
+        "counterexample": "题首已说明步骤5还原羰基，随后考步骤5的反应类型"
+      },
+      {
+        "id": "all.difficulty_probe",
+        "subject": "all",
+        "severity": "fatal",
+        "check": "检查两层次分块估时和指定把关题的具体推理证据",
+        "counterexample": "尖子生完成150分数学卷估时80分钟，且压轴仅需代入"
+      },
+      {
+        "id": "math.standard_scoring",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "单选按键给分，多选按正解项数生成部分分，解答题认可等价通法",
+        "counterexample": "单选题评分印出可接受数学等价写法；终式8/√82"
+      },
+      {
+        "id": "math.progression",
+        "subject": "math",
+        "severity": "fatal",
+        "check": "检查末两题递进、圆锥曲线覆盖及各题核心方法声明",
+        "counterexample": "末两题都只有两问，全卷圆锥曲线只考椭圆"
+      }
+    ],
+    "preflight": {
+      "policy_sha256": "fd5db587a04f0475da6a8bdefb47749e358bcca913c48eec0b5e942fdbc15bbf",
+      "issues": [],
+      "warnings": [],
+      "coverage": {
+        "指数或对数函数": [
+          19
+        ],
+        "常规导数工具": [
+          19
+        ],
+        "立体几何选填": [
+          7
+        ],
+        "平均数之外的统计量": [
+          17
+        ]
+      },
+      "choice_figures": [
+        7
+      ],
+      "nonchoice_figures": [
+        16,
+        18
+      ],
+      "wrong_options": 28,
+      "absolute_wrong_options": 0,
+      "abstract_mentions": 0,
+      "absolute_wrong_fraction": 0.0,
+      "abstract_per_question": 0.0,
+      "passed": true,
+      "corridor": {},
+      "exam_policy_sha256": "e7b0de5e2a694e66364ff8967d1b3d2cc4b843fd60c1770aa9015c9b166782ba"
+    },
+    "reference_sha256": "4c0fc8bc8c5591e002eb659ffff5ed661e2a12f2574d292757190add956db5d8",
+    "protocol": "three-readers-v2",
+    "release_rules": "henan-standard-release-v1",
+    "repair_slots": []
+  },
+  "reports": [
+    {
+      "role": "solver",
+      "identity": "Codex isolated solver acid-2027",
+      "pdf_sha256": "6e45b2967ca565c8b9400a0dfba44174232702a52ffd462b844ddd3692620197",
+      "items": [
+        {
+          "number": 1,
+          "answer": "A",
+          "core_method": "复数除法与共轭",
+          "reasoning": "乘以2−i并以模平方5为分母，得z=(−1−7i)/5，因此z+2z̄=(−3+7i)/5。",
+          "minutes": [
+            1,
+            2
+          ],
+          "moves": [
+            {
+              "kind": "routine_algebra",
+              "evidence": "用共轭2−i化简复数商，得z=(−1−7i)/5。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "取z̄并合并实部、虚部，得(−3+7i)/5。",
+              "after": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "answer": "B",
+          "core_method": "非空闭区间的端点与开区间包含关系",
+          "reasoning": "A=(−1,5)。B非空要求a≤2a+1，即a≥−1。非空的B包含两个端点，B⊆A还要求a>−1及2a+1<5，合得−1<a<2，反向也成立。",
+          "minutes": [
+            1,
+            2
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "将|x−2|<3改写为A=(−1,5)。",
+              "after": []
+            },
+            {
+              "kind": "restrict_domain",
+              "evidence": "闭区间B非空当且仅当a≤2a+1。",
+              "after": []
+            },
+            {
+              "kind": "endpoint",
+              "evidence": "两个端点须严格落在(−1,5)，合并得−1<a<2，区间中各点均在A。",
+              "after": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "answer": "C",
+          "core_method": "由模长平方求内积再求数量投影",
+          "reasoning": "对|a+b|²展开，19=4+9+2a·b，得a·b=3。所求数量投影为(2b−a)·a/|a|=(6−4)/2=1。",
+          "minutes": [
+            1,
+            2
+          ],
+          "moves": [
+            {
+              "kind": "routine_algebra",
+              "evidence": "由模长恒等式求a·b=3。",
+              "after": []
+            },
+            {
+              "kind": "representation",
+              "evidence": "把数量投影表示为点积除以投影方向向量的模，得1。",
+              "after": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "answer": "D",
+          "core_method": "正态分布的对称性与同长度区间概率比较",
+          "reasoning": "D=0.39是按题面数值进行对称计算的预期键。设F为分布函数，由对称性F(8)=0.04，进而F(11)=0.61及F(9)=0.39。但F(10)=0.50、F(12)=0.96，因此(10,11)和(11,12)的概率分别为0.11、0.35。正态密度在均值10右侧严格递减，前一段概率必须较大。题设无满足条件的正态分布。",
+          "minutes": [
+            2,
+            3
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "围绕均值10反射，F(8)=P(X>12)=0.04，且F(9)=1−F(11)。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "使用题给概率推得F(11)=0.61，形式上的选择为D。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "necessity",
+              "evidence": "正态密度在(10,+∞)严格递减，必有P(10<X<11)>P(11<X<12)。",
+              "after": []
+            },
+            {
+              "kind": "compare",
+              "evidence": "题面推得0.11<0.35，与必需的不等式矛盾。",
+              "after": [
+                1,
+                2,
+                3
+              ]
+            }
+          ],
+          "validity": "inconsistent_premises",
+          "mathematical_answer": "不存在满足条件的正态分布。"
+        },
+        {
+          "number": 5,
+          "answer": "A",
+          "core_method": "倍角恒等式与象限限定符号",
+          "reasoning": "平方得sin 2α=−4/5。因sin α+cos α>0且α在第二象限，π/2<α<3π/4，所以cos 2α<0，值为−3/5。展开sin(2α+π/4)得−7√2/10。",
+          "minutes": [
+            2,
+            3
+          ],
+          "moves": [
+            {
+              "kind": "routine_algebra",
+              "evidence": "平方得到sin 2α=−4/5。",
+              "after": []
+            },
+            {
+              "kind": "restrict_domain",
+              "evidence": "由sin α+cos α的正号把2α限制在(π,3π/2)，确定cos 2α为负。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "由sin²+cos²及和角公式算得−7√2/10。",
+              "after": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "answer": "B",
+          "core_method": "联立焦点弦并用焦半径求弦长",
+          "reasoning": "焦点为F(1,0)。k=0时仅交于顶点，故k≠0。联立y=k(x−1)和y²=4x得两根横坐标之和2+4/k²，且对应二次式在x=1为负，所以F在线段MN内。焦半径为x+1，得|MN|=4+4/k²=8，从而|k|=1。",
+          "minutes": [
+            2,
+            4
+          ],
+          "moves": [
+            {
+              "kind": "restrict_domain",
+              "evidence": "水平线只交于顶点，需k≠0。",
+              "after": []
+            },
+            {
+              "kind": "representation",
+              "evidence": "将焦点弦写成y=k(x−1)，代入得到k²(x−1)²−4x=0，韦达给出横坐标之和。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "necessity",
+              "evidence": "二次式在1处为−4，开口朝上，F位于两个交点之间。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "按抛物线定义将弦长写成两个焦半径之和，得4+4/k²并求出|k|。",
+              "after": [
+                2,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "answer": "C",
+          "core_method": "坐标定截面及梯形的真高",
+          "reasoning": "取A为原点，以AB、AC、AA₁为坐标轴。BCM的平面为x/3+y/4+z/12=1，与顶面交于MN，与底面交于BC，也不交AA₁段，截面是梯形BCNM。两底长5、5/2，水平投影的间距1/2乘以A到BC的距离12/5，即6/5。截面高为√(6²+(6/5)²)=6√26/5，面积为9√26/2。",
+          "minutes": [
+            3,
+            5
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "在直三棱柱上用三条正交棱立坐标，求得截平面x/3+y/4+z/12=1。",
+              "after": []
+            },
+            {
+              "kind": "restrict_domain",
+              "evidence": "在柱体内z∈[0,6]，其余边界给出四顶点B,C,N,M，且MN∥BC。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "representation",
+              "evidence": "把梯形真高分解成竖直分量6与水平分量6/5，水平分量来自中位线。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "由两底长度与真高求面积9√26/2。",
+              "after": [
+                2,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "answer": "D",
+          "core_method": "复合方程按外根位置计数",
+          "reasoning": "令u=f(x)−1。f(u)=m的每个不同实根u贡献f(x)=u+1的实根数。f′(x)=3(x²−1)，极值为±2，所以单个u在(−3,1)贡献3，在端点−3、1贡献2，其他位置贡献1。外层的分界值为f(−3)=−18、f(1)=−2、f(−1)=2。按m依次取(−∞,−18)、{−18}、(−18,−2)、{−2}、(−2,2)、{2}、(2,+∞)，总数依次为1、2、3、5、7、4、1。",
+          "minutes": [
+            5,
+            7
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "设u=f(x)−1，改为先求外层f(u)=m，再对每个u求内层原像。",
+              "after": []
+            },
+            {
+              "kind": "routine_calculus",
+              "evidence": "由f′=3(x²−1)得到三段严格单调与局部极值2、−2。",
+              "after": []
+            },
+            {
+              "kind": "branch",
+              "evidence": "内层对应u+1是否严格介于−2、2或等于边界，原像数分别为3、2、1。",
+              "after": [
+                1,
+                2
+              ]
+            },
+            {
+              "kind": "endpoint",
+              "evidence": "将内层阈值−3、1送入外层，加上外层临界值，确定m的三个分点−18、−2、2。",
+              "after": [
+                2,
+                3
+              ]
+            },
+            {
+              "kind": "branch",
+              "evidence": "沿单调支对七种m区间/孤立点求外根，再逐根累加内层贡献。",
+              "after": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "kind": "necessity",
+              "evidence": "七个区域的根数只有m∈(−18,−2)时等于3，两端点均排除。",
+              "after": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "answer": "AC",
+          "core_method": "按抽中盒子分层后计算条件概率",
+          "reasoning": "P(双红|甲)=3/10，P(双红|乙)=0，故双红总概率为3/20。两盒恰一红的概率分别为6/10和4/10，故已知恰一红时选中甲的概率为3/5。第一球为红的概率为(3/5+1/5)/2=2/5，由双红事件得到P(第二红|第一红)=3/8。",
+          "minutes": [
+            3,
+            4
+          ],
+          "moves": [
+            {
+              "kind": "model",
+              "evidence": "按所抽盒子分层，分别建模为同一个盒中不放回抽取。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "双红的条件概率为3/10、0，由全概率得3/20。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "用超几何计数得到恰一红的条件概率6/10、4/10，按条件概率得选甲为3/5。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "compare",
+              "evidence": "区分P(第一红)=2/5和P(第二红|第一红)=3/8，排除D。",
+              "after": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "answer": "ABD",
+          "core_method": "三角分量分离、平移奇性及导数判根",
+          "reasoning": "π是周期。任意g的周期也是g(x)−g(x+π/2)=2sin 2x的周期，故最小正周期为π。g(π/2+t)=−sin2t+sin4t为奇函数，B真。g(x)=sin2x(1+2cos2x)，在(π/3,π/2)为负，C假。令u=cos2x，则g′=2(4u²+u−2)，两根(−1±√33)/8均在(−1,1)，对应区间中两个变号点，D真。",
+          "minutes": [
+            3,
+            5
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "利用相差π/2的两个g值相减，分离出2sin2x。",
+              "after": []
+            },
+            {
+              "kind": "necessity",
+              "evidence": "g的周期必须是sin2x的周期，结合π确为周期确定最小周期。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "representation",
+              "evidence": "令x=π/2+t，平移后的表达式为−sin2t+sin4t，呈奇性。",
+              "after": []
+            },
+            {
+              "kind": "counterexample",
+              "evidence": "在π/3<x<π/2，sin2x正而1+2cos2x负。",
+              "after": []
+            },
+            {
+              "kind": "routine_calculus",
+              "evidence": "求导后用u=cos2x化为二次式2(4u²+u−2)。",
+              "after": []
+            },
+            {
+              "kind": "restrict_domain",
+              "evidence": "u在区间内严格遍历(−1,1)，二次式两个单根都在其内且变号。",
+              "after": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "answer": "BD",
+          "core_method": "消除递推式的交替项",
+          "reasoning": "a₂=2a₁−1=1，排除严格递增。令b_n=a_n+(-1)^n/3，则b_{n+1}=2b_n，b₁=2/3，故a_n=(2^n−(-1)^n)/3。于是S_{2m}=2(4^m−1)/3，且a_{n+2}−a_n=2^n。",
+          "minutes": [
+            2,
+            4
+          ],
+          "moves": [
+            {
+              "kind": "counterexample",
+              "evidence": "a₂=a₁，反驳严格递增。",
+              "after": []
+            },
+            {
+              "kind": "representation",
+              "evidence": "将交替项吸收到b_n=a_n+(-1)^n/3中，令递推齐次。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "由首项及公比2得a_n=(2^n−(-1)^n)/3。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "compare",
+              "evidence": "计算偶数项前缀和及隔两项的差，分别得2(4^m−1)/3和2^n。",
+              "after": [
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "answer": "−48",
+          "core_method": "按乘积的次数配对取系数",
+          "reasoning": "(x+2)^5的常数、一次、二次系数依次为32、80、80。与1−2x+x²相乘，二次项为80−160+32=−48。",
+          "minutes": [
+            1,
+            2
+          ],
+          "moves": [
+            {
+              "kind": "routine_algebra",
+              "evidence": "根据二项式定理列出前三个系数32、80、80。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "合并总次数为2的三种乘积，求得−48。",
+              "after": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "answer": "10",
+          "core_method": "先确立分母正，再用圆的支撑直线找上界",
+          "reasoning": "由x²+y²=4知3+x−y≥3−2√2>0。要证明比值不超过10，等价于−9x+12y≤30。柯西不等式给出上界2√(81+144)=30，且在(x,y)=(−6/5,8/5)取到等号。因此最大值10。发现候选可令上界为λ，由线性式圆上最大值与3λ相等解出λ=10（另一代数根−2不符合最大值为正）。",
+          "minutes": [
+            3,
+            5
+          ],
+          "moves": [
+            {
+              "kind": "restrict_domain",
+              "evidence": "3+x−y≥3−2√2>0，乘分母保留不等号。",
+              "after": []
+            },
+            {
+              "kind": "representation",
+              "evidence": "令待求最大值λ，转化为圆上线性型(1−λ)x+(2+λ)y的最大值等于3λ。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "用柯西得最大值2√((1−λ)²+(2+λ)²)，结合λ>0解得λ=10。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "construct",
+              "evidence": "取(−6/5,8/5)达到柯西等号，达到原比值10。",
+              "after": [
+                1,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "answer": "5",
+          "core_method": "在唯一内返处切分成两段首次归零的前缀路径",
+          "reasoning": "把甲、乙视为+1、−1。全程高度非负，只有一个内部零点，因此序列唯一分为两段只在末尾归零的正路径。设第一段有j个甲，则j=1、2、3。每段去掉首甲和末乙后是普通非负路径，半长度0、1、2分别有1、1、2种。按两段长度分配有1×2+1×1+2×1=5。",
+          "minutes": [
+            3,
+            5
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "用前缀高度编码甲、乙，题意是非负、末端归零且恰有一个内部零点。",
+              "after": []
+            },
+            {
+              "kind": "invariant",
+              "evidence": "在唯一内部零点切分为恰好两个无内部零点的段，这一对应可逆。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "representation",
+              "evidence": "去掉每段首甲末乙后，段内高度减1，等价于普通非负路径。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "branch",
+              "evidence": "内部零点可在2、4、6处，贡献分别为2、1、2。",
+              "after": [
+                2,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "answer": "（1）B或C为直角。（2）144(3−2√2)，在a=b=12(2−√2)且C=π/2时取到。",
+          "core_method": "和差化积确定直角，再把周长约束化为两股和的上界",
+          "reasoning": "由和差化积，2sin A cos(B−C)=2sin A cos A，故|B−C|=A。结合内角和得B或C为π/2。因b<c，C为直角。设p=a+b，c=√(a²+b²)≥p/√2，故p≤24(2−√2)。面积ab/2≤p²/8，代入得144(3−2√2)，在a=b=12(2−√2)时满足周长并达到等号。",
+          "minutes": [
+            5,
+            8
+          ],
+          "moves": [
+            {
+              "kind": "routine_algebra",
+              "evidence": "和差化积、使用B+C=π−A并除以2sin A，得到cos(B−C)=cos A。",
+              "after": []
+            },
+            {
+              "kind": "branch",
+              "evidence": "由|B−C|=A分辨B或C为直角，b<c时C为直角。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "compare",
+              "evidence": "以两股和p作中间量，斜边至少p/√2，故周长控制p的上界。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "optimality",
+              "evidence": "面积不超过p²/8，两处等号同时在a=b=12(2−√2)达到。",
+              "after": [
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "answer": "（1）AC⊥BD，|BD|=4。（2）最小值4√6/3，两比值均为2/3。",
+          "core_method": "沿折痕取正交坐标后对参数差向量作和固定的平方和最小化",
+          "reasoning": "OB和OD在各自面内垂直于共同交线AC，因此OB⊥OD，又OB=OD=2√2，故AC⊥BD及|BD|=4。取A=(−2√2,0,0)、C=(2√2,0,0)、B=(0,2√2,0)、D=(0,0,2√2)，设s=|AX|/|AB|、t=|CY|/|CD|，则|XY|²=8[(2−s−t)²+s²+t²]。括号内三项底数之和为2，柯西给出下界4/3。等号s=t=2−s−t=2/3，落在可行范围，故最短为4√6/3。",
+          "minutes": [
+            7,
+            10
+          ],
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "用共同对角线的中点O与OB、OD建立折起后的三条正交方向。",
+              "after": []
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "由OB、OD既垂直AC又互相垂直，推出AC⊥BD并用勾股求|BD|=4。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "model",
+              "evidence": "以s、t参数化两条闭棱，求得|XY|²=8[(2−s−t)²+s²+t²]。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "invariant",
+              "evidence": "括号内平方的三个底数之和恒为2。",
+              "after": [
+                3
+              ]
+            },
+            {
+              "kind": "optimality",
+              "evidence": "平方和至少4/3，等号点s=t=2/3位于[0,1]²，证明全局最小。",
+              "after": [
+                3,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "answer": "（1）χ²=2000/391≈5.115，有证据表明灌溉方式与达标有关。（2）最少2块。三种方式为甲组两块达标改不达标、乙组两块不达标改达标、这两种更正各一块。",
+          "core_method": "固定边际组量后对统计阈值作最少更正与全方式验证",
+          "reasoning": "设两组达标数为a、c，令s=a+c，d=a−c。χ²=80d²/[s(80−s)]，初值2000/391。一次更正后d≥9，因s(80−s)≤1600，χ²≥4.05，不能跨越阈值。两次更正若有一步增大差值，最终d≥10，也不能跨越。两步都缩小差值时d=8，s为44、46或48，统计量最大为5120/(48×32)=10/3<3.841，三类均有足够地块可执行。",
+          "minutes": [
+            8,
+            11
+          ],
+          "moves": [
+            {
+              "kind": "model",
+              "evidence": "以两组各40块的固定组量将χ²化为合计达标数s和两组达标差d的函数。",
+              "after": []
+            },
+            {
+              "kind": "compare",
+              "evidence": "代入初值，与临界值3.841比较。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "necessity",
+              "evidence": "一次更正使d最多减少1，利用分母不超过1600证无法改变结论。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "branch",
+              "evidence": "两次更正后若有一步使d增大则d≥10，否则d=8且s∈{44,46,48}。",
+              "after": [
+                1,
+                3
+              ]
+            },
+            {
+              "kind": "sufficiency",
+              "evidence": "对三个可能的s核算最大χ²为10/3，三类更正均可实现。",
+              "after": [
+                4
+              ]
+            },
+            {
+              "kind": "optimality",
+              "evidence": "合并一次不可行与两次全方式，最少为2块。",
+              "after": [
+                3,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "answer": "（1）MN、PQ中点均为(2k²/(k²−1),2k/(k²−1))，k为PQ斜率。（2）Q=(7,3√5)。（3）|MN|²=2S(S−2)，|MN|∈(4,+∞)。",
+          "core_method": "用弦斜率统一参数化双曲线交点、渐近线交点及面积范围",
+          "reasoning": "令PQ为y=k(x−2)。Q的坐标满足x>2、y>0且k²=(x+2)/(x−2)>1，故k>1。联立得Q=(2(k²+1)/(k²−1),4k/(k²−1))，M=(2k/(k−1),2k/(k−1))，N=(2k/(k+1),−2k/(k+1))，加坐标得两线段同中点。面积S=4k²/(k²−1)。当S=9时得k²=9/5，并求得Q=(7,3√5)。MN两坐标差的平方和为16k²(1+k²)/(k²−1)²=2S(S−2)。每个k>1均给出一个允许的Q，S遍历(4,+∞)，长度严格递增随S变化，范围为(4,+∞)。",
+          "minutes": [
+            10,
+            14
+          ],
+          "moves": [
+            {
+              "kind": "restrict_domain",
+              "evidence": "用k²=(x_Q+2)/(x_Q−2)及y_Q>0推出k>1，且反向构造均可行。",
+              "after": []
+            },
+            {
+              "kind": "representation",
+              "evidence": "将过P直线分别和双曲线、两渐近线联立，表示Q、M、N的坐标。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "invariant",
+              "evidence": "比较中点的坐标和，证明MN、PQ同中点。",
+              "after": [
+                2
+              ]
+            },
+            {
+              "kind": "representation",
+              "evidence": "行列式面积给出S=4k²/(k²−1)。",
+              "after": [
+                1,
+                2
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "S=9时解k²=9/5，再带入Q的坐标。",
+              "after": [
+                2,
+                4
+              ]
+            },
+            {
+              "kind": "routine_algebra",
+              "evidence": "坐标平方和用S消去k，化成|MN|²=2S(S−2)。",
+              "after": [
+                2,
+                4
+              ]
+            },
+            {
+              "kind": "endpoint",
+              "evidence": "由k>1得S遍历(4,+∞)，结合长度严格递增，最小下界4不取。",
+              "after": [
+                1,
+                4,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "answer": "（1）t²/2<e^t−1−t<e^t t²/2。（2）a=0时严格递减，a≥1/2时严格递增，两种情形均无正零点。0<a<1/2时，以x*=(1−2a)/a²为界先减后增，恰有一个正零点。（3）λ∈[2,+∞)。",
+          "core_method": "构造指数上下界、按导数参数分支判零点，并反向构造正零点求严格不等式的最优界",
+          "reasoning": "对下界差F=e^t−1−t−t²/2有F(0)=F′(0)=0、F″=e^t−1>0。对上界差G=e^t t²/2−e^t+1+t有G(0)=G′(0)=0、G″=e^t(t²/2+2t)>0，因此两差在t>0均正。H_a′=x(a²x+2a−1)/[(1+x)(1+ax)²]，且H_a(0)=0。依a分三支讨论，只有0<a<1/2时先降后升并趋于+∞，故恰一正零点。设t=ln(1+x_a)，零点方程给出a=1/t−1/(e^t−1)，因而1/a−t=t²/(e^t−1−t)∈(2e^(−t),2)，λ=2已经充分。反过来每个t>0定义的a(t)>0且使x=e^t−1成为正零点，按（2）必有a(t)<1/2，因此可以令t→0⁺，此差趋于2，所有λ<2均不成立。",
+          "minutes": [
+            12,
+            17
+          ],
+          "moves": [
+            {
+              "kind": "construct",
+              "evidence": "为上下两个指数界分别构造差函数F、G，二者在零点处函数值和一阶导数均为零。",
+              "after": []
+            },
+            {
+              "kind": "routine_calculus",
+              "evidence": "F″=e^t−1和G″=e^t(t²/2+2t)在t>0为正，逐级得严格上下界。",
+              "after": [
+                1
+              ]
+            },
+            {
+              "kind": "routine_calculus",
+              "evidence": "将H_a′约化为分母为正、符号由a²x+2a−1决定的表达式。",
+              "after": []
+            },
+            {
+              "kind": "branch",
+              "evidence": "根据a=0、0<a<1/2、a≥1/2讨论符号。用H_a(0)=0及中间情形的无穷极限判定正零点个数。",
+              "after": [
+                3
+              ]
+            },
+            {
+              "kind": "representation",
+              "evidence": "以t=ln(1+x_a)重新参数化根，把差写成t²/(e^t−1−t)。",
+              "after": [
+                4
+              ]
+            },
+            {
+              "kind": "sufficiency",
+              "evidence": "指数下界推出该差严格小于2，故λ=2及更大值全部满足。",
+              "after": [
+                2,
+                5
+              ]
+            },
+            {
+              "kind": "construct",
+              "evidence": "对任意t>0反定a(t)，以指数下界知a>0，又由正零点分类知a<1/2，保证趋近过程均可行。",
+              "after": [
+                2,
+                4,
+                5
+              ]
+            },
+            {
+              "kind": "optimality",
+              "evidence": "指数上界推出该差严格大于2e^(−t)。允许t→0⁺，故上确界为2且不取，排除一切λ<2。",
+              "after": [
+                2,
+                5,
+                6,
+                7
+              ]
+            }
+          ]
+        }
+      ],
+      "dimensions": {
+        "correctness": "逐题复算并核对边界。第4题概率与正态密度单调性矛盾，无符合题设的正态分布，D只代表题面形式计算的预期键。其余题目所得选择、填空及解答均可据题面确定。第8、14、16、18、19题分别核了临界重根、内返、等号参数落点、开端点和严格不等式最优界。",
+        "curriculum": "卷面总分150，时长120分钟，8单选、3多选、3填空、5解答。覆盖正态分布与列联表、立体几何选做和解答、抛物线与双曲线、指数和对数、常规及含参导数。第17题自行定义χ²判据，按题内阈值求解。学生卷能核对印刷内容，目标年份官方政策的来源未在隔离材料内提供。",
+        "marking": "单选40分、多选18分、填空15分、解答77分，之和150。六分多选写明全对6分、部分选对得部分分及含错得0分。学生卷未给阅卷细则，不能据此核实各部分分档和等价解给分。第4题若照D单键计分，会掩盖题设无模型。",
+        "depth": "第8题跨外层临界值和内层原像阈值累加根数。第14题在唯一内部零处切分，填空用小规模计数。第17题要证最少更正并穷尽方式。第18题三问从中点到参数再到范围。第19题三问从指数界和正根分类递进到反向构造、逼近严格最优界。上述三个指定题没有明显的难度倒置、纯回忆套式或重复模型。",
+        "balance": "单选按形式键为A、B、C、D、A、B、C、D，各2次、无连号同选；精确的ABCD循环可能提示后四个形式键，但只有一次重复，单凭卷面无法证实可利用性。题目从常规复数、集合、向量、统计、三角到圆锥曲线、立几和复合方程。第6和18题分别为抛物线焦点弦和双曲线渐近线截距，方法不相同。",
+        "language": "题目术语与符号整体清楚，五道解答的分问和关键信息可定位。未找到题干直接公布所问结论。第4题问题在概率参数的数学相容性。卷首要求在答题卡作答，学生试题PDF中没有附答题卡。若目标是自足练习版，要结合实际发布配套判断。",
+        "visual": "三页A4中公式与页脚完整。第7题图中标注AB=3、AC=4及AA₁=6与棱线相交；第16题图中AB=4与折后三角形边线相交，正方形边长仍由正文明确。第9题C、D的末尾分数被拆到下一行，仍可辨认。第16题第（1）问留在第2页底部，第（2）问在第3页顶端。",
+        "time": "编辑估时，以整套完整作答说过程为准。尖子生分块：单选17–28分、多选8–13分、填空7–12分、解答42–60分，加全卷复核5–8分，总计79–121分。中等生分块：单选25–38分、多选12–18分、填空11–17分、解答59–80分，加全卷复核5–8分，完整作答约112–161分，120分钟内部分考生需跳过卡住的末问。第8题的两层根数、第14题的内部返零和第19题的参数反构及上确界分别检验关键转折。"
+      },
+      "findings": [
+        {
+          "number": 4,
+          "category": "fatal",
+          "rule": "all.solution",
+          "evidence": "由题给数据与对称性得F(8)=.04、F(11)=.61、F(12)=.96。F(10)=.50，故P(10<X<11)=.11而P(11<X<12)=.35。二者所在区间同长且均在均值右侧，正态密度严格递减，须前者大于后者，题设不存在可行正态分布。形式键D不能修复矛盾。"
+        },
+        {
+          "number": 7,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "evidence": "第1页将图放大至280 dpi，BC的实线压过AB=3及AC=4；BM及AA₁的虚线穿过或贴靠AA₁=6。所有三条长度仍可由题干读取。"
+        },
+        {
+          "number": 16,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "evidence": "第2页将折叠示意图放大至280 dpi，AB=4标注横跨A点汇聚的斜边以及过D、O的虚线。边长仍由题干给出。"
+        }
+      ]
+    },
+    {
+      "role": "pedagogy",
+      "identity": "Codex isolated pedagogy acid-2027",
+      "pdf_sha256": "6e45b2967ca565c8b9400a0dfba44174232702a52ffd462b844ddd3692620197",
+      "items": [
+        {
+          "number": 1,
+          "reasoning": "先乘分母的共轭，得 z=(-1-7i)/5，再用共轭相加得 (-3+7i)/5，选 A。",
+          "comparison": "2025 第 1 题只做 (1+5i)i 并取虚部；本题增加有理化及共轭的符号辨认，仍能担任第 1 题。",
+          "steps": [
+            "将复数除法化成标准形式",
+            "取共轭并合并实虚部"
+          ],
+          "concepts": [
+            "复数除法",
+            "共轭复数"
+          ],
+          "minutes": {
+            "middle": [
+              2,
+              3
+            ],
+            "advanced": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "reasoning": "A=(-1,5)。B 非空给 a≥-1，B 两端点纳入 A 要 a>-1、2a+1<5，故 (-1,2)，选 B。",
+          "comparison": "2025 第 2 题列举正整数并计补集基数；本题仍考集合，增添非空区间和开端点判断。",
+          "steps": [
+            "解绝对值不等式",
+            "用非空及端点约束求交"
+          ],
+          "concepts": [
+            "绝对值不等式",
+            "区间与包含关系"
+          ],
+          "minutes": {
+            "middle": [
+              2,
+              3
+            ],
+            "advanced": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "reasoning": "|a+b|²=19 给 a·b=3；(2b−a) 在 a 方向的数量投影为 (6−4)/2=1，选 C。",
+          "comparison": "2026 第 2 题由 a,b 不共线直接比较系数；本题也属平面向量入门，改为模的平方还原数量积，再求投影。",
+          "steps": [
+            "展开向量模平方",
+            "除以方向向量的模求数量投影"
+          ],
+          "concepts": [
+            "向量数量积",
+            "数量投影"
+          ],
+          "minutes": {
+            "middle": [
+              2.5,
+              4
+            ],
+            "advanced": [
+              1.5,
+              2.5
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "reasoning": "按题意应有 P(X<8)=0.04，形式计算得 P(X<11)=0.61，再镜像为 P(X<9)=0.39（D）。但是 P(10<X<11)=0.11，而 P(10<X<12)=0.46。正态密度在 (10,+∞) 严格递减，前半段面积必大于 0.23。条件矛盾，不存在该正态随机变量。",
+          "comparison": "2026 第 1 题用五个数的中位数覆盖统计基本量；此题改考分布形状和对称，正式试题候选必须先通过同一分布的相容性检验。2026 第 8 题也考分布结构，但用有限样本空间的对称抵消求期望。",
+          "steps": [
+            "利用均值处对称和平移区间取面积",
+            "用正态密度单调性检验同分布相容性"
+          ],
+          "concepts": [
+            "正态分布",
+            "概率的可加性",
+            "概率密度单调性"
+          ],
+          "minutes": {
+            "middle": [
+              2,
+              5
+            ],
+            "advanced": [
+              1.5,
+              4
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "reasoning": "(sinα+cosα)²=1/5，故 sin2α=-4/5。题给和值为正且 α 为第二象限，推出 α<3π/4，故 cos2α=-3/5。代入和角公式得 -7√2/10，选 A。",
+          "comparison": "2026 第 3 题对三个给定角直接读取三角值并取交集；本题沿用象限符号判断，增加从和值反推两倍角及其符号，稍难。",
+          "steps": [
+            "和值平方求正弦倍角",
+            "由象限及和值的符号确定余弦倍角符号",
+            "和角公式求值"
+          ],
+          "concepts": [
+            "同角三角函数关系",
+            "倍角公式",
+            "和角公式"
+          ],
+          "minutes": {
+            "middle": [
+              3,
+              5
+            ],
+            "advanced": [
+              2,
+              3.5
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "reasoning": "焦点 (1,0)。k=0 时没有两个不同交点，余下 k≠0。令 x=1+y/k 后应用韦达或判别式，二纵坐标差的绝对值为 4√(1+1/k²)，弦长为 4(1+1/k²)。等于 8 得 |k|=1，选 B。",
+          "comparison": "2026 第 5 题由同一给定点确定两抛物线参数和焦点间距；本题还要消元得到弦长。2025 第 10 题同用抛物线焦点弦，后者同时要求准线及弦长最小值等多个独立判断。",
+          "steps": [
+            "确定焦点和排除水平线",
+            "代入得纵坐标二次方程",
+            "将根差转换为欧氏弦长"
+          ],
+          "concepts": [
+            "抛物线焦点",
+            "判别式或韦达定理",
+            "线段长度"
+          ],
+          "minutes": {
+            "middle": [
+              4,
+              6
+            ],
+            "advanced": [
+              2.5,
+              4
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "reasoning": "MN∥BC，截面为梯形 BCMN。底面 A 到 BC 距离 12/5；上下两底投影的垂直距离为 6/5，真实梯形高为 √(6²+(6/5)²)=6√26/5。由两底 5、5/2 得面积 9√26/2，选 C。",
+          "comparison": "2025 第 9 题同以棱柱及中点考空间线面关系；本题进一步确定截面并分解截面高。2026 第 15 题直三棱柱的中点构型则把同类思维放到解答题，另算线面距离。",
+          "steps": [
+            "用中位线识别梯形截面",
+            "计算底面距离及投影偏移",
+            "勾股转为空间截面高并求面积"
+          ],
+          "concepts": [
+            "三棱柱",
+            "平行截线",
+            "梯形面积",
+            "投影距离"
+          ],
+          "minutes": {
+            "middle": [
+              5,
+              7
+            ],
+            "advanced": [
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "reasoning": "令 t=f(x)-1。先数 f(t)=m 的根，再按 t<-3、t=-3、-3<t<1、t=1、t>1 时分别有 1、2、3、2、1 个内层根。由 f(-3)=-18、f(±1)=∓2，m 分别在 (-∞,-18)、{-18}、(-18,-2)、{-2}、(-2,2)、{2}、(2,+∞) 时总根数为 1、2、3、5、7、4、1，选 D。",
+          "comparison": "2025 第 8 题用公共参数重写三种底数指数函数，比较不同次序能否出现；本题同样需要主动引入参数并分界，但界值来自内外两层单调分段数根。2026 第 8 题移去对称样本后用总和差迅速求期望，运算短于本题完整端点核算。",
+          "steps": [
+            "引入中间变量分解复合方程",
+            "区分两组三次函数极值阈值",
+            "合并原像数并单独检查端点"
+          ],
+          "concepts": [
+            "导数与单调区间",
+            "函数图象交点",
+            "复合函数与解的个数"
+          ],
+          "minutes": {
+            "middle": [
+              6,
+              9
+            ],
+            "advanced": [
+              4,
+              6
+            ]
+          },
+          "moves": [
+            {
+              "kind": "decomposition",
+              "evidence": "让 t=f(x)−1 将九次复合方程拆成外层三次和内层原像计数。",
+              "after": "得到两套不同的边界值。"
+            },
+            {
+              "kind": "boundary_check",
+              "evidence": "m=-18 时为 2 根，m=-2 时为 5 根；两端都要排除。",
+              "after": "才能在 A、B、D 中稳定选中 D。"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "reasoning": "甲中两红 3/10，乙不可能两红，全概率为 3/20；恰一红的甲/乙条件概率为 3/5、2/5，因此后验甲为 3/5；首红概率为 2/5，两红除以首红得 3/8。选 A、C。",
+          "comparison": "2025 第 14 题从有放回抽三次统计不同编号数，借示性变量求期望；本题改为先选盒再不放回，检查条件事件分母。2026 第 17 题同考条件概率，但由截断首中和独立试验推无后效式。",
+          "steps": [
+            "按盒建立不放回概率",
+            "用全概率和交比检查四项"
+          ],
+          "concepts": [
+            "古典概型",
+            "全概率公式",
+            "条件概率",
+            "不放回抽样"
+          ],
+          "minutes": {
+            "middle": [
+              4,
+              7
+            ],
+            "advanced": [
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "reasoning": "g=sin2x(1+2cos2x)。π 是周期；(0,π) 中零点只有 π/3、π/2、2π/3，π/3 和 2π/3 作为周期与 g(π/2)=0 及 g(±π/6)≠0 冲突，π/2 与 g(π/4) 和 g(3π/4) 异号冲突。g(π/2+h)=-g(π/2-h)。取 x∈(π/3,π/2) 可否定 C。令 u=cos2x，导数为 8u²+2u-4，两根均在 (-1,1) 且发生变号，故恰有两个极值点。选 A、B、D。",
+          "comparison": "2025 第 11 题在三角形约束下从余弦倍角等式推出四个几何量；本题换成函数性质逐项判断。2026 第 13 题由偶性和单调区间限定正弦参数，本题叠加两个谐波，最小周期和极值点都需要验证。",
+          "steps": [
+            "因式分解得到候选最小周期和符号",
+            "用中心对称代换检验",
+            "将导函数换元成二次式并检查变号"
+          ],
+          "concepts": [
+            "三角函数周期与对称",
+            "和角及倍角公式",
+            "导数判极值"
+          ],
+          "minutes": {
+            "middle": [
+              6,
+              9
+            ],
+            "advanced": [
+              4.5,
+              7
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "reasoning": "设 b_n=a_n+(−1)^n/3，则 b_{n+1}=2b_n，故 a_n=(2^n−(−1)^n)/3。a_1=a_2=1；S_{2m}=2(4^m−1)/3；a_{n+2}−a_n=2^n。选 B、D。",
+          "comparison": "2025 第 16 题先构造 n a_n 为等差数列，再用于多项式求导；本题改为消去交替扰动，且 B 项明示辅助数列，因此发现成本低于该真题。",
+          "steps": [
+            "验证选项给出的辅助数列",
+            "用通项核对严格递增、偶数项和及两步差"
+          ],
+          "concepts": [
+            "递推数列",
+            "等比数列",
+            "配项化简",
+            "奇偶分组"
+          ],
+          "minutes": {
+            "middle": [
+              4,
+              6
+            ],
+            "advanced": [
+              2.5,
+              4
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "reasoning": "只取三个次数配对。x² 系数为 C(5,2)·2³−2C(5,1)·2⁴+2⁵=−48。",
+          "comparison": "2025 第 12 题由给定的切线斜率反推切点及函数参数；本题是同一填空位置的标准计算，关键是从两个因式收集三种贡献。",
+          "steps": [
+            "按 0+2、1+1、2+0 收集次数",
+            "使用二项式系数并求和"
+          ],
+          "concepts": [
+            "二项式定理",
+            "多项式系数"
+          ],
+          "minutes": {
+            "middle": [
+              2,
+              3.5
+            ],
+            "advanced": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "reasoning": "分母至少为 3−2√2>0。设商为 t，得到 (1−t)x+(2+t)y=3t；平方后用柯西得 t²−8t−20≤0。上界 10 可在 (−6/5,8/5) 取得。",
+          "comparison": "2025 第 7 题把距给定线为 1 的点转化为平行线与圆的交点数；本题把给定商转成等值直线，临界线与圆相切，目标从半径区间变为商的极值，且要先判断分母正。",
+          "steps": [
+            "给分母作全域下界",
+            "线性化商的等值条件",
+            "用柯西或圆线相切求界并给等号点"
+          ],
+          "concepts": [
+            "圆与直线",
+            "柯西不等式",
+            "分式最大值"
+          ],
+          "minutes": {
+            "middle": [
+              4,
+              6
+            ],
+            "advanced": [
+              2.5,
+              4.5
+            ]
+          }
+        },
+        {
+          "number": 14,
+          "reasoning": "把甲乙记为 +1/−1。总和为 0，前七个前缀只有一次归零，所以全路径有且仅有两个正长度的首返块。按半长度 (1,3)、(2,2)、(3,1) 分，半长度 1、2、3 的单块计数为 1、1、2，合计 5。",
+          "comparison": "2026 第 14 题对所有 3n 项前缀和及任意起点的连续九项等比区间求公比最大值，需要跨周期对齐并证明最优可达。本题也从前缀条件压缩问题，但固定 8 位，可分三个短情形或直接枚举，区分度较低。2025 第 14 题则用不同编号数的期望考概率计数。",
+          "steps": [
+            "把不低于转换成非负前缀和",
+            "按唯一内部归零分成两个首返块",
+            "计算三个半长度分配，检查无重复遗漏"
+          ],
+          "concepts": [
+            "分类计数",
+            "前缀和",
+            "排列与格路径"
+          ],
+          "minutes": {
+            "middle": [
+              5,
+              9
+            ],
+            "advanced": [
+              3,
+              5.5
+            ]
+          },
+          "moves": [
+            {
+              "kind": "representation",
+              "evidence": "甲乙编码为 ±1，把唯一相等前缀当作唯一内部返回 0。",
+              "after": "问题成为两个紧接的首返块。"
+            },
+            {
+              "kind": "case_split",
+              "evidence": "三个半长度配对为 (1,3)、(2,2)、(3,1)，短块可手列全部。",
+              "after": "计数 2+1+2；区分度受长度 8 限制。"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "reasoning": "和差化积后除以 2sinA 得 cos(B−C)=cosA，从而 |B−C|=A，右角为较大的 B 或 C。b<c 固定 C=90°。令 s=a+b，面积 K=12s−144，且 s≤√2(24−s)，等号 a=b 可行，得 K_max=432−288√2。",
+          "comparison": "2026 第 16 题用余弦定理求角，再添平行垂线求长度；本题证明部分由三角恒等式推出直角，第二问固定周长取极值，证明与优化均有标准入口。",
+          "steps": [
+            "和差化积并用 A+B+C=π",
+            "由 b<c 判断 C 为直角",
+            "将面积改写成直角边和并验证等号"
+          ],
+          "concepts": [
+            "解三角形",
+            "和差化积",
+            "勾股定理",
+            "基本不等式"
+          ],
+          "minutes": {
+            "middle": [
+              8,
+              13
+            ],
+            "advanced": [
+              6,
+              9
+            ]
+          }
+        },
+        {
+          "number": 16,
+          "reasoning": "折后 OB、OD 都垂直 AC 且彼此垂直，均为 2√2，故 AC⊥BD，|BD|=4。以 AC、OB、OD 为坐标轴，令 t=AX/AB、s=CY/CD，|XY|²=8[(t+s−2)²+t²+s²]。固定 t+s 时以 t=s 最小，再配方得 t=s=2/3，最小 |XY|=4√6/3。",
+          "comparison": "2026 第 15 题借直三棱柱的中点证线面平行，随后用角条件求线面距离；2025 第 17 题再借共球定位空间球心并求角。本题采用折叠建系和双参数约束优化，计算量比 2026 第 15 题大。",
+          "steps": [
+            "由面面垂直确定正交轴",
+            "把两动点参数限制在 [0,1]",
+            "以参数和降成一元二次式并检查取等可行"
+          ],
+          "concepts": [
+            "面面垂直性质",
+            "空间直角坐标",
+            "距离公式",
+            "二次式最小值"
+          ],
+          "minutes": {
+            "middle": [
+              10,
+              16
+            ],
+            "advanced": [
+              7,
+              11
+            ]
+          }
+        },
+        {
+          "number": 17,
+          "reasoning": "设两组达标数 r,s，记 T=r+s、D=r−s。χ²=80D²/[T(80−T)]，初始 8000/1564>3.841。更正至多一次时 D≥9，故 χ²≥6480/1600>3.841；恰两次必须都使 D 减小。分别作甲达标降级 2、甲降乙升各 1、乙未达标升级 2，T 为 44、46、48，所得三统计量均低于阈值。",
+          "comparison": "2025 第 15 题同用 2×2 列联表，先求检查异常时患病率，再代入检验与阈值比较；本题在给定阈值后加入最少更正数和全部方案，增加对分子差、分母合计的控制。",
+          "steps": [
+            "按固定两组边际化简检验统计量",
+            "用分母上界证明更正 0、1 次不够",
+            "枚举两次同方向减差的可行方案并检验"
+          ],
+          "concepts": [
+            "2×2 列联表",
+            "独立性检验",
+            "整数最优化",
+            "分类计数"
+          ],
+          "minutes": {
+            "middle": [
+              8,
+              14
+            ],
+            "advanced": [
+              6,
+              10
+            ]
+          }
+        },
+        {
+          "number": 18,
+          "reasoning": "取 u=x+y、v=x−y，则 uv=4。设 Q 对应 (2r,2/r)，r>1，割线为 u+rv=2(r+1)。在 (u,v) 坐标下，M、N 的截距分别为 (2(r+1),0)、(0,2(r+1)/r)，两点的坐标平均值与 P、Q 的坐标平均值相同。实际面积 S=(r+1)²/r=r+2+1/r，故 S=9 时 Q=(7,3√5)。同一变换下 |MN|²=2S(S−2)，S∈(4,+∞)，故 |MN|∈(4,+∞)。",
+          "comparison": "2025 第 18 题由离心率和顶点距离求椭圆方程，再由射线距离积和斜率约束走到点间距最大值；本题换成双曲线及两渐近线，共用截距不变量，末问沿前一步的参数式继续，比该真题末问的轨迹距离优化短。",
+          "steps": [
+            "沿渐近线换元或直接作割线消元",
+            "证明截距中点相合",
+            "将面积和弦长写成同一参数并求开区间"
+          ],
+          "concepts": [
+            "双曲线与渐近线",
+            "直线截距",
+            "面积坐标公式",
+            "值域"
+          ],
+          "minutes": {
+            "middle": [
+              12,
+              19
+            ],
+            "advanced": [
+              8,
+              13
+            ]
+          }
+        },
+        {
+          "number": 19,
+          "reasoning": "下界考察 e^t−1−t−t²/2，其导数 e^t−1−t>0；上界乘 e^{−t} 后看 t²/2−1+(1+t)e^{−t}，其导数 t(1−e^{−t})>0。H'_a 的符号由 a²x+2a−1 决定；a=0 时递减，a≥1/2 时递增，均无正零点；0<a<1/2 时先降后升并趋于 +∞，恰一正零点。置 t=ln(1+x_a)，有 a=1/t−1/(e^t−1) 及 1/a−t=t²/(e^t−1−t)∈(2e^{−t},2)。每个 t>0 可用前式反构该 a，正零点和第(2)问推出 a<1/2。令 t→0^+ 证上界 2 可任意逼近，严格不等式在 λ=2 仍成立，故 λ∈[2,+∞)。",
+          "comparison": "2025 第 19 题先算三角函数局部最大，再证明相位区间内存在点，最后优化全域上界；2026 第 19 题先求位移集合，再证明包含关系，末问由包含推右侧单调。本题同具前问服务后问的结构，但第一问直接给出最终上界工具；第三问仍须从隐式根反构参数并单独判断严格端点。",
+          "steps": [
+            "以导数证明一对严格指数不等式",
+            "分类讨论导数和正零点",
+            "用零点方程改写量词，反构参数证明上界锐利"
+          ],
+          "concepts": [
+            "指数与对数函数",
+            "导数与零点",
+            "隐式换元",
+            "不等式和夹逼",
+            "最优常数及严格端点"
+          ],
+          "minutes": {
+            "middle": [
+              17,
+              26
+            ],
+            "advanced": [
+              11,
+              17
+            ]
+          },
+          "moves": [
+            {
+              "kind": "substitution",
+              "evidence": "由 H_a(x_a)=0 消去 a 或 x_a，得到 1/a−t=t²/(e^t−1−t)。",
+              "after": "第(1)问给出范围 (2e^{−t},2)。"
+            },
+            {
+              "kind": "sharpness",
+              "evidence": "每个 t>0 反构 a，借第(2)问证明其可行，遂可取 t→0^+。",
+              "after": "逼近 2 且永远小于 2，所以 λ=2 可取。"
+            }
+          ]
+        }
+      ],
+      "dimensions": {
+        "correctness": "逐题独立求解。第 4 题两项精确正态概率相互矛盾，其余题可按给定条件独立导出。重点核算了第 8 题两个三次阈值层、第 13 题分母正且最大值取等、第 16 题两参数均在闭区间、第 18 题 r>1 和下界开端点、第 19 题正零点和最优常数端点。",
+        "curriculum": "复数、集合、向量、正态分布、三角函数、常规导数、立体几何、数列、二项式、列联表及抛物线和双曲线均有覆盖。第 14 题可按普通分类计数解决，第 19 题可全程用高中导数与夹逼。没有随机读取或首次停时题，停时截断规则不适用。未核验盲审白名单外的考试政策。",
+        "marking": "学生卷 8×5+3×6+3×5+77=150，解答题为 13、15、15、17、17。多选指令是全部正确 6 分、部分正确得部分分、选错得 0 分。盲审材料仅为学生版，可核学生指令和选项，无法确认答案稿中各正确选项数的具体部分分、单选键及等价解给分。第 4 题必须修正条件后才可建立正式答案。",
+        "depth": "第 8 题有真实两层阈值推理，第 19 题须证明最优常数的尖锐性。第 14 题从前缀转为两个首返块的发现有价值，固定规模使验证很短。第 18 题三问形成同一参数上的连续推进，第三问可直接从第二问的面积式继续。第 11 题 B 直接给辅助数列，主要考验证。",
+        "balance": "题域覆盖较广。第 3、7、16 题分别在平面向量、立几截面、空间优化中使用几何量；第 6、18 题分别考抛物线、双曲线。第 9 与第 17 题分别考盒别条件概率和列联表敏感性，方法异质。第 1–8 题形式答案为 ABCDABCD，属于位置规律；第 4 题没有成立的数学答案。",
+        "language": "第 14 题前 7 个非空前缀排除了全长，且甲乙各四个保证最终归零。第 16 题注明含端点，第 18 题限定右支及纵坐标为正，第 19 题量词和严格不等号清晰。图示的必要数据均可从相应文字找到。第 4 题问题在概率条件而非表述。",
+        "visual": "以 Poppler 渲染并检查全部 3 页。公式及主要汉字可读，题 7 和题 16 几何标记挤压，题 16 题块横跨第 2/3 页。第 18 题图、字母与渐近线可以辨识。填空有横线，试卷指示在答题卡作答，独立文件未看到对应答题卡。如学生版设计为直接印发的独立练习，需要另核答案书写区。",
+        "time": "把初读题意、规范写出证明和最后核验计入分块。中等生全部尝试约 143 分钟，120 分钟内需给第 19 题末问等留出取舍。先进生完整作答中心估计 98 分钟，其中约 8 分钟核验，合理波动约 90–110 分钟。95 分钟适合作为先进生的典型工作量靶点，无法将其视为经验硬下限。"
+      },
+      "difficulty_probe": {
+        "kind": "editorial_estimate",
+        "timing_kind": "editorial_estimate",
+        "advanced_min_minutes": 95,
+        "summary": "以规范写出全部得分步骤为完成口径，包含题面初读、约 6–8 分钟针对性核验。典型先进生估计 98 分钟，可覆盖设计阈值 95 分钟；熟悉第 14 题小规模枚举且较快完成第 18 题者可能更短。中等生全卷约 143 分钟，在实考 120 分钟里常会只部分完成末题。未开展学生实测。",
+        "minutes": {
+          "middle": {
+            "single": 35,
+            "multiple": 19,
+            "fill": 15,
+            "solutions": 74
+          },
+          "advanced": {
+            "single": 23,
+            "multiple": 13,
+            "fill": 10,
+            "solutions": 52
+          }
+        },
+        "gate_items": [
+          {
+            "number": 8,
+            "reasoning": "令 t=f(x)-1。先数 f(t)=m 的根，再按 t<-3、t=-3、-3<t<1、t=1、t>1 时分别有 1、2、3、2、1 个内层根。由 f(-3)=-18、f(±1)=∓2，m 分别在 (-∞,-18)、{-18}、(-18,-2)、{-2}、(-2,2)、{2}、(2,+∞) 时总根数为 1、2、3、5、7、4、1，选 D。",
+            "inverted_difficulty": false,
+            "recalled_routine": false,
+            "repeated_model": false,
+            "minutes": {
+              "middle": [
+                6,
+                9
+              ],
+              "advanced": [
+                4,
+                6
+              ]
+            },
+            "moves": [
+              {
+                "kind": "decomposition",
+                "evidence": "让 t=f(x)−1 将九次复合方程拆成外层三次和内层原像计数。",
+                "after": "得到两套不同的边界值。"
+              },
+              {
+                "kind": "boundary_check",
+                "evidence": "m=-18 时为 2 根，m=-2 时为 5 根；两端都要排除。",
+                "after": "才能在 A、B、D 中稳定选中 D。"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "reasoning": "把甲乙记为 +1/−1。总和为 0，前七个前缀只有一次归零，所以全路径有且仅有两个正长度的首返块。按半长度 (1,3)、(2,2)、(3,1) 分，半长度 1、2、3 的单块计数为 1、1、2，合计 5。",
+            "inverted_difficulty": false,
+            "recalled_routine": true,
+            "repeated_model": false,
+            "minutes": {
+              "middle": [
+                5,
+                9
+              ],
+              "advanced": [
+                3,
+                5.5
+              ]
+            },
+            "moves": [
+              {
+                "kind": "representation",
+                "evidence": "甲乙编码为 ±1，把唯一相等前缀当作唯一内部返回 0。",
+                "after": "问题成为两个紧接的首返块。"
+              },
+              {
+                "kind": "case_split",
+                "evidence": "三个半长度配对为 (1,3)、(2,2)、(3,1)，短块可手列全部。",
+                "after": "计数 2+1+2；区分度受长度 8 限制。"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "reasoning": "下界考察 e^t−1−t−t²/2，其导数 e^t−1−t>0；上界乘 e^{−t} 后看 t²/2−1+(1+t)e^{−t}，其导数 t(1−e^{−t})>0。H'_a 的符号由 a²x+2a−1 决定；a=0 时递减，a≥1/2 时递增，均无正零点；0<a<1/2 时先降后升并趋于 +∞，恰一正零点。置 t=ln(1+x_a)，有 a=1/t−1/(e^t−1) 及 1/a−t=t²/(e^t−1−t)∈(2e^{−t},2)。每个 t>0 可用前式反构该 a，正零点和第(2)问推出 a<1/2。令 t→0^+ 证上界 2 可任意逼近，严格不等式在 λ=2 仍成立，故 λ∈[2,+∞)。",
+            "inverted_difficulty": false,
+            "recalled_routine": false,
+            "repeated_model": false,
+            "minutes": {
+              "middle": [
+                17,
+                26
+              ],
+              "advanced": [
+                11,
+                17
+              ]
+            },
+            "moves": [
+              {
+                "kind": "substitution",
+                "evidence": "由 H_a(x_a)=0 消去 a 或 x_a，得到 1/a−t=t²/(e^t−1−t)。",
+                "after": "第(1)问给出范围 (2e^{−t},2)。"
+              },
+              {
+                "kind": "sharpness",
+                "evidence": "每个 t>0 反构 a，借第(2)问证明其可行，遂可取 t→0^+。",
+                "after": "逼近 2 且永远小于 2，所以 λ=2 可取。"
+              }
+            ]
+          }
+        ]
+      },
+      "findings": [
+        {
+          "number": 4,
+          "category": "fatal",
+          "rule": "all.solution",
+          "evidence": "P(X>12)=0.04 经对称得到 P(X<8)=0.04。题给 P(8<X<11)=0.57 于是 P(10<X<11)=0.11，但 P(10<X<12)=0.46，正态密度在均值右侧严格递减，左半段应大于 0.23。题设无可行 σ，D=0.39 只来自忽略相容性的形式推算。校准概率与选项，或改用一个一致的概率条件。"
+        },
+        {
+          "number": 4,
+          "category": "weak",
+          "rule": "all.answer_distribution",
+          "evidence": "依盲算，1–8 的答案位置为 A、B、C、D（第 4 题形式意向）、A、B、C、D。四个字母等频且无连续同字母，但形成整齐的整轮重复，第 8 题可借这一线索猜选。修复第 4 题相容性时避开 D，必要时再调一两题的选项顺序，兼顾字母分布。"
+        },
+        {
+          "number": 7,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "evidence": "第 1 页 125 dpi 渲染中，AB=3 与 B 附近边线、AC=4 与 C 附近边线重叠，AA₁=6 又挨着 A₁A 虚线。题干给全数据，仍应外移尺寸注记或移除图中重复尺寸。"
+        },
+        {
+          "number": 14,
+          "category": "depth",
+          "rule": "all.difficulty_probe",
+          "evidence": "固定 8 位时只需按唯一回零分三个短块，先进生约 3–5.5 分钟；首返结构熟悉后接近常规计数，作末填显著短于 2026 第 14 题关于任意起点九项等比与 3n 前缀和的论证。保留作中档填空可行，作为难度把关时证据偏弱。"
+        },
+        {
+          "number": 16,
+          "category": "graphic",
+          "rule": "all.graphic",
+          "evidence": "第 2 页折叠图的 AB=4 注记与 A 附近线段挤在一起，BC=4 靠近 B。第(2)问另起第 3 页，作答时需要回看图。边长全由题干给出，属于版面可改进项。"
+        }
+      ]
+    },
+    {
+      "role": "visual",
+      "identity": "Codex isolated print reader acid-2027",
+      "pdf_sha256": "6e45b2967ca565c8b9400a0dfba44174232702a52ffd462b844ddd3692620197",
+      "items": [
+        {
+          "number": 1,
+          "reasoning": "第1页。复数条件、共轭横线和四个分式清楚。乘以2−i得z=(−1−7i)/5，故z+2z̄=(−3+7i)/5，选A。"
+        },
+        {
+          "number": 2,
+          "reasoning": "第1页。空集、子集符号和区间端点清楚。A=(−1,5)，B非空要求a≥−1，B含端点且B⊆A又要求a>−1及2a+1<5，得(−1,2)，选B。"
+        },
+        {
+          "number": 3,
+          "reasoning": "第1页。向量粗体、模及根号清楚。由模平方得a·b=3，数量投影为(2a·b−|a|²)/|a|=1，选C。"
+        },
+        {
+          "number": 4,
+          "reasoning": "第1页。三个数值和正态分布记号印刷清楚。对称性给出P(8<X<10)=0.46，于是P(10<X<11)=0.11，形式上P(X<9)=0.39。但σ>0时正态密度在均值右侧严格递减，相邻等长的(11,12)区间概率应小于0.11，题设却要求0.35。因而不存在满足题设的正态分布。"
+        },
+        {
+          "number": 5,
+          "reasoning": "第1页。题干及选项内的角度分式、负号和根号清楚。由平方得sin2α=−4/5，第二象限内cosα−sinα为负，求得cos2α=−3/5，结果为−7√2/10，选A。"
+        },
+        {
+          "number": 6,
+          "reasoning": "第1页。抛物线及绝对值记号清楚。焦点(1,0)，准线x=−1。将y=k(x−1)代入抛物线，得两交点横坐标之和2+4/k²，用焦点至端点的距离等于各自准线距离得到|MN|=4+4/k²，故|k|=1，选B。k=0时没有两个交点。"
+        },
+        {
+          "number": 7,
+          "reasoning": "第1页。图中三处尺寸字样和棱线相交，题干完整重复AB=3、AC=4、AA₁=6。M、N为中点故MN∥BC，截面为两底5和5/2的梯形，梯形斜高√(6²+(6/5)²)=6√26/5，面积为9√26/2，选C。"
+        },
+        {
+          "number": 8,
+          "reasoning": "第1页。函数复合括号及四组选项端点清楚。令t=f(x)−1，内层逆像在−3<t<1内有三个，在t=−3或1时各有两个，外部各有一个。外层f(t)=m的两个临界值为−2、2。m=−18、−2、2时逆像总数依次为2、5、4，−2<m<2时为7，m<−18或m>2时为1。仅−18<m<−2时，外层唯一根落在(−3,−2)，总数为3，选D。"
+        },
+        {
+          "number": 9,
+          "reasoning": "第2页。选项C、D的分式分别折至下一行左侧，仍处于各自一栏。甲盒两红概率3/10，总两红概率3/20，恰一红时选中甲盒的条件概率为(3/5)/(3/5+2/5)=3/5，首红时次红概率(3/20)/(2/5)=3/8，选AC。"
+        },
+        {
+          "number": 10,
+          "reasoning": "第2页。周期、坐标和区间内的π分式可辨。两个不同频率的谐波共同最小正周期为π，平移至π/2后函数为奇函数；x=5π/12时g(x)<0。导数以c=cos2x表示为8c²+2c−4，两根均严格落在(−1,1)，对应两次导数变号，选ABD。"
+        },
+        {
+          "number": 11,
+          "reasoning": "第2页。递推上下标和奇偶项记号清楚。a₁=a₂=1，排除A，且S₂=2排除C。设bₙ=aₙ+(−1)ⁿ/3，则bₙ₊₁=2bₙ且bₙ=2ⁿ/3，因而aₙ₊₂−aₙ=2ⁿ，选BD。"
+        },
+        {
+          "number": 12,
+          "reasoning": "第2页。两括号的幂、x²和填空横线清楚。所求系数为10×8−2×5×16+32=−48。"
+        },
+        {
+          "number": 13,
+          "reasoning": "第2页。分母、约束和横线清楚。由于3+x−y≥3−2√2>0，设比值为t，可将条件改写为(1−t)x+(2+t)y=3t。直线与圆相交当且仅当9t²≤4((1−t)²+(2+t)²)，即−2≤t≤10，最大值10。"
+        },
+        {
+          "number": 14,
+          "reasoning": "第2页。题干折两行，‘前7个’和‘恰有一个’均可定位，横线可写单个整数。甲、乙分别记上、下步，条件等价于不降到零线下且在结尾前恰一次回零。拆成两个不可再分的回零段，半长分配(1,3)、(2,2)、(3,1)，分别有2、1、2种，共5种。"
+        },
+        {
+          "number": 15,
+          "reasoning": "第2页。两问完整，相邻题接续且无专门大题作答区。化和为积后cos(B−C)=cos A，得|B−C|=A，故B或C为直角。b<c给出C为直角。令s=a+b，c=24−s≥s/√2，故s≤24/(1+1/√2)，面积ab/2≤s²/8，等号可取于a=b，最大值144(3−2√2)。"
+        },
+        {
+          "number": 16,
+          "reasoning": "第2页为题干、折叠图和第(1)问，第3页页首接第(2)问。图中AB=4和数条实虚线相交。取O为原点，AC为x轴，OB、OD分别为y、z轴，则A=(−2√2,0,0)、C=(2√2,0,0)、B=(0,2√2,0)、D=(0,0,2√2)，可得AC垂直BD、|BD|=4。设s=AX/AB、t=CY/CD，则|XY|²=8((s+t−2)²+s²+t²)，在闭方形内唯一最小点s=t=2/3，最小距离4√6/3。"
+        },
+        {
+          "number": 17,
+          "reasoning": "第3页。四格数据和统计量分母各因子均完整可读。设甲、乙达标数为u、v，等行和下χ²=80(u−v)²/((u+v)(80−u−v))。初始2000/391≈5.115≥3.841。只更正一次时差至少9，最有利的两个总数45和47也给χ²>3.841；两次时须将差减至8，(u,v)=(26,18)、(27,19)、(28,20)的χ²均低于3.841。"
+        },
+        {
+          "number": 18,
+          "reasoning": "第3页。双曲线右支、坐标轴、两渐近线、PQ和四点均能定位，P字样与曲线相切。设t=y_Q/(x_Q+2)∈(0,1)，则直线为x=2+ty，M=(2/(1−t),2/(1−t))、N=(2/(1+t),−2/(1+t))，Q=(2(1+t²)/(1−t²),4t/(1−t²))，两线段中点同为(2/(1−t²),2t/(1−t²))。S=4/(1−t²)，S=9时Q=(7,3√5)。|MN|²=2S²−4S，且S>4，故|MN|∈(4,+∞)。"
+        },
+        {
+          "number": 19,
+          "reasoning": "第3页。定义域、a的分界值、三问和末行公式完整。由eᵗ−1−t=∫₀ᵗ(t−u)eᵘdu或两次导数比较得第(1)问严格双边界。H′ₐ符号由x(2a−1+a²x)给定：a=0严格递减且无正根，a≥1/2严格递增且无正根，0<a<1/2时先减后增且趋于正无穷，有一个正根。正根处令t=ln(1+xₐ)，则a=1/t−1/(eᵗ−1)，并有1/a−t=t²/(eᵗ−1−t)<2。令t趋于0⁺，上式趋于2；这些a必在(0,1/2)，由第(2)问的根数可知。严格原式对全部a成立恰当且仅当λ≥2。"
+        }
+      ],
+      "pages": [
+        {
+          "number": 1,
+          "note": "A4灰度整页。标题、150分、120分钟、答题卡提示、单选说明和第1–8题完整，选项四栏整齐，页脚为第1页共3页。第7题图的AB=3、AC=4、AA₁=6均与图线相交，题干印有同一组数据。"
+        },
+        {
+          "number": 2,
+          "note": "A4灰度整页。第9–11题多选、第12–14题填空、第15题解答和第16题第(1)问完整，页脚为第2页共3页。多选部分分总则和第9题两处分式折行可辨，第12–14题有短答横线。第16题折叠图的AB=4字样与数条棱线相交，BC=4紧贴B点。第16题第(2)问续下页。"
+        },
+        {
+          "number": 3,
+          "note": "A4灰度整页。第16题第(2)问在页首续接，第17–19题各问和最后一个不等式完整，页脚为第3页共3页。第18题P(2,0)的P与下方曲线近乎相贴，标注仍可辨。末题以下有约90毫米通栏空白，未划给具体题号。"
+        }
+      ],
+      "dimensions": {
+        "correctness": "已独立核对19题。第4题两条正态概率条件互斥。其余题的图文信息足以按所印条件求解，逐题结果与边界见items。",
+        "curriculum": "学生卷可见超越函数、常规导数、空间截面和折叠、列联表与临界值、抛物线与双曲线。第2题使用子集及空集符号，学生卷没有可核验的补集或对立事件写法。地区与年份政策、答案文件中等价解认可超出本次两件盲审输入。",
+        "marking": "卷面40+18+15+77=150分，解答小题13+15+15+17+17=77分。多选总则原意为全对6分、部分对得部分分、错选0分。卷面要求在答题卡作答；三道填空另印横线。评分细目和单选按键、等价通法须查配套评分文件。",
+        "depth": "第8题须区分两层逆像和临界等号，第14题须由恰一次中间回零辨认两个不可分段，第19题从指数双边界递进至参数正根数和开端点处的锐界。第18题三问递进至消参和范围。第14题的排列规模小，熟悉回零分解者可较快完成。",
+        "balance": "考查代数、数列、三角、空间几何、概率统计、圆锥曲线、函数与导数。若仅按对称性给第4题形式选D，单选字母为ABCDABCD，各出现两次，无连续相同；第4题的条件冲突使这组形式分布无法视为有效答案分布。",
+        "language": "题干、关键数据和选项由三页可定位。第7、16题重叠的图中尺寸由正文清晰给出。第18题两个渐近线方程和P坐标见正文，图中点位相符。未发现题干直接给出所问结论。",
+        "visual": "以140 dpi灰度逐页查看三页，再以300 dpi检查全部三幅图。三页为A4且页码连贯。第7、16题图内文字与线条碰撞，第18题P标签擦到曲线。第16题跨页，全部内容可见。",
+        "time": "编审估时，按单选、多选、填空、解答顺序，中等生约26、18、14、72分钟，共130分钟；尖子生约20、12、10、54分钟，共96分钟。第8、14、19题的区分点见depth。估时按第4题形式计算可得到选项处理，追查条件冲突会占用额外时间。"
+      },
+      "findings": [
+        {
+          "category": "fatal",
+          "severity": "fatal",
+          "rule": "all.solution",
+          "rule_id": "all.solution",
+          "page": 1,
+          "number": 4,
+          "evidence": "P(X>12)=0.04经对称性给出P(8<X<10)=P(10<X<12)=0.46。由P(8<X<11)=0.57得到P(10<X<11)=0.11，因此P(11<X<12)=0.35，和正态密度在均值右侧严格递减矛盾。D是形式推导值，题设本身无解。"
+        },
+        {
+          "category": "graphic",
+          "severity": "major",
+          "rule": "all.graphic",
+          "rule_id": "all.graphic",
+          "page": 1,
+          "number": 7,
+          "evidence": "300 dpi灰度中，AB=3的字母和等号落在B顶点与BC下缘附近并被线划穿；AC=4穿过底棱并紧接C顶点；AA₁=6落在虚线BM与AA₁之间且字样接触虚线。正文完整给出三组数值。"
+        },
+        {
+          "category": "graphic",
+          "severity": "major",
+          "rule": "all.graphic",
+          "rule_id": "all.graphic",
+          "page": 2,
+          "number": 16,
+          "evidence": "300 dpi灰度中，AB=4覆盖A附近的实线AC及虚线AB，末尾数字4被OD竖虚线穿过；BC=4紧接B顶点。正文的边长4可辨。"
+        },
+        {
+          "category": "graphic",
+          "severity": "minor",
+          "rule": "all.graphic",
+          "rule_id": "all.graphic",
+          "page": 3,
+          "number": 18,
+          "evidence": "300 dpi灰度中，P(2,0)字样的P左下方紧贴双曲线右支的下半段。坐标文字仍可辨且在正文重复。"
+        }
+      ],
+      "conditional_notes": [
+        {
+          "category": "layout",
+          "severity": "conditional",
+          "rule": "all.publication_layout",
+          "rule_id": "all.publication_layout",
+          "page": 1,
+          "number": null,
+          "evidence": "第1页写‘本试卷共19题。请在答题卡相应位置作答。’本件学生PDF只有三页，填空题有短横线，第15–19题无按题号分配的作答区。若这件PDF用于独立练习, 则该指令与作答区不满足练习版要求；若作为另配答题卡的题本，须将配套件纳入核验。"
+        }
+      ]
+    }
+  ]
+}

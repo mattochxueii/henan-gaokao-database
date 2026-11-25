@@ -338,6 +338,9 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         wordWrap="CJK",
         autoLeading="max" if compact else "",
     )
+    if solutions:
+        body.allowOrphans=0
+        body.allowWidows=0
     heading = ParagraphStyle(
         "student-heading",
         parent=body,
@@ -447,6 +450,8 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     md = ["# " + paper["title"], ""]
     if compact and not solutions:
         md += [f'满分{paper["total_points"]}分，考试时间{paper["minutes"]}分钟。', ""]
+        if mode=="exam":
+            md += [f"本试卷共{len(paper['questions'])}题。请在答题卡相应位置作答。",""]
     for index, q in enumerate(paper["questions"]):
         require(
             not any(k in q for k in ("math_spec", "tasks", "design", "solver_record")),
@@ -546,7 +551,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             parts = [para(part["label"] + " " + part["text"],
                           response_line if practice and "___" in part["text"] else body)
                      for part in q["parts"]]
-            keep_response = height > 0 or (physics_layout and not choice and bool(parts))
+            keep_response = height > 0 or ((physics_layout or math_compact) and not choice and bool(parts))
             if compact and not choice and not keep_response:
                 # The figure and first subquestion stay with their stem.
                 story.append(KeepTogether(block + parts[:1]))

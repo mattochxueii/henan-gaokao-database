@@ -347,10 +347,19 @@ def export_docx(markdown, output):
     keep_with_options=set()
     source=Path(markdown)
     packet=source.parent/"blind-packet.json"
-    paper=read_json(packet)["paper"] if packet.is_file() else {}
-    science=paper.get("subject") in STANDARD_LAYOUT
+    math_packet=source.parent/"student-text.json"
+    paper=(read_json(packet)["paper"] if packet.is_file() else
+           read_json(math_packet) if math_packet.is_file() else {})
+    formula_paper=paper.get("subject") in STANDARD_LAYOUT or paper.get("subject")=="math"
+    math_student=paper.get("subject")=="math" and source.name=="paper.md"
+    if paper.get("subject")=="math":
+        for style_name in ("Title","Heading 1","Heading 2"):
+            props=doc.styles[style_name].element.get_or_add_pPr()
+            for border in props.findall(qn("w:pBdr")):
+                props.remove(border)
+            doc.styles[style_name].paragraph_format.space_before=Pt(7)
     markers=r"</?(?:u|em|strong|sub|sup|dot|wave)>"
-    if science:
+    if formula_paper:
         from PIL import Image as PillowImage
         from mathgen.student_pdf import answer_height, formula_image, normalise_tex
 
@@ -359,7 +368,7 @@ def export_docx(markdown, output):
     if source.name=="paper.md" and paper:
         if paper.get("layout_mode")=="practice":
             for q in paper["questions"]:
-                if science:
+                if formula_paper:
                     if q.get("parts") and (height := answer_height(q)):
                         last=q["parts"][-1]
                         prompts[last["label"]+" "+last["text"].splitlines()[-1]]=round(height/.67)
@@ -379,6 +388,7 @@ def export_docx(markdown, output):
     lines = [line for line in source.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
     short_example = False
     table_until=-1
+    in_question=False
     for index, line in enumerate(lines):
         if index<table_until:
             continue
@@ -386,7 +396,10 @@ def export_docx(markdown, output):
         heading=sep and lead in ("#","##","###")
         content=text if heading else line
         following = lines[index+1] if index+1<len(lines) else ""
-        if science and content.startswith("| ") and re.fullmatch(r"\|(?:\s*---\s*\|)+",following):
+        if heading:
+            in_question=math_student and bool(re.match(r"^\d+[.．]",content))
+        keep_math_group=in_question and following and not following.startswith("#")
+        if formula_paper and content.startswith("| ") and re.fullmatch(r"\|(?:\s*---\s*\|)+",following):
             def cells(text):
                 return [part.strip().replace(r"\|","|") for part in re.split(r"(?<!\\)\|",text)[1:-1]]
 
@@ -416,13 +429,15 @@ def export_docx(markdown, output):
                         border.append(bottom)
                         cell._tc.get_or_add_tcPr().append(border)
             continue
-        if science and (image := re.fullmatch(r"!\[题图\]\(([^)]+)\)",content)):
+        if formula_paper and (image := re.fullmatch(r"!\[题图\]\(([^)]+)\)",content)):
             path=relative_path(source.parent,image[1])
             with PillowImage.open(path) as picture:
                 w,h=picture.size
             para=doc.add_paragraph()
             para.alignment=WD_ALIGN_PARAGRAPH.CENTER
             para.add_run().add_picture(str(path),width=Cm(min(16.4,4.9*w/h)))
+            if keep_math_group:
+                para.paragraph_format.keep_with_next=True
             continue
         if heading:
             short_example = (content=="范文" and source.name=="solutions.md"
@@ -436,7 +451,7 @@ def export_docx(markdown, output):
                 tag=fragment.strip("</>")
                 if fragment.startswith("</"):active.discard(tag)
                 else:active.add(tag)
-            elif science and fragment.startswith(r"\(") and fragment.endswith(r"\)"):
+            elif formula_paper and fragment.startswith(r"\(") and fragment.endswith(r"\)"):
                 png=BytesIO()
                 formula=normalise_tex(fragment[2:-2].replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
                 formula_image(formula,png)
@@ -459,10 +474,10 @@ def export_docx(markdown, output):
         line_count=prompts.get(content,0)
         option_chain = re.match(r"^[A-G](?:\. |．)",content) and re.match(r"^[A-G](?:\. |．)",following)
         passage_label = re.fullmatch(r"材料[一二三][:：]?|听第\s*\d+\s*段材料.*",content)
-        if line_count or content in keep_with_options or option_chain or passage_label or (
+        if line_count or keep_math_group or content in keep_with_options or option_chain or passage_label or (
                 short_example and following and not following.startswith("#")):
             para.paragraph_format.keep_with_next=True
-        if science and following.startswith("![题图]("):
+        if formula_paper and following.startswith("![题图]("):
             para.paragraph_format.keep_with_next=True
         if short_example:
             para.paragraph_format.keep_together=True
@@ -470,7 +485,7 @@ def export_docx(markdown, output):
             p=doc.add_paragraph()
             p.paragraph_format.space_after=Pt(0)
             p.paragraph_format.line_spacing=Pt(21)
-            p.paragraph_format.keep_with_next=not science and idx+1 < line_count
+            p.paragraph_format.keep_with_next=not formula_paper and idx+1 < line_count
             border=OxmlElement("w:pBdr")
             bottom=OxmlElement("w:bottom")
             bottom.set(qn("w:val"),"single")

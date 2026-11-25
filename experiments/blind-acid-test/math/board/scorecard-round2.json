@@ -1,0 +1,122 @@
+{
+  "protocol": "three-readers-v2",
+  "round": 2,
+  "subject": "math",
+  "ids": [
+    "orig:math:hn27-m150-meridian:q01",
+    "orig:math:hn27-m150-meridian:q02",
+    "orig:math:hn27-m150-meridian:q03",
+    "orig:math:hn27-m150-meridian:q04",
+    "orig:math:hn27-m150-meridian:q05",
+    "orig:math:hn27-m150-meridian:q06",
+    "orig:math:hn27-m150-meridian:q07",
+    "orig:math:hn27-m150-meridian:q08",
+    "orig:math:hn27-m150-meridian:q09",
+    "orig:math:hn27-m150-meridian:q10",
+    "orig:math:hn27-m150-meridian:q11",
+    "orig:math:hn27-m150-meridian:q12",
+    "orig:math:hn27-m150-meridian:q13",
+    "orig:math:hn27-m150-meridian:q14",
+    "orig:math:hn27-m150-meridian:q15",
+    "orig:math:hn27-m150-meridian:q16",
+    "orig:math:hn27-m150-meridian:q17",
+    "orig:math:hn27-m150-meridian:q18",
+    "orig:math:hn27-m150-meridian:q19"
+  ],
+  "pdf_sha256": "48f14bc61743e0af1801bfa167bbc78a85d3e89f229cd1df44c6394759559ce5",
+  "item_versions": {
+    "1": "82edbca5f4b97ba5976f6dc3bfd5644a570df7e1f78424e675211619a6883e7a",
+    "2": "a524eee7830785227cb2e169e5c72e89079d5263b2848c851f8060fb0975f9a3",
+    "3": "a8a07f01c016fa2118099177a32b695fbeea84fa2a0c5379fcfa3bdf8cf2434c",
+    "4": "e8d8e9f171c74d1c485dd76ba502585398b870d06aeeeb891b61297afaf285ee",
+    "5": "bab8f2777833f0e2f07564516a151d67dbb1f3d9f70c8dc789b42fe3b0707395",
+    "6": "b4f3c0791f79582e521bc198009fb28801f54ee08b1deef77bc619e8c6d929de",
+    "7": "0303e5528ec9749a0ad1a8e79515e2b14f9eed6afc130f9dfe064ed6aa29a067",
+    "8": "729ea985271f1e903de3cfc7371bbff529876ff40c8e376d1f39330a92ffb89f",
+    "9": "c8ea7574644a440f7398a8473808ae9416c429f8c8107f7b6664ae4d1e4bab2f",
+    "10": "bd921e8fad57fba17d484ca24761fc9a375310fa309b1fa5a80153cbcac47251",
+    "11": "971b937a51296675bbb49a7548807d00702a2f8728d5fea90486b58ef4db6491",
+    "12": "c9269404983566f20d4d96c984f49c8881df184f1c4801916f5158fdb304c4a7",
+    "13": "0826c5a20199c7c007376b9a4753e46c950471511886273ba7c5d2bff7797601",
+    "14": "aeddf2ff0768ec61937ae4a660ae04b665855ca0269cab9d552711c4dc32d2ce",
+    "15": "5b0f2e10987f00f2bb82bea12de8e3972c924aa158f4a6c08ef764b7e6bd2e63",
+    "16": "25663b3ad46dede38e481876c93e9b81fbd04ee78301dbfed02195cb6ed38c8f",
+    "17": "91251fb0455dde6d34c0863186aa56998bd8e9d2150460a354e3a25ced4d1bef",
+    "18": "47f1d78f47ae20d967b47a3c67d16c516b632c10337ae83f9a7ee3988e352eb7",
+    "19": "c98e9d0e14e3b3a9eef753548ce5a301a970a1cb74ce57555e885070922bfb77"
+  },
+  "fatal_count": 0,
+  "final_score": 90,
+  "status": "LOCAL_QA_PASSED",
+  "deductions": [
+    {
+      "number": 7,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第1页在600 dpi局部中，底面顶点A的字形横跨虚线AB的延长方向并盖住其中一笔。新摆放的三个长度标注均已独立可读，顶点身份仍可辨。",
+      "reader": "solver"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "第3页在600 dpi局部中，顶点O字形的上沿接触AC实线，出现连笔效果。新摆放的AB=4和BC=4标注均不与线相交，O仍能识别。",
+      "reader": "solver"
+    },
+    {
+      "number": 7,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "600 dpi灰度中，后侧底面A点字母的左斜笔与BA虚线相交，形成连笔。A点仍可由三条相接虚线定位。AB=3、AC=4、AA₁=6字样均已移到图线外。",
+      "reader": "visual"
+    },
+    {
+      "number": 16,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "600 dpi灰度中，中点O字母的上弧与实线AC下缘连在一起。O的黑色点及字母可辨。AB=4及BC=4字样均已移到线外。",
+      "reader": "visual"
+    },
+    {
+      "number": 18,
+      "category": "graphic",
+      "rule": "all.graphic",
+      "points": 2,
+      "evidence": "600 dpi灰度中，N字母的右上竖笔与渐近线y=−x的一段虚线连成一笔，仍能识别N。P(2,0)字样和双曲线保持间距。",
+      "reader": "visual"
+    }
+  ],
+  "charged_points": 10,
+  "rewrite": [
+    7,
+    16,
+    18
+  ],
+  "locked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    19
+  ],
+  "cycle_round": 2,
+  "paper_version": "ed36275ca683531034de32fe836b09d409de49bfa3e83b28a26d68c2d2cd433b",
+  "release_rules": "henan-standard-release-v1",
+  "prior_sha256": "3e9292519b2ef8dca60c7493cbd405e1768ca42d9c112c27812c37999b8a8f74",
+  "inputs_sha256": "cfe60835c8856106e9e2e246312d3dbaa00d2871be609a0cafeb5b6d52c18d3f"
+}

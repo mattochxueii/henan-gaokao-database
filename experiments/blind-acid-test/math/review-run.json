@@ -1,0 +1,73 @@
+{
+  "review_protocol": "three-readers-v2",
+  "provenance": "同一卷ID由宿主原创，三位隔离AI读者各自依据指定版本学生PDF审阅，教研可读去答案真题。",
+  "preflight": [
+    {
+      "gate": "数学模块集中度说明",
+      "status": "blocked",
+      "error": "高分占比或跨三题型重复的模块必须说明推理差异",
+      "fix": "补明三个三角题的不同任务。"
+    },
+    {
+      "gate": "题面版本绑定",
+      "status": "blocked",
+      "error": "写作文本已变化，必须回到题面核查",
+      "fix": "模拟生成与盲审渲染统一绑定 math_technique。"
+    },
+    {
+      "gate": "math_progression",
+      "status": "blocked",
+      "evidence": "audit-history/third-subquestion-original-gate.json",
+      "fix": "从结构化子问读取卷面序号，仍需要连续三问。"
+    },
+    {
+      "gate": "审稿回执字段",
+      "status": "blocked",
+      "error": "未知扣分维度",
+      "fix": "隔离教研员按原意见调整字段类别，印刷员把练习版条件意见放入条件备注。原始回执留档。"
+    },
+    {
+      "gate": "第4题程序验算",
+      "status": "blocked",
+      "evidence": "audit-history/symbolic-probability-spec-gate.json",
+      "fix": "参数化概率选项改用符号等式判定。"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "status": "returned",
+      "changed_after": [
+        4,
+        7,
+        14,
+        16,
+        18
+      ],
+      "fix": "改第4题的矛盾概率和作答键循环，第14题加入唯一峰位限制与位置和。重排图件并将第16题保持在同页。"
+    },
+    {
+      "round": 2,
+      "status": "LOCAL_QA_PASSED",
+      "changed_after": [
+        7,
+        16,
+        18
+      ],
+      "fix": "继续移开600 dpi下贴边的三个点标。"
+    },
+    {
+      "round": 3,
+      "status": "LOCAL_QA_PASSED",
+      "fatal_count": 0,
+      "deductions": 0,
+      "editorial_minutes": {
+        "advanced": 100,
+        "middle": 147
+      }
+    }
+  ],
+  "paper_pages": 3,
+  "solutions_pages": 4,
+  "practice_pages": 6
+}
