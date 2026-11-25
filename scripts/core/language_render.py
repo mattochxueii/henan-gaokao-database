@@ -362,7 +362,7 @@ def export_docx(markdown, output):
     markers=r"</?(?:u|em|strong|sub|sup|dot|wave)>"
     if formula_paper:
         from PIL import Image as PillowImage
-        from mathgen.student_pdf import answer_height, formula_image, normalise_tex
+        from mathgen.student_pdf import FORMULA_DPI, answer_height, formula_image, normalise_tex
 
         markers+=r"|\\\(.*?\\\)"
     inline_markup=re.compile(f"({markers})")
@@ -464,7 +464,7 @@ def export_docx(markdown, output):
                 with PillowImage.open(png) as picture:
                     width=picture.width
                 png.seek(0)
-                para.add_run().add_picture(png,width=Pt(min(width*72/240,452)))
+                para.add_run().add_picture(png,width=Pt(min(width*72/FORMULA_DPI,452)))
             else:
                 run=para.add_run(fragment)
                 run.underline="u" in active

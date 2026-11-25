@@ -97,7 +97,7 @@ def latex(source):
             if name == "abs":
                 return r"\left|" + args[0] + r"\right|", 100
             if name == "binomial":
-                return r"\binom{" + args[0] + "}{" + args[1] + "}", 100
+                return r"\mathrm{C}_{" + args[0] + "}^{" + args[1] + "}", 100
             if name == "exp":
                 return "e^{" + args[0] + "}", 100
             require(name in ("sin", "cos", "tan", "log"), "公式函数不受支持")

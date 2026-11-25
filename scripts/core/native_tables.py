@@ -18,11 +18,13 @@ def normalize_table(table):
     return {"headers":headers,"rows":rows,**({"caption":caption} if caption else {})}
 
 
-def pdf_table(table, paragraph):
+def pdf_table(table, paragraph, available_width):
     from reportlab.platypus import Table
 
     rows=[[paragraph(cell) for cell in row] for row in [table["headers"],*table["rows"]]]
-    return Table(rows,repeatRows=1,hAlign="CENTER",style=[
+    # A fixed total width gives short numeric cells a balanced, legible table.
+    width = available_width*.76
+    return Table(rows,colWidths=[width/len(rows[0])]*len(rows[0]),repeatRows=1,hAlign="CENTER",spaceAfter=7,style=[
         ("LINEABOVE",(0,0),(-1,0),.85,"#222222"),
         ("LINEBELOW",(0,0),(-1,0),.45,"#222222"),
         ("LINEBELOW",(0,-1),(-1,-1),.85,"#222222"),

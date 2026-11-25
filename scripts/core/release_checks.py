@@ -1,6 +1,8 @@
 """Deterministic preflight checks for a standard paper and its actual artifacts."""
 import re
 from collections import Counter
+from fractions import Fraction
+from math import pi, sqrt
 from pathlib import Path
 
 from gaokao import read_json, require
@@ -263,6 +265,7 @@ def math_checks(paper, rows, texts):
     if sum(bool(re.search(r"数列|递推|等差|等比",t)) for t in texts)==0:
         yield 14,"math_sequence_coverage","缺数列考查"
     yield from math_surface_findings(rows,texts)
+    yield from math_overlap_findings(rows,texts)
     if not any(re.search(r"指数函数|对数函数|指数式|对数式|抽象函数|\\ln\b|\\log\b|e\^|\\mathrm\{e\}\^",t)
                or (re.search(r"函数",t) and re.search(r"奇函数|偶函数|周期函数|奇偶性|对称中心",t))
                for t in texts[:14]):
@@ -285,6 +288,129 @@ def math_checks(paper, rows, texts):
                 yield n,"math_technique_overlap",f"核心方法{key}与第{seen[key]}题相同"
             else:
                 seen[key]=n
+
+
+def math_notation_findings(number, text):
+    patterns = {
+        "math_script_notation": (r"!=|>=|<=|(?<!\.)\.\.(?!\.)", "改用规范的数学关系符或省略号"),
+        "math_combination_notation": (r"\\[dt]?binom\b", r"组合数用 \mathrm{C}_n^m"),
+        "math_complement_notation": (r"\\mathbb\s*(?:\{\s*C\s*\}|C)\s*_", r"补集用 \complement_U"),
+        "math_line_typo": (r"直线\s*(?:\\\(\s*|\$)?1\s*(?:\\\)|\$)?\s*(?:恒过|交于|与)", "检查直线编号 1 是否误写了字母 l"),
+        "math_dihedral_term": (r"锐\s*二面角", "两平面所成锐角用“两平面夹角”表述"),
+    }
+    for rule,(pattern,instruction) in patterns.items():
+        if match := re.search(pattern,text):
+            yield number,rule,f"{match[0]}：{instruction}"
+
+
+def math_point_warnings(rows, rendered):
+    # Only compare points explicitly named by constructions. Given vertices and
+    # mere references to a point in a rubric do not count as new constructions.
+    name = re.compile(r"(?:交|相交|垂足|取交点)(?:于|为|记作)\s*(?:\\\(\s*|\$)?([A-Z])\b")
+    rubric_point = re.compile(r"(?:交点|垂足|辅助点)\s*(?:\\\(\s*|\$)?([A-Z])\b")
+    for n,q in enumerate(rows,1):
+        if q["kind"]!="constructed_response":
+            continue
+        solution,_,rubric = rendered.get(n,"").partition("\n评分")
+        given = {x for x in name.findall(item_text(q))}
+        derived = set(name.findall(solution))-given
+        marked = (set(name.findall(rubric))|set(rubric_point.findall(rubric)))-given
+        if derived and marked and marked-derived:
+            yield n,"math_auxiliary_point",f"解析辅助交点 {sorted(derived)}，评分细则另写 {sorted(marked-derived)}，请核对"
+
+
+FILL_TOPICS = {
+    "计数与组合":r"排列组合|计数原理|二项式|展开式.{0,20}系数|放入.{0,25}方法|排成一列.{0,30}(?:方法|种)",
+    "数列求和":r"(?:数列|递推|等差|等比).{0,100}(?:前\s*.{1,12}项和|求和)",
+    "向量数量积":r"向量.{0,100}(?:数量积|\\cdot)",
+    "导数与切线":r"切线.{0,30}(?:斜率|方程)|(?:斜率|方程).{0,16}切线",
+}
+
+
+def math_overlap_findings(rows,texts):
+    templates = {}
+    fill_in = {}
+    tangents = []
+    for n,(q,t) in enumerate(zip(rows,texts,strict=True),1):
+        kind = q.get("kind")
+        if kind=="fill_in":
+            for topic,pattern in FILL_TOPICS.items():
+                if re.search(pattern,t):
+                    if topic in fill_in:
+                        yield n,"math_fill_topic_overlap",f"两道填空均考{topic}（第 {fill_in[topic]}、{n} 题）"
+                    else:
+                        fill_in[topic]=n
+        if re.search(r"切线",t) and re.search(r"导数|导函数|函数|曲线",t) \
+                and re.search(r"斜率|方程|求.{0,12}切线|写出.{0,10}切线",t):
+            tangents.append(n)
+        new = []
+        if re.search(r"三角形|\\triangle",t):
+            # Match labelled, defining triangle data. ABC alone identifies no model.
+            conditions = re.findall(r"(?<![A-Za-z])(?:[abcABC]|[A-C]{2})\s*=\s*(?:-?\d+|\\frac\{[^{}]+\}\{[^{}]+\}|\\sqrt\{[^{}]+\})",t)
+            if len(set(conditions))>=2:
+                new.append(("三角形",tuple(sorted({re.sub(r"\s+","",c) for c in conditions}))))
+        formulae = re.findall(r"\\\((.*?)\\\)|\$([^$\n]+)\$",t)
+        for left,right in formulae:
+            defined = re.match(r"[a-z]\s*\(\s*[a-z]\s*\)\s*=\s*(.+)",left or right)
+            if not defined:
+                continue
+            # Normalize whitespace, variable names, and numeric coefficients; retain exponents.
+            model = re.sub(r"\s+|\\(?:left|right)\b","",defined[1].split(r"\quad")[0])
+            if re.search(r"[\u3400-\u9fff]",model):
+                continue
+            model = re.sub(r"\\[A-Za-z]+|\^\{\d+\}|\^\d+|\d+(?:\.\d+)?|[a-z]",
+                lambda m:m[0].replace("{","").replace("}","") if m[0].startswith(("^","\\")) else
+                "" if m[0][0].isdigit() and m.end()<len(model) and model[m.end()].isalpha()
+                else "#" if m[0][0].isdigit() else "x",model)
+            if len(model)>=4:
+                new.append(("函数",model))
+        for signature in set(new):
+            previous = templates.setdefault(signature,{})
+            other = previous.get(kind!="constructed_response")
+            if other is not None:
+                yield n,"math_cross_section_model",f"第 {other}、{n} 题跨题型复用{signature[0]}核心模型"
+            previous.setdefault(kind=="constructed_response",n)
+        if kind=="single_choice":
+            opts = q.get("options",{})
+            values = [numeric_option(value) for value in opts.values()]
+            if len(values)==4 and all(value is not None for value in values) and \
+                    values not in (sorted(values),sorted(values,reverse=True)):
+                yield n,"math_numeric_order","四个纯数值选项须按升序或降序排列"
+        yield from unused_function_findings(n,q)
+    if len(tangents)>1:
+        yield tangents[-1],"math_tangent_overlap",f"同卷重复考查由函数求切线（题号 {tangents}）"
+
+
+def numeric_option(text):
+    text = re.sub(r"\\[()]|\$|\s+","",text).replace("−","-")
+    fraction = re.fullmatch(r"([+-]?)\\[dt]?frac\{([+-]?\d+)\}\{(\d+)\}",text)
+    if fraction and int(fraction[3]):
+        return Fraction(int(fraction[2])*(-1 if fraction[1]=="-" else 1),int(fraction[3]))
+    if re.fullmatch(r"[+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:/[1-9]\d*)?",text):
+        try:
+            return Fraction(text)
+        except ValueError:
+            return None
+    if radical := re.fullmatch(r"([+-]?\d*)\\sqrt\{(\d{1,12}(?:\.\d{1,8})?)\}",text):
+        return int(radical[1]+"1" if radical[1] in ("","-","+") else radical[1])*sqrt(float(radical[2]))
+    if circle := re.fullmatch(r"([+-]?\d*)(?:\\pi|π)(?:/([1-9]\d*))?",text):
+        return int(circle[1]+"1" if circle[1] in ("","-","+") else circle[1])*pi/int(circle[2] or 1)
+    return None
+
+
+def unused_function_findings(number,q):
+    stem = re.sub(r"\\[()]|\$|\s+","",q.get("stem","")).replace("′","'")
+    later = re.sub(r"\\[()]|\$|\s+",""," ".join(
+        [p["text"] for p in q.get("parts",[])]+list(q.get("options",{}).values()))).replace("′","'")
+    declarations = (
+        r"([a-z]'?\([a-z]\))(?:为|表示)(?:其|该函数的)?(?:导函数|函数)",
+        r"(?:设|记|定义)(?:函数|导函数)([a-z]'?\([a-z]\))=[^，。；;]+",
+    )
+    for match in (m for pattern in declarations for m in re.finditer(pattern,stem)):
+        symbol = match[1].split("(")[0]
+        usage = rf"(?<![A-Za-z]){re.escape(symbol)}(?:\(|(?=的|是|为|$))"
+        if not re.search(usage,stem[match.end():]+later):
+            yield number,"math_unused_function",f"已引入 {match[1]}，后续题面与选项未使用"
 
 
 def leaked_blanks(q, keys):
@@ -437,6 +563,8 @@ def findings(subject,paper,answers,*,header="",listening=None,artifacts=None):
         terms=[word for word in TERMS if word in combined]
         if terms:
             yield n,"terminology","不规范用语："+ "、".join(terms)
+        if subject=="math":
+            yield from math_notation_findings(n,combined)
     answer_titles = [line for line in artifacts.get("solutions_md","").splitlines() if line.startswith("# ")]
     if any("项目自拟评分" in title for title in answer_titles):
         yield 1,"terminology","答案标题含内部模板用语：项目自拟评分"

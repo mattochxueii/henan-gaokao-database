@@ -29,10 +29,19 @@ from gaokao import require, atomic_write, digest
 from core.editorial_rules import LAYOUT_MODES, REVISION, inline_response_only, item_text, notation_issues
 from storage import atomic_json
 from .cjk_layout import ExamParagraph, plain_markup
-from .export import chinese_font, MathParagraph, formatted_plain
+from .export import chinese_font
 
-VERSION = "student-layout-v6"
+VERSION = "student-layout-v7"
 MATH_RASTER = MathTextParser("agg")
+FORMULA_DPI = 360
+
+
+def formula_font_size(formula):
+    # Superscript fractions need a larger base so the numerator survives print reduction.
+    for group in re.finditer(r"\^\{((?:[^{}]|\{[^{}]*\})*)\}",formula):
+        if re.search(r"\\[dt]?frac\b",group[1]):
+            return 15
+    return 12
 
 
 def option_grid(options, width, compact=False):
@@ -94,6 +103,15 @@ def science_section_note(kind, group, partial_credit=None, *, exam_policy=None, 
     return text
 
 
+class QuestionStart(Flowable):
+    def __init__(self, number):
+        super().__init__()
+        self.number = number
+
+    def draw(self):
+        self.canv.question_starts.append(self.number)
+
+
 class BlankCalculationSpace(Flowable):
     """An empty writable area with faint corners, measured on the printed page."""
     def __init__(self, number, height_cm, placements, *, continuation=False):
@@ -112,19 +130,21 @@ class BlankCalculationSpace(Flowable):
         return []
 
     def draw(self):
+        from core.exam_pages import calculation_corners
+
         canvas = self.canv
-        canvas.saveState()
-        canvas.setStrokeGray(.84)
-        canvas.setLineWidth(.35)
-        for x, direction in ((0,1),(self.width,-1)):
-            for y, leg in ((4,1),(self.height-4,-1)):
-                canvas.lines([(x,y,x+9*direction,y),(x,y,x,y+6*leg)])
-        canvas.restoreState()
-        self.record()
+        placement = self.record()
+        if hasattr(canvas,"calculation_areas"):
+            left,bottom = canvas.absolutePosition(0,4)
+            canvas.calculation_areas.append((left,bottom,self.width,bottom+self.writable,placement))
+        else:
+            calculation_corners(canvas,0,4,self.width,self.height-4)
 
     def record(self):
-        self.placements.append({"number":self.number,"page":self.canv.getPageNumber(),
-                                "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
+        placement = {"number":self.number,"page":self.canv.getPageNumber(),
+                     "height_cm":round(self.writable/cm,2),"continuation":self.continuation}
+        self.placements.append(placement)
+        return placement
 
 
 class LinedWritingSpace(BlankCalculationSpace):
@@ -172,7 +192,7 @@ def formula_image(formula, filename):
                    lambda m:r"\mathrm{"+m[1]+"}" if m[1] else m[0],formula)
     with rc_context({"mathtext.fontset": "stix"}):
         parsed = MATH_RASTER.parse(
-            "$" + formula + "$", dpi=240, prop=FontProperties(size=12)
+            "$" + formula + "$", dpi=FORMULA_DPI, prop=FontProperties(size=formula_font_size(formula))
         )
     ink = PILImage.fromarray(np.asarray(parsed.image))
     ImageOps.invert(ink).save(filename, format="PNG")
@@ -185,7 +205,6 @@ def normalise_tex(text):
         "数学字体不支持公式内中文，须将中文说明移到正文，不能用缺字占位符发布",
     )
     text = re.sub(r"\\complement(?![A-Za-z])",lambda _:r"\mathrm{∁}",text)
-    text = re.sub(r"\\triangle(?![A-Za-z])",lambda _:r"\mathrm{△}",text)
     text = re.sub(
         r"\\(le|ge)(?![A-Za-z])", lambda m: r"\leq" if m[1] == "le" else r"\geq", text
     )
@@ -238,10 +257,10 @@ def normalise_tex(text):
     return "".join(out)
 
 
-def draw_figure(data, image):
+def draw_figure(data, image=None):
     fig = Figure(figsize=(4.8, 2.65), dpi=250)
     if data["type"] == "wireframe":
-        from .wireframe import hidden_edges
+        from .wireframe import check_projection, hidden_edges
 
         ax = fig.add_subplot(111, projection="3d")
         angles=data.get("view_angles",(20,-55))
@@ -258,6 +277,8 @@ def draw_figure(data, image):
             if frozenset((a,b)) in hidden:
                 line.set_dashes((5, 4))
         ax.set_axis_off()
+        ax.apply_aspect()
+        check_projection(data["vertices"],data["edges"],ax.get_proj(),ax.transData)
         for name, point in data["vertices"].items():
             px,py,_ = proj3d.proj_transform(*point, ax.get_proj())
             if name in data.get("marked_points", ()):
@@ -301,7 +322,8 @@ def draw_figure(data, image):
                         xytext=mark.get("offset",[3,3]),textcoords="offset points",fontsize=11)
             if mark.get("dot"):
                 ax.plot(*mark["at"],"ko",markersize=2.8)
-    fig.savefig(image,bbox_inches="tight",pad_inches=.13,facecolor="white")
+    if image is not None:
+        fig.savefig(image,bbox_inches="tight",pad_inches=.13,facecolor="white")
 
 
 
@@ -344,10 +366,10 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         "student-body",
         fontName=font,
         fontSize=10.5 if science_key else 10.8 if dense_chemistry else 11 if compact else 11.5,
-        leading=14.5 if science_key else 15 if dense_chemistry else 16 if compact else 23,
+        leading=20 if solutions else 15 if dense_chemistry else 16,
         spaceAfter=3 if science_key else 3.5 if compact else 9,
         wordWrap="CJK",
-        autoLeading="max" if compact else "",
+        autoLeading="max",
     )
     if solutions:
         body.allowOrphans=0
@@ -381,7 +403,8 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     def para(text, style=body):
         chunks = []
         at = 0
-        plain = plain_markup if compact else formatted_plain
+        tallest = 0
+        plain = plain_markup
         for m in re.finditer(r"\\\((.*?)\\\)", text, re.S):
             chunks.append(plain(text[at : m.start()]))
             formula = normalise_tex(m.group(1).replace(r"\dfrac",r"\frac").replace(r"\tfrac",r"\frac"))
@@ -413,15 +436,20 @@ def render(paper, path, solutions=False, *, layout_mode=None):
                 formula_image(formula, filename)
             with PILImage.open(filename) as im:
                 w, h = im.size
-            scale = 72 / 240
+            scale = 72 / FORMULA_DPI
+            tallest = max(tallest,h*scale)
             require(w * scale <= 480, "公式太长，应在中文写作层拆分后重新审查")
             chunks.append(
                 f'<img src="{escape(filename.as_posix())}" width="{w * scale:.2f}" height="{h * scale:.2f}" valign="middle"/>'
             )
             at = m.end()
         chunks.append(plain(text[at:]))
-        paragraph = ExamParagraph if compact else MathParagraph
-        return paragraph("".join(chunks).replace("\n", "<br/>"), style)
+        if tallest+5 > style.leading:
+            # ReportLab's first line starts at fontSize below the flowable top,
+            # so increasing baseline spacing alone leaves tall ink above it.
+            style = ParagraphStyle("tall-inline",parent=style,leading=tallest+5,
+                                   spaceBefore=max(style.spaceBefore,tallest/2))
+        return ExamParagraph("".join(chunks).replace("\n", "<br/>"), style)
 
     if math_compact and solutions:
         subtitle = ParagraphStyle("math-solution-subtitle", parent=title, fontSize=13,
@@ -487,7 +515,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             elif compact or q["kind"] == "multiple_choice":
                 if math_compact and q["kind"] in ("fill_in", "constructed_response"):
                     group = groups[q["kind"]]
-                    prompt = ("请将答案填在横线上。" if q["kind"] == "fill_in"
+                    prompt = (("请将答案填在横线上。" if practice else "请将答案填在答题卡的相应位置。") if q["kind"] == "fill_in"
                               else "解答应写出文字说明、证明过程或演算步骤。")
                     each = ""
                     if q["kind"] == "fill_in" and len({item["points"] for item in group}) == 1:
@@ -507,21 +535,29 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         if not compact:
             block.append(para(number, heading))
         figures_in_md = []
+        def append_table():
+            from core.native_tables import pdf_table
+
+            table = q["table"]
+            if table.get("caption"):
+                block.append(para(table["caption"],note))
+            block.append(pdf_table(table,para,A4[0]-2*margin-12))
+
         if solutions:
             solution = q["solution_paragraphs"]
             if compact:
                 first = solution[0].replace("\n", " ", 1) if choice else solution[0]
                 block.append(para(number + " " + first))
                 solution = solution[1:]
+            if q.get("table"):
+                append_table()
             block.extend(para(p) for p in solution)
         else:
+            if practice:
+                block.append(QuestionStart(q["order"]))
             block.append(para(number + " " + q["stem"] if compact else q["stem"]))
-            if table:=q.get("table"):
-                from core.native_tables import pdf_table
-
-                if table.get("caption"):
-                    block.append(para(table["caption"],note))
-                block.append(pdf_table(table,para))
+            if q.get("table"):
+                append_table()
             if (data := q.get("figure")):
                 if isinstance(data, dict):
                     directory = path.parent / "figures" if math_compact else assets
@@ -555,20 +591,20 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             if not separate_options:
                 cells=[]
                 for key,value in q["options"].items():
-                    label=key+"．"+("" if value=="对应选项图" else value)
+                    label=key+". "+("" if value=="对应选项图" else value)
                     cells.append([para(label,note),Image(str(labeled[key]),width=218,height=94,kind="proportional")])
                 block.append(Table([cells[i:i+2] for i in range(0,len(cells),2)],
                                    colWidths=[(A4[0]-100)/2]*2,hAlign="LEFT",
                                    style=[("VALIGN",(0,0),(-1,-1),"TOP")]))
             elif q["kind"] == "single_choice" or (compact and choice):
                 block.append(option_grid(
-                    [para(key + "．" + text) for key, text in q["options"].items()],
+                    [para(key + ". " + text) for key, text in q["options"].items()],
                     A4[0] - 2 * margin - 12,
                     compact=compact,
                 ))
             else:
                 for key, text in q["options"].items():
-                    block.append(para(key + "．" + text))
+                    block.append(para(key + ". " + text))
             height = answer_height(q) if practice else 0
             parts = [para(part["label"] + " " + part["text"],
                           response_line if practice and "___" in part["text"] else body)
@@ -579,7 +615,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
                 story.append(KeepTogether(block + parts[:1]))
                 block, parts = [], parts[1:]
             block.extend(parts)
-            if q["kind"] == "fill_in" and "___" not in q["stem"]:
+            if q["kind"] == "fill_in" and practice and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
             if height:
                 block.append(BlankCalculationSpace(q["order"], height, placements))
@@ -605,14 +641,14 @@ def render(paper, path, solutions=False, *, layout_mode=None):
         md.extend([f"## {number}" if math_compact and q["kind"] == "fill_in" else f"## {q['order']}.（{q['points']}分）", ""])
         from core.native_tables import markdown_table
         md.extend(
-            q.get("solution_paragraphs", [])
+            [*(markdown_table(q["table"]) if q.get("table") else []),*q.get("solution_paragraphs", [])]
             if solutions
             else [
                 q["stem"],
                 *(markdown_table(q["table"]) if q.get("table") else []),
                 *[f"![题图]({image})" for image in figures_in_md],
                 *[f"![题图]({image.relative_to(path.parent).as_posix()})" for image in q.get("archive_figures",[])],
-                *["%s．%s" % p for p in q["options"].items()],
+                *["%s. %s" % p for p in q["options"].items()],
                 *[p["label"] + " " + p["text"] for p in q["parts"]],
             ]
         )

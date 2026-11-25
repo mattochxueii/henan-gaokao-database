@@ -138,6 +138,63 @@ def clean_english_passage(text):
 
 
 
+ARCHIVE_MATH = re.compile(r"\\\((.*?)\\\)|(?<!\\)\$([^$\n]+)\$", re.S)
+ARCHIVE_TEXT = re.compile(r"\\text\{([^{}]*[\u3400-\u9fff][^{}]*)\}|([\u3400-\u9fff]+)")
+
+
+def archive_math_text(text, *, bare_formula=False):
+    """Adapt legacy TeX and unsupported glyphs at export time only."""
+    from mathgen.export import SUBSCRIPTS
+
+    def prose(value):
+        value = re.sub(
+            r"([A-Za-z0-9Α-Ωα-ω]?)([₀₁₂₃₄₅₆₇₈₉ₙₖⱼᵢ₊₋]+)",
+            lambda match: r"\(" + (match[1] or "{}") + "_{" + match[2].translate(SUBSCRIPTS) + r"}\)",
+            value,
+        )
+        return re.sub(r"∛(\d+|[A-Za-z])",r"\\(\\sqrt[3]{\1}\\)",value.replace("−","-"))
+
+    def formula(value):
+        if ARCHIVE_TEXT.search(value):
+            # Sizing commands require both ends in one math span. The delimiter
+            # characters themselves must survive a split around Chinese text.
+            value = re.sub(r"\\(?:left|right)\b","",value)
+        pieces = []
+        start = 0
+        for match in ARCHIVE_TEXT.finditer(value):
+            if fragment := value[start:match.start()].strip():
+                pieces.append(r"\("+fragment+r"\)")
+            pieces.append(prose(match[1] or match[2]))
+            start = match.end()
+        if fragment := value[start:].strip():
+            pieces.append(r"\("+fragment+r"\)")
+        return "".join(pieces)
+
+    def math_fragment(value):
+        return formula(value.replace("−","-").replace("∛",r"\sqrt[3]"))
+
+    if bare_formula and not ARCHIVE_MATH.search(text) and (
+        re.search(r"\\[A-Za-z]+",text)
+        or (not re.search(r"[\u3400-\u9fff]",text) and re.search(r"[_^]",text))
+    ):
+        return math_fragment(text)
+    pieces = []
+    start = 0
+    for match in ARCHIVE_MATH.finditer(text):
+        pieces.extend((prose(text[start:match.start()]),math_fragment(match[1] or match[2])))
+        start = match.end()
+    return "".join((*pieces,prose(text[start:])))
+
+
+def archive_math_answer(answer, reasoning):
+    if not isinstance(answer,str) or answer.strip().casefold()!="corrected":
+        return archive_math_text(answer) if isinstance(answer,str) else answer
+    # Use an explicit final selection. For worked answers leave the key empty and use the full explanation.
+    if match := re.search(r"(?:故选|应选|选)\s*([A-D]{1,4})[。.!]?\s*$",reasoning or ""):
+        return match[1]
+    return None
+
+
 def render_archive(root, subject, rows, output, *, title, minutes, reference=None, changes=None):
     require(not output.exists(),"试卷输出必须使用新目录")
     require(type(minutes) is int and minutes>0 and title.strip(),"缺试卷标题或用时")
@@ -190,6 +247,17 @@ def render_archive(root, subject, rows, output, *, title, minutes, reference=Non
         if isinstance(answer,dict):
             reasoning=answer.get("explanation") or reasoning
             answer=answer.get("reference_answer") or answer.get("option") or answer.get("value_latex")
+        if subject=="math" and not changes:
+            stem = re.sub(r"\s*\[图[：:][^\]\r\n]+\]", "", item["stem"])
+            if q.get("parts"):
+                stem = re.split(r"[（(]\s*子[项項]\s*[）)]",stem,maxsplit=1)[0].rstrip()
+            if item["options"]:
+                stem = re.sub(r"[（(]\s*\\(?:q?quad)\s*[）)]","",stem)
+            item["stem"] = archive_math_text(stem)
+            item["options"] = {key:archive_math_text(value,bare_formula=True)
+                               for key,value in item["options"].items()}
+            answer = archive_math_answer(answer,reasoning)
+            reasoning = archive_math_text(reasoning or "")
         keys.append({"number":n,"answer":answer,"reasoning":reasoning or "",
                      "points":q["points"],"reference":provenance})
         require(answer is not None or reasoning,"原题答解空缺")
@@ -197,6 +265,9 @@ def render_archive(root, subject, rows, output, *, title, minutes, reference=Non
             item["parts"]=[{"label":v.get("label",f"（{i}）") if isinstance(v,dict) else f"（{i}）",
                             "text":v if isinstance(v,str) else v["text"]}
                            for i,v in enumerate(q.get("parts") or [],1)]
+            if subject=="math" and not changes:
+                for part in item["parts"]:
+                    part["text"] = archive_math_text(part["text"])
         questions.append(item)
     paper={"title":title,"subject":subject,"sections":[{"id":"practice","title":"练习题"}],
            "minutes":minutes,"points":sum(q["points"] for q in questions),"questions":questions,
@@ -290,6 +361,9 @@ def review_workbook(output,review):
                     "solution_paragraphs":[r["answer"],r["reasoning"],
                         *[f'{step["points"]:g}分　{step["step"]}' for step in r.get("rubric",[])]]}
                    for r in solutions.values()]
+        if manifest["subject"]=="math" and manifest["mode"]=="archive_selection":
+            for question in questions:
+                question["solution_paragraphs"] = [archive_math_text(text) for text in question["solution_paragraphs"]]
         render({"title":manifest["title"],"questions":questions},output/"solutions.pdf",solutions=True)
     else:
         from core.language_render import render
