@@ -7,7 +7,7 @@ QUARANTINED_PAPERS = {
     "2023-cn-math-national-b-science": {
         "reason": "已实际对照PDF发现多处条件、选项错误；全卷隔离，逐题修订前禁止作命题依据",
         "confirmed_different_numbers": [1, 2, 5, 8, 9, 11, 12, 13, 14, 16],
-        "evidence": "reports/phase5-source-conflicts.md",
+        "evidence": "work/reports/phase5-source-conflicts.md",
     }
 }
 

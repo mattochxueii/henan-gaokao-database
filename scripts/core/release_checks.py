@@ -12,7 +12,8 @@ SUBJECT_COUNTS = {"chinese":22,"math":19,"english":67,"physics":15,"chemistry":1
 SCIENCE = {"physics","chemistry","biology"}
 CARD = re.compile(r"(?:请)?(?:按(?:如下格式)?)?在答题卡(?:的)?相应位置作答")
 TERMS = ("氧化数","气体活度","伯碳原子","同源体","居群","腐屑","生产者现存量","连锁相位",
-         "水平磁力","项目参考评分","候选答","主语域","示文","自行扣扣","监考：")
+         "水平磁力","项目参考评分","候选答","主语域","示文","自行扣扣","监考：",
+         "数量投影","项目自拟评分","校核独立核定答案")
 WORDS = re.compile(r"[A-Za-z]+(?:['’-][A-Za-z]+)*")
 SPEAKER = re.compile(r"^(?:M|W):\s*",re.M)
 CIRCLE = "①②③④⑤⑥⑦⑧⑨⑩⑪⑫"
@@ -58,15 +59,15 @@ def layout_evidence(pdf):
         return {}
     from pypdf import PdfReader
 
-    lines = []
+    marker = False
     # Count independent stroked drawing paths. A valid grid is one path with 21/26 verticals and 2 horizontals.
     counts = Counter()
     for page in PdfReader(pdf).pages:
-        lines.append(page.extract_text() or "")
         content = page.get_contents()
         if content is None:
             continue
         strokes = []
+        grid_right_edges = []
         start = None
         for coords, op in content.operations:
             if op == b"m":
@@ -80,11 +81,23 @@ def layout_evidence(pdf):
                 flat = [(a,b) for a,b in strokes if abs(a[1]-b[1])<1e-5 and abs(a[0]-b[0])>400]
                 if len(strokes)==len(vertical)+2 and len(vertical) in (21,26) and len(flat)==2:
                     counts[len(vertical)-1]+=1
+                    grid_right_edges.append((max(a[0] for a,_ in vertical), min(a[1] for a,_ in flat)))
                 strokes = []
                 start = None
+        if grid_right_edges:
+            def locate(text, user_matrix, text_matrix, font, size):
+                nonlocal marker
+                x, y = text_matrix[4:6]
+                # A font subset may split the digits and the CJK suffix into separate operators.
+                if re.fullmatch(r"\s*▲?\s*800\s*字?\s*",text) and any(
+                    0 <= x-right <= 12 and abs(y-base) <= 5 for right,base in grid_right_edges
+                ):
+                    marker = True
+
+            page.extract_text(visitor_text=locate)
     return {"essay_grid_cells":sum(width*count for width,count in counts.items()),
             "essay_columns_and_rows":dict(counts),
-            "essay_800_mark":bool(re.search(r"800\s*字","\n".join(lines)))}
+            "essay_800_mark":marker}
 
 
 def from_folder(folder, pdf):
@@ -97,7 +110,7 @@ def from_folder(folder, pdf):
     if not rendered and (candidate:=folder/"raw-ai-candidate.json").is_file():
         rendered={n:"\n".join(q["solution"]["paragraphs"])
                   for n,q in enumerate(read_json(candidate)["questions"],1)}
-    return {"student_md":read("paper.md"),"solutions":rendered,
+    return {"student_md":read("paper.md"),"solutions":rendered,"solutions_md":read("solutions.md"),
             "listening_md":read("listening-script.md"),
             "reviews":{i.get("number",n):i for n,i in enumerate(items,1)},
             "student_pdf":pdf,"figure_folder":folder}
@@ -186,11 +199,10 @@ def english_checks(paper, rows, answers, listening):
             yield n,"english_cross_item_leak",f"正确实词 {word} 已出现在本卷阅读材料或正确项"
     for key,data in materials.items():
         if data.get("title") in ("C","D") or key in {rows[n]["material"] for n in (27,31)}:
-            tokens=WORDS.findall(data["text"].casefold())
-            # Longer, non-core lexical items approximate register. Report limitations in documentation.
-            fraction=sum(len(t)>=7 and t not in CORE_ENGLISH for t in tokens)/max(len(tokens),1)
-            if fraction<.11:
-                yield 28 if data.get("title")=="C" else 32,"english_reading_register",f"{key}较长非基础词占比{fraction:.1%}，低于11%"
+            fraction, variety = reading_register(data["text"])
+            if fraction < .11 or variety < .06:
+                yield 28 if key==rows[27]["material"] else 32,"english_reading_register",(
+                    f"{key}较长非基础词占比{fraction:.1%}，去重后占比{variety:.1%}，下限分别为11%与6%")
     sections={}
     for n,q in enumerate(rows,1):
         section=q["section"]
@@ -210,6 +222,29 @@ def english_checks(paper, rows, answers, listening):
                 yield 1,"english_theme_overlap",f"{token}在{len(parts)}个板块出现（{', '.join(sorted(parts))}）"
 
 
+def reading_register(text):
+    tokens=WORDS.findall(text.casefold())
+    noncore=[t for t in tokens if len(t)>=7 and t not in CORE_ENGLISH]
+    size=max(len(tokens),1)
+    return len(noncore)/size, len(set(noncore))/size
+
+
+def math_surface_findings(rows, texts):
+    interval = re.compile(r"[\[(]\s*([-−+]?\d+(?:\.\d+)?)\s*[,，]\s*([-−+]?\d+(?:\.\d+)?)\s*[\])]")
+    for n,(row,text) in enumerate(zip(rows,texts,strict=True),1):
+        plain = re.sub(r"\\(?:left|right)(?![A-Za-z])","",text)
+        if re.search(r"\[\s*[a-z]\s*[,，][^\]\n]{1,60}\]",plain) and re.search(r"(?:≠\s*∅|\\ne(?:q)?\s*\\(?:emptyset|varnothing))",plain):
+            yield n,"math_parameter_interval","含参端点和非空条件须改写为集合描述法"
+        if row.get("kind")=="single_choice":
+            endpoints = []
+            for option in row.get("options",{}).values():
+                option = re.sub(r"\\(?:left|right)(?![A-Za-z])|\\[()]", "", option).strip()
+                if match := interval.fullmatch(option):
+                    endpoints.append(tuple(float(x.replace("−","-")) for x in match.groups()))
+            if any(count>=3 for count in Counter(endpoints).values()):
+                yield n,"math_interval_options","至少三个选项使用相同的数值端点，作答范围被选项泄露"
+
+
 def math_checks(paper, rows, texts):
     def has_progression(question):
         # Compiled subquestions keep labels and content in separate fields.
@@ -227,6 +262,16 @@ def math_checks(paper, rows, texts):
         yield 10,"math_inference_coverage","缺现代统计推断或数据分位分析"
     if sum(bool(re.search(r"数列|递推|等差|等比",t)) for t in texts)==0:
         yield 14,"math_sequence_coverage","缺数列考查"
+    yield from math_surface_findings(rows,texts)
+    if not any(re.search(r"指数函数|对数函数|指数式|对数式|抽象函数|\\ln\b|\\log\b|e\^|\\mathrm\{e\}\^",t)
+               or (re.search(r"函数",t) and re.search(r"奇函数|偶函数|周期函数|奇偶性|对称中心",t))
+               for t in texts[:14]):
+        yield 14,"math_short_function","选填题缺指对数或抽象函数性质"
+    if not any(re.search(r"二面角|线面角|异面直线.{0,18}(?:角|夹角)|直线.{0,40}与平面.{0,20}(?:夹角|所成的角)",t)
+               for t in texts[14:]):
+        yield 16,"math_spatial_angle","解答题未考查空间角"
+    if not any(re.search(r"分布列|数学期望|随机变量.{0,45}(?:期望|分布)|\\mathrm\{E\}[ ({]",t) for t in texts):
+        yield 17,"math_random_variable","缺随机变量分布列或数学期望"
     for n,t in enumerate(texts,1):
         if marking.DEFENSIVE_VARIANCE.search(t):
             yield n,"math_defensive_variance","普通高中方差无需指定按1/n作为方差"
@@ -260,6 +305,34 @@ def leaked_blanks(q, keys):
                     clauses=re.split("[。；，]",q["stem"].split("已知：",1)[0])
                     if any(step[0] in clause and topic in clause for clause in clauses):
                         yield CIRCLE[i],key
+
+
+PHYSICS_PROSE_SYMBOL = re.compile(
+    r"(?:周期|板长|磁感应强度|质量|速度|重力加速度|引力常量|电流|电压|电阻|长度|位移|半径|间距)"
+    r"(?:分别|大小)?(?:为|是|取|记为|等于)?\s*([a-zA-Z])(?![A-Za-z0-9_])"
+)
+
+
+def physics_notation_findings(number, question, solution):
+    fields = [question["stem"], *(p["text"] for p in question.get("parts",[]))]
+    prose = [re.sub(r"\\\(.*?\\\)|(?<!\\)\$[^$\n]+\$", " ■ ",text,flags=re.S) for text in fields]
+    loose = {m[1] for text in prose for m in PHYSICS_PROSE_SYMBOL.finditer(text)
+             if text[m.end():].lstrip()[:1] not in ("点","端","板")}
+    if loose:
+        yield number,"physics_italic_quantity","正文物理量未用公式斜体："+ "、".join(sorted(loose))
+    if question.get("kind")!="constructed_response" or number<13:
+        return
+    text = " ".join(fields)
+    declarations = {"g":r"(?:重力加速度|自由落体加速度)[^，。；]{0,28}(?<![A-Za-z])g(?![A-Za-z])",
+                    "G":r"(?:万有引力常[量数]|引力常[量数])[^，。；]{0,28}(?<![A-Za-z])G(?![A-Za-z])"}
+    expressions = [
+        re.sub(r"\\(?:mathrm|text)\{[^{}]*\}|\\[A-Za-z]+","",match[-1].split("=")[-1])
+        for line in re.split(r"[，。；\n]", solution)
+        if (match:=re.findall(r"\\\((.*?)\\\)",line))
+    ]
+    for symbol, declaration in declarations.items():
+        if any(symbol in expr for expr in expressions) and not re.search(declaration,text):
+            yield number,"physics_undeclared_constant",f"字母结果含 {symbol}，题面未声明对应常量"
 
 
 def science_checks(subject, paper, rows, texts, answers, rendered, artifacts):
@@ -299,6 +372,7 @@ def science_checks(subject, paper, rows, texts, answers, rendered, artifacts):
             if any(re.search(r"\\sqrt\s*\{\s*\d+\.\d+\s*\}",s) for s in q.get("options",{}).values()):
                 yield n,"physics_radical_decimal","选择题速率等结果根号内直接保留小数"
             solution=rendered.get(n,"")
+            yield from physics_notation_findings(n,q,solution)
             energies=[float(e) for group in re.findall(
                 r"((?:\d+(?:\.\d+)?,\s*)*\d+(?:\.\d+)?)\s*(?:\\,)?(?:\\mathrm\{)?eV",solution)
                       for e in group.split(",")]
@@ -363,6 +437,9 @@ def findings(subject,paper,answers,*,header="",listening=None,artifacts=None):
         terms=[word for word in TERMS if word in combined]
         if terms:
             yield n,"terminology","不规范用语："+ "、".join(terms)
+    answer_titles = [line for line in artifacts.get("solutions_md","").splitlines() if line.startswith("# ")]
+    if any("项目自拟评分" in title for title in answer_titles):
+        yield 1,"terminology","答案标题含内部模板用语：项目自拟评分"
     printed=header+"\n"+artifacts.get("student_md","")
     if subject in {"chemistry","biology"} and re.search(r"计算题须写出",printed):
         yield 1,"science_wrong_instructions","化学生物卷误印物理计算题导语"
@@ -391,7 +468,7 @@ def findings(subject,paper,answers,*,header="",listening=None,artifacts=None):
 
 def is_frozen_sample(root,folder):
     path=folder.resolve()
-    base=(root/"samples/2027-henan").resolve()
+    base=(root/"tests/fixtures/redteam-legacy").resolve()
     return path.parent==base and path.name in SUBJECT_COUNTS
 
 

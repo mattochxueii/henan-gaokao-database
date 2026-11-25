@@ -8,7 +8,7 @@ from import_national import jsonl
 
 
 def main():
-    catalog = ROOT / "national/catalog"
+    catalog = ROOT / "data/national/catalog"
     series = [
         {
             "id": "cn-new-gaokao-1",
@@ -113,7 +113,7 @@ def main():
         "biology": {"components": ["composite_section", "selective_provincial"]},
     }
     atomic_json(
-        ROOT / "national/schema.json",
+        ROOT / "data/national/schema.json",
         {
             "schema_version": 1,
             "entities": [
@@ -142,14 +142,14 @@ def main():
             "id": "deekur-pinned",
             "url": "https://github.com/deekur/gaokaomath",
             "tier": "third_party_compilation",
-            "commit": read_json(ROOT / "national/acquisition.json")["pdf_commit"],
+            "commit": read_json(ROOT / "data/national/acquisition.json")["pdf_commit"],
             "license_scope": "CC BY 4.0整理成果；底层第三方权利保留",
         },
         {
             "id": "dxathing-pinned",
             "url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation",
             "tier": "third_party_retypeset",
-            "commit": read_json(ROOT / "national/acquisition.json")["tex_commit"],
+            "commit": read_json(ROOT / "data/national/acquisition.json")["tex_commit"],
             "license_scope": "CC BY-SA 4.0项目自有贡献；底层第三方权利保留",
         },
         {
@@ -239,7 +239,7 @@ def main():
     parsed = list(read_lines(catalog / "papers.jsonl"))
     # Region names are retained as candidate mappings where independent year-specific evidence remains absent.
     files = {
-        r["id"]: r for r in read_json(ROOT / "national/acquisition.json")["records"]
+        r["id"]: r for r in read_json(ROOT / "data/national/acquisition.json")["records"]
     }
     for paper in parsed:
         meta = files[paper["id"]]
@@ -332,7 +332,7 @@ def main():
             )
     # Legacy math IDs remain the primary records; do not collect either I paper again.
     legacy = []
-    for path in sorted((ROOT / "metadata/papers").glob("*.json")):
+    for path in sorted((ROOT / "data/metadata/papers").glob("*.json")):
         p = read_json(path)
         entry = {
             "id": p["id"],
@@ -367,7 +367,7 @@ def main():
     jsonl(catalog / "paper-regions.jsonl", uses)
     jsonl(catalog / "regions.jsonl", [{"id": n, "name": n} for n in sorted(regions)])
     atomic_json(
-        ROOT / "national/targets/cn-ha-2027-math.json",
+        ROOT / "data/national/targets/cn-ha-2027-math.json",
         {
             "region_id": "河南",
             "year": 2027,
@@ -376,7 +376,7 @@ def main():
             "curriculum_id": "math-2017-2020",
             "primary_series": "cn-new-gaokao-1",
             "series_status": "沿用已核2025/2026实际用卷作为2027模拟设定，非2027详细卷型公告",
-            "structure_source": "analysis/rules.json",
+            "structure_source": "data/analysis/rules.json",
             "immutable_current_structure": True,
             "reference_tiers": {
                 "current_used_series": 100,
@@ -399,12 +399,12 @@ def main():
         },
     )
     atomic_json(
-        ROOT / "national/config.json",
+        ROOT / "data/national/config.json",
         {
             "schema_version": 1,
             "reference_dir": ".private/national-reference",
-            "catalog_dir": "national/catalog",
-            "default_target": "national/targets/cn-ha-2027-math.json",
+            "catalog_dir": "data/national/catalog",
+            "default_target": "data/national/targets/cn-ha-2027-math.json",
             "index": ".private/national-index.sqlite",
             "legacy_adapter": "original IDs preserved, read-only",
         },

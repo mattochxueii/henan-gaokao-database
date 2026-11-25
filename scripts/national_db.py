@@ -25,7 +25,7 @@ ALIASES = {
 
 
 def settings(root):
-    return read_json(root / "national/config.json")
+    return read_json(root / "data/national/config.json")
 
 
 def private_folder(root):
@@ -49,7 +49,7 @@ def plain_math(root, include_legacy=True):
 def available(root):
     if local_archive.public_edition(root):
         return (root / "sample-data/manifest.json").is_file()
-    return bool(plain_math(root)) or (root / "national/config.json").exists() and (
+    return bool(plain_math(root)) or (root / "data/national/config.json").exists() and (
         private_folder(root) / "manifest.json"
     ).is_file()
 
@@ -122,7 +122,7 @@ def legacy_rows(root):
 def rows(root, include_legacy=True, calibrated=True, *, prefer_plaintext=True):
     if local_archive.public_edition(root):
         return local_archive.load(root)["rows"]
-    if prefer_plaintext and calibrated and (plaintext := plain_math(root, include_legacy)):
+    if prefer_plaintext and (plaintext := plain_math(root, include_legacy)):
         return plaintext
     require(
         available(root),
@@ -161,7 +161,7 @@ def rows(root, include_legacy=True, calibrated=True, *, prefer_plaintext=True):
         )
     if include_legacy:
         result += legacy_rows(root)
-    annotations_path = root / "national/research/annotations.jsonl"
+    annotations_path = root / "data/national/research/annotations.jsonl"
     annotations = (
         {r["occurrence_id"]: r for r in read_lines(annotations_path)}
         if annotations_path.exists()
@@ -175,7 +175,7 @@ def rows(root, include_legacy=True, calibrated=True, *, prefer_plaintext=True):
 
 
 def target(root, region="河南", year=2027, subject="math"):
-    matches = [read_json(p) for p in (root / "national/targets").glob("*.json")]
+    matches = [read_json(p) for p in (root / "data/national/targets").glob("*.json")]
     found = [
         p
         for p in matches
@@ -348,6 +348,35 @@ def validate(root):
             "question_occurrences": len(data["rows"]),
             "answers_version_bound": True,
         }
+    if not (private_folder(root) / "manifest.json").is_file():
+        from core.paper_intake import documents
+        from gaokao import relative_path
+
+        papers = [(path,doc) for path,doc in documents(root,"math")
+                  if doc.get("compatibility")=="national-math-v1"]
+        require(papers,"缺少数学明文数据库")
+        counts = Counter()
+        masters = set()
+        for path, doc in papers:
+            questions = doc["questions"]
+            require([q["number"] for q in questions]==list(range(1,doc["question_count"]+1)),
+                    "题数或题号不完整："+doc["id"])
+            for q in questions:
+                require(q["stem"] and q["source_locator"],"题面或来源缺失："+q["id"])
+                answer = q["answer"]
+                require(q["legacy"] or answer["question_version_sha256"]==q["version_sha256"],
+                        "答案版本错配："+q["id"])
+                for asset in q.get("asset_refs",[]):
+                    if asset.get("plaintext_path"):
+                        f=relative_path(path.parent,asset["plaintext_path"])
+                        expected = asset.get("plaintext_sha256") or asset["sha256"]
+                        require(digest(f)==expected,"题图变化："+q["id"])
+                counts[q["legacy"]]+=1
+                if not q["legacy"]:
+                    masters.add(q["question_id"])
+        return {"valid":True,"new_papers":sum(not doc["questions"][0]["legacy"] for _,doc in papers),
+                "new_occurrences":counts[False],"new_unique_questions":len(masters),
+                "legacy_38_preserved":counts[True]==38,"answers_version_bound":True,"edition":"plaintext"}
     folder = private_folder(root)
     manifest = read_json(folder / "manifest.json")
     errors = []

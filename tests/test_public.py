@@ -74,7 +74,7 @@ class DefectRegressionTests(unittest.TestCase):
         from security_scan import scan_blob
 
         synthetic = b"synthetic-recovery-token-not-a-real-key"
-        for name in ("metadata/data.json", "reports/log.txt"):
+        for name in ("data/metadata/data.json", "reports/log.txt"):
             found = scan_blob(name, b"prefix " + synthetic, (synthetic,))
             self.assertFalse(found["passed"])
             self.assertIn("credential_content", found["codes"])
@@ -196,7 +196,7 @@ class DefectRegressionTests(unittest.TestCase):
                 record = run_ai(
                     ROOT,
                     HostAIProvider(
-                        ROOT / "experiments/phase3/proposals/acceptance5.json"
+                        ROOT / "tests/fixtures/phase3/proposals/acceptance5.json"
                     ),
                     Path(folder) / "new",
                     export=False,
@@ -285,7 +285,7 @@ class DefectRegressionTests(unittest.TestCase):
         self.assertIn(r"\frac{1}{2}", " ".join(row["steps"]))
 
     def test_reordered_multiple_choice_solutions_name_current_letters(self):
-        raw = read_json(ROOT / "experiments/phase3/proposals/fullA.json")["questions"][
+        raw = read_json(ROOT / "tests/fixtures/phase3/proposals/fullA.json")["questions"][
             8
         ]
         q, v = verify_candidate(raw, 9)
@@ -386,7 +386,7 @@ class DefectRegressionTests(unittest.TestCase):
                 provider.propose({}, "JSON test")
 
     def test_api_total_budget_cannot_reset_between_proposals(self):
-        document = read_json(ROOT / "experiments/phase3/proposals/acceptance5.json")
+        document = read_json(ROOT / "tests/fixtures/phase3/proposals/acceptance5.json")
         payload = json.dumps(
             {
                 "status": "completed",
@@ -417,7 +417,7 @@ class DefectRegressionTests(unittest.TestCase):
     def test_api_revises_a_math_failure_within_shared_budget(self):
         from mathgen.dynamic import run_ai
 
-        original = read_json(ROOT / "experiments/phase3/proposals/acceptance5.json")
+        original = read_json(ROOT / "tests/fixtures/phase3/proposals/acceptance5.json")
         bad = copy.deepcopy(original)
         bad["questions"][0]["problem"]["tasks"][0]["op"] = "unsupported_proof"
         replies = iter([bad, original])
@@ -532,8 +532,8 @@ class DefectRegressionTests(unittest.TestCase):
             )
 
     def test_two_full_ai_papers_have_distinct_structures(self):
-        a = read_json(ROOT / "experiments/phase3/proposals/fullA.json")
-        b = read_json(ROOT / "experiments/phase3/proposals/fullB.json")
+        a = read_json(ROOT / "tests/fixtures/phase3/proposals/fullA.json")
+        b = read_json(ROOT / "tests/fixtures/phase3/proposals/fullB.json")
         a = {
             "questions": [
                 rendered_question(q, i + 1) for i, q in enumerate(a["questions"])

@@ -98,6 +98,10 @@ def normalize_subject_item(item, order, folder):
                   "sha256":figure["sha256"]}
     data={"id":item["id"],"order":order,"kind":kind,"points":points,"stem":stem,
           "options":options,"parts":parts,"figure":figure}
+    if item.get("response_area") is not None:
+        require(kind=="constructed_response" and item["response_area"]=="calculation",
+                "仅非选择题可申请纯空白演算区")
+        data["response_area"]=item["response_area"]
     if "table" in item:
         data["table"]=normalize_table(item["table"])
     if "experiment_archetype" in item:

@@ -17,9 +17,10 @@ SUBJECTS = dict(zip(("chinese", "math", "english", "physics", "chemistry", "biol
                     ("语文", "数学", "英语", "物理", "化学", "生物学")))
 STATES = ("已发现来源", "已获取原始资料", "已解析", "已自动校验", "已人工核验", "存在问题")
 ROLES = {
-    "paper": "originals", "answer": "answers", "explanation": "answers",
-    "image": "assets", "listening_questions": "assets",
-    "listening_transcript": "assets", "listening_audio": "assets",
+    "paper": ".local-data/intake/originals", "answer": ".local-data/intake/answers",
+    "explanation": ".local-data/intake/answers", "image": ".local-data/intake/assets",
+    "listening_questions": ".local-data/intake/assets",
+    "listening_transcript": ".local-data/intake/assets", "listening_audio": ".local-data/intake/assets",
 }
 FORMATS = {
     "paper": {"pdf", "docx", "doc", "png", "jpg", "jpeg", "tif", "tiff", "webp"},
@@ -75,7 +76,7 @@ def write_json(path, value):
 
 @contextmanager
 def intake_lock(root):
-    lock = root / "metadata" / ".intake.lock"
+    lock = root / "data/metadata" / ".intake.lock"
     try:
         lock.mkdir()
     except FileExistsError as error:
@@ -114,7 +115,7 @@ def relative_path(root, value):
 
 def source_catalog(root):
     sources = {}
-    for source in read_lines(root / "metadata" / "sources.jsonl"):
+    for source in read_lines(root / "data/metadata" / "sources.jsonl"):
         key = source["id"]
         require(CODE.fullmatch(key) and key not in sources, f"重复或无效来源 ID {key}")
         url = urlsplit(source["url"])
@@ -162,7 +163,7 @@ def validate_paper(paper, sources):
 
 def load_papers(root, sources):
     papers = {}
-    for path in sorted((root / "metadata" / "papers").glob("*.json")):
+    for path in sorted((root / "data/metadata" / "papers").glob("*.json")):
         paper = read_json(path)
         validate_paper(paper, sources)
         require(path.stem == paper["id"], f"文件名与 ID 不符 {path.name}")
@@ -194,7 +195,7 @@ def validate_receipt(receipt, paper, sources):
 def file_records(root, papers, sources, check_hash=False):
     records = []
     blobs = {}
-    for path in sorted((root / "metadata" / "files").glob("*.json")):
+    for path in sorted((root / "data/metadata" / "files").glob("*.json")):
         record = read_json(path)
         key, sha, role = record["paper_id"], record["sha256"], record["role"]
         require(key in papers and SHA256.fullmatch(sha), f"文件归属或哈希无效 {path.name}")
@@ -204,7 +205,7 @@ def file_records(root, papers, sources, check_hash=False):
         require(extension in FORMATS[role], f"文件格式无效 {path.name}")
         target = relative_path(root, record["path"])
         require(target.suffix == "." + extension and target.stem == sha
-                and PurePosixPath(record["path"]).parts[0] in set(ROLES.values()),
+                and PurePosixPath(record["path"]).parent.is_relative_to(PurePosixPath(ROLES[role])),
                 f"文件保存路径无效 {path.name}")
         require(target.is_file() and target.stat().st_size == record["bytes"] > 0,
                 f"文件丢失或大小不符 {target}")
@@ -219,11 +220,11 @@ def questions(root, papers, sources, records):
     assets = {entry["id"]: entry for entry in records if entry["role"] == "image"}
     permitted = {entry["id"]: entry for entry in records if entry["allow_derivatives"]}
     result = []
-    for path in sorted((root / "questions").glob("*/*/*.jsonl")):
+    for path in sorted((root / "data/questions").glob("*/*/*.jsonl")):
         key = path.stem
         require(key in papers, f"题目所属试卷不存在 {key}")
         paper = papers[key]
-        require(path == root / "questions" / str(paper["year"]) / paper["subject"] / f"{key}.jsonl",
+        require(path == root / "data/questions" / str(paper["year"]) / paper["subject"] / f"{key}.jsonl",
                 f"题目文件分类错误 {path}")
         seen = set()
         points = 0
@@ -289,7 +290,7 @@ def questions(root, papers, sources, records):
 
 
 def load_solutions(root, entries, sources):
-    path = root / "metadata" / "independent-solutions.jsonl"
+    path = root / "data/metadata" / "independent-solutions.jsonl"
     if not path.exists():
         return {}
     known = {entry["id"] for entry in entries}
@@ -316,7 +317,7 @@ def register(root, manifest):
     paper = read_json(manifest)
     with intake_lock(root):
         validate_paper(paper, source_catalog(root))
-        target = root / "metadata" / "papers" / f"{paper['id']}.json"
+        target = root / "data/metadata" / "papers" / f"{paper['id']}.json"
         if target.exists():
             require(read_json(target) == paper, "试卷 ID 已登记且内容不同，请审阅后修改现有记录")
         else:
@@ -339,7 +340,7 @@ def import_file(root, key, path, receipt_path):
                 require(stream.read(5) == b"%PDF-", "文件扩展名为 PDF，但文件头不匹配")
         sha = digest(path)
         identifier = f"{key}--{role}--{sha}"
-        manifest = root / "metadata" / "files" / f"{identifier}.json"
+        manifest = root / "data/metadata" / "files" / f"{identifier}.json"
         if manifest.exists():
             existing = read_json(manifest)
             require(all(existing.get(name) == value for name, value in receipt.items()),

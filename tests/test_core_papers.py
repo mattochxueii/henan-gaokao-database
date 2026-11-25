@@ -54,7 +54,7 @@ class CorePapersTest(unittest.TestCase):
 
     def test_delivered_papers_contain_material_and_reject_wrong_answers(self):
         for subject, count, required in (("chinese",22,"同一条河"), ("english",67,"retired engineers")):
-            folder=ROOT/"experiments"/"phase17"/subject
+            folder=ROOT/"tests/fixtures"/"phase17"/subject
             paper=read_json(folder/"blind-packet.json")["paper"]
             self.assertEqual(len(paper["questions"]),count)
             self.assertEqual(sum(q["points"] for q in paper["questions"]),150)

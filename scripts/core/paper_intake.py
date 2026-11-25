@@ -166,7 +166,7 @@ def ingest(root, doc, markdown=None, images=None, *, track=False):
 
 def research(root, subject, *, year=None, region=None, topic=None, limit=10,
              verified_only=False, exam_kind="official_exam", exclude_compatible_math=False,
-             include_incomplete=False):
+             include_incomplete=False, paper_id=None):
     from national_quality import practice_view
 
     result = []
@@ -174,7 +174,7 @@ def research(root, subject, *, year=None, region=None, topic=None, limit=10,
         if exclude_compatible_math and doc.get("compatibility") == "national-math-v1":
             continue
         if ((year is not None and doc["year"] != year) or (region and region not in doc["regions"])
-                or doc["exam_kind"] != exam_kind):
+                or doc["exam_kind"] != exam_kind or (paper_id and doc["id"] != paper_id)):
             continue
         for q in doc["questions"]:
             if ((not include_incomplete and not q.get("usable_for_practice", False))

@@ -302,7 +302,7 @@ def main(argv=None, *, quality_reference=None):
             result = (
                 request(
                     read_json(args.candidates),
-                    read_json(root / "analysis/language-rules.json"),
+                    read_json(root / "data/analysis/language-rules.json"),
                 )
                 if args.action == "writing-request"
                 else attach(read_json(args.candidates), read_json(args.writing))

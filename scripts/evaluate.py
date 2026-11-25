@@ -33,8 +33,8 @@ def main():
         "command": "python scripts/evaluate.py",
         "scope": "Legacy private integration, Phase3/4 generation and PDF gates, Phase5 national ingestion, deduplication, subject systems, relevance, context budget and private cross-year retrieval",
     }
-    atomic_json(ROOT / "reports/test-results.json", report)
-    (ROOT / "reports/test-results.txt").write_text(stream.getvalue(), encoding="utf-8")
+    atomic_json(ROOT / "work/reports/test-results.json", report)
+    (ROOT / "work/reports/test-results.txt").write_text(stream.getvalue(), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False))
     raise SystemExit(0 if result.wasSuccessful() else 1)
 

@@ -18,15 +18,19 @@ def fingerprint(value):
 
 def research(root, topic=None, year=None, kind=None):
     sources, papers, _, entries = load(root)
-    references = reference_rows(
-        reference_directory(root), sources, papers, entries, check_hash=True
-    )
+    folder = reference_directory(root)
+    if folder is not None:
+        references = reference_rows(folder, sources, papers, entries, check_hash=True)
+    else:
+        from national_db import plain_math
+
+        references = {row["id"]:row["candidate"] for row in plain_math(root) if row["legacy"]}
     solutions = load_solutions(root, entries, sources)
     analyses = {
-        row["question_id"]: row for row in read_lines(root / "analysis/questions.jsonl")
+        row["question_id"]: row for row in read_lines(root / "data/analysis/questions.jsonl")
     }
     curation = {
-        row["question_id"]: row for row in read_lines(root / "analysis/curation.jsonl")
+        row["question_id"]: row for row in read_lines(root / "data/analysis/curation.jsonl")
     }
     result = []
     for row in entries:
@@ -61,6 +65,6 @@ def research(root, topic=None, year=None, kind=None):
 
 
 def rules(root):
-    value = read_json(root / "analysis/rules.json")
+    value = read_json(root / "data/analysis/rules.json")
     require(value["schema_version"] == 1, "命题规则版本不支持")
     return value

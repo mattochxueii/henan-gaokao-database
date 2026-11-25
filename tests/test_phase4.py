@@ -19,11 +19,11 @@ from mathgen.student_pdf import normalise_tex
 
 SCRATCH = ROOT / "tests/.scratch"
 SCRATCH.mkdir(exist_ok=True)
-PILOT = ROOT / "experiments/phase4/pilot-v2"
+PILOT = ROOT / "tests/fixtures/phase4/pilot-v2"
 
 
 def document():
-    return read_json(ROOT / "experiments/phase4/proposals/pilot.json")
+    return read_json(ROOT / "tests/fixtures/phase4/proposals/pilot.json")
 
 
 def question(number=0):
@@ -412,7 +412,7 @@ class IndependentMathTests(unittest.TestCase):
     def test_source_override_does_not_mutate_original_analysis(self):
         from mathgen.planner import context
 
-        before = digest(ROOT / "analysis/questions.jsonl")
+        before = digest(ROOT / "data/analysis/questions.jsonl")
         c = context(ROOT)
         corrected = next(
             r
@@ -420,7 +420,7 @@ class IndependentMathTests(unittest.TestCase):
             if r["question_id"] == "2025-cn-math-national-1:q015"
         )
         self.assertEqual(corrected["knowledge"]["module"], "概率统计")
-        self.assertEqual(digest(ROOT / "analysis/questions.jsonl"), before)
+        self.assertEqual(digest(ROOT / "data/analysis/questions.jsonl"), before)
 
 
 if __name__ == "__main__":

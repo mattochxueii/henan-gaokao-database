@@ -5,6 +5,8 @@ description: 本仓库唯一官方六科命题入口。使用高考真题研究�
 
 # 高考真题研究与模拟命题
 
+直接说你想练什么，例如“用 gaokao-platform 抽五道数列真题”或“出一套 2027 河南新高考物理卷，自印版，学生卷和答案分开”。先确定学科、年份和用途，再按下方流程执行。
+
 单次会话或单轮任务只命制一个学科的一套试卷。返工保持同一个卷 ID。批量任务只能指定一个学科，每套独立安检、盲审和发布。
 
 在仓库根目录使用 `python scripts/gaokao_platform.py`。用 `python scripts/install_skill.py` 安装到项目的 `.agents/skills/gaokao-platform`，或用 `--destination <宿主技能目录>` 指定其他宿主。安装后用 `scripts/run.py` 转发同一套命令，也可用 `--database <项目根目录>` 定位真题库。
@@ -13,7 +15,7 @@ description: 本仓库唯一官方六科命题入口。使用高考真题研究�
 
 1. 用 `authoring-context <学科> --limit 100 --output context.json` 读取真实题面、命题画像及两年同题位依据。用 `exam-policy <学科> <年份>` 取卷头、计分与听力规则，语英、理科用 `plan <学科> <年份> --mode standard` 取标准蓝图。
 2. 创作独立于参考原题的新推理任务，写明同题位深度、错项误区和图件提供的条件。数学分离内部规格与中文题面，理科使用 `program` 或 `independent_review` 通道。物理逐题声明主考模块，语文默写逐小题登记作者和作品，英语语填逐空标考点。阅读 [标准卷约束与分块格式](references/standard.md)。
-3. 运行 `simulate <学科> <年份> <候选.json> <新目录> --context context.json`。默认 `exam` 按紧凑考场版排印。用 `--layout-mode practice` 印书写横线与语文千格作文纸。命题会话沿用同一任务凭据，普通终端可用 `--session <凭据.json>` 显式绑定。政策说明由程序排印。纯嵌入式填空使用题内横线。
+3. 运行 `simulate <学科> <年份> <候选.json> <新目录> --context context.json`。默认 `exam` 按紧凑考场版排印。用 `--layout-mode practice` 给语英文字长答印书写横线，给语文作文印千格稿纸，数学、物理演算及化学结构式或路线使用纯空白。化学需要附加演算区时在该非选择题登记 `response_area: calculation`。命题会话沿用同一任务凭据，普通终端可用 `--session <凭据.json>` 显式绑定。政策说明由程序排印。纯嵌入式填空使用题内横线。
 4. 用 `exam-qa <卷目录>` 查硬门禁，再执行 `board-cycle <卷目录> <分离审稿邮箱>`。三角色各自只看白名单材料并提交八维回执。教研角色另提交中等生和尖子生分块分钟数及把关题证据。语数英尖子生估时最低95分钟，理化生最低55分钟。估时属于编辑判断。普通对外状态为 `LOCAL_QA_PASSED`，逐笔扣分保留在本地评分卡。题位失败则锁定其余题目，另存新目录修订。
 5. 用最终学生 PDF 做独立重解，完成 [逐题质量审稿](references/quality-audit.md) 和视觉签核。语英、理科使用 `review <卷目录> <核对.json>` 和 `publish <卷目录> <逐页复核.json>`。数学用 `math publish <卷目录> --student-review <核对.json> --math-comparison <数学核对.json>`。学生卷、答案、英语朗读稿分开；`docx <Markdown> <Word>` 导出文字版。
 

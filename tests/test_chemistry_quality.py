@@ -14,7 +14,7 @@ from gaokao import read_json
 from student_feedback import checked_questions
 from subjects.chemistry import verify
 
-TRIAL = ROOT/"experiments/phase15/chemistry"
+TRIAL = ROOT/"tests/fixtures/phase15/chemistry"
 
 
 class ChemistryQualityTests(unittest.TestCase):

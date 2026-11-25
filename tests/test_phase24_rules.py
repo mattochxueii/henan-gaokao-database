@@ -21,7 +21,7 @@ def question(stem, *, kind="single_choice", points=5, module="", figure=None):
 
 
 class EditionRulesTests(unittest.TestCase):
-    def test_exam_remains_compact_and_default_measures_practice_space(self):
+    def test_exam_is_default_and_practice_measures_answer_space(self):
         items = [
             question("写出推导。", kind="constructed_response", points=12),
             question("证明结论。", kind="constructed_response", points=17),
@@ -34,8 +34,8 @@ class EditionRulesTests(unittest.TestCase):
         with TemporaryDirectory() as directory:
             practice = Path(directory) / "practice.pdf"
             exam = Path(directory) / "exam.pdf"
-            render(paper, practice)
-            render(paper, exam, layout_mode="exam")
+            render(paper, practice, layout_mode="practice")
+            render(paper, exam)
             sizes = read_json(practice.with_suffix(".layout.json"))
             self.assertEqual(sizes["mode"], "practice")
             self.assertEqual(sizes["paper_sha256"], digest(practice))

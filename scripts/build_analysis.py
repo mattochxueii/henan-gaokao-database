@@ -362,7 +362,7 @@ def main():
                     if conflict and conflict[2]
                     else solution["result"],
                     "steps": CURRENT_STEPS.get((year, number), solution["steps"]),
-                    "verification": "AI独立推理复核，程序专项复算另见reports/original-math-checks.json",
+                    "verification": "AI独立推理复核，程序专项复算另见work/reports/original-math-checks.json",
                     "source_id": ref["source_id"],
                     "pages": list(range(ref["page"], ref["end_page"] + 1)),
                 },
@@ -371,7 +371,7 @@ def main():
         )
     for name, records in (("questions", annotations), ("curation", curations)):
         atomic_write(
-            ROOT / f"analysis/{name}.jsonl",
+            ROOT / f"data/analysis/{name}.jsonl",
             "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records),
         )
     print(

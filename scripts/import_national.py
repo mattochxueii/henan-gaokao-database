@@ -101,7 +101,7 @@ def main():
     asset_hashes = {
         unquote(
             r["url"].split(
-                "/" + read_json(ROOT / "national/acquisition.json")["tex_commit"] + "/"
+                "/" + read_json(ROOT / "data/national/acquisition.json")["tex_commit"] + "/"
             )[-1]
         ): r["sha256"]
         for r in asset_records
@@ -126,8 +126,8 @@ def main():
     variants = []
     failures = []
     changes = (
-        read_json(ROOT / "national/curation.json")["overrides"]
-        if (ROOT / "national/curation.json").exists()
+        read_json(ROOT / "data/national/curation.json")["overrides"]
+        if (ROOT / "data/national/curation.json").exists()
         else []
     )
     # Import priority controls stable canonical IDs, independent of incidental file ordering.
@@ -362,15 +362,15 @@ def main():
     jsonl(folder / "answers.jsonl", answers)
     jsonl(folder / "alternative-versions.jsonl", variants)
     atomic_json(
-        ROOT / "reports/phase5-import-issues.json",
+        ROOT / "work/reports/phase5-import-issues.json",
         {
             "failures": failures,
             "single_source_failure_does_not_stop_other_papers": True,
         },
     )
-    jsonl(ROOT / "national/catalog/papers.jsonl", papers)
+    jsonl(ROOT / "data/national/catalog/papers.jsonl", papers)
     jsonl(
-        ROOT / "national/catalog/question-registry.jsonl",
+        ROOT / "data/national/catalog/question-registry.jsonl",
         [
             {
                 k: v
@@ -390,9 +390,9 @@ def main():
             for x in masters
         ],
     )
-    jsonl(ROOT / "national/catalog/occurrences.jsonl", occurrences)
+    jsonl(ROOT / "data/national/catalog/occurrences.jsonl", occurrences)
     atomic_json(
-        ROOT / "reports/phase5-dedup.json",
+        ROOT / "work/reports/phase5-dedup.json",
         {
             "occurrences": len(occurrences),
             "unique_new_questions": len(masters),
@@ -402,7 +402,7 @@ def main():
         },
     )
     atomic_json(
-        ROOT / "reports/phase5-auto-alignment.json",
+        ROOT / "work/reports/phase5-auto-alignment.json",
         {
             "question_occurrences": len(alignments),
             "records": alignments,

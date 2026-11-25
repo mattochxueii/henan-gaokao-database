@@ -114,7 +114,7 @@ class TexTests(unittest.TestCase):
 
 class NationalCatalogTests(unittest.TestCase):
     def test_henan_2020_and_2021_have_year_specific_math_evidence(self):
-        uses = list(read_lines(ROOT / "national/catalog/paper-regions.jsonl"))
+        uses = list(read_lines(ROOT / "data/national/catalog/paper-regions.jsonl"))
         for year, source in ((2020, "eol-2020-math-use"), (2021, "eol-2021-map")):
             found = [u for u in uses if u["region_id"] == "河南" and u["year"] == year]
             self.assertEqual(len(found), 2)
@@ -124,12 +124,12 @@ class NationalCatalogTests(unittest.TestCase):
             )
 
     def test_all_new_papers_have_content_backed_counts(self):
-        papers = list(read_lines(ROOT / "national/catalog/papers.jsonl"))
+        papers = list(read_lines(ROOT / "data/national/catalog/papers.jsonl"))
         self.assertEqual(len(papers), 21)
         self.assertEqual(sum(p["question_count"] for p in papers), 458)
 
     def test_existing_math_papers_are_links_not_recollected(self):
-        acquired = read_json(ROOT / "national/acquisition.json")["records"]
+        acquired = read_json(ROOT / "data/national/acquisition.json")["records"]
         self.assertFalse(
             any(
                 r["year"] in (2025, 2026) and r["series_id"] == "cn-new-gaokao-1"
@@ -138,13 +138,13 @@ class NationalCatalogTests(unittest.TestCase):
         )
 
     def test_henan_2024_shares_I_paper(self):
-        uses = list(read_lines(ROOT / "national/catalog/paper-regions.jsonl"))
+        uses = list(read_lines(ROOT / "data/national/catalog/paper-regions.jsonl"))
         found = [u for u in uses if u["region_id"] == "河南" and u["year"] == 2024]
         self.assertEqual({u["paper_id"] for u in found}, {"2024-cn-math-new-gaokao-1"})
         self.assertEqual(found[0]["exam_system_id"], "legacy-3+x")
 
     def test_old_arts_and_science_separate(self):
-        papers = list(read_lines(ROOT / "national/catalog/papers.jsonl"))
+        papers = list(read_lines(ROOT / "data/national/catalog/papers.jsonl"))
         self.assertEqual(
             len(
                 [
@@ -157,18 +157,18 @@ class NationalCatalogTests(unittest.TestCase):
         )
 
     def test_same_name_different_years_have_different_identity(self):
-        papers = list(read_lines(ROOT / "national/catalog/papers.jsonl"))
+        papers = list(read_lines(ROOT / "data/national/catalog/papers.jsonl"))
         self.assertEqual(len({p["id"] for p in papers}), 21)
 
     def test_year_structure_changes_are_preserved(self):
         papers = {
-            p["id"]: p for p in read_lines(ROOT / "national/catalog/papers.jsonl")
+            p["id"]: p for p in read_lines(ROOT / "data/national/catalog/papers.jsonl")
         }
         self.assertEqual(papers["2023-cn-math-new-gaokao-1"]["question_count"], 22)
         self.assertEqual(papers["2024-cn-math-new-gaokao-1"]["question_count"], 19)
 
     def test_shared_question_occurrences_keep_their_numbers(self):
-        occ = list(read_lines(ROOT / "national/catalog/occurrences.jsonl"))
+        occ = list(read_lines(ROOT / "data/national/catalog/occurrences.jsonl"))
         d = {o["id"]: o for o in occ}
         a = d["2020-cn-math-new-gaokao-1:q021"]
         b = d["2020-cn-math-new-gaokao-2:q022"]
@@ -193,7 +193,7 @@ class NationalCatalogTests(unittest.TestCase):
             relevance(modern, policy)["score"], relevance(old, policy)["score"]
         )
         self.assertEqual(
-            read_json(ROOT / "analysis/rules.json")["blueprint"]["total_points"], 150
+            read_json(ROOT / "data/analysis/rules.json")["blueprint"]["total_points"], 150
         )
 
     def test_undefined_target_is_rejected(self):
@@ -252,7 +252,7 @@ class NationalCatalogTests(unittest.TestCase):
             )
 
     def test_curation_is_bound_to_pdf_and_tex(self):
-        c = read_json(ROOT / "national/curation.json")["overrides"][0]
+        c = read_json(ROOT / "data/national/curation.json")["overrides"][0]
         self.assertEqual(len(c["pdf_sha256"]), 64)
         self.assertEqual(len(c["tex_sha256"]), 64)
         self.assertNotEqual(c["new_text"], c["old_text"])

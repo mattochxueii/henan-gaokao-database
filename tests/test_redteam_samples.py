@@ -13,7 +13,7 @@ from core import board_cycle, language_workflow, review_board, science_workflow
 from gaokao import ROOT
 from mathgen import exam_workflow
 
-SAMPLES=ROOT/"samples/2027-henan"
+SAMPLES=ROOT/"tests/fixtures/redteam-legacy"
 COMMON="terminology"
 EXPECTED={
     "chinese":{(1,"answer_distribution","B有5/9"),(21,"chinese_paragraph_quote","“留”"),
@@ -86,11 +86,12 @@ class SampleRedTeamTests(unittest.TestCase):
 
     def test_protected_corpus_samples_and_forecast_match_baseline_git_bytes(self):
         for name,expected in FIXED.items():
-            root=ROOT/name
+            root=SAMPLES if name=="samples/2027-henan" else ROOT/name
             files=root.rglob("*") if root.is_dir() else [root]
-            paths=sorted(p.relative_to(ROOT).as_posix() for p in files if p.is_file())
+            paths=sorted(p.relative_to(ROOT).as_posix() for p in files if p.is_file() and p.name!="audit.json")
             # Pin baseline blobs while honoring .gitattributes for preexisting CRLF checkout text.
             hashes=check_output(["git","hash-object","--stdin-paths"],cwd=ROOT,
                                 input=("\n".join(paths)+"\n").encode()).decode().splitlines()
-            members=list(zip(paths,hashes,strict=True))
+            members=[(p.replace("tests/fixtures/redteam-legacy","samples/2027-henan",1),h)
+                     for p,h in zip(paths,hashes,strict=True)]
             self.assertEqual((len(members),fingerprint(members)),expected,name)

@@ -16,7 +16,7 @@ from gaokao_platform import main
 
 
 def chinese_draft():
-    draft = read_json(ROOT/"experiments/phase26/chinese/source/final-candidate.json")
+    draft = read_json(ROOT/"tests/fixtures/phase26/chinese/source/final-candidate.json")
     for material, count in (("map",1650),("story",1650),("classic",600)):
         draft["materials"][material]["text"] = ("春风拂柳晴光映入桥窗"*(count//10+2))[:count]
     for n in (12,15):
@@ -50,7 +50,7 @@ GRAMMAR = [
 
 
 def english_draft():
-    draft = read_json(ROOT/"experiments/phase26/english/candidate-final.json")
+    draft = read_json(ROOT/"tests/fixtures/phase26/english/candidate-final.json")
     draft["materials"]["L01"]["text"] = "听第1段录音，回答第1题。"
     for key in "ABCD":
         draft["materials"][key]["text"] = (WORDS+". ")*20
@@ -224,7 +224,7 @@ class Merge27Tests(TestCase):
             state = review_board.evidence(ROOT,out)
             self.assertFalse(state["preflight"]["passed"])
             self.assertEqual({i["rule"] for i in state["preflight"]["issues"]},
-                             {"english_listening_length","english_cross_item_leak"})
+                         {"english_listening_length","english_cross_item_leak","english_reading_register"})
             self.assertEqual(state["protocol"],review_board.VERSION)
 
     def test_merge_rejects_cross_section_wrong_score_and_duplicate_part(self):

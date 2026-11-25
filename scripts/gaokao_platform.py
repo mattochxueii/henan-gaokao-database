@@ -38,6 +38,7 @@ def main(argv=None):
         worksheet.add_argument("--kind")
         worksheet.add_argument("--topic",required=action=="train")
         worksheet.add_argument("--question-id",action="append",default=[])
+        worksheet.add_argument("--paper-id",help="只从这份真题抽题")
         worksheet.add_argument("--limit",type=int,default=6)
         worksheet.add_argument("--adaptation",action="store_true")
         worksheet.add_argument("--title")
@@ -170,7 +171,8 @@ def main(argv=None):
                 result=practice_workbook.review_workbook(args.output,read_json(args.review))
             else:
                 chosen=practice_workbook.selection(root,args.subject,year=args.year,region=args.region,kind=args.kind,topic=args.topic,
-                                                  question_ids=args.question_id,limit=args.limit,adaptation=args.adaptation)
+                                                  question_ids=args.question_id,limit=args.limit,adaptation=args.adaptation,
+                                                  paper_id=args.paper_id)
                 result=practice_workbook.render_archive(root,args.subject,chosen,args.output,
                     title=args.title or SUBJECTS[args.subject]+(f" · {args.topic}专项" if args.topic else " · 历年真题练习"),
                     minutes=args.minutes)

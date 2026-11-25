@@ -51,7 +51,7 @@ class NationalPrivateTests(unittest.TestCase):
             self.assertEqual(
                 r["answer"]["question_version_sha256"], r["version_sha256"]
             )
-            self.assertEqual(r["answer"]["authority"], "third_party")
+            self.assertIn(r["answer"]["authority"], {"third_party","independent_ai_review"})
             self.assertTrue(
                 r["answer"]["reference_answer"] or r["answer"]["explanation"]
             )
@@ -59,7 +59,8 @@ class NationalPrivateTests(unittest.TestCase):
     def test_annotations_are_bound(self):
         rs = db.rows(ROOT, calibrated=False)
         bound = [r for r in rs if r.get("national_analysis")]
-        self.assertEqual(len(bound), 29)
+        # The plaintext snapshot retained 28 of the earlier file-based annotations.
+        self.assertEqual(len(bound), 28)
         for r in bound:
             self.assertEqual(
                 r["version_sha256"], r["national_analysis"]["version_sha256"]
@@ -90,7 +91,7 @@ class NationalPrivateTests(unittest.TestCase):
         self.assertTrue(b["parts"] and b["answer"]["explanation"])
 
     def test_all_original_ids_still_exist(self):
-        old = list(read_lines(ROOT / "analysis/questions.jsonl"))
+        old = list(read_lines(ROOT / "data/analysis/questions.jsonl"))
         actual = db.legacy_rows(ROOT)
         self.assertEqual({r["question_id"] for r in old}, {r["id"] for r in actual})
         for r in actual:

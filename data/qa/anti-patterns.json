@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "entries": [
     {
       "id": "math.stop",
@@ -329,6 +329,62 @@
       "severity": "fatal",
       "check": "从绑定答案统计正确选项的对冲措辞，并核查数据表引用",
       "counterexample": "16道单选里的6个正解含对冲套语，把计数表叫作图示"
+    },
+    {
+      "id": "all.release-vocabulary",
+      "subject": "all",
+      "severity": "fatal",
+      "check": "拦截非本卷教材术语及内部评分模板文案",
+      "counterexample": "数量投影、项目自拟评分、校核独立核定答案"
+    },
+    {
+      "id": "math.parameter-interval",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "含参区间与非空判断改用集合描述",
+      "counterexample": "[a,2]∩B≠∅"
+    },
+    {
+      "id": "math.interval-options",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "单选区间选项不得通过多数相同端点泄露结果",
+      "counterexample": "三项都使用 −18 和 −2，只改开闭"
+    },
+    {
+      "id": "math.core-pillars",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "选填查指对数或抽象函数；解答查空间角；统计推断和随机变量均覆盖",
+      "counterexample": "只考空间距离；只有一次列联表"
+    },
+    {
+      "id": "physics.italic-quantities",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "用斜体公式标示正文单字母物理量",
+      "counterexample": "质量为 m、板长 L"
+    },
+    {
+      "id": "physics.declared-constants",
+      "subject": "physics",
+      "severity": "fatal",
+      "check": "终式使用 g 或 G 时须在题面声明",
+      "counterexample": "直接给 mgL 而未定义 g"
+    },
+    {
+      "id": "chinese.essay-marker",
+      "subject": "chinese",
+      "severity": "fatal",
+      "check": "800字标尺须印在稿纸网格旁",
+      "counterexample": "只在作文题干印不少于800字"
+    },
+    {
+      "id": "english.lexical-register",
+      "subject": "english",
+      "severity": "fatal",
+      "check": "C/D 篇进阶长词兼查频率与去重后的占比",
+      "counterexample": "重复使用同一长词伪造词汇复杂度"
     }
   ]
 }

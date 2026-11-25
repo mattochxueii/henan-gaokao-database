@@ -66,7 +66,7 @@ def forecast(root, subject, region, year, cutoff, document=None):
     require(len(mapping)==1 and mapping[0]["status"] in ("historical_selective","system_announced"),
             "预测需同地区同制度选择性考试")
     series = mapping[0]["series_id"]
-    default = root / "national" / "multisubject" / f"{subject}-observations.json"
+    default = root / "data/national" / "multisubject" / f"{subject}-observations.json"
     if document is None and default.is_file():
         from gaokao import read_json
 

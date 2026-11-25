@@ -95,7 +95,7 @@ class Policy27Tests(TestCase):
                 self.assertEqual("1.25" in student,year < 2027)
 
     def test_legacy_pdf_recheck_finds_old_regime_without_rewriting_record(self):
-        previous = ROOT/"experiments/phase26/english/final"
+        previous = ROOT/"tests/fixtures/phase26/english/final"
         card = review_board.replay(previous/"board")
         initial = digest(previous/"paper.pdf")
         state = review_board.evidence(ROOT,previous,recheck_legacy_policy=True)
@@ -141,7 +141,7 @@ class ScienceCorridor27Tests(TestCase):
         self.assertTrue(any(rule=="physics_calculation" and "力学综合" in text for _,rule,text in issues))
 
     def test_pi_regression_on_printed_single_pendulum_of_phase26(self):
-        source = ROOT/"experiments/phase25/physics-batch/phase26/A/round3/candidate.json"
+        source = ROOT/"tests/fixtures/phase25/physics-batch/phase26/A/round3/candidate.json"
         item = read_json(source)["questions"][10]
         results = list(physics.pi_findings(item,item["proposed_answer"]))
         self.assertTrue(any("9.79" in text and "9.80" in text for text in results),results)

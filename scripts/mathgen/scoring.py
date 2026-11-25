@@ -40,7 +40,7 @@ def scoring_by_number(document, guide):
 
 
 def solution_book(student, document, revisions, guide=None, *, answer_keys=None):
-    from core.marking_standards import MATH_EQUIVALENCE, math_choice
+    from core.marking_standards import math_choice
 
     rubric = scoring_by_number(document, guide) if guide is not None else {}
     solutions = []
@@ -58,16 +58,15 @@ def solution_book(student, document, revisions, guide=None, *, answer_keys=None)
                           card["difference"]]
         if student.get("release_rules") and visible["kind"].endswith("_choice"):
             paragraphs = [*paragraphs, math_choice(visible["kind"], answer_keys[number-1], visible["points"])]
+        elif visible["kind"] == "fill_in":
+            paragraphs = [*paragraphs, f"答对得{visible['points']}分，答错或不答得0分。"]
         elif guide is not None:
             paragraphs = list(paragraphs)
             for step in rubric[number]["steps"]:
                 part = f"（{step['part']}）" if step.get("part") else ""
                 paragraphs.append(f"评分{part}　{step['points']}分　{step['criterion']}")
-            if student.get("release_rules") and visible["kind"]=="constructed_response":
-                paragraphs.append(MATH_EQUIVALENCE)
         solutions.append({**visible, "solution_paragraphs": paragraphs})
-    title = student["title"] + (" · 项目自拟评分" if guide else "")
-    return {**student, "title": title, "questions": solutions}
+    return {**student, "questions": solutions}
 
 
 def render_edition(source, edition, output):

@@ -9,7 +9,7 @@ import tempfile
 from gaokao import ROOT, dumps, read_json, require
 
 OFFICIAL_SKILL = "gaokao-platform"
-SKILLS = (OFFICIAL_SKILL, "henan-math", "chemistry-gaokao")
+SKILLS = (OFFICIAL_SKILL,)
 LINK = "database-link.json"
 
 

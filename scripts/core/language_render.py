@@ -120,7 +120,7 @@ def render(paper, output, answers=None, *, listening=None):
     from mathgen.student_pdf import LinedWritingSpace, answer_height
     from core.marking_standards import generated_only, language_template
     from core.release_checks import CARD
-    mode = paper.get("layout_mode", "practice")
+    mode = paper.get("layout_mode", "exam")
     require(mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
     practice = mode=="practice" and not answers and not listening
     spaces = []
@@ -343,6 +343,7 @@ def export_docx(markdown, output):
     page.set(qn("w:instr"),"PAGE")
     footer._p.append(page)
     prompts={}
+    calculation_spaces={}
     grid=set()
     keep_with_options=set()
     source=Path(markdown)
@@ -369,9 +370,13 @@ def export_docx(markdown, output):
         if paper.get("layout_mode")=="practice":
             for q in paper["questions"]:
                 if formula_paper:
-                    if q.get("parts") and (height := answer_height(q)):
-                        last=q["parts"][-1]
-                        prompts[last["label"]+" "+last["text"].splitlines()[-1]]=round(height/.67)
+                    if height := answer_height(q):
+                        if q.get("parts"):
+                            last=q["parts"][-1]
+                            label=last["label"]+" "+last["text"].splitlines()[-1]
+                        else:
+                            label=q["stem"].splitlines()[-1]
+                        calculation_spaces[label]=height
                     continue
                 first,*rest=q["stem"].strip().splitlines()
                 last=(rest[-1] if rest else f'{q["number"]}.（{q["points"]:g}分）{first}').strip()
@@ -472,6 +477,11 @@ def export_docx(markdown, output):
                 run.font.subscript="sub" in active
                 run.font.superscript="sup" in active
         line_count=prompts.get(content,0)
+        if height := calculation_spaces.get(content):
+            para.paragraph_format.keep_with_next=True
+            blank=doc.add_paragraph()
+            blank.paragraph_format.line_spacing=Cm(height)
+            blank.paragraph_format.space_after=Pt(0)
         option_chain = re.match(r"^[A-G](?:\. |．)",content) and re.match(r"^[A-G](?:\. |．)",following)
         passage_label = re.fullmatch(r"材料[一二三][:：]?|听第\s*\d+\s*段材料.*",content)
         if line_count or keep_math_group or content in keep_with_options or option_chain or passage_label or (

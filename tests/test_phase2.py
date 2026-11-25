@@ -7,7 +7,6 @@ import subprocess
 import sys
 import tempfile
 import unittest
-import venv
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,16 +31,14 @@ WORK.mkdir(exist_ok=True)
 
 
 class DatabaseResearchTests(unittest.TestCase):
-    def test_actual_recovery_key_absent_from_tracked_data_and_logs(self):
+    def test_tracked_files_have_no_credentials(self):
         from security_scan import scan_blob
 
-        token = (ROOT.parent / "henan-math-recovery.key").read_bytes().strip()
+        token = Fernet.generate_key()
         tracked = subprocess.check_output(
             ["git", "ls-files", "-z"], cwd=ROOT, text=True
         ).split("\0")
         paths = {ROOT / p for p in tracked if p and (ROOT / p).is_file()}
-        paths.update((ROOT / "reports").rglob("*.json"))
-        paths.update((ROOT / "reports").rglob("*.txt"))
         for path in paths:
             report = scan_blob(
                 path.relative_to(ROOT).as_posix(), path.read_bytes(), (token,)
@@ -132,7 +129,7 @@ class DatabaseResearchTests(unittest.TestCase):
 
     def test_priority_symbolic_audit_bound_to_candidates(self):
         rows = {q["id"]: q for q in research(ROOT)}
-        checks = read_json(ROOT / "reports/original-math-checks.json")["checks"]
+        checks = read_json(ROOT / "tests/fixtures/original-math-checks.json")["checks"]
         self.assertEqual(len(checks), 10)
         for check in checks:
             self.assertTrue(check["passed"])
@@ -246,7 +243,7 @@ class MathematicalTests(unittest.TestCase):
 
     def test_every_delivered_question_reverified(self):
         for folder in ("sequence", "derivative", "mixed", "full"):
-            record = read_json(ROOT / "experiments" / folder / "run.json")
+            record = read_json(ROOT / "tests/fixtures" / folder / "run.json")
             for q, v in zip(record["questions"], record["verifications"]):
                 with self.subTest(q=q["id"]):
                     assert_fresh(q, v)
@@ -328,114 +325,32 @@ class PrivateStorageTests(unittest.TestCase):
                 restore(archive, key, directory / "target", [])
             self.assertFalse((directory / "target").exists())
 
-    def test_fresh_directory_clean_interpreter_restore_and_skill(self):
-        # A new isolated interpreter and a relocated complete checkout, with no network.
-        with tempfile.TemporaryDirectory(prefix="phase2-fresh-", dir=WORK) as folder:
-            checkout = Path(folder) / "relocated"
-            shutil.copytree(
-                ROOT,
-                checkout,
-                ignore=shutil.ignore_patterns(
-                    ".git",
-                    ".private",
-                    ".agents",
-                    "experiments",
-                    "__pycache__",
-                    "math-reference.enc",
-                ),
-            )
-            # .deps is intentionally copied to test that local dependency loading is relative.
-            interpreter = Path(folder) / "python"
-            venv.EnvBuilder(with_pip=False).create(interpreter)
-            exe = interpreter / (
-                "Scripts/python.exe" if sys.platform == "win32" else "bin/python"
-            )
-            key = ROOT.parent / "henan-math-recovery.key"
-
+    def test_relocated_skill_and_plaintext_database_need_no_recovery_key(self):
+        with tempfile.TemporaryDirectory(prefix="relocated-", dir=WORK) as folder:
+            checkout = Path(folder) / "checkout"
+            for name in ("data","scripts","skills"):
+                shutil.copytree(ROOT/name,checkout/name,ignore=shutil.ignore_patterns("__pycache__"))
+            if (ROOT/".deps").is_dir():
+                shutil.copytree(ROOT/".deps",checkout/".deps")
             def command(*args):
                 result = subprocess.run(
-                    [str(exe), *map(str, args)],
-                    cwd=checkout,
-                    capture_output=True,
-                    encoding="utf-8",
+                    [sys.executable,*map(str,args)],cwd=checkout,capture_output=True,encoding="utf-8"
                 )
-                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertEqual(result.returncode,0,result.stderr)
                 return json.loads(result.stdout)
 
-            restored = command("scripts/private_data.py", "restore", "--key", key)
-            self.assertEqual(restored["files"], 23)
-            validated = command("scripts/cli.py", "validate")
-            self.assertEqual(validated["local_reference_questions"], 38)
-            result = command(
-                "scripts/cli.py",
-                "query",
-                "--year",
-                2025,
-                "--subject",
-                "math",
-                "--number",
-                1,
-            )
-            self.assertIn("1+5i", result[0]["stem"])
-            command("scripts/install_math_skill.py")
-            found = command(
-                ".agents/skills/henan-math/scripts/run.py",
-                "research",
-                "--topic",
-                "数列",
-                "--region",
-                "河南",
-                "--year-from",
-                "2025",
-                "--year-to",
-                "2026",
-            )
-            self.assertEqual(len(found), 4)
-            generated = command(
-                ".agents/skills/henan-math/scripts/run.py",
-                "generate",
-                "--mode",
-                "sequence",
-                "--seed",
-                20261123,
-                "--no-export",
-                "--output",
-                "experiments/recovery-check",
-            )
-            self.assertEqual(generated["structure"]["questions"], 5)
-            verified = command(
-                ".agents/skills/henan-math/scripts/run.py",
-                "verify",
-                "experiments/recovery-check/run.json",
-            )
-            self.assertTrue(all(v["passed"] for v in verified))
-            page = checkout / ".private/math-reference/2025-jin-1.png"
-            page.write_bytes(page.read_bytes() + b"tamper-test")
-            changed = subprocess.run(
-                [str(exe), "scripts/cli.py", "validate"],
-                cwd=checkout,
-                capture_output=True,
-                encoding="utf-8",
-            )
-            self.assertNotEqual(changed.returncode, 0)
-            report = {
-                "fresh_directory": True,
-                "isolated_interpreter": True,
-                "network_used": False,
-                "original_absolute_path_required": False,
-                "restored_files": restored["files"],
-                "candidate_questions": validated["local_reference_questions"],
-                "sequence_research_count": len(found),
-                "generated_and_reverified": len(verified),
-                "dependencies": "从本次已安装依赖副本复制；新电脑也可按requirements.txt安装",
-                "key_separate_from_repository": True,
-                "restored_from_encrypted_parts": True,
-                "changed_page_detected": True,
-            }
-            (ROOT / "reports/fresh-environment.json").write_text(
-                json.dumps(report, ensure_ascii=False, indent=2) + "\n",
-                encoding="utf-8",
-            )
+            destination = checkout/".agents"/"skills"
+            command("scripts/install_skill.py","--destination",destination)
+            runner = destination/"gaokao-platform/scripts/run.py"
+            (row,) = command(runner,"research","math","--year",2025,"--region","河南","--limit",1)
+            self.assertIn("5i",row["stem"])
+            self.assertEqual(row["year"],2025)
+            self.assertFalse((checkout/".private").exists())
+            made=command(runner,"math","generate","--mode","sequence","--seed",20261123,
+                         "--no-export","--output","scratch/sequence")
+            self.assertEqual(made["structure"]["questions"],5)
+            verified=command(runner,"math","verify","scratch/sequence/run.json")
+            self.assertTrue(all(row["passed"] for row in verified))
 
 
 class OutputTests(unittest.TestCase):
@@ -443,7 +358,7 @@ class OutputTests(unittest.TestCase):
         from pypdf import PdfReader
 
         for name in ("sequence", "derivative", "mixed", "full"):
-            directory = ROOT / "experiments" / name
+            directory = ROOT / "tests/fixtures" / name
             for kind in ("paper", "solutions"):
                 reader = PdfReader(directory / (kind + ".pdf"))
                 self.assertGreater(len(reader.pages), 0)

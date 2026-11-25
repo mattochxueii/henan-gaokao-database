@@ -98,7 +98,7 @@ def extract(root, records, identifier):
         pages.pop()
     require(any(page.strip() for page in pages), "PDF 无可提取文本，需要 OCR 或人工录入")
     paper_id = record["paper_id"]
-    output = root / "parsed" / paper_id / f"{record['sha256']}.json"
+    output = root / ".local-data" / "intake" / "parsed" / paper_id / f"{record['sha256']}.json"
     atomic_write(output, dumps({
         "paper_id": paper_id, "file_id": identifier, "source_sha256": record["sha256"],
         "method": "pdftotext -layout", "status": "待校对",
@@ -148,7 +148,7 @@ def main():
         else:
             sources, papers, records, entries = load(root, check_hash=action == "validate")
             solutions = load_solutions(root, entries, sources)
-            curation_path = root / "analysis" / "curation.jsonl"
+            curation_path = root / "data/analysis" / "curation.jsonl"
             curation = {row["question_id"]: row for row in read_lines(curation_path)} if curation_path.exists() else {}
             references = reference_rows(reference_directory(root, options.reference_dir), sources, papers, entries,
                                         check_hash=action == "validate")

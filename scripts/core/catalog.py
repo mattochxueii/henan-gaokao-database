@@ -12,7 +12,7 @@ from gaokao import dumps, read_json, read_lines, require
 from local_archive import public_edition, read_bundle
 from subjects import SCIENCES, SUBJECTS
 
-DATA = Path("national/multisubject")
+DATA = Path("data/national/multisubject")
 LOCAL = Path(".local-data/subject-imports")
 HASH = re.compile(r"[0-9a-f]{64}\Z")
 
@@ -28,13 +28,13 @@ def use(root, subject, region, year):
              (x["subject"], x["region"], x["year"]) == (subject, region, year)]
     if subject == "math" and not items:
         # Math keeps its existing provincial usages, tracks and series IDs.
-        folder = root / "national/catalog/paper-regions.jsonl"
+        folder = root / "data/national/catalog/paper-regions.jsonl"
         if folder.is_file():
             items = [x for x in read_lines(folder) if
                      (x["subject"], x["region_id"], x["year"]) == ("math", region, year)
                      and x["usage_status"] != "candidate_requires_independent_source"]
         else:
-            for p in read_lines(root / "national/source-catalog.jsonl"):
+            for p in read_lines(root / "data/national/source-catalog.jsonl"):
                 if p["subject"] == "math" and p["year"] == year:
                     items.extend({**p, **u} for u in p["regions"]
                                  if u["region_id"] == region and
@@ -242,20 +242,10 @@ CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
             entities[subject.title()+"SourceIndex"] = [
                 {**q,"id":f'{q["paper_id"]}:evidence:{q["number"]:02}'} for q in read_json(evidence)["items"]
             ]
-    for folder in sorted((root / "experiments").glob("phase1[345]/*")):
-        candidate = folder / "candidates.json"
-        receipt = folder / "publication.json"
-        if not (candidate.is_file() and receipt.is_file()):
-            continue
-        doc, release = read_json(candidate), read_json(receipt)
-        subject = doc["subject"]
-        paper_id = folder.parent.name + ":" + subject
-        entities["GeneratedPaper"].append({"id":paper_id,"subject":subject,**release})
-        for q in doc["questions"]:
-            entities["GeneratedQuestion"].append({
-                "id":q["id"], "subject":subject, "version":fingerprint(q),
-                "generated_paper_id":paper_id, "topic":q["topic"],
-            })
+    index = root / DATA / "generated-index.json"
+    if index.is_file():
+        for kind, records in read_json(index).items():
+            entities[kind].extend(records)
     math_targets = root/"forecast/targets.json"
     if math_targets.is_file():
         entities["ForecastTarget"].extend({**x,"subject":"math"} for x in read_json(math_targets)["targets"])
@@ -274,12 +264,12 @@ CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
             db.execute("INSERT INTO exam_use VALUES (?,?,?,?,?,?)",
                        (m["subject"],m["year"],m["region"],m["series_id"],m["paper_id"],dumps(m)))
         for name, kind in (("series","ExamSeries"),("regions","Region"),("systems","ExamSystem"),("curricula","Curriculum")):
-            for row in read_lines(root/"national/catalog"/(name+".jsonl")):
+            for row in read_lines(root/"data/national/catalog"/(name+".jsonl")):
                 db.execute("INSERT OR IGNORE INTO entity VALUES (?,?,?)",(kind,row["id"],dumps(row)))
         math_series = {}
-        math_papers = root/"national/catalog/papers.jsonl"
-        for path in ([math_papers, root/"national/catalog/legacy-papers.jsonl"] if math_papers.is_file()
-                     else [root/"national/source-catalog.jsonl"]):
+        math_papers = root/"data/national/catalog/papers.jsonl"
+        for path in ([math_papers, root/"data/national/catalog/legacy-papers.jsonl"] if math_papers.is_file()
+                     else [root/"data/national/source-catalog.jsonl"]):
             for row in read_lines(path):
                 db.execute("INSERT OR IGNORE INTO entity VALUES (?,?,?)",("Paper",row["id"],dumps(row)))
                 math_series[row["id"]] = row["series_id"]
@@ -287,7 +277,7 @@ CREATE INDEX question_subject_year ON question(subject,year,paper_id,number);
                     for usage in row["regions"]:
                         db.execute("INSERT OR IGNORE INTO exam_use VALUES (?,?,?,?,?,?)",
                                    ("math",row["year"],usage["region_id"],row["series_id"],row["id"],dumps(usage)))
-        paper_regions = root/"national/catalog/paper-regions.jsonl"
+        paper_regions = root/"data/national/catalog/paper-regions.jsonl"
         if paper_regions.is_file():
             for row in read_lines(paper_regions):
                 if row["subject"]=="math":

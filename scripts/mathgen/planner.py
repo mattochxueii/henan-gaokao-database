@@ -11,12 +11,12 @@ def context(root, include_local=True, evaluation_split=None, strict=False, topic
 
     public = public_edition(root)
     records = (
-        list(read_lines(root / "analysis/questions.jsonl"))
+        list(read_lines(root / "data/analysis/questions.jsonl"))
         if include_local and evaluation_split is None and not strict
         else []
     )
     applied = []
-    override_path = root / "analysis/review-overrides.json"
+    override_path = root / "data/analysis/review-overrides.json"
     if override_path.is_file():
         for change in read_json(override_path).get("overrides", []):
             for r in records:
@@ -33,7 +33,7 @@ def context(root, include_local=True, evaluation_split=None, strict=False, topic
                     }
                     applied.append(change)
     national_summary = {}
-    if (root / "national/config.json").is_file():
+    if (root / "data/national/config.json").is_file():
         from national_db import catalog, target, available, planning_references
 
         papers = (
@@ -68,7 +68,7 @@ def context(root, include_local=True, evaluation_split=None, strict=False, topic
     elif not include_local:
         national_summary["dataset_scope"] = "外部模型不接收本地历史题面或逐题分析"
     return {
-        "rules": read_json(root / "analysis/rules.json"),
+        "rules": read_json(root / "data/analysis/rules.json"),
         "analyses": [
             {
                 "question_id": r["question_id"],

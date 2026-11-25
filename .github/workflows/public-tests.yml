@@ -19,58 +19,14 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-liberation
       - run: python -m pip install -r requirements.txt
-      - name: Key-free regressions
-        run: python -m unittest discover -s tests -p test_public.py -v
-      - name: Student-language and PDF review gates
-        run: python -m unittest discover -s tests -p test_phase4.py -v
-      - name: National import and reference policy regressions
-        run: python -m unittest discover -s tests -p test_national.py -v
-      - name: Source calibration and review regressions
-        run: python -m unittest discover -s tests -p test_calibration.py -v
-      - name: Whole-paper placement and structural regressions
-        run: python -m unittest discover -s tests -p test_paper_quality.py -v
-      - name: Forecast temporal, freeze and mode regressions
-        run: python -m unittest discover -s tests -p 'test_forecast*.py' -v
-      - name: Blind benchmark and trial intake regressions
-        run: python -m unittest discover -s tests -p test_feature_benchmark.py -v
-      - name: Multisubject separation, import and science review gates
-        run: python -m unittest discover -s tests -p test_multisubject.py -v
-      - name: Physics evidence, prediction boundaries and trial
-        run: python -m unittest discover -s tests -p test_physics_quality.py -v
-      - name: Chemistry evidence, science validation and trial
-        run: python -m unittest discover -s tests -p test_chemistry_quality.py -v
-      - name: Tracked science intake and paper workflow regressions
-        run: python -m unittest discover -s tests -p test_science_intake.py -v
-      - name: Six-subject editorial publication gate
-        run: python -m unittest discover -s tests -p test_quality_audit.py -v
-      - name: Main-subject quality gate and frozen math trends
-        run: python -m unittest discover -s tests -p test_phase23_quality.py -v
-      - name: Practice and exam layout, coverage and chemical competition
-        run: python -m unittest discover -s tests -p test_phase24_rules.py -v
-      - name: Batch planning, blind scoring and figure regressions
-        run: python -m unittest discover -s tests -p test_batch_review.py -v
-      - name: Nonchoice illustrations, Chinese labels and response spaces
-        run: python -m unittest discover -s tests -p test_phase26_print.py -v
-      - name: Dated policy, science allocation, section merge and offline review
-        run: python -m unittest discover -s tests -p 'test_phase27*.py' -v
-      - name: Standard science simulation and editable handouts
-        run: python -m unittest discover -s tests -p test_science_publication.py -v
-      - name: Standard release red-team, formatting and review protocol
+      - name: Full regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Key-free installation and policy smoke test
         run: |
-          python -m unittest discover -s tests -p test_redteam_samples.py -v
-          python -m unittest discover -s tests -p test_standard_release.py -v
-      - name: Build and test the isolated public candidate
-        run: |
-          python scripts/build_public_release.py --output "$RUNNER_TEMP/gaokao-public"
-          cd "$RUNNER_TEMP/gaokao-public"
-          python scripts/local_data.py init
-          python scripts/install_math_skill.py
-          python scripts/install_skill.py
-          python .agents/skills/gaokao-platform/scripts/run.py subjects
-          python .agents/skills/henan-math/scripts/run.py research --series project-original --limit 1
-          python -m unittest discover -s tests -v
-      - name: Ensure private material is absent
-        run: |
-          python -c "from pathlib import Path; import subprocess; p=subprocess.check_output(['git','ls-files','-z'],text=True).split('\0'); assert not any(x.endswith('.key') or x.startswith('.private/') for x in p if x); assert not Path('.private/math-reference').exists(); assert not Path('.private/national-reference').exists()"
-
+          python scripts/install_skill.py --destination "$RUNNER_TEMP/skills"
+          python "$RUNNER_TEMP/skills/gaokao-platform/scripts/run.py" exam-policy english 2027
+          python scripts/math_trends.py
+      - name: Release hygiene
+        run: python scripts/check_release_hygiene.py

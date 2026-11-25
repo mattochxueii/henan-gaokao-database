@@ -17,17 +17,15 @@ MAX_SIZE = 64 * 1024 * 1024
 def reference_directory(root, override=None):
     if override is not None:
         return override.resolve()
-    config_path = root / "database.json"
+    config_path = root / "data/database.json"
     if not config_path.exists():
         return None
     config = read_json(config_path)
     target = relative_path(root, config["reference_dir"])
-    require(
-        (target / "manifest.json").is_file(),
-        "私有题面尚未恢复，请运行 scripts/private_data.py restore --key <备份密钥文件>",
-    )
+    if not (target / "manifest.json").is_file():
+        return None
     index = relative_path(
-        root, config.get("backup_inventory", "private-data/inventory.json")
+        root, config.get("backup_inventory", ".private/backup/inventory.json")
     )
     if index.exists():
         for record in read_json(index)["files"]:

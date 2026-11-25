@@ -67,5 +67,7 @@ class SciencePublicationTests(TestCase):
             self.assertEqual(doc.paragraphs[0].text, "计算动能。")
             self.assertIn("（1） 速率为________。", doc.paragraphs[2].text)
             self.assertEqual(doc.paragraphs[3].text, "（1） 求初始动能。")
-            self.assertEqual(len(doc.paragraphs[4:]), 10)
+            (workspace,)=doc.paragraphs[4:]
+            self.assertFalse(workspace.text)
+            self.assertIsNone(workspace._p.find(".//{*}pBdr"))
             self.assertTrue(all(not p.text for p in doc.paragraphs[4:]))

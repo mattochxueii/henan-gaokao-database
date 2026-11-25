@@ -29,7 +29,7 @@ def report(root):
         status = grade(r)
         by_series[r["series_id"]][status] += 1
         by_year[f"{r['series_id']}:{r['year']}"][status] += 1
-    alignment = read_json(root / "reports/phase5-auto-alignment.json")["records"]
+    alignment = read_json(root / "work/reports/phase5-auto-alignment.json")["records"]
     anomalies = [
         row["occurrence_id"]
         for row in alignment

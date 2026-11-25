@@ -19,6 +19,7 @@ PATTERNS = {
     "assigned_secret": rb"""(?im)^\s*(?:api_key|access_token|refresh_token|client_secret|recovery_key|gh_token|github_token)\s*[:=]\s*["']?([A-Za-z0-9+/_=.-]{24,})""",
 }
 CHECKS = {name:re.compile(pattern) for name,pattern in PATTERNS.items()}
+LOCAL_PATH = re.compile(rb"(?i)\b[a-z]:[/\\]+(?:users|chatgptfile)[/\\]+")
 
 
 def private_name(name):
@@ -44,7 +45,10 @@ def scan(root):
         if private_name(file.name):
             findings.append({"location":path,"kind":"private_filename"})
         elif file.is_file() and not file.is_symlink():
-            inspect(file.read_bytes(),path)
+            data = file.read_bytes()
+            inspect(data,path)
+            if LOCAL_PATH.search(data):
+                findings.append({"location":path,"kind":"local_absolute_path"})
     for directory,subs,files in os.walk(root):
         subs[:] = [d for d in subs if d != ".git"]
         for name in files:

@@ -116,7 +116,7 @@ def main():
     )
     assert all(item["passed"] for item in results)
     atomic_json(
-        ROOT / "reports/original-math-checks.json",
+        ROOT / "work/reports/original-math-checks.json",
         {
             "checks": results,
             "passed": len(results),

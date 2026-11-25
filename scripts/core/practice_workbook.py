@@ -94,9 +94,10 @@ def validate_authoring_context(root, subject, context_file, candidate):
     return bound_reference(actual,candidate)
 
 
-def selection(root, subject, *, year=None, region=None, kind=None, topic=None, question_ids=(), limit=6, adaptation=False):
+def selection(root, subject, *, year=None, region=None, kind=None, topic=None,
+              question_ids=(), limit=6, adaptation=False, paper_id=None):
     require(subject in PAPER_SUBJECTS and limit>0, "学科或选题数无效")
-    pool=research(root,subject,year=year,region=region,topic=topic,limit=None,
+    pool=research(root,subject,year=year,region=region,topic=topic,limit=None,paper_id=paper_id,
                   exam_kind="adaptation_exam" if adaptation else "official_exam")
     if question_ids:
         by_id={q.get("occurrence_id",q["id"]):q for q in pool}

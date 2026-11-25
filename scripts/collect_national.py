@@ -51,7 +51,7 @@ def fetch(repo, commit, item, destination):
 
 
 def collect():
-    config = read_json(ROOT / "national/acquisition.json")
+    config = read_json(ROOT / "data/national/acquisition.json")
     directory = ROOT / ".private/national-reference"
     directory.mkdir(parents=True, exist_ok=True)
     results = []
@@ -92,7 +92,7 @@ def collect():
             except Exception as e:
                 failures.append({"id": row["id"], "reason": str(e)})
     asset_index = {
-        r["path"]: r for r in read_json(ROOT / "national/asset-manifest.json")
+        r["path"]: r for r in read_json(ROOT / "data/national/asset-manifest.json")
     }
     needed = sorted({name for row in results for name in row["files"]["asset_refs"]})
     assets = []

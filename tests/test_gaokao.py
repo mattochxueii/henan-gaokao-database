@@ -98,7 +98,7 @@ class IntakeTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(dir=ROOT / "tests")
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        shutil.copytree(ROOT / "metadata", self.root / "metadata",
+        shutil.copytree(ROOT / "data/metadata", self.root / "data/metadata",
                         ignore=shutil.ignore_patterns("files", ".intake.lock"))
         self.input = self.root / "sample.pdf"
         self.input.write_bytes(b"%PDF-1.4\nsynthetic fixture only\n")
@@ -122,14 +122,14 @@ class IntakeTests(unittest.TestCase):
         self.assertNotEqual(first["id"], second["id"])
         self.assertEqual(first["path"], second["path"])
         self.assertEqual(first["sha256"], digest(self.input))
-        self.assertEqual(len(list(self.root.glob("originals/**/*.pdf"))), 1)
+        self.assertEqual(len(list(self.root.glob(".local-data/intake/originals/**/*.pdf"))), 1)
         self.assertEqual(len(load(self.root, check_hash=True)[2]), 2)
 
     def test_refuse_missing_permission_before_copy(self):
         self.receipt["allow_local_storage"] = False
         with self.assertRaisesRegex(ValueError, "本地保存权限"):
             self.import_sample()
-        self.assertFalse((self.root / "originals").exists())
+        self.assertFalse((self.root / ".local-data/intake/originals").exists())
 
     def test_conflicting_retry_preserves_receipt(self):
         first = self.import_sample()
@@ -145,7 +145,7 @@ class IntakeTests(unittest.TestCase):
             load(self.root, check_hash=True)
 
     def test_register_is_idempotent_and_rejects_mock_paper(self):
-        original = self.root / "metadata" / "papers" / f"{MATH}.json"
+        original = self.root / "data/metadata" / "papers" / f"{MATH}.json"
         self.assertEqual(register(self.root, original), MATH)
         value = read_json(original)
         value["session"] = "mock"
@@ -168,10 +168,10 @@ class IntakeTests(unittest.TestCase):
         self.input.write_bytes(b"<html>not a PDF</html>")
         with self.assertRaisesRegex(ValueError, "文件头不匹配"):
             self.import_sample()
-        self.assertFalse((self.root / "originals").exists())
+        self.assertFalse((self.root / ".local-data/intake/originals").exists())
 
     def test_index_with_stem_is_rejected(self):
-        path = self.root / "questions" / "2025" / "math" / f"{MATH}.jsonl"
+        path = self.root / "data/questions" / "2025" / "math" / f"{MATH}.jsonl"
         path.parent.mkdir(parents=True)
         source = ROOT / path.relative_to(self.root)
         row = json.loads(source.read_text(encoding="utf-8").splitlines()[0])

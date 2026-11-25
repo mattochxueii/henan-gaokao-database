@@ -49,10 +49,7 @@ def option_grid(options, width, compact=False):
             for i, option in enumerate(options):
                 option.wrap(widths[i % columns] - 12, 1000)
             lengths = [len(option.blPara.lines) for option in options]
-            rows = [lengths[i:i + columns] for i in range(0, len(lengths), columns)]
-            fits = all(len(set(row)) == 1 for row in rows) and sum(map(max, rows)) <= (
-                1 if columns == 4 else 3
-            ) and all(
+            fits = all(length == 1 for length in lengths) and all(
                 line.extraSpace >= -1e-6 for option in options for line in option.blPara.lines
             )
         else:
@@ -97,7 +94,7 @@ def science_section_note(kind, group, partial_credit=None, *, exam_policy=None, 
     return text
 
 
-class AnswerSpace(Flowable):
+class BlankCalculationSpace(Flowable):
     """An empty writable area with faint corners, measured on the printed page."""
     def __init__(self, number, height_cm, placements, *, continuation=False):
         super().__init__()
@@ -112,7 +109,27 @@ class AnswerSpace(Flowable):
         return self.width, self.height
 
     def split(self, avail_width, avail_height):
-        # Split long blank areas at a natural page boundary with a usable block on each page.
+        return []
+
+    def draw(self):
+        canvas = self.canv
+        canvas.saveState()
+        canvas.setStrokeGray(.84)
+        canvas.setLineWidth(.35)
+        for x, direction in ((0,1),(self.width,-1)):
+            for y, leg in ((4,1),(self.height-4,-1)):
+                canvas.lines([(x,y,x+9*direction,y),(x,y,x,y+6*leg)])
+        canvas.restoreState()
+        self.record()
+
+    def record(self):
+        self.placements.append({"number":self.number,"page":self.canv.getPageNumber(),
+                                "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
+
+
+class LinedWritingSpace(BlankCalculationSpace):
+    def split(self, avail_width, avail_height):
+        # Split long prose areas at a natural page boundary with a usable block on each page.
         minimum = min(2.75 * cm, self.writable / 2)
         if self.continuation or self.writable < 4*cm or avail_height < minimum + 8:
             return []
@@ -121,24 +138,6 @@ class AnswerSpace(Flowable):
                 type(self)(self.number, (self.writable-first)/cm, self.placements, continuation=True)]
 
     def draw(self):
-        c = self.canv
-        c.saveState()
-        c.setStrokeGray(.72)
-        c.setLineWidth(.35)
-        for x, direction in ((0,1),(self.width,-1)):
-            for y, leg in ((4,1),(self.height-4,-1)):
-                c.lines([(x,y,x+9*direction,y),(x,y,x,y+6*leg)])
-        c.setFillGray(.46)
-        c.setFont(chinese_font(), 8)
-        suffix = "（续）" if self.continuation else ""
-        c.drawString(12, self.height-12, f"第 {self.number} 题作答区{suffix}")
-        c.restoreState()
-        self.placements.append({"number":self.number,"page":c.getPageNumber(),
-                                "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
-
-
-class LinedWritingSpace(AnswerSpace):
-    def draw(self):
         canvas=self.canv
         canvas.saveState()
         canvas.setStrokeGray(.71)
@@ -146,14 +145,15 @@ class LinedWritingSpace(AnswerSpace):
         for y in range(8,int(self.height)-3,19):
             canvas.line(0,y,self.width,y)
         canvas.restoreState()
-        self.placements.append({"number":self.number,"page":canvas.getPageNumber(),
-                                "height_cm":round(self.writable/cm,2),"continuation":self.continuation})
+        self.record()
 
 
 def answer_height(q):
     if q["kind"] not in ("constructed_response","response","writing"):
         return 0
     points = q["points"]
+    if q.get("response_area") == "calculation":
+        return 5
     # A blank in just one part must not suppress the workspace for a later proof.
     if inline_response_only(q):
         return 0
@@ -168,7 +168,8 @@ def answer_height(q):
 
 def formula_image(formula, filename):
     """Use the raster backend's ink bounds so italic glyphs are not clipped."""
-    formula=re.sub(r"(?<![A-Za-z\\{])([ie])(?![A-Za-z}])",lambda m:r"\mathrm{"+m[1]+"}",formula)
+    formula=re.sub(r"\\(?:mathrm|text)\{[^{}]*\}|\\[A-Za-z]+|(?<![A-Za-z])([ie])(?![A-Za-z])",
+                   lambda m:r"\mathrm{"+m[1]+"}" if m[1] else m[0],formula)
     with rc_context({"mathtext.fontset": "stix"}):
         parsed = MATH_RASTER.parse(
             "$" + formula + "$", dpi=240, prop=FontProperties(size=12)
@@ -252,9 +253,10 @@ def draw_figure(data, image):
         span=np.maximum(np.ptp(points,axis=0),1e-9)
         hidden=hidden_edges(data["vertices"],data["edges"],center+10*span*direction)
         for a,b in data["edges"]:
-            ax.plot(*zip(data["vertices"][a], data["vertices"][b]),
-                    color="black", linewidth=1.15,
-                    linestyle="--" if frozenset((a,b)) in hidden else "-")
+            (line,) = ax.plot(*zip(data["vertices"][a], data["vertices"][b]),
+                              color="black", linewidth=1.15)
+            if frozenset((a,b)) in hidden:
+                line.set_dashes((5, 4))
         ax.set_axis_off()
         for name, point in data["vertices"].items():
             px,py,_ = proj3d.proj_transform(*point, ax.get_proj())
@@ -266,15 +268,24 @@ def draw_figure(data, image):
                             xytext=data.get("label_offsets", {}).get(name,[3,3]),
                             textcoords="offset points", fontsize=12)
         for mark in data.get("labels", []):
-            px, py, _ = proj3d.proj_transform(*mark["at"], ax.get_proj())
+            edge = mark.get("edge")
+            if not edge:
+                continue
+            require(any(set(edge) == set(pair) for pair in data["edges"]), "尺寸标注须绑定图中棱")
+            midpoint = np.mean([data["vertices"][name] for name in edge], axis=0)
+            px, py, _ = proj3d.proj_transform(*midpoint, ax.get_proj())
+            center_x, center_y, _ = proj3d.proj_transform(*center, ax.get_proj())
+            outward = np.array([px-center_x,py-center_y])
+            norm = np.linalg.norm(outward)
+            offset = 12*outward/norm if norm else (0,12)
             ax.annotate("$" + mark["math"] + "$", (px, py),
-                        xytext=mark.get("offset", [3, 3]),
-                        textcoords="offset points", fontsize=11)
+                        xytext=offset,textcoords="offset points",ha="center",va="center",fontsize=11)
     else:
         require(data["type"] == "coordinate", "不支持的试卷图形")
         ax = fig.add_subplot()
         fig.subplots_adjust(left=.12,right=.93,bottom=.13,top=.90)
         ax.set(xlim=data["xlim"],ylim=data["ylim"],xticks=[],yticks=[])
+        ax.set_aspect("equal", adjustable="box")
         ax.set_axis_off()
         if data.get("axes", True):
             xmin,xmax=data["xlim"]
@@ -303,7 +314,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     policy = paper.get("exam_policy")
     if not policy and paper.get("subject") in ("math", "physics"):
         policy = guess_snapshot(ROOT, paper["subject"], paper.get("title",""))
-    mode = layout_mode or paper.get("layout_mode", "practice")
+    mode = layout_mode or paper.get("layout_mode", "exam")
     require(mode in LAYOUT_MODES, "排版模式须为 practice 或 exam")
     practice = not solutions and mode == "practice"
     placements = []
@@ -415,8 +426,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     if math_compact and solutions:
         subtitle = ParagraphStyle("math-solution-subtitle", parent=title, fontSize=13,
                                   leading=19, spaceAfter=12)
-        story = [para(paper["title"].removesuffix(" · 项目自拟评分"), title),
-                 para("参考答案与解析（含项目自拟评分）", subtitle)]
+        story = [para(paper["title"], title), para("参考答案与评分标准", subtitle)]
     else:
         story = [para(paper["title"] + ("　参考答案与解析" if solutions else ""), title)]
     if not solutions:
@@ -448,6 +458,8 @@ def render(paper, path, solutions=False, *, layout_mode=None):
     groups = {kind: list(items) for kind, items in groupby(paper["questions"], key=lambda q: q["kind"])}
     section_number = 0
     md = ["# " + paper["title"], ""]
+    if math_compact and solutions:
+        md += ["参考答案与评分标准", ""]
     if compact and not solutions:
         md += [f'满分{paper["total_points"]}分，考试时间{paper["minutes"]}分钟。', ""]
         if mode=="exam":
@@ -458,19 +470,29 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             "排版输入混入内部数据",
         )
         section = []
-        if q["kind"] != previous and not solutions:
+        if q["kind"] != previous and (not solutions or math_compact):
             section_number += 1
             prefix = (
                 "一二三四"[section_number - 1] + "、" if section_number <= 4 else ""
             )
             label = prefix + section_titles[q["kind"]]
             section.append(para(label, heading))
-            if compact or q["kind"] == "multiple_choice":
+            if solutions:
+                md.extend([f"## {label}", ""])
+                if q["kind"] == "constructed_response":
+                    from core.marking_standards import MATH_EQUIVALENCE
+
+                    section.append(para(MATH_EQUIVALENCE, note))
+                    md.extend([MATH_EQUIVALENCE, ""])
+            elif compact or q["kind"] == "multiple_choice":
                 if math_compact and q["kind"] in ("fill_in", "constructed_response"):
                     group = groups[q["kind"]]
                     prompt = ("请将答案填在横线上。" if q["kind"] == "fill_in"
                               else "解答应写出文字说明、证明过程或演算步骤。")
-                    instructions = f"本大题共{len(group)}小题，共{sum(item['points'] for item in group)}分。" + prompt
+                    each = ""
+                    if q["kind"] == "fill_in" and len({item["points"] for item in group}) == 1:
+                        each = f"每小题{group[0]['points']}分，"
+                    instructions = f"本大题共{len(group)}小题，{each}共{sum(item['points'] for item in group)}分。" + prompt
                 else:
                     instructions = science_section_note(q["kind"], groups[q["kind"]], paper.get("partial_credit"),
                                                         exam_policy=policy,subject=paper.get("subject"))
@@ -479,7 +501,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             previous = q["kind"]
         choice = q["kind"] in ("single_choice", "multiple_choice")
         number = f"{q['order']}."
-        if not compact or not choice:
+        if not compact or (not choice and not (math_compact and q["kind"] == "fill_in")):
             number += f"（{q['points']}分）"
         block = section
         if not compact:
@@ -560,7 +582,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             if q["kind"] == "fill_in" and "___" not in q["stem"]:
                 block.append(para("答：________________。", note))
             if height:
-                block.append(LinedWritingSpace(q["order"], height, placements))
+                block.append(BlankCalculationSpace(q["order"], height, placements))
             if keep_response:
                 # Leave the extended calculation and its blank together when they fit a sheet.
                 story.append(KeepTogether(block))
@@ -580,7 +602,7 @@ def render(paper, path, solutions=False, *, layout_mode=None):
             story.append(KeepTogether(block))
             if index + 1 < len(paper["questions"]):
                 story.append(Spacer(1, 12))
-        md.extend([f"## {q['order']}.（{q['points']}分）", ""])
+        md.extend([f"## {number}" if math_compact and q["kind"] == "fill_in" else f"## {q['order']}.（{q['points']}分）", ""])
         from core.native_tables import markdown_table
         md.extend(
             q.get("solution_paragraphs", [])

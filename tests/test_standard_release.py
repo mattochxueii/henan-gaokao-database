@@ -23,6 +23,43 @@ def simple(number=1):
 
 
 class ReleaseLogicTests(TestCase):
+    def test_new_math_surface_and_module_guards(self):
+        from core.release_checks import math_checks
+
+        rows=[{"kind":"constructed_response","parts":[]} for _ in range(19)]
+        rows[0]={"kind":"single_choice","options":dict(zip("ABCD",
+                    [r"\([-18,-2)\)",r"\((-18,-2]\)",r"\((-18,-2)\)",r"\((0,2)\)"]))}
+        texts=[""]*19
+        texts[1]=r"已知 \([a,2]\cap B\ne\varnothing\)。"
+        rules={issue[1] for issue in math_checks({},rows,texts)}
+        self.assertTrue({"math_parameter_interval","math_interval_options","math_short_function",
+                         "math_spatial_angle","math_random_variable"}<=rules)
+        texts[1]=r"已知 \(\{x\mid a\leq x\leq2\}\cap B\ne\varnothing\)，且考查对数函数。"
+        texts[14]="求直线与平面所成的角。"
+        texts[16]="写出随机变量的分布列和数学期望。"
+        rows[0]["options"]["C"]=r"\((-19,-2)\)"
+        self.assertFalse(rules.intersection({"math_parameter_interval","math_interval_options",
+                                           "math_short_function","math_spatial_angle","math_random_variable"})
+                         & {issue[1] for issue in math_checks({},rows,texts)})
+
+    def test_physics_requires_math_symbols_and_declared_constants(self):
+        from core.release_checks import physics_notation_findings
+
+        q={"kind":"constructed_response","stem":"板长 L，质量为 m，取周期为 T。"}
+        solution=r"所求功为 \(mgL\)，所得速度为 \(\sqrt{2GM/r}\)。"
+        issues=list(physics_notation_findings(13,q,solution))
+        self.assertEqual([row[1] for row in issues],["physics_italic_quantity",
+                         "physics_undeclared_constant","physics_undeclared_constant"])
+        q["stem"]=r"板长 \(L\)，质量为 \(m\)，周期为 \(T\)。重力加速度为 \(g\)，万有引力常量为 \(G\)。"
+        self.assertEqual(list(physics_notation_findings(13,q,solution)),[])
+
+    def test_repeating_one_long_word_cannot_pass_english_register(self):
+        from core.release_checks import reading_register
+
+        fraction,variety=reading_register("school " * 70 + "improvement " * 30)
+        self.assertGreater(fraction,.11)
+        self.assertLess(variety,.06)
+
     def test_math_progression_uses_bound_part_labels_and_text(self):
         from core.release_checks import math_checks
 
@@ -151,6 +188,89 @@ class ReleaseLogicTests(TestCase):
 
 
 class ReleaseRenderTests(TestCase):
+    def test_calculation_area_has_no_writing_lines_and_stays_with_question(self):
+        for subject,layout in (("math","math_compact"),("physics","science"),("chemistry","science")):
+            with self.subTest(subject=subject), TemporaryDirectory() as folder:
+                q={"id":"test:calculation","order":1,"points":15,"kind":"constructed_response",
+                   "stem":"写出本题的推导。","parts":[],"options":{}}
+                if subject=="chemistry":
+                    q.update(stem="写出产物____及合成路线。",response_area="calculation")
+                paper={"title":"演算区测试","subject":subject,"layout":layout,"minutes":30,
+                       "total_points":15,"questions":[q]}
+                path=Path(folder)/"paper.pdf"
+                render(paper,path,layout_mode="practice")
+                (area,)=read_json(path.with_suffix(".layout.json"))["answer_areas"]
+                self.assertFalse(area["continuation"])
+                page=PdfReader(path).pages[area["page"]-1]
+                self.assertIn("写出",page.extract_text())
+                self.assertEqual(self.long_horizontal_strokes(page),0)
+
+    @staticmethod
+    def long_horizontal_strokes(page):
+        count=0
+        start=None
+        for operands,operator in page.get_contents().operations:
+            if operator==b"m":
+                start=tuple(map(float,operands))
+            elif operator==b"l" and start is not None:
+                end=tuple(map(float,operands))
+                if abs(end[0]-start[0])>420 and abs(end[1]-start[1])<.001:
+                    count+=1
+                start=end
+        return count
+
+    def test_lined_writing_area_is_emitted_for_chinese_and_english(self):
+        with TemporaryDirectory() as folder:
+            root=Path(folder)
+            for subject,n,section,stem in [
+                ("chinese",4,"reading","结合材料解释这一段。"),
+                ("english",66,"application","Write a short letter.\nDear Alex,\nYours,\nLi Hua"),
+                ("english",67,"continuation","Continue the story.\nOne day, she heard a knock.\nAt dawn, he returned.")
+            ]:
+                q={"number":n,"kind":"response" if subject=="chinese" else "writing","section":section,
+                   "stem":stem,"options":{},"points":6}
+                output=root/f"{subject}-{n}"
+                language_render.render({"title":"Writing","subject":subject,"layout_mode":"practice",
+                    "sections":[{"id":section,"title":"写作"}],"questions":[q],"materials":{},
+                    "minutes":30,"points":6},output)
+                self.assertGreater(sum(self.long_horizontal_strokes(p) for p in PdfReader(output.with_suffix(".pdf")).pages),2)
+
+    def test_marker_in_essay_prompt_does_not_count_as_grid_marker(self):
+        with TemporaryDirectory() as folder:
+            path=Path(folder)/"paper"
+            q={**simple(22),"stem":"请写一篇不少于800字的文章。"}
+            paper={"layout_mode":"practice","title":"印刷验收","minutes":150,"points":60,
+                   "subject":"chinese","sections":[{"id":"essay","title":"写作"}],
+                   "materials":{},"questions":[q]}
+            original=language_render.ManuscriptLines.draw
+            def suppress_marker(row):
+                if row.row==40:
+                    row.row=41
+                original(row)
+            with mock.patch.object(language_render.ManuscriptLines,"draw",suppress_marker):
+                language_render.render(paper,path)
+            actual=layout_evidence(path.with_suffix(".pdf"))
+            self.assertEqual(actual["essay_grid_cells"],1000)
+            self.assertFalse(actual["essay_800_mark"])
+
+    def test_math_equal_coordinate_aspect_and_long_option_fallback(self):
+        from matplotlib.figure import Figure
+        from reportlab.lib.styles import ParagraphStyle
+        from mathgen.cjk_layout import ExamParagraph
+        from mathgen.student_pdf import draw_figure, option_grid
+
+        coordinate={"type":"coordinate","xlim":[-3,3],"ylim":[-1,1],
+                    "paths":[{"points":[(0,0),(1,1)]}]}
+        with mock.patch.object(Figure,"savefig",autospec=True) as save:
+            draw_figure(coordinate,"not-written.png")
+        axis=save.call_args.args[0].axes[0]
+        axis.apply_aspect()
+        origin,x,y=axis.transData.transform([(0,0),(1,0),(0,1)])
+        self.assertAlmostEqual(x[0]-origin[0],y[1]-origin[1])
+        options=[ExamParagraph(value,ParagraphStyle("option")) for value in
+                 ["A. "+"the answer has too many words to fit two narrow exam columns "*2,"B. 1","C. 2","D. 3"]]
+        self.assertEqual(option_grid(options,320,compact=True)._ncols,1)
+
     def test_practice_writing_grid_and_exam_direction_are_printed(self):
         with TemporaryDirectory() as folder:
             root=Path(folder)

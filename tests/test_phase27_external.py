@@ -41,7 +41,7 @@ def response(local, n=1, rule="english.distractor"):
 
 class ExternalReview27Tests(TestCase):
     def test_offline_live_export_limits_contents(self):
-        source = ROOT/"experiments/phase26/english/final"
+        source = ROOT/"tests/fixtures/phase26/english/final"
         with TemporaryDirectory() as temp:
             out = Path(temp)/"blind"
             with contextlib.redirect_stdout(StringIO()):

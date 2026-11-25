@@ -20,7 +20,7 @@ def create_national(root, key_file, version="national-v1"):
     validate(root)
     archive = root / ".private" / (version + ".enc")
     metadata = backup(private_folder(root), archive, key_file)
-    parts = root / "private-data" / version / "backup-parts.json"
+    parts = root / ".private" / "backup" / version / "backup-parts.json"
     chunks = split_backup(archive, parts, chunk_bytes=512000)
     config = {
         "encrypted_backup": archive.relative_to(root).as_posix(),
@@ -32,7 +32,7 @@ def create_national(root, key_file, version="national-v1"):
         "key_in_repository": False,
         "version": version,
     }
-    atomic_json(root / "national/backup.json", config)
+    atomic_json(root / ".private/backup/national.json", config)
     return {
         "files": len(metadata["files"]),
         "parts": len(chunks["parts"]),
@@ -42,7 +42,7 @@ def create_national(root, key_file, version="national-v1"):
 
 
 def restore_national(root, key_file, destination=None):
-    cfg = read_json(root / "national/backup.json")
+    cfg = read_json(root / ".private/backup/national.json")
     archive = resolve_archive(root, cfg, cfg["cipher_sha256"])
     destination = destination or private_folder(root)
     return restore(archive, key_file, destination, cfg["files"])

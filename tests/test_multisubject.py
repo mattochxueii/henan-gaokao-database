@@ -23,7 +23,7 @@ from subjects import SCIENCES, science_verifier
 
 
 def example(subject, filename="candidates.json"):
-    return read_json(ROOT / "experiments/phase13" / subject / filename)
+    return read_json(ROOT / "tests/fixtures/phase13" / subject / filename)
 
 
 class MultisubjectTests(unittest.TestCase):
@@ -100,7 +100,7 @@ class MultisubjectTests(unittest.TestCase):
             self.assertEqual(receipt["review_sha256"],fingerprint(example(subject,"review.json")))
             self.assertEqual(receipt["verification_sha256"],fingerprint(example(subject,"verification.json")))
             for label in ("paper","solutions"):
-                path = ROOT / "experiments/phase13" / subject / (label+".pdf")
+                path = ROOT / "tests/fixtures/phase13" / subject / (label+".pdf")
                 self.assertEqual(receipt["visual"][label+"_sha256"],digest(path))
 
     def test_forecast_does_not_pool_subjects_or_year_duplicates(self):

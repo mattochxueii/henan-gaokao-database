@@ -5,8 +5,8 @@ import re
 from analysis_db import fingerprint
 from gaokao import digest, read_lines, relative_path, require
 
-LEDGER = "national/research/calibration.jsonl"
-RESOLUTIONS = "national/research/calibration-resolutions.jsonl"
+LEDGER = "data/national/research/calibration.jsonl"
+RESOLUTIONS = "data/national/research/calibration-resolutions.jsonl"
 ANALYSIS_FIELDS = (
     "knowledge",
     "methods",

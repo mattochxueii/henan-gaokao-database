@@ -71,7 +71,7 @@ def compare(data):
 
 if __name__ == "__main__":
     result = compare(rows(ROOT))
-    atomic_json(ROOT / "reports/phase5-structured-dedup.json", result)
+    atomic_json(ROOT / "work/reports/phase5-structured-dedup.json", result)
     print(
         json.dumps(
             {

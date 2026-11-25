@@ -134,7 +134,7 @@ def main():
         elif args.action == "sources":
             result = [
                 row
-                for row in read_lines(root / "national/source-catalog.jsonl")
+                for row in read_lines(root / "data/national/source-catalog.jsonl")
                 if args.year is None or row["year"] == args.year
             ]
         elif args.action == "prepare":

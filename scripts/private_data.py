@@ -21,10 +21,10 @@ def main():
             command.add_argument("--destination", type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
-    config = read_json(root / "database.json")
+    config = read_json(root / "data/database.json")
     archive = relative_path(root, config["encrypted_backup"])
     index = relative_path(
-        root, config.get("backup_inventory", "private-data/inventory.json")
+        root, config.get("backup_inventory", ".private/backup/inventory.json")
     )
     if args.action == "backup":
         parts_manifest = relative_path(root, config["backup_parts_manifest"])

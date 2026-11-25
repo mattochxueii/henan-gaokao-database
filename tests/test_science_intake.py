@@ -100,7 +100,7 @@ class ScienceIntakeTests(unittest.TestCase):
 
 class SciencePublicationTests(unittest.TestCase):
     def test_independent_channel_does_not_require_an_operator_but_binds_review(self):
-        trial = ROOT / "experiments/phase16/henan-chem-100"
+        trial = ROOT / "tests/fixtures/phase16/henan-chem-100"
         candidate = read_json(trial / "source/candidates.json")
         answer = read_json(trial / "independent-review.json")["items"][0]
         candidate["questions"] = candidate["questions"][:1]
@@ -130,7 +130,7 @@ class SciencePublicationTests(unittest.TestCase):
             self.assertTrue((folder / "solutions.pdf").is_file())
 
     def test_actual_chemistry_publication_and_bound_source(self):
-        folder = ROOT / "experiments/phase16/henan-chem-100"
+        folder = ROOT / "tests/fixtures/phase16/henan-chem-100"
         paper = check_publication(folder, read_json(folder / "publication.json"))
         self.assertEqual((paper["total_points"], paper["minutes"]), (100, 75))
         self.assertEqual([q["points"] for q in paper["questions"]], [3] * 14 + [14, 14, 15, 15])

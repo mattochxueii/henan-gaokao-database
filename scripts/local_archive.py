@@ -22,7 +22,7 @@ DIGEST = re.compile(r"[0-9a-f]{64}\Z")
 
 
 def public_edition(root):
-    config = root / "database.json"
+    config = root / "data/database.json"
     return config.is_file() and read_json(config).get("edition") == "public"
 
 

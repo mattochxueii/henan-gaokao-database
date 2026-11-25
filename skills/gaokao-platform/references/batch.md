@@ -18,5 +18,3 @@
 运行 `board-cycle <卷目录> <独立邮箱>`，按角色分开投递并恢复同一命令。单独导出使用 `board-packet <卷目录> solver|pedagogy|visual <新目录>`。也可用 `board-score <卷目录> <求解.json> <教研.json> <印刷.json>` 一次登记三个角色的回复。下一轮附 `--previous <上轮卷目录>`。全卷缺项需指出承接修订的题位，用 `--repair-slot <题号>`。放行后照原有学科流程生成解析、核对并发布。
 
 新流程以 `LOCAL_QA_PASSED` 表示三个本地角色和硬安检通过。逐笔扣分及放行阈值保存在各轮评分卡。随后可用 `export-external-review <卷目录> <新目录>` 生成精简材料。以 `findings-template.json` 回传实际模型家族和型号、题号、规则、严重度、事实与改法。用 `import-external-review` 登记后，已确认收到缺陷的版本暂停发布。局部改好后从新目录提交 `board-cycle --previous <原卷目录>`，沿用此前锁定题号并重新求解。纯页头政策或版面修订可改 PDF 排版，题面与答案仍按指纹锁定。导出、回灌均在本地进行。
-
-正式样本的完整三轮输入与回复见 `experiments/phase25/physics-batch/{A,B}/published/board`。题面出现问题的原始盲判与最终学生解析分别保留，等价表达由独立重解与编辑裁决对照登记。

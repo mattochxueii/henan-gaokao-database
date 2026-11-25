@@ -33,4 +33,4 @@ python scripts/forecast_research.py verify-freeze forecast/frozen/henan-2027-mat
 
 私有复现需要已恢复的严格真题目录。使用相同输出文件名可得到相同冻结 run_id 和内容哈希，输出目录必须为空缺。冻结使用排他创建，保存候选、模型文件、目标和数据哈希。该机制提供版本校验和可追溯性。GitHub 私有提交和 CI 是发布证据；本轮没有独立时间戳机构的令牌。结果发生后只创建独立评分记录，原候选保持冻结。日期不明确或适用卷系不符时暂停评分。
 
-模式接口与未来计分字段见 [数学 Skill 协议](../skills/henan-math/references/forecast.md)。
+模式接口与未来计分字段见 [数学 Skill 协议](../skills/gaokao-platform/SKILL.md)。

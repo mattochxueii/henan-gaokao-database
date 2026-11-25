@@ -15,7 +15,7 @@ from gaokao import read_json
 from student_feedback import checked_questions, feedback_document
 from subjects.physics import verify
 
-EXPERIMENT = ROOT/"experiments/phase14/physics"
+EXPERIMENT = ROOT/"tests/fixtures/phase14/physics"
 
 
 class PhysicsQualityTests(unittest.TestCase):
