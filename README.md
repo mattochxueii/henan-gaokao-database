@@ -30,7 +30,7 @@ python scripts/gaokao_platform.py assemble math output/math-2024 --paper-id 2024
 2. Windows 运行 **.\install.ps1**。macOS / Linux 依次运行 **python3 -m pip install -r requirements.txt** 和 **python3 scripts/install_skill.py**。
 3. 在 Codex、Claude Code、Gemini CLI 或 Antigravity 中打开项目，说：“请用 gaokao-platform 为我命制一套 2027 年河南新高考物理模拟卷。”
 
-每轮命制一个学科的一套卷。原创整卷建议用能完成长流程和工具调用的强推理编码 Agent。轻量或免费快速模型更适合用 `research` 查题、用 `assemble` 或 `train` 拼练习。实测对照与检查方法见[模型选择与 10 秒验货](docs/TUTORIAL.md#模型选择与-10-秒验货)。
+每轮命制一个学科的一套卷。原创整卷建议用能跑完长流程和工具调用的强推理编码 Agent；别光凭同模型自审分数就直接发卷，交卷前最好用 `export-external-review` 换另一家模型盲挑一遍错。轻量或免费快速模型更适合用 `research` 查题、用 `assemble` 或 `train` 拼练习。七次实测对照与检查方法见[模型选择与 10 秒验货](docs/TUTORIAL.md#模型选择与-10-秒验货)。
 
 默认 **exam** 为考场版。选 **practice** 可直接打印刷题，语英文字题有书写横线，语文作文有千格稿纸，数理化演算区留白。详见[中文教程](docs/TUTORIAL.md)。
 

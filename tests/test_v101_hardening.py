@@ -109,7 +109,7 @@ class HardeningTests(TestCase):
         table={"headers":["方案","次数"],"rows":[["甲","4"],["乙","8"]]}
         with TemporaryDirectory() as tmp:
             path=Path(tmp)/"paper.pdf"
-            q=item(1,"观察表格。",table=table,solution_paragraphs=[
+            q=item(1,"观察表格。",table=table,solution_table=table,solution_paragraphs=[
                 r"第一行 \(1\)。",r"第二行 \(\sum_{k=1}^n\frac{k^2+1}{2k}\)。",
                 r"第三行 \(e^{\frac{11}{12}+\frac{1}{12n}}\)。"])
             for solutions in (False,True):

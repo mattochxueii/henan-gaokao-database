@@ -18,10 +18,19 @@ ENGLISH_LEVELS = (
 RANGES = re.compile(r"(\d+)\s*[-–—～~至]\s*(\d+)")
 PRINTED_FORMAT = re.compile(r"称呼|署名|落款|结束语|salutation|sign.?off|signature", re.I)
 AWARDED = re.compile(r"(?:给|得|计|占)\s*(?:\d+|[一二三])\s*分")
-SCIENCE_EQUIVALENCE = "评分参考。物理量的等价单位和准确数值可同样给分。题目规定精度时，以规定的有效数字或小数位数为准。题目未限定形式时，等值分数与小数可同样给分。"
+SCIENCE_EQUIVALENCE_BY_SUBJECT = {
+    "physics": "评分总则：物理量的等价单位和准确数值可同样给分；题目规定精度时，以规定的有效数字或小数位数为准；题目未限定形式时，等值分数与小数可同样给分。",
+    "chemistry": "评分总则：化学方程式与离子方程式须配平正确，反应条件、气体（↑）与沉淀（↓）符号及可逆符号（⇌）规范完整；有机物的等价结构简式可同样给分；定量计算结果在准确数值及规定有效数字范围内同等给分。",
+    "biology": "评分总则：生物学专业术语须书写规范准确，语义一致的专业术语等价表述可同样给分；实验分析与机理阐释要点完整、逻辑清晰即可得分。",
+}
+SCIENCE_EQUIVALENCE = SCIENCE_EQUIVALENCE_BY_SUBJECT["physics"]
 ADH_EQUIVALENCE = "抗利尿激素经垂体释放。答“垂体后叶”或“垂体”均可。"
 MATH_EQUIVALENCE = "使用高中课程内的常规通法，论证与计算等价的同样给分。"
 DEFENSIVE_VARIANCE = re.compile(r"按\s*(?:\\\(\s*)?(?:\\(?:d|t)?frac\s*\{?1\}?\s*\{?n\}?|1\s*/\s*n)(?:\s*\\\))?\s*作为方差")
+
+
+def science_equivalence(subject):
+    return SCIENCE_EQUIVALENCE_BY_SUBJECT.get(subject, SCIENCE_EQUIVALENCE)
 
 
 def language_template(subject, number, points):

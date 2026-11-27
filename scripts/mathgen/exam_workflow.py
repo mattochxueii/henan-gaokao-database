@@ -332,6 +332,185 @@ def verify_certificate(folder, cert):
     )
 
 
+def _parse_scalar_number(raw):
+    import math
+    from .ai_spec import parse
+
+    if raw is None or isinstance(raw, bool):
+        return None
+    try:
+        expr = parse(str(raw))
+    except Exception:
+        return None
+    if getattr(expr, "free_symbols", None) or not getattr(expr, "is_number", False):
+        return None
+    if expr.is_real is False or expr.is_finite is False:
+        return None
+    try:
+        val = float(expr.evalf())
+    except Exception:
+        return None
+    return val if math.isfinite(val) else None
+
+
+def _exact_numeric_targets(result, question_text):
+    if result is None or isinstance(result, bool):
+        return
+    if isinstance(result, (int, float, str)):
+        val = _parse_scalar_number(result)
+        if val is not None:
+            yield str(result), val
+        return
+    if isinstance(result, dict):
+        keys = ["expectation", "minimum", "maximum", "value", "probability"]
+        if "方差" in question_text:
+            keys.append("variance")
+        for key in keys:
+            if key in result:
+                val = _parse_scalar_number(result[key])
+                if val is not None:
+                    yield f"{key}={result[key]}", val
+        dist = result.get("distribution")
+        if isinstance(dist, dict):
+            for k, v in dist.items():
+                val = _parse_scalar_number(v)
+                if val is not None:
+                    yield f"P({k})={v}", val
+
+
+def _eval_tex_atom(raw):
+    import math, re
+    from fractions import Fraction
+
+    s = raw.strip().replace("−", "-").replace("π", r"\pi").replace("√", r"\sqrt")
+    s = re.sub(r"\\(?:left|right)\b|\\[,;! ]", "", s)
+    s = re.sub(r"\\sqrt([0-9]+)", r"\\sqrt{\1}", s)
+    s = re.sub(r"\\(?:times|cdot)\b", "*", s)
+    s = s.replace("×", "*").replace("⋅", "*")
+    # Evaluate single-level products/ratios of numbers, \sqrt{num}, and \pi.
+    s = re.sub(r"(\d)\s*(\\sqrt|\\pi)", r"\1*\2", s)
+    s = re.sub(r"(\\sqrt\{[0-9.]+\}|\\pi)\s*(\d)", r"\1*\2", s)
+    s = re.sub(r"\\sqrt\{([0-9]+(?:\.[0-9]+)?)\}", lambda m: f"({math.sqrt(float(m.group(1)))!r})", s)
+    s = s.replace(r"\pi", repr(math.pi))
+    if not re.fullmatch(r"[0-9.\s+\-*/()eE]+", s):
+        return None
+    try:
+        import ast
+
+        tree = ast.parse(s, mode="eval").body
+
+        def _walk(node):
+            if isinstance(node, ast.Constant) and type(node.value) in (int, float):
+                return float(node.value)
+            if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
+                v = _walk(node.operand)
+                return -v if isinstance(node.op, ast.USub) else v
+            if isinstance(node, ast.BinOp):
+                l, r = _walk(node.left), _walk(node.right)
+                if isinstance(node.op, ast.Add):
+                    return l + r
+                if isinstance(node.op, ast.Sub):
+                    return l - r
+                if isinstance(node.op, ast.Mult):
+                    return l * r
+                if isinstance(node.op, ast.Div):
+                    if r == 0:
+                        raise ZeroDivisionError
+                    return l / r
+            raise ValueError
+
+        v = _walk(tree)
+        return v if math.isfinite(v) else None
+    except Exception:
+        return None
+
+
+def _extract_solution_numbers(text):
+    """Extract numeric values (exact TeX fractions/radicals/pi and decimals) from solution prose."""
+    import re
+
+    found = []
+    norm = text.replace("−", "-")
+    norm = re.sub(r"\\(?:dfrac|tfrac)\b", r"\\frac", norm)
+    # 1. TeX fractions: \frac{num}{den}, \frac12, \frac3{10}, \frac{8}{\sqrt{82}}
+    frac_re = re.compile(
+        r"([+-]?)\s*\\frac\s*(?:\{([^{}]+)\}|([0-9]))\s*(?:\{([^{}]+)\}|([0-9]))"
+    )
+    for m in frac_re.finditer(norm):
+        sign = -1.0 if m.group(1) == "-" else 1.0
+        num = _eval_tex_atom(m.group(2) if m.group(2) is not None else m.group(3))
+        den = _eval_tex_atom(m.group(4) if m.group(4) is not None else m.group(5))
+        if num is not None and den not in (None, 0.0):
+            found.append((sign * num / den, None))
+    # 2. Radicals and pi expressions: 2\sqrt{3}, 2\sqrt3, \sqrt{3}/2, \pi/3, 2\pi
+    rad_re = re.compile(
+        r"([+-]?\s*(?:\d+(?:\.\d+)?)?\s*(?:\\sqrt\s*(?:\{[0-9.]+\}|[0-9])|√\s*[0-9]+|\\pi|π)(?:\s*/\s*\d+)?)"
+    )
+    for m in rad_re.finditer(norm):
+        val = _eval_tex_atom(m.group(1))
+        if val is not None:
+            found.append((val, None))
+    # 3. Slash fractions: 100/11, 3/4, -7/10
+    for m in re.finditer(r"(?<![A-Za-z0-9.])([+-]?\d+)\s*/\s*(\d+)(?![A-Za-z0-9.])", norm):
+        den = int(m.group(2))
+        if den:
+            found.append((int(m.group(1)) / den, None))
+    # 4. Plain decimals and integers
+    for m in re.finditer(r"(?<![A-Za-z0-9_.])([+-]?\d+(?:\.(\d+))?)(?![A-Za-z0-9_.])", norm):
+        dp = len(m.group(2)) if m.group(2) else None
+        found.append((float(m.group(1)), dp))
+    return found
+
+
+def _number_matches(candidates, target):
+    import math
+
+    refs = [target, abs(target)]
+    if target > 0:
+        refs.append(math.sqrt(target))
+    for cand, dp in candidates:
+        for ref in refs:
+            if dp is not None:
+                tol = max(0.006, 0.6 * (10 ** (-dp)))
+            else:
+                tol = max(1e-4, 1e-3 * abs(ref))
+            if abs(cand - ref) <= tol:
+                return True
+    return False
+
+
+def verify_solution_consistency(student, raw, calculations, revisions, solutions):
+    """Validate 2x2 chi-square arithmetic and SymPy-vs-solution_revisions numerical agreement."""
+    from core.editorial_rules import item_text
+    from core.release_checks import math_chi_square_findings
+
+    defects = []
+    revisions = revisions or {}
+    for visible, calc, sol_q in zip(student["questions"], calculations, solutions["questions"], strict=True):
+        if visible.get("kind") != "constructed_response":
+            continue
+        number = visible["order"]
+        sol_text = "\n".join(sol_q.get("solution_paragraphs", []))
+        defects.extend(math_chi_square_findings(number, visible, sol_text))
+        rev = revisions.get(str(number))
+        if not rev:
+            continue
+        rev_text = "\n".join(rev.get("paragraphs", []))
+        candidates = _extract_solution_numbers(rev_text)
+        q_text = item_text(visible)
+        for task in calc.get("tasks", []):
+            if task.get("complete") is not True:
+                continue
+            for label, target in _exact_numeric_targets(task.get("result"), q_text):
+                if not _number_matches(candidates, target):
+                    defects.append((
+                        number,
+                        "math_solution_revision_conflict",
+                        f"solution_revisions 未保留 SymPy 核验精确数值 {label}（约 {target:g}），疑似数值冲突或篡改",
+                    ))
+    return defects
+
+
 def publish(output, review_path, comparison_path, *, root=None):
     from core.release_checks import is_frozen_sample, require_release
     from gaokao import ROOT
@@ -463,6 +642,10 @@ def publish(output, review_path, comparison_path, *, root=None):
     answer_keys = ["".join(key) if isinstance(key,list) else key for key in answer_keys]
     solutions = solution_book(student, raw, comparison.get("solution_revisions", {}), guide,
                               answer_keys=answer_keys)
+    consistency_defects = verify_solution_consistency(
+        student, raw, calculations, comparison.get("solution_revisions", {}), solutions
+    )
+    require(not consistency_defects, "解答题解析数值校验失败：" + str(consistency_defects))
     if student.get("release_rules"):
         from core.marking_standards import grading_findings
         import logging

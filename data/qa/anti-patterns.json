@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "entries": [
     {
       "id": "math.stop",
@@ -427,6 +427,83 @@
       "severity": "fatal",
       "check": "引入的函数或导函数符号须在后续题面使用",
       "counterexample": "题干引入导函数符号，随后的设问完全不使用"
+    },
+    {
+      "id": "math.degenerate-boundary",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "新定义函数、参数或系数须核查常值函数、零系数等退化边界",
+      "counterexample": "新定义未排除常值函数导致命题在退化情形下产生反例"
+    },
+    {
+      "id": "math.prob-rule-wording",
+      "subject": "math",
+      "severity": "fatal",
+      "check": "概率“最多返工/抽取 1 件”须写清是否强制执行，并保持前后术语一致",
+      "counterexample": "只写最多返工 1 件而未说明首次不合格必返工，或前后混用返工与补抽"
+    },
+    {
+      "id": "math.upright-ie",
+      "subject": "math",
+      "severity": "major",
+      "check": "虚数单位 \\mathrm{i} 与自然底数 \\mathrm{e} 显式写正体，求和指标 i 与离心率 e 保持斜体",
+      "counterexample": "把求和指标 \\sum_{i=1}^n 或离心率 e 误印成正体，或虚数单位写成斜体"
+    },
+    {
+      "id": "chemistry.phenol-nitration",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "苯酚单硝化须用稀硝酸，禁止用浓硝酸/浓硫酸混合体系",
+      "counterexample": "合成路线中用浓硝酸与浓硫酸直接对苯酚进行单硝化"
+    },
+    {
+      "id": "chemistry.figure-answer-leak",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "流程图与实验装置图禁止直接印出设问所求的滤渣、pH 或仪器名称",
+      "counterexample": "流程图直接标注滤渣 Fe(OH)₃、pH=3.6 或装置图标出球形冷凝管后又设空发问"
+    },
+    {
+      "id": "chemistry.element-infer-leak",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "元素周期律推断题的选项禁止直接出现真实元素符号泄密",
+      "counterexample": "题干设短周期元素 X、Y、Z、W，选项却直接印出 Al、Si 或 S"
+    },
+    {
+      "id": "chemistry.cell-face-vs-center",
+      "subject": "chemistry",
+      "severity": "fatal",
+      "check": "区分晶胞面上原子与面心原子，非面心位置不得表述为面心",
+      "counterexample": "把位于晶胞侧面但偏离面心几何中心的原子写成“4 个面心”"
+    },
+    {
+      "id": "chemistry.polymer-end-bonds",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "聚合物结构简式的方括号端基键线须闭合规范，不得断键或悬空",
+      "counterexample": "高聚物重复单元端基键线未穿过中括号或遗漏端基"
+    },
+    {
+      "id": "chemistry.bulb-condenser-mount",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "球形冷凝管须竖直直插烧瓶口或支口用于回流，不得水平侧接",
+      "counterexample": "实验装置图中把球形冷凝管水平侧接在烧瓶支管口充当直形冷凝管"
+    },
+    {
+      "id": "chemistry.amide-rubric",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "酰胺官能团评分参考须同时兼容“酰胺基”与“酰胺键”",
+      "counterexample": "评分细则只认可“酰胺基”，把答“酰胺键”扣分"
+    },
+    {
+      "id": "chemistry.inorganic-only-reagent",
+      "subject": "chemistry",
+      "severity": "major",
+      "check": "有机合成路线限定纯无机试剂时慎用冰醋酸等有机酸",
+      "counterexample": "题干限定原料和无机试剂任选，参考合成路线却使用冰醋酸"
     }
   ]
 }

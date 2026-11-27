@@ -203,4 +203,9 @@ def compile_writing(question):
         "options": options,
         "figure": writing.get("figure"),
     }
+    table = writing.get("table") or question.get("table")
+    if table is not None:
+        from core.native_tables import normalize_table
+
+        result["table"] = normalize_table(table)
     return result
