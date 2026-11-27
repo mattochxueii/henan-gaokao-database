@@ -278,11 +278,13 @@ def prepare(root, blueprint, candidate, output, figure_root=None, *, layout_mode
                 paper["release_rules"]=reference["release_rules"]
                 paper["ledger_topics"]=candidate.get("ledger_topics",{})
                 if subject=="chemistry":
+                    from core.chemistry_data import ATOMIC_NUMBERS, sort_atomic_masses
+
                     masses=candidate.get("relative_atomic_masses",{})
                     require(isinstance(masses,dict) and masses and all(
-                        re.fullmatch(r"[A-Z][a-z]?",element) and type(mass) in (int,float) and 0<mass<300
+                        element in ATOMIC_NUMBERS and type(mass) in (int,float) and 0<mass<300
                         for element,mass in masses.items()),"化学标准卷须附可核对的相对原子质量")
-                    paper["relative_atomic_masses"]=masses
+                    paper["relative_atomic_masses"]=sort_atomic_masses(masses)
         paper["layout"] = "science"
         paper["layout_rules"] = rules
         # Only other series lack a policy record and use their archived scoring note.
@@ -354,14 +356,40 @@ def adjudicate(folder, review):
             require(isinstance(rubric,list) and all(type(k["points"]) is int and k["points"]>0
                     and isinstance(k["step"],str) and k["step"].strip() for k in rubric)
                     and sum(k["points"] for k in rubric)==q["points"], "分步评分与本题分值不符")
-            from core.marking_standards import SCIENCE_EQUIVALENCE, science_note
+            from core.chemistry_data import format_science_rubric
+            from core.marking_standards import science_note
 
-            paragraphs.append("评分参考　"+"；".join(f'{k["step"]}（{k["points"]}分）' for k in rubric)+"。")
+            rubric_text = "评分参考　"+"；".join(f'{k["step"]}（{k["points"]}分）' for k in rubric)+"。"
+            paragraphs.append(format_science_rubric(rubric_text))
             if note := science_note(packet["paper"]["subject"],q):
                 paragraphs.append(note)
-            if packet["paper"].get("release_rules"):
-                paragraphs.append(SCIENCE_EQUIVALENCE)
-        verified.append({**q, "solution_paragraphs":paragraphs})
+        entry = {**q, "solution_paragraphs": paragraphs}
+        if sol_table := j.get("solution_table"):
+            from core.native_tables import normalize_table
+
+            entry["solution_table"] = normalize_table(sol_table)
+        if sol_figs := j.get("solution_figures"):
+            require(isinstance(sol_figs, list), "答案插图 solution_figures 须为列表")
+            bound_figs = []
+            for fig in sol_figs:
+                require(isinstance(fig, dict) and fig.get("path") and fig.get("sha256"),
+                        "答案插图须有路径与 sha256 内容绑定")
+                actual = relative_path(folder, fig["path"])
+                require(actual.is_file() and not actual.is_symlink()
+                        and digest(actual) == fig["sha256"]
+                        and actual.suffix.lower() in (".png", ".jpg", ".jpeg"),
+                        "答案插图缺失或哈希不符")
+                asset = relative_path(folder, "figures/" + fig["sha256"] + actual.suffix.lower())
+                asset.parent.mkdir(exist_ok=True)
+                if actual.resolve() != asset.resolve():
+                    shutil.copyfile(actual, asset)
+                item_fig = {"path": str(asset.resolve()), "sha256": fig["sha256"]}
+                if fig.get("caption") is not None:
+                    require(isinstance(fig["caption"], str) and fig["caption"].strip(), "答案插图说明须为非空文本")
+                    item_fig["caption"] = fig["caption"]
+                bound_figs.append(item_fig)
+            entry["solution_figures"] = bound_figs
+        verified.append(entry)
     from mathgen.student_pdf import render
     render({**packet["paper"],"questions":verified},folder/"solutions.pdf",solutions=True)
     write_new(folder/"independent-review.json",review)
@@ -385,6 +413,12 @@ def publication_record(folder, visual):
     for q in packet["paper"]["questions"]:
         if fig := q.get("figure"):
             require(digest(relative_path(folder,fig["path"]))==fig["sha256"],"题图与审核版本不符")
+    for item in review.get("items", []):
+        for fig in item.get("solution_figures", []):
+            actual = relative_path(folder, fig["path"])
+            if not actual.is_file():
+                actual = relative_path(folder, "figures/" + fig["sha256"] + Path(fig["path"]).suffix.lower())
+            require(actual.is_file() and digest(actual) == fig["sha256"], "答案插图与审核版本不符")
     from pypdf import PdfReader
     for label in ("paper","solutions"):
         path = folder/(label+".pdf")

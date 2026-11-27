@@ -434,7 +434,7 @@ def export_docx(markdown, output):
                         border.append(bottom)
                         cell._tc.get_or_add_tcPr().append(border)
             continue
-        if formula_paper and (image := re.fullmatch(r"!\[题图\]\(([^)]+)\)",content)):
+        if formula_paper and (image := re.fullmatch(r"!\[(?:题图|答案图)\]\(([^)]+)\)",content)):
             path=relative_path(source.parent,image[1])
             with PillowImage.open(path) as picture:
                 w,h=picture.size

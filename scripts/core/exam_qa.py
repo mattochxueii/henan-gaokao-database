@@ -70,6 +70,126 @@ def printed_figure_labels(figure, folder):
     return labels
 
 
+_VERTEX_SUB = str.maketrans("₀₁₂₃₄₅₆₇₈₉′", "0123456789'")
+
+
+def wireframe_undefined_vertices(question, figure):
+    """Return labeled wireframe vertex names that never appear in question stem or parts."""
+    if not isinstance(figure, dict) or figure.get("type") != "wireframe":
+        return []
+    if not figure.get("show_vertex_labels", True):
+        return []
+    text = item_text(question)
+    cleaned = re.sub(r"\\mathbb\s*(?:\{\s*[A-Z]\s*\}|[A-Z])", " ", text)
+    cleaned = re.sub(r"\\[A-Za-z]+", " ", cleaned)
+    cleaned = cleaned.translate(_VERTEX_SUB)
+    cleaned = re.sub(r"([A-Z])_\{?([0-9]+)\}?", r"\1\2", cleaned)
+    cleaned = re.sub(r"([A-Z])\^\{?('+)\}?", r"\1\2", cleaned)
+    declared = set(re.findall(r"[A-Z](?![a-z])(?:[0-9]+|'+)?", cleaned))
+    missing = []
+    for name in figure.get("vertices", {}):
+        norm = str(name).translate(_VERTEX_SUB)
+        norm = re.sub(r"_\{?([0-9]+)\}?", r"\1", norm)
+        norm = re.sub(r"\^\{?('+)\}?", r"\1", norm)
+        if norm not in declared:
+            missing.append(str(name))
+    return missing
+
+
+def figure_edge_clipping(path, border=2, threshold=35):
+    """Scan the outermost 1-2 px edges of a PNG figure for clipped non-background ink."""
+    import numpy as np
+    from PIL import Image
+
+    with Image.open(path) as im:
+        if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+            rgba = im.convert("RGBA")
+            bg_img = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
+            rgb = Image.alpha_composite(bg_img, rgba).convert("RGB")
+        else:
+            rgb = im.convert("RGB")
+        arr = np.asarray(rgb, dtype=np.int16)
+    h, w, _ = arr.shape
+    if h < border * 2 + 2 or w < border * 2 + 2:
+        return []
+    corners = np.array([arr[0, 0], arr[0, -1], arr[-1, 0], arr[-1, -1]])
+    bg = np.median(corners, axis=0)
+    if float(bg.mean()) < 200.0:
+        bg = np.array([255, 255, 255])
+    ink = np.max(np.abs(arr - bg), axis=2) > threshold
+    edges = (
+        ("top", int(ink[:border, :].sum())),
+        ("bottom", int(ink[-border:, :].sum())),
+        ("left", int(ink[:, :border].sum())),
+        ("right", int(ink[:, -border:].sum())),
+    )
+    return [side for side, count in edges if count >= 2]
+
+
+def pdf_page_fill_ratio(pdf_path, page_index=-1):
+    """Estimate vertical body coverage ratio (0..1) on a rendered exam PDF page."""
+    from pypdf import PdfReader
+
+    reader = PdfReader(str(pdf_path))
+    if not reader.pages:
+        return 0.0
+    page = reader.pages[page_index]
+    height = float(page.mediabox.height)
+    top_cut = height - 33.0
+    bottom_cut = 34.0
+    usable = max(top_cut - bottom_cut, 1.0)
+    ys = []
+
+    def _visit(text, cm, tm, font, size):
+        if text and text.strip():
+            y = float(cm[5]) + float(tm[5])
+            if y > 28.0:
+                ys.append(y)
+
+    page.extract_text(visitor_text=_visit)
+    content = page.get_contents()
+    if content is not None:
+        stack = []
+        tx = ty = 0.0
+        for operands, op in content.operations:
+            if op == b"q":
+                stack.append((tx, ty))
+            elif op == b"Q" and stack:
+                tx, ty = stack.pop()
+            elif op == b"cm" and len(operands) == 6:
+                tx += float(operands[4])
+                ty += float(operands[5])
+            elif op == b"Do":
+                if ty > 28.0:
+                    ys.append(ty)
+            elif op in (b"m", b"l") and len(operands) >= 2:
+                y = ty + float(operands[1])
+                if y > 28.0:
+                    ys.append(y)
+    if not ys:
+        return 0.0
+    lowest = max(bottom_cut, min(top_cut, min(ys)))
+    return max(0.0, min(1.0, (top_cut - lowest) / usable))
+
+
+def math_exam_pagination_warnings(pdf_path):
+    """Warn when a math exam-mode PDF exceeds 4 pages, especially with a sparse odd-page orphan tail."""
+    from pypdf import PdfReader
+
+    pdf_path = Path(pdf_path)
+    if not pdf_path.is_file():
+        return []
+    pages = len(PdfReader(str(pdf_path)).pages)
+    if pages <= 4:
+        return []
+    fill = pdf_page_fill_ratio(pdf_path, -1)
+    if pages % 2 == 1 and fill < 0.35:
+        return [(0, "math_exam_pagination",
+                 f"数学考场版共 {pages} 页，出现奇数页孤尾（末页内容占比约 {fill:.0%} < 35%），建议收紧版面或图高以压回 4 页")]
+    return [(0, "math_exam_pagination",
+             f"数学考场版共 {pages} 页，超过常规 4 页篇幅（末页内容占比约 {fill:.0%}），建议复核分页密度")]
+
+
 def policies(root, subject):
     entries = read_json(root / "data/qa/anti-patterns.json")["entries"]
     require(len({r["id"] for r in entries}) == len(entries), "排雷编号重复")
@@ -227,6 +347,9 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
                 draw_figure(figure)
             except (ValueError,KeyError,TypeError) as error:
                 issue(n,"wireframe_projection",str(error))
+            if undefined := wireframe_undefined_vertices(q, figure):
+                issue(n, "wireframe_undefined_vertex",
+                      "立体几何配图含题干未定义顶点（疑似辅助点/辅助线泄题）：" + "、".join(undefined))
         if isinstance(figure,dict) and figure.get("type") in ("coordinate","wireframe"):
             labels = [entry.get("math","") for entry in figure.get("labels",[])]
             labels.extend(figure.get("vertices",{}))
@@ -240,6 +363,11 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
                                  "evidence":"原图无导出文字层，须在独立印刷审稿中逐图核读"})
             elif words := label_hits(labels,subject):
                 issue(n,"figure_language","题图中须改写的英文标签："+"、".join(words))
+            fig_path = relative_path(figure_folder, figure["path"])
+            if fig_path.suffix.lower() == ".png":
+                if clipped := figure_edge_clipping(fig_path):
+                    issue(n, "figure_edge_clipped",
+                          f"题图边缘（{', '.join(clipped)}）检测到非背景像素被画布截断，请导出时加 bbox_inches=\"tight\", pad_inches=0.1")
         if scoped and n in STANDARD_LAYOUT[subject]["embedded_blanks"] and not re.search(r"_{3,}",stem):
             issue(n,"missing_blank","指定题位没有嵌入式答位")
     if scoped and len(illustrated)<STANDARD_LAYOUT[subject]["choice_figures_minimum"]:
@@ -300,6 +428,22 @@ def inspect(root, subject, paper, answers, *, header=None, observations=(), poli
         if subject=="math":
             warnings.extend({"number":n,"rule":rule,"evidence":fact}
                             for n,rule,fact in math_point_warnings(rows,release_artifacts.get("solutions",{})))
+    if subject == "math":
+        from core.release_checks import SUBJECT_COUNTS, math_coverage_warnings
+
+        if len(rows) == SUBJECT_COUNTS["math"]:
+            warnings.extend({"number": n, "rule": rule, "evidence": fact}
+                            for n, rule, fact in math_coverage_warnings(rows))
+        if paper.get("layout_mode", "exam") == "exam":
+            student_pdf = (release_artifacts or {}).get("student_pdf")
+            if not student_pdf and figure_folder:
+                for candidate_pdf in (Path(figure_folder) / "paper.pdf", Path(figure_folder) / "review-only" / "paper.pdf"):
+                    if candidate_pdf.is_file():
+                        student_pdf = candidate_pdf
+                        break
+            if student_pdf and Path(student_pdf).is_file():
+                warnings.extend({"number": n, "rule": rule, "evidence": fact}
+                                for n, rule, fact in math_exam_pagination_warnings(student_pdf))
     return {"policy_sha256":fingerprint(policy_snapshot if policy_snapshot is not None else policies(root,subject)),"issues":issues,"warnings":warnings,
             "coverage":result["coverage"],"choice_figures":illustrated,"nonchoice_figures":nonchoice,
             "wrong_options":wrong,"absolute_wrong_options":absolutes,"abstract_mentions":abstract,
@@ -379,4 +523,4 @@ def save_figure(fig,path,*,subject=None,cartesian=False):
     path=Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
     metadata = {LABEL_KEY:json.dumps(labels,ensure_ascii=False)} if path.suffix.lower()==".png" else None
-    fig.savefig(path,dpi=fig.dpi,facecolor="white",metadata=metadata)
+    fig.savefig(path,dpi=fig.dpi,bbox_inches="tight",pad_inches=0.1,facecolor="white",metadata=metadata)
